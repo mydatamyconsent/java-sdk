@@ -1,0 +1,36 @@
+{
+    "$schema": "node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+    "spaces": 2,
+    "generator-cli": {
+        "version": "5.2.1",
+        "generators": {
+            "java": {
+                "generatorName": "java",
+                "httpUserAgent": "MDMC-Java-SDK",
+                "apiPackage": "com.mydatamyconsent.api",
+                "groupId": "com.mydatamyconsent",
+                "packageName": "com.mydatamyconsent",
+                "modelPackage": "com.mydatamyconsent.model",
+                "artifactId": "mydatamyconsent-java-sdk",
+                "gitHost": "github.com",
+                "gitRepoId": "java-sdk",
+                "gitUserId": "mydatamyconsent",
+                "inputSpec": "http://localhost:5000/swagger/v1/swagger.json",
+                "removeOperationIdPrefix": true,
+                "additionalProperties": {
+                    "developerEmail": "developers@mydatamyconsent.com",
+                    "developerName": "Balamurali Pandranki",
+                    "developerOrganization": "DataConsent, Inc.",
+                    "developerOrganizationUrl": "https://mydatamyconsent.com",
+                    "artifactDescription": "My Data My Consent Java Rest API SDK",
+                    "artifactUrl": "https://github.com/mydatamyconsent/java-sdk",
+                    "artifactVersion": "v1",
+                    "licenseUrl": "https://mydatamyconsent.com/en-us/legal/terms-of-service",
+                    "licenseName": "DataConsent, Inc. ToS",
+                    "scmUrl": "https://github.com/mydatamyconsent/java-sdk",
+                    "scmDeveloperConnection": "scm:git:git@github.com:mydatamyconsent/java-sdk.git"
+                }
+            }
+        }
+    }
+}
