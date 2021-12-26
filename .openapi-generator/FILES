@@ -1,10 +1,3 @@
-.gitignore
-.openapi-generator-ignore
-.travis.yml
-README.md
-api/openapi.yaml
-build.gradle
-build.sbt
 docs/ApplicationUser.md
 docs/AuthorizedPersonnelKycDocumentType.md
 docs/BankAccountType.md
@@ -70,14 +63,8 @@ docs/Rejection.md
 docs/SuggestedAccountDto.md
 docs/Theme.md
 docs/UriDetails.md
-git_push.sh
 gradle.properties
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
-gradlew
-gradlew.bat
 pom.xml
-settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/com/mydatamyconsent/ApiCallback.java
 src/main/java/com/mydatamyconsent/ApiClient.java
@@ -161,4 +148,3 @@ src/main/java/com/mydatamyconsent/model/Rejection.java
 src/main/java/com/mydatamyconsent/model/SuggestedAccountDto.java
 src/main/java/com/mydatamyconsent/model/Theme.java
 src/main/java/com/mydatamyconsent/model/UriDetails.java
-src/test/java/com/mydatamyconsent/model/AuthorizedPersonnelKycDocumentTypeTest.java

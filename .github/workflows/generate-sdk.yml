@@ -21,12 +21,10 @@ jobs:
                   distribution: 'adopt'
 
             - name: Install OpenAPI Tools
-              run: |
-                  npm install @openapitools/openapi-generator-cli -g
+              run: npm install @openapitools/openapi-generator-cli -g
 
             - name: Generate SDK's
-              run: |
-                  npx @openapitools/openapi-generator-cli generate
+              run: npx @openapitools/openapi-generator-cli generate
 
             - name: Repository update
               uses: EndBug/add-and-commit@v7
