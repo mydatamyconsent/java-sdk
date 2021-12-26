@@ -76,8 +76,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/accounts/{accountId}"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -206,8 +206,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/accounts/{accountId}/insights"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -339,8 +339,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/accounts/{accountId}/transactions"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -489,7 +489,7 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/accounts"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -610,8 +610,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/documents/{documentId}/analysis"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -740,8 +740,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/documents/{documentId}/download"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -870,8 +870,8 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/documents/{documentId}"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
-            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId))
+            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -999,7 +999,7 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}/documents"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1119,7 +1119,7 @@ public class DataConsentsApi {
 
         // create path and map variables
         String localVarPath = "/v1/consents/{consentId}"
-            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()));
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

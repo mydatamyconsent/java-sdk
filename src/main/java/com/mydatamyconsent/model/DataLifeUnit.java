@@ -37,7 +37,7 @@ public enum DataLifeUnit {
   
   FOREVER("Forever");
 
-  private String value;
+  private final String value;
 
   DataLifeUnit(String value) {
     this.value = value;

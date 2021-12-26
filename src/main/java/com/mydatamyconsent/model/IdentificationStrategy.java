@@ -35,7 +35,7 @@ public enum IdentificationStrategy {
   
   MATCHALLIDENTIFIERS("MatchAllIdentifiers");
 
-  private String value;
+  private final String value;
 
   IdentificationStrategy(String value) {
     this.value = value;

@@ -39,7 +39,7 @@ public enum DataConsentStatus {
   
   EXPIRED("Expired");
 
-  private String value;
+  private final String value;
 
   DataConsentStatus(String value) {
     this.value = value;

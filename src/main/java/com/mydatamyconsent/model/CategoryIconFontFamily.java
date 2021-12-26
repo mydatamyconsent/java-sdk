@@ -33,7 +33,7 @@ public enum CategoryIconFontFamily {
   
   FONTAWESOMEREGULAR("FontAwesomeRegular");
 
-  private String value;
+  private final String value;
 
   CategoryIconFontFamily(String value) {
     this.value = value;

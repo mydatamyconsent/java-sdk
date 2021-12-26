@@ -33,7 +33,7 @@ public enum OrganizationAddressType {
   
   OPERATINGADDRESS("OperatingAddress");
 
-  private String value;
+  private final String value;
 
   OrganizationAddressType(String value) {
     this.value = value;

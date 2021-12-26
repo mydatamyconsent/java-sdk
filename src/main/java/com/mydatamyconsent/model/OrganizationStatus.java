@@ -41,7 +41,7 @@ public enum OrganizationStatus {
   
   SIGNUPCOMPLETED("SignUpCompleted");
 
-  private String value;
+  private final String value;
 
   OrganizationStatus(String value) {
     this.value = value;

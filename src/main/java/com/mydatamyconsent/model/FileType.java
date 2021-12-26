@@ -33,7 +33,7 @@ public enum FileType {
   
   IMAGE("Image");
 
-  private String value;
+  private final String value;
 
   FileType(String value) {
     this.value = value;

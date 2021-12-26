@@ -35,7 +35,7 @@ public enum IdentityClaim {
   
   LASTNAME("LastName");
 
-  private String value;
+  private final String value;
 
   IdentityClaim(String value) {
     this.value = value;

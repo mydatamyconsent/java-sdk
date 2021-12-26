@@ -73,7 +73,7 @@ public enum FinancialAccountTypes {
   
   CREDITSCOREREPORT("CreditScoreReport");
 
-  private String value;
+  private final String value;
 
   FinancialAccountTypes(String value) {
     this.value = value;

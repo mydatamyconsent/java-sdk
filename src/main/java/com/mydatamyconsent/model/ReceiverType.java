@@ -33,7 +33,7 @@ public enum ReceiverType {
   
   ORGANIZATION("Organization");
 
-  private String value;
+  private final String value;
 
   ReceiverType(String value) {
     this.value = value;

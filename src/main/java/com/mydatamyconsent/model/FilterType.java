@@ -35,7 +35,7 @@ public enum FilterType {
   
   TRANSACTIONDESCRIPTION("TransactionDescription");
 
-  private String value;
+  private final String value;
 
   FilterType(String value) {
     this.value = value;
