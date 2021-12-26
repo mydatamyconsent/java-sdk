@@ -43,7 +43,7 @@ public enum Operator {
   
   LESSTHANOREQUALTO("LessThanOrEqualTo");
 
-  private final String value;
+  private String value;
 
   Operator(String value) {
     this.value = value;

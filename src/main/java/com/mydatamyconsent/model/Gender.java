@@ -35,7 +35,7 @@ public enum Gender {
   
   OTHER("Other");
 
-  private final String value;
+  private String value;
 
   Gender(String value) {
     this.value = value;

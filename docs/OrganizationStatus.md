@@ -9,11 +9,11 @@
 
 * `CONTACTDETAILSUPDATED` (value: `"ContactDetailsUpdated"`)
 
-* `OVERVIEWUPDATED` (value: `"OverviewUpdated"`)
+* `AUTHORIZEDPERSONNELUPDATED` (value: `"AuthorizedPersonnelUpdated"`)
+
+* `ORGANIZATIONDETAILSUPDATED` (value: `"OrganizationDetailsUpdated"`)
 
 * `ADDRESSUPDATED` (value: `"AddressUpdated"`)
-
-* `BANKACCOUNTSUPDATED` (value: `"BankAccountsUpdated"`)
 
 * `SIGNUPCOMPLETED` (value: `"SignUpCompleted"`)
 

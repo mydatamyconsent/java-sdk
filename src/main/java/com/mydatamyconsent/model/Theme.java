@@ -35,7 +35,7 @@ public enum Theme {
   
   SYSTEM("System");
 
-  private final String value;
+  private String value;
 
   Theme(String value) {
     this.value = value;

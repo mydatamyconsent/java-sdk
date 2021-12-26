@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.ApplicationUser;
+import com.mydatamyconsent.model.AuthorizedPersonnelKycDocumentType;
 import com.mydatamyconsent.model.Country;
 import com.mydatamyconsent.model.DocumentProviderCategory;
 import com.mydatamyconsent.model.OrganizationAddress;
@@ -42,7 +43,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Organization
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-19T10:04:53.682265678Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-26T05:51:57.689420532Z[Etc/UTC]")
 public class Organization {
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
@@ -120,6 +121,10 @@ public class Organization {
   @SerializedName(SERIALIZED_NAME_AUTHORIZED_PERSONNEL_NAME)
   private String authorizedPersonnelName;
 
+  public static final String SERIALIZED_NAME_AUTHORIZED_PERSONNEL_KYC_DOCUMENT_TYPE = "authorizedPersonnelKycDocumentType";
+  @SerializedName(SERIALIZED_NAME_AUTHORIZED_PERSONNEL_KYC_DOCUMENT_TYPE)
+  private AuthorizedPersonnelKycDocumentType authorizedPersonnelKycDocumentType;
+
   public static final String SERIALIZED_NAME_REGISTRATION_ID = "registrationId";
   @SerializedName(SERIALIZED_NAME_REGISTRATION_ID)
   private String registrationId;
@@ -175,6 +180,14 @@ public class Organization {
   public static final String SERIALIZED_NAME_WEBSITE_URL = "websiteUrl";
   @SerializedName(SERIALIZED_NAME_WEBSITE_URL)
   private String websiteUrl;
+
+  public static final String SERIALIZED_NAME_HELP_LINE_NUMBER = "helpLineNumber";
+  @SerializedName(SERIALIZED_NAME_HELP_LINE_NUMBER)
+  private String helpLineNumber;
+
+  public static final String SERIALIZED_NAME_SUPPORT_EMAIL = "supportEmail";
+  @SerializedName(SERIALIZED_NAME_SUPPORT_EMAIL)
+  private String supportEmail;
 
   public static final String SERIALIZED_NAME_IS_GOVERNMENT_ORGANIZATION = "isGovernmentOrganization";
   @SerializedName(SERIALIZED_NAME_IS_GOVERNMENT_ORGANIZATION)
@@ -710,6 +723,29 @@ public class Organization {
   }
 
 
+  public Organization authorizedPersonnelKycDocumentType(AuthorizedPersonnelKycDocumentType authorizedPersonnelKycDocumentType) {
+    
+    this.authorizedPersonnelKycDocumentType = authorizedPersonnelKycDocumentType;
+    return this;
+  }
+
+   /**
+   * Get authorizedPersonnelKycDocumentType
+   * @return authorizedPersonnelKycDocumentType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public AuthorizedPersonnelKycDocumentType getAuthorizedPersonnelKycDocumentType() {
+    return authorizedPersonnelKycDocumentType;
+  }
+
+
+  public void setAuthorizedPersonnelKycDocumentType(AuthorizedPersonnelKycDocumentType authorizedPersonnelKycDocumentType) {
+    this.authorizedPersonnelKycDocumentType = authorizedPersonnelKycDocumentType;
+  }
+
+
   public Organization registrationId(String registrationId) {
     
     this.registrationId = registrationId;
@@ -1029,6 +1065,52 @@ public class Organization {
 
   public void setWebsiteUrl(String websiteUrl) {
     this.websiteUrl = websiteUrl;
+  }
+
+
+  public Organization helpLineNumber(String helpLineNumber) {
+    
+    this.helpLineNumber = helpLineNumber;
+    return this;
+  }
+
+   /**
+   * Get helpLineNumber
+   * @return helpLineNumber
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getHelpLineNumber() {
+    return helpLineNumber;
+  }
+
+
+  public void setHelpLineNumber(String helpLineNumber) {
+    this.helpLineNumber = helpLineNumber;
+  }
+
+
+  public Organization supportEmail(String supportEmail) {
+    
+    this.supportEmail = supportEmail;
+    return this;
+  }
+
+   /**
+   * Get supportEmail
+   * @return supportEmail
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getSupportEmail() {
+    return supportEmail;
+  }
+
+
+  public void setSupportEmail(String supportEmail) {
+    this.supportEmail = supportEmail;
   }
 
 
@@ -1636,6 +1718,7 @@ public class Organization {
         Objects.equals(this.brandName, organization.brandName) &&
         Objects.equals(this.authorizedPersonnelTaxId, organization.authorizedPersonnelTaxId) &&
         Objects.equals(this.authorizedPersonnelName, organization.authorizedPersonnelName) &&
+        Objects.equals(this.authorizedPersonnelKycDocumentType, organization.authorizedPersonnelKycDocumentType) &&
         Objects.equals(this.registrationId, organization.registrationId) &&
         Objects.equals(this.vatId, organization.vatId) &&
         Objects.equals(this.taxId, organization.taxId) &&
@@ -1650,6 +1733,8 @@ public class Organization {
         Objects.equals(this.privacyPolicyUrl, organization.privacyPolicyUrl) &&
         Objects.equals(this.termsOfServiceUrl, organization.termsOfServiceUrl) &&
         Objects.equals(this.websiteUrl, organization.websiteUrl) &&
+        Objects.equals(this.helpLineNumber, organization.helpLineNumber) &&
+        Objects.equals(this.supportEmail, organization.supportEmail) &&
         Objects.equals(this.isGovernmentOrganization, organization.isGovernmentOrganization) &&
         Objects.equals(this.dlApiKey, organization.dlApiKey) &&
         Objects.equals(this.isKyoCompleted, organization.isKyoCompleted) &&
@@ -1682,7 +1767,7 @@ public class Organization {
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdBy, createdAtUtc, updatedBy, updatedAtUtc, createdByUser, updatedByUser, deletedBy, deletedAtUtc, deletedByUser, id, dataPartnerId, typeId, categoryId, documentProviderCategoryId, name, regulatorName, brandName, authorizedPersonnelTaxId, authorizedPersonnelName, registrationId, vatId, taxId, description, logoUrl, contactEmail, phoneNumber, countryId, stateId, status, companyCode, privacyPolicyUrl, termsOfServiceUrl, websiteUrl, isGovernmentOrganization, dlApiKey, isKyoCompleted, isEnabled, isDataProvider, isDataConsumer, submittedAtUtc, approvedBy, approvedAtUtc, isDigiLockerOrganization, isMdmcMaintained, isBbps, metaData, countryCode, organizationType, organizationCategory, documentProviderCategory, addresses, financialAccounts, countryState, approvedByUser, kyoDocuments, isDelete, recoveryToken);
+    return Objects.hash(createdBy, createdAtUtc, updatedBy, updatedAtUtc, createdByUser, updatedByUser, deletedBy, deletedAtUtc, deletedByUser, id, dataPartnerId, typeId, categoryId, documentProviderCategoryId, name, regulatorName, brandName, authorizedPersonnelTaxId, authorizedPersonnelName, authorizedPersonnelKycDocumentType, registrationId, vatId, taxId, description, logoUrl, contactEmail, phoneNumber, countryId, stateId, status, companyCode, privacyPolicyUrl, termsOfServiceUrl, websiteUrl, helpLineNumber, supportEmail, isGovernmentOrganization, dlApiKey, isKyoCompleted, isEnabled, isDataProvider, isDataConsumer, submittedAtUtc, approvedBy, approvedAtUtc, isDigiLockerOrganization, isMdmcMaintained, isBbps, metaData, countryCode, organizationType, organizationCategory, documentProviderCategory, addresses, financialAccounts, countryState, approvedByUser, kyoDocuments, isDelete, recoveryToken);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1717,6 +1802,7 @@ public class Organization {
     sb.append("    brandName: ").append(toIndentedString(brandName)).append("\n");
     sb.append("    authorizedPersonnelTaxId: ").append(toIndentedString(authorizedPersonnelTaxId)).append("\n");
     sb.append("    authorizedPersonnelName: ").append(toIndentedString(authorizedPersonnelName)).append("\n");
+    sb.append("    authorizedPersonnelKycDocumentType: ").append(toIndentedString(authorizedPersonnelKycDocumentType)).append("\n");
     sb.append("    registrationId: ").append(toIndentedString(registrationId)).append("\n");
     sb.append("    vatId: ").append(toIndentedString(vatId)).append("\n");
     sb.append("    taxId: ").append(toIndentedString(taxId)).append("\n");
@@ -1731,6 +1817,8 @@ public class Organization {
     sb.append("    privacyPolicyUrl: ").append(toIndentedString(privacyPolicyUrl)).append("\n");
     sb.append("    termsOfServiceUrl: ").append(toIndentedString(termsOfServiceUrl)).append("\n");
     sb.append("    websiteUrl: ").append(toIndentedString(websiteUrl)).append("\n");
+    sb.append("    helpLineNumber: ").append(toIndentedString(helpLineNumber)).append("\n");
+    sb.append("    supportEmail: ").append(toIndentedString(supportEmail)).append("\n");
     sb.append("    isGovernmentOrganization: ").append(toIndentedString(isGovernmentOrganization)).append("\n");
     sb.append("    dlApiKey: ").append(toIndentedString(dlApiKey)).append("\n");
     sb.append("    isKyoCompleted: ").append(toIndentedString(isKyoCompleted)).append("\n");

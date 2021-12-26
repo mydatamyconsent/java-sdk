@@ -33,7 +33,7 @@ public enum DataFetchType {
   
   PERIODIC("Periodic");
 
-  private final String value;
+  private String value;
 
   DataFetchType(String value) {
     this.value = value;

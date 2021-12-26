@@ -33,7 +33,7 @@ public enum BankAccountType {
   
   CURRENTACCOUNT("CurrentAccount");
 
-  private final String value;
+  private String value;
 
   BankAccountType(String value) {
     this.value = value;

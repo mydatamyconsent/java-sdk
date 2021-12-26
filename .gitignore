@@ -19,11 +19,3 @@ hs_err_pid*
 target
 .gradle
 build
-.openapi-generator/
-.openapi-generator-ignore
-api/
-.idea/
-src/java/AndroidManifest.xml
-git_push.sh
-gradle*
-build.sbt

@@ -37,7 +37,7 @@ public enum ProofDocumentType {
   
   RECENTWATERBILL("RecentWaterBill");
 
-  private final String value;
+  private String value;
 
   ProofDocumentType(String value) {
     this.value = value;

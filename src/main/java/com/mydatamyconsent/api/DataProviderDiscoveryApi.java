@@ -232,7 +232,7 @@ public class DataProviderDiscoveryApi {
 
         // create path and map variables
         String localVarPath = "/v1/data-providers/{providerId}"
-            .replaceAll("\\{" + "providerId" + "\\}", localVarApiClient.escapeString(providerId));
+            .replaceAll("\\{" + "providerId" + "\\}", localVarApiClient.escapeString(providerId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

@@ -43,7 +43,7 @@ public enum Identifier {
   
   GOODSANDSERVICESTAXIDENTIFICATIONNUMBER("GoodsAndServicesTaxIdentificationNumber");
 
-  private final String value;
+  private String value;
 
   Identifier(String value) {
     this.value = value;

@@ -33,15 +33,15 @@ public enum OrganizationStatus {
   
   CONTACTDETAILSUPDATED("ContactDetailsUpdated"),
   
-  OVERVIEWUPDATED("OverviewUpdated"),
+  AUTHORIZEDPERSONNELUPDATED("AuthorizedPersonnelUpdated"),
+  
+  ORGANIZATIONDETAILSUPDATED("OrganizationDetailsUpdated"),
   
   ADDRESSUPDATED("AddressUpdated"),
   
-  BANKACCOUNTSUPDATED("BankAccountsUpdated"),
-  
   SIGNUPCOMPLETED("SignUpCompleted");
 
-  private final String value;
+  private String value;
 
   OrganizationStatus(String value) {
     this.value = value;

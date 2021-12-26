@@ -39,7 +39,7 @@ public enum DataFetchFrequencyUnit {
   
   UNLIMITED("Unlimited");
 
-  private final String value;
+  private String value;
 
   DataFetchFrequencyUnit(String value) {
     this.value = value;
