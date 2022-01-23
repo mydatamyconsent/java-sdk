@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="v1DataAgreementsGet"></a>
 # **v1DataAgreementsGet**
-> DataProcessingAgreementPaginatedList v1DataAgreementsGet(pageNo, pageSize)
+> DataProcessingAgreementDtoPaginatedList v1DataAgreementsGet(pageNo, pageSize)
 
 Get all data processing agreements.
 
@@ -36,7 +36,7 @@ public class Example {
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      DataProcessingAgreementPaginatedList result = apiInstance.v1DataAgreementsGet(pageNo, pageSize);
+      DataProcessingAgreementDtoPaginatedList result = apiInstance.v1DataAgreementsGet(pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsGet");
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataProcessingAgreementPaginatedList**](DataProcessingAgreementPaginatedList.md)
+[**DataProcessingAgreementDtoPaginatedList**](DataProcessingAgreementDtoPaginatedList.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -128,7 +128,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -140,7 +140,7 @@ No authorization required
 
 <a name="v1DataAgreementsIdGet"></a>
 # **v1DataAgreementsIdGet**
-> DataProcessingAgreement v1DataAgreementsIdGet(id)
+> DataProcessingAgreementDto v1DataAgreementsIdGet(id)
 
 Get data processing agreement by Id.
 
@@ -161,7 +161,7 @@ public class Example {
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = new UUID(); // UUID | 
     try {
-      DataProcessingAgreement result = apiInstance.v1DataAgreementsIdGet(id);
+      DataProcessingAgreementDto result = apiInstance.v1DataAgreementsIdGet(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsIdGet");
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataProcessingAgreement**](DataProcessingAgreement.md)
+[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -202,7 +202,7 @@ No authorization required
 
 <a name="v1DataAgreementsIdPut"></a>
 # **v1DataAgreementsIdPut**
-> DataProcessingAgreement v1DataAgreementsIdPut(id, dataProcessingAgreement)
+> DataProcessingAgreementDto v1DataAgreementsIdPut(id, updateDataProcessingAgreementRequestModel)
 
 Update a data processing agreement.
 
@@ -222,9 +222,9 @@ public class Example {
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = new UUID(); // UUID | 
-    DataProcessingAgreement dataProcessingAgreement = new DataProcessingAgreement(); // DataProcessingAgreement | 
+    UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = new UpdateDataProcessingAgreementRequestModel(); // UpdateDataProcessingAgreementRequestModel | 
     try {
-      DataProcessingAgreement result = apiInstance.v1DataAgreementsIdPut(id, dataProcessingAgreement);
+      DataProcessingAgreementDto result = apiInstance.v1DataAgreementsIdPut(id, updateDataProcessingAgreementRequestModel);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsIdPut");
@@ -242,11 +242,11 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**UUID**](.md)|  |
- **dataProcessingAgreement** | [**DataProcessingAgreement**](DataProcessingAgreement.md)|  | [optional]
+ **updateDataProcessingAgreementRequestModel** | [**UpdateDataProcessingAgreementRequestModel**](UpdateDataProcessingAgreementRequestModel.md)|  | [optional]
 
 ### Return type
 
-[**DataProcessingAgreement**](DataProcessingAgreement.md)
+[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
 
 ### Authorization
 
@@ -254,8 +254,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -317,7 +317,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -329,7 +329,7 @@ No authorization required
 
 <a name="v1DataAgreementsPost"></a>
 # **v1DataAgreementsPost**
-> DataProcessingAgreement v1DataAgreementsPost(dataProcessingAgreement)
+> DataProcessingAgreementDto v1DataAgreementsPost(createDataProcessingAgreementRequestModel)
 
 Create a data processing agreement.
 
@@ -348,9 +348,9 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    DataProcessingAgreement dataProcessingAgreement = new DataProcessingAgreement(); // DataProcessingAgreement | 
+    CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = new CreateDataProcessingAgreementRequestModel(); // CreateDataProcessingAgreementRequestModel | 
     try {
-      DataProcessingAgreement result = apiInstance.v1DataAgreementsPost(dataProcessingAgreement);
+      DataProcessingAgreementDto result = apiInstance.v1DataAgreementsPost(createDataProcessingAgreementRequestModel);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsPost");
@@ -367,11 +367,11 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dataProcessingAgreement** | [**DataProcessingAgreement**](DataProcessingAgreement.md)|  | [optional]
+ **createDataProcessingAgreementRequestModel** | [**CreateDataProcessingAgreementRequestModel**](CreateDataProcessingAgreementRequestModel.md)|  | [optional]
 
 ### Return type
 
-[**DataProcessingAgreement**](DataProcessingAgreement.md)
+[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
 
 ### Authorization
 
@@ -379,8 +379,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

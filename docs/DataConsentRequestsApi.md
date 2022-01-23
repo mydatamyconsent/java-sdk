@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelConsentRequest**](DataConsentRequestsApi.md#cancelConsentRequest) | **DELETE** /v1/consent-requests/{requestId}/cancel | Cancel a Consent Request by ID.
+[**cancelConsentRequest**](DataConsentRequestsApi.md#cancelConsentRequest) | **DELETE** /v1/consent-requests/{requestId}/cancel | Revoke / Cancel the ConsentRequest based on Id
 [**createRequest**](DataConsentRequestsApi.md#createRequest) | **POST** /v1/consent-requests | Create a consent request.
 [**getAllConsentRequests**](DataConsentRequestsApi.md#getAllConsentRequests) | **GET** /v1/consent-requests | Get all Consent Requests.
 [**getConsentRequestById**](DataConsentRequestsApi.md#getConsentRequestById) | **GET** /v1/consent-requests/{requestId} | Get a Consent Request by ID.
@@ -12,11 +12,9 @@ Method | HTTP request | Description
 
 <a name="cancelConsentRequest"></a>
 # **cancelConsentRequest**
-> cancelConsentRequest(requestId)
+> Boolean cancelConsentRequest(requestId)
 
-Cancel a Consent Request by ID.
-
-.
+Revoke / Cancel the ConsentRequest based on Id
 
 ### Example
 ```java
@@ -33,9 +31,10 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
-    UUID requestId = new UUID(); // UUID | consent request id.
+    UUID requestId = new UUID(); // UUID | 
     try {
-      apiInstance.cancelConsentRequest(requestId);
+      Boolean result = apiInstance.cancelConsentRequest(requestId);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentRequestsApi#cancelConsentRequest");
       System.err.println("Status code: " + e.getCode());
@@ -51,11 +50,11 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **requestId** | [**UUID**](.md)| consent request id. |
+ **requestId** | [**UUID**](.md)|  |
 
 ### Return type
 
-null (empty response body)
+**Boolean**
 
 ### Authorization
 
@@ -64,16 +63,18 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
 
 <a name="createRequest"></a>
 # **createRequest**
-> DataConsent createRequest(dataConsentRequestModel)
+> Boolean createRequest(dataConsentRequestModel)
 
 Create a consent request.
 
@@ -94,7 +95,7 @@ public class Example {
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     DataConsentRequestModel dataConsentRequestModel = new DataConsentRequestModel(); // DataConsentRequestModel | MyDataMyConsent.Models.Consents.DataConsentRequestModel.
     try {
-      DataConsent result = apiInstance.createRequest(dataConsentRequestModel);
+      Boolean result = apiInstance.createRequest(dataConsentRequestModel);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentRequestsApi#createRequest");
@@ -115,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataConsent**](DataConsent.md)
+**Boolean**
 
 ### Authorization
 
@@ -123,8 +124,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json, application/xml
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -135,7 +136,7 @@ No authorization required
 
 <a name="getAllConsentRequests"></a>
 # **getAllConsentRequests**
-> Object getAllConsentRequests(status)
+> Object getAllConsentRequests(pageNo, pageSize, status)
 
 Get all Consent Requests.
 
@@ -154,9 +155,11 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
+    Integer pageNo = 56; // Integer | 
+    Integer pageSize = 56; // Integer | 
     DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | 
     try {
-      Object result = apiInstance.getAllConsentRequests(status);
+      Object result = apiInstance.getAllConsentRequests(pageNo, pageSize, status);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentRequestsApi#getAllConsentRequests");
@@ -173,6 +176,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageNo** | **Integer**|  | [optional]
+ **pageSize** | **Integer**|  | [optional]
  **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired]
 
 ### Return type
@@ -186,7 +191,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -248,7 +253,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/xml
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
