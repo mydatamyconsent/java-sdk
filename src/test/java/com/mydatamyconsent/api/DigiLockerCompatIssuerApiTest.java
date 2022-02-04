@@ -45,8 +45,7 @@ public class DigiLockerCompatIssuerApiTest {
     @Test
     public void issuerIssuedoc1XmlPostTest() throws ApiException {
         PushUriRequest pushUriRequest = null;
-        PushUriResponse response = api.issuerIssuedoc1XmlPost(pushUriRequest);
-
+                PushUriResponse response = api.issuerIssuedoc1XmlPost(pushUriRequest);
         // TODO: test validations
     }
     

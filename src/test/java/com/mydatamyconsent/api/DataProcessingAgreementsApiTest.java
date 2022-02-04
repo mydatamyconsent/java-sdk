@@ -14,10 +14,12 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.DataProcessingAgreement;
-import com.mydatamyconsent.model.DataProcessingAgreementPaginatedList;
+import com.mydatamyconsent.model.CreateDataProcessingAgreementRequestModel;
+import com.mydatamyconsent.model.DataProcessingAgreementDto;
+import com.mydatamyconsent.model.DataProcessingAgreementDtoPaginatedList;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
+import com.mydatamyconsent.model.UpdateDataProcessingAgreementRequestModel;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -47,8 +49,7 @@ public class DataProcessingAgreementsApiTest {
     public void v1DataAgreementsGetTest() throws ApiException {
         Integer pageNo = null;
         Integer pageSize = null;
-        DataProcessingAgreementPaginatedList response = api.v1DataAgreementsGet(pageNo, pageSize);
-
+                DataProcessingAgreementDtoPaginatedList response = api.v1DataAgreementsGet(pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -63,8 +64,7 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void v1DataAgreementsIdDeleteTest() throws ApiException {
         UUID id = null;
-        api.v1DataAgreementsIdDelete(id);
-
+                api.v1DataAgreementsIdDelete(id);
         // TODO: test validations
     }
     
@@ -79,8 +79,7 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void v1DataAgreementsIdGetTest() throws ApiException {
         UUID id = null;
-        DataProcessingAgreement response = api.v1DataAgreementsIdGet(id);
-
+                DataProcessingAgreementDto response = api.v1DataAgreementsIdGet(id);
         // TODO: test validations
     }
     
@@ -95,9 +94,8 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void v1DataAgreementsIdPutTest() throws ApiException {
         UUID id = null;
-        DataProcessingAgreement dataProcessingAgreement = null;
-        DataProcessingAgreement response = api.v1DataAgreementsIdPut(id, dataProcessingAgreement);
-
+        UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = null;
+                DataProcessingAgreementDto response = api.v1DataAgreementsIdPut(id, updateDataProcessingAgreementRequestModel);
         // TODO: test validations
     }
     
@@ -112,8 +110,7 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void v1DataAgreementsIdTerminatePutTest() throws ApiException {
         UUID id = null;
-        api.v1DataAgreementsIdTerminatePut(id);
-
+                api.v1DataAgreementsIdTerminatePut(id);
         // TODO: test validations
     }
     
@@ -127,9 +124,8 @@ public class DataProcessingAgreementsApiTest {
      */
     @Test
     public void v1DataAgreementsPostTest() throws ApiException {
-        DataProcessingAgreement dataProcessingAgreement = null;
-        DataProcessingAgreement response = api.v1DataAgreementsPost(dataProcessingAgreement);
-
+        CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = null;
+                DataProcessingAgreementDto response = api.v1DataAgreementsPost(createDataProcessingAgreementRequestModel);
         // TODO: test validations
     }
     

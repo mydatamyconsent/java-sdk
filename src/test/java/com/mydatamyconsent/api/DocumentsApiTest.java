@@ -46,8 +46,7 @@ public class DocumentsApiTest {
     @Test
     public void issueDocumentTest() throws ApiException {
         DocumentIssueRequest documentIssueRequest = null;
-        Boolean response = api.issueDocument(documentIssueRequest);
-
+                Boolean response = api.issueDocument(documentIssueRequest);
         // TODO: test validations
     }
     
@@ -62,8 +61,7 @@ public class DocumentsApiTest {
     @Test
     public void v1DocumentsIssuedDocumentIdGetTest() throws ApiException {
         UUID documentId = null;
-        api.v1DocumentsIssuedDocumentIdGet(documentId);
-
+                api.v1DocumentsIssuedDocumentIdGet(documentId);
         // TODO: test validations
     }
     
@@ -82,8 +80,7 @@ public class DocumentsApiTest {
         OffsetDateTime toDateTime = null;
         Integer pageSize = null;
         Integer pageNo = null;
-        api.v1DocumentsIssuedGet(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
-
+                api.v1DocumentsIssuedGet(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
         // TODO: test validations
     }
     
@@ -99,8 +96,7 @@ public class DocumentsApiTest {
     public void v1DocumentsTypesGetTest() throws ApiException {
         Integer pageSize = null;
         Integer pageNo = null;
-        api.v1DocumentsTypesGet(pageSize, pageNo);
-
+                api.v1DocumentsTypesGet(pageSize, pageNo);
         // TODO: test validations
     }
     

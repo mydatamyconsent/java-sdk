@@ -25,36 +25,52 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * DataConsentRequestedDocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-26T11:36:08.780773+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-04T22:01:19.170059642Z[Etc/UTC]")
 public class DataConsentRequestedDocument {
+  public static final String SERIALIZED_NAME_CUSTOM_KEY = "customKey";
+  @SerializedName(SERIALIZED_NAME_CUSTOM_KEY)
+  private String customKey;
+
   public static final String SERIALIZED_NAME_DRN = "drn";
   @SerializedName(SERIALIZED_NAME_DRN)
   private String drn;
 
-  public static final String SERIALIZED_NAME_FROM_DATETIME = "fromDatetime";
-  @SerializedName(SERIALIZED_NAME_FROM_DATETIME)
-  private OffsetDateTime fromDatetime;
-
-  public static final String SERIALIZED_NAME_TO_DATETIME = "toDatetime";
-  @SerializedName(SERIALIZED_NAME_TO_DATETIME)
-  private OffsetDateTime toDatetime;
-
-  public static final String SERIALIZED_NAME_PROVIDER_ID = "providerId";
-  @SerializedName(SERIALIZED_NAME_PROVIDER_ID)
-  private UUID providerId;
-
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
-  private String documentTypeId;
+  private UUID documentTypeId;
 
   public static final String SERIALIZED_NAME_DOCUMENT_IDENTIFIER = "documentIdentifier";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_IDENTIFIER)
-  private String documentIdentifier;
+  private UUID documentIdentifier;
+
+  public DataConsentRequestedDocument() { 
+  }
+
+  public DataConsentRequestedDocument customKey(String customKey) {
+    
+    this.customKey = customKey;
+    return this;
+  }
+
+   /**
+   * Get customKey
+   * @return customKey
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCustomKey() {
+    return customKey;
+  }
+
+
+  public void setCustomKey(String customKey) {
+    this.customKey = customKey;
+  }
 
 
   public DataConsentRequestedDocument drn(String drn) {
@@ -80,76 +96,7 @@ public class DataConsentRequestedDocument {
   }
 
 
-  public DataConsentRequestedDocument fromDatetime(OffsetDateTime fromDatetime) {
-    
-    this.fromDatetime = fromDatetime;
-    return this;
-  }
-
-   /**
-   * Get fromDatetime
-   * @return fromDatetime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getFromDatetime() {
-    return fromDatetime;
-  }
-
-
-  public void setFromDatetime(OffsetDateTime fromDatetime) {
-    this.fromDatetime = fromDatetime;
-  }
-
-
-  public DataConsentRequestedDocument toDatetime(OffsetDateTime toDatetime) {
-    
-    this.toDatetime = toDatetime;
-    return this;
-  }
-
-   /**
-   * Get toDatetime
-   * @return toDatetime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getToDatetime() {
-    return toDatetime;
-  }
-
-
-  public void setToDatetime(OffsetDateTime toDatetime) {
-    this.toDatetime = toDatetime;
-  }
-
-
-  public DataConsentRequestedDocument providerId(UUID providerId) {
-    
-    this.providerId = providerId;
-    return this;
-  }
-
-   /**
-   * Get providerId
-   * @return providerId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public UUID getProviderId() {
-    return providerId;
-  }
-
-
-  public void setProviderId(UUID providerId) {
-    this.providerId = providerId;
-  }
-
-
-  public DataConsentRequestedDocument documentTypeId(String documentTypeId) {
+  public DataConsentRequestedDocument documentTypeId(UUID documentTypeId) {
     
     this.documentTypeId = documentTypeId;
     return this;
@@ -162,17 +109,17 @@ public class DataConsentRequestedDocument {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getDocumentTypeId() {
+  public UUID getDocumentTypeId() {
     return documentTypeId;
   }
 
 
-  public void setDocumentTypeId(String documentTypeId) {
+  public void setDocumentTypeId(UUID documentTypeId) {
     this.documentTypeId = documentTypeId;
   }
 
 
-  public DataConsentRequestedDocument documentIdentifier(String documentIdentifier) {
+  public DataConsentRequestedDocument documentIdentifier(UUID documentIdentifier) {
     
     this.documentIdentifier = documentIdentifier;
     return this;
@@ -185,12 +132,12 @@ public class DataConsentRequestedDocument {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getDocumentIdentifier() {
+  public UUID getDocumentIdentifier() {
     return documentIdentifier;
   }
 
 
-  public void setDocumentIdentifier(String documentIdentifier) {
+  public void setDocumentIdentifier(UUID documentIdentifier) {
     this.documentIdentifier = documentIdentifier;
   }
 
@@ -204,40 +151,34 @@ public class DataConsentRequestedDocument {
       return false;
     }
     DataConsentRequestedDocument dataConsentRequestedDocument = (DataConsentRequestedDocument) o;
-    return Objects.equals(this.drn, dataConsentRequestedDocument.drn) &&
-        Objects.equals(this.fromDatetime, dataConsentRequestedDocument.fromDatetime) &&
-        Objects.equals(this.toDatetime, dataConsentRequestedDocument.toDatetime) &&
-        Objects.equals(this.providerId, dataConsentRequestedDocument.providerId) &&
+    return Objects.equals(this.customKey, dataConsentRequestedDocument.customKey) &&
+        Objects.equals(this.drn, dataConsentRequestedDocument.drn) &&
         Objects.equals(this.documentTypeId, dataConsentRequestedDocument.documentTypeId) &&
         Objects.equals(this.documentIdentifier, dataConsentRequestedDocument.documentIdentifier);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && a.get().getClass().isArray() ? Arrays.equals((T[])a.get(), (T[])b.get()) : Objects.equals(a.get(), b.get()));
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(drn, fromDatetime, toDatetime, providerId, documentTypeId, documentIdentifier);
+    return Objects.hash(customKey, drn, documentTypeId, documentIdentifier);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent()
-      ? (a.get().getClass().isArray() ? Arrays.hashCode((T[])a.get()) : Objects.hashCode(a.get()))
-      : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataConsentRequestedDocument {\n");
+    sb.append("    customKey: ").append(toIndentedString(customKey)).append("\n");
     sb.append("    drn: ").append(toIndentedString(drn)).append("\n");
-    sb.append("    fromDatetime: ").append(toIndentedString(fromDatetime)).append("\n");
-    sb.append("    toDatetime: ").append(toIndentedString(toDatetime)).append("\n");
-    sb.append("    providerId: ").append(toIndentedString(providerId)).append("\n");
     sb.append("    documentTypeId: ").append(toIndentedString(documentTypeId)).append("\n");
     sb.append("    documentIdentifier: ").append(toIndentedString(documentIdentifier)).append("\n");
     sb.append("}");

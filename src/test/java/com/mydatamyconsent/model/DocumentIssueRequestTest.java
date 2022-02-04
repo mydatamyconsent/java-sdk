@@ -91,11 +91,11 @@ public class DocumentIssueRequestTest {
     }
 
     /**
-     * Test the property 'base64PDFDocument'
+     * Test the property 'base64PdfDocument'
      */
     @Test
-    public void base64PDFDocumentTest() {
-        // TODO: test base64PDFDocument
+    public void base64PdfDocumentTest() {
+        // TODO: test base64PdfDocument
     }
 
     /**

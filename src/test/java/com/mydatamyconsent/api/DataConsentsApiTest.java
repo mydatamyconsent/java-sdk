@@ -14,9 +14,23 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.model.DataConsentDetailsDto;
+import com.mydatamyconsent.model.DataConsentDocumentsDto;
+import com.mydatamyconsent.model.DataConsentFinancialsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
+import com.mydatamyconsent.model.FinancialAccount;
 import org.threeten.bp.OffsetDateTime;
+import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
+import com.mydatamyconsent.model.OrganizationDocumentDetailsDto;
+import com.mydatamyconsent.model.OrganizationDocumentDownloadDto;
+import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
+import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
 import com.mydatamyconsent.model.ProblemDetails;
+import java.util.UUID;
+import com.mydatamyconsent.model.UserAccountFinancialTransactionsDtoPaginatedList;
+import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
+import com.mydatamyconsent.model.UserDocumentDetailsDto;
+import com.mydatamyconsent.model.UserDocumentDownloadDto;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -35,7 +49,7 @@ public class DataConsentsApiTest {
 
     
     /**
-     * Get consented financial account details.
+     * Get individual consented financial account details based on account id.
      *
      * 
      *
@@ -43,16 +57,15 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdAccountsAccountIdGetTest() throws ApiException {
-        String consentId = null;
-        String accountId = null;
-        Object response = api.v1ConsentsConsentIdAccountsAccountIdGet(consentId, accountId);
-
+    public void v1ConsentsIndividualsConsentIdAccountsAccountIdGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID accountId = null;
+                FinancialAccount response = api.v1ConsentsIndividualsConsentIdAccountsAccountIdGet(consentId, accountId);
         // TODO: test validations
     }
     
     /**
-     * Get consented financial account insights.
+     * Get consented financial account transactions of an individual based on accountId.
      *
      * 
      *
@@ -60,36 +73,20 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdAccountsAccountIdInsightsGetTest() throws ApiException {
-        String consentId = null;
-        String accountId = null;
-        Object response = api.v1ConsentsConsentIdAccountsAccountIdInsightsGet(consentId, accountId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get consented financial account transactions.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void v1ConsentsConsentIdAccountsAccountIdTransactionsGetTest() throws ApiException {
-        String consentId = null;
-        String accountId = null;
+    public void v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID accountId = null;
         String filters = null;
+        Integer pageNo = null;
+        Integer pageSize = null;
         OffsetDateTime fromDate = null;
         OffsetDateTime toDate = null;
-        Object response = api.v1ConsentsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, fromDate, toDate);
-
+                UserAccountFinancialTransactionsDtoPaginatedList response = api.v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate);
         // TODO: test validations
     }
     
     /**
-     * Get all accounts in a consent.
+     * Get all individual financial accounts in a consent.
      *
      * 
      *
@@ -97,15 +94,14 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdAccountsGetTest() throws ApiException {
-        String consentId = null;
-        Object response = api.v1ConsentsConsentIdAccountsGet(consentId);
-
+    public void v1ConsentsIndividualsConsentIdAccountsGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentFinancialsDto response = api.v1ConsentsIndividualsConsentIdAccountsGet(consentId);
         // TODO: test validations
     }
     
     /**
-     * Get analysis of a consented document.
+     * Download a individuals consented document.
      *
      * 
      *
@@ -113,16 +109,15 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdDocumentsDocumentIdAnalysisGetTest() throws ApiException {
-        String consentId = null;
-        String documentId = null;
-        Object response = api.v1ConsentsConsentIdDocumentsDocumentIdAnalysisGet(consentId, documentId);
-
+    public void v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID documentId = null;
+                UserDocumentDownloadDto response = api.v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId);
         // TODO: test validations
     }
     
     /**
-     * Download a consented document.
+     * Get individuals consent document based on document id.
      *
      * 
      *
@@ -130,16 +125,15 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdDocumentsDocumentIdDownloadGetTest() throws ApiException {
-        String consentId = null;
-        String documentId = null;
-        Object response = api.v1ConsentsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId);
-
+    public void v1ConsentsIndividualsConsentIdDocumentsDocumentIdGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID documentId = null;
+                UserDocumentDetailsDto response = api.v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet(consentId, documentId);
         // TODO: test validations
     }
     
     /**
-     * Get consented document details.
+     * Get the individual documents based on ConsentId.
      *
      * 
      *
@@ -147,16 +141,14 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdDocumentsDocumentIdGetTest() throws ApiException {
-        String consentId = null;
-        String documentId = null;
-        Object response = api.v1ConsentsConsentIdDocumentsDocumentIdGet(consentId, documentId);
-
+    public void v1ConsentsIndividualsConsentIdDocumentsGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentDocumentsDto response = api.v1ConsentsIndividualsConsentIdDocumentsGet(consentId);
         // TODO: test validations
     }
     
     /**
-     * Get all documents in a consent.
+     * Get individuals consent details by consent id.
      *
      * 
      *
@@ -164,15 +156,14 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdDocumentsGetTest() throws ApiException {
-        String consentId = null;
-        Object response = api.v1ConsentsConsentIdDocumentsGet(consentId);
-
+    public void v1ConsentsIndividualsConsentIdGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentDetailsDto response = api.v1ConsentsIndividualsConsentIdGet(consentId);
         // TODO: test validations
     }
     
     /**
-     * Get consent details by consent id.
+     * Get the list of Consents Sent to Individuals.
      *
      * 
      *
@@ -180,28 +171,146 @@ public class DataConsentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1ConsentsConsentIdGetTest() throws ApiException {
-        String consentId = null;
-        Object response = api.v1ConsentsConsentIdGet(consentId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * Get all consents filtered by status and time.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void v1ConsentsGetTest() throws ApiException {
+    public void v1ConsentsIndividualsGetTest() throws ApiException {
+        Integer pageNo = null;
+        Integer pageSize = null;
         DataConsentStatus status = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
-        Object response = api.v1ConsentsGet(status, startDate, endDate);
-
+                UserDataConsentInfoDtoPaginatedList response = api.v1ConsentsIndividualsGet(pageNo, pageSize, status, startDate, endDate);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get orgnization consented financial account details based on account id.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdAccountsAccountIdGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID accountId = null;
+                OrganizationFinancialAccountDto response = api.v1ConsentsOrganizationsConsentIdAccountsAccountIdGet(consentId, accountId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get consented financial account transactions of an organization based on accountId.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID accountId = null;
+        String filters = null;
+        Integer pageNo = null;
+        Integer pageSize = null;
+        OffsetDateTime fromDate = null;
+        OffsetDateTime toDate = null;
+                OrganizationFinancialTransactionsDtoPaginatedList response = api.v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all organizational financial accounts in a consent.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdAccountsGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentFinancialsDto response = api.v1ConsentsOrganizationsConsentIdAccountsGet(consentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Download organizations consented document.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID documentId = null;
+                OrganizationDocumentDownloadDto response = api.v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get organizations consent document based on document id.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGetTest() throws ApiException {
+        UUID consentId = null;
+        UUID documentId = null;
+                OrganizationDocumentDetailsDto response = api.v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet(consentId, documentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the organizations documents based on ConsentId.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdDocumentsGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentDocumentsDto response = api.v1ConsentsOrganizationsConsentIdDocumentsGet(consentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get organizations consent details by consent id.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsConsentIdGetTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentDetailsDto response = api.v1ConsentsOrganizationsConsentIdGet(consentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the list of data consents sent for organizations.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void v1ConsentsOrganizationsGetTest() throws ApiException {
+        Integer pageNo = null;
+        Integer pageSize = null;
+        DataConsentStatus status = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+                OrganizationDataConsentInfoDtoPaginatedList response = api.v1ConsentsOrganizationsGet(pageNo, pageSize, status, startDate, endDate);
         // TODO: test validations
     }
     

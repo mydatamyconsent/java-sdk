@@ -7,12 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**customKey** | **String** |  |  [optional]
 **drn** | **String** |  |  [optional]
-**fromDatetime** | **OffsetDateTime** |  |  [optional]
-**toDatetime** | **OffsetDateTime** |  |  [optional]
-**providerId** | **UUID** |  |  [optional]
-**documentTypeId** | **String** |  |  [optional]
-**documentIdentifier** | **String** |  |  [optional]
+**documentTypeId** | **UUID** |  |  [optional]
+**documentIdentifier** | **UUID** |  |  [optional]
 
 
 

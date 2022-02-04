@@ -14,7 +14,6 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.DataConsent;
 import com.mydatamyconsent.model.DataConsentDetailsDto;
 import com.mydatamyconsent.model.DataConsentRequestModel;
 import com.mydatamyconsent.model.DataConsentStatus;
@@ -38,9 +37,9 @@ public class DataConsentRequestsApiTest {
 
     
     /**
-     * Cancel a Consent Request by ID.
+     * Revoke / Cancel the ConsentRequest based on Id.
      *
-     * .
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
@@ -48,8 +47,7 @@ public class DataConsentRequestsApiTest {
     @Test
     public void cancelConsentRequestTest() throws ApiException {
         UUID requestId = null;
-        api.cancelConsentRequest(requestId);
-
+                Boolean response = api.cancelConsentRequest(requestId);
         // TODO: test validations
     }
     
@@ -64,13 +62,12 @@ public class DataConsentRequestsApiTest {
     @Test
     public void createRequestTest() throws ApiException {
         DataConsentRequestModel dataConsentRequestModel = null;
-        DataConsent response = api.createRequest(dataConsentRequestModel);
-
+                Boolean response = api.createRequest(dataConsentRequestModel);
         // TODO: test validations
     }
     
     /**
-     * Get all Consent Requests.
+     * Get all Consent Requests sent to Individuals.
      *
      * 
      *
@@ -78,10 +75,28 @@ public class DataConsentRequestsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getAllConsentRequestsTest() throws ApiException {
+    public void getAllConsentRequestsToIndividualsTest() throws ApiException {
+        Integer pageNo = null;
+        Integer pageSize = null;
         DataConsentStatus status = null;
-        Object response = api.getAllConsentRequests(status);
-
+                Object response = api.getAllConsentRequestsToIndividuals(pageNo, pageSize, status);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get All Consent Requests sent to Organizations
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getAllConsentRequestsToOrganizationsTest() throws ApiException {
+        Integer pageNo = null;
+        Integer pageSize = null;
+        DataConsentStatus status = null;
+                Object response = api.getAllConsentRequestsToOrganizations(pageNo, pageSize, status);
         // TODO: test validations
     }
     
@@ -94,10 +109,24 @@ public class DataConsentRequestsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void getConsentRequestByIdTest() throws ApiException {
+    public void getIndividualConsentRequestByIdTest() throws ApiException {
         UUID requestId = null;
-        DataConsentDetailsDto response = api.getConsentRequestById(requestId);
-
+                DataConsentDetailsDto response = api.getIndividualConsentRequestById(requestId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get a OrganizationConsent Request by Id
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getOrganizationConsentRequestByIdTest() throws ApiException {
+        UUID requestId = null;
+                DataConsentDetailsDto response = api.getOrganizationConsentRequestById(requestId);
         // TODO: test validations
     }
     

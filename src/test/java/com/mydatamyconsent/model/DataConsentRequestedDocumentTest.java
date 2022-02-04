@@ -23,7 +23,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -44,35 +43,19 @@ public class DataConsentRequestedDocumentTest {
     }
 
     /**
+     * Test the property 'customKey'
+     */
+    @Test
+    public void customKeyTest() {
+        // TODO: test customKey
+    }
+
+    /**
      * Test the property 'drn'
      */
     @Test
     public void drnTest() {
         // TODO: test drn
-    }
-
-    /**
-     * Test the property 'fromDatetime'
-     */
-    @Test
-    public void fromDatetimeTest() {
-        // TODO: test fromDatetime
-    }
-
-    /**
-     * Test the property 'toDatetime'
-     */
-    @Test
-    public void toDatetimeTest() {
-        // TODO: test toDatetime
-    }
-
-    /**
-     * Test the property 'providerId'
-     */
-    @Test
-    public void providerIdTest() {
-        // TODO: test providerId
     }
 
     /**

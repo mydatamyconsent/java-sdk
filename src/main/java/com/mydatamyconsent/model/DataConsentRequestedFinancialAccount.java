@@ -20,49 +20,57 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentRfaFilter;
-import com.mydatamyconsent.model.FinancialAccountTypes;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * DataConsentRequestedFinancialAccount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-26T11:36:08.780773+05:30[Asia/Kolkata]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-04T22:01:19.170059642Z[Etc/UTC]")
 public class DataConsentRequestedFinancialAccount {
+  public static final String SERIALIZED_NAME_CUSTOM_KEY = "customKey";
+  @SerializedName(SERIALIZED_NAME_CUSTOM_KEY)
+  private String customKey;
+
   public static final String SERIALIZED_NAME_DRN = "drn";
   @SerializedName(SERIALIZED_NAME_DRN)
   private String drn;
 
-  public static final String SERIALIZED_NAME_FROM_DATETIME = "fromDatetime";
-  @SerializedName(SERIALIZED_NAME_FROM_DATETIME)
-  private OffsetDateTime fromDatetime;
-
-  public static final String SERIALIZED_NAME_TO_DATETIME = "toDatetime";
-  @SerializedName(SERIALIZED_NAME_TO_DATETIME)
-  private OffsetDateTime toDatetime;
-
-  public static final String SERIALIZED_NAME_PROVIDER_ID = "providerId";
-  @SerializedName(SERIALIZED_NAME_PROVIDER_ID)
-  private UUID providerId;
-
-  public static final String SERIALIZED_NAME_ACCOUNT_TYPE = "accountType";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_TYPE)
-  private FinancialAccountTypes accountType;
+  public static final String SERIALIZED_NAME_ACCOUNT_TYPE_ID = "accountTypeId";
+  @SerializedName(SERIALIZED_NAME_ACCOUNT_TYPE_ID)
+  private UUID accountTypeId;
 
   public static final String SERIALIZED_NAME_ACCOUNT_IDENTIFIER = "accountIdentifier";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_IDENTIFIER)
-  private String accountIdentifier;
+  private UUID accountIdentifier;
 
-  public static final String SERIALIZED_NAME_FILTERS = "filters";
-  @SerializedName(SERIALIZED_NAME_FILTERS)
-  private List<DataConsentRfaFilter> filters = null;
+  public DataConsentRequestedFinancialAccount() { 
+  }
+
+  public DataConsentRequestedFinancialAccount customKey(String customKey) {
+    
+    this.customKey = customKey;
+    return this;
+  }
+
+   /**
+   * Get customKey
+   * @return customKey
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getCustomKey() {
+    return customKey;
+  }
+
+
+  public void setCustomKey(String customKey) {
+    this.customKey = customKey;
+  }
 
 
   public DataConsentRequestedFinancialAccount drn(String drn) {
@@ -88,99 +96,30 @@ public class DataConsentRequestedFinancialAccount {
   }
 
 
-  public DataConsentRequestedFinancialAccount fromDatetime(OffsetDateTime fromDatetime) {
+  public DataConsentRequestedFinancialAccount accountTypeId(UUID accountTypeId) {
     
-    this.fromDatetime = fromDatetime;
+    this.accountTypeId = accountTypeId;
     return this;
   }
 
    /**
-   * Get fromDatetime
-   * @return fromDatetime
+   * Get accountTypeId
+   * @return accountTypeId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public OffsetDateTime getFromDatetime() {
-    return fromDatetime;
+  public UUID getAccountTypeId() {
+    return accountTypeId;
   }
 
 
-  public void setFromDatetime(OffsetDateTime fromDatetime) {
-    this.fromDatetime = fromDatetime;
+  public void setAccountTypeId(UUID accountTypeId) {
+    this.accountTypeId = accountTypeId;
   }
 
 
-  public DataConsentRequestedFinancialAccount toDatetime(OffsetDateTime toDatetime) {
-    
-    this.toDatetime = toDatetime;
-    return this;
-  }
-
-   /**
-   * Get toDatetime
-   * @return toDatetime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getToDatetime() {
-    return toDatetime;
-  }
-
-
-  public void setToDatetime(OffsetDateTime toDatetime) {
-    this.toDatetime = toDatetime;
-  }
-
-
-  public DataConsentRequestedFinancialAccount providerId(UUID providerId) {
-    
-    this.providerId = providerId;
-    return this;
-  }
-
-   /**
-   * Get providerId
-   * @return providerId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public UUID getProviderId() {
-    return providerId;
-  }
-
-
-  public void setProviderId(UUID providerId) {
-    this.providerId = providerId;
-  }
-
-
-  public DataConsentRequestedFinancialAccount accountType(FinancialAccountTypes accountType) {
-    
-    this.accountType = accountType;
-    return this;
-  }
-
-   /**
-   * Get accountType
-   * @return accountType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public FinancialAccountTypes getAccountType() {
-    return accountType;
-  }
-
-
-  public void setAccountType(FinancialAccountTypes accountType) {
-    this.accountType = accountType;
-  }
-
-
-  public DataConsentRequestedFinancialAccount accountIdentifier(String accountIdentifier) {
+  public DataConsentRequestedFinancialAccount accountIdentifier(UUID accountIdentifier) {
     
     this.accountIdentifier = accountIdentifier;
     return this;
@@ -193,44 +132,13 @@ public class DataConsentRequestedFinancialAccount {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getAccountIdentifier() {
+  public UUID getAccountIdentifier() {
     return accountIdentifier;
   }
 
 
-  public void setAccountIdentifier(String accountIdentifier) {
+  public void setAccountIdentifier(UUID accountIdentifier) {
     this.accountIdentifier = accountIdentifier;
-  }
-
-
-  public DataConsentRequestedFinancialAccount filters(List<DataConsentRfaFilter> filters) {
-    
-    this.filters = filters;
-    return this;
-  }
-
-  public DataConsentRequestedFinancialAccount addFiltersItem(DataConsentRfaFilter filtersItem) {
-    if (this.filters == null) {
-      this.filters = new ArrayList<DataConsentRfaFilter>();
-    }
-    this.filters.add(filtersItem);
-    return this;
-  }
-
-   /**
-   * Get filters
-   * @return filters
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<DataConsentRfaFilter> getFilters() {
-    return filters;
-  }
-
-
-  public void setFilters(List<DataConsentRfaFilter> filters) {
-    this.filters = filters;
   }
 
 
@@ -243,44 +151,36 @@ public class DataConsentRequestedFinancialAccount {
       return false;
     }
     DataConsentRequestedFinancialAccount dataConsentRequestedFinancialAccount = (DataConsentRequestedFinancialAccount) o;
-    return Objects.equals(this.drn, dataConsentRequestedFinancialAccount.drn) &&
-        Objects.equals(this.fromDatetime, dataConsentRequestedFinancialAccount.fromDatetime) &&
-        Objects.equals(this.toDatetime, dataConsentRequestedFinancialAccount.toDatetime) &&
-        Objects.equals(this.providerId, dataConsentRequestedFinancialAccount.providerId) &&
-        Objects.equals(this.accountType, dataConsentRequestedFinancialAccount.accountType) &&
-        Objects.equals(this.accountIdentifier, dataConsentRequestedFinancialAccount.accountIdentifier) &&
-        Objects.equals(this.filters, dataConsentRequestedFinancialAccount.filters);
+    return Objects.equals(this.customKey, dataConsentRequestedFinancialAccount.customKey) &&
+        Objects.equals(this.drn, dataConsentRequestedFinancialAccount.drn) &&
+        Objects.equals(this.accountTypeId, dataConsentRequestedFinancialAccount.accountTypeId) &&
+        Objects.equals(this.accountIdentifier, dataConsentRequestedFinancialAccount.accountIdentifier);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && a.get().getClass().isArray() ? Arrays.equals((T[])a.get(), (T[])b.get()) : Objects.equals(a.get(), b.get()));
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(drn, fromDatetime, toDatetime, providerId, accountType, accountIdentifier, filters);
+    return Objects.hash(customKey, drn, accountTypeId, accountIdentifier);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent()
-      ? (a.get().getClass().isArray() ? Arrays.hashCode((T[])a.get()) : Objects.hashCode(a.get()))
-      : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataConsentRequestedFinancialAccount {\n");
+    sb.append("    customKey: ").append(toIndentedString(customKey)).append("\n");
     sb.append("    drn: ").append(toIndentedString(drn)).append("\n");
-    sb.append("    fromDatetime: ").append(toIndentedString(fromDatetime)).append("\n");
-    sb.append("    toDatetime: ").append(toIndentedString(toDatetime)).append("\n");
-    sb.append("    providerId: ").append(toIndentedString(providerId)).append("\n");
-    sb.append("    accountType: ").append(toIndentedString(accountType)).append("\n");
+    sb.append("    accountTypeId: ").append(toIndentedString(accountTypeId)).append("\n");
     sb.append("    accountIdentifier: ").append(toIndentedString(accountIdentifier)).append("\n");
-    sb.append("    filters: ").append(toIndentedString(filters)).append("\n");
     sb.append("}");
     return sb.toString();
   }

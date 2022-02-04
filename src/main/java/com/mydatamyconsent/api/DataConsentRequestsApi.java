@@ -41,6 +41,8 @@ import java.util.Map;
 
 public class DataConsentRequestsApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public DataConsentRequestsApi() {
         this(Configuration.getDefaultApiClient());
@@ -58,6 +60,22 @@ public class DataConsentRequestsApi {
         this.localVarApiClient = apiClient;
     }
 
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
+    }
+
     /**
      * Build call for cancelConsentRequest
      * @param requestId  (required)
@@ -73,6 +91,20 @@ public class DataConsentRequestsApi {
      </table>
      */
     public okhttp3.Call cancelConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -97,10 +129,12 @@ public class DataConsentRequestsApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
@@ -118,7 +152,7 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Revoke / Cancel the ConsentRequest based on Id
+     * Revoke / Cancel the ConsentRequest based on Id.
      * 
      * @param requestId  (required)
      * @return Boolean
@@ -137,7 +171,7 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Revoke / Cancel the ConsentRequest based on Id
+     * Revoke / Cancel the ConsentRequest based on Id.
      * 
      * @param requestId  (required)
      * @return ApiResponse&lt;Boolean&gt;
@@ -157,7 +191,7 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Revoke / Cancel the ConsentRequest based on Id (asynchronously)
+     * Revoke / Cancel the ConsentRequest based on Id. (asynchronously)
      * 
      * @param requestId  (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -193,6 +227,20 @@ public class DataConsentRequestsApi {
      </table>
      */
     public okhttp3.Call createRequestCall(DataConsentRequestModel dataConsentRequestModel, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = dataConsentRequestModel;
 
         // create path and map variables
@@ -216,10 +264,12 @@ public class DataConsentRequestsApi {
             "application/json"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
@@ -293,7 +343,7 @@ public class DataConsentRequestsApi {
         return localVarCall;
     }
     /**
-     * Build call for getAllConsentRequests
+     * Build call for getAllConsentRequestsToIndividuals
      * @param pageNo  (optional)
      * @param pageSize  (optional)
      * @param status  (optional)
@@ -308,11 +358,25 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllConsentRequestsCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAllConsentRequestsToIndividualsCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/consent-requests";
+        String localVarPath = "/v1/consent-requests/individuals";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -344,23 +408,25 @@ public class DataConsentRequestsApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAllConsentRequestsValidateBeforeCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getAllConsentRequestsToIndividualsValidateBeforeCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getAllConsentRequestsCall(pageNo, pageSize, status, _callback);
+        okhttp3.Call localVarCall = getAllConsentRequestsToIndividualsCall(pageNo, pageSize, status, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Get all Consent Requests.
+     * Get all Consent Requests sent to Individuals.
      * 
      * @param pageNo  (optional)
      * @param pageSize  (optional)
@@ -375,13 +441,13 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public Object getAllConsentRequests(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
-        ApiResponse<Object> localVarResp = getAllConsentRequestsWithHttpInfo(pageNo, pageSize, status);
+    public Object getAllConsentRequestsToIndividuals(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
+        ApiResponse<Object> localVarResp = getAllConsentRequestsToIndividualsWithHttpInfo(pageNo, pageSize, status);
         return localVarResp.getData();
     }
 
     /**
-     * Get all Consent Requests.
+     * Get all Consent Requests sent to Individuals.
      * 
      * @param pageNo  (optional)
      * @param pageSize  (optional)
@@ -396,14 +462,14 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getAllConsentRequestsWithHttpInfo(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
-        okhttp3.Call localVarCall = getAllConsentRequestsValidateBeforeCall(pageNo, pageSize, status, null);
+    public ApiResponse<Object> getAllConsentRequestsToIndividualsWithHttpInfo(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
+        okhttp3.Call localVarCall = getAllConsentRequestsToIndividualsValidateBeforeCall(pageNo, pageSize, status, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get all Consent Requests. (asynchronously)
+     * Get all Consent Requests sent to Individuals. (asynchronously)
      * 
      * @param pageNo  (optional)
      * @param pageSize  (optional)
@@ -419,15 +485,165 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllConsentRequestsAsync(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getAllConsentRequestsToIndividualsAsync(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAllConsentRequestsValidateBeforeCall(pageNo, pageSize, status, _callback);
+        okhttp3.Call localVarCall = getAllConsentRequestsToIndividualsValidateBeforeCall(pageNo, pageSize, status, _callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for getConsentRequestById
+     * Build call for getAllConsentRequestsToOrganizations
+     * @param pageNo  (optional)
+     * @param pageSize  (optional)
+     * @param status  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAllConsentRequestsToOrganizationsCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/consent-requests/organizations";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (pageNo != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageNo", pageNo));
+        }
+
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageSize", pageSize));
+        }
+
+        if (status != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("status", status));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getAllConsentRequestsToOrganizationsValidateBeforeCall(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getAllConsentRequestsToOrganizationsCall(pageNo, pageSize, status, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get All Consent Requests sent to Organizations
+     * 
+     * @param pageNo  (optional)
+     * @param pageSize  (optional)
+     * @param status  (optional)
+     * @return Object
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public Object getAllConsentRequestsToOrganizations(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
+        ApiResponse<Object> localVarResp = getAllConsentRequestsToOrganizationsWithHttpInfo(pageNo, pageSize, status);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get All Consent Requests sent to Organizations
+     * 
+     * @param pageNo  (optional)
+     * @param pageSize  (optional)
+     * @param status  (optional)
+     * @return ApiResponse&lt;Object&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Object> getAllConsentRequestsToOrganizationsWithHttpInfo(Integer pageNo, Integer pageSize, DataConsentStatus status) throws ApiException {
+        okhttp3.Call localVarCall = getAllConsentRequestsToOrganizationsValidateBeforeCall(pageNo, pageSize, status, null);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get All Consent Requests sent to Organizations (asynchronously)
+     * 
+     * @param pageNo  (optional)
+     * @param pageSize  (optional)
+     * @param status  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getAllConsentRequestsToOrganizationsAsync(Integer pageNo, Integer pageSize, DataConsentStatus status, final ApiCallback<Object> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getAllConsentRequestsToOrganizationsValidateBeforeCall(pageNo, pageSize, status, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getIndividualConsentRequestById
      * @param requestId  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -440,11 +656,25 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getIndividualConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/consent-requests/{requestId}"
+        String localVarPath = "/v1/consent-requests/individuals/{requestId}"
             .replaceAll("\\{" + "requestId" + "\\}", localVarApiClient.escapeString(requestId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -465,22 +695,24 @@ public class DataConsentRequestsApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsentRequestByIdValidateBeforeCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getIndividualConsentRequestByIdValidateBeforeCall(UUID requestId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'requestId' is set
         if (requestId == null) {
-            throw new ApiException("Missing the required parameter 'requestId' when calling getConsentRequestById(Async)");
+            throw new ApiException("Missing the required parameter 'requestId' when calling getIndividualConsentRequestById(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getConsentRequestByIdCall(requestId, _callback);
+        okhttp3.Call localVarCall = getIndividualConsentRequestByIdCall(requestId, _callback);
         return localVarCall;
 
     }
@@ -499,8 +731,8 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataConsentDetailsDto getConsentRequestById(UUID requestId) throws ApiException {
-        ApiResponse<DataConsentDetailsDto> localVarResp = getConsentRequestByIdWithHttpInfo(requestId);
+    public DataConsentDetailsDto getIndividualConsentRequestById(UUID requestId) throws ApiException {
+        ApiResponse<DataConsentDetailsDto> localVarResp = getIndividualConsentRequestByIdWithHttpInfo(requestId);
         return localVarResp.getData();
     }
 
@@ -518,8 +750,8 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataConsentDetailsDto> getConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
-        okhttp3.Call localVarCall = getConsentRequestByIdValidateBeforeCall(requestId, null);
+    public ApiResponse<DataConsentDetailsDto> getIndividualConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
+        okhttp3.Call localVarCall = getIndividualConsentRequestByIdValidateBeforeCall(requestId, null);
         Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -539,9 +771,145 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
+    public okhttp3.Call getIndividualConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getConsentRequestByIdValidateBeforeCall(requestId, _callback);
+        okhttp3.Call localVarCall = getIndividualConsentRequestByIdValidateBeforeCall(requestId, _callback);
+        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getOrganizationConsentRequestById
+     * @param requestId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getOrganizationConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/consent-requests/organizations/{requestId}"
+            .replaceAll("\\{" + "requestId" + "\\}", localVarApiClient.escapeString(requestId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getOrganizationConsentRequestByIdValidateBeforeCall(UUID requestId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'requestId' is set
+        if (requestId == null) {
+            throw new ApiException("Missing the required parameter 'requestId' when calling getOrganizationConsentRequestById(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getOrganizationConsentRequestByIdCall(requestId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get a OrganizationConsent Request by Id
+     * 
+     * @param requestId  (required)
+     * @return DataConsentDetailsDto
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public DataConsentDetailsDto getOrganizationConsentRequestById(UUID requestId) throws ApiException {
+        ApiResponse<DataConsentDetailsDto> localVarResp = getOrganizationConsentRequestByIdWithHttpInfo(requestId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get a OrganizationConsent Request by Id
+     * 
+     * @param requestId  (required)
+     * @return ApiResponse&lt;DataConsentDetailsDto&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<DataConsentDetailsDto> getOrganizationConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
+        okhttp3.Call localVarCall = getOrganizationConsentRequestByIdValidateBeforeCall(requestId, null);
+        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get a OrganizationConsent Request by Id (asynchronously)
+     * 
+     * @param requestId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getOrganizationConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getOrganizationConsentRequestByIdValidateBeforeCall(requestId, _callback);
         Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

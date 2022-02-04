@@ -34,8 +34,8 @@ public class Example {
     String accountType = "accountType_example"; // String | Account type.
     String documentType = "documentType_example"; // String | Document type.
     String organizationCategory = "organizationCategory_example"; // String | Organization category.
-    Integer pageNo = 56; // Integer | Page number.
-    Integer pageSize = 56; // Integer | Page size.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Page size.
     String country = "IN"; // String | ISO2 Country code.
     try {
       DataProviderPaginatedList result = apiInstance.v1DataProvidersGet(accountType, documentType, organizationCategory, pageNo, pageSize, country);
@@ -58,8 +58,8 @@ Name | Type | Description  | Notes
  **accountType** | **String**| Account type. | [optional]
  **documentType** | **String**| Document type. | [optional]
  **organizationCategory** | **String**| Organization category. | [optional]
- **pageNo** | **Integer**| Page number. | [optional]
- **pageSize** | **Integer**| Page size. | [optional]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Page size. | [optional] [default to 25]
  **country** | **String**| ISO2 Country code. | [optional] [default to IN]
 
 ### Return type

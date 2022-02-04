@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CreateDataProcessingAgreementRequestModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-23T09:17:28.641664129Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-04T22:01:19.170059642Z[Etc/UTC]")
 public class CreateDataProcessingAgreementRequestModel {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
@@ -41,6 +41,8 @@ public class CreateDataProcessingAgreementRequestModel {
   @SerializedName(SERIALIZED_NAME_ATTACHMENT_URL)
   private String attachmentUrl;
 
+  public CreateDataProcessingAgreementRequestModel() { 
+  }
 
   public CreateDataProcessingAgreementRequestModel version(String version) {
     

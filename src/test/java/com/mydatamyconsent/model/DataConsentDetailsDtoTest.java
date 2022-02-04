@@ -18,15 +18,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentRequestedAccountDto;
+import com.mydatamyconsent.model.DataConsentIdentifier;
 import com.mydatamyconsent.model.DataConsentRequestedDocument;
-import com.mydatamyconsent.model.DataConsentRequestedDocumentDto;
+import com.mydatamyconsent.model.DataConsentRequestedFinancialAccount;
 import com.mydatamyconsent.model.DataConsentRequesterDto;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.DataFetchFrequencyUnit;
-import com.mydatamyconsent.model.DataFetchType;
-import com.mydatamyconsent.model.DataLifeUnit;
-import com.mydatamyconsent.model.JsonSchema;
+import com.mydatamyconsent.model.GetConsentTemplateDetailsDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -60,134 +57,6 @@ public class DataConsentDetailsDtoTest {
     @Test
     public void idTest() {
         // TODO: test id
-    }
-
-    /**
-     * Test the property 'requester'
-     */
-    @Test
-    public void requesterTest() {
-        // TODO: test requester
-    }
-
-    /**
-     * Test the property 'location'
-     */
-    @Test
-    public void locationTest() {
-        // TODO: test location
-    }
-
-    /**
-     * Test the property 'personalInfoRequested'
-     */
-    @Test
-    public void personalInfoRequestedTest() {
-        // TODO: test personalInfoRequested
-    }
-
-    /**
-     * Test the property 'documents'
-     */
-    @Test
-    public void documentsTest() {
-        // TODO: test documents
-    }
-
-    /**
-     * Test the property 'financialAccounts'
-     */
-    @Test
-    public void financialAccountsTest() {
-        // TODO: test financialAccounts
-    }
-
-    /**
-     * Test the property 'transactionId'
-     */
-    @Test
-    public void transactionIdTest() {
-        // TODO: test transactionId
-    }
-
-    /**
-     * Test the property 'ipAddress'
-     */
-    @Test
-    public void ipAddressTest() {
-        // TODO: test ipAddress
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'purposeCode'
-     */
-    @Test
-    public void purposeCodeTest() {
-        // TODO: test purposeCode
-    }
-
-    /**
-     * Test the property 'purposeLink'
-     */
-    @Test
-    public void purposeLinkTest() {
-        // TODO: test purposeLink
-    }
-
-    /**
-     * Test the property 'agreementId'
-     */
-    @Test
-    public void agreementIdTest() {
-        // TODO: test agreementId
-    }
-
-    /**
-     * Test the property 'dataLifeUnit'
-     */
-    @Test
-    public void dataLifeUnitTest() {
-        // TODO: test dataLifeUnit
-    }
-
-    /**
-     * Test the property 'dataLifeValue'
-     */
-    @Test
-    public void dataLifeValueTest() {
-        // TODO: test dataLifeValue
-    }
-
-    /**
-     * Test the property 'dataFetchFrequencyUnit'
-     */
-    @Test
-    public void dataFetchFrequencyUnitTest() {
-        // TODO: test dataFetchFrequencyUnit
-    }
-
-    /**
-     * Test the property 'dataFetchFrequencyUnitValue'
-     */
-    @Test
-    public void dataFetchFrequencyUnitValueTest() {
-        // TODO: test dataFetchFrequencyUnitValue
-    }
-
-    /**
-     * Test the property 'dataFetchType'
-     */
-    @Test
-    public void dataFetchTypeTest() {
-        // TODO: test dataFetchType
     }
 
     /**
@@ -231,35 +100,43 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'requestedFinancialAccounts'
+     * Test the property 'requester'
      */
     @Test
-    public void requestedFinancialAccountsTest() {
-        // TODO: test requestedFinancialAccounts
+    public void requesterTest() {
+        // TODO: test requester
     }
 
     /**
-     * Test the property 'requestedDocuments'
+     * Test the property 'consentDetails'
      */
     @Test
-    public void requestedDocumentsTest() {
-        // TODO: test requestedDocuments
+    public void consentDetailsTest() {
+        // TODO: test consentDetails
     }
 
     /**
-     * Test the property 'requestedHealthData'
+     * Test the property 'identifiers'
      */
     @Test
-    public void requestedHealthDataTest() {
-        // TODO: test requestedHealthData
+    public void identifiersTest() {
+        // TODO: test identifiers
     }
 
     /**
-     * Test the property 'requestedIdentityDetails'
+     * Test the property 'approvedDocuments'
      */
     @Test
-    public void requestedIdentityDetailsTest() {
-        // TODO: test requestedIdentityDetails
+    public void approvedDocumentsTest() {
+        // TODO: test approvedDocuments
+    }
+
+    /**
+     * Test the property 'approvedFinancials'
+     */
+    @Test
+    public void approvedFinancialsTest() {
+        // TODO: test approvedFinancials
     }
 
 }

@@ -49,8 +49,7 @@ public class DataProviderDiscoveryApiTest {
         Integer pageNo = null;
         Integer pageSize = null;
         String country = null;
-        DataProviderPaginatedList response = api.v1DataProvidersGet(accountType, documentType, organizationCategory, pageNo, pageSize, country);
-
+                DataProviderPaginatedList response = api.v1DataProvidersGet(accountType, documentType, organizationCategory, pageNo, pageSize, country);
         // TODO: test validations
     }
     
@@ -65,8 +64,7 @@ public class DataProviderDiscoveryApiTest {
     @Test
     public void v1DataProvidersProviderIdGetTest() throws ApiException {
         String providerId = null;
-        DataProvider response = api.v1DataProvidersProviderIdGet(providerId);
-
+                DataProvider response = api.v1DataProvidersProviderIdGet(providerId);
         // TODO: test validations
     }
     

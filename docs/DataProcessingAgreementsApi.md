@@ -97,7 +97,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    UUID id = new UUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     try {
       apiInstance.v1DataAgreementsIdDelete(id);
     } catch (ApiException e) {
@@ -115,7 +115,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**UUID**](.md)|  |
+ **id** | **UUID**|  |
 
 ### Return type
 
@@ -159,7 +159,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    UUID id = new UUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     try {
       DataProcessingAgreementDto result = apiInstance.v1DataAgreementsIdGet(id);
       System.out.println(result);
@@ -178,7 +178,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**UUID**](.md)|  |
+ **id** | **UUID**|  |
 
 ### Return type
 
@@ -221,7 +221,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    UUID id = new UUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = new UpdateDataProcessingAgreementRequestModel(); // UpdateDataProcessingAgreementRequestModel | 
     try {
       DataProcessingAgreementDto result = apiInstance.v1DataAgreementsIdPut(id, updateDataProcessingAgreementRequestModel);
@@ -241,7 +241,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**UUID**](.md)|  |
+ **id** | **UUID**|  |
  **updateDataProcessingAgreementRequestModel** | [**UpdateDataProcessingAgreementRequestModel**](UpdateDataProcessingAgreementRequestModel.md)|  | [optional]
 
 ### Return type
@@ -286,7 +286,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    UUID id = new UUID(); // UUID | 
+    UUID id = UUID.randomUUID(); // UUID | 
     try {
       apiInstance.v1DataAgreementsIdTerminatePut(id);
     } catch (ApiException e) {
@@ -304,7 +304,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**UUID**](.md)|  |
+ **id** | **UUID**|  |
 
 ### Return type
 

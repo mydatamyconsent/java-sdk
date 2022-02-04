@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DocumentIssueRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-23T09:17:28.641664129Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-04T22:01:19.170059642Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
@@ -55,14 +55,16 @@ public class DocumentIssueRequest {
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
   private String expiresAtUtc;
 
-  public static final String SERIALIZED_NAME_BASE64_P_D_F_DOCUMENT = "base64PDFDocument";
-  @SerializedName(SERIALIZED_NAME_BASE64_P_D_F_DOCUMENT)
-  private String base64PDFDocument;
+  public static final String SERIALIZED_NAME_BASE64_PDF_DOCUMENT = "base64PdfDocument";
+  @SerializedName(SERIALIZED_NAME_BASE64_PDF_DOCUMENT)
+  private String base64PdfDocument;
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private Object metadata = null;
 
+  public DocumentIssueRequest() { 
+  }
 
   public DocumentIssueRequest documentTypeId(String documentTypeId) {
     
@@ -202,26 +204,26 @@ public class DocumentIssueRequest {
   }
 
 
-  public DocumentIssueRequest base64PDFDocument(String base64PDFDocument) {
+  public DocumentIssueRequest base64PdfDocument(String base64PdfDocument) {
     
-    this.base64PDFDocument = base64PDFDocument;
+    this.base64PdfDocument = base64PdfDocument;
     return this;
   }
 
    /**
-   * Get base64PDFDocument
-   * @return base64PDFDocument
+   * Get base64PdfDocument
+   * @return base64PdfDocument
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getBase64PDFDocument() {
-    return base64PDFDocument;
+  public String getBase64PdfDocument() {
+    return base64PdfDocument;
   }
 
 
-  public void setBase64PDFDocument(String base64PDFDocument) {
-    this.base64PDFDocument = base64PDFDocument;
+  public void setBase64PdfDocument(String base64PdfDocument) {
+    this.base64PdfDocument = base64PdfDocument;
   }
 
 
@@ -263,26 +265,24 @@ public class DocumentIssueRequest {
         Objects.equals(this.description, documentIssueRequest.description) &&
         Objects.equals(this.receiver, documentIssueRequest.receiver) &&
         Objects.equals(this.expiresAtUtc, documentIssueRequest.expiresAtUtc) &&
-        Objects.equals(this.base64PDFDocument, documentIssueRequest.base64PDFDocument) &&
+        Objects.equals(this.base64PdfDocument, documentIssueRequest.base64PdfDocument) &&
         Objects.equals(this.metadata, documentIssueRequest.metadata);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && a.get().getClass().isArray() ? Arrays.equals((T[])a.get(), (T[])b.get()) : Objects.equals(a.get(), b.get()));
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, identifier, name, description, receiver, expiresAtUtc, base64PDFDocument, metadata);
+    return Objects.hash(documentTypeId, identifier, name, description, receiver, expiresAtUtc, base64PdfDocument, metadata);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
     if (a == null) {
       return 1;
     }
-    return a.isPresent()
-      ? (a.get().getClass().isArray() ? Arrays.hashCode((T[])a.get()) : Objects.hashCode(a.get()))
-      : 31;
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -295,7 +295,7 @@ public class DocumentIssueRequest {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
-    sb.append("    base64PDFDocument: ").append(toIndentedString(base64PDFDocument)).append("\n");
+    sb.append("    base64PdfDocument: ").append(toIndentedString(base64PdfDocument)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();

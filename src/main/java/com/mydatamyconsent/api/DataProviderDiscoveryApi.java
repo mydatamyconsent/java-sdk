@@ -38,6 +38,8 @@ import java.util.Map;
 
 public class DataProviderDiscoveryApi {
     private ApiClient localVarApiClient;
+    private int localHostIndex;
+    private String localCustomBaseUrl;
 
     public DataProviderDiscoveryApi() {
         this(Configuration.getDefaultApiClient());
@@ -55,13 +57,29 @@ public class DataProviderDiscoveryApi {
         this.localVarApiClient = apiClient;
     }
 
+    public int getHostIndex() {
+        return localHostIndex;
+    }
+
+    public void setHostIndex(int hostIndex) {
+        this.localHostIndex = hostIndex;
+    }
+
+    public String getCustomBaseUrl() {
+        return localCustomBaseUrl;
+    }
+
+    public void setCustomBaseUrl(String customBaseUrl) {
+        this.localCustomBaseUrl = customBaseUrl;
+    }
+
     /**
      * Build call for v1DataProvidersGet
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
-     * @param pageNo Page number. (optional)
-     * @param pageSize Page size. (optional)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Page size. (optional, default to 25)
      * @param country ISO2 Country code. (optional, default to IN)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -75,6 +93,20 @@ public class DataProviderDiscoveryApi {
      </table>
      */
     public okhttp3.Call v1DataProvidersGetCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -122,10 +154,12 @@ public class DataProviderDiscoveryApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
@@ -143,8 +177,8 @@ public class DataProviderDiscoveryApi {
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
-     * @param pageNo Page number. (optional)
-     * @param pageSize Page size. (optional)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Page size. (optional, default to 25)
      * @param country ISO2 Country code. (optional, default to IN)
      * @return DataProviderPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -167,8 +201,8 @@ public class DataProviderDiscoveryApi {
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
-     * @param pageNo Page number. (optional)
-     * @param pageSize Page size. (optional)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Page size. (optional, default to 25)
      * @param country ISO2 Country code. (optional, default to IN)
      * @return ApiResponse&lt;DataProviderPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -192,8 +226,8 @@ public class DataProviderDiscoveryApi {
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
-     * @param pageNo Page number. (optional)
-     * @param pageSize Page size. (optional)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Page size. (optional, default to 25)
      * @param country ISO2 Country code. (optional, default to IN)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -228,6 +262,20 @@ public class DataProviderDiscoveryApi {
      </table>
      */
     public okhttp3.Call v1DataProvidersProviderIdGetCall(String providerId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -252,10 +300,12 @@ public class DataProviderDiscoveryApi {
             
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        localVarHeaderParams.put("Content-Type", localVarContentType);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
 
         String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")

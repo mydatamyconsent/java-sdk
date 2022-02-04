@@ -94,7 +94,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    UUID documentId = new UUID(); // UUID | Document id.
+    UUID documentId = UUID.randomUUID(); // UUID | Document id.
     try {
       apiInstance.v1DocumentsIssuedDocumentIdGet(documentId);
     } catch (ApiException e) {
@@ -112,7 +112,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentId** | [**UUID**](.md)| Document id. |
+ **documentId** | **UUID**| Document id. |
 
 ### Return type
 
@@ -153,7 +153,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    UUID documentTypeId = new UUID(); // UUID | 
+    UUID documentTypeId = UUID.randomUUID(); // UUID | 
     OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | 
     OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | 
     Integer pageSize = 25; // Integer | 
@@ -175,7 +175,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentTypeId** | [**UUID**](.md)|  | [optional]
+ **documentTypeId** | **UUID**|  | [optional]
  **fromDateTime** | **OffsetDateTime**|  | [optional]
  **toDateTime** | **OffsetDateTime**|  | [optional]
  **pageSize** | **Integer**|  | [optional] [default to 25]
@@ -220,8 +220,8 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    Integer pageSize = 56; // Integer | 
-    Integer pageNo = 56; // Integer | 
+    Integer pageSize = 25; // Integer | 
+    Integer pageNo = 1; // Integer | 
     try {
       apiInstance.v1DocumentsTypesGet(pageSize, pageNo);
     } catch (ApiException e) {
@@ -239,8 +239,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Integer**|  | [optional]
- **pageNo** | **Integer**|  | [optional]
+ **pageSize** | **Integer**|  | [optional] [default to 25]
+ **pageNo** | **Integer**|  | [optional] [default to 1]
 
 ### Return type
 

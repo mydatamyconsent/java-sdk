@@ -18,16 +18,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentRfaFilter;
-import com.mydatamyconsent.model.FinancialAccountTypes;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -48,6 +43,14 @@ public class DataConsentRequestedFinancialAccountTest {
     }
 
     /**
+     * Test the property 'customKey'
+     */
+    @Test
+    public void customKeyTest() {
+        // TODO: test customKey
+    }
+
+    /**
      * Test the property 'drn'
      */
     @Test
@@ -56,35 +59,11 @@ public class DataConsentRequestedFinancialAccountTest {
     }
 
     /**
-     * Test the property 'fromDatetime'
+     * Test the property 'accountTypeId'
      */
     @Test
-    public void fromDatetimeTest() {
-        // TODO: test fromDatetime
-    }
-
-    /**
-     * Test the property 'toDatetime'
-     */
-    @Test
-    public void toDatetimeTest() {
-        // TODO: test toDatetime
-    }
-
-    /**
-     * Test the property 'providerId'
-     */
-    @Test
-    public void providerIdTest() {
-        // TODO: test providerId
-    }
-
-    /**
-     * Test the property 'accountType'
-     */
-    @Test
-    public void accountTypeTest() {
-        // TODO: test accountType
+    public void accountTypeIdTest() {
+        // TODO: test accountTypeId
     }
 
     /**
@@ -93,14 +72,6 @@ public class DataConsentRequestedFinancialAccountTest {
     @Test
     public void accountIdentifierTest() {
         // TODO: test accountIdentifier
-    }
-
-    /**
-     * Test the property 'filters'
-     */
-    @Test
-    public void filtersTest() {
-        // TODO: test filters
     }
 
 }

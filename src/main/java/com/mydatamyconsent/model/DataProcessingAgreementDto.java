@@ -28,7 +28,7 @@ import java.util.UUID;
 /**
  * DataProcessingAgreementDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-01-23T09:17:28.641664129Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-04T22:01:19.170059642Z[Etc/UTC]")
 public class DataProcessingAgreementDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -46,6 +46,8 @@ public class DataProcessingAgreementDto {
   @SerializedName(SERIALIZED_NAME_ATTACHMENT_URL)
   private String attachmentUrl;
 
+  public DataProcessingAgreementDto() { 
+  }
 
   public DataProcessingAgreementDto id(UUID id) {
     
