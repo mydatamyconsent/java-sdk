@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CreateDataProcessingAgreementRequestModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-07T10:34:24.417902001Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T10:34:39.032947850Z[Etc/UTC]")
 public class CreateDataProcessingAgreementRequestModel {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
