@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DataProviderPaginatedList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-08T10:34:39.032947850Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-09T10:34:33.644942072Z[Etc/UTC]")
 public class DataProviderPaginatedList {
   public static final String SERIALIZED_NAME_PAGE_INDEX = "pageIndex";
   @SerializedName(SERIALIZED_NAME_PAGE_INDEX)
