@@ -24,7 +24,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -45,19 +44,19 @@ public class DocumentTest {
     }
 
     /**
-     * Test the property 'documentField'
+     * Test the property 'fieldTitle'
      */
     @Test
-    public void documentFieldTest() {
-        // TODO: test documentField
+    public void fieldTitleTest() {
+        // TODO: test fieldTitle
     }
 
     /**
-     * Test the property 'customKey'
+     * Test the property 'fieldSlug'
      */
     @Test
-    public void customKeyTest() {
-        // TODO: test customKey
+    public void fieldSlugTest() {
+        // TODO: test fieldSlug
     }
 
     /**

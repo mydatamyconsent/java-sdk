@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documentField** | **String** |  |  [optional]
-**customKey** | **String** |  |  [optional]
-**drn** | **List&lt;String&gt;** |  |  [optional]
-**requirement** | **DocumentsRequired** |  |  [optional]
+**fieldTitle** | **String** |  | 
+**fieldSlug** | **String** |  | 
+**drn** | **List&lt;String&gt;** |  | 
+**requirement** | **DocumentsRequired** |  | 
 
 
 

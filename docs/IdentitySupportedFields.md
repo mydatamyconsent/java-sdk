@@ -7,11 +7,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**icon** | **String** |  |  [optional]
-**title** | **String** |  |  [optional]
+**iconCodePoint** | **Integer** |  | 
+**title** | **String** |  | 
 **description** | **String** |  |  [optional]
-**key** | **String** |  |  [optional]
-**dataType** | **String** |  |  [optional]
+**key** | **String** |  | 
+**dataType** | **String** |  | 
 
 
 

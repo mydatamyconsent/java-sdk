@@ -26,24 +26,23 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * Document
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-11T10:34:12.889519683Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-12T10:33:25.924169330Z[Etc/UTC]")
 public class Document {
-  public static final String SERIALIZED_NAME_DOCUMENT_FIELD = "documentField";
-  @SerializedName(SERIALIZED_NAME_DOCUMENT_FIELD)
-  private String documentField;
+  public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
+  @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
+  private String fieldTitle;
 
-  public static final String SERIALIZED_NAME_CUSTOM_KEY = "customKey";
-  @SerializedName(SERIALIZED_NAME_CUSTOM_KEY)
-  private String customKey;
+  public static final String SERIALIZED_NAME_FIELD_SLUG = "fieldSlug";
+  @SerializedName(SERIALIZED_NAME_FIELD_SLUG)
+  private String fieldSlug;
 
   public static final String SERIALIZED_NAME_DRN = "drn";
   @SerializedName(SERIALIZED_NAME_DRN)
-  private List<String> drn = null;
+  private List<String> drn = new ArrayList<String>();
 
   public static final String SERIALIZED_NAME_REQUIREMENT = "requirement";
   @SerializedName(SERIALIZED_NAME_REQUIREMENT)
@@ -52,49 +51,49 @@ public class Document {
   public Document() { 
   }
 
-  public Document documentField(String documentField) {
+  public Document fieldTitle(String fieldTitle) {
     
-    this.documentField = documentField;
+    this.fieldTitle = fieldTitle;
     return this;
   }
 
    /**
-   * Get documentField
-   * @return documentField
+   * Get fieldTitle
+   * @return fieldTitle
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public String getDocumentField() {
-    return documentField;
+  public String getFieldTitle() {
+    return fieldTitle;
   }
 
 
-  public void setDocumentField(String documentField) {
-    this.documentField = documentField;
+  public void setFieldTitle(String fieldTitle) {
+    this.fieldTitle = fieldTitle;
   }
 
 
-  public Document customKey(String customKey) {
+  public Document fieldSlug(String fieldSlug) {
     
-    this.customKey = customKey;
+    this.fieldSlug = fieldSlug;
     return this;
   }
 
    /**
-   * Get customKey
-   * @return customKey
+   * Get fieldSlug
+   * @return fieldSlug
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public String getCustomKey() {
-    return customKey;
+  public String getFieldSlug() {
+    return fieldSlug;
   }
 
 
-  public void setCustomKey(String customKey) {
-    this.customKey = customKey;
+  public void setFieldSlug(String fieldSlug) {
+    this.fieldSlug = fieldSlug;
   }
 
 
@@ -105,9 +104,6 @@ public class Document {
   }
 
   public Document addDrnItem(String drnItem) {
-    if (this.drn == null) {
-      this.drn = new ArrayList<String>();
-    }
     this.drn.add(drnItem);
     return this;
   }
@@ -116,8 +112,8 @@ public class Document {
    * Get drn
    * @return drn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public List<String> getDrn() {
     return drn;
@@ -139,8 +135,8 @@ public class Document {
    * Get requirement
    * @return requirement
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public DocumentsRequired getRequirement() {
     return requirement;
@@ -161,34 +157,23 @@ public class Document {
       return false;
     }
     Document document = (Document) o;
-    return Objects.equals(this.documentField, document.documentField) &&
-        Objects.equals(this.customKey, document.customKey) &&
+    return Objects.equals(this.fieldTitle, document.fieldTitle) &&
+        Objects.equals(this.fieldSlug, document.fieldSlug) &&
         Objects.equals(this.drn, document.drn) &&
         Objects.equals(this.requirement, document.requirement);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
-    return Objects.hash(documentField, customKey, drn, requirement);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(fieldTitle, fieldSlug, drn, requirement);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Document {\n");
-    sb.append("    documentField: ").append(toIndentedString(documentField)).append("\n");
-    sb.append("    customKey: ").append(toIndentedString(customKey)).append("\n");
+    sb.append("    fieldTitle: ").append(toIndentedString(fieldTitle)).append("\n");
+    sb.append("    fieldSlug: ").append(toIndentedString(fieldSlug)).append("\n");
     sb.append("    drn: ").append(toIndentedString(drn)).append("\n");
     sb.append("    requirement: ").append(toIndentedString(requirement)).append("\n");
     sb.append("}");
