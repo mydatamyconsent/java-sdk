@@ -5,19 +5,15 @@
 ## Enum
 
 
+* `PERSONAL` (value: `"Personal"`)
+
+* `EDUCATION` (value: `"Education"`)
+
 * `HEALTH` (value: `"Health"`)
 
 * `FINANCE` (value: `"Finance"`)
 
-* `EDUCATION` (value: `"Education"`)
-
-* `BILLS` (value: `"Bills"`)
-
-* `TAX` (value: `"Tax"`)
-
 * `CERTIFICATES` (value: `"Certificates"`)
-
-* `INVOICES` (value: `"Invoices"`)
 
 
 

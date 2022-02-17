@@ -29,19 +29,15 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(DocumentCategoryType.Adapter.class)
 public enum DocumentCategoryType {
   
+  PERSONAL("Personal"),
+  
+  EDUCATION("Education"),
+  
   HEALTH("Health"),
   
   FINANCE("Finance"),
   
-  EDUCATION("Education"),
-  
-  BILLS("Bills"),
-  
-  TAX("Tax"),
-  
-  CERTIFICATES("Certificates"),
-  
-  INVOICES("Invoices");
+  CERTIFICATES("Certificates");
 
   private String value;
 
