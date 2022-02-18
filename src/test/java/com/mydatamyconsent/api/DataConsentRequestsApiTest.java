@@ -15,6 +15,7 @@ package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DataConsentDetailsDto;
+import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentRequestModel;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.ProblemDetails;
@@ -62,7 +63,7 @@ public class DataConsentRequestsApiTest {
     @Test
     public void createRequestTest() throws ApiException {
         DataConsentRequestModel dataConsentRequestModel = null;
-                Boolean response = api.createRequest(dataConsentRequestModel);
+                DataConsentRequest response = api.createRequest(dataConsentRequestModel);
         // TODO: test validations
     }
     

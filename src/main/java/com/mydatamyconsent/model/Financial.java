@@ -32,7 +32,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Financial
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T10:34:34.862482909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
 public class Financial {
   public static final String SERIALIZED_NAME_ACCOUNT_FIELD = "accountField";
   @SerializedName(SERIALIZED_NAME_ACCOUNT_FIELD)

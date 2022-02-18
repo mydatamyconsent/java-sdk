@@ -28,38 +28,34 @@ import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * SharedWith
+ * DataConsentRequest
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
-public class SharedWith {
+public class DataConsentRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_RECEIVER_ID = "receiverId";
-  @SerializedName(SERIALIZED_NAME_RECEIVER_ID)
-  private UUID receiverId;
+  public static final String SERIALIZED_NAME_TEMPLATE_ID = "templateId";
+  @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+  private UUID templateId;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_REQUESTED_AT_UTC = "requestedAtUtc";
+  @SerializedName(SERIALIZED_NAME_REQUESTED_AT_UTC)
+  private OffsetDateTime requestedAtUtc;
 
-  public static final String SERIALIZED_NAME_CONTACT_NUMBER = "contactNumber";
-  @SerializedName(SERIALIZED_NAME_CONTACT_NUMBER)
-  private String contactNumber;
+  public static final String SERIALIZED_NAME_REQUEST_EXPIRED_AT_UTC = "requestExpiredAtUtc";
+  @SerializedName(SERIALIZED_NAME_REQUEST_EXPIRED_AT_UTC)
+  private OffsetDateTime requestExpiredAtUtc;
 
-  public static final String SERIALIZED_NAME_PROFILE_URL = "profileUrl";
-  @SerializedName(SERIALIZED_NAME_PROFILE_URL)
-  private String profileUrl;
+  public static final String SERIALIZED_NAME_TRANSACTION_ID = "transactionId";
+  @SerializedName(SERIALIZED_NAME_TRANSACTION_ID)
+  private String transactionId;
 
-  public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
-  @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
-  private OffsetDateTime expiresAtUtc;
-
-  public SharedWith() { 
+  public DataConsentRequest() { 
   }
 
-  public SharedWith id(UUID id) {
+  public DataConsentRequest id(UUID id) {
     
     this.id = id;
     return this;
@@ -82,118 +78,95 @@ public class SharedWith {
   }
 
 
-  public SharedWith receiverId(UUID receiverId) {
+  public DataConsentRequest templateId(UUID templateId) {
     
-    this.receiverId = receiverId;
+    this.templateId = templateId;
     return this;
   }
 
    /**
-   * Get receiverId
-   * @return receiverId
+   * Get templateId
+   * @return templateId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public UUID getReceiverId() {
-    return receiverId;
+  public UUID getTemplateId() {
+    return templateId;
   }
 
 
-  public void setReceiverId(UUID receiverId) {
-    this.receiverId = receiverId;
+  public void setTemplateId(UUID templateId) {
+    this.templateId = templateId;
   }
 
 
-  public SharedWith name(String name) {
+  public DataConsentRequest requestedAtUtc(OffsetDateTime requestedAtUtc) {
     
-    this.name = name;
+    this.requestedAtUtc = requestedAtUtc;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get requestedAtUtc
+   * @return requestedAtUtc
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getName() {
-    return name;
+  public OffsetDateTime getRequestedAtUtc() {
+    return requestedAtUtc;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setRequestedAtUtc(OffsetDateTime requestedAtUtc) {
+    this.requestedAtUtc = requestedAtUtc;
   }
 
 
-  public SharedWith contactNumber(String contactNumber) {
+  public DataConsentRequest requestExpiredAtUtc(OffsetDateTime requestExpiredAtUtc) {
     
-    this.contactNumber = contactNumber;
+    this.requestExpiredAtUtc = requestExpiredAtUtc;
     return this;
   }
 
    /**
-   * Get contactNumber
-   * @return contactNumber
+   * Get requestExpiredAtUtc
+   * @return requestExpiredAtUtc
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getContactNumber() {
-    return contactNumber;
+  public OffsetDateTime getRequestExpiredAtUtc() {
+    return requestExpiredAtUtc;
   }
 
 
-  public void setContactNumber(String contactNumber) {
-    this.contactNumber = contactNumber;
+  public void setRequestExpiredAtUtc(OffsetDateTime requestExpiredAtUtc) {
+    this.requestExpiredAtUtc = requestExpiredAtUtc;
   }
 
 
-  public SharedWith profileUrl(String profileUrl) {
+  public DataConsentRequest transactionId(String transactionId) {
     
-    this.profileUrl = profileUrl;
+    this.transactionId = transactionId;
     return this;
   }
 
    /**
-   * Get profileUrl
-   * @return profileUrl
+   * Get transactionId
+   * @return transactionId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getProfileUrl() {
-    return profileUrl;
+  public String getTransactionId() {
+    return transactionId;
   }
 
 
-  public void setProfileUrl(String profileUrl) {
-    this.profileUrl = profileUrl;
-  }
-
-
-  public SharedWith expiresAtUtc(OffsetDateTime expiresAtUtc) {
-    
-    this.expiresAtUtc = expiresAtUtc;
-    return this;
-  }
-
-   /**
-   * Get expiresAtUtc
-   * @return expiresAtUtc
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getExpiresAtUtc() {
-    return expiresAtUtc;
-  }
-
-
-  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
-    this.expiresAtUtc = expiresAtUtc;
+  public void setTransactionId(String transactionId) {
+    this.transactionId = transactionId;
   }
 
 
@@ -205,13 +178,12 @@ public class SharedWith {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SharedWith sharedWith = (SharedWith) o;
-    return Objects.equals(this.id, sharedWith.id) &&
-        Objects.equals(this.receiverId, sharedWith.receiverId) &&
-        Objects.equals(this.name, sharedWith.name) &&
-        Objects.equals(this.contactNumber, sharedWith.contactNumber) &&
-        Objects.equals(this.profileUrl, sharedWith.profileUrl) &&
-        Objects.equals(this.expiresAtUtc, sharedWith.expiresAtUtc);
+    DataConsentRequest dataConsentRequest = (DataConsentRequest) o;
+    return Objects.equals(this.id, dataConsentRequest.id) &&
+        Objects.equals(this.templateId, dataConsentRequest.templateId) &&
+        Objects.equals(this.requestedAtUtc, dataConsentRequest.requestedAtUtc) &&
+        Objects.equals(this.requestExpiredAtUtc, dataConsentRequest.requestExpiredAtUtc) &&
+        Objects.equals(this.transactionId, dataConsentRequest.transactionId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -220,7 +192,7 @@ public class SharedWith {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, receiverId, name, contactNumber, profileUrl, expiresAtUtc);
+    return Objects.hash(id, templateId, requestedAtUtc, requestExpiredAtUtc, transactionId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -233,13 +205,12 @@ public class SharedWith {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SharedWith {\n");
+    sb.append("class DataConsentRequest {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    receiverId: ").append(toIndentedString(receiverId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    contactNumber: ").append(toIndentedString(contactNumber)).append("\n");
-    sb.append("    profileUrl: ").append(toIndentedString(profileUrl)).append("\n");
-    sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
+    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    requestedAtUtc: ").append(toIndentedString(requestedAtUtc)).append("\n");
+    sb.append("    requestExpiredAtUtc: ").append(toIndentedString(requestExpiredAtUtc)).append("\n");
+    sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

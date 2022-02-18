@@ -25,24 +25,15 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * DataConsentRequestModel
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-17T10:34:34.862482909Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
 public class DataConsentRequestModel {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)
   private UUID consentTemplateId;
-
-  public static final String SERIALIZED_NAME_START_DATE_TIME = "startDateTime";
-  @SerializedName(SERIALIZED_NAME_START_DATE_TIME)
-  private OffsetDateTime startDateTime;
-
-  public static final String SERIALIZED_NAME_EXPIRY_DATE_TIME = "expiryDateTime";
-  @SerializedName(SERIALIZED_NAME_EXPIRY_DATE_TIME)
-  private OffsetDateTime expiryDateTime;
 
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
@@ -71,52 +62,6 @@ public class DataConsentRequestModel {
 
   public void setConsentTemplateId(UUID consentTemplateId) {
     this.consentTemplateId = consentTemplateId;
-  }
-
-
-  public DataConsentRequestModel startDateTime(OffsetDateTime startDateTime) {
-    
-    this.startDateTime = startDateTime;
-    return this;
-  }
-
-   /**
-   * Get startDateTime
-   * @return startDateTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getStartDateTime() {
-    return startDateTime;
-  }
-
-
-  public void setStartDateTime(OffsetDateTime startDateTime) {
-    this.startDateTime = startDateTime;
-  }
-
-
-  public DataConsentRequestModel expiryDateTime(OffsetDateTime expiryDateTime) {
-    
-    this.expiryDateTime = expiryDateTime;
-    return this;
-  }
-
-   /**
-   * Get expiryDateTime
-   * @return expiryDateTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public OffsetDateTime getExpiryDateTime() {
-    return expiryDateTime;
-  }
-
-
-  public void setExpiryDateTime(OffsetDateTime expiryDateTime) {
-    this.expiryDateTime = expiryDateTime;
   }
 
 
@@ -153,14 +98,12 @@ public class DataConsentRequestModel {
     }
     DataConsentRequestModel dataConsentRequestModel = (DataConsentRequestModel) o;
     return Objects.equals(this.consentTemplateId, dataConsentRequestModel.consentTemplateId) &&
-        Objects.equals(this.startDateTime, dataConsentRequestModel.startDateTime) &&
-        Objects.equals(this.expiryDateTime, dataConsentRequestModel.expiryDateTime) &&
         Objects.equals(this.receiver, dataConsentRequestModel.receiver);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(consentTemplateId, startDateTime, expiryDateTime, receiver);
+    return Objects.hash(consentTemplateId, receiver);
   }
 
   @Override
@@ -168,8 +111,6 @@ public class DataConsentRequestModel {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataConsentRequestModel {\n");
     sb.append("    consentTemplateId: ").append(toIndentedString(consentTemplateId)).append("\n");
-    sb.append("    startDateTime: ").append(toIndentedString(startDateTime)).append("\n");
-    sb.append("    expiryDateTime: ").append(toIndentedString(expiryDateTime)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("}");
     return sb.toString();

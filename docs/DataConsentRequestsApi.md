@@ -76,7 +76,7 @@ No authorization required
 
 <a name="createRequest"></a>
 # **createRequest**
-> Boolean createRequest(dataConsentRequestModel)
+> DataConsentRequest createRequest(dataConsentRequestModel)
 
 Create a consent request.
 
@@ -97,7 +97,7 @@ public class Example {
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     DataConsentRequestModel dataConsentRequestModel = new DataConsentRequestModel(); // DataConsentRequestModel | MyDataMyConsent.Models.Consents.DataConsentRequestModel.
     try {
-      Boolean result = apiInstance.createRequest(dataConsentRequestModel);
+      DataConsentRequest result = apiInstance.createRequest(dataConsentRequestModel);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentRequestsApi#createRequest");
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Boolean**
+[**DataConsentRequest**](DataConsentRequest.md)
 
 ### Authorization
 

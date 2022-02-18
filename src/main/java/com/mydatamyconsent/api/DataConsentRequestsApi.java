@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import com.mydatamyconsent.model.DataConsentDetailsDto;
+import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentRequestModel;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.ProblemDetails;
@@ -285,7 +286,7 @@ public class DataConsentRequestsApi {
      * Create a consent request.
      * 
      * @param dataConsentRequestModel MyDataMyConsent.Models.Consents.DataConsentRequestModel. (optional)
-     * @return Boolean
+     * @return DataConsentRequest
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -295,8 +296,8 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public Boolean createRequest(DataConsentRequestModel dataConsentRequestModel) throws ApiException {
-        ApiResponse<Boolean> localVarResp = createRequestWithHttpInfo(dataConsentRequestModel);
+    public DataConsentRequest createRequest(DataConsentRequestModel dataConsentRequestModel) throws ApiException {
+        ApiResponse<DataConsentRequest> localVarResp = createRequestWithHttpInfo(dataConsentRequestModel);
         return localVarResp.getData();
     }
 
@@ -304,7 +305,7 @@ public class DataConsentRequestsApi {
      * Create a consent request.
      * 
      * @param dataConsentRequestModel MyDataMyConsent.Models.Consents.DataConsentRequestModel. (optional)
-     * @return ApiResponse&lt;Boolean&gt;
+     * @return ApiResponse&lt;DataConsentRequest&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -314,9 +315,9 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Boolean> createRequestWithHttpInfo(DataConsentRequestModel dataConsentRequestModel) throws ApiException {
+    public ApiResponse<DataConsentRequest> createRequestWithHttpInfo(DataConsentRequestModel dataConsentRequestModel) throws ApiException {
         okhttp3.Call localVarCall = createRequestValidateBeforeCall(dataConsentRequestModel, null);
-        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -335,10 +336,10 @@ public class DataConsentRequestsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createRequestAsync(DataConsentRequestModel dataConsentRequestModel, final ApiCallback<Boolean> _callback) throws ApiException {
+    public okhttp3.Call createRequestAsync(DataConsentRequestModel dataConsentRequestModel, final ApiCallback<DataConsentRequest> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createRequestValidateBeforeCall(dataConsentRequestModel, _callback);
-        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

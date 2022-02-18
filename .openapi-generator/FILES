@@ -8,6 +8,7 @@ docs/DataConsentDetailsDto.md
 docs/DataConsentDocumentsDto.md
 docs/DataConsentFinancialsDto.md
 docs/DataConsentIdentifier.md
+docs/DataConsentRequest.md
 docs/DataConsentRequestModel.md
 docs/DataConsentRequestedDocument.md
 docs/DataConsentRequestedFinancialAccount.md
@@ -102,6 +103,7 @@ src/main/java/com/mydatamyconsent/model/DataConsentDetailsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentDocumentsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentFinancialsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentIdentifier.java
+src/main/java/com/mydatamyconsent/model/DataConsentRequest.java
 src/main/java/com/mydatamyconsent/model/DataConsentRequestModel.java
 src/main/java/com/mydatamyconsent/model/DataConsentRequestedDocument.java
 src/main/java/com/mydatamyconsent/model/DataConsentRequestedFinancialAccount.java
@@ -167,6 +169,7 @@ src/test/java/com/mydatamyconsent/model/DataConsentDocumentsDtoTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentFinancialsDtoTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentIdentifierTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentRequestModelTest.java
+src/test/java/com/mydatamyconsent/model/DataConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentRequestedDocumentTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentRequestedFinancialAccountTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentRequesterDtoTest.java

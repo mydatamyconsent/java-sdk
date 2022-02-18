@@ -18,44 +18,69 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Receiver;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
+import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for DataConsentRequestModel
+ * Model tests for DataConsentRequest
  */
-public class DataConsentRequestModelTest {
-    private final DataConsentRequestModel model = new DataConsentRequestModel();
+public class DataConsentRequestTest {
+    private final DataConsentRequest model = new DataConsentRequest();
 
     /**
-     * Model tests for DataConsentRequestModel
+     * Model tests for DataConsentRequest
      */
     @Test
-    public void testDataConsentRequestModel() {
-        // TODO: test DataConsentRequestModel
+    public void testDataConsentRequest() {
+        // TODO: test DataConsentRequest
     }
 
     /**
-     * Test the property 'consentTemplateId'
+     * Test the property 'id'
      */
     @Test
-    public void consentTemplateIdTest() {
-        // TODO: test consentTemplateId
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'receiver'
+     * Test the property 'templateId'
      */
     @Test
-    public void receiverTest() {
-        // TODO: test receiver
+    public void templateIdTest() {
+        // TODO: test templateId
+    }
+
+    /**
+     * Test the property 'requestedAtUtc'
+     */
+    @Test
+    public void requestedAtUtcTest() {
+        // TODO: test requestedAtUtc
+    }
+
+    /**
+     * Test the property 'requestExpiredAtUtc'
+     */
+    @Test
+    public void requestExpiredAtUtcTest() {
+        // TODO: test requestExpiredAtUtc
+    }
+
+    /**
+     * Test the property 'transactionId'
+     */
+    @Test
+    public void transactionIdTest() {
+        // TODO: test transactionId
     }
 
 }
