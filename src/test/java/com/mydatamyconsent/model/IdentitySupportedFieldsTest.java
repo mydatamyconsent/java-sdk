@@ -42,11 +42,11 @@ public class IdentitySupportedFieldsTest {
     }
 
     /**
-     * Test the property 'iconCodePoint'
+     * Test the property 'icon'
      */
     @Test
-    public void iconCodePointTest() {
-        // TODO: test iconCodePoint
+    public void iconTest() {
+        // TODO: test icon
     }
 
     /**

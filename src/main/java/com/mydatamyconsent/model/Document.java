@@ -30,13 +30,13 @@ import java.util.List;
 /**
  * Document
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
 public class Document {
-  public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
+  public static final String SERIALIZED_NAME_FIELD_TITLE = "field_title";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
   private String fieldTitle;
 
-  public static final String SERIALIZED_NAME_FIELD_SLUG = "fieldSlug";
+  public static final String SERIALIZED_NAME_FIELD_SLUG = "field_slug";
   @SerializedName(SERIALIZED_NAME_FIELD_SLUG)
   private String fieldSlug;
 

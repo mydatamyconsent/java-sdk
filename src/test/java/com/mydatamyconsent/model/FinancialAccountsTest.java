@@ -54,11 +54,11 @@ public class FinancialAccountsTest {
     }
 
     /**
-     * Test the property 'financialAccountDetailsRequired'
+     * Test the property 'requiredDetails'
      */
     @Test
-    public void financialAccountDetailsRequiredTest() {
-        // TODO: test financialAccountDetailsRequired
+    public void requiredDetailsTest() {
+        // TODO: test requiredDetails
     }
 
     /**

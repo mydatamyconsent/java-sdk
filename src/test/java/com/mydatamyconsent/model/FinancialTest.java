@@ -46,11 +46,11 @@ public class FinancialTest {
     }
 
     /**
-     * Test the property 'accountField'
+     * Test the property 'fieldName'
      */
     @Test
-    public void accountFieldTest() {
-        // TODO: test accountField
+    public void fieldNameTest() {
+        // TODO: test fieldName
     }
 
     /**

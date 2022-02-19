@@ -32,13 +32,13 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Financial
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
 public class Financial {
-  public static final String SERIALIZED_NAME_ACCOUNT_FIELD = "accountField";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_FIELD)
-  private String accountField;
+  public static final String SERIALIZED_NAME_FIELD_NAME = "field_name";
+  @SerializedName(SERIALIZED_NAME_FIELD_NAME)
+  private String fieldName;
 
-  public static final String SERIALIZED_NAME_CUSTOM_KEY = "customKey";
+  public static final String SERIALIZED_NAME_CUSTOM_KEY = "custom_key";
   @SerializedName(SERIALIZED_NAME_CUSTOM_KEY)
   private String customKey;
 
@@ -53,26 +53,26 @@ public class Financial {
   public Financial() { 
   }
 
-  public Financial accountField(String accountField) {
+  public Financial fieldName(String fieldName) {
     
-    this.accountField = accountField;
+    this.fieldName = fieldName;
     return this;
   }
 
    /**
-   * Get accountField
-   * @return accountField
+   * Get fieldName
+   * @return fieldName
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getAccountField() {
-    return accountField;
+  public String getFieldName() {
+    return fieldName;
   }
 
 
-  public void setAccountField(String accountField) {
-    this.accountField = accountField;
+  public void setFieldName(String fieldName) {
+    this.fieldName = fieldName;
   }
 
 
@@ -162,7 +162,7 @@ public class Financial {
       return false;
     }
     Financial financial = (Financial) o;
-    return Objects.equals(this.accountField, financial.accountField) &&
+    return Objects.equals(this.fieldName, financial.fieldName) &&
         Objects.equals(this.customKey, financial.customKey) &&
         Objects.equals(this.accounts, financial.accounts) &&
         Objects.equals(this.requirement, financial.requirement);
@@ -174,7 +174,7 @@ public class Financial {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountField, customKey, accounts, requirement);
+    return Objects.hash(fieldName, customKey, accounts, requirement);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -188,7 +188,7 @@ public class Financial {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Financial {\n");
-    sb.append("    accountField: ").append(toIndentedString(accountField)).append("\n");
+    sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("    customKey: ").append(toIndentedString(customKey)).append("\n");
     sb.append("    accounts: ").append(toIndentedString(accounts)).append("\n");
     sb.append("    requirement: ").append(toIndentedString(requirement)).append("\n");

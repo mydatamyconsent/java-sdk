@@ -29,15 +29,15 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DocumentIssueRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
   private String documentTypeId;
 
-  public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
-  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
-  private String identifier;
+  public static final String SERIALIZED_NAME_DOCUMENT_IDENTIFIER = "documentIdentifier";
+  @SerializedName(SERIALIZED_NAME_DOCUMENT_IDENTIFIER)
+  private String documentIdentifier;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -89,26 +89,26 @@ public class DocumentIssueRequest {
   }
 
 
-  public DocumentIssueRequest identifier(String identifier) {
+  public DocumentIssueRequest documentIdentifier(String documentIdentifier) {
     
-    this.identifier = identifier;
+    this.documentIdentifier = documentIdentifier;
     return this;
   }
 
    /**
-   * Get identifier
-   * @return identifier
+   * Get documentIdentifier
+   * @return documentIdentifier
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getIdentifier() {
-    return identifier;
+  public String getDocumentIdentifier() {
+    return documentIdentifier;
   }
 
 
-  public void setIdentifier(String identifier) {
-    this.identifier = identifier;
+  public void setDocumentIdentifier(String documentIdentifier) {
+    this.documentIdentifier = documentIdentifier;
   }
 
 
@@ -260,7 +260,7 @@ public class DocumentIssueRequest {
     }
     DocumentIssueRequest documentIssueRequest = (DocumentIssueRequest) o;
     return Objects.equals(this.documentTypeId, documentIssueRequest.documentTypeId) &&
-        Objects.equals(this.identifier, documentIssueRequest.identifier) &&
+        Objects.equals(this.documentIdentifier, documentIssueRequest.documentIdentifier) &&
         Objects.equals(this.name, documentIssueRequest.name) &&
         Objects.equals(this.description, documentIssueRequest.description) &&
         Objects.equals(this.receiver, documentIssueRequest.receiver) &&
@@ -275,7 +275,7 @@ public class DocumentIssueRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, identifier, name, description, receiver, expiresAtUtc, base64PdfDocument, metadata);
+    return Objects.hash(documentTypeId, documentIdentifier, name, description, receiver, expiresAtUtc, base64PdfDocument, metadata);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -290,7 +290,7 @@ public class DocumentIssueRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentIssueRequest {\n");
     sb.append("    documentTypeId: ").append(toIndentedString(documentTypeId)).append("\n");
-    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+    sb.append("    documentIdentifier: ").append(toIndentedString(documentIdentifier)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");

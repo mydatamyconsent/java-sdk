@@ -51,11 +51,11 @@ public class DocumentIssueRequestTest {
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'documentIdentifier'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void documentIdentifierTest() {
+        // TODO: test documentIdentifier
     }
 
     /**

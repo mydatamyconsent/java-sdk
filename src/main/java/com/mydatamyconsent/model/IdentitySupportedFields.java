@@ -28,11 +28,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * IdentitySupportedFields
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
 public class IdentitySupportedFields {
-  public static final String SERIALIZED_NAME_ICON_CODE_POINT = "iconCodePoint";
-  @SerializedName(SERIALIZED_NAME_ICON_CODE_POINT)
-  private Integer iconCodePoint;
+  public static final String SERIALIZED_NAME_ICON = "icon";
+  @SerializedName(SERIALIZED_NAME_ICON)
+  private Integer icon;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -53,26 +53,26 @@ public class IdentitySupportedFields {
   public IdentitySupportedFields() { 
   }
 
-  public IdentitySupportedFields iconCodePoint(Integer iconCodePoint) {
+  public IdentitySupportedFields icon(Integer icon) {
     
-    this.iconCodePoint = iconCodePoint;
+    this.icon = icon;
     return this;
   }
 
    /**
-   * Get iconCodePoint
-   * @return iconCodePoint
+   * Get icon
+   * @return icon
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Integer getIconCodePoint() {
-    return iconCodePoint;
+  public Integer getIcon() {
+    return icon;
   }
 
 
-  public void setIconCodePoint(Integer iconCodePoint) {
-    this.iconCodePoint = iconCodePoint;
+  public void setIcon(Integer icon) {
+    this.icon = icon;
   }
 
 
@@ -177,7 +177,7 @@ public class IdentitySupportedFields {
       return false;
     }
     IdentitySupportedFields identitySupportedFields = (IdentitySupportedFields) o;
-    return Objects.equals(this.iconCodePoint, identitySupportedFields.iconCodePoint) &&
+    return Objects.equals(this.icon, identitySupportedFields.icon) &&
         Objects.equals(this.title, identitySupportedFields.title) &&
         Objects.equals(this.description, identitySupportedFields.description) &&
         Objects.equals(this.key, identitySupportedFields.key) &&
@@ -190,7 +190,7 @@ public class IdentitySupportedFields {
 
   @Override
   public int hashCode() {
-    return Objects.hash(iconCodePoint, title, description, key, dataType);
+    return Objects.hash(icon, title, description, key, dataType);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -204,7 +204,7 @@ public class IdentitySupportedFields {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdentitySupportedFields {\n");
-    sb.append("    iconCodePoint: ").append(toIndentedString(iconCodePoint)).append("\n");
+    sb.append("    icon: ").append(toIndentedString(icon)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    key: ").append(toIndentedString(key)).append("\n");

@@ -32,21 +32,21 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * FinancialAccounts
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-18T10:34:49.163008572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
 public class FinancialAccounts {
   public static final String SERIALIZED_NAME_DRN = "drn";
   @SerializedName(SERIALIZED_NAME_DRN)
   private String drn;
 
-  public static final String SERIALIZED_NAME_FINANCIAL_ACCOUNT_DETAILS_REQUIRED = "financialAccountDetailsRequired";
-  @SerializedName(SERIALIZED_NAME_FINANCIAL_ACCOUNT_DETAILS_REQUIRED)
-  private List<FinancialAccountDetailsRequired> financialAccountDetailsRequired = null;
+  public static final String SERIALIZED_NAME_REQUIRED_DETAILS = "required_details";
+  @SerializedName(SERIALIZED_NAME_REQUIRED_DETAILS)
+  private List<FinancialAccountDetailsRequired> requiredDetails = null;
 
-  public static final String SERIALIZED_NAME_START_DATE = "startDate";
+  public static final String SERIALIZED_NAME_START_DATE = "start_date";
   @SerializedName(SERIALIZED_NAME_START_DATE)
   private OffsetDateTime startDate;
 
-  public static final String SERIALIZED_NAME_END_DATE = "endDate";
+  public static final String SERIALIZED_NAME_END_DATE = "end_date";
   @SerializedName(SERIALIZED_NAME_END_DATE)
   private OffsetDateTime endDate;
 
@@ -76,34 +76,34 @@ public class FinancialAccounts {
   }
 
 
-  public FinancialAccounts financialAccountDetailsRequired(List<FinancialAccountDetailsRequired> financialAccountDetailsRequired) {
+  public FinancialAccounts requiredDetails(List<FinancialAccountDetailsRequired> requiredDetails) {
     
-    this.financialAccountDetailsRequired = financialAccountDetailsRequired;
+    this.requiredDetails = requiredDetails;
     return this;
   }
 
-  public FinancialAccounts addFinancialAccountDetailsRequiredItem(FinancialAccountDetailsRequired financialAccountDetailsRequiredItem) {
-    if (this.financialAccountDetailsRequired == null) {
-      this.financialAccountDetailsRequired = new ArrayList<FinancialAccountDetailsRequired>();
+  public FinancialAccounts addRequiredDetailsItem(FinancialAccountDetailsRequired requiredDetailsItem) {
+    if (this.requiredDetails == null) {
+      this.requiredDetails = new ArrayList<FinancialAccountDetailsRequired>();
     }
-    this.financialAccountDetailsRequired.add(financialAccountDetailsRequiredItem);
+    this.requiredDetails.add(requiredDetailsItem);
     return this;
   }
 
    /**
-   * Get financialAccountDetailsRequired
-   * @return financialAccountDetailsRequired
+   * Get requiredDetails
+   * @return requiredDetails
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<FinancialAccountDetailsRequired> getFinancialAccountDetailsRequired() {
-    return financialAccountDetailsRequired;
+  public List<FinancialAccountDetailsRequired> getRequiredDetails() {
+    return requiredDetails;
   }
 
 
-  public void setFinancialAccountDetailsRequired(List<FinancialAccountDetailsRequired> financialAccountDetailsRequired) {
-    this.financialAccountDetailsRequired = financialAccountDetailsRequired;
+  public void setRequiredDetails(List<FinancialAccountDetailsRequired> requiredDetails) {
+    this.requiredDetails = requiredDetails;
   }
 
 
@@ -163,7 +163,7 @@ public class FinancialAccounts {
     }
     FinancialAccounts financialAccounts = (FinancialAccounts) o;
     return Objects.equals(this.drn, financialAccounts.drn) &&
-        Objects.equals(this.financialAccountDetailsRequired, financialAccounts.financialAccountDetailsRequired) &&
+        Objects.equals(this.requiredDetails, financialAccounts.requiredDetails) &&
         Objects.equals(this.startDate, financialAccounts.startDate) &&
         Objects.equals(this.endDate, financialAccounts.endDate);
   }
@@ -174,7 +174,7 @@ public class FinancialAccounts {
 
   @Override
   public int hashCode() {
-    return Objects.hash(drn, financialAccountDetailsRequired, startDate, endDate);
+    return Objects.hash(drn, requiredDetails, startDate, endDate);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -189,7 +189,7 @@ public class FinancialAccounts {
     StringBuilder sb = new StringBuilder();
     sb.append("class FinancialAccounts {\n");
     sb.append("    drn: ").append(toIndentedString(drn)).append("\n");
-    sb.append("    financialAccountDetailsRequired: ").append(toIndentedString(financialAccountDetailsRequired)).append("\n");
+    sb.append("    requiredDetails: ").append(toIndentedString(requiredDetails)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("}");

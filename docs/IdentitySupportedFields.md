@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**iconCodePoint** | **Integer** |  | 
+**icon** | **Integer** |  | 
 **title** | **String** |  | 
 **description** | **String** |  |  [optional]
 **key** | **String** |  | 
