@@ -20,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.DataConsentStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -28,10 +29,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * DataConsentRequest
+ * Individual Data Consent Request Response.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
-public class DataConsentRequest {
+@ApiModel(description = "Individual Data Consent Request Response.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T09:54:29.530093160Z[Etc/UTC]")
+public class IndividualDataConsentRequestResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -44,18 +46,22 @@ public class DataConsentRequest {
   @SerializedName(SERIALIZED_NAME_REQUESTED_AT_UTC)
   private OffsetDateTime requestedAtUtc;
 
-  public static final String SERIALIZED_NAME_REQUEST_EXPIRED_AT_UTC = "requestExpiredAtUtc";
-  @SerializedName(SERIALIZED_NAME_REQUEST_EXPIRED_AT_UTC)
-  private OffsetDateTime requestExpiredAtUtc;
+  public static final String SERIALIZED_NAME_REQUEST_EXPIRES_AT_UTC = "requestExpiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_REQUEST_EXPIRES_AT_UTC)
+  private OffsetDateTime requestExpiresAtUtc;
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private DataConsentStatus status;
 
   public static final String SERIALIZED_NAME_TRANSACTION_ID = "transactionId";
   @SerializedName(SERIALIZED_NAME_TRANSACTION_ID)
   private String transactionId;
 
-  public DataConsentRequest() { 
+  public IndividualDataConsentRequestResponse() { 
   }
 
-  public DataConsentRequest id(UUID id) {
+  public IndividualDataConsentRequestResponse id(UUID id) {
     
     this.id = id;
     return this;
@@ -78,7 +84,7 @@ public class DataConsentRequest {
   }
 
 
-  public DataConsentRequest templateId(UUID templateId) {
+  public IndividualDataConsentRequestResponse templateId(UUID templateId) {
     
     this.templateId = templateId;
     return this;
@@ -101,7 +107,7 @@ public class DataConsentRequest {
   }
 
 
-  public DataConsentRequest requestedAtUtc(OffsetDateTime requestedAtUtc) {
+  public IndividualDataConsentRequestResponse requestedAtUtc(OffsetDateTime requestedAtUtc) {
     
     this.requestedAtUtc = requestedAtUtc;
     return this;
@@ -124,30 +130,53 @@ public class DataConsentRequest {
   }
 
 
-  public DataConsentRequest requestExpiredAtUtc(OffsetDateTime requestExpiredAtUtc) {
+  public IndividualDataConsentRequestResponse requestExpiresAtUtc(OffsetDateTime requestExpiresAtUtc) {
     
-    this.requestExpiredAtUtc = requestExpiredAtUtc;
+    this.requestExpiresAtUtc = requestExpiresAtUtc;
     return this;
   }
 
    /**
-   * Get requestExpiredAtUtc
-   * @return requestExpiredAtUtc
+   * Get requestExpiresAtUtc
+   * @return requestExpiresAtUtc
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public OffsetDateTime getRequestExpiredAtUtc() {
-    return requestExpiredAtUtc;
+  public OffsetDateTime getRequestExpiresAtUtc() {
+    return requestExpiresAtUtc;
   }
 
 
-  public void setRequestExpiredAtUtc(OffsetDateTime requestExpiredAtUtc) {
-    this.requestExpiredAtUtc = requestExpiredAtUtc;
+  public void setRequestExpiresAtUtc(OffsetDateTime requestExpiresAtUtc) {
+    this.requestExpiresAtUtc = requestExpiresAtUtc;
   }
 
 
-  public DataConsentRequest transactionId(String transactionId) {
+  public IndividualDataConsentRequestResponse status(DataConsentStatus status) {
+    
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public DataConsentStatus getStatus() {
+    return status;
+  }
+
+
+  public void setStatus(DataConsentStatus status) {
+    this.status = status;
+  }
+
+
+  public IndividualDataConsentRequestResponse transactionId(String transactionId) {
     
     this.transactionId = transactionId;
     return this;
@@ -178,12 +207,13 @@ public class DataConsentRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DataConsentRequest dataConsentRequest = (DataConsentRequest) o;
-    return Objects.equals(this.id, dataConsentRequest.id) &&
-        Objects.equals(this.templateId, dataConsentRequest.templateId) &&
-        Objects.equals(this.requestedAtUtc, dataConsentRequest.requestedAtUtc) &&
-        Objects.equals(this.requestExpiredAtUtc, dataConsentRequest.requestExpiredAtUtc) &&
-        Objects.equals(this.transactionId, dataConsentRequest.transactionId);
+    IndividualDataConsentRequestResponse individualDataConsentRequestResponse = (IndividualDataConsentRequestResponse) o;
+    return Objects.equals(this.id, individualDataConsentRequestResponse.id) &&
+        Objects.equals(this.templateId, individualDataConsentRequestResponse.templateId) &&
+        Objects.equals(this.requestedAtUtc, individualDataConsentRequestResponse.requestedAtUtc) &&
+        Objects.equals(this.requestExpiresAtUtc, individualDataConsentRequestResponse.requestExpiresAtUtc) &&
+        Objects.equals(this.status, individualDataConsentRequestResponse.status) &&
+        Objects.equals(this.transactionId, individualDataConsentRequestResponse.transactionId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -192,7 +222,7 @@ public class DataConsentRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, templateId, requestedAtUtc, requestExpiredAtUtc, transactionId);
+    return Objects.hash(id, templateId, requestedAtUtc, requestExpiresAtUtc, status, transactionId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -205,11 +235,12 @@ public class DataConsentRequest {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DataConsentRequest {\n");
+    sb.append("class IndividualDataConsentRequestResponse {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    requestedAtUtc: ").append(toIndentedString(requestedAtUtc)).append("\n");
-    sb.append("    requestExpiredAtUtc: ").append(toIndentedString(requestExpiredAtUtc)).append("\n");
+    sb.append("    requestExpiresAtUtc: ").append(toIndentedString(requestExpiresAtUtc)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("}");
     return sb.toString();

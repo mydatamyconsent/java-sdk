@@ -18,10 +18,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Receiver;
+import com.mydatamyconsent.model.DataConsentStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
@@ -30,81 +31,65 @@ import org.junit.Test;
 
 
 /**
- * Model tests for DocumentIssueRequest
+ * Model tests for OrganizationDataConsentRequestResponse
  */
-public class DocumentIssueRequestTest {
-    private final DocumentIssueRequest model = new DocumentIssueRequest();
+public class OrganizationDataConsentRequestResponseTest {
+    private final OrganizationDataConsentRequestResponse model = new OrganizationDataConsentRequestResponse();
 
     /**
-     * Model tests for DocumentIssueRequest
+     * Model tests for OrganizationDataConsentRequestResponse
      */
     @Test
-    public void testDocumentIssueRequest() {
-        // TODO: test DocumentIssueRequest
+    public void testOrganizationDataConsentRequestResponse() {
+        // TODO: test OrganizationDataConsentRequestResponse
     }
 
     /**
-     * Test the property 'documentTypeId'
+     * Test the property 'id'
      */
     @Test
-    public void documentTypeIdTest() {
-        // TODO: test documentTypeId
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'documentIdentifier'
+     * Test the property 'templateId'
      */
     @Test
-    public void documentIdentifierTest() {
-        // TODO: test documentIdentifier
+    public void templateIdTest() {
+        // TODO: test templateId
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'requestedAtUtc'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void requestedAtUtcTest() {
+        // TODO: test requestedAtUtc
     }
 
     /**
-     * Test the property 'description'
+     * Test the property 'requestExpiresAtUtc'
      */
     @Test
-    public void descriptionTest() {
-        // TODO: test description
+    public void requestExpiresAtUtcTest() {
+        // TODO: test requestExpiresAtUtc
     }
 
     /**
-     * Test the property 'receiver'
+     * Test the property 'status'
      */
     @Test
-    public void receiverTest() {
-        // TODO: test receiver
+    public void statusTest() {
+        // TODO: test status
     }
 
     /**
-     * Test the property 'expiresAtUtc'
+     * Test the property 'transactionId'
      */
     @Test
-    public void expiresAtUtcTest() {
-        // TODO: test expiresAtUtc
-    }
-
-    /**
-     * Test the property 'base64PdfDocument'
-     */
-    @Test
-    public void base64PdfDocumentTest() {
-        // TODO: test base64PdfDocument
-    }
-
-    /**
-     * Test the property 'metadata'
-     */
-    @Test
-    public void metadataTest() {
-        // TODO: test metadata
+    public void transactionIdTest() {
+        // TODO: test transactionId
     }
 
 }

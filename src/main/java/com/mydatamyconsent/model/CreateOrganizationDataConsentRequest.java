@@ -27,10 +27,11 @@ import java.io.IOException;
 import java.util.UUID;
 
 /**
- * DataConsentRequestModel
+ * Organization Data Consent Request.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
-public class DataConsentRequestModel {
+@ApiModel(description = "Organization Data Consent Request.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T09:54:29.530093160Z[Etc/UTC]")
+public class CreateOrganizationDataConsentRequest {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)
   private UUID consentTemplateId;
@@ -39,10 +40,10 @@ public class DataConsentRequestModel {
   @SerializedName(SERIALIZED_NAME_RECEIVER)
   private Receiver receiver;
 
-  public DataConsentRequestModel() { 
+  public CreateOrganizationDataConsentRequest() { 
   }
 
-  public DataConsentRequestModel consentTemplateId(UUID consentTemplateId) {
+  public CreateOrganizationDataConsentRequest consentTemplateId(UUID consentTemplateId) {
     
     this.consentTemplateId = consentTemplateId;
     return this;
@@ -65,7 +66,7 @@ public class DataConsentRequestModel {
   }
 
 
-  public DataConsentRequestModel receiver(Receiver receiver) {
+  public CreateOrganizationDataConsentRequest receiver(Receiver receiver) {
     
     this.receiver = receiver;
     return this;
@@ -96,9 +97,9 @@ public class DataConsentRequestModel {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DataConsentRequestModel dataConsentRequestModel = (DataConsentRequestModel) o;
-    return Objects.equals(this.consentTemplateId, dataConsentRequestModel.consentTemplateId) &&
-        Objects.equals(this.receiver, dataConsentRequestModel.receiver);
+    CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest = (CreateOrganizationDataConsentRequest) o;
+    return Objects.equals(this.consentTemplateId, createOrganizationDataConsentRequest.consentTemplateId) &&
+        Objects.equals(this.receiver, createOrganizationDataConsentRequest.receiver);
   }
 
   @Override
@@ -109,7 +110,7 @@ public class DataConsentRequestModel {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DataConsentRequestModel {\n");
+    sb.append("class CreateOrganizationDataConsentRequest {\n");
     sb.append("    consentTemplateId: ").append(toIndentedString(consentTemplateId)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("}");

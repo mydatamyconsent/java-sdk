@@ -25,11 +25,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * DocumentIssueRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-19T10:34:06.946929974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T09:54:29.530093160Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
@@ -53,7 +54,7 @@ public class DocumentIssueRequest {
 
   public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
-  private String expiresAtUtc;
+  private OffsetDateTime expiresAtUtc;
 
   public static final String SERIALIZED_NAME_BASE64_PDF_DOCUMENT = "base64PdfDocument";
   @SerializedName(SERIALIZED_NAME_BASE64_PDF_DOCUMENT)
@@ -181,7 +182,7 @@ public class DocumentIssueRequest {
   }
 
 
-  public DocumentIssueRequest expiresAtUtc(String expiresAtUtc) {
+  public DocumentIssueRequest expiresAtUtc(OffsetDateTime expiresAtUtc) {
     
     this.expiresAtUtc = expiresAtUtc;
     return this;
@@ -194,12 +195,12 @@ public class DocumentIssueRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getExpiresAtUtc() {
+  public OffsetDateTime getExpiresAtUtc() {
     return expiresAtUtc;
   }
 
 
-  public void setExpiresAtUtc(String expiresAtUtc) {
+  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
     this.expiresAtUtc = expiresAtUtc;
   }
 

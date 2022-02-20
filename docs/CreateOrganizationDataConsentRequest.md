@@ -1,7 +1,8 @@
 
 
-# DataConsentRequestModel
+# CreateOrganizationDataConsentRequest
 
+Organization Data Consent Request.
 
 ## Properties
 

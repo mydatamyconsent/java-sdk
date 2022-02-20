@@ -36,21 +36,6 @@ public class DocumentsApiTest {
 
     
     /**
-     * Issue a new document.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void issueDocumentTest() throws ApiException {
-        DocumentIssueRequest documentIssueRequest = null;
-                Boolean response = api.issueDocument(documentIssueRequest);
-        // TODO: test validations
-    }
-    
-    /**
      * Get issued document.
      *
      * 
@@ -59,9 +44,9 @@ public class DocumentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DocumentsIssuedDocumentIdGetTest() throws ApiException {
+    public void getIssuedDocumentByIdTest() throws ApiException {
         UUID documentId = null;
-                api.v1DocumentsIssuedDocumentIdGet(documentId);
+                api.getIssuedDocumentById(documentId);
         // TODO: test validations
     }
     
@@ -74,13 +59,13 @@ public class DocumentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DocumentsIssuedGetTest() throws ApiException {
+    public void getIssuedDocumentsTest() throws ApiException {
         UUID documentTypeId = null;
         OffsetDateTime fromDateTime = null;
         OffsetDateTime toDateTime = null;
         Integer pageSize = null;
         Integer pageNo = null;
-                api.v1DocumentsIssuedGet(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+                api.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
         // TODO: test validations
     }
     
@@ -93,10 +78,25 @@ public class DocumentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DocumentsTypesGetTest() throws ApiException {
+    public void getRegisteredDocumentTypesTest() throws ApiException {
         Integer pageSize = null;
         Integer pageNo = null;
-                api.v1DocumentsTypesGet(pageSize, pageNo);
+                api.getRegisteredDocumentTypes(pageSize, pageNo);
+        // TODO: test validations
+    }
+    
+    /**
+     * Issue a new document.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void issueDocumentTest() throws ApiException {
+        DocumentIssueRequest documentIssueRequest = null;
+                Boolean response = api.issueDocument(documentIssueRequest);
         // TODO: test validations
     }
     

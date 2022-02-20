@@ -37,7 +37,9 @@ public enum DataConsentStatus {
   
   REVOKED("Revoked"),
   
-  EXPIRED("Expired");
+  EXPIRED("Expired"),
+  
+  CANCELED("Canceled");
 
   private String value;
 

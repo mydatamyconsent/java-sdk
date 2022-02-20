@@ -29,17 +29,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for DataConsentRequestModel
+ * Model tests for CreateIndividualDataConsentRequest
  */
-public class DataConsentRequestModelTest {
-    private final DataConsentRequestModel model = new DataConsentRequestModel();
+public class CreateIndividualDataConsentRequestTest {
+    private final CreateIndividualDataConsentRequest model = new CreateIndividualDataConsentRequest();
 
     /**
-     * Model tests for DataConsentRequestModel
+     * Model tests for CreateIndividualDataConsentRequest
      */
     @Test
-    public void testDataConsentRequestModel() {
-        // TODO: test DataConsentRequestModel
+    public void testCreateIndividualDataConsentRequest() {
+        // TODO: test CreateIndividualDataConsentRequest
     }
 
     /**

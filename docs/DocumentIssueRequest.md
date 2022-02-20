@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **description** | **String** |  | 
 **receiver** | [**Receiver**](Receiver.md) |  | 
-**expiresAtUtc** | **String** |  |  [optional]
+**expiresAtUtc** | **OffsetDateTime** |  |  [optional]
 **base64PdfDocument** | **String** |  | 
 **metadata** | **Object** |  |  [optional]
 

@@ -15,5 +15,7 @@
 
 * `EXPIRED` (value: `"Expired"`)
 
+* `CANCELED` (value: `"Canceled"`)
+
 
 

@@ -20,70 +20,72 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.Receiver;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.UUID;
 
 /**
- * Life
+ * Individual Data Consent Request.
  */
+@ApiModel(description = "Individual Data Consent Request.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T09:54:29.530093160Z[Etc/UTC]")
-public class Life {
-  public static final String SERIALIZED_NAME_UNIT = "unit";
-  @SerializedName(SERIALIZED_NAME_UNIT)
-  private String unit;
+public class CreateIndividualDataConsentRequest {
+  public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
+  @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)
+  private UUID consentTemplateId;
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  public static final String SERIALIZED_NAME_RECEIVER = "receiver";
+  @SerializedName(SERIALIZED_NAME_RECEIVER)
+  private Receiver receiver;
 
-  public Life() { 
+  public CreateIndividualDataConsentRequest() { 
   }
 
-  public Life unit(String unit) {
+  public CreateIndividualDataConsentRequest consentTemplateId(UUID consentTemplateId) {
     
-    this.unit = unit;
+    this.consentTemplateId = consentTemplateId;
     return this;
   }
 
    /**
-   * Get unit
-   * @return unit
+   * Get consentTemplateId
+   * @return consentTemplateId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getUnit() {
-    return unit;
+  public UUID getConsentTemplateId() {
+    return consentTemplateId;
   }
 
 
-  public void setUnit(String unit) {
-    this.unit = unit;
+  public void setConsentTemplateId(UUID consentTemplateId) {
+    this.consentTemplateId = consentTemplateId;
   }
 
 
-  public Life value(String value) {
+  public CreateIndividualDataConsentRequest receiver(Receiver receiver) {
     
-    this.value = value;
+    this.receiver = receiver;
     return this;
   }
 
    /**
-   * Get value
-   * @return value
+   * Get receiver
+   * @return receiver
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public String getValue() {
-    return value;
+  public Receiver getReceiver() {
+    return receiver;
   }
 
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setReceiver(Receiver receiver) {
+    this.receiver = receiver;
   }
 
 
@@ -95,33 +97,22 @@ public class Life {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Life life = (Life) o;
-    return Objects.equals(this.unit, life.unit) &&
-        Objects.equals(this.value, life.value);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+    CreateIndividualDataConsentRequest createIndividualDataConsentRequest = (CreateIndividualDataConsentRequest) o;
+    return Objects.equals(this.consentTemplateId, createIndividualDataConsentRequest.consentTemplateId) &&
+        Objects.equals(this.receiver, createIndividualDataConsentRequest.receiver);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(unit, value);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(consentTemplateId, receiver);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Life {\n");
-    sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("class CreateIndividualDataConsentRequest {\n");
+    sb.append("    consentTemplateId: ").append(toIndentedString(consentTemplateId)).append("\n");
+    sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("}");
     return sb.toString();
   }

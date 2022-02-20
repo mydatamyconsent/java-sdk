@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNo** | **Integer**|  | [optional]
  **pageSize** | **Integer**|  | [optional]
- **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired]
+ **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
  **startDate** | **OffsetDateTime**|  | [optional]
  **endDate** | **OffsetDateTime**|  | [optional]
 
@@ -1042,7 +1042,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageNo** | **Integer**|  | [optional]
  **pageSize** | **Integer**|  | [optional]
- **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired]
+ **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
  **startDate** | **OffsetDateTime**|  | [optional]
  **endDate** | **OffsetDateTime**|  | [optional]
 
