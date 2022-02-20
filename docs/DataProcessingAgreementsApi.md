@@ -133,6 +133,7 @@ No authorization required
 |-------------|-------------|------------------|
 **204** | Success |  -  |
 **404** | Not Found |  -  |
+**400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
@@ -196,6 +197,8 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
 **0** | Error |  -  |
 
 <a name="getDataProcessingAgreements"></a>
@@ -321,6 +324,7 @@ No authorization required
 |-------------|-------------|------------------|
 **204** | Success |  -  |
 **404** | Not Found |  -  |
+**400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
@@ -386,6 +390,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **404** | Not Found |  -  |
+**400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 

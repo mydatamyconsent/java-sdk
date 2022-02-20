@@ -15,6 +15,9 @@ package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DocumentIssueRequest;
+import com.mydatamyconsent.model.DocumentTypeDetailsDtoPaginatedList;
+import com.mydatamyconsent.model.IssuedDocument;
+import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
@@ -46,7 +49,7 @@ public class DocumentsApiTest {
     @Test
     public void getIssuedDocumentByIdTest() throws ApiException {
         UUID documentId = null;
-                api.getIssuedDocumentById(documentId);
+                IssuedDocument response = api.getIssuedDocumentById(documentId);
         // TODO: test validations
     }
     
@@ -65,7 +68,7 @@ public class DocumentsApiTest {
         OffsetDateTime toDateTime = null;
         Integer pageSize = null;
         Integer pageNo = null;
-                api.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+                IssuedDocumentPaginatedList response = api.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
         // TODO: test validations
     }
     
@@ -79,9 +82,9 @@ public class DocumentsApiTest {
      */
     @Test
     public void getRegisteredDocumentTypesTest() throws ApiException {
-        Integer pageSize = null;
         Integer pageNo = null;
-                api.getRegisteredDocumentTypes(pageSize, pageNo);
+        Integer pageSize = null;
+                DocumentTypeDetailsDtoPaginatedList response = api.getRegisteredDocumentTypes(pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -96,7 +99,7 @@ public class DocumentsApiTest {
     @Test
     public void issueDocumentTest() throws ApiException {
         DocumentIssueRequest documentIssueRequest = null;
-                Boolean response = api.issueDocument(documentIssueRequest);
+                IssuedDocument response = api.issueDocument(documentIssueRequest);
         // TODO: test validations
     }
     

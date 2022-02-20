@@ -678,8 +678,8 @@ public class Example {
     String filters = "filters_example"; // String | Filters.
     OffsetDateTime fromDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
     OffsetDateTime toDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
-    Integer pageNo = 10; // Integer | Page no.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageNo = 10; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       UserAccountFinancialTransactionsDtoPaginatedList result = apiInstance.getConsentedFinancialAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize);
       System.out.println(result);
@@ -703,8 +703,8 @@ Name | Type | Description  | Notes
  **filters** | **String**| Filters. | [optional]
  **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
- **pageNo** | **Integer**| Page no. | [optional] [default to 10]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 10]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
@@ -751,7 +751,7 @@ public class Example {
     OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
     OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
     Integer pageNo = 1; // Integer | Page number.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       UserDataConsentInfoDtoPaginatedList result = apiInstance.getConsents(status, from, to, pageNo, pageSize);
       System.out.println(result);
@@ -774,7 +774,7 @@ Name | Type | Description  | Notes
  **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
@@ -821,7 +821,7 @@ public class Example {
     OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
     OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
     Integer pageNo = 1; // Integer | Page number.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       OrganizationDataConsentInfoDtoPaginatedList result = apiInstance.getConsentsForOrganizations(status, from, to, pageNo, pageSize);
       System.out.println(result);
@@ -844,7 +844,7 @@ Name | Type | Description  | Notes
  **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
@@ -892,8 +892,8 @@ public class Example {
     String filters = "filters_example"; // String | Filters.
     OffsetDateTime fromDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
     OffsetDateTime toDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
-    Integer pageNo = 1; // Integer | Page no.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       OrganizationFinancialTransactionsDtoPaginatedList result = apiInstance.getOrgConsentedAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize);
       System.out.println(result);
@@ -917,8 +917,8 @@ Name | Type | Description  | Notes
  **filters** | **String**| Filters. | [optional]
  **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
- **pageNo** | **Integer**| Page no. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 

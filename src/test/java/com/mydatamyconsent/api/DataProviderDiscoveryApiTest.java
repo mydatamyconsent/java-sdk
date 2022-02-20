@@ -16,6 +16,7 @@ package com.mydatamyconsent.api;
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DataProvider;
 import com.mydatamyconsent.model.DataProviderPaginatedList;
+import com.mydatamyconsent.model.ProblemDetails;
 import org.junit.Test;
 import org.junit.Ignore;
 

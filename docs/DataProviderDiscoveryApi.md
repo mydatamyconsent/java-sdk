@@ -67,6 +67,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**500** | Server Error |  -  |
+**400** | Bad Request |  -  |
+**404** | Not Found |  -  |
+**0** | Error |  -  |
 
 <a name="getDataProviders"></a>
 # **getDataProviders**
@@ -93,7 +97,7 @@ public class Example {
     String documentType = "documentType_example"; // String | Document type.
     String organizationCategory = "organizationCategory_example"; // String | Organization category.
     Integer pageNo = 1; // Integer | Page number.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageSize = 25; // Integer | Number of items to return.
     String country = "IN"; // String | ISO2 Country code.
     try {
       DataProviderPaginatedList result = apiInstance.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, country);
@@ -117,7 +121,7 @@ Name | Type | Description  | Notes
  **documentType** | **String**| Document type. | [optional]
  **organizationCategory** | **String**| Organization category. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
  **country** | **String**| ISO2 Country code. | [optional] [default to IN]
 
 ### Return type
@@ -137,4 +141,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**500** | Server Error |  -  |
+**400** | Bad Request |  -  |
+**0** | Error |  -  |
 

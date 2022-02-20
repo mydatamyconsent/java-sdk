@@ -28,6 +28,9 @@ import java.io.IOException;
 
 
 import com.mydatamyconsent.model.DocumentIssueRequest;
+import com.mydatamyconsent.model.DocumentTypeDetailsDtoPaginatedList;
+import com.mydatamyconsent.model.IssuedDocument;
+import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
@@ -85,6 +88,10 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentByIdCall(UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -115,7 +122,7 @@ public class DocumentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -152,32 +159,43 @@ public class DocumentsApi {
      * Get issued document.
      * 
      * @param documentId Document id. (required)
+     * @return IssuedDocument
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public void getIssuedDocumentById(UUID documentId) throws ApiException {
-        getIssuedDocumentByIdWithHttpInfo(documentId);
+    public IssuedDocument getIssuedDocumentById(UUID documentId) throws ApiException {
+        ApiResponse<IssuedDocument> localVarResp = getIssuedDocumentByIdWithHttpInfo(documentId);
+        return localVarResp.getData();
     }
 
     /**
      * Get issued document.
      * 
      * @param documentId Document id. (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;IssuedDocument&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getIssuedDocumentByIdWithHttpInfo(UUID documentId) throws ApiException {
+    public ApiResponse<IssuedDocument> getIssuedDocumentByIdWithHttpInfo(UUID documentId) throws ApiException {
         okhttp3.Call localVarCall = getIssuedDocumentByIdValidateBeforeCall(documentId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -191,12 +209,17 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIssuedDocumentByIdAsync(UUID documentId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call getIssuedDocumentByIdAsync(UUID documentId, final ApiCallback<IssuedDocument> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIssuedDocumentByIdValidateBeforeCall(documentId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -213,6 +236,9 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentsCall(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo, final ApiCallback _callback) throws ApiException {
@@ -262,7 +288,7 @@ public class DocumentsApi {
         }
 
         final String[] localVarAccepts = {
-            
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -298,15 +324,20 @@ public class DocumentsApi {
      * @param toDateTime  (optional)
      * @param pageSize  (optional, default to 25)
      * @param pageNo  (optional, default to 1)
+     * @return IssuedDocumentPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public void getIssuedDocuments(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo) throws ApiException {
-        getIssuedDocumentsWithHttpInfo(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+    public IssuedDocumentPaginatedList getIssuedDocuments(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo) throws ApiException {
+        ApiResponse<IssuedDocumentPaginatedList> localVarResp = getIssuedDocumentsWithHttpInfo(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+        return localVarResp.getData();
     }
 
     /**
@@ -317,17 +348,21 @@ public class DocumentsApi {
      * @param toDateTime  (optional)
      * @param pageSize  (optional, default to 25)
      * @param pageNo  (optional, default to 1)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;IssuedDocumentPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getIssuedDocumentsWithHttpInfo(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo) throws ApiException {
+    public ApiResponse<IssuedDocumentPaginatedList> getIssuedDocumentsWithHttpInfo(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo) throws ApiException {
         okhttp3.Call localVarCall = getIssuedDocumentsValidateBeforeCall(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<IssuedDocumentPaginatedList>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -345,18 +380,22 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIssuedDocumentsAsync(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call getIssuedDocumentsAsync(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageSize, Integer pageNo, final ApiCallback<IssuedDocumentPaginatedList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIssuedDocumentsValidateBeforeCall(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<IssuedDocumentPaginatedList>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getRegisteredDocumentTypes
-     * @param pageSize  (optional, default to 25)
-     * @param pageNo  (optional, default to 1)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -364,9 +403,12 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getRegisteredDocumentTypesCall(Integer pageSize, Integer pageNo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getRegisteredDocumentTypesCall(Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -392,16 +434,16 @@ public class DocumentsApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        if (pageSize != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageSize", pageSize));
-        }
-
         if (pageNo != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageNo", pageNo));
         }
 
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageSize", pageSize));
+        }
+
         final String[] localVarAccepts = {
-            
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -421,10 +463,10 @@ public class DocumentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getRegisteredDocumentTypesValidateBeforeCall(Integer pageSize, Integer pageNo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getRegisteredDocumentTypesValidateBeforeCall(Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getRegisteredDocumentTypesCall(pageSize, pageNo, _callback);
+        okhttp3.Call localVarCall = getRegisteredDocumentTypesCall(pageNo, pageSize, _callback);
         return localVarCall;
 
     }
@@ -432,42 +474,51 @@ public class DocumentsApi {
     /**
      * Get registered document types.
      * 
-     * @param pageSize  (optional, default to 25)
-     * @param pageNo  (optional, default to 1)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
+     * @return DocumentTypeDetailsDtoPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public void getRegisteredDocumentTypes(Integer pageSize, Integer pageNo) throws ApiException {
-        getRegisteredDocumentTypesWithHttpInfo(pageSize, pageNo);
+    public DocumentTypeDetailsDtoPaginatedList getRegisteredDocumentTypes(Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<DocumentTypeDetailsDtoPaginatedList> localVarResp = getRegisteredDocumentTypesWithHttpInfo(pageNo, pageSize);
+        return localVarResp.getData();
     }
 
     /**
      * Get registered document types.
      * 
-     * @param pageSize  (optional, default to 25)
-     * @param pageNo  (optional, default to 1)
-     * @return ApiResponse&lt;Void&gt;
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
+     * @return ApiResponse&lt;DocumentTypeDetailsDtoPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> getRegisteredDocumentTypesWithHttpInfo(Integer pageSize, Integer pageNo) throws ApiException {
-        okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageSize, pageNo, null);
-        return localVarApiClient.execute(localVarCall);
+    public ApiResponse<DocumentTypeDetailsDtoPaginatedList> getRegisteredDocumentTypesWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
+        okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageNo, pageSize, null);
+        Type localVarReturnType = new TypeToken<DocumentTypeDetailsDtoPaginatedList>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Get registered document types. (asynchronously)
      * 
-     * @param pageSize  (optional, default to 25)
-     * @param pageNo  (optional, default to 1)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -475,12 +526,16 @@ public class DocumentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getRegisteredDocumentTypesAsync(Integer pageSize, Integer pageNo, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call getRegisteredDocumentTypesAsync(Integer pageNo, Integer pageSize, final ApiCallback<DocumentTypeDetailsDtoPaginatedList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageSize, pageNo, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageNo, pageSize, _callback);
+        Type localVarReturnType = new TypeToken<DocumentTypeDetailsDtoPaginatedList>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -562,7 +617,7 @@ public class DocumentsApi {
      * Issue a new document.
      * 
      * @param documentIssueRequest Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest. (required)
-     * @return Boolean
+     * @return IssuedDocument
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -573,8 +628,8 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public Boolean issueDocument(DocumentIssueRequest documentIssueRequest) throws ApiException {
-        ApiResponse<Boolean> localVarResp = issueDocumentWithHttpInfo(documentIssueRequest);
+    public IssuedDocument issueDocument(DocumentIssueRequest documentIssueRequest) throws ApiException {
+        ApiResponse<IssuedDocument> localVarResp = issueDocumentWithHttpInfo(documentIssueRequest);
         return localVarResp.getData();
     }
 
@@ -582,7 +637,7 @@ public class DocumentsApi {
      * Issue a new document.
      * 
      * @param documentIssueRequest Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest. (required)
-     * @return ApiResponse&lt;Boolean&gt;
+     * @return ApiResponse&lt;IssuedDocument&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -593,9 +648,9 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Boolean> issueDocumentWithHttpInfo(DocumentIssueRequest documentIssueRequest) throws ApiException {
+    public ApiResponse<IssuedDocument> issueDocumentWithHttpInfo(DocumentIssueRequest documentIssueRequest) throws ApiException {
         okhttp3.Call localVarCall = issueDocumentValidateBeforeCall(documentIssueRequest, null);
-        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -615,10 +670,10 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call issueDocumentAsync(DocumentIssueRequest documentIssueRequest, final ApiCallback<Boolean> _callback) throws ApiException {
+    public okhttp3.Call issueDocumentAsync(DocumentIssueRequest documentIssueRequest, final ApiCallback<IssuedDocument> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = issueDocumentValidateBeforeCall(documentIssueRequest, _callback);
-        Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
+        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

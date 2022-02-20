@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * Receiver
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T10:33:52.320513855Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T20:13:46.154803077Z[Etc/UTC]")
 public class Receiver {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)

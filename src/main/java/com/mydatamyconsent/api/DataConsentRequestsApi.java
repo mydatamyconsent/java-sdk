@@ -653,8 +653,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -747,8 +747,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @return UserDataConsentInfoDtoPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -770,8 +770,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @return ApiResponse&lt;UserDataConsentInfoDtoPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -794,8 +794,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -819,8 +819,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -913,8 +913,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @return OrganizationDataConsentInfoDtoPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -936,8 +936,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @return ApiResponse&lt;OrganizationDataConsentInfoDtoPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -960,8 +960,8 @@ public class DataConsentRequestsApi {
      * @param status Data consent status. (optional)
      * @param startDateTime Start date time. (optional)
      * @param endDateTime End date time. (optional)
-     * @param pageNo Page no. (optional, default to 1)
-     * @param pageSize Page size. (optional, default to 25)
+     * @param pageNo Page number. (optional, default to 1)
+     * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

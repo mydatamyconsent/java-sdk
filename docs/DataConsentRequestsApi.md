@@ -292,8 +292,8 @@ public class Example {
     DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
     OffsetDateTime startDateTime = OffsetDateTime.now(); // OffsetDateTime | Start date time.
     OffsetDateTime endDateTime = OffsetDateTime.now(); // OffsetDateTime | End date time.
-    Integer pageNo = 1; // Integer | Page no.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       UserDataConsentInfoDtoPaginatedList result = apiInstance.getAllConsentRequestsToIndividuals(status, startDateTime, endDateTime, pageNo, pageSize);
       System.out.println(result);
@@ -315,8 +315,8 @@ Name | Type | Description  | Notes
  **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
  **startDateTime** | **OffsetDateTime**| Start date time. | [optional]
  **endDateTime** | **OffsetDateTime**| End date time. | [optional]
- **pageNo** | **Integer**| Page no. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
@@ -362,8 +362,8 @@ public class Example {
     DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
     OffsetDateTime startDateTime = OffsetDateTime.now(); // OffsetDateTime | Start date time.
     OffsetDateTime endDateTime = OffsetDateTime.now(); // OffsetDateTime | End date time.
-    Integer pageNo = 1; // Integer | Page no.
-    Integer pageSize = 25; // Integer | Page size.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
       OrganizationDataConsentInfoDtoPaginatedList result = apiInstance.getAllConsentRequestsToOrganizations(status, startDateTime, endDateTime, pageNo, pageSize);
       System.out.println(result);
@@ -385,8 +385,8 @@ Name | Type | Description  | Notes
  **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
  **startDateTime** | **OffsetDateTime**| Start date time. | [optional]
  **endDateTime** | **OffsetDateTime**| End date time. | [optional]
- **pageNo** | **Integer**| Page no. | [optional] [default to 1]
- **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
