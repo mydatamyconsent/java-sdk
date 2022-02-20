@@ -1,5 +1,4 @@
 # OpenAPI Generator Ignore
-README.md
 .openapi-generator/
 .openapi-generator-ignore
 api/
