@@ -218,7 +218,7 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | MyDataMyConsent.Models.Documents.DocumentIssueRequest.
+    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest.
     try {
       Boolean result = apiInstance.issueDocument(documentIssueRequest);
       System.out.println(result);
@@ -237,7 +237,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| MyDataMyConsent.Models.Documents.DocumentIssueRequest. |
+ **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest. |
 
 ### Return type
 

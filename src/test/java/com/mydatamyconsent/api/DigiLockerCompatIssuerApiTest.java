@@ -35,7 +35,7 @@ public class DigiLockerCompatIssuerApiTest {
 
     
     /**
-     * Digilocker Compatible endpoint to Issue Documents.
+     * Digilocker Compatible endpoint to issue document.
      *
      * 
      *
@@ -43,9 +43,9 @@ public class DigiLockerCompatIssuerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void issuerIssuedoc1XmlPostTest() throws ApiException {
+    public void digilockerCompatIssueDocumentTest() throws ApiException {
         PushUriRequest pushUriRequest = null;
-                PushUriResponse response = api.issuerIssuedoc1XmlPost(pushUriRequest);
+                PushUriResponse response = api.digilockerCompatIssueDocument(pushUriRequest);
         // TODO: test validations
     }
     

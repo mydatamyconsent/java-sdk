@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**issuerIssuedoc1XmlPost**](DigiLockerCompatIssuerApi.md#issuerIssuedoc1XmlPost) | **POST** /issuer/issuedoc/1/xml | Digilocker Compatible endpoint to Issue Documents.
+[**digilockerCompatIssueDocument**](DigiLockerCompatIssuerApi.md#digilockerCompatIssueDocument) | **POST** /issuer/issuedoc/1/xml | Digilocker Compatible endpoint to issue document.
 
 
-<a name="issuerIssuedoc1XmlPost"></a>
-# **issuerIssuedoc1XmlPost**
-> PushUriResponse issuerIssuedoc1XmlPost(pushUriRequest)
+<a name="digilockerCompatIssueDocument"></a>
+# **digilockerCompatIssueDocument**
+> PushUriResponse digilockerCompatIssueDocument(pushUriRequest)
 
-Digilocker Compatible endpoint to Issue Documents.
+Digilocker Compatible endpoint to issue document.
 
 ### Example
 ```java
@@ -28,12 +28,12 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DigiLockerCompatIssuerApi apiInstance = new DigiLockerCompatIssuerApi(defaultClient);
-    PushUriRequest pushUriRequest = new PushUriRequest(); // PushUriRequest | 
+    PushUriRequest pushUriRequest = new PushUriRequest(); // PushUriRequest | Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest.
     try {
-      PushUriResponse result = apiInstance.issuerIssuedoc1XmlPost(pushUriRequest);
+      PushUriResponse result = apiInstance.digilockerCompatIssueDocument(pushUriRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DigiLockerCompatIssuerApi#issuerIssuedoc1XmlPost");
+      System.err.println("Exception when calling DigiLockerCompatIssuerApi#digilockerCompatIssueDocument");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -47,7 +47,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)|  | [optional]
+ **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)| Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. | [optional]
 
 ### Return type
 

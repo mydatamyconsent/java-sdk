@@ -38,7 +38,7 @@ public class DataProcessingAgreementsApiTest {
 
     
     /**
-     * Get all data processing agreements.
+     * Create a data processing agreement.
      *
      * 
      *
@@ -46,10 +46,9 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsGetTest() throws ApiException {
-        Integer pageNo = null;
-        Integer pageSize = null;
-                DataProcessingAgreementDtoPaginatedList response = api.v1DataAgreementsGet(pageNo, pageSize);
+    public void createDataProcessingAgreementTest() throws ApiException {
+        CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = null;
+                DataProcessingAgreementDto response = api.createDataProcessingAgreement(createDataProcessingAgreementRequestModel);
         // TODO: test validations
     }
     
@@ -62,14 +61,14 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsIdDeleteTest() throws ApiException {
+    public void deleteDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                api.v1DataAgreementsIdDelete(id);
+                api.deleteDataProcessingAgreementById(id);
         // TODO: test validations
     }
     
     /**
-     * Get data processing agreement by Id.
+     * Get data processing agreement by id.
      *
      * 
      *
@@ -77,14 +76,14 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsIdGetTest() throws ApiException {
+    public void getDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                DataProcessingAgreementDto response = api.v1DataAgreementsIdGet(id);
+                DataProcessingAgreementDto response = api.getDataProcessingAgreementById(id);
         // TODO: test validations
     }
     
     /**
-     * Update a data processing agreement.
+     * Get all data processing agreements.
      *
      * 
      *
@@ -92,10 +91,10 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsIdPutTest() throws ApiException {
-        UUID id = null;
-        UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = null;
-                DataProcessingAgreementDto response = api.v1DataAgreementsIdPut(id, updateDataProcessingAgreementRequestModel);
+    public void getDataProcessingAgreementsTest() throws ApiException {
+        Integer pageNo = null;
+        Integer pageSize = null;
+                DataProcessingAgreementDtoPaginatedList response = api.getDataProcessingAgreements(pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -108,14 +107,14 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsIdTerminatePutTest() throws ApiException {
+    public void terminateDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                api.v1DataAgreementsIdTerminatePut(id);
+                api.terminateDataProcessingAgreementById(id);
         // TODO: test validations
     }
     
     /**
-     * Create a data processing agreement.
+     * Update a data processing agreement.
      *
      * 
      *
@@ -123,9 +122,10 @@ public class DataProcessingAgreementsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void v1DataAgreementsPostTest() throws ApiException {
-        CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = null;
-                DataProcessingAgreementDto response = api.v1DataAgreementsPost(createDataProcessingAgreementRequestModel);
+    public void updateDataProcessingAgreementTest() throws ApiException {
+        UUID id = null;
+        UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = null;
+                DataProcessingAgreementDto response = api.updateDataProcessingAgreement(id, updateDataProcessingAgreementRequestModel);
         // TODO: test validations
     }
     

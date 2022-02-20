@@ -4,227 +4,27 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1ConsentsIndividualsConsentIdAccountsAccountIdGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdAccountsAccountIdGet) | **GET** /v1/consents/individuals/{consentId}/accounts/{accountId} | Get individual consented financial account details based on account id.
-[**v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet) | **GET** /v1/consents/individuals/{consentId}/accounts/{accountId}/transactions | Get consented financial account transactions of an individual based on accountId.
-[**v1ConsentsIndividualsConsentIdAccountsGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdAccountsGet) | **GET** /v1/consents/individuals/{consentId}/accounts | Get all individual financial accounts in a consent.
-[**v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download a individuals consented document.
-[**v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individuals consent document based on document id.
-[**v1ConsentsIndividualsConsentIdDocumentsGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdDocumentsGet) | **GET** /v1/consents/individuals/{consentId}/documents | Get the individual documents based on ConsentId.
-[**v1ConsentsIndividualsConsentIdGet**](DataConsentsApi.md#v1ConsentsIndividualsConsentIdGet) | **GET** /v1/consents/individuals/{consentId} | Get individuals consent details by consent id.
-[**v1ConsentsIndividualsGet**](DataConsentsApi.md#v1ConsentsIndividualsGet) | **GET** /v1/consents/individuals | Get the list of Consents Sent to Individuals.
-[**v1ConsentsOrganizationsConsentIdAccountsAccountIdGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdAccountsAccountIdGet) | **GET** /v1/consents/organizations/{consentId}/accounts/{accountId} | Get orgnization consented financial account details based on account id.
-[**v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet) | **GET** /v1/consents/organizations/{consentId}/accounts/{accountId}/transactions | Get consented financial account transactions of an organization based on accountId.
-[**v1ConsentsOrganizationsConsentIdAccountsGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdAccountsGet) | **GET** /v1/consents/organizations/{consentId}/accounts | Get all organizational financial accounts in a consent.
-[**v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download organizations consented document.
-[**v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId} | Get organizations consent document based on document id.
-[**v1ConsentsOrganizationsConsentIdDocumentsGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdDocumentsGet) | **GET** /v1/consents/organizations/{consentId}/documents | Get the organizations documents based on ConsentId.
-[**v1ConsentsOrganizationsConsentIdGet**](DataConsentsApi.md#v1ConsentsOrganizationsConsentIdGet) | **GET** /v1/consents/organizations/{consentId} | Get organizations consent details by consent id.
-[**v1ConsentsOrganizationsGet**](DataConsentsApi.md#v1ConsentsOrganizationsGet) | **GET** /v1/consents/organizations | Get the list of data consents sent for organizations.
+[**downloadConsentedDocumentById**](DataConsentsApi.md#downloadConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download a individuals consented document.
+[**downloadOrgConsentedDocumentById**](DataConsentsApi.md#downloadOrgConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download a organizations consented document.
+[**getAllConsentedDocuments**](DataConsentsApi.md#getAllConsentedDocuments) | **GET** /v1/consents/individuals/{consentId}/documents | Get the individual documents based on ConsentId.
+[**getAllConsentedFinancialAccounts**](DataConsentsApi.md#getAllConsentedFinancialAccounts) | **GET** /v1/consents/individuals/{consentId}/accounts | Get all individual consented financial accounts.
+[**getAllOrganizationConsentedAccounts**](DataConsentsApi.md#getAllOrganizationConsentedAccounts) | **GET** /v1/consents/organizations/{consentId}/accounts | Get all organizational consented financial accounts.
+[**getAllOrganizationConsentedDocuments**](DataConsentsApi.md#getAllOrganizationConsentedDocuments) | **GET** /v1/consents/organizations/{consentId}/documents | Get the organization documents based on ConsentId.
+[**getConsentDetailsById**](DataConsentsApi.md#getConsentDetailsById) | **GET** /v1/consents/individuals/{consentId} | Get all individuals consent details by consent id.
+[**getConsentedAccountById**](DataConsentsApi.md#getConsentedAccountById) | **GET** /v1/consents/individuals/{consentId}/accounts/{accountId} | Get individual consented financial account details based on account id.
+[**getConsentedDocumentById**](DataConsentsApi.md#getConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individuals consent document based on document id.
+[**getConsentedFinancialAccount**](DataConsentsApi.md#getConsentedFinancialAccount) | **GET** /v1/consents/organizations/{consentId}/accounts/{accountId} | Get organization consented financial account details based on account id.
+[**getConsentedFinancialAccountTransactions**](DataConsentsApi.md#getConsentedFinancialAccountTransactions) | **GET** /v1/consents/individuals/{consentId}/accounts/{accountId}/transactions | Get individual consented financial account transactions of an individual based on accountId.
+[**getConsents**](DataConsentsApi.md#getConsents) | **GET** /v1/consents/individuals | Get the list of Consents Sent to Individuals.
+[**getConsentsForOrganizations**](DataConsentsApi.md#getConsentsForOrganizations) | **GET** /v1/consents/organizations | Get the list of data consents sent for organizations.
+[**getOrgConsentedAccountTransactions**](DataConsentsApi.md#getOrgConsentedAccountTransactions) | **GET** /v1/consents/organizations/{consentId}/accounts/{accountId}/transactions | Get organization consented financial account transactions of an individual based on accountId.
+[**getOrganizationConsentDetailsById**](DataConsentsApi.md#getOrganizationConsentDetailsById) | **GET** /v1/consents/organizations/{consentId} | Get all organization consent details by consent id.
+[**getOrganizationConsentedDocumentById**](DataConsentsApi.md#getOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId} | Get organization consent document based on document id.
 
 
-<a name="v1ConsentsIndividualsConsentIdAccountsAccountIdGet"></a>
-# **v1ConsentsIndividualsConsentIdAccountsAccountIdGet**
-> FinancialAccount v1ConsentsIndividualsConsentIdAccountsAccountIdGet(consentId, accountId)
-
-Get individual consented financial account details based on account id.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID accountId = UUID.randomUUID(); // UUID | 
-    try {
-      FinancialAccount result = apiInstance.v1ConsentsIndividualsConsentIdAccountsAccountIdGet(consentId, accountId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdAccountsAccountIdGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **accountId** | **UUID**|  |
-
-### Return type
-
-[**FinancialAccount**](FinancialAccount.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet"></a>
-# **v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet**
-> UserAccountFinancialTransactionsDtoPaginatedList v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate)
-
-Get consented financial account transactions of an individual based on accountId.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID accountId = UUID.randomUUID(); // UUID | 
-    String filters = "filters_example"; // String | 
-    Integer pageNo = 56; // Integer | 
-    Integer pageSize = 56; // Integer | 
-    OffsetDateTime fromDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime toDate = OffsetDateTime.now(); // OffsetDateTime | 
-    try {
-      UserAccountFinancialTransactionsDtoPaginatedList result = apiInstance.v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdAccountsAccountIdTransactionsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **accountId** | **UUID**|  |
- **filters** | **String**|  | [optional]
- **pageNo** | **Integer**|  | [optional]
- **pageSize** | **Integer**|  | [optional]
- **fromDate** | **OffsetDateTime**|  | [optional]
- **toDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-[**UserAccountFinancialTransactionsDtoPaginatedList**](UserAccountFinancialTransactionsDtoPaginatedList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsIndividualsConsentIdAccountsGet"></a>
-# **v1ConsentsIndividualsConsentIdAccountsGet**
-> DataConsentFinancialsDto v1ConsentsIndividualsConsentIdAccountsGet(consentId)
-
-Get all individual financial accounts in a consent.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    try {
-      DataConsentFinancialsDto result = apiInstance.v1ConsentsIndividualsConsentIdAccountsGet(consentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdAccountsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
-
-### Return type
-
-[**DataConsentFinancialsDto**](DataConsentFinancialsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet"></a>
-# **v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet**
-> UserDocumentDownloadDto v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId)
+<a name="downloadConsentedDocumentById"></a>
+# **downloadConsentedDocumentById**
+> UserDocumentDownloadDto downloadConsentedDocumentById(consentId, documentId)
 
 Download a individuals consented document.
 
@@ -243,13 +43,13 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | consentId.
-    UUID documentId = UUID.randomUUID(); // UUID | documentId.
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID documentId = UUID.randomUUID(); // UUID | Document id.
     try {
-      UserDocumentDownloadDto result = apiInstance.v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId);
+      UserDocumentDownloadDto result = apiInstance.downloadConsentedDocumentById(consentId, documentId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdDocumentsDocumentIdDownloadGet");
+      System.err.println("Exception when calling DataConsentsApi#downloadConsentedDocumentById");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -263,8 +63,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| consentId. |
- **documentId** | **UUID**| documentId. |
+ **consentId** | **UUID**| Consent id. |
+ **documentId** | **UUID**| Document id. |
 
 ### Return type
 
@@ -286,9 +86,447 @@ No authorization required
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
-<a name="v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet"></a>
-# **v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet**
-> UserDocumentDetailsDto v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet(consentId, documentId)
+<a name="downloadOrgConsentedDocumentById"></a>
+# **downloadOrgConsentedDocumentById**
+> OrganizationDocumentDownloadDto downloadOrgConsentedDocumentById(consentId, documentId)
+
+Download a organizations consented document.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID documentId = UUID.randomUUID(); // UUID | Document id.
+    try {
+      OrganizationDocumentDownloadDto result = apiInstance.downloadOrgConsentedDocumentById(consentId, documentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#downloadOrgConsentedDocumentById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+ **documentId** | **UUID**| Document id. |
+
+### Return type
+
+[**OrganizationDocumentDownloadDto**](OrganizationDocumentDownloadDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getAllConsentedDocuments"></a>
+# **getAllConsentedDocuments**
+> DataConsentDocumentsDto getAllConsentedDocuments(consentId)
+
+Get the individual documents based on ConsentId.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    try {
+      DataConsentDocumentsDto result = apiInstance.getAllConsentedDocuments(consentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getAllConsentedDocuments");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+
+### Return type
+
+[**DataConsentDocumentsDto**](DataConsentDocumentsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getAllConsentedFinancialAccounts"></a>
+# **getAllConsentedFinancialAccounts**
+> DataConsentFinancialsDto getAllConsentedFinancialAccounts(consentId)
+
+Get all individual consented financial accounts.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    try {
+      DataConsentFinancialsDto result = apiInstance.getAllConsentedFinancialAccounts(consentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getAllConsentedFinancialAccounts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+
+### Return type
+
+[**DataConsentFinancialsDto**](DataConsentFinancialsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getAllOrganizationConsentedAccounts"></a>
+# **getAllOrganizationConsentedAccounts**
+> DataConsentFinancialsDto getAllOrganizationConsentedAccounts(consentId)
+
+Get all organizational consented financial accounts.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    try {
+      DataConsentFinancialsDto result = apiInstance.getAllOrganizationConsentedAccounts(consentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getAllOrganizationConsentedAccounts");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+
+### Return type
+
+[**DataConsentFinancialsDto**](DataConsentFinancialsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getAllOrganizationConsentedDocuments"></a>
+# **getAllOrganizationConsentedDocuments**
+> DataConsentDocumentsDto getAllOrganizationConsentedDocuments(consentId)
+
+Get the organization documents based on ConsentId.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    try {
+      DataConsentDocumentsDto result = apiInstance.getAllOrganizationConsentedDocuments(consentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getAllOrganizationConsentedDocuments");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+
+### Return type
+
+[**DataConsentDocumentsDto**](DataConsentDocumentsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getConsentDetailsById"></a>
+# **getConsentDetailsById**
+> DataConsentDetailsDto getConsentDetailsById(consentId)
+
+Get all individuals consent details by consent id.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    try {
+      DataConsentDetailsDto result = apiInstance.getConsentDetailsById(consentId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getConsentDetailsById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+
+### Return type
+
+[**DataConsentDetailsDto**](DataConsentDetailsDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getConsentedAccountById"></a>
+# **getConsentedAccountById**
+> FinancialAccount getConsentedAccountById(consentId, accountId)
+
+Get individual consented financial account details based on account id.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID accountId = UUID.randomUUID(); // UUID | Account id.
+    try {
+      FinancialAccount result = apiInstance.getConsentedAccountById(consentId, accountId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getConsentedAccountById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+ **accountId** | **UUID**| Account id. |
+
+### Return type
+
+[**FinancialAccount**](FinancialAccount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getConsentedDocumentById"></a>
+# **getConsentedDocumentById**
+> UserDocumentDetailsDto getConsentedDocumentById(consentId, documentId)
 
 Get individuals consent document based on document id.
 
@@ -307,13 +545,13 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
     UUID documentId = UUID.randomUUID(); // UUID | Document Id.
     try {
-      UserDocumentDetailsDto result = apiInstance.v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet(consentId, documentId);
+      UserDocumentDetailsDto result = apiInstance.getConsentedDocumentById(consentId, documentId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdDocumentsDocumentIdGet");
+      System.err.println("Exception when calling DataConsentsApi#getConsentedDocumentById");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -327,7 +565,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
+ **consentId** | **UUID**| Consent id. |
  **documentId** | **UUID**| Document Id. |
 
 ### Return type
@@ -350,73 +588,11 @@ No authorization required
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
-<a name="v1ConsentsIndividualsConsentIdDocumentsGet"></a>
-# **v1ConsentsIndividualsConsentIdDocumentsGet**
-> DataConsentDocumentsDto v1ConsentsIndividualsConsentIdDocumentsGet(consentId)
+<a name="getConsentedFinancialAccount"></a>
+# **getConsentedFinancialAccount**
+> OrganizationFinancialAccountDto getConsentedFinancialAccount(consentId, accountId)
 
-Get the individual documents based on ConsentId.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    try {
-      DataConsentDocumentsDto result = apiInstance.v1ConsentsIndividualsConsentIdDocumentsGet(consentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdDocumentsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
-
-### Return type
-
-[**DataConsentDocumentsDto**](DataConsentDocumentsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsIndividualsConsentIdGet"></a>
-# **v1ConsentsIndividualsConsentIdGet**
-> DataConsentDetailsDto v1ConsentsIndividualsConsentIdGet(consentId)
-
-Get individuals consent details by consent id.
+Get organization consented financial account details based on account id.
 
 ### Example
 ```java
@@ -433,12 +609,13 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID accountId = UUID.randomUUID(); // UUID | Account id.
     try {
-      DataConsentDetailsDto result = apiInstance.v1ConsentsIndividualsConsentIdGet(consentId);
+      OrganizationFinancialAccountDto result = apiInstance.getConsentedFinancialAccount(consentId, accountId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsConsentIdGet");
+      System.err.println("Exception when calling DataConsentsApi#getConsentedFinancialAccount");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -452,141 +629,8 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
-
-### Return type
-
-[**DataConsentDetailsDto**](DataConsentDetailsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsIndividualsGet"></a>
-# **v1ConsentsIndividualsGet**
-> UserDataConsentInfoDtoPaginatedList v1ConsentsIndividualsGet(pageNo, pageSize, status, startDate, endDate)
-
-Get the list of Consents Sent to Individuals.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    Integer pageNo = 56; // Integer | 
-    Integer pageSize = 56; // Integer | 
-    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
-    try {
-      UserDataConsentInfoDtoPaginatedList result = apiInstance.v1ConsentsIndividualsGet(pageNo, pageSize, status, startDate, endDate);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsIndividualsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pageNo** | **Integer**|  | [optional]
- **pageSize** | **Integer**|  | [optional]
- **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
-
-### Return type
-
-[**UserDataConsentInfoDtoPaginatedList**](UserDataConsentInfoDtoPaginatedList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsOrganizationsConsentIdAccountsAccountIdGet"></a>
-# **v1ConsentsOrganizationsConsentIdAccountsAccountIdGet**
-> OrganizationFinancialAccountDto v1ConsentsOrganizationsConsentIdAccountsAccountIdGet(consentId, accountId)
-
-Get orgnization consented financial account details based on account id.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID accountId = UUID.randomUUID(); // UUID | 
-    try {
-      OrganizationFinancialAccountDto result = apiInstance.v1ConsentsOrganizationsConsentIdAccountsAccountIdGet(consentId, accountId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdAccountsAccountIdGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **accountId** | **UUID**|  |
+ **consentId** | **UUID**| Consent id. |
+ **accountId** | **UUID**| Account id. |
 
 ### Return type
 
@@ -608,11 +652,11 @@ No authorization required
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
-<a name="v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet"></a>
-# **v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet**
-> OrganizationFinancialTransactionsDtoPaginatedList v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate)
+<a name="getConsentedFinancialAccountTransactions"></a>
+# **getConsentedFinancialAccountTransactions**
+> UserAccountFinancialTransactionsDtoPaginatedList getConsentedFinancialAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize)
 
-Get consented financial account transactions of an organization based on accountId.
+Get individual consented financial account transactions of an individual based on accountId.
 
 ### Example
 ```java
@@ -629,18 +673,18 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID accountId = UUID.randomUUID(); // UUID | 
-    String filters = "filters_example"; // String | 
-    Integer pageNo = 56; // Integer | 
-    Integer pageSize = 56; // Integer | 
-    OffsetDateTime fromDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime toDate = OffsetDateTime.now(); // OffsetDateTime | 
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID accountId = UUID.randomUUID(); // UUID | Account id.
+    String filters = "filters_example"; // String | Filters.
+    OffsetDateTime fromDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
+    OffsetDateTime toDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
+    Integer pageNo = 10; // Integer | Page no.
+    Integer pageSize = 25; // Integer | Page size.
     try {
-      OrganizationFinancialTransactionsDtoPaginatedList result = apiInstance.v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet(consentId, accountId, filters, pageNo, pageSize, fromDate, toDate);
+      UserAccountFinancialTransactionsDtoPaginatedList result = apiInstance.getConsentedFinancialAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdAccountsAccountIdTransactionsGet");
+      System.err.println("Exception when calling DataConsentsApi#getConsentedFinancialAccountTransactions");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -654,13 +698,227 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **accountId** | **UUID**|  |
- **filters** | **String**|  | [optional]
- **pageNo** | **Integer**|  | [optional]
- **pageSize** | **Integer**|  | [optional]
- **fromDate** | **OffsetDateTime**|  | [optional]
- **toDate** | **OffsetDateTime**|  | [optional]
+ **consentId** | **UUID**| Consent id. |
+ **accountId** | **UUID**| Account id. |
+ **filters** | **String**| Filters. | [optional]
+ **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
+ **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
+ **pageNo** | **Integer**| Page no. | [optional] [default to 10]
+ **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+
+### Return type
+
+[**UserAccountFinancialTransactionsDtoPaginatedList**](UserAccountFinancialTransactionsDtoPaginatedList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getConsents"></a>
+# **getConsents**
+> UserDataConsentInfoDtoPaginatedList getConsents(status, from, to, pageNo, pageSize)
+
+Get the list of Consents Sent to Individuals.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus.
+    OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
+    OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Page size.
+    try {
+      UserDataConsentInfoDtoPaginatedList result = apiInstance.getConsents(status, from, to, pageNo, pageSize);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getConsents");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
+ **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+
+### Return type
+
+[**UserDataConsentInfoDtoPaginatedList**](UserDataConsentInfoDtoPaginatedList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getConsentsForOrganizations"></a>
+# **getConsentsForOrganizations**
+> OrganizationDataConsentInfoDtoPaginatedList getConsentsForOrganizations(status, from, to, pageNo, pageSize)
+
+Get the list of data consents sent for organizations.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus.
+    OffsetDateTime from = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
+    OffsetDateTime to = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Page size.
+    try {
+      OrganizationDataConsentInfoDtoPaginatedList result = apiInstance.getConsentsForOrganizations(status, from, to, pageNo, pageSize);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getConsentsForOrganizations");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
+ **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Page size. | [optional] [default to 25]
+
+### Return type
+
+[**OrganizationDataConsentInfoDtoPaginatedList**](OrganizationDataConsentInfoDtoPaginatedList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="getOrgConsentedAccountTransactions"></a>
+# **getOrgConsentedAccountTransactions**
+> OrganizationFinancialTransactionsDtoPaginatedList getOrgConsentedAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize)
+
+Get organization consented financial account transactions of an individual based on accountId.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://localhost");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID accountId = UUID.randomUUID(); // UUID | Account id.
+    String filters = "filters_example"; // String | Filters.
+    OffsetDateTime fromDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | From date time in utc timezone.
+    OffsetDateTime toDateTimeUtc = OffsetDateTime.now(); // OffsetDateTime | Til date time in utc timezone.
+    Integer pageNo = 1; // Integer | Page no.
+    Integer pageSize = 25; // Integer | Page size.
+    try {
+      OrganizationFinancialTransactionsDtoPaginatedList result = apiInstance.getOrgConsentedAccountTransactions(consentId, accountId, filters, fromDateTimeUtc, toDateTimeUtc, pageNo, pageSize);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getOrgConsentedAccountTransactions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **UUID**| Consent id. |
+ **accountId** | **UUID**| Account id. |
+ **filters** | **String**| Filters. | [optional]
+ **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
+ **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
+ **pageNo** | **Integer**| Page no. | [optional] [default to 1]
+ **pageSize** | **Integer**| Page size. | [optional] [default to 25]
 
 ### Return type
 
@@ -682,73 +940,11 @@ No authorization required
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
-<a name="v1ConsentsOrganizationsConsentIdAccountsGet"></a>
-# **v1ConsentsOrganizationsConsentIdAccountsGet**
-> DataConsentFinancialsDto v1ConsentsOrganizationsConsentIdAccountsGet(consentId)
+<a name="getOrganizationConsentDetailsById"></a>
+# **getOrganizationConsentDetailsById**
+> DataConsentDetailsDto getOrganizationConsentDetailsById(consentId)
 
-Get all organizational financial accounts in a consent.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    try {
-      DataConsentFinancialsDto result = apiInstance.v1ConsentsOrganizationsConsentIdAccountsGet(consentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdAccountsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
-
-### Return type
-
-[**DataConsentFinancialsDto**](DataConsentFinancialsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet"></a>
-# **v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet**
-> OrganizationDocumentDownloadDto v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId)
-
-Download organizations consented document.
+Get all organization consent details by consent id.
 
 ### Example
 ```java
@@ -765,13 +961,12 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID documentId = UUID.randomUUID(); // UUID | 
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
     try {
-      OrganizationDocumentDownloadDto result = apiInstance.v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet(consentId, documentId);
+      DataConsentDetailsDto result = apiInstance.getOrganizationConsentDetailsById(consentId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdDocumentsDocumentIdDownloadGet");
+      System.err.println("Exception when calling DataConsentsApi#getOrganizationConsentDetailsById");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -785,196 +980,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **documentId** | **UUID**|  |
-
-### Return type
-
-[**OrganizationDocumentDownloadDto**](OrganizationDocumentDownloadDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet"></a>
-# **v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet**
-> OrganizationDocumentDetailsDto v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet(consentId, documentId)
-
-Get organizations consent document based on document id.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    UUID documentId = UUID.randomUUID(); // UUID | 
-    try {
-      OrganizationDocumentDetailsDto result = apiInstance.v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet(consentId, documentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdDocumentsDocumentIdGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
- **documentId** | **UUID**|  |
-
-### Return type
-
-[**OrganizationDocumentDetailsDto**](OrganizationDocumentDetailsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsOrganizationsConsentIdDocumentsGet"></a>
-# **v1ConsentsOrganizationsConsentIdDocumentsGet**
-> DataConsentDocumentsDto v1ConsentsOrganizationsConsentIdDocumentsGet(consentId)
-
-Get the organizations documents based on ConsentId.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    try {
-      DataConsentDocumentsDto result = apiInstance.v1ConsentsOrganizationsConsentIdDocumentsGet(consentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdDocumentsGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
-
-### Return type
-
-[**DataConsentDocumentsDto**](DataConsentDocumentsDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
-
-<a name="v1ConsentsOrganizationsConsentIdGet"></a>
-# **v1ConsentsOrganizationsConsentIdGet**
-> DataConsentDetailsDto v1ConsentsOrganizationsConsentIdGet(consentId)
-
-Get organizations consent details by consent id.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataConsentsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
-
-    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    UUID consentId = UUID.randomUUID(); // UUID | 
-    try {
-      DataConsentDetailsDto result = apiInstance.v1ConsentsOrganizationsConsentIdGet(consentId);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsConsentIdGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**|  |
+ **consentId** | **UUID**| Consent id. |
 
 ### Return type
 
@@ -996,11 +1002,11 @@ No authorization required
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
-<a name="v1ConsentsOrganizationsGet"></a>
-# **v1ConsentsOrganizationsGet**
-> OrganizationDataConsentInfoDtoPaginatedList v1ConsentsOrganizationsGet(pageNo, pageSize, status, startDate, endDate)
+<a name="getOrganizationConsentedDocumentById"></a>
+# **getOrganizationConsentedDocumentById**
+> OrganizationDocumentDetailsDto getOrganizationConsentedDocumentById(consentId, documentId)
 
-Get the list of data consents sent for organizations.
+Get organization consent document based on document id.
 
 ### Example
 ```java
@@ -1017,16 +1023,13 @@ public class Example {
     defaultClient.setBasePath("http://localhost");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    Integer pageNo = 56; // Integer | 
-    Integer pageSize = 56; // Integer | 
-    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | 
-    OffsetDateTime startDate = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | 
+    UUID consentId = UUID.randomUUID(); // UUID | Consent id.
+    UUID documentId = UUID.randomUUID(); // UUID | Document Id.
     try {
-      OrganizationDataConsentInfoDtoPaginatedList result = apiInstance.v1ConsentsOrganizationsGet(pageNo, pageSize, status, startDate, endDate);
+      OrganizationDocumentDetailsDto result = apiInstance.getOrganizationConsentedDocumentById(consentId, documentId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataConsentsApi#v1ConsentsOrganizationsGet");
+      System.err.println("Exception when calling DataConsentsApi#getOrganizationConsentedDocumentById");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1040,15 +1043,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNo** | **Integer**|  | [optional]
- **pageSize** | **Integer**|  | [optional]
- **status** | [**DataConsentStatus**](.md)|  | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
- **startDate** | **OffsetDateTime**|  | [optional]
- **endDate** | **OffsetDateTime**|  | [optional]
+ **consentId** | **UUID**| Consent id. |
+ **documentId** | **UUID**| Document Id. |
 
 ### Return type
 
-[**OrganizationDataConsentInfoDtoPaginatedList**](OrganizationDataConsentInfoDtoPaginatedList.md)
+[**OrganizationDocumentDetailsDto**](OrganizationDocumentDetailsDto.md)
 
 ### Authorization
 

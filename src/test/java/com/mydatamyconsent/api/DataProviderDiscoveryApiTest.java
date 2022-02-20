@@ -34,37 +34,37 @@ public class DataProviderDiscoveryApiTest {
 
     
     /**
-     * Discover all data providers in My Data My Consent by country and filters.
+     * Get a Data Provider details based on provider id.
      *
-     * .
+     * 
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void v1DataProvidersGetTest() throws ApiException {
+    public void getDataProviderByIdTest() throws ApiException {
+        String providerId = null;
+                DataProvider response = api.getDataProviderById(providerId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Discover all data providers in My Data My Consent by country and filters.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getDataProvidersTest() throws ApiException {
         String accountType = null;
         String documentType = null;
         String organizationCategory = null;
         Integer pageNo = null;
         Integer pageSize = null;
         String country = null;
-                DataProviderPaginatedList response = api.v1DataProvidersGet(accountType, documentType, organizationCategory, pageNo, pageSize, country);
-        // TODO: test validations
-    }
-    
-    /**
-     * Get a Data Provider details.
-     *
-     * .
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void v1DataProvidersProviderIdGetTest() throws ApiException {
-        String providerId = null;
-                DataProvider response = api.v1DataProvidersProviderIdGet(providerId);
+                DataProviderPaginatedList response = api.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, country);
         // TODO: test validations
     }
     

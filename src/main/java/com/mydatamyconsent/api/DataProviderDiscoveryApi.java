@@ -74,7 +74,135 @@ public class DataProviderDiscoveryApi {
     }
 
     /**
-     * Build call for v1DataProvidersGet
+     * Build call for getDataProviderById
+     * @param providerId Provider id. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getDataProviderByIdCall(String providerId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/data-providers/{providerId}"
+            .replaceAll("\\{" + "providerId" + "\\}", localVarApiClient.escapeString(providerId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json", "application/xml"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getDataProviderByIdValidateBeforeCall(String providerId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'providerId' is set
+        if (providerId == null) {
+            throw new ApiException("Missing the required parameter 'providerId' when calling getDataProviderById(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getDataProviderByIdCall(providerId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get a Data Provider details based on provider id.
+     * 
+     * @param providerId Provider id. (required)
+     * @return DataProvider
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public DataProvider getDataProviderById(String providerId) throws ApiException {
+        ApiResponse<DataProvider> localVarResp = getDataProviderByIdWithHttpInfo(providerId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Get a Data Provider details based on provider id.
+     * 
+     * @param providerId Provider id. (required)
+     * @return ApiResponse&lt;DataProvider&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<DataProvider> getDataProviderByIdWithHttpInfo(String providerId) throws ApiException {
+        okhttp3.Call localVarCall = getDataProviderByIdValidateBeforeCall(providerId, null);
+        Type localVarReturnType = new TypeToken<DataProvider>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Get a Data Provider details based on provider id. (asynchronously)
+     * 
+     * @param providerId Provider id. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getDataProviderByIdAsync(String providerId, final ApiCallback<DataProvider> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getDataProviderByIdValidateBeforeCall(providerId, _callback);
+        Type localVarReturnType = new TypeToken<DataProvider>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getDataProviders
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
@@ -87,12 +215,10 @@ public class DataProviderDiscoveryApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v1DataProvidersGetCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDataProvidersCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -163,17 +289,17 @@ public class DataProviderDiscoveryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call v1DataProvidersGetValidateBeforeCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDataProvidersValidateBeforeCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = v1DataProvidersGetCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
+        okhttp3.Call localVarCall = getDataProvidersCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
         return localVarCall;
 
     }
 
     /**
      * Discover all data providers in My Data My Consent by country and filters.
-     * .
+     * 
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
@@ -185,19 +311,17 @@ public class DataProviderDiscoveryApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public DataProviderPaginatedList v1DataProvidersGet(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
-        ApiResponse<DataProviderPaginatedList> localVarResp = v1DataProvidersGetWithHttpInfo(accountType, documentType, organizationCategory, pageNo, pageSize, country);
+    public DataProviderPaginatedList getDataProviders(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
+        ApiResponse<DataProviderPaginatedList> localVarResp = getDataProvidersWithHttpInfo(accountType, documentType, organizationCategory, pageNo, pageSize, country);
         return localVarResp.getData();
     }
 
     /**
      * Discover all data providers in My Data My Consent by country and filters.
-     * .
+     * 
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
@@ -209,20 +333,18 @@ public class DataProviderDiscoveryApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProviderPaginatedList> v1DataProvidersGetWithHttpInfo(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
-        okhttp3.Call localVarCall = v1DataProvidersGetValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, null);
+    public ApiResponse<DataProviderPaginatedList> getDataProvidersWithHttpInfo(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
+        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, null);
         Type localVarReturnType = new TypeToken<DataProviderPaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Discover all data providers in My Data My Consent by country and filters. (asynchronously)
-     * .
+     * 
      * @param accountType Account type. (optional)
      * @param documentType Document type. (optional)
      * @param organizationCategory Organization category. (optional)
@@ -235,151 +357,13 @@ public class DataProviderDiscoveryApi {
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call v1DataProvidersGetAsync(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback<DataProviderPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getDataProvidersAsync(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback<DataProviderPaginatedList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = v1DataProvidersGetValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
+        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
         Type localVarReturnType = new TypeToken<DataProviderPaginatedList>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for v1DataProvidersProviderIdGet
-     * @param providerId Provider Id. (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataProvidersProviderIdGetCall(String providerId, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = null;
-
-        // create path and map variables
-        String localVarPath = "/v1/data-providers/{providerId}"
-            .replaceAll("\\{" + "providerId" + "\\}", localVarApiClient.escapeString(providerId.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json", "application/xml"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] {  };
-        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call v1DataProvidersProviderIdGetValidateBeforeCall(String providerId, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'providerId' is set
-        if (providerId == null) {
-            throw new ApiException("Missing the required parameter 'providerId' when calling v1DataProvidersProviderIdGet(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = v1DataProvidersProviderIdGetCall(providerId, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Get a Data Provider details.
-     * .
-     * @param providerId Provider Id. (required)
-     * @return DataProvider
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
-     </table>
-     */
-    public DataProvider v1DataProvidersProviderIdGet(String providerId) throws ApiException {
-        ApiResponse<DataProvider> localVarResp = v1DataProvidersProviderIdGetWithHttpInfo(providerId);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Get a Data Provider details.
-     * .
-     * @param providerId Provider Id. (required)
-     * @return ApiResponse&lt;DataProvider&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<DataProvider> v1DataProvidersProviderIdGetWithHttpInfo(String providerId) throws ApiException {
-        okhttp3.Call localVarCall = v1DataProvidersProviderIdGetValidateBeforeCall(providerId, null);
-        Type localVarReturnType = new TypeToken<DataProvider>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Get a Data Provider details. (asynchronously)
-     * .
-     * @param providerId Provider Id. (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK. </td><td>  -  </td></tr>
-        <tr><td> 401 </td><td> Unauthorized. </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Internal Server Error. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataProvidersProviderIdGetAsync(String providerId, final ApiCallback<DataProvider> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = v1DataProvidersProviderIdGetValidateBeforeCall(providerId, _callback);
-        Type localVarReturnType = new TypeToken<DataProvider>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

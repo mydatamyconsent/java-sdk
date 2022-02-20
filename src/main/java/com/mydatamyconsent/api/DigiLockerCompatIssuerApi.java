@@ -75,8 +75,8 @@ public class DigiLockerCompatIssuerApi {
     }
 
     /**
-     * Build call for issuerIssuedoc1XmlPost
-     * @param pushUriRequest  (optional)
+     * Build call for digilockerCompatIssueDocument
+     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -90,7 +90,7 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call issuerIssuedoc1XmlPostCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call digilockerCompatIssueDocumentCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -137,18 +137,18 @@ public class DigiLockerCompatIssuerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call issuerIssuedoc1XmlPostValidateBeforeCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call digilockerCompatIssueDocumentValidateBeforeCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = issuerIssuedoc1XmlPostCall(pushUriRequest, _callback);
+        okhttp3.Call localVarCall = digilockerCompatIssueDocumentCall(pushUriRequest, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Digilocker Compatible endpoint to Issue Documents.
+     * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest  (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
      * @return PushUriResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -161,15 +161,15 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public PushUriResponse issuerIssuedoc1XmlPost(PushUriRequest pushUriRequest) throws ApiException {
-        ApiResponse<PushUriResponse> localVarResp = issuerIssuedoc1XmlPostWithHttpInfo(pushUriRequest);
+    public PushUriResponse digilockerCompatIssueDocument(PushUriRequest pushUriRequest) throws ApiException {
+        ApiResponse<PushUriResponse> localVarResp = digilockerCompatIssueDocumentWithHttpInfo(pushUriRequest);
         return localVarResp.getData();
     }
 
     /**
-     * Digilocker Compatible endpoint to Issue Documents.
+     * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest  (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
      * @return ApiResponse&lt;PushUriResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -182,16 +182,16 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PushUriResponse> issuerIssuedoc1XmlPostWithHttpInfo(PushUriRequest pushUriRequest) throws ApiException {
-        okhttp3.Call localVarCall = issuerIssuedoc1XmlPostValidateBeforeCall(pushUriRequest, null);
+    public ApiResponse<PushUriResponse> digilockerCompatIssueDocumentWithHttpInfo(PushUriRequest pushUriRequest) throws ApiException {
+        okhttp3.Call localVarCall = digilockerCompatIssueDocumentValidateBeforeCall(pushUriRequest, null);
         Type localVarReturnType = new TypeToken<PushUriResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Digilocker Compatible endpoint to Issue Documents. (asynchronously)
+     * Digilocker Compatible endpoint to issue document. (asynchronously)
      * 
-     * @param pushUriRequest  (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -205,9 +205,9 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call issuerIssuedoc1XmlPostAsync(PushUriRequest pushUriRequest, final ApiCallback<PushUriResponse> _callback) throws ApiException {
+    public okhttp3.Call digilockerCompatIssueDocumentAsync(PushUriRequest pushUriRequest, final ApiCallback<PushUriResponse> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = issuerIssuedoc1XmlPostValidateBeforeCall(pushUriRequest, _callback);
+        okhttp3.Call localVarCall = digilockerCompatIssueDocumentValidateBeforeCall(pushUriRequest, _callback);
         Type localVarReturnType = new TypeToken<PushUriResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
