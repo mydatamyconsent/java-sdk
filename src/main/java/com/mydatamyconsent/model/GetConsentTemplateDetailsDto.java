@@ -39,7 +39,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * GetConsentTemplateDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T20:13:46.154803077Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-21T10:35:00.633063535Z[Etc/UTC]")
 public class GetConsentTemplateDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -85,6 +85,14 @@ public class GetConsentTemplateDetailsDto {
   @SerializedName(SERIALIZED_NAME_TEMPLATE_TYPE)
   private ConsentTemplateTypes templateType;
 
+  public static final String SERIALIZED_NAME_DATA_LIFE = "dataLife";
+  @SerializedName(SERIALIZED_NAME_DATA_LIFE)
+  private Life dataLife;
+
+  public static final String SERIALIZED_NAME_REQUEST_LIFE = "requestLife";
+  @SerializedName(SERIALIZED_NAME_REQUEST_LIFE)
+  private Life requestLife;
+
   public static final String SERIALIZED_NAME_FREQUENCY = "frequency";
   @SerializedName(SERIALIZED_NAME_FREQUENCY)
   private Life frequency;
@@ -100,6 +108,18 @@ public class GetConsentTemplateDetailsDto {
   public static final String SERIALIZED_NAME_FINANCIALS = "financials";
   @SerializedName(SERIALIZED_NAME_FINANCIALS)
   private List<Financial> financials = null;
+
+  public static final String SERIALIZED_NAME_HEALTH_RECORDS = "healthRecords";
+  @SerializedName(SERIALIZED_NAME_HEALTH_RECORDS)
+  private List<Object> healthRecords = null;
+
+  public static final String SERIALIZED_NAME_APPROVED_BY = "approvedBy";
+  @SerializedName(SERIALIZED_NAME_APPROVED_BY)
+  private UUID approvedBy;
+
+  public static final String SERIALIZED_NAME_APPROVED_AT_UTC = "approvedAtUtc";
+  @SerializedName(SERIALIZED_NAME_APPROVED_AT_UTC)
+  private OffsetDateTime approvedAtUtc;
 
   public GetConsentTemplateDetailsDto() { 
   }
@@ -365,6 +385,52 @@ public class GetConsentTemplateDetailsDto {
   }
 
 
+  public GetConsentTemplateDetailsDto dataLife(Life dataLife) {
+    
+    this.dataLife = dataLife;
+    return this;
+  }
+
+   /**
+   * Get dataLife
+   * @return dataLife
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Life getDataLife() {
+    return dataLife;
+  }
+
+
+  public void setDataLife(Life dataLife) {
+    this.dataLife = dataLife;
+  }
+
+
+  public GetConsentTemplateDetailsDto requestLife(Life requestLife) {
+    
+    this.requestLife = requestLife;
+    return this;
+  }
+
+   /**
+   * Get requestLife
+   * @return requestLife
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Life getRequestLife() {
+    return requestLife;
+  }
+
+
+  public void setRequestLife(Life requestLife) {
+    this.requestLife = requestLife;
+  }
+
+
   public GetConsentTemplateDetailsDto frequency(Life frequency) {
     
     this.frequency = frequency;
@@ -481,6 +547,83 @@ public class GetConsentTemplateDetailsDto {
   }
 
 
+  public GetConsentTemplateDetailsDto healthRecords(List<Object> healthRecords) {
+    
+    this.healthRecords = healthRecords;
+    return this;
+  }
+
+  public GetConsentTemplateDetailsDto addHealthRecordsItem(Object healthRecordsItem) {
+    if (this.healthRecords == null) {
+      this.healthRecords = new ArrayList<Object>();
+    }
+    this.healthRecords.add(healthRecordsItem);
+    return this;
+  }
+
+   /**
+   * Get healthRecords
+   * @return healthRecords
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Object> getHealthRecords() {
+    return healthRecords;
+  }
+
+
+  public void setHealthRecords(List<Object> healthRecords) {
+    this.healthRecords = healthRecords;
+  }
+
+
+  public GetConsentTemplateDetailsDto approvedBy(UUID approvedBy) {
+    
+    this.approvedBy = approvedBy;
+    return this;
+  }
+
+   /**
+   * Get approvedBy
+   * @return approvedBy
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public UUID getApprovedBy() {
+    return approvedBy;
+  }
+
+
+  public void setApprovedBy(UUID approvedBy) {
+    this.approvedBy = approvedBy;
+  }
+
+
+  public GetConsentTemplateDetailsDto approvedAtUtc(OffsetDateTime approvedAtUtc) {
+    
+    this.approvedAtUtc = approvedAtUtc;
+    return this;
+  }
+
+   /**
+   * Get approvedAtUtc
+   * @return approvedAtUtc
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getApprovedAtUtc() {
+    return approvedAtUtc;
+  }
+
+
+  public void setApprovedAtUtc(OffsetDateTime approvedAtUtc) {
+    this.approvedAtUtc = approvedAtUtc;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -501,10 +644,15 @@ public class GetConsentTemplateDetailsDto {
         Objects.equals(this.createdAtUtc, getConsentTemplateDetailsDto.createdAtUtc) &&
         Objects.equals(this.status, getConsentTemplateDetailsDto.status) &&
         Objects.equals(this.templateType, getConsentTemplateDetailsDto.templateType) &&
+        Objects.equals(this.dataLife, getConsentTemplateDetailsDto.dataLife) &&
+        Objects.equals(this.requestLife, getConsentTemplateDetailsDto.requestLife) &&
         Objects.equals(this.frequency, getConsentTemplateDetailsDto.frequency) &&
         Objects.equals(this.identity, getConsentTemplateDetailsDto.identity) &&
         Objects.equals(this.documents, getConsentTemplateDetailsDto.documents) &&
-        Objects.equals(this.financials, getConsentTemplateDetailsDto.financials);
+        Objects.equals(this.financials, getConsentTemplateDetailsDto.financials) &&
+        Objects.equals(this.healthRecords, getConsentTemplateDetailsDto.healthRecords) &&
+        Objects.equals(this.approvedBy, getConsentTemplateDetailsDto.approvedBy) &&
+        Objects.equals(this.approvedAtUtc, getConsentTemplateDetailsDto.approvedAtUtc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -513,7 +661,7 @@ public class GetConsentTemplateDetailsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, description, consentPurpose, collectables, fetchType, shortId, createdBy, createdAtUtc, status, templateType, frequency, identity, documents, financials);
+    return Objects.hash(id, name, description, consentPurpose, collectables, fetchType, shortId, createdBy, createdAtUtc, status, templateType, dataLife, requestLife, frequency, identity, documents, financials, healthRecords, approvedBy, approvedAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -538,10 +686,15 @@ public class GetConsentTemplateDetailsDto {
     sb.append("    createdAtUtc: ").append(toIndentedString(createdAtUtc)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    templateType: ").append(toIndentedString(templateType)).append("\n");
+    sb.append("    dataLife: ").append(toIndentedString(dataLife)).append("\n");
+    sb.append("    requestLife: ").append(toIndentedString(requestLife)).append("\n");
     sb.append("    frequency: ").append(toIndentedString(frequency)).append("\n");
     sb.append("    identity: ").append(toIndentedString(identity)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    financials: ").append(toIndentedString(financials)).append("\n");
+    sb.append("    healthRecords: ").append(toIndentedString(healthRecords)).append("\n");
+    sb.append("    approvedBy: ").append(toIndentedString(approvedBy)).append("\n");
+    sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }

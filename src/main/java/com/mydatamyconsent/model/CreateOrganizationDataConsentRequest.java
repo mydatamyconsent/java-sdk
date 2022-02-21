@@ -30,7 +30,7 @@ import java.util.UUID;
  * Organization Data Consent Request.
  */
 @ApiModel(description = "Organization Data Consent Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T20:13:46.154803077Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-21T10:35:00.633063535Z[Etc/UTC]")
 public class CreateOrganizationDataConsentRequest {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)

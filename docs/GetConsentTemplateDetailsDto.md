@@ -18,10 +18,15 @@ Name | Type | Description | Notes
 **createdAtUtc** | **OffsetDateTime** |  |  [optional]
 **status** | **String** |  |  [optional]
 **templateType** | **ConsentTemplateTypes** |  |  [optional]
+**dataLife** | [**Life**](Life.md) |  |  [optional]
+**requestLife** | [**Life**](Life.md) |  |  [optional]
 **frequency** | [**Life**](Life.md) |  |  [optional]
 **identity** | [**List&lt;IdentitySupportedFields&gt;**](IdentitySupportedFields.md) |  |  [optional]
 **documents** | [**List&lt;Document&gt;**](Document.md) |  |  [optional]
 **financials** | [**List&lt;Financial&gt;**](Financial.md) |  |  [optional]
+**healthRecords** | **List&lt;Object&gt;** |  |  [optional]
+**approvedBy** | **UUID** |  |  [optional]
+**approvedAtUtc** | **OffsetDateTime** |  |  [optional]
 
 
 

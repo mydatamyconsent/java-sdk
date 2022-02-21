@@ -141,6 +141,22 @@ public class GetConsentTemplateDetailsDtoTest {
     }
 
     /**
+     * Test the property 'dataLife'
+     */
+    @Test
+    public void dataLifeTest() {
+        // TODO: test dataLife
+    }
+
+    /**
+     * Test the property 'requestLife'
+     */
+    @Test
+    public void requestLifeTest() {
+        // TODO: test requestLife
+    }
+
+    /**
      * Test the property 'frequency'
      */
     @Test
@@ -170,6 +186,30 @@ public class GetConsentTemplateDetailsDtoTest {
     @Test
     public void financialsTest() {
         // TODO: test financials
+    }
+
+    /**
+     * Test the property 'healthRecords'
+     */
+    @Test
+    public void healthRecordsTest() {
+        // TODO: test healthRecords
+    }
+
+    /**
+     * Test the property 'approvedBy'
+     */
+    @Test
+    public void approvedByTest() {
+        // TODO: test approvedBy
+    }
+
+    /**
+     * Test the property 'approvedAtUtc'
+     */
+    @Test
+    public void approvedAtUtcTest() {
+        // TODO: test approvedAtUtc
     }
 
 }

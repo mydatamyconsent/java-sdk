@@ -66,6 +66,14 @@ public class DataConsentRequesterDtoTest {
     }
 
     /**
+     * Test the property 'location'
+     */
+    @Test
+    public void locationTest() {
+        // TODO: test location
+    }
+
+    /**
      * Test the property 'website'
      */
     @Test

@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DataConsentRequesterDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-20T20:13:46.154803077Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-21T10:35:00.633063535Z[Etc/UTC]")
 public class DataConsentRequesterDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -41,6 +41,10 @@ public class DataConsentRequesterDto {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
+
+  public static final String SERIALIZED_NAME_LOCATION = "location";
+  @SerializedName(SERIALIZED_NAME_LOCATION)
+  private String location;
 
   public static final String SERIALIZED_NAME_WEBSITE = "website";
   @SerializedName(SERIALIZED_NAME_WEBSITE)
@@ -126,6 +130,29 @@ public class DataConsentRequesterDto {
   }
 
 
+  public DataConsentRequesterDto location(String location) {
+    
+    this.location = location;
+    return this;
+  }
+
+   /**
+   * Get location
+   * @return location
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLocation() {
+    return location;
+  }
+
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
+
+
   public DataConsentRequesterDto website(String website) {
     
     this.website = website;
@@ -207,6 +234,7 @@ public class DataConsentRequesterDto {
     return Objects.equals(this.name, dataConsentRequesterDto.name) &&
         Objects.equals(this.logoUrl, dataConsentRequesterDto.logoUrl) &&
         Objects.equals(this.description, dataConsentRequesterDto.description) &&
+        Objects.equals(this.location, dataConsentRequesterDto.location) &&
         Objects.equals(this.website, dataConsentRequesterDto.website) &&
         Objects.equals(this.supportEmail, dataConsentRequesterDto.supportEmail) &&
         Objects.equals(this.helpLineNumber, dataConsentRequesterDto.helpLineNumber);
@@ -218,7 +246,7 @@ public class DataConsentRequesterDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, logoUrl, description, website, supportEmail, helpLineNumber);
+    return Objects.hash(name, logoUrl, description, location, website, supportEmail, helpLineNumber);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -235,6 +263,7 @@ public class DataConsentRequesterDto {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    website: ").append(toIndentedString(website)).append("\n");
     sb.append("    supportEmail: ").append(toIndentedString(supportEmail)).append("\n");
     sb.append("    helpLineNumber: ").append(toIndentedString(helpLineNumber)).append("\n");
