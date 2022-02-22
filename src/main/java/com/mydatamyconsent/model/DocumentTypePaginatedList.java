@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DocumentTypeDetailsDto;
+import com.mydatamyconsent.model.DocumentType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -29,10 +29,10 @@ import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * DocumentTypeDetailsDtoPaginatedList
+ * DocumentTypePaginatedList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-21T10:35:00.633063535Z[Etc/UTC]")
-public class DocumentTypeDetailsDtoPaginatedList {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+public class DocumentTypePaginatedList {
   public static final String SERIALIZED_NAME_PAGE_INDEX = "pageIndex";
   @SerializedName(SERIALIZED_NAME_PAGE_INDEX)
   private Integer pageIndex;
@@ -51,20 +51,20 @@ public class DocumentTypeDetailsDtoPaginatedList {
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<DocumentTypeDetailsDto> items = null;
+  private List<DocumentType> items = null;
 
-  public DocumentTypeDetailsDtoPaginatedList() { 
+  public DocumentTypePaginatedList() { 
   }
 
   
-  public DocumentTypeDetailsDtoPaginatedList(
+  public DocumentTypePaginatedList(
      Integer totalPages
   ) {
     this();
     this.totalPages = totalPages;
   }
 
-  public DocumentTypeDetailsDtoPaginatedList pageIndex(Integer pageIndex) {
+  public DocumentTypePaginatedList pageIndex(Integer pageIndex) {
     
     this.pageIndex = pageIndex;
     return this;
@@ -87,7 +87,7 @@ public class DocumentTypeDetailsDtoPaginatedList {
   }
 
 
-  public DocumentTypeDetailsDtoPaginatedList pageSize(Integer pageSize) {
+  public DocumentTypePaginatedList pageSize(Integer pageSize) {
     
     this.pageSize = pageSize;
     return this;
@@ -124,7 +124,7 @@ public class DocumentTypeDetailsDtoPaginatedList {
 
 
 
-  public DocumentTypeDetailsDtoPaginatedList totalItems(Long totalItems) {
+  public DocumentTypePaginatedList totalItems(Long totalItems) {
     
     this.totalItems = totalItems;
     return this;
@@ -147,15 +147,15 @@ public class DocumentTypeDetailsDtoPaginatedList {
   }
 
 
-  public DocumentTypeDetailsDtoPaginatedList items(List<DocumentTypeDetailsDto> items) {
+  public DocumentTypePaginatedList items(List<DocumentType> items) {
     
     this.items = items;
     return this;
   }
 
-  public DocumentTypeDetailsDtoPaginatedList addItemsItem(DocumentTypeDetailsDto itemsItem) {
+  public DocumentTypePaginatedList addItemsItem(DocumentType itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<DocumentTypeDetailsDto>();
+      this.items = new ArrayList<DocumentType>();
     }
     this.items.add(itemsItem);
     return this;
@@ -168,12 +168,12 @@ public class DocumentTypeDetailsDtoPaginatedList {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DocumentTypeDetailsDto> getItems() {
+  public List<DocumentType> getItems() {
     return items;
   }
 
 
-  public void setItems(List<DocumentTypeDetailsDto> items) {
+  public void setItems(List<DocumentType> items) {
     this.items = items;
   }
 
@@ -186,12 +186,12 @@ public class DocumentTypeDetailsDtoPaginatedList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentTypeDetailsDtoPaginatedList documentTypeDetailsDtoPaginatedList = (DocumentTypeDetailsDtoPaginatedList) o;
-    return Objects.equals(this.pageIndex, documentTypeDetailsDtoPaginatedList.pageIndex) &&
-        Objects.equals(this.pageSize, documentTypeDetailsDtoPaginatedList.pageSize) &&
-        Objects.equals(this.totalPages, documentTypeDetailsDtoPaginatedList.totalPages) &&
-        Objects.equals(this.totalItems, documentTypeDetailsDtoPaginatedList.totalItems) &&
-        Objects.equals(this.items, documentTypeDetailsDtoPaginatedList.items);
+    DocumentTypePaginatedList documentTypePaginatedList = (DocumentTypePaginatedList) o;
+    return Objects.equals(this.pageIndex, documentTypePaginatedList.pageIndex) &&
+        Objects.equals(this.pageSize, documentTypePaginatedList.pageSize) &&
+        Objects.equals(this.totalPages, documentTypePaginatedList.totalPages) &&
+        Objects.equals(this.totalItems, documentTypePaginatedList.totalItems) &&
+        Objects.equals(this.items, documentTypePaginatedList.items);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -213,7 +213,7 @@ public class DocumentTypeDetailsDtoPaginatedList {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentTypeDetailsDtoPaginatedList {\n");
+    sb.append("class DocumentTypePaginatedList {\n");
     sb.append("    pageIndex: ").append(toIndentedString(pageIndex)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    totalPages: ").append(toIndentedString(totalPages)).append("\n");

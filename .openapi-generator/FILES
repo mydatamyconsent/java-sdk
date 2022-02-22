@@ -30,8 +30,8 @@ docs/Document.md
 docs/DocumentCategoryType.md
 docs/DocumentIssueRequest.md
 docs/DocumentSubCategoryType.md
-docs/DocumentTypeDetailsDto.md
-docs/DocumentTypeDetailsDtoPaginatedList.md
+docs/DocumentType.md
+docs/DocumentTypePaginatedList.md
 docs/DocumentsApi.md
 docs/DocumentsRequired.md
 docs/FetchTypes.md
@@ -128,8 +128,8 @@ src/main/java/com/mydatamyconsent/model/Document.java
 src/main/java/com/mydatamyconsent/model/DocumentCategoryType.java
 src/main/java/com/mydatamyconsent/model/DocumentIssueRequest.java
 src/main/java/com/mydatamyconsent/model/DocumentSubCategoryType.java
-src/main/java/com/mydatamyconsent/model/DocumentTypeDetailsDto.java
-src/main/java/com/mydatamyconsent/model/DocumentTypeDetailsDtoPaginatedList.java
+src/main/java/com/mydatamyconsent/model/DocumentType.java
+src/main/java/com/mydatamyconsent/model/DocumentTypePaginatedList.java
 src/main/java/com/mydatamyconsent/model/DocumentsRequired.java
 src/main/java/com/mydatamyconsent/model/FetchTypes.java
 src/main/java/com/mydatamyconsent/model/FileType.java
@@ -201,8 +201,8 @@ src/test/java/com/mydatamyconsent/model/DocumentCategoryTypeTest.java
 src/test/java/com/mydatamyconsent/model/DocumentIssueRequestTest.java
 src/test/java/com/mydatamyconsent/model/DocumentSubCategoryTypeTest.java
 src/test/java/com/mydatamyconsent/model/DocumentTest.java
-src/test/java/com/mydatamyconsent/model/DocumentTypeDetailsDtoPaginatedListTest.java
-src/test/java/com/mydatamyconsent/model/DocumentTypeDetailsDtoTest.java
+src/test/java/com/mydatamyconsent/model/DocumentTypePaginatedListTest.java
+src/test/java/com/mydatamyconsent/model/DocumentTypeTest.java
 src/test/java/com/mydatamyconsent/model/DocumentsRequiredTest.java
 src/test/java/com/mydatamyconsent/model/FetchTypesTest.java
 src/test/java/com/mydatamyconsent/model/FileTypeTest.java

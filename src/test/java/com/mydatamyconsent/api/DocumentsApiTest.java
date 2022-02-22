@@ -15,7 +15,7 @@ package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DocumentIssueRequest;
-import com.mydatamyconsent.model.DocumentTypeDetailsDtoPaginatedList;
+import com.mydatamyconsent.model.DocumentTypePaginatedList;
 import com.mydatamyconsent.model.IssuedDocument;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
@@ -84,7 +84,7 @@ public class DocumentsApiTest {
     public void getRegisteredDocumentTypesTest() throws ApiException {
         Integer pageNo = null;
         Integer pageSize = null;
-                DocumentTypeDetailsDtoPaginatedList response = api.getRegisteredDocumentTypes(pageNo, pageSize);
+                DocumentTypePaginatedList response = api.getRegisteredDocumentTypes(pageNo, pageSize);
         // TODO: test validations
     }
     

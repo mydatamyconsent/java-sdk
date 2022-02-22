@@ -147,7 +147,7 @@ No authorization required
 
 <a name="getRegisteredDocumentTypes"></a>
 # **getRegisteredDocumentTypes**
-> DocumentTypeDetailsDtoPaginatedList getRegisteredDocumentTypes(pageNo, pageSize)
+> DocumentTypePaginatedList getRegisteredDocumentTypes(pageNo, pageSize)
 
 Get registered document types.
 
@@ -169,7 +169,7 @@ public class Example {
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      DocumentTypeDetailsDtoPaginatedList result = apiInstance.getRegisteredDocumentTypes(pageNo, pageSize);
+      DocumentTypePaginatedList result = apiInstance.getRegisteredDocumentTypes(pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#getRegisteredDocumentTypes");
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DocumentTypeDetailsDtoPaginatedList**](DocumentTypeDetailsDtoPaginatedList.md)
+[**DocumentTypePaginatedList**](DocumentTypePaginatedList.md)
 
 ### Authorization
 

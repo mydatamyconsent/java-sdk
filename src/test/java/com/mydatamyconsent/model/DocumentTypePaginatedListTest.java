@@ -18,7 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DocumentTypeDetailsDto;
+import com.mydatamyconsent.model.DocumentType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -31,17 +31,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for DocumentTypeDetailsDtoPaginatedList
+ * Model tests for DocumentTypePaginatedList
  */
-public class DocumentTypeDetailsDtoPaginatedListTest {
-    private final DocumentTypeDetailsDtoPaginatedList model = new DocumentTypeDetailsDtoPaginatedList();
+public class DocumentTypePaginatedListTest {
+    private final DocumentTypePaginatedList model = new DocumentTypePaginatedList();
 
     /**
-     * Model tests for DocumentTypeDetailsDtoPaginatedList
+     * Model tests for DocumentTypePaginatedList
      */
     @Test
-    public void testDocumentTypeDetailsDtoPaginatedList() {
-        // TODO: test DocumentTypeDetailsDtoPaginatedList
+    public void testDocumentTypePaginatedList() {
+        // TODO: test DocumentTypePaginatedList
     }
 
     /**

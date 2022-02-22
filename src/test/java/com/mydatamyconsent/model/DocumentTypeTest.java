@@ -24,6 +24,8 @@ import com.mydatamyconsent.model.SupportedEntityType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
@@ -33,17 +35,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for DocumentTypeDetailsDto
+ * Model tests for DocumentType
  */
-public class DocumentTypeDetailsDtoTest {
-    private final DocumentTypeDetailsDto model = new DocumentTypeDetailsDto();
+public class DocumentTypeTest {
+    private final DocumentType model = new DocumentType();
 
     /**
-     * Model tests for DocumentTypeDetailsDto
+     * Model tests for DocumentType
      */
     @Test
-    public void testDocumentTypeDetailsDto() {
-        // TODO: test DocumentTypeDetailsDto
+    public void testDocumentType() {
+        // TODO: test DocumentType
     }
 
     /**
@@ -52,14 +54,6 @@ public class DocumentTypeDetailsDtoTest {
     @Test
     public void idTest() {
         // TODO: test id
-    }
-
-    /**
-     * Test the property 'organizationId'
-     */
-    @Test
-    public void organizationIdTest() {
-        // TODO: test organizationId
     }
 
     /**
@@ -76,14 +70,6 @@ public class DocumentTypeDetailsDtoTest {
     @Test
     public void subCategoryTypeTest() {
         // TODO: test subCategoryType
-    }
-
-    /**
-     * Test the property 'documentTypeCategoryId'
-     */
-    @Test
-    public void documentTypeCategoryIdTest() {
-        // TODO: test documentTypeCategoryId
     }
 
     /**
@@ -119,43 +105,27 @@ public class DocumentTypeDetailsDtoTest {
     }
 
     /**
-     * Test the property 'countryIso2'
+     * Test the property 'searchServiceName'
      */
     @Test
-    public void countryIso2Test() {
-        // TODO: test countryIso2
+    public void searchServiceNameTest() {
+        // TODO: test searchServiceName
     }
 
     /**
-     * Test the property 'countryId'
+     * Test the property 'repositoryServiceName'
      */
     @Test
-    public void countryIdTest() {
-        // TODO: test countryId
+    public void repositoryServiceNameTest() {
+        // TODO: test repositoryServiceName
     }
 
     /**
-     * Test the property 'searchServiceId'
+     * Test the property 'supportedEntityTypes'
      */
     @Test
-    public void searchServiceIdTest() {
-        // TODO: test searchServiceId
-    }
-
-    /**
-     * Test the property 'repositoryServiceId'
-     */
-    @Test
-    public void repositoryServiceIdTest() {
-        // TODO: test repositoryServiceId
-    }
-
-    /**
-     * Test the property 'supportedEntityType'
-     */
-    @Test
-    public void supportedEntityTypeTest() {
-        // TODO: test supportedEntityType
+    public void supportedEntityTypesTest() {
+        // TODO: test supportedEntityTypes
     }
 
     /**
@@ -175,11 +145,27 @@ public class DocumentTypeDetailsDtoTest {
     }
 
     /**
+     * Test the property 'payableAmountCurrency'
+     */
+    @Test
+    public void payableAmountCurrencyTest() {
+        // TODO: test payableAmountCurrency
+    }
+
+    /**
      * Test the property 'approvedAtUtc'
      */
     @Test
     public void approvedAtUtcTest() {
         // TODO: test approvedAtUtc
+    }
+
+    /**
+     * Test the property 'approved'
+     */
+    @Test
+    public void approvedTest() {
+        // TODO: test approved
     }
 
 }

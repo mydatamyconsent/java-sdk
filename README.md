@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-02-21T10:35:00.633063535Z[Etc/UTC]
+  - Build date: 2022-02-22T10:34:54.774900864Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -182,8 +182,8 @@ Class | Method | HTTP request | Description
  - [DocumentCategoryType](docs/DocumentCategoryType.md)
  - [DocumentIssueRequest](docs/DocumentIssueRequest.md)
  - [DocumentSubCategoryType](docs/DocumentSubCategoryType.md)
- - [DocumentTypeDetailsDto](docs/DocumentTypeDetailsDto.md)
- - [DocumentTypeDetailsDtoPaginatedList](docs/DocumentTypeDetailsDtoPaginatedList.md)
+ - [DocumentType](docs/DocumentType.md)
+ - [DocumentTypePaginatedList](docs/DocumentTypePaginatedList.md)
  - [DocumentsRequired](docs/DocumentsRequired.md)
  - [FetchTypes](docs/FetchTypes.md)
  - [FileType](docs/FileType.md)

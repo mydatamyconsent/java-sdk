@@ -1,6 +1,6 @@
 
 
-# DocumentTypeDetailsDtoPaginatedList
+# DocumentTypePaginatedList
 
 
 ## Properties
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **pageSize** | **Integer** |  |  [optional]
 **totalPages** | **Integer** |  |  [optional] [readonly]
 **totalItems** | **Long** |  |  [optional]
-**items** | [**List&lt;DocumentTypeDetailsDto&gt;**](DocumentTypeDetailsDto.md) |  |  [optional]
+**items** | [**List&lt;DocumentType&gt;**](DocumentType.md) |  |  [optional]
 
 
 

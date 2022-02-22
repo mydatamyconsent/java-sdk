@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
 import com.mydatamyconsent.model.DocumentIssueRequest;
-import com.mydatamyconsent.model.DocumentTypeDetailsDtoPaginatedList;
+import com.mydatamyconsent.model.DocumentTypePaginatedList;
 import com.mydatamyconsent.model.IssuedDocument;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
@@ -476,7 +476,7 @@ public class DocumentsApi {
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return DocumentTypeDetailsDtoPaginatedList
+     * @return DocumentTypePaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -487,8 +487,8 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public DocumentTypeDetailsDtoPaginatedList getRegisteredDocumentTypes(Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<DocumentTypeDetailsDtoPaginatedList> localVarResp = getRegisteredDocumentTypesWithHttpInfo(pageNo, pageSize);
+    public DocumentTypePaginatedList getRegisteredDocumentTypes(Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<DocumentTypePaginatedList> localVarResp = getRegisteredDocumentTypesWithHttpInfo(pageNo, pageSize);
         return localVarResp.getData();
     }
 
@@ -497,7 +497,7 @@ public class DocumentsApi {
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;DocumentTypeDetailsDtoPaginatedList&gt;
+     * @return ApiResponse&lt;DocumentTypePaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -508,9 +508,9 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DocumentTypeDetailsDtoPaginatedList> getRegisteredDocumentTypesWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<DocumentTypePaginatedList> getRegisteredDocumentTypesWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<DocumentTypeDetailsDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<DocumentTypePaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -531,10 +531,10 @@ public class DocumentsApi {
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getRegisteredDocumentTypesAsync(Integer pageNo, Integer pageSize, final ApiCallback<DocumentTypeDetailsDtoPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getRegisteredDocumentTypesAsync(Integer pageNo, Integer pageSize, final ApiCallback<DocumentTypePaginatedList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getRegisteredDocumentTypesValidateBeforeCall(pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<DocumentTypeDetailsDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<DocumentTypePaginatedList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
