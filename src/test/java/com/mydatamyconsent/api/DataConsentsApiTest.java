@@ -111,21 +111,6 @@ public class DataConsentsApiTest {
     }
     
     /**
-     * Get all organizational consented financial accounts.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getAllOrganizationConsentedAccountsTest() throws ApiException {
-        UUID consentId = null;
-                DataConsentFinancialsDto response = api.getAllOrganizationConsentedAccounts(consentId);
-        // TODO: test validations
-    }
-    
-    /**
      * Get the organization documents based on ConsentId.
      *
      * 
@@ -152,6 +137,21 @@ public class DataConsentsApiTest {
     public void getConsentDetailsByIdTest() throws ApiException {
         UUID consentId = null;
                 DataConsentDetailsDto response = api.getConsentDetailsById(consentId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all organizational consented financial accounts.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getConsentFinancialAccountsTest() throws ApiException {
+        UUID consentId = null;
+                DataConsentFinancialsDto response = api.getConsentFinancialAccounts(consentId);
         // TODO: test validations
     }
     
@@ -225,25 +225,6 @@ public class DataConsentsApiTest {
     }
     
     /**
-     * Get the list of Consents Sent to Individuals.
-     *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getConsentsTest() throws ApiException {
-        DataConsentStatus status = null;
-        OffsetDateTime from = null;
-        OffsetDateTime to = null;
-        Integer pageNo = null;
-        Integer pageSize = null;
-                UserDataConsentInfoDtoPaginatedList response = api.getConsents(status, from, to, pageNo, pageSize);
-        // TODO: test validations
-    }
-    
-    /**
      * Get the list of data consents sent for organizations.
      *
      * 
@@ -259,6 +240,25 @@ public class DataConsentsApiTest {
         Integer pageNo = null;
         Integer pageSize = null;
                 OrganizationDataConsentInfoDtoPaginatedList response = api.getConsentsForOrganizations(status, from, to, pageNo, pageSize);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the list of Consents Sent to Individuals.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getConsentsSentToIndividualsTest() throws ApiException {
+        DataConsentStatus status = null;
+        OffsetDateTime from = null;
+        OffsetDateTime to = null;
+        Integer pageNo = null;
+        Integer pageSize = null;
+                UserDataConsentInfoDtoPaginatedList response = api.getConsentsSentToIndividuals(status, from, to, pageNo, pageSize);
         // TODO: test validations
     }
     

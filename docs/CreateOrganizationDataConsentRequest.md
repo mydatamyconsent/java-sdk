@@ -8,7 +8,7 @@ Organization Data Consent Request.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**consentTemplateId** | **UUID** |  |  [optional]
+**consentTemplateId** | **UUID** | Consent template id |  [optional]
 **receiver** | [**Receiver**](Receiver.md) |  | 
 
 

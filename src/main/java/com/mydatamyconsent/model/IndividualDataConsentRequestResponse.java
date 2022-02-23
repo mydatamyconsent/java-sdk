@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Individual Data Consent Request Response.
  */
 @ApiModel(description = "Individual Data Consent Request Response.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
 public class IndividualDataConsentRequestResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,11 +68,11 @@ public class IndividualDataConsentRequestResponse {
   }
 
    /**
-   * Get id
+   * Consent request id
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Consent request id")
 
   public UUID getId() {
     return id;
@@ -91,11 +91,11 @@ public class IndividualDataConsentRequestResponse {
   }
 
    /**
-   * Get templateId
+   * Consent request template id
    * @return templateId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Consent request template id")
 
   public UUID getTemplateId() {
     return templateId;
@@ -114,11 +114,11 @@ public class IndividualDataConsentRequestResponse {
   }
 
    /**
-   * Get requestedAtUtc
+   * Requested date time in utc zone
    * @return requestedAtUtc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Requested date time in utc zone")
 
   public OffsetDateTime getRequestedAtUtc() {
     return requestedAtUtc;
@@ -137,11 +137,11 @@ public class IndividualDataConsentRequestResponse {
   }
 
    /**
-   * Get requestExpiresAtUtc
+   * Request expires date time in utc zone
    * @return requestExpiresAtUtc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Request expires date time in utc zone")
 
   public OffsetDateTime getRequestExpiresAtUtc() {
     return requestExpiresAtUtc;
@@ -183,11 +183,11 @@ public class IndividualDataConsentRequestResponse {
   }
 
    /**
-   * Get transactionId
+   * Requested transaction id
    * @return transactionId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Requested transaction id")
 
   public String getTransactionId() {
     return transactionId;

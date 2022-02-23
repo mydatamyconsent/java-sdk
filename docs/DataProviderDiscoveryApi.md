@@ -1,6 +1,6 @@
 # DataProviderDiscoveryApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -26,7 +26,7 @@ import com.mydatamyconsent.api.DataProviderDiscoveryApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProviderDiscoveryApi apiInstance = new DataProviderDiscoveryApi(defaultClient);
     String providerId = "providerId_example"; // String | Provider id.
@@ -90,7 +90,7 @@ import com.mydatamyconsent.api.DataProviderDiscoveryApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProviderDiscoveryApi apiInstance = new DataProviderDiscoveryApi(defaultClient);
     String accountType = "accountType_example"; // String | Account type.

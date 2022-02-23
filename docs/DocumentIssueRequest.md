@@ -2,19 +2,18 @@
 
 # DocumentIssueRequest
 
+Document Issue Request.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**documentTypeId** | **String** |  | 
+**documentTypeId** | **UUID** |  | 
 **documentIdentifier** | **String** |  | 
-**name** | **String** |  | 
 **description** | **String** |  | 
-**receiver** | [**Receiver**](Receiver.md) |  | 
+**receiver** | [**DocumentReceiver**](DocumentReceiver.md) |  | 
 **expiresAtUtc** | **OffsetDateTime** |  |  [optional]
-**base64PdfDocument** | **String** |  | 
-**metadata** | **Object** |  |  [optional]
+**metadata** | **Map&lt;String, String&gt;** |  |  [optional]
 
 
 

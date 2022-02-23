@@ -1,6 +1,6 @@
 # DigiLockerCompatIssuerApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -25,7 +25,7 @@ import com.mydatamyconsent.api.DigiLockerCompatIssuerApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DigiLockerCompatIssuerApi apiInstance = new DigiLockerCompatIssuerApi(defaultClient);
     PushUriRequest pushUriRequest = new PushUriRequest(); // PushUriRequest | Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest.

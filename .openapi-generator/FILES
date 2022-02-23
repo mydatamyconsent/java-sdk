@@ -29,6 +29,8 @@ docs/DigitalSignature.md
 docs/Document.md
 docs/DocumentCategoryType.md
 docs/DocumentIssueRequest.md
+docs/DocumentIssueRequestDetails.md
+docs/DocumentReceiver.md
 docs/DocumentSubCategoryType.md
 docs/DocumentType.md
 docs/DocumentTypePaginatedList.md
@@ -63,7 +65,11 @@ docs/PushUriResponse.md
 docs/Receiver.md
 docs/ReceiverType.md
 docs/SharedWith.md
+docs/StringStringKeyValuePair.md
 docs/SupportedEntityType.md
+docs/SupportedIdentifier.md
+docs/SupportedIdentifiersApi.md
+docs/SupportedIdentifiersByCountry.md
 docs/UpdateDataProcessingAgreementRequestModel.md
 docs/UriDetails.md
 docs/UserAccountFinancialTransactionsDto.md
@@ -94,6 +100,7 @@ src/main/java/com/mydatamyconsent/api/DataProcessingAgreementsApi.java
 src/main/java/com/mydatamyconsent/api/DataProviderDiscoveryApi.java
 src/main/java/com/mydatamyconsent/api/DigiLockerCompatIssuerApi.java
 src/main/java/com/mydatamyconsent/api/DocumentsApi.java
+src/main/java/com/mydatamyconsent/api/SupportedIdentifiersApi.java
 src/main/java/com/mydatamyconsent/auth/ApiKeyAuth.java
 src/main/java/com/mydatamyconsent/auth/Authentication.java
 src/main/java/com/mydatamyconsent/auth/HttpBasicAuth.java
@@ -127,6 +134,8 @@ src/main/java/com/mydatamyconsent/model/DigitalSignature.java
 src/main/java/com/mydatamyconsent/model/Document.java
 src/main/java/com/mydatamyconsent/model/DocumentCategoryType.java
 src/main/java/com/mydatamyconsent/model/DocumentIssueRequest.java
+src/main/java/com/mydatamyconsent/model/DocumentIssueRequestDetails.java
+src/main/java/com/mydatamyconsent/model/DocumentReceiver.java
 src/main/java/com/mydatamyconsent/model/DocumentSubCategoryType.java
 src/main/java/com/mydatamyconsent/model/DocumentType.java
 src/main/java/com/mydatamyconsent/model/DocumentTypePaginatedList.java
@@ -160,7 +169,10 @@ src/main/java/com/mydatamyconsent/model/PushUriResponse.java
 src/main/java/com/mydatamyconsent/model/Receiver.java
 src/main/java/com/mydatamyconsent/model/ReceiverType.java
 src/main/java/com/mydatamyconsent/model/SharedWith.java
+src/main/java/com/mydatamyconsent/model/StringStringKeyValuePair.java
 src/main/java/com/mydatamyconsent/model/SupportedEntityType.java
+src/main/java/com/mydatamyconsent/model/SupportedIdentifier.java
+src/main/java/com/mydatamyconsent/model/SupportedIdentifiersByCountry.java
 src/main/java/com/mydatamyconsent/model/UpdateDataProcessingAgreementRequestModel.java
 src/main/java/com/mydatamyconsent/model/UriDetails.java
 src/main/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDto.java
@@ -175,6 +187,7 @@ src/test/java/com/mydatamyconsent/api/DataProcessingAgreementsApiTest.java
 src/test/java/com/mydatamyconsent/api/DataProviderDiscoveryApiTest.java
 src/test/java/com/mydatamyconsent/api/DigiLockerCompatIssuerApiTest.java
 src/test/java/com/mydatamyconsent/api/DocumentsApiTest.java
+src/test/java/com/mydatamyconsent/api/SupportedIdentifiersApiTest.java
 src/test/java/com/mydatamyconsent/model/ActivityTest.java
 src/test/java/com/mydatamyconsent/model/ApprovedConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/BankAccountTypeTest.java
@@ -198,7 +211,9 @@ src/test/java/com/mydatamyconsent/model/DataProviderPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/DataProviderTest.java
 src/test/java/com/mydatamyconsent/model/DigitalSignatureTest.java
 src/test/java/com/mydatamyconsent/model/DocumentCategoryTypeTest.java
+src/test/java/com/mydatamyconsent/model/DocumentIssueRequestDetailsTest.java
 src/test/java/com/mydatamyconsent/model/DocumentIssueRequestTest.java
+src/test/java/com/mydatamyconsent/model/DocumentReceiverTest.java
 src/test/java/com/mydatamyconsent/model/DocumentSubCategoryTypeTest.java
 src/test/java/com/mydatamyconsent/model/DocumentTest.java
 src/test/java/com/mydatamyconsent/model/DocumentTypePaginatedListTest.java
@@ -233,7 +248,10 @@ src/test/java/com/mydatamyconsent/model/PushUriResponseTest.java
 src/test/java/com/mydatamyconsent/model/ReceiverTest.java
 src/test/java/com/mydatamyconsent/model/ReceiverTypeTest.java
 src/test/java/com/mydatamyconsent/model/SharedWithTest.java
+src/test/java/com/mydatamyconsent/model/StringStringKeyValuePairTest.java
 src/test/java/com/mydatamyconsent/model/SupportedEntityTypeTest.java
+src/test/java/com/mydatamyconsent/model/SupportedIdentifierTest.java
+src/test/java/com/mydatamyconsent/model/SupportedIdentifiersByCountryTest.java
 src/test/java/com/mydatamyconsent/model/UpdateDataProcessingAgreementRequestModelTest.java
 src/test/java/com/mydatamyconsent/model/UriDetailsTest.java
 src/test/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDtoPaginatedListTest.java

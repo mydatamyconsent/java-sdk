@@ -18,10 +18,14 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Receiver;
+import com.mydatamyconsent.model.DocumentReceiver;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
@@ -60,14 +64,6 @@ public class DocumentIssueRequestTest {
     }
 
     /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
-    }
-
-    /**
      * Test the property 'description'
      */
     @Test
@@ -89,14 +85,6 @@ public class DocumentIssueRequestTest {
     @Test
     public void expiresAtUtcTest() {
         // TODO: test expiresAtUtc
-    }
-
-    /**
-     * Test the property 'base64PdfDocument'
-     */
-    @Test
-    public void base64PdfDocumentTest() {
-        // TODO: test base64PdfDocument
     }
 
     /**

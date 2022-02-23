@@ -15,7 +15,9 @@ package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DocumentIssueRequest;
+import com.mydatamyconsent.model.DocumentIssueRequestDetails;
 import com.mydatamyconsent.model.DocumentTypePaginatedList;
+import java.io.File;
 import com.mydatamyconsent.model.IssuedDocument;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
@@ -54,7 +56,7 @@ public class DocumentsApiTest {
     }
     
     /**
-     * Get issued documents.
+     * Get paginated list of issued documents of given document type.
      *
      * 
      *
@@ -66,9 +68,9 @@ public class DocumentsApiTest {
         UUID documentTypeId = null;
         OffsetDateTime fromDateTime = null;
         OffsetDateTime toDateTime = null;
-        Integer pageSize = null;
         Integer pageNo = null;
-                IssuedDocumentPaginatedList response = api.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+        Integer pageSize = null;
+                IssuedDocumentPaginatedList response = api.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -89,7 +91,7 @@ public class DocumentsApiTest {
     }
     
     /**
-     * Issue a new document.
+     * Issue a new document to an individual user.
      *
      * 
      *
@@ -97,9 +99,56 @@ public class DocumentsApiTest {
      *          if the Api call fails
      */
     @Test
-    public void issueDocumentTest() throws ApiException {
+    public void issueDocumentToIndividualTest() throws ApiException {
         DocumentIssueRequest documentIssueRequest = null;
-                IssuedDocument response = api.issueDocument(documentIssueRequest);
+                DocumentIssueRequestDetails response = api.issueDocumentToIndividual(documentIssueRequest);
+        // TODO: test validations
+    }
+    
+    /**
+     * Issue a new document to an organization.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void issueDocumentToOrganizationTest() throws ApiException {
+        DocumentIssueRequest documentIssueRequest = null;
+                DocumentIssueRequestDetails response = api.issueDocumentToOrganization(documentIssueRequest);
+        // TODO: test validations
+    }
+    
+    /**
+     * Upload a document for issuance request of individual.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadDocumentForIndividualTest() throws ApiException {
+        UUID issueRequestId = null;
+        File formFile = null;
+                String response = api.uploadDocumentForIndividual(issueRequestId, formFile);
+        // TODO: test validations
+    }
+    
+    /**
+     * Upload a document for issuance request of organization.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void uploadDocumentForOrganizationTest() throws ApiException {
+        UUID issueRequestId = null;
+        File formFile = null;
+                String response = api.uploadDocumentForOrganization(issueRequestId, formFile);
         // TODO: test validations
     }
     

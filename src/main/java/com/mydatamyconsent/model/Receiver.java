@@ -31,9 +31,10 @@ import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * Receiver
+ * Consent request receiver details
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+@ApiModel(description = "Consent request receiver details")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
 public class Receiver {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -88,11 +89,11 @@ public class Receiver {
   }
 
    /**
-   * Get identifiers
+   * Consent request receiver identifiers
    * @return identifiers
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Consent request receiver identifiers")
 
   public List<IdentifierStringKeyValuePair> getIdentifiers() {
     return identifiers;

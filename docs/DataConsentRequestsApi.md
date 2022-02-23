@@ -1,6 +1,6 @@
 # DataConsentRequestsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,7 +32,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     UUID requestId = UUID.randomUUID(); // UUID | Individual consent request id.
@@ -95,7 +95,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     UUID requestId = UUID.randomUUID(); // UUID | Organization consent request id.
@@ -158,7 +158,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     CreateIndividualDataConsentRequest createIndividualDataConsentRequest = new CreateIndividualDataConsentRequest(); // CreateIndividualDataConsentRequest | M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest).
@@ -222,7 +222,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest = new CreateOrganizationDataConsentRequest(); // CreateOrganizationDataConsentRequest | M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest).
@@ -286,7 +286,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
@@ -356,7 +356,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
@@ -426,7 +426,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     UUID requestId = UUID.randomUUID(); // UUID | Individual consent request id.
@@ -488,7 +488,7 @@ import com.mydatamyconsent.api.DataConsentRequestsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
     UUID requestId = UUID.randomUUID(); // UUID | Organization consent request id.

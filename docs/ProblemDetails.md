@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **title** | **String** |  |  [optional]
 **status** | **Integer** |  |  [optional]
 **detail** | **String** |  |  [optional]
-**instance** | **String** |  |  [optional]
 
 
 

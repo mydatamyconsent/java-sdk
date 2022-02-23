@@ -8,12 +8,12 @@ Individual Data Consent Request Response.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **UUID** |  |  [optional]
-**templateId** | **UUID** |  |  [optional]
-**requestedAtUtc** | **OffsetDateTime** |  |  [optional]
-**requestExpiresAtUtc** | **OffsetDateTime** |  |  [optional]
+**id** | **UUID** | Consent request id |  [optional]
+**templateId** | **UUID** | Consent request template id |  [optional]
+**requestedAtUtc** | **OffsetDateTime** | Requested date time in utc zone |  [optional]
+**requestExpiresAtUtc** | **OffsetDateTime** | Request expires date time in utc zone |  [optional]
 **status** | **DataConsentStatus** |  |  [optional]
-**transactionId** | **String** |  |  [optional]
+**transactionId** | **String** | Requested transaction id |  [optional]
 
 
 

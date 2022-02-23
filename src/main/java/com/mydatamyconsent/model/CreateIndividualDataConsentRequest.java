@@ -30,7 +30,7 @@ import java.util.UUID;
  * Individual Data Consent Request.
  */
 @ApiModel(description = "Individual Data Consent Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
 public class CreateIndividualDataConsentRequest {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)
@@ -50,11 +50,11 @@ public class CreateIndividualDataConsentRequest {
   }
 
    /**
-   * Get consentTemplateId
+   * Consent template id
    * @return consentTemplateId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Consent template id")
 
   public UUID getConsentTemplateId() {
     return consentTemplateId;

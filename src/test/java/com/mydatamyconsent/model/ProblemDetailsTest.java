@@ -73,12 +73,4 @@ public class ProblemDetailsTest {
         // TODO: test detail
     }
 
-    /**
-     * Test the property 'instance'
-     */
-    @Test
-    public void instanceTest() {
-        // TODO: test instance
-    }
-
 }

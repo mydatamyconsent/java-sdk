@@ -24,17 +24,17 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * IssuedDocument
+ * Issued Document Identifier.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+@ApiModel(description = "Issued Document Identifier.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
 public class IssuedDocument {
-  public static final String SERIALIZED_NAME_DOCUMENT_ID = "documentId";
-  @SerializedName(SERIALIZED_NAME_DOCUMENT_ID)
-  private UUID documentId;
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
 
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
@@ -55,26 +55,26 @@ public class IssuedDocument {
   public IssuedDocument() { 
   }
 
-  public IssuedDocument documentId(UUID documentId) {
+  public IssuedDocument id(UUID id) {
     
-    this.documentId = documentId;
+    this.id = id;
     return this;
   }
 
    /**
-   * Get documentId
-   * @return documentId
+   * Document Identifier.
+   * @return id
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Document Identifier.")
 
-  public UUID getDocumentId() {
-    return documentId;
+  public UUID getId() {
+    return id;
   }
 
 
-  public void setDocumentId(UUID documentId) {
-    this.documentId = documentId;
+  public void setId(UUID id) {
+    this.id = id;
   }
 
 
@@ -85,11 +85,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Get identifier
+   * Document Identifier. eg: GJ05FG67866586.
    * @return identifier
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Document Identifier. eg: GJ05FG67866586.")
 
   public String getIdentifier() {
     return identifier;
@@ -108,11 +108,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Get documentType
+   * Document type name. eg: Driving License.
    * @return documentType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Document type name. eg: Driving License.")
 
   public String getDocumentType() {
     return documentType;
@@ -134,8 +134,8 @@ public class IssuedDocument {
    * Get issuedTo
    * @return issuedTo
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getIssuedTo() {
     return issuedTo;
@@ -157,8 +157,8 @@ public class IssuedDocument {
    * Get issuedAtUtc
    * @return issuedAtUtc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public OffsetDateTime getIssuedAtUtc() {
     return issuedAtUtc;
@@ -179,34 +179,23 @@ public class IssuedDocument {
       return false;
     }
     IssuedDocument issuedDocument = (IssuedDocument) o;
-    return Objects.equals(this.documentId, issuedDocument.documentId) &&
+    return Objects.equals(this.id, issuedDocument.id) &&
         Objects.equals(this.identifier, issuedDocument.identifier) &&
         Objects.equals(this.documentType, issuedDocument.documentType) &&
         Objects.equals(this.issuedTo, issuedDocument.issuedTo) &&
         Objects.equals(this.issuedAtUtc, issuedDocument.issuedAtUtc);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, identifier, documentType, issuedTo, issuedAtUtc);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(id, identifier, documentType, issuedTo, issuedAtUtc);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IssuedDocument {\n");
-    sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("    documentType: ").append(toIndentedString(documentType)).append("\n");
     sb.append("    issuedTo: ").append(toIndentedString(issuedTo)).append("\n");

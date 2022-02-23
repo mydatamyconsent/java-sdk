@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ProblemDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-22T10:34:54.774900864Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
 public class ProblemDetails {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -45,10 +45,6 @@ public class ProblemDetails {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
   private String detail;
-
-  public static final String SERIALIZED_NAME_INSTANCE = "instance";
-  @SerializedName(SERIALIZED_NAME_INSTANCE)
-  private String instance;
 
   public ProblemDetails() { 
   }
@@ -145,29 +141,6 @@ public class ProblemDetails {
   }
 
 
-  public ProblemDetails instance(String instance) {
-    
-    this.instance = instance;
-    return this;
-  }
-
-   /**
-   * Get instance
-   * @return instance
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getInstance() {
-    return instance;
-  }
-
-
-  public void setInstance(String instance) {
-    this.instance = instance;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -180,8 +153,7 @@ public class ProblemDetails {
     return Objects.equals(this.type, problemDetails.type) &&
         Objects.equals(this.title, problemDetails.title) &&
         Objects.equals(this.status, problemDetails.status) &&
-        Objects.equals(this.detail, problemDetails.detail) &&
-        Objects.equals(this.instance, problemDetails.instance);
+        Objects.equals(this.detail, problemDetails.detail);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -190,7 +162,7 @@ public class ProblemDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, title, status, detail, instance);
+    return Objects.hash(type, title, status, detail);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -208,7 +180,6 @@ public class ProblemDetails {
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
-    sb.append("    instance: ").append(toIndentedString(instance)).append("\n");
     sb.append("}");
     return sb.toString();
   }

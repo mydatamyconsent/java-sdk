@@ -1,6 +1,6 @@
 # DataProcessingAgreementsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,7 +30,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = new CreateDataProcessingAgreementRequestModel(); // CreateDataProcessingAgreementRequestModel | Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel.
@@ -92,7 +92,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.
@@ -155,7 +155,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.
@@ -219,7 +219,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     Integer pageNo = 1; // Integer | Page number.
@@ -283,7 +283,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.
@@ -346,7 +346,7 @@ import com.mydatamyconsent.api.DataProcessingAgreementsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.

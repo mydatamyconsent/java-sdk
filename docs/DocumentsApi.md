@@ -1,13 +1,16 @@
 # DocumentsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getIssuedDocumentById**](DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document.
-[**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued | Get issued documents.
+[**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued/{documentTypeId} | Get paginated list of issued documents of given document type.
 [**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get registered document types.
-[**issueDocument**](DocumentsApi.md#issueDocument) | **POST** /v1/documents/issue | Issue a new document.
+[**issueDocumentToIndividual**](DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user.
+[**issueDocumentToOrganization**](DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization.
+[**uploadDocumentForIndividual**](DocumentsApi.md#uploadDocumentForIndividual) | **POST** /v1/documents/issue/individual/upload/{issueRequestId} | Upload a document for issuance request of individual.
+[**uploadDocumentForOrganization**](DocumentsApi.md#uploadDocumentForOrganization) | **POST** /v1/documents/issue/organization/upload/{issueRequestId} | Upload a document for issuance request of organization.
 
 
 <a name="getIssuedDocumentById"></a>
@@ -28,7 +31,7 @@ import com.mydatamyconsent.api.DocumentsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
     UUID documentId = UUID.randomUUID(); // UUID | Document id.
@@ -68,17 +71,17 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**500** | Server Error |  -  |
 **200** | Success |  -  |
+**500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **404** | Not Found |  -  |
 **0** | Error |  -  |
 
 <a name="getIssuedDocuments"></a>
 # **getIssuedDocuments**
-> IssuedDocumentPaginatedList getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo)
+> IssuedDocumentPaginatedList getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageNo, pageSize)
 
-Get issued documents.
+Get paginated list of issued documents of given document type.
 
 ### Example
 ```java
@@ -92,16 +95,16 @@ import com.mydatamyconsent.api.DocumentsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    UUID documentTypeId = UUID.randomUUID(); // UUID | 
-    OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | 
-    OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | 
-    Integer pageSize = 25; // Integer | 
-    Integer pageNo = 1; // Integer | 
+    UUID documentTypeId = UUID.randomUUID(); // UUID | Document type id.
+    OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | From DateTime.
+    OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | To DateTime.
+    Integer pageNo = 1; // Integer | Page number.
+    Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      IssuedDocumentPaginatedList result = apiInstance.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageSize, pageNo);
+      IssuedDocumentPaginatedList result = apiInstance.getIssuedDocuments(documentTypeId, fromDateTime, toDateTime, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#getIssuedDocuments");
@@ -118,11 +121,11 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentTypeId** | **UUID**|  | [optional]
- **fromDateTime** | **OffsetDateTime**|  | [optional]
- **toDateTime** | **OffsetDateTime**|  | [optional]
- **pageSize** | **Integer**|  | [optional] [default to 25]
- **pageNo** | **Integer**|  | [optional] [default to 1]
+ **documentTypeId** | **UUID**| Document type id. |
+ **fromDateTime** | **OffsetDateTime**| From DateTime. | [optional]
+ **toDateTime** | **OffsetDateTime**| To DateTime. | [optional]
+ **pageNo** | **Integer**| Page number. | [optional] [default to 1]
+ **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
 ### Return type
 
@@ -140,8 +143,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**500** | Server Error |  -  |
 **200** | Success |  -  |
+**500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **0** | Error |  -  |
 
@@ -163,7 +166,7 @@ import com.mydatamyconsent.api.DocumentsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
     Integer pageNo = 1; // Integer | Page number.
@@ -205,16 +208,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**500** | Server Error |  -  |
 **200** | Success |  -  |
+**500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **0** | Error |  -  |
 
-<a name="issueDocument"></a>
-# **issueDocument**
-> IssuedDocument issueDocument(documentIssueRequest)
+<a name="issueDocumentToIndividual"></a>
+# **issueDocumentToIndividual**
+> DocumentIssueRequestDetails issueDocumentToIndividual(documentIssueRequest)
 
-Issue a new document.
+Issue a new document to an individual user.
 
 ### Example
 ```java
@@ -228,15 +231,15 @@ import com.mydatamyconsent.api.DocumentsApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://localhost");
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest.
+    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest.
     try {
-      IssuedDocument result = apiInstance.issueDocument(documentIssueRequest);
+      DocumentIssueRequestDetails result = apiInstance.issueDocumentToIndividual(documentIssueRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DocumentsApi#issueDocument");
+      System.err.println("Exception when calling DocumentsApi#issueDocumentToIndividual");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -250,11 +253,11 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.Models.Documents.DocumentIssueRequest. |
+ **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. |
 
 ### Return type
 
-[**IssuedDocument**](IssuedDocument.md)
+[**DocumentIssueRequestDetails**](DocumentIssueRequestDetails.md)
 
 ### Authorization
 
@@ -268,8 +271,201 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**500** | Server Error |  -  |
 **200** | Success |  -  |
 **400** | Bad Request |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="issueDocumentToOrganization"></a>
+# **issueDocumentToOrganization**
+> DocumentIssueRequestDetails issueDocumentToOrganization(documentIssueRequest)
+
+Issue a new document to an organization.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DocumentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
+
+    DocumentsApi apiInstance = new DocumentsApi(defaultClient);
+    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest.
+    try {
+      DocumentIssueRequestDetails result = apiInstance.issueDocumentToOrganization(documentIssueRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DocumentsApi#issueDocumentToOrganization");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. |
+
+### Return type
+
+[**DocumentIssueRequestDetails**](DocumentIssueRequestDetails.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | Bad Request |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="uploadDocumentForIndividual"></a>
+# **uploadDocumentForIndividual**
+> String uploadDocumentForIndividual(issueRequestId, formFile)
+
+Upload a document for issuance request of individual.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DocumentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
+
+    DocumentsApi apiInstance = new DocumentsApi(defaultClient);
+    UUID issueRequestId = UUID.randomUUID(); // UUID | Issue Request Id System.Guid.
+    File formFile = new File("/path/to/file"); // File | 
+    try {
+      String result = apiInstance.uploadDocumentForIndividual(issueRequestId, formFile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DocumentsApi#uploadDocumentForIndividual");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issueRequestId** | **UUID**| Issue Request Id System.Guid. |
+ **formFile** | **File**|  | [optional]
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | Bad Request |  -  |
+**500** | Server Error |  -  |
+**0** | Error |  -  |
+
+<a name="uploadDocumentForOrganization"></a>
+# **uploadDocumentForOrganization**
+> String uploadDocumentForOrganization(issueRequestId, formFile)
+
+Upload a document for issuance request of organization.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DocumentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
+
+    DocumentsApi apiInstance = new DocumentsApi(defaultClient);
+    UUID issueRequestId = UUID.randomUUID(); // UUID | Issue Request Id System.Guid.
+    File formFile = new File("/path/to/file"); // File | 
+    try {
+      String result = apiInstance.uploadDocumentForOrganization(issueRequestId, formFile);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DocumentsApi#uploadDocumentForOrganization");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **issueRequestId** | **UUID**| Issue Request Id System.Guid. |
+ **formFile** | **File**|  | [optional]
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | Bad Request |  -  |
+**500** | Server Error |  -  |
 **0** | Error |  -  |
 
