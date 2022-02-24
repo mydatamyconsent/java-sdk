@@ -45,6 +45,14 @@ public class DocumentReceiverTest {
     }
 
     /**
+     * Test the property 'countryIso2Code'
+     */
+    @Test
+    public void countryIso2CodeTest() {
+        // TODO: test countryIso2Code
+    }
+
+    /**
      * Test the property 'identifiers'
      */
     @Test

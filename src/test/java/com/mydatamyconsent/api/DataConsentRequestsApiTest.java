@@ -22,7 +22,6 @@ import com.mydatamyconsent.model.IndividualDataConsentRequestResponse;
 import org.threeten.bp.OffsetDateTime;
 import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestResponse;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
 import org.junit.Test;
@@ -75,7 +74,7 @@ public class DataConsentRequestsApiTest {
     /**
      * Create a individual data consent request.
      *
-     * 
+     * Create a individual data consent request.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +89,7 @@ public class DataConsentRequestsApiTest {
     /**
      * Create a organization data consent request.
      *
-     * 
+     * Create a organization data consent request.
      *
      * @throws ApiException
      *          if the Api call fails

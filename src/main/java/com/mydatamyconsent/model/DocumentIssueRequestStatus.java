@@ -24,18 +24,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets ConsentTemplateTypes
+ * Gets or Sets DocumentIssueRequestStatus
  */
-@JsonAdapter(ConsentTemplateTypes.Adapter.class)
-public enum ConsentTemplateTypes {
+@JsonAdapter(DocumentIssueRequestStatus.Adapter.class)
+public enum DocumentIssueRequestStatus {
   
-  INDIVIDUAL("Individual"),
+  CREATED("Created"),
   
-  ORGANIZATION("Organization");
+  ISSUED("Issued"),
+  
+  ACCEPTED("Accepted"),
+  
+  REJECTED("Rejected");
 
   private String value;
 
-  ConsentTemplateTypes(String value) {
+  DocumentIssueRequestStatus(String value) {
     this.value = value;
   }
 
@@ -48,8 +52,8 @@ public enum ConsentTemplateTypes {
     return String.valueOf(value);
   }
 
-  public static ConsentTemplateTypes fromValue(String value) {
-    for (ConsentTemplateTypes b : ConsentTemplateTypes.values()) {
+  public static DocumentIssueRequestStatus fromValue(String value) {
+    for (DocumentIssueRequestStatus b : DocumentIssueRequestStatus.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -57,16 +61,16 @@ public enum ConsentTemplateTypes {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<ConsentTemplateTypes> {
+  public static class Adapter extends TypeAdapter<DocumentIssueRequestStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ConsentTemplateTypes enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final DocumentIssueRequestStatus enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ConsentTemplateTypes read(final JsonReader jsonReader) throws IOException {
+    public DocumentIssueRequestStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ConsentTemplateTypes.fromValue(value);
+      return DocumentIssueRequestStatus.fromValue(value);
     }
   }
 }

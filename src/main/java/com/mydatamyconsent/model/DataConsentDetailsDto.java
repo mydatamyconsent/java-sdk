@@ -20,17 +20,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentIdentifier;
-import com.mydatamyconsent.model.DataConsentRequestedDocument;
-import com.mydatamyconsent.model.DataConsentRequestedFinancialAccount;
-import com.mydatamyconsent.model.DataConsentRequesterDto;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.GetConsentTemplateDetailsDto;
+import com.mydatamyconsent.model.JsonSchema;
+import com.mydatamyconsent.model.Life;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
@@ -38,11 +33,35 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DataConsentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
+
+  public static final String SERIALIZED_NAME_TITLE = "title";
+  @SerializedName(SERIALIZED_NAME_TITLE)
+  private String title;
+
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
+  public static final String SERIALIZED_NAME_DATA_LIFE = "dataLife";
+  @SerializedName(SERIALIZED_NAME_DATA_LIFE)
+  private Life dataLife;
+
+  public static final String SERIALIZED_NAME_REQUESTER_NAME = "requesterName";
+  @SerializedName(SERIALIZED_NAME_REQUESTER_NAME)
+  private String requesterName;
+
+  public static final String SERIALIZED_NAME_REQUESTER_LOGO = "requesterLogo";
+  @SerializedName(SERIALIZED_NAME_REQUESTER_LOGO)
+  private String requesterLogo;
+
+  public static final String SERIALIZED_NAME_LOCATION = "location";
+  @SerializedName(SERIALIZED_NAME_LOCATION)
+  private String location;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -64,25 +83,21 @@ public class DataConsentDetailsDto {
   @SerializedName(SERIALIZED_NAME_REQUESTED_AT_UTC)
   private OffsetDateTime requestedAtUtc;
 
-  public static final String SERIALIZED_NAME_REQUESTER = "requester";
-  @SerializedName(SERIALIZED_NAME_REQUESTER)
-  private DataConsentRequesterDto requester;
-
-  public static final String SERIALIZED_NAME_CONSENT_DETAILS = "consentDetails";
-  @SerializedName(SERIALIZED_NAME_CONSENT_DETAILS)
-  private GetConsentTemplateDetailsDto consentDetails;
-
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
-  private List<DataConsentIdentifier> identifiers = null;
+  private JsonSchema identifiers;
 
-  public static final String SERIALIZED_NAME_APPROVED_DOCUMENTS = "approvedDocuments";
-  @SerializedName(SERIALIZED_NAME_APPROVED_DOCUMENTS)
-  private List<DataConsentRequestedDocument> approvedDocuments = null;
+  public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
+  @SerializedName(SERIALIZED_NAME_DOCUMENTS)
+  private String documents;
 
-  public static final String SERIALIZED_NAME_APPROVED_FINANCIALS = "approvedFinancials";
-  @SerializedName(SERIALIZED_NAME_APPROVED_FINANCIALS)
-  private List<DataConsentRequestedFinancialAccount> approvedFinancials = null;
+  public static final String SERIALIZED_NAME_FINANCIALS = "financials";
+  @SerializedName(SERIALIZED_NAME_FINANCIALS)
+  private String financials;
+
+  public static final String SERIALIZED_NAME_HEALTH_RECORDS = "healthRecords";
+  @SerializedName(SERIALIZED_NAME_HEALTH_RECORDS)
+  private String healthRecords;
 
   public DataConsentDetailsDto() { 
   }
@@ -97,8 +112,8 @@ public class DataConsentDetailsDto {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public UUID getId() {
     return id;
@@ -107,6 +122,144 @@ public class DataConsentDetailsDto {
 
   public void setId(UUID id) {
     this.id = id;
+  }
+
+
+  public DataConsentDetailsDto title(String title) {
+    
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * Get title
+   * @return title
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getTitle() {
+    return title;
+  }
+
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+
+  public DataConsentDetailsDto description(String description) {
+    
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDescription() {
+    return description;
+  }
+
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  public DataConsentDetailsDto dataLife(Life dataLife) {
+    
+    this.dataLife = dataLife;
+    return this;
+  }
+
+   /**
+   * Get dataLife
+   * @return dataLife
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Life getDataLife() {
+    return dataLife;
+  }
+
+
+  public void setDataLife(Life dataLife) {
+    this.dataLife = dataLife;
+  }
+
+
+  public DataConsentDetailsDto requesterName(String requesterName) {
+    
+    this.requesterName = requesterName;
+    return this;
+  }
+
+   /**
+   * Get requesterName
+   * @return requesterName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getRequesterName() {
+    return requesterName;
+  }
+
+
+  public void setRequesterName(String requesterName) {
+    this.requesterName = requesterName;
+  }
+
+
+  public DataConsentDetailsDto requesterLogo(String requesterLogo) {
+    
+    this.requesterLogo = requesterLogo;
+    return this;
+  }
+
+   /**
+   * Get requesterLogo
+   * @return requesterLogo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getRequesterLogo() {
+    return requesterLogo;
+  }
+
+
+  public void setRequesterLogo(String requesterLogo) {
+    this.requesterLogo = requesterLogo;
+  }
+
+
+  public DataConsentDetailsDto location(String location) {
+    
+    this.location = location;
+    return this;
+  }
+
+   /**
+   * Get location
+   * @return location
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLocation() {
+    return location;
+  }
+
+
+  public void setLocation(String location) {
+    this.location = location;
   }
 
 
@@ -225,63 +378,9 @@ public class DataConsentDetailsDto {
   }
 
 
-  public DataConsentDetailsDto requester(DataConsentRequesterDto requester) {
-    
-    this.requester = requester;
-    return this;
-  }
-
-   /**
-   * Get requester
-   * @return requester
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public DataConsentRequesterDto getRequester() {
-    return requester;
-  }
-
-
-  public void setRequester(DataConsentRequesterDto requester) {
-    this.requester = requester;
-  }
-
-
-  public DataConsentDetailsDto consentDetails(GetConsentTemplateDetailsDto consentDetails) {
-    
-    this.consentDetails = consentDetails;
-    return this;
-  }
-
-   /**
-   * Get consentDetails
-   * @return consentDetails
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public GetConsentTemplateDetailsDto getConsentDetails() {
-    return consentDetails;
-  }
-
-
-  public void setConsentDetails(GetConsentTemplateDetailsDto consentDetails) {
-    this.consentDetails = consentDetails;
-  }
-
-
-  public DataConsentDetailsDto identifiers(List<DataConsentIdentifier> identifiers) {
+  public DataConsentDetailsDto identifiers(JsonSchema identifiers) {
     
     this.identifiers = identifiers;
-    return this;
-  }
-
-  public DataConsentDetailsDto addIdentifiersItem(DataConsentIdentifier identifiersItem) {
-    if (this.identifiers == null) {
-      this.identifiers = new ArrayList<DataConsentIdentifier>();
-    }
-    this.identifiers.add(identifiersItem);
     return this;
   }
 
@@ -292,75 +391,82 @@ public class DataConsentDetailsDto {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DataConsentIdentifier> getIdentifiers() {
+  public JsonSchema getIdentifiers() {
     return identifiers;
   }
 
 
-  public void setIdentifiers(List<DataConsentIdentifier> identifiers) {
+  public void setIdentifiers(JsonSchema identifiers) {
     this.identifiers = identifiers;
   }
 
 
-  public DataConsentDetailsDto approvedDocuments(List<DataConsentRequestedDocument> approvedDocuments) {
+  public DataConsentDetailsDto documents(String documents) {
     
-    this.approvedDocuments = approvedDocuments;
-    return this;
-  }
-
-  public DataConsentDetailsDto addApprovedDocumentsItem(DataConsentRequestedDocument approvedDocumentsItem) {
-    if (this.approvedDocuments == null) {
-      this.approvedDocuments = new ArrayList<DataConsentRequestedDocument>();
-    }
-    this.approvedDocuments.add(approvedDocumentsItem);
+    this.documents = documents;
     return this;
   }
 
    /**
-   * Get approvedDocuments
-   * @return approvedDocuments
+   * Get documents
+   * @return documents
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DataConsentRequestedDocument> getApprovedDocuments() {
-    return approvedDocuments;
+  public String getDocuments() {
+    return documents;
   }
 
 
-  public void setApprovedDocuments(List<DataConsentRequestedDocument> approvedDocuments) {
-    this.approvedDocuments = approvedDocuments;
+  public void setDocuments(String documents) {
+    this.documents = documents;
   }
 
 
-  public DataConsentDetailsDto approvedFinancials(List<DataConsentRequestedFinancialAccount> approvedFinancials) {
+  public DataConsentDetailsDto financials(String financials) {
     
-    this.approvedFinancials = approvedFinancials;
-    return this;
-  }
-
-  public DataConsentDetailsDto addApprovedFinancialsItem(DataConsentRequestedFinancialAccount approvedFinancialsItem) {
-    if (this.approvedFinancials == null) {
-      this.approvedFinancials = new ArrayList<DataConsentRequestedFinancialAccount>();
-    }
-    this.approvedFinancials.add(approvedFinancialsItem);
+    this.financials = financials;
     return this;
   }
 
    /**
-   * Get approvedFinancials
-   * @return approvedFinancials
+   * Get financials
+   * @return financials
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DataConsentRequestedFinancialAccount> getApprovedFinancials() {
-    return approvedFinancials;
+  public String getFinancials() {
+    return financials;
   }
 
 
-  public void setApprovedFinancials(List<DataConsentRequestedFinancialAccount> approvedFinancials) {
-    this.approvedFinancials = approvedFinancials;
+  public void setFinancials(String financials) {
+    this.financials = financials;
+  }
+
+
+  public DataConsentDetailsDto healthRecords(String healthRecords) {
+    
+    this.healthRecords = healthRecords;
+    return this;
+  }
+
+   /**
+   * Get healthRecords
+   * @return healthRecords
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getHealthRecords() {
+    return healthRecords;
+  }
+
+
+  public void setHealthRecords(String healthRecords) {
+    this.healthRecords = healthRecords;
   }
 
 
@@ -374,16 +480,21 @@ public class DataConsentDetailsDto {
     }
     DataConsentDetailsDto dataConsentDetailsDto = (DataConsentDetailsDto) o;
     return Objects.equals(this.id, dataConsentDetailsDto.id) &&
+        Objects.equals(this.title, dataConsentDetailsDto.title) &&
+        Objects.equals(this.description, dataConsentDetailsDto.description) &&
+        Objects.equals(this.dataLife, dataConsentDetailsDto.dataLife) &&
+        Objects.equals(this.requesterName, dataConsentDetailsDto.requesterName) &&
+        Objects.equals(this.requesterLogo, dataConsentDetailsDto.requesterLogo) &&
+        Objects.equals(this.location, dataConsentDetailsDto.location) &&
         Objects.equals(this.status, dataConsentDetailsDto.status) &&
         Objects.equals(this.approvedAtUtc, dataConsentDetailsDto.approvedAtUtc) &&
         Objects.equals(this.rejectedAtUtc, dataConsentDetailsDto.rejectedAtUtc) &&
         Objects.equals(this.expiresAtUtc, dataConsentDetailsDto.expiresAtUtc) &&
         Objects.equals(this.requestedAtUtc, dataConsentDetailsDto.requestedAtUtc) &&
-        Objects.equals(this.requester, dataConsentDetailsDto.requester) &&
-        Objects.equals(this.consentDetails, dataConsentDetailsDto.consentDetails) &&
         Objects.equals(this.identifiers, dataConsentDetailsDto.identifiers) &&
-        Objects.equals(this.approvedDocuments, dataConsentDetailsDto.approvedDocuments) &&
-        Objects.equals(this.approvedFinancials, dataConsentDetailsDto.approvedFinancials);
+        Objects.equals(this.documents, dataConsentDetailsDto.documents) &&
+        Objects.equals(this.financials, dataConsentDetailsDto.financials) &&
+        Objects.equals(this.healthRecords, dataConsentDetailsDto.healthRecords);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -392,7 +503,7 @@ public class DataConsentDetailsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, status, approvedAtUtc, rejectedAtUtc, expiresAtUtc, requestedAtUtc, requester, consentDetails, identifiers, approvedDocuments, approvedFinancials);
+    return Objects.hash(id, title, description, dataLife, requesterName, requesterLogo, location, status, approvedAtUtc, rejectedAtUtc, expiresAtUtc, requestedAtUtc, identifiers, documents, financials, healthRecords);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -407,16 +518,21 @@ public class DataConsentDetailsDto {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataConsentDetailsDto {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    dataLife: ").append(toIndentedString(dataLife)).append("\n");
+    sb.append("    requesterName: ").append(toIndentedString(requesterName)).append("\n");
+    sb.append("    requesterLogo: ").append(toIndentedString(requesterLogo)).append("\n");
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
     sb.append("    rejectedAtUtc: ").append(toIndentedString(rejectedAtUtc)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("    requestedAtUtc: ").append(toIndentedString(requestedAtUtc)).append("\n");
-    sb.append("    requester: ").append(toIndentedString(requester)).append("\n");
-    sb.append("    consentDetails: ").append(toIndentedString(consentDetails)).append("\n");
     sb.append("    identifiers: ").append(toIndentedString(identifiers)).append("\n");
-    sb.append("    approvedDocuments: ").append(toIndentedString(approvedDocuments)).append("\n");
-    sb.append("    approvedFinancials: ").append(toIndentedString(approvedFinancials)).append("\n");
+    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
+    sb.append("    financials: ").append(toIndentedString(financials)).append("\n");
+    sb.append("    healthRecords: ").append(toIndentedString(healthRecords)).append("\n");
     sb.append("}");
     return sb.toString();
   }

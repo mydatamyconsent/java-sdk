@@ -9,7 +9,7 @@ Consent request receiver details
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **ReceiverType** |  |  [optional]
-**identifiers** | [**List&lt;IdentifierStringKeyValuePair&gt;**](IdentifierStringKeyValuePair.md) | Consent request receiver identifiers |  [optional]
+**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) | Consent request receiver identifiers |  [optional]
 **identificationStrategy** | **IdentificationStrategy** |  |  [optional]
 
 

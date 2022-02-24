@@ -27,10 +27,10 @@ import java.io.IOException;
 import java.util.UUID;
 
 /**
- * Individual Data Consent Request.
+ * Create individual data consent request
  */
-@ApiModel(description = "Individual Data Consent Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@ApiModel(description = "Create individual data consent request")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class CreateIndividualDataConsentRequest {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)

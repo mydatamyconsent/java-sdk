@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-02-23T10:34:53.536945433Z[Etc/UTC]
+  - Build date: 2022-02-24T10:35:00.587855006Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -163,18 +163,14 @@ Class | Method | HTTP request | Description
  - [Activity](docs/Activity.md)
  - [ApprovedConsentRequest](docs/ApprovedConsentRequest.md)
  - [BankAccountType](docs/BankAccountType.md)
- - [CollectibleTypes](docs/CollectibleTypes.md)
- - [ConsentTemplateTypes](docs/ConsentTemplateTypes.md)
  - [CreateDataProcessingAgreementRequestModel](docs/CreateDataProcessingAgreementRequestModel.md)
  - [CreateIndividualDataConsentRequest](docs/CreateIndividualDataConsentRequest.md)
  - [CreateOrganizationDataConsentRequest](docs/CreateOrganizationDataConsentRequest.md)
  - [DataConsentDetailsDto](docs/DataConsentDetailsDto.md)
  - [DataConsentDocumentsDto](docs/DataConsentDocumentsDto.md)
  - [DataConsentFinancialsDto](docs/DataConsentFinancialsDto.md)
- - [DataConsentIdentifier](docs/DataConsentIdentifier.md)
  - [DataConsentRequestedDocument](docs/DataConsentRequestedDocument.md)
  - [DataConsentRequestedFinancialAccount](docs/DataConsentRequestedFinancialAccount.md)
- - [DataConsentRequesterDto](docs/DataConsentRequesterDto.md)
  - [DataConsentStatus](docs/DataConsentStatus.md)
  - [DataProcessingAgreementDto](docs/DataProcessingAgreementDto.md)
  - [DataProcessingAgreementDtoPaginatedList](docs/DataProcessingAgreementDtoPaginatedList.md)
@@ -186,25 +182,23 @@ Class | Method | HTTP request | Description
  - [DocumentCategoryType](docs/DocumentCategoryType.md)
  - [DocumentIssueRequest](docs/DocumentIssueRequest.md)
  - [DocumentIssueRequestDetails](docs/DocumentIssueRequestDetails.md)
+ - [DocumentIssueRequestStatus](docs/DocumentIssueRequestStatus.md)
  - [DocumentReceiver](docs/DocumentReceiver.md)
  - [DocumentSubCategoryType](docs/DocumentSubCategoryType.md)
  - [DocumentType](docs/DocumentType.md)
  - [DocumentTypePaginatedList](docs/DocumentTypePaginatedList.md)
  - [DocumentsRequired](docs/DocumentsRequired.md)
- - [FetchTypes](docs/FetchTypes.md)
  - [FileType](docs/FileType.md)
  - [Financial](docs/Financial.md)
  - [FinancialAccount](docs/FinancialAccount.md)
  - [FinancialAccountDetailsRequired](docs/FinancialAccountDetailsRequired.md)
  - [FinancialAccounts](docs/FinancialAccounts.md)
- - [GetConsentTemplateDetailsDto](docs/GetConsentTemplateDetailsDto.md)
  - [IdentificationStrategy](docs/IdentificationStrategy.md)
  - [Identifier](docs/Identifier.md)
- - [IdentifierStringKeyValuePair](docs/IdentifierStringKeyValuePair.md)
- - [IdentitySupportedFields](docs/IdentitySupportedFields.md)
  - [IndividualDataConsentRequestResponse](docs/IndividualDataConsentRequestResponse.md)
  - [IssuedDocument](docs/IssuedDocument.md)
  - [IssuedDocumentPaginatedList](docs/IssuedDocumentPaginatedList.md)
+ - [JsonSchema](docs/JsonSchema.md)
  - [Life](docs/Life.md)
  - [OrganizationDataConsentInfoDto](docs/OrganizationDataConsentInfoDto.md)
  - [OrganizationDataConsentInfoDtoPaginatedList](docs/OrganizationDataConsentInfoDtoPaginatedList.md)
@@ -223,7 +217,6 @@ Class | Method | HTTP request | Description
  - [StringStringKeyValuePair](docs/StringStringKeyValuePair.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)
  - [SupportedIdentifier](docs/SupportedIdentifier.md)
- - [SupportedIdentifiersByCountry](docs/SupportedIdentifiersByCountry.md)
  - [UpdateDataProcessingAgreementRequestModel](docs/UpdateDataProcessingAgreementRequestModel.md)
  - [UriDetails](docs/UriDetails.md)
  - [UserAccountFinancialTransactionsDto](docs/UserAccountFinancialTransactionsDto.md)

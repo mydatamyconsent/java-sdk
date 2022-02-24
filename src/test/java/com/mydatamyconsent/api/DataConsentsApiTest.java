@@ -25,7 +25,6 @@ import com.mydatamyconsent.model.OrganizationDocumentDetailsDto;
 import com.mydatamyconsent.model.OrganizationDocumentDownloadDto;
 import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
 import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UserAccountFinancialTransactionsDtoPaginatedList;
 import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;

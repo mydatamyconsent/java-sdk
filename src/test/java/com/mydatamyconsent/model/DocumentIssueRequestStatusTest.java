@@ -13,48 +13,22 @@
 
 package com.mydatamyconsent.model;
 
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for DataConsentIdentifier
+ * Model tests for DocumentIssueRequestStatus
  */
-public class DataConsentIdentifierTest {
-    private final DataConsentIdentifier model = new DataConsentIdentifier();
-
+public class DocumentIssueRequestStatusTest {
     /**
-     * Model tests for DataConsentIdentifier
+     * Model tests for DocumentIssueRequestStatus
      */
     @Test
-    public void testDataConsentIdentifier() {
-        // TODO: test DataConsentIdentifier
-    }
-
-    /**
-     * Test the property 'key'
-     */
-    @Test
-    public void keyTest() {
-        // TODO: test key
-    }
-
-    /**
-     * Test the property 'value'
-     */
-    @Test
-    public void valueTest() {
-        // TODO: test value
+    public void testDocumentIssueRequestStatus() {
+        // TODO: test DocumentIssueRequestStatus
     }
 
 }

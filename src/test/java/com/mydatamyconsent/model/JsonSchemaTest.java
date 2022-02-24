@@ -18,10 +18,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Identifier;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -29,33 +32,41 @@ import org.junit.Test;
 
 
 /**
- * Model tests for IdentifierStringKeyValuePair
+ * Model tests for JsonSchema
  */
-public class IdentifierStringKeyValuePairTest {
-    private final IdentifierStringKeyValuePair model = new IdentifierStringKeyValuePair();
+public class JsonSchemaTest {
+    private final JsonSchema model = new JsonSchema();
 
     /**
-     * Model tests for IdentifierStringKeyValuePair
+     * Model tests for JsonSchema
      */
     @Test
-    public void testIdentifierStringKeyValuePair() {
-        // TODO: test IdentifierStringKeyValuePair
+    public void testJsonSchema() {
+        // TODO: test JsonSchema
     }
 
     /**
-     * Test the property 'key'
+     * Test the property 'keywords'
      */
     @Test
-    public void keyTest() {
-        // TODO: test key
+    public void keywordsTest() {
+        // TODO: test keywords
     }
 
     /**
-     * Test the property 'value'
+     * Test the property 'otherData'
      */
     @Test
-    public void valueTest() {
-        // TODO: test value
+    public void otherDataTest() {
+        // TODO: test otherData
+    }
+
+    /**
+     * Test the property 'boolValue'
+     */
+    @Test
+    public void boolValueTest() {
+        // TODO: test boolValue
     }
 
 }

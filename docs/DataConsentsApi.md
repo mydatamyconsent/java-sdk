@@ -84,7 +84,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="downloadOrgConsentedDocumentById"></a>
 # **downloadOrgConsentedDocumentById**
@@ -148,7 +147,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getAllConsentedDocuments"></a>
 # **getAllConsentedDocuments**
@@ -210,7 +208,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getAllConsentedFinancialAccounts"></a>
 # **getAllConsentedFinancialAccounts**
@@ -272,7 +269,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getAllOrganizationConsentedDocuments"></a>
 # **getAllOrganizationConsentedDocuments**
@@ -334,7 +330,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentDetailsById"></a>
 # **getConsentDetailsById**
@@ -396,7 +391,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentFinancialAccounts"></a>
 # **getConsentFinancialAccounts**
@@ -458,7 +452,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentedAccountById"></a>
 # **getConsentedAccountById**
@@ -522,7 +515,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentedDocumentById"></a>
 # **getConsentedDocumentById**
@@ -586,7 +578,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentedFinancialAccount"></a>
 # **getConsentedFinancialAccount**
@@ -650,7 +641,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentedFinancialAccountTransactions"></a>
 # **getConsentedFinancialAccountTransactions**
@@ -724,7 +714,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentsForOrganizations"></a>
 # **getConsentsForOrganizations**
@@ -794,7 +783,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getConsentsSentToIndividuals"></a>
 # **getConsentsSentToIndividuals**
@@ -864,7 +852,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getOrgConsentedAccountTransactions"></a>
 # **getOrgConsentedAccountTransactions**
@@ -938,7 +925,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getOrganizationConsentDetailsById"></a>
 # **getOrganizationConsentDetailsById**
@@ -1000,7 +986,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getOrganizationConsentedDocumentById"></a>
 # **getOrganizationConsentedDocumentById**
@@ -1064,5 +1049,4 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 

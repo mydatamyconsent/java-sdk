@@ -2,7 +2,7 @@
 
 # CreateIndividualDataConsentRequest
 
-Individual Data Consent Request.
+Create individual data consent request
 
 ## Properties
 

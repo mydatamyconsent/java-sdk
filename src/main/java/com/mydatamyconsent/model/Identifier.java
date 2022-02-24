@@ -15,69 +15,185 @@ package com.mydatamyconsent.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
-
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * Gets or Sets Identifier
+ * Identifier
  */
-@JsonAdapter(Identifier.Adapter.class)
-public enum Identifier {
-  
-  EMAIL("Email"),
-  
-  PERMANENTACCOUNTNUMBER("PermanentAccountNumber"),
-  
-  AADHAARNUMBER("AadhaarNumber"),
-  
-  MOBILENUMBER("MobileNumber"),
-  
-  CORPORATEIDENTIFICATIONNUMBER("CorporateIdentificationNumber"),
-  
-  TAXDEDUCTIONACCOUNTNUMBER("TaxDeductionAccountNumber"),
-  
-  GOODSANDSERVICESTAXIDENTIFICATIONNUMBER("GoodsAndServicesTaxIdentificationNumber");
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
+public class Identifier {
+  public static final String SERIALIZED_NAME_KEY = "key";
+  @SerializedName(SERIALIZED_NAME_KEY)
+  private String key;
 
-  private String value;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  Identifier(String value) {
-    this.value = value;
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
+  public static final String SERIALIZED_NAME_EXAMPLE_VALUE = "exampleValue";
+  @SerializedName(SERIALIZED_NAME_EXAMPLE_VALUE)
+  private String exampleValue;
+
+  public Identifier() { 
   }
 
-  public String getValue() {
-    return value;
+  public Identifier key(String key) {
+    
+    this.key = key;
+    return this;
+  }
+
+   /**
+   * Get key
+   * @return key
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getKey() {
+    return key;
+  }
+
+
+  public void setKey(String key) {
+    this.key = key;
+  }
+
+
+  public Identifier name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public Identifier description(String description) {
+    
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDescription() {
+    return description;
+  }
+
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  public Identifier exampleValue(String exampleValue) {
+    
+    this.exampleValue = exampleValue;
+    return this;
+  }
+
+   /**
+   * Get exampleValue
+   * @return exampleValue
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getExampleValue() {
+    return exampleValue;
+  }
+
+
+  public void setExampleValue(String exampleValue) {
+    this.exampleValue = exampleValue;
+  }
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Identifier identifier = (Identifier) o;
+    return Objects.equals(this.key, identifier.key) &&
+        Objects.equals(this.name, identifier.name) &&
+        Objects.equals(this.description, identifier.description) &&
+        Objects.equals(this.exampleValue, identifier.exampleValue);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(key, name, description, exampleValue);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
-    return String.valueOf(value);
+    StringBuilder sb = new StringBuilder();
+    sb.append("class Identifier {\n");
+    sb.append("    key: ").append(toIndentedString(key)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    exampleValue: ").append(toIndentedString(exampleValue)).append("\n");
+    sb.append("}");
+    return sb.toString();
   }
 
-  public static Identifier fromValue(String value) {
-    for (Identifier b : Identifier.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return o.toString().replace("\n", "\n    ");
   }
 
-  public static class Adapter extends TypeAdapter<Identifier> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final Identifier enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
-    }
-
-    @Override
-    public Identifier read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return Identifier.fromValue(value);
-    }
-  }
 }
 

@@ -75,7 +75,6 @@ No authorization required
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
 
 <a name="getIssuedDocuments"></a>
 # **getIssuedDocuments**
@@ -146,7 +145,6 @@ No authorization required
 **200** | Success |  -  |
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
-**0** | Error |  -  |
 
 <a name="getRegisteredDocumentTypes"></a>
 # **getRegisteredDocumentTypes**
@@ -211,7 +209,6 @@ No authorization required
 **200** | Success |  -  |
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
-**0** | Error |  -  |
 
 <a name="issueDocumentToIndividual"></a>
 # **issueDocumentToIndividual**
@@ -273,8 +270,8 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **400** | Bad Request |  -  |
+**404** | Not Found |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="issueDocumentToOrganization"></a>
 # **issueDocumentToOrganization**
@@ -336,6 +333,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **400** | Bad Request |  -  |
+**404** | Not Found |  -  |
 **500** | Server Error |  -  |
 **0** | Error |  -  |
 
@@ -402,7 +400,6 @@ No authorization required
 **200** | Success |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="uploadDocumentForOrganization"></a>
 # **uploadDocumentForOrganization**
@@ -467,5 +464,4 @@ No authorization required
 **200** | Success |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 

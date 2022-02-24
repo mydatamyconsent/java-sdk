@@ -93,7 +93,6 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentByIdCall(UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -170,7 +169,6 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public IssuedDocument getIssuedDocumentById(UUID documentId) throws ApiException {
@@ -191,7 +189,6 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<IssuedDocument> getIssuedDocumentByIdWithHttpInfo(UUID documentId) throws ApiException {
@@ -214,7 +211,6 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentByIdAsync(UUID documentId, final ApiCallback<IssuedDocument> _callback) throws ApiException {
@@ -240,7 +236,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentsCall(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -336,7 +331,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public IssuedDocumentPaginatedList getIssuedDocuments(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -360,7 +354,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<IssuedDocumentPaginatedList> getIssuedDocumentsWithHttpInfo(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -386,7 +379,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIssuedDocumentsAsync(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback<IssuedDocumentPaginatedList> _callback) throws ApiException {
@@ -409,7 +401,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getRegisteredDocumentTypesCall(Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -488,7 +479,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DocumentTypePaginatedList getRegisteredDocumentTypes(Integer pageNo, Integer pageSize) throws ApiException {
@@ -509,7 +499,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DocumentTypePaginatedList> getRegisteredDocumentTypesWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
@@ -532,7 +521,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getRegisteredDocumentTypesAsync(Integer pageNo, Integer pageSize, final ApiCallback<DocumentTypePaginatedList> _callback) throws ApiException {
@@ -553,8 +541,8 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call issueDocumentToIndividualCall(DocumentIssueRequest documentIssueRequest, final ApiCallback _callback) throws ApiException {
@@ -628,8 +616,8 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DocumentIssueRequestDetails issueDocumentToIndividual(DocumentIssueRequest documentIssueRequest) throws ApiException {
@@ -648,8 +636,8 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DocumentIssueRequestDetails> issueDocumentToIndividualWithHttpInfo(DocumentIssueRequest documentIssueRequest) throws ApiException {
@@ -670,8 +658,8 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call issueDocumentToIndividualAsync(DocumentIssueRequest documentIssueRequest, final ApiCallback<DocumentIssueRequestDetails> _callback) throws ApiException {
@@ -692,6 +680,7 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
@@ -767,6 +756,7 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
@@ -787,6 +777,7 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
@@ -809,6 +800,7 @@ public class DocumentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
@@ -833,7 +825,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call uploadDocumentForIndividualCall(UUID issueRequestId, File formFile, final ApiCallback _callback) throws ApiException {
@@ -914,7 +905,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public String uploadDocumentForIndividual(UUID issueRequestId, File formFile) throws ApiException {
@@ -935,7 +925,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<String> uploadDocumentForIndividualWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
@@ -958,7 +947,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call uploadDocumentForIndividualAsync(UUID issueRequestId, File formFile, final ApiCallback<String> _callback) throws ApiException {
@@ -981,7 +969,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call uploadDocumentForOrganizationCall(UUID issueRequestId, File formFile, final ApiCallback _callback) throws ApiException {
@@ -1062,7 +1049,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public String uploadDocumentForOrganization(UUID issueRequestId, File formFile) throws ApiException {
@@ -1083,7 +1069,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<String> uploadDocumentForOrganizationWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
@@ -1106,7 +1091,6 @@ public class DocumentsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call uploadDocumentForOrganizationAsync(UUID issueRequestId, File formFile, final ApiCallback<String> _callback) throws ApiException {

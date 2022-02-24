@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import com.mydatamyconsent.model.DataProvider;
 import com.mydatamyconsent.model.DataProviderPaginatedList;
-import com.mydatamyconsent.model.ProblemDetails;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -87,7 +86,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProviderByIdCall(String providerId, final ApiCallback _callback) throws ApiException {
@@ -164,7 +162,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProvider getDataProviderById(String providerId) throws ApiException {
@@ -185,7 +182,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProvider> getDataProviderByIdWithHttpInfo(String providerId) throws ApiException {
@@ -208,7 +204,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProviderByIdAsync(String providerId, final ApiCallback<DataProvider> _callback) throws ApiException {
@@ -235,7 +230,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProvidersCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
@@ -334,7 +328,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProviderPaginatedList getDataProviders(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
@@ -359,7 +352,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProviderPaginatedList> getDataProvidersWithHttpInfo(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
@@ -386,7 +378,6 @@ public class DataProviderDiscoveryApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProvidersAsync(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback<DataProviderPaginatedList> _callback) throws ApiException {

@@ -30,7 +30,6 @@ import java.io.IOException;
 import com.mydatamyconsent.model.CreateDataProcessingAgreementRequestModel;
 import com.mydatamyconsent.model.DataProcessingAgreementDto;
 import com.mydatamyconsent.model.DataProcessingAgreementDtoPaginatedList;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UpdateDataProcessingAgreementRequestModel;
 
@@ -88,7 +87,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createDataProcessingAgreementCall(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
@@ -157,7 +155,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProcessingAgreementDto createDataProcessingAgreement(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel) throws ApiException {
@@ -176,7 +173,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProcessingAgreementDto> createDataProcessingAgreementWithHttpInfo(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel) throws ApiException {
@@ -197,7 +193,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createDataProcessingAgreementAsync(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {
@@ -220,7 +215,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call deleteDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
@@ -296,7 +290,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public void deleteDataProcessingAgreementById(UUID id) throws ApiException {
@@ -316,7 +309,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> deleteDataProcessingAgreementByIdWithHttpInfo(UUID id) throws ApiException {
@@ -338,7 +330,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call deleteDataProcessingAgreementByIdAsync(UUID id, final ApiCallback<Void> _callback) throws ApiException {
@@ -360,7 +351,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
@@ -437,7 +427,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProcessingAgreementDto getDataProcessingAgreementById(UUID id) throws ApiException {
@@ -458,7 +447,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProcessingAgreementDto> getDataProcessingAgreementByIdWithHttpInfo(UUID id) throws ApiException {
@@ -481,7 +469,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProcessingAgreementByIdAsync(UUID id, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {
@@ -503,7 +490,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProcessingAgreementsCall(Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -581,7 +567,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProcessingAgreementDtoPaginatedList getDataProcessingAgreements(Integer pageNo, Integer pageSize) throws ApiException {
@@ -601,7 +586,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProcessingAgreementDtoPaginatedList> getDataProcessingAgreementsWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
@@ -623,7 +607,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getDataProcessingAgreementsAsync(Integer pageNo, Integer pageSize, final ApiCallback<DataProcessingAgreementDtoPaginatedList> _callback) throws ApiException {
@@ -646,7 +629,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call terminateDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
@@ -722,7 +704,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public void terminateDataProcessingAgreementById(UUID id) throws ApiException {
@@ -742,7 +723,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> terminateDataProcessingAgreementByIdWithHttpInfo(UUID id) throws ApiException {
@@ -764,7 +744,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call terminateDataProcessingAgreementByIdAsync(UUID id, final ApiCallback<Void> _callback) throws ApiException {
@@ -787,7 +766,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call updateDataProcessingAgreementCall(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
@@ -865,7 +843,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataProcessingAgreementDto updateDataProcessingAgreement(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel) throws ApiException {
@@ -887,7 +864,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataProcessingAgreementDto> updateDataProcessingAgreementWithHttpInfo(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel) throws ApiException {
@@ -911,7 +887,6 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call updateDataProcessingAgreementAsync(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {

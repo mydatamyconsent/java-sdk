@@ -17,7 +17,6 @@ import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.CreateDataProcessingAgreementRequestModel;
 import com.mydatamyconsent.model.DataProcessingAgreementDto;
 import com.mydatamyconsent.model.DataProcessingAgreementDtoPaginatedList;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UpdateDataProcessingAgreementRequestModel;
 import org.junit.Test;

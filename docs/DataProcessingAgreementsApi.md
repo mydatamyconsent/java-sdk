@@ -72,7 +72,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="deleteDataProcessingAgreementById"></a>
 # **deleteDataProcessingAgreementById**
@@ -135,7 +134,6 @@ No authorization required
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getDataProcessingAgreementById"></a>
 # **getDataProcessingAgreementById**
@@ -199,7 +197,6 @@ No authorization required
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
 
 <a name="getDataProcessingAgreements"></a>
 # **getDataProcessingAgreements**
@@ -263,7 +260,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="terminateDataProcessingAgreementById"></a>
 # **terminateDataProcessingAgreementById**
@@ -326,7 +322,6 @@ No authorization required
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="updateDataProcessingAgreement"></a>
 # **updateDataProcessingAgreement**
@@ -392,5 +387,4 @@ No authorization required
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 

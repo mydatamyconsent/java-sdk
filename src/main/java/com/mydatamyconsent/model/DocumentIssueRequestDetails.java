@@ -20,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.DocumentIssueRequestStatus;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -31,8 +32,12 @@ import org.threeten.bp.OffsetDateTime;
  * Document issue request details.
  */
 @ApiModel(description = "Document issue request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class DocumentIssueRequestDetails {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private UUID id;
+
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
   private UUID documentTypeId;
@@ -44,6 +49,10 @@ public class DocumentIssueRequestDetails {
   public static final String SERIALIZED_NAME_DOCUMENT_IDENTIFIER = "documentIdentifier";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_IDENTIFIER)
   private String documentIdentifier;
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private DocumentIssueRequestStatus status;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -67,6 +76,29 @@ public class DocumentIssueRequestDetails {
 
   public DocumentIssueRequestDetails() { 
   }
+
+  public DocumentIssueRequestDetails id(UUID id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Request Id.
+   * @return id
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Request Id.")
+
+  public UUID getId() {
+    return id;
+  }
+
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
 
   public DocumentIssueRequestDetails documentTypeId(UUID documentTypeId) {
     
@@ -134,6 +166,29 @@ public class DocumentIssueRequestDetails {
 
   public void setDocumentIdentifier(String documentIdentifier) {
     this.documentIdentifier = documentIdentifier;
+  }
+
+
+  public DocumentIssueRequestDetails status(DocumentIssueRequestStatus status) {
+    
+    this.status = status;
+    return this;
+  }
+
+   /**
+   * Get status
+   * @return status
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public DocumentIssueRequestStatus getStatus() {
+    return status;
+  }
+
+
+  public void setStatus(DocumentIssueRequestStatus status) {
+    this.status = status;
   }
 
 
@@ -261,9 +316,11 @@ public class DocumentIssueRequestDetails {
       return false;
     }
     DocumentIssueRequestDetails documentIssueRequestDetails = (DocumentIssueRequestDetails) o;
-    return Objects.equals(this.documentTypeId, documentIssueRequestDetails.documentTypeId) &&
+    return Objects.equals(this.id, documentIssueRequestDetails.id) &&
+        Objects.equals(this.documentTypeId, documentIssueRequestDetails.documentTypeId) &&
         Objects.equals(this.documentTypeName, documentIssueRequestDetails.documentTypeName) &&
         Objects.equals(this.documentIdentifier, documentIssueRequestDetails.documentIdentifier) &&
+        Objects.equals(this.status, documentIssueRequestDetails.status) &&
         Objects.equals(this.description, documentIssueRequestDetails.description) &&
         Objects.equals(this.receiver, documentIssueRequestDetails.receiver) &&
         Objects.equals(this.expiresAtUtc, documentIssueRequestDetails.expiresAtUtc) &&
@@ -277,7 +334,7 @@ public class DocumentIssueRequestDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, documentTypeName, documentIdentifier, description, receiver, expiresAtUtc, metadata, createdAtUtc);
+    return Objects.hash(id, documentTypeId, documentTypeName, documentIdentifier, status, description, receiver, expiresAtUtc, metadata, createdAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -291,9 +348,11 @@ public class DocumentIssueRequestDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentIssueRequestDetails {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    documentTypeId: ").append(toIndentedString(documentTypeId)).append("\n");
     sb.append("    documentTypeName: ").append(toIndentedString(documentTypeName)).append("\n");
     sb.append("    documentIdentifier: ").append(toIndentedString(documentIdentifier)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");

@@ -7,10 +7,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **String** |  |  [optional]
+**iso2** | **String** |  |  [optional]
 **name** | **String** |  |  [optional]
-**description** | **String** |  |  [optional]
-**exampleValue** | **String** |  |  [optional]
+**individualIdentifiers** | [**List&lt;Identifier&gt;**](Identifier.md) |  |  [optional]
+**organizationIdentifiers** | [**List&lt;Identifier&gt;**](Identifier.md) |  |  [optional]
 
 
 

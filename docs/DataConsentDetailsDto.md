@@ -7,17 +7,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **UUID** |  |  [optional]
+**id** | **UUID** |  | 
+**title** | **String** |  |  [optional]
+**description** | **String** |  |  [optional]
+**dataLife** | [**Life**](Life.md) |  |  [optional]
+**requesterName** | **String** |  |  [optional]
+**requesterLogo** | **String** |  |  [optional]
+**location** | **String** |  |  [optional]
 **status** | **DataConsentStatus** |  |  [optional]
 **approvedAtUtc** | **OffsetDateTime** |  |  [optional]
 **rejectedAtUtc** | **OffsetDateTime** |  |  [optional]
 **expiresAtUtc** | **OffsetDateTime** |  |  [optional]
 **requestedAtUtc** | **OffsetDateTime** |  |  [optional]
-**requester** | [**DataConsentRequesterDto**](DataConsentRequesterDto.md) |  |  [optional]
-**consentDetails** | [**GetConsentTemplateDetailsDto**](GetConsentTemplateDetailsDto.md) |  |  [optional]
-**identifiers** | [**List&lt;DataConsentIdentifier&gt;**](DataConsentIdentifier.md) |  |  [optional]
-**approvedDocuments** | [**List&lt;DataConsentRequestedDocument&gt;**](DataConsentRequestedDocument.md) |  |  [optional]
-**approvedFinancials** | [**List&lt;DataConsentRequestedFinancialAccount&gt;**](DataConsentRequestedFinancialAccount.md) |  |  [optional]
+**identifiers** | [**JsonSchema**](JsonSchema.md) |  |  [optional]
+**documents** | **String** |  |  [optional]
+**financials** | **String** |  |  [optional]
+**healthRecords** | **String** |  |  [optional]
 
 
 

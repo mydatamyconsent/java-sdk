@@ -2,7 +2,7 @@
 
 # OrganizationDataConsentRequestResponse
 
-Organization Data Consent Request Response.
+OrganizationDataConsentRequestResponse
 
 ## Properties
 

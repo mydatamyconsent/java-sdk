@@ -75,7 +75,6 @@ No authorization required
 **200** | Success |  -  |
 **500** | Server Error |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
 
 <a name="cancelOrganizationDataConsentRequest"></a>
 # **cancelOrganizationDataConsentRequest**
@@ -138,11 +137,12 @@ No authorization required
 **200** | Success |  -  |
 **500** | Server Error |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
 
 <a name="createIndividualDataConsentRequest"></a>
 # **createIndividualDataConsentRequest**
 > IndividualDataConsentRequestResponse createIndividualDataConsentRequest(createIndividualDataConsentRequest)
+
+Create a individual data consent request.
 
 Create a individual data consent request.
 
@@ -161,7 +161,7 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentRequestsApi apiInstance = new DataConsentRequestsApi(defaultClient);
-    CreateIndividualDataConsentRequest createIndividualDataConsentRequest = new CreateIndividualDataConsentRequest(); // CreateIndividualDataConsentRequest | M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest).
+    CreateIndividualDataConsentRequest createIndividualDataConsentRequest = new CreateIndividualDataConsentRequest(); // CreateIndividualDataConsentRequest | The Individual data consent request payload
     try {
       IndividualDataConsentRequestResponse result = apiInstance.createIndividualDataConsentRequest(createIndividualDataConsentRequest);
       System.out.println(result);
@@ -180,7 +180,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createIndividualDataConsentRequest** | [**CreateIndividualDataConsentRequest**](CreateIndividualDataConsentRequest.md)| M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest). |
+ **createIndividualDataConsentRequest** | [**CreateIndividualDataConsentRequest**](CreateIndividualDataConsentRequest.md)| The Individual data consent request payload |
 
 ### Return type
 
@@ -202,11 +202,12 @@ No authorization required
 **500** | Server Error |  -  |
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
-**0** | Error |  -  |
 
 <a name="createOrganizationDataConsentRequest"></a>
 # **createOrganizationDataConsentRequest**
 > OrganizationDataConsentRequestResponse createOrganizationDataConsentRequest(createOrganizationDataConsentRequest)
+
+Create a organization data consent request.
 
 Create a organization data consent request.
 
@@ -266,7 +267,6 @@ No authorization required
 **500** | Server Error |  -  |
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
-**0** | Error |  -  |
 
 <a name="getAllConsentRequestsToIndividuals"></a>
 # **getAllConsentRequestsToIndividuals**
@@ -336,7 +336,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getAllConsentRequestsToOrganizations"></a>
 # **getAllConsentRequestsToOrganizations**
@@ -406,7 +405,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getIndividualConsentRequestById"></a>
 # **getIndividualConsentRequestById**
@@ -468,7 +466,6 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 
 <a name="getOrganizationConsentRequestById"></a>
 # **getOrganizationConsentRequestById**
@@ -530,5 +527,4 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
-**0** | Error |  -  |
 

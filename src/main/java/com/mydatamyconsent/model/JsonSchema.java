@@ -20,72 +20,87 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Identifier;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * IdentifierStringKeyValuePair
+ * JsonSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
-public class IdentifierStringKeyValuePair {
-  public static final String SERIALIZED_NAME_KEY = "key";
-  @SerializedName(SERIALIZED_NAME_KEY)
-  private Identifier key;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
+public class JsonSchema {
+  public static final String SERIALIZED_NAME_KEYWORDS = "keywords";
+  @SerializedName(SERIALIZED_NAME_KEYWORDS)
+  private List<Object> keywords = null;
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  public static final String SERIALIZED_NAME_OTHER_DATA = "otherData";
+  @SerializedName(SERIALIZED_NAME_OTHER_DATA)
+  private Map<String, Object> otherData = null;
 
-  public IdentifierStringKeyValuePair() { 
+  public static final String SERIALIZED_NAME_BOOL_VALUE = "boolValue";
+  @SerializedName(SERIALIZED_NAME_BOOL_VALUE)
+  private Boolean boolValue;
+
+  public JsonSchema() { 
   }
 
-  public IdentifierStringKeyValuePair key(Identifier key) {
-    
-    this.key = key;
-    return this;
+  
+  public JsonSchema(
+     List<Object> keywords, 
+     Map<String, Object> otherData, 
+     Boolean boolValue
+  ) {
+    this();
+    this.keywords = keywords;
+    this.otherData = otherData;
+    this.boolValue = boolValue;
   }
 
    /**
-   * Get key
-   * @return key
+   * Get keywords
+   * @return keywords
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Identifier getKey() {
-    return key;
+  public List<Object> getKeywords() {
+    return keywords;
   }
 
 
-  public void setKey(Identifier key) {
-    this.key = key;
-  }
 
-
-  public IdentifierStringKeyValuePair value(String value) {
-    
-    this.value = value;
-    return this;
-  }
 
    /**
-   * Get value
-   * @return value
+   * Get otherData
+   * @return otherData
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getValue() {
-    return value;
+  public Map<String, Object> getOtherData() {
+    return otherData;
   }
 
 
-  public void setValue(String value) {
-    this.value = value;
+
+
+   /**
+   * Get boolValue
+   * @return boolValue
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getBoolValue() {
+    return boolValue;
   }
+
+
 
 
   @Override
@@ -96,9 +111,10 @@ public class IdentifierStringKeyValuePair {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    IdentifierStringKeyValuePair identifierStringKeyValuePair = (IdentifierStringKeyValuePair) o;
-    return Objects.equals(this.key, identifierStringKeyValuePair.key) &&
-        Objects.equals(this.value, identifierStringKeyValuePair.value);
+    JsonSchema jsonSchema = (JsonSchema) o;
+    return Objects.equals(this.keywords, jsonSchema.keywords) &&
+        Objects.equals(this.otherData, jsonSchema.otherData) &&
+        Objects.equals(this.boolValue, jsonSchema.boolValue);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -107,7 +123,7 @@ public class IdentifierStringKeyValuePair {
 
   @Override
   public int hashCode() {
-    return Objects.hash(key, value);
+    return Objects.hash(keywords, otherData, boolValue);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -120,9 +136,10 @@ public class IdentifierStringKeyValuePair {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class IdentifierStringKeyValuePair {\n");
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("class JsonSchema {\n");
+    sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
+    sb.append("    otherData: ").append(toIndentedString(otherData)).append("\n");
+    sb.append("    boolValue: ").append(toIndentedString(boolValue)).append("\n");
     sb.append("}");
     return sb.toString();
   }

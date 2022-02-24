@@ -29,10 +29,10 @@ import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
- * Individual Data Consent Request Response.
+ * IndividualDataConsentRequestResponse
  */
-@ApiModel(description = "Individual Data Consent Request Response.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@ApiModel(description = "IndividualDataConsentRequestResponse")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class IndividualDataConsentRequestResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

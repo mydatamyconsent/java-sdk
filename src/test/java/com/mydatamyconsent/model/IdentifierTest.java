@@ -13,7 +13,15 @@
 
 package com.mydatamyconsent.model;
 
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -23,12 +31,46 @@ import org.junit.Test;
  * Model tests for Identifier
  */
 public class IdentifierTest {
+    private final Identifier model = new Identifier();
+
     /**
      * Model tests for Identifier
      */
     @Test
     public void testIdentifier() {
         // TODO: test Identifier
+    }
+
+    /**
+     * Test the property 'key'
+     */
+    @Test
+    public void keyTest() {
+        // TODO: test key
+    }
+
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
+     * Test the property 'description'
+     */
+    @Test
+    public void descriptionTest() {
+        // TODO: test description
+    }
+
+    /**
+     * Test the property 'exampleValue'
+     */
+    @Test
+    public void exampleValueTest() {
+        // TODO: test exampleValue
     }
 
 }

@@ -9,7 +9,9 @@ Method | HTTP request | Description
 
 <a name="getAllSupportedIdentifiers"></a>
 # **getAllSupportedIdentifiers**
-> SupportedIdentifiersByCountry getAllSupportedIdentifiers(countryIso2Code)
+> SupportedIdentifier getAllSupportedIdentifiers(countryIso2Code)
+
+Get all supported identifiers by country.
 
 Get all supported identifiers by country.
 
@@ -30,7 +32,7 @@ public class Example {
     SupportedIdentifiersApi apiInstance = new SupportedIdentifiersApi(defaultClient);
     String countryIso2Code = "countryIso2Code_example"; // String | Country ISO 2 code.
     try {
-      SupportedIdentifiersByCountry result = apiInstance.getAllSupportedIdentifiers(countryIso2Code);
+      SupportedIdentifier result = apiInstance.getAllSupportedIdentifiers(countryIso2Code);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SupportedIdentifiersApi#getAllSupportedIdentifiers");
@@ -51,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SupportedIdentifiersByCountry**](SupportedIdentifiersByCountry.md)
+[**SupportedIdentifier**](SupportedIdentifier.md)
 
 ### Authorization
 
@@ -67,5 +69,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
+**500** | Server Error |  -  |
 

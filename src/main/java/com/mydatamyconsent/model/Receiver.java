@@ -21,8 +21,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.IdentificationStrategy;
-import com.mydatamyconsent.model.IdentifierStringKeyValuePair;
 import com.mydatamyconsent.model.ReceiverType;
+import com.mydatamyconsent.model.StringStringKeyValuePair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,7 +34,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Consent request receiver details
  */
 @ApiModel(description = "Consent request receiver details")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class Receiver {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -42,7 +42,7 @@ public class Receiver {
 
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
-  private List<IdentifierStringKeyValuePair> identifiers = null;
+  private List<StringStringKeyValuePair> identifiers = null;
 
   public static final String SERIALIZED_NAME_IDENTIFICATION_STRATEGY = "identificationStrategy";
   @SerializedName(SERIALIZED_NAME_IDENTIFICATION_STRATEGY)
@@ -74,15 +74,15 @@ public class Receiver {
   }
 
 
-  public Receiver identifiers(List<IdentifierStringKeyValuePair> identifiers) {
+  public Receiver identifiers(List<StringStringKeyValuePair> identifiers) {
     
     this.identifiers = identifiers;
     return this;
   }
 
-  public Receiver addIdentifiersItem(IdentifierStringKeyValuePair identifiersItem) {
+  public Receiver addIdentifiersItem(StringStringKeyValuePair identifiersItem) {
     if (this.identifiers == null) {
-      this.identifiers = new ArrayList<IdentifierStringKeyValuePair>();
+      this.identifiers = new ArrayList<StringStringKeyValuePair>();
     }
     this.identifiers.add(identifiersItem);
     return this;
@@ -95,12 +95,12 @@ public class Receiver {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Consent request receiver identifiers")
 
-  public List<IdentifierStringKeyValuePair> getIdentifiers() {
+  public List<StringStringKeyValuePair> getIdentifiers() {
     return identifiers;
   }
 
 
-  public void setIdentifiers(List<IdentifierStringKeyValuePair> identifiers) {
+  public void setIdentifiers(List<StringStringKeyValuePair> identifiers) {
     this.identifiers = identifiers;
   }
 

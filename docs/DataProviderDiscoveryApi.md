@@ -70,7 +70,6 @@ No authorization required
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
 **404** | Not Found |  -  |
-**0** | Error |  -  |
 
 <a name="getDataProviders"></a>
 # **getDataProviders**
@@ -143,5 +142,4 @@ No authorization required
 **200** | Success |  -  |
 **500** | Server Error |  -  |
 **400** | Bad Request |  -  |
-**0** | Error |  -  |
 

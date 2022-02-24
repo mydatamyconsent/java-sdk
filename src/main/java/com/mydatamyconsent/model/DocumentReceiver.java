@@ -31,8 +31,12 @@ import java.util.List;
 /**
  * DocumentReceiver
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class DocumentReceiver {
+  public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
+  @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
+  private String countryIso2Code;
+
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
   private List<StringStringKeyValuePair> identifiers = new ArrayList<StringStringKeyValuePair>();
@@ -43,6 +47,29 @@ public class DocumentReceiver {
 
   public DocumentReceiver() { 
   }
+
+  public DocumentReceiver countryIso2Code(String countryIso2Code) {
+    
+    this.countryIso2Code = countryIso2Code;
+    return this;
+  }
+
+   /**
+   * Get countryIso2Code
+   * @return countryIso2Code
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getCountryIso2Code() {
+    return countryIso2Code;
+  }
+
+
+  public void setCountryIso2Code(String countryIso2Code) {
+    this.countryIso2Code = countryIso2Code;
+  }
+
 
   public DocumentReceiver identifiers(List<StringStringKeyValuePair> identifiers) {
     
@@ -104,19 +131,21 @@ public class DocumentReceiver {
       return false;
     }
     DocumentReceiver documentReceiver = (DocumentReceiver) o;
-    return Objects.equals(this.identifiers, documentReceiver.identifiers) &&
+    return Objects.equals(this.countryIso2Code, documentReceiver.countryIso2Code) &&
+        Objects.equals(this.identifiers, documentReceiver.identifiers) &&
         Objects.equals(this.identificationStrategy, documentReceiver.identificationStrategy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifiers, identificationStrategy);
+    return Objects.hash(countryIso2Code, identifiers, identificationStrategy);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentReceiver {\n");
+    sb.append("    countryIso2Code: ").append(toIndentedString(countryIso2Code)).append("\n");
     sb.append("    identifiers: ").append(toIndentedString(identifiers)).append("\n");
     sb.append("    identificationStrategy: ").append(toIndentedString(identificationStrategy)).append("\n");
     sb.append("}");

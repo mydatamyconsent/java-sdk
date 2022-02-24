@@ -38,7 +38,6 @@ import com.mydatamyconsent.model.OrganizationDocumentDetailsDto;
 import com.mydatamyconsent.model.OrganizationDocumentDownloadDto;
 import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
 import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UserAccountFinancialTransactionsDtoPaginatedList;
 import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
@@ -100,7 +99,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -182,7 +180,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public UserDocumentDownloadDto downloadConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
@@ -202,7 +199,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UserDocumentDownloadDto> downloadConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
@@ -224,7 +220,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<UserDocumentDownloadDto> _callback) throws ApiException {
@@ -246,7 +241,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadOrgConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -328,7 +322,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDocumentDownloadDto downloadOrgConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
@@ -348,7 +341,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDocumentDownloadDto> downloadOrgConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
@@ -370,7 +362,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call downloadOrgConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<OrganizationDocumentDownloadDto> _callback) throws ApiException {
@@ -391,7 +382,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentedDocumentsCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -466,7 +456,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDocumentsDto getAllConsentedDocuments(UUID consentId) throws ApiException {
@@ -485,7 +474,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDocumentsDto> getAllConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
@@ -506,7 +494,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentedDocumentsAsync(UUID consentId, final ApiCallback<DataConsentDocumentsDto> _callback) throws ApiException {
@@ -527,7 +514,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentedFinancialAccountsCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -602,7 +588,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentFinancialsDto getAllConsentedFinancialAccounts(UUID consentId) throws ApiException {
@@ -621,7 +606,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentFinancialsDto> getAllConsentedFinancialAccountsWithHttpInfo(UUID consentId) throws ApiException {
@@ -642,7 +626,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentedFinancialAccountsAsync(UUID consentId, final ApiCallback<DataConsentFinancialsDto> _callback) throws ApiException {
@@ -663,7 +646,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllOrganizationConsentedDocumentsCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -738,7 +720,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDocumentsDto getAllOrganizationConsentedDocuments(UUID consentId) throws ApiException {
@@ -757,7 +738,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDocumentsDto> getAllOrganizationConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
@@ -778,7 +758,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllOrganizationConsentedDocumentsAsync(UUID consentId, final ApiCallback<DataConsentDocumentsDto> _callback) throws ApiException {
@@ -799,7 +778,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentDetailsByIdCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -874,7 +852,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDetailsDto getConsentDetailsById(UUID consentId) throws ApiException {
@@ -893,7 +870,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDetailsDto> getConsentDetailsByIdWithHttpInfo(UUID consentId) throws ApiException {
@@ -914,7 +890,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentDetailsByIdAsync(UUID consentId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
@@ -935,7 +910,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentFinancialAccountsCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -1010,7 +984,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentFinancialsDto getConsentFinancialAccounts(UUID consentId) throws ApiException {
@@ -1029,7 +1002,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentFinancialsDto> getConsentFinancialAccountsWithHttpInfo(UUID consentId) throws ApiException {
@@ -1050,7 +1022,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentFinancialAccountsAsync(UUID consentId, final ApiCallback<DataConsentFinancialsDto> _callback) throws ApiException {
@@ -1072,7 +1043,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedAccountByIdCall(UUID consentId, UUID accountId, final ApiCallback _callback) throws ApiException {
@@ -1154,7 +1124,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public FinancialAccount getConsentedAccountById(UUID consentId, UUID accountId) throws ApiException {
@@ -1174,7 +1143,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FinancialAccount> getConsentedAccountByIdWithHttpInfo(UUID consentId, UUID accountId) throws ApiException {
@@ -1196,7 +1164,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedAccountByIdAsync(UUID consentId, UUID accountId, final ApiCallback<FinancialAccount> _callback) throws ApiException {
@@ -1218,7 +1185,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -1300,7 +1266,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public UserDocumentDetailsDto getConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
@@ -1320,7 +1285,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UserDocumentDetailsDto> getConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
@@ -1342,7 +1306,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<UserDocumentDetailsDto> _callback) throws ApiException {
@@ -1364,7 +1327,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedFinancialAccountCall(UUID consentId, UUID accountId, final ApiCallback _callback) throws ApiException {
@@ -1446,7 +1408,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationFinancialAccountDto getConsentedFinancialAccount(UUID consentId, UUID accountId) throws ApiException {
@@ -1466,7 +1427,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationFinancialAccountDto> getConsentedFinancialAccountWithHttpInfo(UUID consentId, UUID accountId) throws ApiException {
@@ -1488,7 +1448,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedFinancialAccountAsync(UUID consentId, UUID accountId, final ApiCallback<OrganizationFinancialAccountDto> _callback) throws ApiException {
@@ -1515,7 +1474,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedFinancialAccountTransactionsCall(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -1622,7 +1580,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public UserAccountFinancialTransactionsDtoPaginatedList getConsentedFinancialAccountTransactions(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize) throws ApiException {
@@ -1647,7 +1604,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UserAccountFinancialTransactionsDtoPaginatedList> getConsentedFinancialAccountTransactionsWithHttpInfo(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize) throws ApiException {
@@ -1674,7 +1630,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentedFinancialAccountTransactionsAsync(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize, final ApiCallback<UserAccountFinancialTransactionsDtoPaginatedList> _callback) throws ApiException {
@@ -1699,7 +1654,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentsForOrganizationsCall(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -1792,7 +1746,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDataConsentInfoDtoPaginatedList getConsentsForOrganizations(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize) throws ApiException {
@@ -1815,7 +1768,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDataConsentInfoDtoPaginatedList> getConsentsForOrganizationsWithHttpInfo(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize) throws ApiException {
@@ -1840,7 +1792,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentsForOrganizationsAsync(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
@@ -1865,7 +1816,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentsSentToIndividualsCall(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -1958,7 +1908,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public UserDataConsentInfoDtoPaginatedList getConsentsSentToIndividuals(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize) throws ApiException {
@@ -1981,7 +1930,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UserDataConsentInfoDtoPaginatedList> getConsentsSentToIndividualsWithHttpInfo(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize) throws ApiException {
@@ -2006,7 +1954,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getConsentsSentToIndividualsAsync(DataConsentStatus status, OffsetDateTime from, OffsetDateTime to, Integer pageNo, Integer pageSize, final ApiCallback<UserDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
@@ -2033,7 +1980,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrgConsentedAccountTransactionsCall(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -2140,7 +2086,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationFinancialTransactionsDtoPaginatedList getOrgConsentedAccountTransactions(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize) throws ApiException {
@@ -2165,7 +2110,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationFinancialTransactionsDtoPaginatedList> getOrgConsentedAccountTransactionsWithHttpInfo(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize) throws ApiException {
@@ -2192,7 +2136,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrgConsentedAccountTransactionsAsync(UUID consentId, UUID accountId, String filters, OffsetDateTime fromDateTimeUtc, OffsetDateTime toDateTimeUtc, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationFinancialTransactionsDtoPaginatedList> _callback) throws ApiException {
@@ -2213,7 +2156,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentDetailsByIdCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -2288,7 +2230,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDetailsDto getOrganizationConsentDetailsById(UUID consentId) throws ApiException {
@@ -2307,7 +2248,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDetailsDto> getOrganizationConsentDetailsByIdWithHttpInfo(UUID consentId) throws ApiException {
@@ -2328,7 +2268,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentDetailsByIdAsync(UUID consentId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
@@ -2350,7 +2289,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
@@ -2432,7 +2370,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDocumentDetailsDto getOrganizationConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
@@ -2452,7 +2389,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDocumentDetailsDto> getOrganizationConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
@@ -2474,7 +2410,6 @@ public class DataConsentsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<OrganizationDocumentDetailsDto> _callback) throws ApiException {

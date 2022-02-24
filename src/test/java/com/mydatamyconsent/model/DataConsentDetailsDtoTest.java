@@ -18,17 +18,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentIdentifier;
-import com.mydatamyconsent.model.DataConsentRequestedDocument;
-import com.mydatamyconsent.model.DataConsentRequestedFinancialAccount;
-import com.mydatamyconsent.model.DataConsentRequesterDto;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.GetConsentTemplateDetailsDto;
+import com.mydatamyconsent.model.JsonSchema;
+import com.mydatamyconsent.model.Life;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
@@ -57,6 +52,54 @@ public class DataConsentDetailsDtoTest {
     @Test
     public void idTest() {
         // TODO: test id
+    }
+
+    /**
+     * Test the property 'title'
+     */
+    @Test
+    public void titleTest() {
+        // TODO: test title
+    }
+
+    /**
+     * Test the property 'description'
+     */
+    @Test
+    public void descriptionTest() {
+        // TODO: test description
+    }
+
+    /**
+     * Test the property 'dataLife'
+     */
+    @Test
+    public void dataLifeTest() {
+        // TODO: test dataLife
+    }
+
+    /**
+     * Test the property 'requesterName'
+     */
+    @Test
+    public void requesterNameTest() {
+        // TODO: test requesterName
+    }
+
+    /**
+     * Test the property 'requesterLogo'
+     */
+    @Test
+    public void requesterLogoTest() {
+        // TODO: test requesterLogo
+    }
+
+    /**
+     * Test the property 'location'
+     */
+    @Test
+    public void locationTest() {
+        // TODO: test location
     }
 
     /**
@@ -100,22 +143,6 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'requester'
-     */
-    @Test
-    public void requesterTest() {
-        // TODO: test requester
-    }
-
-    /**
-     * Test the property 'consentDetails'
-     */
-    @Test
-    public void consentDetailsTest() {
-        // TODO: test consentDetails
-    }
-
-    /**
      * Test the property 'identifiers'
      */
     @Test
@@ -124,19 +151,27 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'approvedDocuments'
+     * Test the property 'documents'
      */
     @Test
-    public void approvedDocumentsTest() {
-        // TODO: test approvedDocuments
+    public void documentsTest() {
+        // TODO: test documents
     }
 
     /**
-     * Test the property 'approvedFinancials'
+     * Test the property 'financials'
      */
     @Test
-    public void approvedFinancialsTest() {
-        // TODO: test approvedFinancials
+    public void financialsTest() {
+        // TODO: test financials
+    }
+
+    /**
+     * Test the property 'healthRecords'
+     */
+    @Test
+    public void healthRecordsTest() {
+        // TODO: test healthRecords
     }
 
 }

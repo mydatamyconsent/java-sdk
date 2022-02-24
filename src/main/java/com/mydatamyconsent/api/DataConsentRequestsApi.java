@@ -35,7 +35,6 @@ import com.mydatamyconsent.model.IndividualDataConsentRequestResponse;
 import org.threeten.bp.OffsetDateTime;
 import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestResponse;
-import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
 
@@ -94,7 +93,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelIndividualDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -170,7 +168,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public IndividualDataConsentRequestResponse cancelIndividualDataConsentRequest(UUID requestId) throws ApiException {
@@ -190,7 +187,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<IndividualDataConsentRequestResponse> cancelIndividualDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
@@ -212,7 +208,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelIndividualDataConsentRequestAsync(UUID requestId, final ApiCallback<IndividualDataConsentRequestResponse> _callback) throws ApiException {
@@ -234,7 +229,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelOrganizationDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -310,7 +304,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDataConsentRequestResponse cancelOrganizationDataConsentRequest(UUID requestId) throws ApiException {
@@ -330,7 +323,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDataConsentRequestResponse> cancelOrganizationDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
@@ -352,7 +344,6 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelOrganizationDataConsentRequestAsync(UUID requestId, final ApiCallback<OrganizationDataConsentRequestResponse> _callback) throws ApiException {
@@ -364,7 +355,7 @@ public class DataConsentRequestsApi {
     }
     /**
      * Build call for createIndividualDataConsentRequest
-     * @param createIndividualDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest). (required)
+     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -375,7 +366,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createIndividualDataConsentRequestCall(CreateIndividualDataConsentRequest createIndividualDataConsentRequest, final ApiCallback _callback) throws ApiException {
@@ -440,8 +430,8 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a individual data consent request.
-     * 
-     * @param createIndividualDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest). (required)
+     * Create a individual data consent request.
+     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
      * @return IndividualDataConsentRequestResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -451,7 +441,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public IndividualDataConsentRequestResponse createIndividualDataConsentRequest(CreateIndividualDataConsentRequest createIndividualDataConsentRequest) throws ApiException {
@@ -461,8 +450,8 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a individual data consent request.
-     * 
-     * @param createIndividualDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest). (required)
+     * Create a individual data consent request.
+     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
      * @return ApiResponse&lt;IndividualDataConsentRequestResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -472,7 +461,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<IndividualDataConsentRequestResponse> createIndividualDataConsentRequestWithHttpInfo(CreateIndividualDataConsentRequest createIndividualDataConsentRequest) throws ApiException {
@@ -483,8 +471,8 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a individual data consent request. (asynchronously)
-     * 
-     * @param createIndividualDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateIndividualDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateIndividualDataConsentRequest). (required)
+     * Create a individual data consent request.
+     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -495,7 +483,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createIndividualDataConsentRequestAsync(CreateIndividualDataConsentRequest createIndividualDataConsentRequest, final ApiCallback<IndividualDataConsentRequestResponse> _callback) throws ApiException {
@@ -518,7 +505,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createOrganizationDataConsentRequestCall(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest, final ApiCallback _callback) throws ApiException {
@@ -583,7 +569,7 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a organization data consent request.
-     * 
+     * Create a organization data consent request.
      * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
      * @return OrganizationDataConsentRequestResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -594,7 +580,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDataConsentRequestResponse createOrganizationDataConsentRequest(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest) throws ApiException {
@@ -604,7 +589,7 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a organization data consent request.
-     * 
+     * Create a organization data consent request.
      * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
      * @return ApiResponse&lt;OrganizationDataConsentRequestResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -615,7 +600,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDataConsentRequestResponse> createOrganizationDataConsentRequestWithHttpInfo(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest) throws ApiException {
@@ -626,7 +610,7 @@ public class DataConsentRequestsApi {
 
     /**
      * Create a organization data consent request. (asynchronously)
-     * 
+     * Create a organization data consent request.
      * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -638,7 +622,6 @@ public class DataConsentRequestsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call createOrganizationDataConsentRequestAsync(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest, final ApiCallback<OrganizationDataConsentRequestResponse> _callback) throws ApiException {
@@ -663,7 +646,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToIndividualsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -756,7 +738,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public UserDataConsentInfoDtoPaginatedList getAllConsentRequestsToIndividuals(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -779,7 +760,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UserDataConsentInfoDtoPaginatedList> getAllConsentRequestsToIndividualsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -804,7 +784,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToIndividualsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<UserDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
@@ -829,7 +808,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToOrganizationsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -922,7 +900,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public OrganizationDataConsentInfoDtoPaginatedList getAllConsentRequestsToOrganizations(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -945,7 +922,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OrganizationDataConsentInfoDtoPaginatedList> getAllConsentRequestsToOrganizationsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
@@ -970,7 +946,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToOrganizationsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
@@ -991,7 +966,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIndividualConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -1066,7 +1040,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDetailsDto getIndividualConsentRequestById(UUID requestId) throws ApiException {
@@ -1085,7 +1058,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDetailsDto> getIndividualConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
@@ -1106,7 +1078,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIndividualConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
@@ -1127,7 +1098,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -1202,7 +1172,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public DataConsentDetailsDto getOrganizationConsentRequestById(UUID requestId) throws ApiException {
@@ -1221,7 +1190,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<DataConsentDetailsDto> getOrganizationConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
@@ -1242,7 +1210,6 @@ public class DataConsentRequestsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
-        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {

@@ -18,9 +18,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.Identifier;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -42,11 +45,11 @@ public class SupportedIdentifierTest {
     }
 
     /**
-     * Test the property 'key'
+     * Test the property 'iso2'
      */
     @Test
-    public void keyTest() {
-        // TODO: test key
+    public void iso2Test() {
+        // TODO: test iso2
     }
 
     /**
@@ -58,19 +61,19 @@ public class SupportedIdentifierTest {
     }
 
     /**
-     * Test the property 'description'
+     * Test the property 'individualIdentifiers'
      */
     @Test
-    public void descriptionTest() {
-        // TODO: test description
+    public void individualIdentifiersTest() {
+        // TODO: test individualIdentifiers
     }
 
     /**
-     * Test the property 'exampleValue'
+     * Test the property 'organizationIdentifiers'
      */
     @Test
-    public void exampleValueTest() {
-        // TODO: test exampleValue
+    public void organizationIdentifiersTest() {
+        // TODO: test organizationIdentifiers
     }
 
 }

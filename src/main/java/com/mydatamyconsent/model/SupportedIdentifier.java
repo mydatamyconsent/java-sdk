@@ -20,55 +20,58 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.Identifier;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * SupportedIdentifier
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-23T10:34:53.536945433Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
 public class SupportedIdentifier {
-  public static final String SERIALIZED_NAME_KEY = "key";
-  @SerializedName(SERIALIZED_NAME_KEY)
-  private String key;
+  public static final String SERIALIZED_NAME_ISO2 = "iso2";
+  @SerializedName(SERIALIZED_NAME_ISO2)
+  private String iso2;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
+  public static final String SERIALIZED_NAME_INDIVIDUAL_IDENTIFIERS = "individualIdentifiers";
+  @SerializedName(SERIALIZED_NAME_INDIVIDUAL_IDENTIFIERS)
+  private List<Identifier> individualIdentifiers = null;
 
-  public static final String SERIALIZED_NAME_EXAMPLE_VALUE = "exampleValue";
-  @SerializedName(SERIALIZED_NAME_EXAMPLE_VALUE)
-  private String exampleValue;
+  public static final String SERIALIZED_NAME_ORGANIZATION_IDENTIFIERS = "organizationIdentifiers";
+  @SerializedName(SERIALIZED_NAME_ORGANIZATION_IDENTIFIERS)
+  private List<Identifier> organizationIdentifiers = null;
 
   public SupportedIdentifier() { 
   }
 
-  public SupportedIdentifier key(String key) {
+  public SupportedIdentifier iso2(String iso2) {
     
-    this.key = key;
+    this.iso2 = iso2;
     return this;
   }
 
    /**
-   * Get key
-   * @return key
+   * Get iso2
+   * @return iso2
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getKey() {
-    return key;
+  public String getIso2() {
+    return iso2;
   }
 
 
-  public void setKey(String key) {
-    this.key = key;
+  public void setIso2(String iso2) {
+    this.iso2 = iso2;
   }
 
 
@@ -95,49 +98,65 @@ public class SupportedIdentifier {
   }
 
 
-  public SupportedIdentifier description(String description) {
+  public SupportedIdentifier individualIdentifiers(List<Identifier> individualIdentifiers) {
     
-    this.description = description;
+    this.individualIdentifiers = individualIdentifiers;
+    return this;
+  }
+
+  public SupportedIdentifier addIndividualIdentifiersItem(Identifier individualIdentifiersItem) {
+    if (this.individualIdentifiers == null) {
+      this.individualIdentifiers = new ArrayList<Identifier>();
+    }
+    this.individualIdentifiers.add(individualIdentifiersItem);
     return this;
   }
 
    /**
-   * Get description
-   * @return description
+   * Get individualIdentifiers
+   * @return individualIdentifiers
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getDescription() {
-    return description;
+  public List<Identifier> getIndividualIdentifiers() {
+    return individualIdentifiers;
   }
 
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setIndividualIdentifiers(List<Identifier> individualIdentifiers) {
+    this.individualIdentifiers = individualIdentifiers;
   }
 
 
-  public SupportedIdentifier exampleValue(String exampleValue) {
+  public SupportedIdentifier organizationIdentifiers(List<Identifier> organizationIdentifiers) {
     
-    this.exampleValue = exampleValue;
+    this.organizationIdentifiers = organizationIdentifiers;
+    return this;
+  }
+
+  public SupportedIdentifier addOrganizationIdentifiersItem(Identifier organizationIdentifiersItem) {
+    if (this.organizationIdentifiers == null) {
+      this.organizationIdentifiers = new ArrayList<Identifier>();
+    }
+    this.organizationIdentifiers.add(organizationIdentifiersItem);
     return this;
   }
 
    /**
-   * Get exampleValue
-   * @return exampleValue
+   * Get organizationIdentifiers
+   * @return organizationIdentifiers
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getExampleValue() {
-    return exampleValue;
+  public List<Identifier> getOrganizationIdentifiers() {
+    return organizationIdentifiers;
   }
 
 
-  public void setExampleValue(String exampleValue) {
-    this.exampleValue = exampleValue;
+  public void setOrganizationIdentifiers(List<Identifier> organizationIdentifiers) {
+    this.organizationIdentifiers = organizationIdentifiers;
   }
 
 
@@ -150,10 +169,10 @@ public class SupportedIdentifier {
       return false;
     }
     SupportedIdentifier supportedIdentifier = (SupportedIdentifier) o;
-    return Objects.equals(this.key, supportedIdentifier.key) &&
+    return Objects.equals(this.iso2, supportedIdentifier.iso2) &&
         Objects.equals(this.name, supportedIdentifier.name) &&
-        Objects.equals(this.description, supportedIdentifier.description) &&
-        Objects.equals(this.exampleValue, supportedIdentifier.exampleValue);
+        Objects.equals(this.individualIdentifiers, supportedIdentifier.individualIdentifiers) &&
+        Objects.equals(this.organizationIdentifiers, supportedIdentifier.organizationIdentifiers);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -162,7 +181,7 @@ public class SupportedIdentifier {
 
   @Override
   public int hashCode() {
-    return Objects.hash(key, name, description, exampleValue);
+    return Objects.hash(iso2, name, individualIdentifiers, organizationIdentifiers);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -176,10 +195,10 @@ public class SupportedIdentifier {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SupportedIdentifier {\n");
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
+    sb.append("    iso2: ").append(toIndentedString(iso2)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-    sb.append("    exampleValue: ").append(toIndentedString(exampleValue)).append("\n");
+    sb.append("    individualIdentifiers: ").append(toIndentedString(individualIdentifiers)).append("\n");
+    sb.append("    organizationIdentifiers: ").append(toIndentedString(organizationIdentifiers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
