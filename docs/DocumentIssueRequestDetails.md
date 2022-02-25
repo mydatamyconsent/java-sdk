@@ -10,13 +10,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **UUID** | Request Id. | 
 **documentTypeId** | **UUID** |  | 
-**documentTypeName** | **String** |  | 
-**documentIdentifier** | **String** |  | 
-**status** | **DocumentIssueRequestStatus** |  |  [optional]
+**typeName** | **String** |  | 
+**identifier** | **String** |  | 
+**status** | **DocumentIssueRequestStatus** |  | 
 **description** | **String** |  | 
 **receiver** | **Object** |  | 
+**issuedAtUtc** | **OffsetDateTime** |  | 
+**validFromUtc** | **OffsetDateTime** |  | 
 **expiresAtUtc** | **OffsetDateTime** |  |  [optional]
-**metadata** | **Object** |  |  [optional]
+**metaData** | **Object** |  |  [optional]
 **createdAtUtc** | **OffsetDateTime** |  | 
 
 

@@ -2,6 +2,7 @@ README.md
 docs/Activity.md
 docs/ApprovedConsentRequest.md
 docs/BankAccountType.md
+docs/ConsentRequestReceiver.md
 docs/CreateDataProcessingAgreementRequestModel.md
 docs/CreateIndividualDataConsentRequest.md
 docs/CreateOrganizationDataConsentRequest.md
@@ -56,8 +57,6 @@ docs/OrganizationFinancialTransactionsDtoPaginatedList.md
 docs/ProblemDetails.md
 docs/PushUriRequest.md
 docs/PushUriResponse.md
-docs/Receiver.md
-docs/ReceiverType.md
 docs/SharedWith.md
 docs/StringStringKeyValuePair.md
 docs/SupportedEntityType.md
@@ -105,6 +104,7 @@ src/main/java/com/mydatamyconsent/auth/RetryingOAuth.java
 src/main/java/com/mydatamyconsent/model/Activity.java
 src/main/java/com/mydatamyconsent/model/ApprovedConsentRequest.java
 src/main/java/com/mydatamyconsent/model/BankAccountType.java
+src/main/java/com/mydatamyconsent/model/ConsentRequestReceiver.java
 src/main/java/com/mydatamyconsent/model/CreateDataProcessingAgreementRequestModel.java
 src/main/java/com/mydatamyconsent/model/CreateIndividualDataConsentRequest.java
 src/main/java/com/mydatamyconsent/model/CreateOrganizationDataConsentRequest.java
@@ -153,8 +153,6 @@ src/main/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoPagi
 src/main/java/com/mydatamyconsent/model/ProblemDetails.java
 src/main/java/com/mydatamyconsent/model/PushUriRequest.java
 src/main/java/com/mydatamyconsent/model/PushUriResponse.java
-src/main/java/com/mydatamyconsent/model/Receiver.java
-src/main/java/com/mydatamyconsent/model/ReceiverType.java
 src/main/java/com/mydatamyconsent/model/SharedWith.java
 src/main/java/com/mydatamyconsent/model/StringStringKeyValuePair.java
 src/main/java/com/mydatamyconsent/model/SupportedEntityType.java
@@ -177,6 +175,7 @@ src/test/java/com/mydatamyconsent/api/SupportedIdentifiersApiTest.java
 src/test/java/com/mydatamyconsent/model/ActivityTest.java
 src/test/java/com/mydatamyconsent/model/ApprovedConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/BankAccountTypeTest.java
+src/test/java/com/mydatamyconsent/model/ConsentRequestReceiverTest.java
 src/test/java/com/mydatamyconsent/model/CreateDataProcessingAgreementRequestModelTest.java
 src/test/java/com/mydatamyconsent/model/CreateIndividualDataConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/CreateOrganizationDataConsentRequestTest.java
@@ -225,8 +224,6 @@ src/test/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoTest
 src/test/java/com/mydatamyconsent/model/ProblemDetailsTest.java
 src/test/java/com/mydatamyconsent/model/PushUriRequestTest.java
 src/test/java/com/mydatamyconsent/model/PushUriResponseTest.java
-src/test/java/com/mydatamyconsent/model/ReceiverTest.java
-src/test/java/com/mydatamyconsent/model/ReceiverTypeTest.java
 src/test/java/com/mydatamyconsent/model/SharedWithTest.java
 src/test/java/com/mydatamyconsent/model/StringStringKeyValuePairTest.java
 src/test/java/com/mydatamyconsent/model/SupportedEntityTypeTest.java

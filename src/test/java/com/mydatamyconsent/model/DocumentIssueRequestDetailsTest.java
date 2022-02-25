@@ -61,19 +61,19 @@ public class DocumentIssueRequestDetailsTest {
     }
 
     /**
-     * Test the property 'documentTypeName'
+     * Test the property 'typeName'
      */
     @Test
-    public void documentTypeNameTest() {
-        // TODO: test documentTypeName
+    public void typeNameTest() {
+        // TODO: test typeName
     }
 
     /**
-     * Test the property 'documentIdentifier'
+     * Test the property 'identifier'
      */
     @Test
-    public void documentIdentifierTest() {
-        // TODO: test documentIdentifier
+    public void identifierTest() {
+        // TODO: test identifier
     }
 
     /**
@@ -101,6 +101,22 @@ public class DocumentIssueRequestDetailsTest {
     }
 
     /**
+     * Test the property 'issuedAtUtc'
+     */
+    @Test
+    public void issuedAtUtcTest() {
+        // TODO: test issuedAtUtc
+    }
+
+    /**
+     * Test the property 'validFromUtc'
+     */
+    @Test
+    public void validFromUtcTest() {
+        // TODO: test validFromUtc
+    }
+
+    /**
      * Test the property 'expiresAtUtc'
      */
     @Test
@@ -109,11 +125,11 @@ public class DocumentIssueRequestDetailsTest {
     }
 
     /**
-     * Test the property 'metadata'
+     * Test the property 'metaData'
      */
     @Test
-    public void metadataTest() {
-        // TODO: test metadata
+    public void metaDataTest() {
+        // TODO: test metaData
     }
 
     /**

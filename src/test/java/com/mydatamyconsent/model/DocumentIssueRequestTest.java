@@ -56,11 +56,11 @@ public class DocumentIssueRequestTest {
     }
 
     /**
-     * Test the property 'documentIdentifier'
+     * Test the property 'identifier'
      */
     @Test
-    public void documentIdentifierTest() {
-        // TODO: test documentIdentifier
+    public void identifierTest() {
+        // TODO: test identifier
     }
 
     /**
@@ -77,6 +77,22 @@ public class DocumentIssueRequestTest {
     @Test
     public void receiverTest() {
         // TODO: test receiver
+    }
+
+    /**
+     * Test the property 'issuedAtUtc'
+     */
+    @Test
+    public void issuedAtUtcTest() {
+        // TODO: test issuedAtUtc
+    }
+
+    /**
+     * Test the property 'validFromUtc'
+     */
+    @Test
+    public void validFromUtcTest() {
+        // TODO: test validFromUtc
     }
 
     /**

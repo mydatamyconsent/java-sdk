@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.IdentificationStrategy;
-import com.mydatamyconsent.model.ReceiverType;
 import com.mydatamyconsent.model.StringStringKeyValuePair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -34,12 +33,8 @@ import org.openapitools.jackson.nullable.JsonNullable;
  * Consent request receiver details
  */
 @ApiModel(description = "Consent request receiver details")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
-public class Receiver {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private ReceiverType type;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
+public class ConsentRequestReceiver {
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
   private List<StringStringKeyValuePair> identifiers = null;
@@ -48,39 +43,16 @@ public class Receiver {
   @SerializedName(SERIALIZED_NAME_IDENTIFICATION_STRATEGY)
   private IdentificationStrategy identificationStrategy;
 
-  public Receiver() { 
+  public ConsentRequestReceiver() { 
   }
 
-  public Receiver type(ReceiverType type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ReceiverType getType() {
-    return type;
-  }
-
-
-  public void setType(ReceiverType type) {
-    this.type = type;
-  }
-
-
-  public Receiver identifiers(List<StringStringKeyValuePair> identifiers) {
+  public ConsentRequestReceiver identifiers(List<StringStringKeyValuePair> identifiers) {
     
     this.identifiers = identifiers;
     return this;
   }
 
-  public Receiver addIdentifiersItem(StringStringKeyValuePair identifiersItem) {
+  public ConsentRequestReceiver addIdentifiersItem(StringStringKeyValuePair identifiersItem) {
     if (this.identifiers == null) {
       this.identifiers = new ArrayList<StringStringKeyValuePair>();
     }
@@ -105,7 +77,7 @@ public class Receiver {
   }
 
 
-  public Receiver identificationStrategy(IdentificationStrategy identificationStrategy) {
+  public ConsentRequestReceiver identificationStrategy(IdentificationStrategy identificationStrategy) {
     
     this.identificationStrategy = identificationStrategy;
     return this;
@@ -136,10 +108,9 @@ public class Receiver {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Receiver receiver = (Receiver) o;
-    return Objects.equals(this.type, receiver.type) &&
-        Objects.equals(this.identifiers, receiver.identifiers) &&
-        Objects.equals(this.identificationStrategy, receiver.identificationStrategy);
+    ConsentRequestReceiver consentRequestReceiver = (ConsentRequestReceiver) o;
+    return Objects.equals(this.identifiers, consentRequestReceiver.identifiers) &&
+        Objects.equals(this.identificationStrategy, consentRequestReceiver.identificationStrategy);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -148,7 +119,7 @@ public class Receiver {
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, identifiers, identificationStrategy);
+    return Objects.hash(identifiers, identificationStrategy);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -161,8 +132,7 @@ public class Receiver {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Receiver {\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("class ConsentRequestReceiver {\n");
     sb.append("    identifiers: ").append(toIndentedString(identifiers)).append("\n");
     sb.append("    identificationStrategy: ").append(toIndentedString(identificationStrategy)).append("\n");
     sb.append("}");

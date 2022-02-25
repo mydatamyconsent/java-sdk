@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * OrganizationFinancialTransactionsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
 public class OrganizationFinancialTransactionsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

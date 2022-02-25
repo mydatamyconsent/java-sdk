@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Receiver;
+import com.mydatamyconsent.model.ConsentRequestReceiver;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -30,7 +30,7 @@ import java.util.UUID;
  * Create individual data consent request
  */
 @ApiModel(description = "Create individual data consent request")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
 public class CreateIndividualDataConsentRequest {
   public static final String SERIALIZED_NAME_CONSENT_TEMPLATE_ID = "consentTemplateId";
   @SerializedName(SERIALIZED_NAME_CONSENT_TEMPLATE_ID)
@@ -38,7 +38,7 @@ public class CreateIndividualDataConsentRequest {
 
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
-  private Receiver receiver;
+  private ConsentRequestReceiver receiver;
 
   public CreateIndividualDataConsentRequest() { 
   }
@@ -66,7 +66,7 @@ public class CreateIndividualDataConsentRequest {
   }
 
 
-  public CreateIndividualDataConsentRequest receiver(Receiver receiver) {
+  public CreateIndividualDataConsentRequest receiver(ConsentRequestReceiver receiver) {
     
     this.receiver = receiver;
     return this;
@@ -79,12 +79,12 @@ public class CreateIndividualDataConsentRequest {
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Receiver getReceiver() {
+  public ConsentRequestReceiver getReceiver() {
     return receiver;
   }
 
 
-  public void setReceiver(Receiver receiver) {
+  public void setReceiver(ConsentRequestReceiver receiver) {
     this.receiver = receiver;
   }
 

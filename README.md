@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-02-24T10:35:00.587855006Z[Etc/UTC]
+  - Build date: 2022-02-25T10:35:02.216726365Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -163,6 +163,7 @@ Class | Method | HTTP request | Description
  - [Activity](docs/Activity.md)
  - [ApprovedConsentRequest](docs/ApprovedConsentRequest.md)
  - [BankAccountType](docs/BankAccountType.md)
+ - [ConsentRequestReceiver](docs/ConsentRequestReceiver.md)
  - [CreateDataProcessingAgreementRequestModel](docs/CreateDataProcessingAgreementRequestModel.md)
  - [CreateIndividualDataConsentRequest](docs/CreateIndividualDataConsentRequest.md)
  - [CreateOrganizationDataConsentRequest](docs/CreateOrganizationDataConsentRequest.md)
@@ -211,8 +212,6 @@ Class | Method | HTTP request | Description
  - [ProblemDetails](docs/ProblemDetails.md)
  - [PushUriRequest](docs/PushUriRequest.md)
  - [PushUriResponse](docs/PushUriResponse.md)
- - [Receiver](docs/Receiver.md)
- - [ReceiverType](docs/ReceiverType.md)
  - [SharedWith](docs/SharedWith.md)
  - [StringStringKeyValuePair](docs/StringStringKeyValuePair.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)

@@ -19,7 +19,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.IdentificationStrategy;
-import com.mydatamyconsent.model.ReceiverType;
 import com.mydatamyconsent.model.StringStringKeyValuePair;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -33,25 +32,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for Receiver
+ * Model tests for ConsentRequestReceiver
  */
-public class ReceiverTest {
-    private final Receiver model = new Receiver();
+public class ConsentRequestReceiverTest {
+    private final ConsentRequestReceiver model = new ConsentRequestReceiver();
 
     /**
-     * Model tests for Receiver
+     * Model tests for ConsentRequestReceiver
      */
     @Test
-    public void testReceiver() {
-        // TODO: test Receiver
-    }
-
-    /**
-     * Test the property 'type'
-     */
-    @Test
-    public void typeTest() {
-        // TODO: test type
+    public void testConsentRequestReceiver() {
+        // TODO: test ConsentRequestReceiver
     }
 
     /**

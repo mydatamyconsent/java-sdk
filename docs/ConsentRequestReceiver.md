@@ -1,6 +1,6 @@
 
 
-# Receiver
+# ConsentRequestReceiver
 
 Consent request receiver details
 
@@ -8,7 +8,6 @@ Consent request receiver details
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **ReceiverType** |  |  [optional]
 **identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) | Consent request receiver identifiers |  [optional]
 **identificationStrategy** | **IdentificationStrategy** |  |  [optional]
 

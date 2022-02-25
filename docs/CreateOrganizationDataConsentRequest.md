@@ -9,7 +9,7 @@ Create organization data consent request
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **consentTemplateId** | **UUID** | Consent template id |  [optional]
-**receiver** | [**Receiver**](Receiver.md) |  | 
+**receiver** | [**ConsentRequestReceiver**](ConsentRequestReceiver.md) |  | 
 
 
 

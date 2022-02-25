@@ -35,15 +35,15 @@ import org.threeten.bp.OffsetDateTime;
  * Document Issue Request.
  */
 @ApiModel(description = "Document Issue Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-24T10:35:00.587855006Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
   private UUID documentTypeId;
 
-  public static final String SERIALIZED_NAME_DOCUMENT_IDENTIFIER = "documentIdentifier";
-  @SerializedName(SERIALIZED_NAME_DOCUMENT_IDENTIFIER)
-  private String documentIdentifier;
+  public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
+  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
+  private String identifier;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -52,6 +52,14 @@ public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
   private DocumentReceiver receiver;
+
+  public static final String SERIALIZED_NAME_ISSUED_AT_UTC = "issuedAtUtc";
+  @SerializedName(SERIALIZED_NAME_ISSUED_AT_UTC)
+  private OffsetDateTime issuedAtUtc;
+
+  public static final String SERIALIZED_NAME_VALID_FROM_UTC = "validFromUtc";
+  @SerializedName(SERIALIZED_NAME_VALID_FROM_UTC)
+  private OffsetDateTime validFromUtc;
 
   public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
@@ -87,26 +95,26 @@ public class DocumentIssueRequest {
   }
 
 
-  public DocumentIssueRequest documentIdentifier(String documentIdentifier) {
+  public DocumentIssueRequest identifier(String identifier) {
     
-    this.documentIdentifier = documentIdentifier;
+    this.identifier = identifier;
     return this;
   }
 
    /**
-   * Get documentIdentifier
-   * @return documentIdentifier
+   * Get identifier
+   * @return identifier
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getDocumentIdentifier() {
-    return documentIdentifier;
+  public String getIdentifier() {
+    return identifier;
   }
 
 
-  public void setDocumentIdentifier(String documentIdentifier) {
-    this.documentIdentifier = documentIdentifier;
+  public void setIdentifier(String identifier) {
+    this.identifier = identifier;
   }
 
 
@@ -153,6 +161,52 @@ public class DocumentIssueRequest {
 
   public void setReceiver(DocumentReceiver receiver) {
     this.receiver = receiver;
+  }
+
+
+  public DocumentIssueRequest issuedAtUtc(OffsetDateTime issuedAtUtc) {
+    
+    this.issuedAtUtc = issuedAtUtc;
+    return this;
+  }
+
+   /**
+   * Get issuedAtUtc
+   * @return issuedAtUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public OffsetDateTime getIssuedAtUtc() {
+    return issuedAtUtc;
+  }
+
+
+  public void setIssuedAtUtc(OffsetDateTime issuedAtUtc) {
+    this.issuedAtUtc = issuedAtUtc;
+  }
+
+
+  public DocumentIssueRequest validFromUtc(OffsetDateTime validFromUtc) {
+    
+    this.validFromUtc = validFromUtc;
+    return this;
+  }
+
+   /**
+   * Get validFromUtc
+   * @return validFromUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public OffsetDateTime getValidFromUtc() {
+    return validFromUtc;
+  }
+
+
+  public void setValidFromUtc(OffsetDateTime validFromUtc) {
+    this.validFromUtc = validFromUtc;
   }
 
 
@@ -220,9 +274,11 @@ public class DocumentIssueRequest {
     }
     DocumentIssueRequest documentIssueRequest = (DocumentIssueRequest) o;
     return Objects.equals(this.documentTypeId, documentIssueRequest.documentTypeId) &&
-        Objects.equals(this.documentIdentifier, documentIssueRequest.documentIdentifier) &&
+        Objects.equals(this.identifier, documentIssueRequest.identifier) &&
         Objects.equals(this.description, documentIssueRequest.description) &&
         Objects.equals(this.receiver, documentIssueRequest.receiver) &&
+        Objects.equals(this.issuedAtUtc, documentIssueRequest.issuedAtUtc) &&
+        Objects.equals(this.validFromUtc, documentIssueRequest.validFromUtc) &&
         Objects.equals(this.expiresAtUtc, documentIssueRequest.expiresAtUtc) &&
         Objects.equals(this.metadata, documentIssueRequest.metadata);
   }
@@ -233,7 +289,7 @@ public class DocumentIssueRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, documentIdentifier, description, receiver, expiresAtUtc, metadata);
+    return Objects.hash(documentTypeId, identifier, description, receiver, issuedAtUtc, validFromUtc, expiresAtUtc, metadata);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -248,9 +304,11 @@ public class DocumentIssueRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentIssueRequest {\n");
     sb.append("    documentTypeId: ").append(toIndentedString(documentTypeId)).append("\n");
-    sb.append("    documentIdentifier: ").append(toIndentedString(documentIdentifier)).append("\n");
+    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
+    sb.append("    issuedAtUtc: ").append(toIndentedString(issuedAtUtc)).append("\n");
+    sb.append("    validFromUtc: ").append(toIndentedString(validFromUtc)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
