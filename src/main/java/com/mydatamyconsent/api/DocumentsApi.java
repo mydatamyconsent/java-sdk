@@ -815,7 +815,7 @@ public class DocumentsApi {
     /**
      * Build call for uploadDocumentForIndividual
      * @param issueRequestId Issue Request Id System.Guid. (required)
-     * @param formFile  (optional)
+     * @param formFile  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -886,6 +886,11 @@ public class DocumentsApi {
             throw new ApiException("Missing the required parameter 'issueRequestId' when calling uploadDocumentForIndividual(Async)");
         }
         
+        // verify the required parameter 'formFile' is set
+        if (formFile == null) {
+            throw new ApiException("Missing the required parameter 'formFile' when calling uploadDocumentForIndividual(Async)");
+        }
+        
 
         okhttp3.Call localVarCall = uploadDocumentForIndividualCall(issueRequestId, formFile, _callback);
         return localVarCall;
@@ -896,7 +901,7 @@ public class DocumentsApi {
      * Upload a document for issuance request of individual.
      * 
      * @param issueRequestId Issue Request Id System.Guid. (required)
-     * @param formFile  (optional)
+     * @param formFile  (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -916,7 +921,7 @@ public class DocumentsApi {
      * Upload a document for issuance request of individual.
      * 
      * @param issueRequestId Issue Request Id System.Guid. (required)
-     * @param formFile  (optional)
+     * @param formFile  (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -937,7 +942,7 @@ public class DocumentsApi {
      * Upload a document for issuance request of individual. (asynchronously)
      * 
      * @param issueRequestId Issue Request Id System.Guid. (required)
-     * @param formFile  (optional)
+     * @param formFile  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

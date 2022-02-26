@@ -31,10 +31,10 @@ import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * UserDocumentDetailsDto
+ * UserDocumentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
-public class UserDocumentDetailsDto {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-26T10:34:22.569965547Z[Etc/UTC]")
+public class UserDocumentDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -91,10 +91,10 @@ public class UserDocumentDetailsDto {
   @SerializedName(SERIALIZED_NAME_OWNER_ID)
   private UUID ownerId;
 
-  public UserDocumentDetailsDto() { 
+  public UserDocumentDetails() { 
   }
 
-  public UserDocumentDetailsDto id(UUID id) {
+  public UserDocumentDetails id(UUID id) {
     
     this.id = id;
     return this;
@@ -117,7 +117,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto categoryType(DocumentCategoryType categoryType) {
+  public UserDocumentDetails categoryType(DocumentCategoryType categoryType) {
     
     this.categoryType = categoryType;
     return this;
@@ -140,7 +140,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto typeId(UUID typeId) {
+  public UserDocumentDetails typeId(UUID typeId) {
     
     this.typeId = typeId;
     return this;
@@ -163,7 +163,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto typeName(String typeName) {
+  public UserDocumentDetails typeName(String typeName) {
     
     this.typeName = typeName;
     return this;
@@ -186,7 +186,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto fullName(String fullName) {
+  public UserDocumentDetails fullName(String fullName) {
     
     this.fullName = fullName;
     return this;
@@ -209,7 +209,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto identifier(String identifier) {
+  public UserDocumentDetails identifier(String identifier) {
     
     this.identifier = identifier;
     return this;
@@ -232,7 +232,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto accountId(UUID accountId) {
+  public UserDocumentDetails accountId(UUID accountId) {
     
     this.accountId = accountId;
     return this;
@@ -255,7 +255,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto issuerId(UUID issuerId) {
+  public UserDocumentDetails issuerId(UUID issuerId) {
     
     this.issuerId = issuerId;
     return this;
@@ -278,7 +278,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto issuerName(String issuerName) {
+  public UserDocumentDetails issuerName(String issuerName) {
     
     this.issuerName = issuerName;
     return this;
@@ -301,7 +301,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto storageUrl(String storageUrl) {
+  public UserDocumentDetails storageUrl(String storageUrl) {
     
     this.storageUrl = storageUrl;
     return this;
@@ -324,7 +324,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto isQuickAccessEnabled(Boolean isQuickAccessEnabled) {
+  public UserDocumentDetails isQuickAccessEnabled(Boolean isQuickAccessEnabled) {
     
     this.isQuickAccessEnabled = isQuickAccessEnabled;
     return this;
@@ -347,7 +347,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto isOwner(Boolean isOwner) {
+  public UserDocumentDetails isOwner(Boolean isOwner) {
     
     this.isOwner = isOwner;
     return this;
@@ -370,13 +370,13 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto digitalSignatureDetails(List<DigitalSignature> digitalSignatureDetails) {
+  public UserDocumentDetails digitalSignatureDetails(List<DigitalSignature> digitalSignatureDetails) {
     
     this.digitalSignatureDetails = digitalSignatureDetails;
     return this;
   }
 
-  public UserDocumentDetailsDto addDigitalSignatureDetailsItem(DigitalSignature digitalSignatureDetailsItem) {
+  public UserDocumentDetails addDigitalSignatureDetailsItem(DigitalSignature digitalSignatureDetailsItem) {
     if (this.digitalSignatureDetails == null) {
       this.digitalSignatureDetails = new ArrayList<DigitalSignature>();
     }
@@ -401,7 +401,7 @@ public class UserDocumentDetailsDto {
   }
 
 
-  public UserDocumentDetailsDto ownerId(UUID ownerId) {
+  public UserDocumentDetails ownerId(UUID ownerId) {
     
     this.ownerId = ownerId;
     return this;
@@ -432,21 +432,21 @@ public class UserDocumentDetailsDto {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UserDocumentDetailsDto userDocumentDetailsDto = (UserDocumentDetailsDto) o;
-    return Objects.equals(this.id, userDocumentDetailsDto.id) &&
-        Objects.equals(this.categoryType, userDocumentDetailsDto.categoryType) &&
-        Objects.equals(this.typeId, userDocumentDetailsDto.typeId) &&
-        Objects.equals(this.typeName, userDocumentDetailsDto.typeName) &&
-        Objects.equals(this.fullName, userDocumentDetailsDto.fullName) &&
-        Objects.equals(this.identifier, userDocumentDetailsDto.identifier) &&
-        Objects.equals(this.accountId, userDocumentDetailsDto.accountId) &&
-        Objects.equals(this.issuerId, userDocumentDetailsDto.issuerId) &&
-        Objects.equals(this.issuerName, userDocumentDetailsDto.issuerName) &&
-        Objects.equals(this.storageUrl, userDocumentDetailsDto.storageUrl) &&
-        Objects.equals(this.isQuickAccessEnabled, userDocumentDetailsDto.isQuickAccessEnabled) &&
-        Objects.equals(this.isOwner, userDocumentDetailsDto.isOwner) &&
-        Objects.equals(this.digitalSignatureDetails, userDocumentDetailsDto.digitalSignatureDetails) &&
-        Objects.equals(this.ownerId, userDocumentDetailsDto.ownerId);
+    UserDocumentDetails userDocumentDetails = (UserDocumentDetails) o;
+    return Objects.equals(this.id, userDocumentDetails.id) &&
+        Objects.equals(this.categoryType, userDocumentDetails.categoryType) &&
+        Objects.equals(this.typeId, userDocumentDetails.typeId) &&
+        Objects.equals(this.typeName, userDocumentDetails.typeName) &&
+        Objects.equals(this.fullName, userDocumentDetails.fullName) &&
+        Objects.equals(this.identifier, userDocumentDetails.identifier) &&
+        Objects.equals(this.accountId, userDocumentDetails.accountId) &&
+        Objects.equals(this.issuerId, userDocumentDetails.issuerId) &&
+        Objects.equals(this.issuerName, userDocumentDetails.issuerName) &&
+        Objects.equals(this.storageUrl, userDocumentDetails.storageUrl) &&
+        Objects.equals(this.isQuickAccessEnabled, userDocumentDetails.isQuickAccessEnabled) &&
+        Objects.equals(this.isOwner, userDocumentDetails.isOwner) &&
+        Objects.equals(this.digitalSignatureDetails, userDocumentDetails.digitalSignatureDetails) &&
+        Objects.equals(this.ownerId, userDocumentDetails.ownerId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -468,7 +468,7 @@ public class UserDocumentDetailsDto {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UserDocumentDetailsDto {\n");
+    sb.append("class UserDocumentDetails {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    categoryType: ").append(toIndentedString(categoryType)).append("\n");
     sb.append("    typeId: ").append(toIndentedString(typeId)).append("\n");

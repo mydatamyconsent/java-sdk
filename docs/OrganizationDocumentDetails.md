@@ -1,6 +1,6 @@
 
 
-# OrganizationDocumentDetailsDto
+# OrganizationDocumentDetails
 
 
 ## Properties

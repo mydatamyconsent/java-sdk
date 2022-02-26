@@ -379,7 +379,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **issueRequestId** | **UUID**| Issue Request Id System.Guid. |
- **formFile** | **File**|  | [optional]
+ **formFile** | **File**|  |
 
 ### Return type
 

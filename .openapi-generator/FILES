@@ -49,7 +49,7 @@ docs/Life.md
 docs/OrganizationDataConsentInfoDto.md
 docs/OrganizationDataConsentInfoDtoPaginatedList.md
 docs/OrganizationDataConsentRequestResponse.md
-docs/OrganizationDocumentDetailsDto.md
+docs/OrganizationDocumentDetails.md
 docs/OrganizationDocumentDownloadDto.md
 docs/OrganizationFinancialAccountDto.md
 docs/OrganizationFinancialTransactionsDto.md
@@ -68,8 +68,8 @@ docs/UserAccountFinancialTransactionsDto.md
 docs/UserAccountFinancialTransactionsDtoPaginatedList.md
 docs/UserDataConsentInfoDto.md
 docs/UserDataConsentInfoDtoPaginatedList.md
-docs/UserDocumentDetailsDto.md
-docs/UserDocumentDownloadDto.md
+docs/UserDocumentDetails.md
+docs/UserDocumentDownload.md
 gradle.properties
 pom.xml
 src/main/AndroidManifest.xml
@@ -145,7 +145,7 @@ src/main/java/com/mydatamyconsent/model/Life.java
 src/main/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoPaginatedList.java
 src/main/java/com/mydatamyconsent/model/OrganizationDataConsentRequestResponse.java
-src/main/java/com/mydatamyconsent/model/OrganizationDocumentDetailsDto.java
+src/main/java/com/mydatamyconsent/model/OrganizationDocumentDetails.java
 src/main/java/com/mydatamyconsent/model/OrganizationDocumentDownloadDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationFinancialAccountDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDto.java
@@ -163,8 +163,8 @@ src/main/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDto.java
 src/main/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDtoPaginatedList.java
 src/main/java/com/mydatamyconsent/model/UserDataConsentInfoDto.java
 src/main/java/com/mydatamyconsent/model/UserDataConsentInfoDtoPaginatedList.java
-src/main/java/com/mydatamyconsent/model/UserDocumentDetailsDto.java
-src/main/java/com/mydatamyconsent/model/UserDocumentDownloadDto.java
+src/main/java/com/mydatamyconsent/model/UserDocumentDetails.java
+src/main/java/com/mydatamyconsent/model/UserDocumentDownload.java
 src/test/java/com/mydatamyconsent/api/DataConsentRequestsApiTest.java
 src/test/java/com/mydatamyconsent/api/DataConsentsApiTest.java
 src/test/java/com/mydatamyconsent/api/DataProcessingAgreementsApiTest.java
@@ -216,7 +216,7 @@ src/test/java/com/mydatamyconsent/model/LifeTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDataConsentRequestResponseTest.java
-src/test/java/com/mydatamyconsent/model/OrganizationDocumentDetailsDtoTest.java
+src/test/java/com/mydatamyconsent/model/OrganizationDocumentDetailsTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDocumentDownloadDtoTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationFinancialAccountDtoTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoPaginatedListTest.java
@@ -234,5 +234,5 @@ src/test/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDtoPagin
 src/test/java/com/mydatamyconsent/model/UserAccountFinancialTransactionsDtoTest.java
 src/test/java/com/mydatamyconsent/model/UserDataConsentInfoDtoPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/UserDataConsentInfoDtoTest.java
-src/test/java/com/mydatamyconsent/model/UserDocumentDetailsDtoTest.java
-src/test/java/com/mydatamyconsent/model/UserDocumentDownloadDtoTest.java
+src/test/java/com/mydatamyconsent/model/UserDocumentDetailsTest.java
+src/test/java/com/mydatamyconsent/model/UserDocumentDownloadTest.java

@@ -23,23 +23,24 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
+import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for UserDocumentDownloadDto
+ * Model tests for UserDocumentDownload
  */
-public class UserDocumentDownloadDtoTest {
-    private final UserDocumentDownloadDto model = new UserDocumentDownloadDto();
+public class UserDocumentDownloadTest {
+    private final UserDocumentDownload model = new UserDocumentDownload();
 
     /**
-     * Model tests for UserDocumentDownloadDto
+     * Model tests for UserDocumentDownload
      */
     @Test
-    public void testUserDocumentDownloadDto() {
-        // TODO: test UserDocumentDownloadDto
+    public void testUserDocumentDownload() {
+        // TODO: test UserDocumentDownload
     }
 
     /**
@@ -51,11 +52,19 @@ public class UserDocumentDownloadDtoTest {
     }
 
     /**
-     * Test the property 'storageUrl'
+     * Test the property 'downloadUrl'
      */
     @Test
-    public void storageUrlTest() {
-        // TODO: test storageUrl
+    public void downloadUrlTest() {
+        // TODO: test downloadUrl
+    }
+
+    /**
+     * Test the property 'expiresAtUtc'
+     */
+    @Test
+    public void expiresAtUtcTest() {
+        // TODO: test expiresAtUtc
     }
 
     /**

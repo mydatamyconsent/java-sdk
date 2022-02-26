@@ -25,28 +25,33 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
+import org.threeten.bp.OffsetDateTime;
 
 /**
- * UserDocumentDownloadDto
+ * UserDocumentDownload
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
-public class UserDocumentDownloadDto {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-26T10:34:22.569965547Z[Etc/UTC]")
+public class UserDocumentDownload {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
-  @SerializedName(SERIALIZED_NAME_STORAGE_URL)
-  private String storageUrl;
+  public static final String SERIALIZED_NAME_DOWNLOAD_URL = "downloadUrl";
+  @SerializedName(SERIALIZED_NAME_DOWNLOAD_URL)
+  private String downloadUrl;
+
+  public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
+  private OffsetDateTime expiresAtUtc;
 
   public static final String SERIALIZED_NAME_OWNER_ID = "ownerId";
   @SerializedName(SERIALIZED_NAME_OWNER_ID)
   private UUID ownerId;
 
-  public UserDocumentDownloadDto() { 
+  public UserDocumentDownload() { 
   }
 
-  public UserDocumentDownloadDto id(UUID id) {
+  public UserDocumentDownload id(UUID id) {
     
     this.id = id;
     return this;
@@ -69,30 +74,53 @@ public class UserDocumentDownloadDto {
   }
 
 
-  public UserDocumentDownloadDto storageUrl(String storageUrl) {
+  public UserDocumentDownload downloadUrl(String downloadUrl) {
     
-    this.storageUrl = storageUrl;
+    this.downloadUrl = downloadUrl;
     return this;
   }
 
    /**
-   * Get storageUrl
-   * @return storageUrl
+   * Get downloadUrl
+   * @return downloadUrl
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getStorageUrl() {
-    return storageUrl;
+  public String getDownloadUrl() {
+    return downloadUrl;
   }
 
 
-  public void setStorageUrl(String storageUrl) {
-    this.storageUrl = storageUrl;
+  public void setDownloadUrl(String downloadUrl) {
+    this.downloadUrl = downloadUrl;
   }
 
 
-  public UserDocumentDownloadDto ownerId(UUID ownerId) {
+  public UserDocumentDownload expiresAtUtc(OffsetDateTime expiresAtUtc) {
+    
+    this.expiresAtUtc = expiresAtUtc;
+    return this;
+  }
+
+   /**
+   * Get expiresAtUtc
+   * @return expiresAtUtc
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getExpiresAtUtc() {
+    return expiresAtUtc;
+  }
+
+
+  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
+    this.expiresAtUtc = expiresAtUtc;
+  }
+
+
+  public UserDocumentDownload ownerId(UUID ownerId) {
     
     this.ownerId = ownerId;
     return this;
@@ -123,10 +151,11 @@ public class UserDocumentDownloadDto {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UserDocumentDownloadDto userDocumentDownloadDto = (UserDocumentDownloadDto) o;
-    return Objects.equals(this.id, userDocumentDownloadDto.id) &&
-        Objects.equals(this.storageUrl, userDocumentDownloadDto.storageUrl) &&
-        Objects.equals(this.ownerId, userDocumentDownloadDto.ownerId);
+    UserDocumentDownload userDocumentDownload = (UserDocumentDownload) o;
+    return Objects.equals(this.id, userDocumentDownload.id) &&
+        Objects.equals(this.downloadUrl, userDocumentDownload.downloadUrl) &&
+        Objects.equals(this.expiresAtUtc, userDocumentDownload.expiresAtUtc) &&
+        Objects.equals(this.ownerId, userDocumentDownload.ownerId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -135,7 +164,7 @@ public class UserDocumentDownloadDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, storageUrl, ownerId);
+    return Objects.hash(id, downloadUrl, expiresAtUtc, ownerId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -148,9 +177,10 @@ public class UserDocumentDownloadDto {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UserDocumentDownloadDto {\n");
+    sb.append("class UserDocumentDownload {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    storageUrl: ").append(toIndentedString(storageUrl)).append("\n");
+    sb.append("    downloadUrl: ").append(toIndentedString(downloadUrl)).append("\n");
+    sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("    ownerId: ").append(toIndentedString(ownerId)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -1,6 +1,6 @@
 
 
-# UserDocumentDownloadDto
+# UserDocumentDownload
 
 
 ## Properties
@@ -8,7 +8,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **UUID** |  |  [optional]
-**storageUrl** | **String** |  |  [optional]
+**downloadUrl** | **String** |  |  [optional]
+**expiresAtUtc** | **OffsetDateTime** |  |  [optional]
 **ownerId** | **UUID** |  |  [optional]
 
 

@@ -27,10 +27,10 @@ import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * OrganizationDocumentDetailsDto
+ * OrganizationDocumentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
-public class OrganizationDocumentDetailsDto {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-26T10:34:22.569965547Z[Etc/UTC]")
+public class OrganizationDocumentDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -75,10 +75,10 @@ public class OrganizationDocumentDetailsDto {
   @SerializedName(SERIALIZED_NAME_ISSUER_NAME)
   private String issuerName;
 
-  public OrganizationDocumentDetailsDto() { 
+  public OrganizationDocumentDetails() { 
   }
 
-  public OrganizationDocumentDetailsDto id(UUID id) {
+  public OrganizationDocumentDetails id(UUID id) {
     
     this.id = id;
     return this;
@@ -101,7 +101,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto organizationId(UUID organizationId) {
+  public OrganizationDocumentDetails organizationId(UUID organizationId) {
     
     this.organizationId = organizationId;
     return this;
@@ -124,7 +124,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto organizationName(String organizationName) {
+  public OrganizationDocumentDetails organizationName(String organizationName) {
     
     this.organizationName = organizationName;
     return this;
@@ -147,7 +147,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto typeId(UUID typeId) {
+  public OrganizationDocumentDetails typeId(UUID typeId) {
     
     this.typeId = typeId;
     return this;
@@ -170,7 +170,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto typeName(String typeName) {
+  public OrganizationDocumentDetails typeName(String typeName) {
     
     this.typeName = typeName;
     return this;
@@ -193,7 +193,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto name(String name) {
+  public OrganizationDocumentDetails name(String name) {
     
     this.name = name;
     return this;
@@ -216,7 +216,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto identifier(String identifier) {
+  public OrganizationDocumentDetails identifier(String identifier) {
     
     this.identifier = identifier;
     return this;
@@ -239,7 +239,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto storageUrl(String storageUrl) {
+  public OrganizationDocumentDetails storageUrl(String storageUrl) {
     
     this.storageUrl = storageUrl;
     return this;
@@ -262,7 +262,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto countryIso2(String countryIso2) {
+  public OrganizationDocumentDetails countryIso2(String countryIso2) {
     
     this.countryIso2 = countryIso2;
     return this;
@@ -285,7 +285,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto issuerId(UUID issuerId) {
+  public OrganizationDocumentDetails issuerId(UUID issuerId) {
     
     this.issuerId = issuerId;
     return this;
@@ -308,7 +308,7 @@ public class OrganizationDocumentDetailsDto {
   }
 
 
-  public OrganizationDocumentDetailsDto issuerName(String issuerName) {
+  public OrganizationDocumentDetails issuerName(String issuerName) {
     
     this.issuerName = issuerName;
     return this;
@@ -339,18 +339,18 @@ public class OrganizationDocumentDetailsDto {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OrganizationDocumentDetailsDto organizationDocumentDetailsDto = (OrganizationDocumentDetailsDto) o;
-    return Objects.equals(this.id, organizationDocumentDetailsDto.id) &&
-        Objects.equals(this.organizationId, organizationDocumentDetailsDto.organizationId) &&
-        Objects.equals(this.organizationName, organizationDocumentDetailsDto.organizationName) &&
-        Objects.equals(this.typeId, organizationDocumentDetailsDto.typeId) &&
-        Objects.equals(this.typeName, organizationDocumentDetailsDto.typeName) &&
-        Objects.equals(this.name, organizationDocumentDetailsDto.name) &&
-        Objects.equals(this.identifier, organizationDocumentDetailsDto.identifier) &&
-        Objects.equals(this.storageUrl, organizationDocumentDetailsDto.storageUrl) &&
-        Objects.equals(this.countryIso2, organizationDocumentDetailsDto.countryIso2) &&
-        Objects.equals(this.issuerId, organizationDocumentDetailsDto.issuerId) &&
-        Objects.equals(this.issuerName, organizationDocumentDetailsDto.issuerName);
+    OrganizationDocumentDetails organizationDocumentDetails = (OrganizationDocumentDetails) o;
+    return Objects.equals(this.id, organizationDocumentDetails.id) &&
+        Objects.equals(this.organizationId, organizationDocumentDetails.organizationId) &&
+        Objects.equals(this.organizationName, organizationDocumentDetails.organizationName) &&
+        Objects.equals(this.typeId, organizationDocumentDetails.typeId) &&
+        Objects.equals(this.typeName, organizationDocumentDetails.typeName) &&
+        Objects.equals(this.name, organizationDocumentDetails.name) &&
+        Objects.equals(this.identifier, organizationDocumentDetails.identifier) &&
+        Objects.equals(this.storageUrl, organizationDocumentDetails.storageUrl) &&
+        Objects.equals(this.countryIso2, organizationDocumentDetails.countryIso2) &&
+        Objects.equals(this.issuerId, organizationDocumentDetails.issuerId) &&
+        Objects.equals(this.issuerName, organizationDocumentDetails.issuerName);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -372,7 +372,7 @@ public class OrganizationDocumentDetailsDto {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class OrganizationDocumentDetailsDto {\n");
+    sb.append("class OrganizationDocumentDetails {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    organizationId: ").append(toIndentedString(organizationId)).append("\n");
     sb.append("    organizationName: ").append(toIndentedString(organizationName)).append("\n");

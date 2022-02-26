@@ -18,13 +18,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DigitalSignature;
-import com.mydatamyconsent.model.DocumentCategoryType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
@@ -33,17 +29,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for UserDocumentDetailsDto
+ * Model tests for OrganizationDocumentDetails
  */
-public class UserDocumentDetailsDtoTest {
-    private final UserDocumentDetailsDto model = new UserDocumentDetailsDto();
+public class OrganizationDocumentDetailsTest {
+    private final OrganizationDocumentDetails model = new OrganizationDocumentDetails();
 
     /**
-     * Model tests for UserDocumentDetailsDto
+     * Model tests for OrganizationDocumentDetails
      */
     @Test
-    public void testUserDocumentDetailsDto() {
-        // TODO: test UserDocumentDetailsDto
+    public void testOrganizationDocumentDetails() {
+        // TODO: test OrganizationDocumentDetails
     }
 
     /**
@@ -55,11 +51,19 @@ public class UserDocumentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'categoryType'
+     * Test the property 'organizationId'
      */
     @Test
-    public void categoryTypeTest() {
-        // TODO: test categoryType
+    public void organizationIdTest() {
+        // TODO: test organizationId
+    }
+
+    /**
+     * Test the property 'organizationName'
+     */
+    @Test
+    public void organizationNameTest() {
+        // TODO: test organizationName
     }
 
     /**
@@ -79,11 +83,11 @@ public class UserDocumentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'fullName'
+     * Test the property 'name'
      */
     @Test
-    public void fullNameTest() {
-        // TODO: test fullName
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
@@ -95,11 +99,19 @@ public class UserDocumentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'accountId'
+     * Test the property 'storageUrl'
      */
     @Test
-    public void accountIdTest() {
-        // TODO: test accountId
+    public void storageUrlTest() {
+        // TODO: test storageUrl
+    }
+
+    /**
+     * Test the property 'countryIso2'
+     */
+    @Test
+    public void countryIso2Test() {
+        // TODO: test countryIso2
     }
 
     /**
@@ -116,46 +128,6 @@ public class UserDocumentDetailsDtoTest {
     @Test
     public void issuerNameTest() {
         // TODO: test issuerName
-    }
-
-    /**
-     * Test the property 'storageUrl'
-     */
-    @Test
-    public void storageUrlTest() {
-        // TODO: test storageUrl
-    }
-
-    /**
-     * Test the property 'isQuickAccessEnabled'
-     */
-    @Test
-    public void isQuickAccessEnabledTest() {
-        // TODO: test isQuickAccessEnabled
-    }
-
-    /**
-     * Test the property 'isOwner'
-     */
-    @Test
-    public void isOwnerTest() {
-        // TODO: test isOwner
-    }
-
-    /**
-     * Test the property 'digitalSignatureDetails'
-     */
-    @Test
-    public void digitalSignatureDetailsTest() {
-        // TODO: test digitalSignatureDetails
-    }
-
-    /**
-     * Test the property 'ownerId'
-     */
-    @Test
-    public void ownerIdTest() {
-        // TODO: test ownerId
     }
 
 }

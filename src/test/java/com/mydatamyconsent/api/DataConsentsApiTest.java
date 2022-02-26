@@ -21,15 +21,15 @@ import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.FinancialAccount;
 import org.threeten.bp.OffsetDateTime;
 import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
-import com.mydatamyconsent.model.OrganizationDocumentDetailsDto;
+import com.mydatamyconsent.model.OrganizationDocumentDetails;
 import com.mydatamyconsent.model.OrganizationDocumentDownloadDto;
 import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
 import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
 import java.util.UUID;
 import com.mydatamyconsent.model.UserAccountFinancialTransactionsDtoPaginatedList;
 import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
-import com.mydatamyconsent.model.UserDocumentDetailsDto;
-import com.mydatamyconsent.model.UserDocumentDownloadDto;
+import com.mydatamyconsent.model.UserDocumentDetails;
+import com.mydatamyconsent.model.UserDocumentDownload;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -59,7 +59,7 @@ public class DataConsentsApiTest {
     public void downloadConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
         UUID documentId = null;
-                UserDocumentDownloadDto response = api.downloadConsentedDocumentById(consentId, documentId);
+                UserDocumentDownload response = api.downloadConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -182,7 +182,7 @@ public class DataConsentsApiTest {
     public void getConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
         UUID documentId = null;
-                UserDocumentDetailsDto response = api.getConsentedDocumentById(consentId, documentId);
+                UserDocumentDetails response = api.getConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -309,7 +309,7 @@ public class DataConsentsApiTest {
     public void getOrganizationConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
         UUID documentId = null;
-                OrganizationDocumentDetailsDto response = api.getOrganizationConsentedDocumentById(consentId, documentId);
+                OrganizationDocumentDetails response = api.getOrganizationConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     

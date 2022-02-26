@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * Document
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-25T10:35:02.216726365Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-26T10:34:22.569965547Z[Etc/UTC]")
 public class Document {
   public static final String SERIALIZED_NAME_FIELD_TITLE = "field_title";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
