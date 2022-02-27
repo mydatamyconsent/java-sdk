@@ -7,11 +7,13 @@
 
 * `IDENTITY` (value: `"Identity"`)
 
-* `HOUSE` (value: `"House"`)
+* `PROPERTY` (value: `"Property"`)
 
 * `VEHICLE` (value: `"Vehicle"`)
 
-* `MARKSMEMOS` (value: `"MarksMemos"`)
+* `ADMITANDIDCARDS` (value: `"AdmitAndIdCards"`)
+
+* `MARKSHEETS` (value: `"Marksheets"`)
 
 * `TRANSCRIPTS` (value: `"Transcripts"`)
 
@@ -23,17 +25,31 @@
 
 * `DISCHARGESUMMARY` (value: `"DischargeSummary"`)
 
-* `BILLS` (value: `"Bills"`)
+* `ACCOUNTANDCERTIFICATES` (value: `"AccountAndCertificates"`)
 
-* `INVOICES` (value: `"Invoices"`)
+* `BILLSANDINVOICES` (value: `"BillsAndInvoices"`)
+
+* `INSURANCE` (value: `"Insurance"`)
+
+* `RECEIPTSANDSUBSCRIPTIONS` (value: `"ReceiptsAndSubscriptions"`)
 
 * `TAXES` (value: `"Taxes"`)
+
+* `LICENCESANDCERTIFICATES` (value: `"LicencesAndCertificates"`)
 
 * `CORPORATES` (value: `"Corporates"`)
 
 * `COMPETITIONS` (value: `"Competitions"`)
 
 * `INTELLECTUALPROPERTIES` (value: `"IntellectualProperties"`)
+
+* `OTHERS` (value: `"Others"`)
+
+* `APPLICATIONSANDCERTIFICATES` (value: `"ApplicationsAndCertificates"`)
+
+* `LICENSES` (value: `"Licenses"`)
+
+* `ORGANIZATIONIDS` (value: `"OrganizationIds"`)
 
 
 

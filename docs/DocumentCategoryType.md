@@ -13,7 +13,11 @@
 
 * `FINANCE` (value: `"Finance"`)
 
-* `CERTIFICATES` (value: `"Certificates"`)
+* `WORKANDAWARDS` (value: `"WorkAndAwards"`)
+
+* `LICENCESANDCERTIFICATES` (value: `"LicencesAndCertificates"`)
+
+* `OTHERS` (value: `"Others"`)
 
 
 

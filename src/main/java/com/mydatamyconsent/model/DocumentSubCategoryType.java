@@ -31,11 +31,13 @@ public enum DocumentSubCategoryType {
   
   IDENTITY("Identity"),
   
-  HOUSE("House"),
+  PROPERTY("Property"),
   
   VEHICLE("Vehicle"),
   
-  MARKSMEMOS("MarksMemos"),
+  ADMITANDIDCARDS("AdmitAndIdCards"),
+  
+  MARKSHEETS("Marksheets"),
   
   TRANSCRIPTS("Transcripts"),
   
@@ -47,17 +49,31 @@ public enum DocumentSubCategoryType {
   
   DISCHARGESUMMARY("DischargeSummary"),
   
-  BILLS("Bills"),
+  ACCOUNTANDCERTIFICATES("AccountAndCertificates"),
   
-  INVOICES("Invoices"),
+  BILLSANDINVOICES("BillsAndInvoices"),
+  
+  INSURANCE("Insurance"),
+  
+  RECEIPTSANDSUBSCRIPTIONS("ReceiptsAndSubscriptions"),
   
   TAXES("Taxes"),
+  
+  LICENCESANDCERTIFICATES("LicencesAndCertificates"),
   
   CORPORATES("Corporates"),
   
   COMPETITIONS("Competitions"),
   
-  INTELLECTUALPROPERTIES("IntellectualProperties");
+  INTELLECTUALPROPERTIES("IntellectualProperties"),
+  
+  OTHERS("Others"),
+  
+  APPLICATIONSANDCERTIFICATES("ApplicationsAndCertificates"),
+  
+  LICENSES("Licenses"),
+  
+  ORGANIZATIONIDS("OrganizationIds");
 
   private String value;
 

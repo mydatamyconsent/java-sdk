@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * UriDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-26T10:34:22.569965547Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-27T10:34:27.227980464Z[Etc/UTC]")
 public class UriDetails {
   public static final String SERIALIZED_NAME_AADHAAR = "aadhaar";
   @SerializedName(SERIALIZED_NAME_AADHAAR)

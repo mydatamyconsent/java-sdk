@@ -37,7 +37,11 @@ public enum DocumentCategoryType {
   
   FINANCE("Finance"),
   
-  CERTIFICATES("Certificates");
+  WORKANDAWARDS("WorkAndAwards"),
+  
+  LICENCESANDCERTIFICATES("LicencesAndCertificates"),
+  
+  OTHERS("Others");
 
   private String value;
 
