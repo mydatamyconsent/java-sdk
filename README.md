@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-02-27T10:34:27.227980464Z[Etc/UTC]
+  - Build date: 2022-02-28T10:35:07.927237150Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -168,6 +168,7 @@ Class | Method | HTTP request | Description
  - [CreateIndividualDataConsentRequest](docs/CreateIndividualDataConsentRequest.md)
  - [CreateOrganizationDataConsentRequest](docs/CreateOrganizationDataConsentRequest.md)
  - [DataConsentDetailsDto](docs/DataConsentDetailsDto.md)
+ - [DataConsentDocumentDetailsDto](docs/DataConsentDocumentDetailsDto.md)
  - [DataConsentDocumentsDto](docs/DataConsentDocumentsDto.md)
  - [DataConsentFinancialsDto](docs/DataConsentFinancialsDto.md)
  - [DataConsentRequestedDocument](docs/DataConsentRequestedDocument.md)
@@ -214,6 +215,9 @@ Class | Method | HTTP request | Description
  - [PushUriResponse](docs/PushUriResponse.md)
  - [SharedWith](docs/SharedWith.md)
  - [StringStringKeyValuePair](docs/StringStringKeyValuePair.md)
+ - [SupportedDocumentDetailsDto](docs/SupportedDocumentDetailsDto.md)
+ - [SupportedDocumentProviderDetailsDto](docs/SupportedDocumentProviderDetailsDto.md)
+ - [SupportedDocumentTypeCategoryDetailsDto](docs/SupportedDocumentTypeCategoryDetailsDto.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)
  - [SupportedIdentifier](docs/SupportedIdentifier.md)
  - [UpdateDataProcessingAgreementRequestModel](docs/UpdateDataProcessingAgreementRequestModel.md)

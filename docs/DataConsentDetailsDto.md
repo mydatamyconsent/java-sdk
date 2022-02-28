@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **expiresAtUtc** | **OffsetDateTime** |  |  [optional]
 **requestedAtUtc** | **OffsetDateTime** |  |  [optional]
 **identifiers** | [**JsonSchema**](JsonSchema.md) |  |  [optional]
-**documents** | **String** |  |  [optional]
+**documents** | [**List&lt;DataConsentDocumentDetailsDto&gt;**](DataConsentDocumentDetailsDto.md) |  |  [optional]
 **financials** | **String** |  |  [optional]
 **healthRecords** | **String** |  |  [optional]
 

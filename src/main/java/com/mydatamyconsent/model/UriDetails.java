@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * UriDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-27T10:34:27.227980464Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
 public class UriDetails {
   public static final String SERIALIZED_NAME_AADHAAR = "aadhaar";
   @SerializedName(SERIALIZED_NAME_AADHAAR)
@@ -83,8 +83,8 @@ public class UriDetails {
    * Get aadhaar
    * @return aadhaar
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getAadhaar() {
     return aadhaar;
@@ -106,8 +106,8 @@ public class UriDetails {
    * Get uri
    * @return uri
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getUri() {
     return uri;
@@ -129,8 +129,8 @@ public class UriDetails {
    * Get docType
    * @return docType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getDocType() {
     return docType;
@@ -152,8 +152,8 @@ public class UriDetails {
    * Get docName
    * @return docName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getDocName() {
     return docName;
@@ -175,8 +175,8 @@ public class UriDetails {
    * Get docId
    * @return docId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getDocId() {
     return docId;
@@ -198,8 +198,8 @@ public class UriDetails {
    * Get issuedOn
    * @return issuedOn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getIssuedOn() {
     return issuedOn;
@@ -221,8 +221,8 @@ public class UriDetails {
    * Get validFrom
    * @return validFrom
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public String getValidFrom() {
     return validFrom;

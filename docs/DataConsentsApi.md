@@ -986,6 +986,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **500** | Server Error |  -  |
+**400** | Bad Request |  -  |
 
 <a name="getOrganizationConsentedDocumentById"></a>
 # **getOrganizationConsentedDocumentById**

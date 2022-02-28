@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * PushUriRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-27T10:34:27.227980464Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
 public class PushUriRequest {
   public static final String SERIALIZED_NAME_URI_DETAILS = "uriDetails";
   @SerializedName(SERIALIZED_NAME_URI_DETAILS)
@@ -72,8 +72,8 @@ public class PushUriRequest {
    * Get uriDetails
    * @return uriDetails
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public UriDetails getUriDetails() {
     return uriDetails;

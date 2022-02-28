@@ -20,12 +20,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.DataConsentDocumentDetailsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.JsonSchema;
 import com.mydatamyconsent.model.Life;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
@@ -33,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DataConsentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-27T10:34:27.227980464Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
 public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -89,7 +92,7 @@ public class DataConsentDetailsDto {
 
   public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
   @SerializedName(SERIALIZED_NAME_DOCUMENTS)
-  private String documents;
+  private List<DataConsentDocumentDetailsDto> documents = null;
 
   public static final String SERIALIZED_NAME_FINANCIALS = "financials";
   @SerializedName(SERIALIZED_NAME_FINANCIALS)
@@ -401,9 +404,17 @@ public class DataConsentDetailsDto {
   }
 
 
-  public DataConsentDetailsDto documents(String documents) {
+  public DataConsentDetailsDto documents(List<DataConsentDocumentDetailsDto> documents) {
     
     this.documents = documents;
+    return this;
+  }
+
+  public DataConsentDetailsDto addDocumentsItem(DataConsentDocumentDetailsDto documentsItem) {
+    if (this.documents == null) {
+      this.documents = new ArrayList<DataConsentDocumentDetailsDto>();
+    }
+    this.documents.add(documentsItem);
     return this;
   }
 
@@ -414,12 +425,12 @@ public class DataConsentDetailsDto {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getDocuments() {
+  public List<DataConsentDocumentDetailsDto> getDocuments() {
     return documents;
   }
 
 
-  public void setDocuments(String documents) {
+  public void setDocuments(List<DataConsentDocumentDetailsDto> documents) {
     this.documents = documents;
   }
 

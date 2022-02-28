@@ -20,37 +20,33 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DataConsentRequestedDocument;
-import com.mydatamyconsent.model.Document;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * DataConsentDocumentsDto
+ * SupportedDocumentProviderDetailsDto
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
-public class DataConsentDocumentsDto {
+public class SupportedDocumentProviderDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
 
-  public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
-  @SerializedName(SERIALIZED_NAME_DOCUMENTS)
-  private List<Document> documents = null;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_APPROVED_DOCUMENTS = "approvedDocuments";
-  @SerializedName(SERIALIZED_NAME_APPROVED_DOCUMENTS)
-  private List<DataConsentRequestedDocument> approvedDocuments = null;
+  public static final String SERIALIZED_NAME_LOGO_URL = "logoUrl";
+  @SerializedName(SERIALIZED_NAME_LOGO_URL)
+  private String logoUrl;
 
-  public DataConsentDocumentsDto() { 
+  public SupportedDocumentProviderDetailsDto() { 
   }
 
-  public DataConsentDocumentsDto id(UUID id) {
+  public SupportedDocumentProviderDetailsDto id(UUID id) {
     
     this.id = id;
     return this;
@@ -60,8 +56,8 @@ public class DataConsentDocumentsDto {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public UUID getId() {
     return id;
@@ -73,65 +69,49 @@ public class DataConsentDocumentsDto {
   }
 
 
-  public DataConsentDocumentsDto documents(List<Document> documents) {
+  public SupportedDocumentProviderDetailsDto name(String name) {
     
-    this.documents = documents;
-    return this;
-  }
-
-  public DataConsentDocumentsDto addDocumentsItem(Document documentsItem) {
-    if (this.documents == null) {
-      this.documents = new ArrayList<Document>();
-    }
-    this.documents.add(documentsItem);
+    this.name = name;
     return this;
   }
 
    /**
-   * Get documents
-   * @return documents
+   * Get name
+   * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
-  public List<Document> getDocuments() {
-    return documents;
+  public String getName() {
+    return name;
   }
 
 
-  public void setDocuments(List<Document> documents) {
-    this.documents = documents;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public DataConsentDocumentsDto approvedDocuments(List<DataConsentRequestedDocument> approvedDocuments) {
+  public SupportedDocumentProviderDetailsDto logoUrl(String logoUrl) {
     
-    this.approvedDocuments = approvedDocuments;
-    return this;
-  }
-
-  public DataConsentDocumentsDto addApprovedDocumentsItem(DataConsentRequestedDocument approvedDocumentsItem) {
-    if (this.approvedDocuments == null) {
-      this.approvedDocuments = new ArrayList<DataConsentRequestedDocument>();
-    }
-    this.approvedDocuments.add(approvedDocumentsItem);
+    this.logoUrl = logoUrl;
     return this;
   }
 
    /**
-   * Get approvedDocuments
-   * @return approvedDocuments
+   * Get logoUrl
+   * @return logoUrl
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<DataConsentRequestedDocument> getApprovedDocuments() {
-    return approvedDocuments;
+  public String getLogoUrl() {
+    return logoUrl;
   }
 
 
-  public void setApprovedDocuments(List<DataConsentRequestedDocument> approvedDocuments) {
-    this.approvedDocuments = approvedDocuments;
+  public void setLogoUrl(String logoUrl) {
+    this.logoUrl = logoUrl;
   }
 
 
@@ -143,10 +123,10 @@ public class DataConsentDocumentsDto {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DataConsentDocumentsDto dataConsentDocumentsDto = (DataConsentDocumentsDto) o;
-    return Objects.equals(this.id, dataConsentDocumentsDto.id) &&
-        Objects.equals(this.documents, dataConsentDocumentsDto.documents) &&
-        Objects.equals(this.approvedDocuments, dataConsentDocumentsDto.approvedDocuments);
+    SupportedDocumentProviderDetailsDto supportedDocumentProviderDetailsDto = (SupportedDocumentProviderDetailsDto) o;
+    return Objects.equals(this.id, supportedDocumentProviderDetailsDto.id) &&
+        Objects.equals(this.name, supportedDocumentProviderDetailsDto.name) &&
+        Objects.equals(this.logoUrl, supportedDocumentProviderDetailsDto.logoUrl);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -155,7 +135,7 @@ public class DataConsentDocumentsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, documents, approvedDocuments);
+    return Objects.hash(id, name, logoUrl);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -168,10 +148,10 @@ public class DataConsentDocumentsDto {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DataConsentDocumentsDto {\n");
+    sb.append("class SupportedDocumentProviderDetailsDto {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
-    sb.append("    approvedDocuments: ").append(toIndentedString(approvedDocuments)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    logoUrl: ").append(toIndentedString(logoUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

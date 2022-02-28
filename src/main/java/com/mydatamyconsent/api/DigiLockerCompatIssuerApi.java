@@ -87,6 +87,8 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call digilockerCompatIssueDocumentCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
@@ -157,6 +159,8 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public PushUriResponse digilockerCompatIssueDocument(PushUriRequest pushUriRequest) throws ApiException {
@@ -177,6 +181,8 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<PushUriResponse> digilockerCompatIssueDocumentWithHttpInfo(PushUriRequest pushUriRequest) throws ApiException {
@@ -199,6 +205,8 @@ public class DigiLockerCompatIssuerApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call digilockerCompatIssueDocumentAsync(PushUriRequest pushUriRequest, final ApiCallback<PushUriResponse> _callback) throws ApiException {

@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DocumentsRequired;
+import com.mydatamyconsent.model.SupportedDocumentTypeCategoryDetailsDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -28,30 +29,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Document
+ * DataConsentDocumentDetailsDto
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
-public class Document {
-  public static final String SERIALIZED_NAME_FIELD_TITLE = "field_title";
+public class DataConsentDocumentDetailsDto {
+  public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
   private String fieldTitle;
 
-  public static final String SERIALIZED_NAME_FIELD_SLUG = "field_slug";
+  public static final String SERIALIZED_NAME_FIELD_SLUG = "fieldSlug";
   @SerializedName(SERIALIZED_NAME_FIELD_SLUG)
   private String fieldSlug;
 
-  public static final String SERIALIZED_NAME_DRN = "drn";
-  @SerializedName(SERIALIZED_NAME_DRN)
-  private List<String> drn = new ArrayList<String>();
+  public static final String SERIALIZED_NAME_SUPPORTED_DOCUMENT_TYPE_CATEGORY_DETAILS = "supportedDocumentTypeCategoryDetails";
+  @SerializedName(SERIALIZED_NAME_SUPPORTED_DOCUMENT_TYPE_CATEGORY_DETAILS)
+  private List<SupportedDocumentTypeCategoryDetailsDto> supportedDocumentTypeCategoryDetails = new ArrayList<SupportedDocumentTypeCategoryDetailsDto>();
 
   public static final String SERIALIZED_NAME_REQUIREMENT = "requirement";
   @SerializedName(SERIALIZED_NAME_REQUIREMENT)
   private DocumentsRequired requirement;
 
-  public Document() { 
+  public DataConsentDocumentDetailsDto() { 
   }
 
-  public Document fieldTitle(String fieldTitle) {
+  public DataConsentDocumentDetailsDto fieldTitle(String fieldTitle) {
     
     this.fieldTitle = fieldTitle;
     return this;
@@ -74,7 +75,7 @@ public class Document {
   }
 
 
-  public Document fieldSlug(String fieldSlug) {
+  public DataConsentDocumentDetailsDto fieldSlug(String fieldSlug) {
     
     this.fieldSlug = fieldSlug;
     return this;
@@ -97,35 +98,35 @@ public class Document {
   }
 
 
-  public Document drn(List<String> drn) {
+  public DataConsentDocumentDetailsDto supportedDocumentTypeCategoryDetails(List<SupportedDocumentTypeCategoryDetailsDto> supportedDocumentTypeCategoryDetails) {
     
-    this.drn = drn;
+    this.supportedDocumentTypeCategoryDetails = supportedDocumentTypeCategoryDetails;
     return this;
   }
 
-  public Document addDrnItem(String drnItem) {
-    this.drn.add(drnItem);
+  public DataConsentDocumentDetailsDto addSupportedDocumentTypeCategoryDetailsItem(SupportedDocumentTypeCategoryDetailsDto supportedDocumentTypeCategoryDetailsItem) {
+    this.supportedDocumentTypeCategoryDetails.add(supportedDocumentTypeCategoryDetailsItem);
     return this;
   }
 
    /**
-   * Get drn
-   * @return drn
+   * Get supportedDocumentTypeCategoryDetails
+   * @return supportedDocumentTypeCategoryDetails
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public List<String> getDrn() {
-    return drn;
+  public List<SupportedDocumentTypeCategoryDetailsDto> getSupportedDocumentTypeCategoryDetails() {
+    return supportedDocumentTypeCategoryDetails;
   }
 
 
-  public void setDrn(List<String> drn) {
-    this.drn = drn;
+  public void setSupportedDocumentTypeCategoryDetails(List<SupportedDocumentTypeCategoryDetailsDto> supportedDocumentTypeCategoryDetails) {
+    this.supportedDocumentTypeCategoryDetails = supportedDocumentTypeCategoryDetails;
   }
 
 
-  public Document requirement(DocumentsRequired requirement) {
+  public DataConsentDocumentDetailsDto requirement(DocumentsRequired requirement) {
     
     this.requirement = requirement;
     return this;
@@ -156,25 +157,25 @@ public class Document {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Document document = (Document) o;
-    return Objects.equals(this.fieldTitle, document.fieldTitle) &&
-        Objects.equals(this.fieldSlug, document.fieldSlug) &&
-        Objects.equals(this.drn, document.drn) &&
-        Objects.equals(this.requirement, document.requirement);
+    DataConsentDocumentDetailsDto dataConsentDocumentDetailsDto = (DataConsentDocumentDetailsDto) o;
+    return Objects.equals(this.fieldTitle, dataConsentDocumentDetailsDto.fieldTitle) &&
+        Objects.equals(this.fieldSlug, dataConsentDocumentDetailsDto.fieldSlug) &&
+        Objects.equals(this.supportedDocumentTypeCategoryDetails, dataConsentDocumentDetailsDto.supportedDocumentTypeCategoryDetails) &&
+        Objects.equals(this.requirement, dataConsentDocumentDetailsDto.requirement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fieldTitle, fieldSlug, drn, requirement);
+    return Objects.hash(fieldTitle, fieldSlug, supportedDocumentTypeCategoryDetails, requirement);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Document {\n");
+    sb.append("class DataConsentDocumentDetailsDto {\n");
     sb.append("    fieldTitle: ").append(toIndentedString(fieldTitle)).append("\n");
     sb.append("    fieldSlug: ").append(toIndentedString(fieldSlug)).append("\n");
-    sb.append("    drn: ").append(toIndentedString(drn)).append("\n");
+    sb.append("    supportedDocumentTypeCategoryDetails: ").append(toIndentedString(supportedDocumentTypeCategoryDetails)).append("\n");
     sb.append("    requirement: ").append(toIndentedString(requirement)).append("\n");
     sb.append("}");
     return sb.toString();

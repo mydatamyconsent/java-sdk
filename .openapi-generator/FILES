@@ -7,6 +7,7 @@ docs/CreateDataProcessingAgreementRequestModel.md
 docs/CreateIndividualDataConsentRequest.md
 docs/CreateOrganizationDataConsentRequest.md
 docs/DataConsentDetailsDto.md
+docs/DataConsentDocumentDetailsDto.md
 docs/DataConsentDocumentsDto.md
 docs/DataConsentFinancialsDto.md
 docs/DataConsentRequestedDocument.md
@@ -59,6 +60,9 @@ docs/PushUriRequest.md
 docs/PushUriResponse.md
 docs/SharedWith.md
 docs/StringStringKeyValuePair.md
+docs/SupportedDocumentDetailsDto.md
+docs/SupportedDocumentProviderDetailsDto.md
+docs/SupportedDocumentTypeCategoryDetailsDto.md
 docs/SupportedEntityType.md
 docs/SupportedIdentifier.md
 docs/SupportedIdentifiersApi.md
@@ -109,6 +113,7 @@ src/main/java/com/mydatamyconsent/model/CreateDataProcessingAgreementRequestMode
 src/main/java/com/mydatamyconsent/model/CreateIndividualDataConsentRequest.java
 src/main/java/com/mydatamyconsent/model/CreateOrganizationDataConsentRequest.java
 src/main/java/com/mydatamyconsent/model/DataConsentDetailsDto.java
+src/main/java/com/mydatamyconsent/model/DataConsentDocumentDetailsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentDocumentsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentFinancialsDto.java
 src/main/java/com/mydatamyconsent/model/DataConsentRequestedDocument.java
@@ -155,6 +160,9 @@ src/main/java/com/mydatamyconsent/model/PushUriRequest.java
 src/main/java/com/mydatamyconsent/model/PushUriResponse.java
 src/main/java/com/mydatamyconsent/model/SharedWith.java
 src/main/java/com/mydatamyconsent/model/StringStringKeyValuePair.java
+src/main/java/com/mydatamyconsent/model/SupportedDocumentDetailsDto.java
+src/main/java/com/mydatamyconsent/model/SupportedDocumentProviderDetailsDto.java
+src/main/java/com/mydatamyconsent/model/SupportedDocumentTypeCategoryDetailsDto.java
 src/main/java/com/mydatamyconsent/model/SupportedEntityType.java
 src/main/java/com/mydatamyconsent/model/SupportedIdentifier.java
 src/main/java/com/mydatamyconsent/model/UpdateDataProcessingAgreementRequestModel.java
@@ -180,6 +188,7 @@ src/test/java/com/mydatamyconsent/model/CreateDataProcessingAgreementRequestMode
 src/test/java/com/mydatamyconsent/model/CreateIndividualDataConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/CreateOrganizationDataConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentDetailsDtoTest.java
+src/test/java/com/mydatamyconsent/model/DataConsentDocumentDetailsDtoTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentDocumentsDtoTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentFinancialsDtoTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentRequestedDocumentTest.java
@@ -226,6 +235,9 @@ src/test/java/com/mydatamyconsent/model/PushUriRequestTest.java
 src/test/java/com/mydatamyconsent/model/PushUriResponseTest.java
 src/test/java/com/mydatamyconsent/model/SharedWithTest.java
 src/test/java/com/mydatamyconsent/model/StringStringKeyValuePairTest.java
+src/test/java/com/mydatamyconsent/model/SupportedDocumentDetailsDtoTest.java
+src/test/java/com/mydatamyconsent/model/SupportedDocumentProviderDetailsDtoTest.java
+src/test/java/com/mydatamyconsent/model/SupportedDocumentTypeCategoryDetailsDtoTest.java
 src/test/java/com/mydatamyconsent/model/SupportedEntityTypeTest.java
 src/test/java/com/mydatamyconsent/model/SupportedIdentifierTest.java
 src/test/java/com/mydatamyconsent/model/UpdateDataProcessingAgreementRequestModelTest.java
