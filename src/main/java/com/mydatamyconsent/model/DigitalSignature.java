@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DigitalSignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-01T10:35:11.987146036Z[Etc/UTC]")
 public class DigitalSignature {
   public static final String SERIALIZED_NAME_SIGNED_BY = "signedBy";
   @SerializedName(SERIALIZED_NAME_SIGNED_BY)

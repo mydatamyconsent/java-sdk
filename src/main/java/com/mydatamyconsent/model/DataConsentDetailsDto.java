@@ -22,8 +22,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DataConsentDocumentDetailsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.JsonSchema;
 import com.mydatamyconsent.model.Life;
+import com.mydatamyconsent.model.Requester;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DataConsentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-28T10:35:07.927237150Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-01T10:35:11.987146036Z[Etc/UTC]")
 public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -54,17 +54,9 @@ public class DataConsentDetailsDto {
   @SerializedName(SERIALIZED_NAME_DATA_LIFE)
   private Life dataLife;
 
-  public static final String SERIALIZED_NAME_REQUESTER_NAME = "requesterName";
-  @SerializedName(SERIALIZED_NAME_REQUESTER_NAME)
-  private String requesterName;
-
-  public static final String SERIALIZED_NAME_REQUESTER_LOGO = "requesterLogo";
-  @SerializedName(SERIALIZED_NAME_REQUESTER_LOGO)
-  private String requesterLogo;
-
-  public static final String SERIALIZED_NAME_LOCATION = "location";
-  @SerializedName(SERIALIZED_NAME_LOCATION)
-  private String location;
+  public static final String SERIALIZED_NAME_REQUESTED_BY_ORG = "requestedByOrg";
+  @SerializedName(SERIALIZED_NAME_REQUESTED_BY_ORG)
+  private Requester requestedByOrg;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -88,7 +80,7 @@ public class DataConsentDetailsDto {
 
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
-  private JsonSchema identifiers;
+  private Object identifiers = null;
 
   public static final String SERIALIZED_NAME_DOCUMENTS = "documents";
   @SerializedName(SERIALIZED_NAME_DOCUMENTS)
@@ -197,72 +189,26 @@ public class DataConsentDetailsDto {
   }
 
 
-  public DataConsentDetailsDto requesterName(String requesterName) {
+  public DataConsentDetailsDto requestedByOrg(Requester requestedByOrg) {
     
-    this.requesterName = requesterName;
+    this.requestedByOrg = requestedByOrg;
     return this;
   }
 
    /**
-   * Get requesterName
-   * @return requesterName
+   * Get requestedByOrg
+   * @return requestedByOrg
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getRequesterName() {
-    return requesterName;
+  public Requester getRequestedByOrg() {
+    return requestedByOrg;
   }
 
 
-  public void setRequesterName(String requesterName) {
-    this.requesterName = requesterName;
-  }
-
-
-  public DataConsentDetailsDto requesterLogo(String requesterLogo) {
-    
-    this.requesterLogo = requesterLogo;
-    return this;
-  }
-
-   /**
-   * Get requesterLogo
-   * @return requesterLogo
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getRequesterLogo() {
-    return requesterLogo;
-  }
-
-
-  public void setRequesterLogo(String requesterLogo) {
-    this.requesterLogo = requesterLogo;
-  }
-
-
-  public DataConsentDetailsDto location(String location) {
-    
-    this.location = location;
-    return this;
-  }
-
-   /**
-   * Get location
-   * @return location
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLocation() {
-    return location;
-  }
-
-
-  public void setLocation(String location) {
-    this.location = location;
+  public void setRequestedByOrg(Requester requestedByOrg) {
+    this.requestedByOrg = requestedByOrg;
   }
 
 
@@ -381,7 +327,7 @@ public class DataConsentDetailsDto {
   }
 
 
-  public DataConsentDetailsDto identifiers(JsonSchema identifiers) {
+  public DataConsentDetailsDto identifiers(Object identifiers) {
     
     this.identifiers = identifiers;
     return this;
@@ -394,12 +340,12 @@ public class DataConsentDetailsDto {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public JsonSchema getIdentifiers() {
+  public Object getIdentifiers() {
     return identifiers;
   }
 
 
-  public void setIdentifiers(JsonSchema identifiers) {
+  public void setIdentifiers(Object identifiers) {
     this.identifiers = identifiers;
   }
 
@@ -494,9 +440,7 @@ public class DataConsentDetailsDto {
         Objects.equals(this.title, dataConsentDetailsDto.title) &&
         Objects.equals(this.description, dataConsentDetailsDto.description) &&
         Objects.equals(this.dataLife, dataConsentDetailsDto.dataLife) &&
-        Objects.equals(this.requesterName, dataConsentDetailsDto.requesterName) &&
-        Objects.equals(this.requesterLogo, dataConsentDetailsDto.requesterLogo) &&
-        Objects.equals(this.location, dataConsentDetailsDto.location) &&
+        Objects.equals(this.requestedByOrg, dataConsentDetailsDto.requestedByOrg) &&
         Objects.equals(this.status, dataConsentDetailsDto.status) &&
         Objects.equals(this.approvedAtUtc, dataConsentDetailsDto.approvedAtUtc) &&
         Objects.equals(this.rejectedAtUtc, dataConsentDetailsDto.rejectedAtUtc) &&
@@ -514,7 +458,7 @@ public class DataConsentDetailsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, title, description, dataLife, requesterName, requesterLogo, location, status, approvedAtUtc, rejectedAtUtc, expiresAtUtc, requestedAtUtc, identifiers, documents, financials, healthRecords);
+    return Objects.hash(id, title, description, dataLife, requestedByOrg, status, approvedAtUtc, rejectedAtUtc, expiresAtUtc, requestedAtUtc, identifiers, documents, financials, healthRecords);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -532,9 +476,7 @@ public class DataConsentDetailsDto {
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    dataLife: ").append(toIndentedString(dataLife)).append("\n");
-    sb.append("    requesterName: ").append(toIndentedString(requesterName)).append("\n");
-    sb.append("    requesterLogo: ").append(toIndentedString(requesterLogo)).append("\n");
-    sb.append("    location: ").append(toIndentedString(location)).append("\n");
+    sb.append("    requestedByOrg: ").append(toIndentedString(requestedByOrg)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
     sb.append("    rejectedAtUtc: ").append(toIndentedString(rejectedAtUtc)).append("\n");

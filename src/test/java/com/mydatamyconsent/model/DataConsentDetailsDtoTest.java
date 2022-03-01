@@ -20,8 +20,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DataConsentDocumentDetailsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.JsonSchema;
 import com.mydatamyconsent.model.Life;
+import com.mydatamyconsent.model.Requester;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -82,27 +82,11 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'requesterName'
+     * Test the property 'requestedByOrg'
      */
     @Test
-    public void requesterNameTest() {
-        // TODO: test requesterName
-    }
-
-    /**
-     * Test the property 'requesterLogo'
-     */
-    @Test
-    public void requesterLogoTest() {
-        // TODO: test requesterLogo
-    }
-
-    /**
-     * Test the property 'location'
-     */
-    @Test
-    public void locationTest() {
-        // TODO: test location
+    public void requestedByOrgTest() {
+        // TODO: test requestedByOrg
     }
 
     /**

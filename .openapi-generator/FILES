@@ -45,7 +45,6 @@ docs/Identifier.md
 docs/IndividualDataConsentRequestResponse.md
 docs/IssuedDocument.md
 docs/IssuedDocumentPaginatedList.md
-docs/JsonSchema.md
 docs/Life.md
 docs/OrganizationDataConsentInfoDto.md
 docs/OrganizationDataConsentInfoDtoPaginatedList.md
@@ -58,6 +57,7 @@ docs/OrganizationFinancialTransactionsDtoPaginatedList.md
 docs/ProblemDetails.md
 docs/PushUriRequest.md
 docs/PushUriResponse.md
+docs/Requester.md
 docs/SharedWith.md
 docs/StringStringKeyValuePair.md
 docs/SupportedDocumentDetailsDto.md
@@ -145,7 +145,6 @@ src/main/java/com/mydatamyconsent/model/Identifier.java
 src/main/java/com/mydatamyconsent/model/IndividualDataConsentRequestResponse.java
 src/main/java/com/mydatamyconsent/model/IssuedDocument.java
 src/main/java/com/mydatamyconsent/model/IssuedDocumentPaginatedList.java
-src/main/java/com/mydatamyconsent/model/JsonSchema.java
 src/main/java/com/mydatamyconsent/model/Life.java
 src/main/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoPaginatedList.java
@@ -158,6 +157,7 @@ src/main/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoPagi
 src/main/java/com/mydatamyconsent/model/ProblemDetails.java
 src/main/java/com/mydatamyconsent/model/PushUriRequest.java
 src/main/java/com/mydatamyconsent/model/PushUriResponse.java
+src/main/java/com/mydatamyconsent/model/Requester.java
 src/main/java/com/mydatamyconsent/model/SharedWith.java
 src/main/java/com/mydatamyconsent/model/StringStringKeyValuePair.java
 src/main/java/com/mydatamyconsent/model/SupportedDocumentDetailsDto.java
@@ -220,7 +220,6 @@ src/test/java/com/mydatamyconsent/model/IdentifierTest.java
 src/test/java/com/mydatamyconsent/model/IndividualDataConsentRequestResponseTest.java
 src/test/java/com/mydatamyconsent/model/IssuedDocumentPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/IssuedDocumentTest.java
-src/test/java/com/mydatamyconsent/model/JsonSchemaTest.java
 src/test/java/com/mydatamyconsent/model/LifeTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationDataConsentInfoDtoTest.java
@@ -233,6 +232,7 @@ src/test/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoTest
 src/test/java/com/mydatamyconsent/model/ProblemDetailsTest.java
 src/test/java/com/mydatamyconsent/model/PushUriRequestTest.java
 src/test/java/com/mydatamyconsent/model/PushUriResponseTest.java
+src/test/java/com/mydatamyconsent/model/RequesterTest.java
 src/test/java/com/mydatamyconsent/model/SharedWithTest.java
 src/test/java/com/mydatamyconsent/model/StringStringKeyValuePairTest.java
 src/test/java/com/mydatamyconsent/model/SupportedDocumentDetailsDtoTest.java

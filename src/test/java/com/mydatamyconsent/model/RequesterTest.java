@@ -21,10 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -32,41 +29,81 @@ import org.junit.Test;
 
 
 /**
- * Model tests for JsonSchema
+ * Model tests for Requester
  */
-public class JsonSchemaTest {
-    private final JsonSchema model = new JsonSchema();
+public class RequesterTest {
+    private final Requester model = new Requester();
 
     /**
-     * Model tests for JsonSchema
+     * Model tests for Requester
      */
     @Test
-    public void testJsonSchema() {
-        // TODO: test JsonSchema
+    public void testRequester() {
+        // TODO: test Requester
     }
 
     /**
-     * Test the property 'keywords'
+     * Test the property 'id'
      */
     @Test
-    public void keywordsTest() {
-        // TODO: test keywords
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'otherData'
+     * Test the property 'name'
      */
     @Test
-    public void otherDataTest() {
-        // TODO: test otherData
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
-     * Test the property 'boolValue'
+     * Test the property 'logoUrl'
      */
     @Test
-    public void boolValueTest() {
-        // TODO: test boolValue
+    public void logoUrlTest() {
+        // TODO: test logoUrl
+    }
+
+    /**
+     * Test the property 'description'
+     */
+    @Test
+    public void descriptionTest() {
+        // TODO: test description
+    }
+
+    /**
+     * Test the property 'location'
+     */
+    @Test
+    public void locationTest() {
+        // TODO: test location
+    }
+
+    /**
+     * Test the property 'websiteUrl'
+     */
+    @Test
+    public void websiteUrlTest() {
+        // TODO: test websiteUrl
+    }
+
+    /**
+     * Test the property 'supportEmail'
+     */
+    @Test
+    public void supportEmailTest() {
+        // TODO: test supportEmail
+    }
+
+    /**
+     * Test the property 'helpLineNumber'
+     */
+    @Test
+    public void helpLineNumberTest() {
+        // TODO: test helpLineNumber
     }
 
 }
