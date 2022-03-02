@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * SupportedDocumentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-01T10:35:11.987146036Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-02T10:35:03.044165321Z[Etc/UTC]")
 public class SupportedDocumentDetailsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

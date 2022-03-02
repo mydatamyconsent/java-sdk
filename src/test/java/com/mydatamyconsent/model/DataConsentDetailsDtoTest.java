@@ -50,11 +50,11 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'id'
+     * Test the property 'consentRequestId'
      */
     @Test
-    public void idTest() {
-        // TODO: test id
+    public void consentRequestIdTest() {
+        // TODO: test consentRequestId
     }
 
     /**
@@ -114,11 +114,19 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
-     * Test the property 'expiresAtUtc'
+     * Test the property 'revokedAtUtc'
      */
     @Test
-    public void expiresAtUtcTest() {
-        // TODO: test expiresAtUtc
+    public void revokedAtUtcTest() {
+        // TODO: test revokedAtUtc
+    }
+
+    /**
+     * Test the property 'requestedExpiresAtUtc'
+     */
+    @Test
+    public void requestedExpiresAtUtcTest() {
+        // TODO: test requestedExpiresAtUtc
     }
 
     /**
@@ -143,22 +151,6 @@ public class DataConsentDetailsDtoTest {
     @Test
     public void documentsTest() {
         // TODO: test documents
-    }
-
-    /**
-     * Test the property 'financials'
-     */
-    @Test
-    public void financialsTest() {
-        // TODO: test financials
-    }
-
-    /**
-     * Test the property 'healthRecords'
-     */
-    @Test
-    public void healthRecordsTest() {
-        // TODO: test healthRecords
     }
 
 }

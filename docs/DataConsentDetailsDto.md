@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **UUID** |  | 
+**consentRequestId** | **UUID** |  | 
 **title** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]
 **dataLife** | [**Life**](Life.md) |  |  [optional]
@@ -15,12 +15,11 @@ Name | Type | Description | Notes
 **status** | **DataConsentStatus** |  |  [optional]
 **approvedAtUtc** | **OffsetDateTime** |  |  [optional]
 **rejectedAtUtc** | **OffsetDateTime** |  |  [optional]
-**expiresAtUtc** | **OffsetDateTime** |  |  [optional]
+**revokedAtUtc** | **OffsetDateTime** |  |  [optional]
+**requestedExpiresAtUtc** | **OffsetDateTime** |  |  [optional]
 **requestedAtUtc** | **OffsetDateTime** |  |  [optional]
 **identifiers** | **Object** |  |  [optional]
 **documents** | [**List&lt;DataConsentDocumentDetailsDto&gt;**](DataConsentDocumentDetailsDto.md) |  |  [optional]
-**financials** | **String** |  |  [optional]
-**healthRecords** | **String** |  |  [optional]
 
 
 
