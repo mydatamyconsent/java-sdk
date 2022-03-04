@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DataConsentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-03T10:35:24.273760846Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T10:35:04.021220362Z[Etc/UTC]")
 public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_CONSENT_REQUEST_ID = "consentRequestId";
   @SerializedName(SERIALIZED_NAME_CONSENT_REQUEST_ID)
@@ -65,6 +65,10 @@ public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_APPROVED_AT_UTC = "approvedAtUtc";
   @SerializedName(SERIALIZED_NAME_APPROVED_AT_UTC)
   private OffsetDateTime approvedAtUtc;
+
+  public static final String SERIALIZED_NAME_APPROVED_EXPIRES_AT_UTC = "approvedExpiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_APPROVED_EXPIRES_AT_UTC)
+  private OffsetDateTime approvedExpiresAtUtc;
 
   public static final String SERIALIZED_NAME_REJECTED_AT_UTC = "rejectedAtUtc";
   @SerializedName(SERIALIZED_NAME_REJECTED_AT_UTC)
@@ -254,6 +258,29 @@ public class DataConsentDetailsDto {
   }
 
 
+  public DataConsentDetailsDto approvedExpiresAtUtc(OffsetDateTime approvedExpiresAtUtc) {
+    
+    this.approvedExpiresAtUtc = approvedExpiresAtUtc;
+    return this;
+  }
+
+   /**
+   * Get approvedExpiresAtUtc
+   * @return approvedExpiresAtUtc
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getApprovedExpiresAtUtc() {
+    return approvedExpiresAtUtc;
+  }
+
+
+  public void setApprovedExpiresAtUtc(OffsetDateTime approvedExpiresAtUtc) {
+    this.approvedExpiresAtUtc = approvedExpiresAtUtc;
+  }
+
+
   public DataConsentDetailsDto rejectedAtUtc(OffsetDateTime rejectedAtUtc) {
     
     this.rejectedAtUtc = rejectedAtUtc;
@@ -416,6 +443,7 @@ public class DataConsentDetailsDto {
         Objects.equals(this.requestedByOrg, dataConsentDetailsDto.requestedByOrg) &&
         Objects.equals(this.status, dataConsentDetailsDto.status) &&
         Objects.equals(this.approvedAtUtc, dataConsentDetailsDto.approvedAtUtc) &&
+        Objects.equals(this.approvedExpiresAtUtc, dataConsentDetailsDto.approvedExpiresAtUtc) &&
         Objects.equals(this.rejectedAtUtc, dataConsentDetailsDto.rejectedAtUtc) &&
         Objects.equals(this.revokedAtUtc, dataConsentDetailsDto.revokedAtUtc) &&
         Objects.equals(this.requestedExpiresAtUtc, dataConsentDetailsDto.requestedExpiresAtUtc) &&
@@ -430,7 +458,7 @@ public class DataConsentDetailsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(consentRequestId, title, description, dataLife, requestedByOrg, status, approvedAtUtc, rejectedAtUtc, revokedAtUtc, requestedExpiresAtUtc, requestedAtUtc, identifiers, documents);
+    return Objects.hash(consentRequestId, title, description, dataLife, requestedByOrg, status, approvedAtUtc, approvedExpiresAtUtc, rejectedAtUtc, revokedAtUtc, requestedExpiresAtUtc, requestedAtUtc, identifiers, documents);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -451,6 +479,7 @@ public class DataConsentDetailsDto {
     sb.append("    requestedByOrg: ").append(toIndentedString(requestedByOrg)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
+    sb.append("    approvedExpiresAtUtc: ").append(toIndentedString(approvedExpiresAtUtc)).append("\n");
     sb.append("    rejectedAtUtc: ").append(toIndentedString(rejectedAtUtc)).append("\n");
     sb.append("    revokedAtUtc: ").append(toIndentedString(revokedAtUtc)).append("\n");
     sb.append("    requestedExpiresAtUtc: ").append(toIndentedString(requestedExpiresAtUtc)).append("\n");

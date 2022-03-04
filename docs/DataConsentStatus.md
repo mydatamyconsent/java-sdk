@@ -15,6 +15,8 @@
 
 * `EXPIRED` (value: `"Expired"`)
 
+* `TIMEOUT` (value: `"Timeout"`)
+
 * `CANCELED` (value: `"Canceled"`)
 
 

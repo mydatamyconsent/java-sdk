@@ -312,7 +312,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **startDateTime** | **OffsetDateTime**| Start date time. | [optional]
  **endDateTime** | **OffsetDateTime**| End date time. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
@@ -381,7 +381,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **startDateTime** | **OffsetDateTime**| Start date time. | [optional]
  **endDateTime** | **OffsetDateTime**| End date time. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]

@@ -106,6 +106,14 @@ public class DataConsentDetailsDtoTest {
     }
 
     /**
+     * Test the property 'approvedExpiresAtUtc'
+     */
+    @Test
+    public void approvedExpiresAtUtcTest() {
+        // TODO: test approvedExpiresAtUtc
+    }
+
+    /**
      * Test the property 'rejectedAtUtc'
      */
     @Test

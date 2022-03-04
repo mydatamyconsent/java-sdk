@@ -759,7 +759,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
@@ -828,7 +828,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **from** | **OffsetDateTime**| From date time in utc timezone. | [optional]
  **to** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]

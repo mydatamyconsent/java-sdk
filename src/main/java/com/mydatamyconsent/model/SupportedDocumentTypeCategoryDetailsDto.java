@@ -28,11 +28,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * SupportedDocumentTypeCategoryDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-03T10:35:24.273760846Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T10:35:04.021220362Z[Etc/UTC]")
 public class SupportedDocumentTypeCategoryDetailsDto {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_CATEGORY_ID = "documentTypeCategoryId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_CATEGORY_ID)
@@ -48,7 +49,7 @@ public class SupportedDocumentTypeCategoryDetailsDto {
 
   public static final String SERIALIZED_NAME_SUPPORTED_DOCUMENT_PROVIDER_DETAILS = "supportedDocumentProviderDetails";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_DOCUMENT_PROVIDER_DETAILS)
-  private List<SupportedDocumentProviderDetailsDto> supportedDocumentProviderDetails = new ArrayList<SupportedDocumentProviderDetailsDto>();
+  private List<SupportedDocumentProviderDetailsDto> supportedDocumentProviderDetails = null;
 
   public SupportedDocumentTypeCategoryDetailsDto() { 
   }
@@ -134,6 +135,9 @@ public class SupportedDocumentTypeCategoryDetailsDto {
   }
 
   public SupportedDocumentTypeCategoryDetailsDto addSupportedDocumentProviderDetailsItem(SupportedDocumentProviderDetailsDto supportedDocumentProviderDetailsItem) {
+    if (this.supportedDocumentProviderDetails == null) {
+      this.supportedDocumentProviderDetails = new ArrayList<SupportedDocumentProviderDetailsDto>();
+    }
     this.supportedDocumentProviderDetails.add(supportedDocumentProviderDetailsItem);
     return this;
   }
@@ -142,8 +146,8 @@ public class SupportedDocumentTypeCategoryDetailsDto {
    * Get supportedDocumentProviderDetails
    * @return supportedDocumentProviderDetails
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public List<SupportedDocumentProviderDetailsDto> getSupportedDocumentProviderDetails() {
     return supportedDocumentProviderDetails;
@@ -170,9 +174,20 @@ public class SupportedDocumentTypeCategoryDetailsDto {
         Objects.equals(this.supportedDocumentProviderDetails, supportedDocumentTypeCategoryDetailsDto.supportedDocumentProviderDetails);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(documentTypeCategoryId, documentTypeCategoryName, supportedDocuments, supportedDocumentProviderDetails);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
