@@ -31,7 +31,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * OrganizationDataConsentInfoDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-04T10:35:04.021220362Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-05T10:34:29.817937775Z[Etc/UTC]")
 public class OrganizationDataConsentInfoDto {
   public static final String SERIALIZED_NAME_CONSENT_REQUEST_ID = "consentRequestId";
   @SerializedName(SERIALIZED_NAME_CONSENT_REQUEST_ID)
