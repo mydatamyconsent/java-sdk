@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * SupportedIdentifier
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-06T10:34:16.102435984Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-07T10:35:05.887960544Z[Etc/UTC]")
 public class SupportedIdentifier {
   public static final String SERIALIZED_NAME_ISO2 = "iso2";
   @SerializedName(SERIALIZED_NAME_ISO2)
