@@ -130,7 +130,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | Success |  -  |
+**204** | No Content |  -  |
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |
@@ -318,7 +318,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | Success |  -  |
+**204** | No Content |  -  |
 **404** | Not Found |  -  |
 **400** | Bad Request |  -  |
 **500** | Server Error |  -  |

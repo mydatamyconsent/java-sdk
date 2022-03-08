@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * SupportedDocumentTypeCategoryDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-07T10:35:05.887960544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-08T10:34:54.075701423Z[Etc/UTC]")
 public class SupportedDocumentTypeCategoryDetailsDto {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_CATEGORY_ID = "documentTypeCategoryId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_CATEGORY_ID)
