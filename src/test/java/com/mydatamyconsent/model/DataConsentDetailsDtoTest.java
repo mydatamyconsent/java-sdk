@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.CollectibleTypes;
 import com.mydatamyconsent.model.DataConsentDocumentDetailsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.Life;
@@ -87,6 +88,14 @@ public class DataConsentDetailsDtoTest {
     @Test
     public void requestedByOrgTest() {
         // TODO: test requestedByOrg
+    }
+
+    /**
+     * Test the property 'collectables'
+     */
+    @Test
+    public void collectablesTest() {
+        // TODO: test collectables
     }
 
     /**

@@ -20,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.CollectibleTypes;
 import com.mydatamyconsent.model.DataConsentDocumentDetailsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.Life;
@@ -36,7 +37,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DataConsentDetailsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-08T10:34:54.075701423Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-09T10:35:02.201252786Z[Etc/UTC]")
 public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_CONSENT_REQUEST_ID = "consentRequestId";
   @SerializedName(SERIALIZED_NAME_CONSENT_REQUEST_ID)
@@ -57,6 +58,10 @@ public class DataConsentDetailsDto {
   public static final String SERIALIZED_NAME_REQUESTED_BY_ORG = "requestedByOrg";
   @SerializedName(SERIALIZED_NAME_REQUESTED_BY_ORG)
   private Requester requestedByOrg;
+
+  public static final String SERIALIZED_NAME_COLLECTABLES = "collectables";
+  @SerializedName(SERIALIZED_NAME_COLLECTABLES)
+  private List<CollectibleTypes> collectables = new ArrayList<CollectibleTypes>();
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -209,6 +214,34 @@ public class DataConsentDetailsDto {
 
   public void setRequestedByOrg(Requester requestedByOrg) {
     this.requestedByOrg = requestedByOrg;
+  }
+
+
+  public DataConsentDetailsDto collectables(List<CollectibleTypes> collectables) {
+    
+    this.collectables = collectables;
+    return this;
+  }
+
+  public DataConsentDetailsDto addCollectablesItem(CollectibleTypes collectablesItem) {
+    this.collectables.add(collectablesItem);
+    return this;
+  }
+
+   /**
+   * Get collectables
+   * @return collectables
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<CollectibleTypes> getCollectables() {
+    return collectables;
+  }
+
+
+  public void setCollectables(List<CollectibleTypes> collectables) {
+    this.collectables = collectables;
   }
 
 
@@ -441,6 +474,7 @@ public class DataConsentDetailsDto {
         Objects.equals(this.description, dataConsentDetailsDto.description) &&
         Objects.equals(this.dataLife, dataConsentDetailsDto.dataLife) &&
         Objects.equals(this.requestedByOrg, dataConsentDetailsDto.requestedByOrg) &&
+        Objects.equals(this.collectables, dataConsentDetailsDto.collectables) &&
         Objects.equals(this.status, dataConsentDetailsDto.status) &&
         Objects.equals(this.approvedAtUtc, dataConsentDetailsDto.approvedAtUtc) &&
         Objects.equals(this.approvedExpiresAtUtc, dataConsentDetailsDto.approvedExpiresAtUtc) &&
@@ -458,7 +492,7 @@ public class DataConsentDetailsDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(consentRequestId, title, description, dataLife, requestedByOrg, status, approvedAtUtc, approvedExpiresAtUtc, rejectedAtUtc, revokedAtUtc, requestedExpiresAtUtc, requestedAtUtc, identifiers, documents);
+    return Objects.hash(consentRequestId, title, description, dataLife, requestedByOrg, collectables, status, approvedAtUtc, approvedExpiresAtUtc, rejectedAtUtc, revokedAtUtc, requestedExpiresAtUtc, requestedAtUtc, identifiers, documents);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -477,6 +511,7 @@ public class DataConsentDetailsDto {
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    dataLife: ").append(toIndentedString(dataLife)).append("\n");
     sb.append("    requestedByOrg: ").append(toIndentedString(requestedByOrg)).append("\n");
+    sb.append("    collectables: ").append(toIndentedString(collectables)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
     sb.append("    approvedExpiresAtUtc: ").append(toIndentedString(approvedExpiresAtUtc)).append("\n");

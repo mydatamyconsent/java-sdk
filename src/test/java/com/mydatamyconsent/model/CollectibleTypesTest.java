@@ -11,12 +11,24 @@
  */
 
 
-package com.mydatamyconsent.auth;
+package com.mydatamyconsent.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-09T10:35:02.201252786Z[Etc/UTC]")
-public enum OAuthFlow {
-    accessCode, //called authorizationCode  in OpenAPI 3.0
-    implicit,
-    password,
-    application //called clientCredentials in OpenAPI 3.0
+import com.google.gson.annotations.SerializedName;
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+
+/**
+ * Model tests for CollectibleTypes
+ */
+public class CollectibleTypesTest {
+    /**
+     * Model tests for CollectibleTypes
+     */
+    @Test
+    public void testCollectibleTypes() {
+        // TODO: test CollectibleTypes
+    }
+
 }

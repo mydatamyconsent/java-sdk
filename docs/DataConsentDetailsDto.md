@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **description** | **String** |  |  [optional]
 **dataLife** | [**Life**](Life.md) |  |  [optional]
 **requestedByOrg** | [**Requester**](Requester.md) |  |  [optional]
+**collectables** | **List&lt;CollectibleTypes&gt;** |  | 
 **status** | **DataConsentStatus** |  |  [optional]
 **approvedAtUtc** | **OffsetDateTime** |  |  [optional]
 **approvedExpiresAtUtc** | **OffsetDateTime** |  |  [optional]
