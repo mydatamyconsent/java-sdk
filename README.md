@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-03-09T10:35:02.201252786Z[Etc/UTC]
+  - Build date: 2022-03-10T10:35:10.300987462Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *DataConsentRequestsApi* | [**getAllConsentRequestsToOrganizations**](docs/DataConsentRequestsApi.md#getAllConsentRequestsToOrganizations) | **GET** /v1/consent-requests/organizations | Get All Consent Requests sent to Organizations.
 *DataConsentRequestsApi* | [**getIndividualConsentRequestById**](docs/DataConsentRequestsApi.md#getIndividualConsentRequestById) | **GET** /v1/consent-requests/individuals/{requestId} | Get a Consent Request by ID.
 *DataConsentRequestsApi* | [**getOrganizationConsentRequestById**](docs/DataConsentRequestsApi.md#getOrganizationConsentRequestById) | **GET** /v1/consent-requests/organizations/{requestId} | Get a OrganizationConsent Request by Id.
+*DataConsentsApi* | [**downloadConsentedDocumentAnalysis**](docs/DataConsentsApi.md#downloadConsentedDocumentAnalysis) | **GET** /v1/consents/{consentId}/documents/{documentId}/analysis | Get analysis of a consented document.
 *DataConsentsApi* | [**downloadConsentedDocumentById**](docs/DataConsentsApi.md#downloadConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download a individuals consented document.
 *DataConsentsApi* | [**downloadOrgConsentedDocumentById**](docs/DataConsentsApi.md#downloadOrgConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download a organizations consented document.
 *DataConsentsApi* | [**getAllConsentedDocuments**](docs/DataConsentsApi.md#getAllConsentedDocuments) | **GET** /v1/consents/individuals/{consentId}/documents | Get the individual documents based on ConsentId.
@@ -133,6 +134,7 @@ Class | Method | HTTP request | Description
 *DataConsentsApi* | [**getConsentedAccountById**](docs/DataConsentsApi.md#getConsentedAccountById) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId} | Get individual consented financial account details based on account id.
 *DataConsentsApi* | [**getConsentedDocumentById**](docs/DataConsentsApi.md#getConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individuals consent document based on document id.
 *DataConsentsApi* | [**getConsentedFinancialAccount**](docs/DataConsentsApi.md#getConsentedFinancialAccount) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId} | Get organization consented financial account details based on account id.
+*DataConsentsApi* | [**getConsentedFinancialAccountInsights**](docs/DataConsentsApi.md#getConsentedFinancialAccountInsights) | **GET** /v1/consents/{consentId}/financial-accounts/{accountId}/insights | Get consented financial account insights.
 *DataConsentsApi* | [**getConsentedFinancialAccountTransactions**](docs/DataConsentsApi.md#getConsentedFinancialAccountTransactions) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId}/transactions | Get individual consented financial account transactions of an individual based on accountId.
 *DataConsentsApi* | [**getConsentsForOrganizations**](docs/DataConsentsApi.md#getConsentsForOrganizations) | **GET** /v1/consents/organizations | Get the list of data consents sent for organizations.
 *DataConsentsApi* | [**getConsentsSentToIndividuals**](docs/DataConsentsApi.md#getConsentsSentToIndividuals) | **GET** /v1/consents/individuals | Get the list of Consents Sent to Individuals.

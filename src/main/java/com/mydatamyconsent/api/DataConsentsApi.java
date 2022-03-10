@@ -88,6 +88,144 @@ public class DataConsentsApi {
     }
 
     /**
+     * Build call for downloadConsentedDocumentAnalysis
+     * @param consentId  (required)
+     * @param documentId Document Id. (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call downloadConsentedDocumentAnalysisCall(String consentId, String documentId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/consents/{consentId}/documents/{documentId}/analysis"
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
+            .replaceAll("\\{" + "documentId" + "\\}", localVarApiClient.escapeString(documentId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call downloadConsentedDocumentAnalysisValidateBeforeCall(String consentId, String documentId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'consentId' is set
+        if (consentId == null) {
+            throw new ApiException("Missing the required parameter 'consentId' when calling downloadConsentedDocumentAnalysis(Async)");
+        }
+        
+        // verify the required parameter 'documentId' is set
+        if (documentId == null) {
+            throw new ApiException("Missing the required parameter 'documentId' when calling downloadConsentedDocumentAnalysis(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = downloadConsentedDocumentAnalysisCall(consentId, documentId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get analysis of a consented document.
+     * 
+     * @param consentId  (required)
+     * @param documentId Document Id. (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public void downloadConsentedDocumentAnalysis(String consentId, String documentId) throws ApiException {
+        downloadConsentedDocumentAnalysisWithHttpInfo(consentId, documentId);
+    }
+
+    /**
+     * Get analysis of a consented document.
+     * 
+     * @param consentId  (required)
+     * @param documentId Document Id. (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> downloadConsentedDocumentAnalysisWithHttpInfo(String consentId, String documentId) throws ApiException {
+        okhttp3.Call localVarCall = downloadConsentedDocumentAnalysisValidateBeforeCall(consentId, documentId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Get analysis of a consented document. (asynchronously)
+     * 
+     * @param consentId  (required)
+     * @param documentId Document Id. (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call downloadConsentedDocumentAnalysisAsync(String consentId, String documentId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = downloadConsentedDocumentAnalysisValidateBeforeCall(consentId, documentId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for downloadConsentedDocumentById
      * @param consentId Consent id. (required)
      * @param documentId Document id. (required)
@@ -1455,6 +1593,144 @@ public class DataConsentsApi {
         okhttp3.Call localVarCall = getConsentedFinancialAccountValidateBeforeCall(consentId, accountId, _callback);
         Type localVarReturnType = new TypeToken<OrganizationFinancialAccountDto>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getConsentedFinancialAccountInsights
+     * @param consentId  (required)
+     * @param accountId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConsentedFinancialAccountInsightsCall(String consentId, String accountId, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/consents/{consentId}/financial-accounts/{accountId}/insights"
+            .replaceAll("\\{" + "consentId" + "\\}", localVarApiClient.escapeString(consentId.toString()))
+            .replaceAll("\\{" + "accountId" + "\\}", localVarApiClient.escapeString(accountId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getConsentedFinancialAccountInsightsValidateBeforeCall(String consentId, String accountId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'consentId' is set
+        if (consentId == null) {
+            throw new ApiException("Missing the required parameter 'consentId' when calling getConsentedFinancialAccountInsights(Async)");
+        }
+        
+        // verify the required parameter 'accountId' is set
+        if (accountId == null) {
+            throw new ApiException("Missing the required parameter 'accountId' when calling getConsentedFinancialAccountInsights(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getConsentedFinancialAccountInsightsCall(consentId, accountId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Get consented financial account insights.
+     * 
+     * @param consentId  (required)
+     * @param accountId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public void getConsentedFinancialAccountInsights(String consentId, String accountId) throws ApiException {
+        getConsentedFinancialAccountInsightsWithHttpInfo(consentId, accountId);
+    }
+
+    /**
+     * Get consented financial account insights.
+     * 
+     * @param consentId  (required)
+     * @param accountId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> getConsentedFinancialAccountInsightsWithHttpInfo(String consentId, String accountId) throws ApiException {
+        okhttp3.Call localVarCall = getConsentedFinancialAccountInsightsValidateBeforeCall(consentId, accountId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     * Get consented financial account insights. (asynchronously)
+     * 
+     * @param consentId  (required)
+     * @param accountId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getConsentedFinancialAccountInsightsAsync(String consentId, String accountId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getConsentedFinancialAccountInsightsValidateBeforeCall(consentId, accountId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**

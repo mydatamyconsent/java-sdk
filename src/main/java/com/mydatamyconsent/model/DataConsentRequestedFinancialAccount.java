@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DataConsentRequestedFinancialAccount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-09T10:35:02.201252786Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T10:35:10.300987462Z[Etc/UTC]")
 public class DataConsentRequestedFinancialAccount {
   public static final String SERIALIZED_NAME_CUSTOM_KEY = "custom_key";
   @SerializedName(SERIALIZED_NAME_CUSTOM_KEY)

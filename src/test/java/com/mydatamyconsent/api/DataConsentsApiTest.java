@@ -48,6 +48,22 @@ public class DataConsentsApiTest {
 
     
     /**
+     * Get analysis of a consented document.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void downloadConsentedDocumentAnalysisTest() throws ApiException {
+        String consentId = null;
+        String documentId = null;
+                api.downloadConsentedDocumentAnalysis(consentId, documentId);
+        // TODO: test validations
+    }
+    
+    /**
      * Download a individuals consented document.
      *
      * 
@@ -199,6 +215,22 @@ public class DataConsentsApiTest {
         UUID consentId = null;
         UUID accountId = null;
                 OrganizationFinancialAccountDto response = api.getConsentedFinancialAccount(consentId, accountId);
+        // TODO: test validations
+    }
+    
+    /**
+     * Get consented financial account insights.
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getConsentedFinancialAccountInsightsTest() throws ApiException {
+        String consentId = null;
+        String accountId = null;
+                api.getConsentedFinancialAccountInsights(consentId, accountId);
         // TODO: test validations
     }
     

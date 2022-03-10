@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**downloadConsentedDocumentAnalysis**](DataConsentsApi.md#downloadConsentedDocumentAnalysis) | **GET** /v1/consents/{consentId}/documents/{documentId}/analysis | Get analysis of a consented document.
 [**downloadConsentedDocumentById**](DataConsentsApi.md#downloadConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download a individuals consented document.
 [**downloadOrgConsentedDocumentById**](DataConsentsApi.md#downloadOrgConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download a organizations consented document.
 [**getAllConsentedDocuments**](DataConsentsApi.md#getAllConsentedDocuments) | **GET** /v1/consents/individuals/{consentId}/documents | Get the individual documents based on ConsentId.
@@ -14,6 +15,7 @@ Method | HTTP request | Description
 [**getConsentedAccountById**](DataConsentsApi.md#getConsentedAccountById) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId} | Get individual consented financial account details based on account id.
 [**getConsentedDocumentById**](DataConsentsApi.md#getConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individuals consent document based on document id.
 [**getConsentedFinancialAccount**](DataConsentsApi.md#getConsentedFinancialAccount) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId} | Get organization consented financial account details based on account id.
+[**getConsentedFinancialAccountInsights**](DataConsentsApi.md#getConsentedFinancialAccountInsights) | **GET** /v1/consents/{consentId}/financial-accounts/{accountId}/insights | Get consented financial account insights.
 [**getConsentedFinancialAccountTransactions**](DataConsentsApi.md#getConsentedFinancialAccountTransactions) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId}/transactions | Get individual consented financial account transactions of an individual based on accountId.
 [**getConsentsForOrganizations**](DataConsentsApi.md#getConsentsForOrganizations) | **GET** /v1/consents/organizations | Get the list of data consents sent for organizations.
 [**getConsentsSentToIndividuals**](DataConsentsApi.md#getConsentsSentToIndividuals) | **GET** /v1/consents/individuals | Get the list of Consents Sent to Individuals.
@@ -21,6 +23,68 @@ Method | HTTP request | Description
 [**getOrganizationConsentDetailsById**](DataConsentsApi.md#getOrganizationConsentDetailsById) | **GET** /v1/consents/organizations/{consentId} | Get all organization consent details by consent id.
 [**getOrganizationConsentedDocumentById**](DataConsentsApi.md#getOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId} | Get organization consent document based on document id.
 
+
+<a name="downloadConsentedDocumentAnalysis"></a>
+# **downloadConsentedDocumentAnalysis**
+> downloadConsentedDocumentAnalysis(consentId, documentId)
+
+Get analysis of a consented document.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    String consentId = "consentId_example"; // String | 
+    String documentId = "documentId_example"; // String | Document Id.
+    try {
+      apiInstance.downloadConsentedDocumentAnalysis(consentId, documentId);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#downloadConsentedDocumentAnalysis");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **String**|  |
+ **documentId** | **String**| Document Id. |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
 
 <a name="downloadConsentedDocumentById"></a>
 # **downloadConsentedDocumentById**
@@ -626,6 +690,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationFinancialAccountDto**](OrganizationFinancialAccountDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**500** | Server Error |  -  |
+
+<a name="getConsentedFinancialAccountInsights"></a>
+# **getConsentedFinancialAccountInsights**
+> getConsentedFinancialAccountInsights(consentId, accountId)
+
+Get consented financial account insights.
+
+### Example
+```java
+// Import classes:
+import com.mydatamyconsent.ApiClient;
+import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.models.*;
+import com.mydatamyconsent.api.DataConsentsApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.mydatamyconsent.com");
+
+    DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
+    String consentId = "consentId_example"; // String | 
+    String accountId = "accountId_example"; // String | 
+    try {
+      apiInstance.getConsentedFinancialAccountInsights(consentId, accountId);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataConsentsApi#getConsentedFinancialAccountInsights");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consentId** | **String**|  |
+ **accountId** | **String**|  |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
