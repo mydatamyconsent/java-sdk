@@ -75,7 +75,7 @@ public class DocumentsApiTest {
     }
     
     /**
-     * Get registered document types.
+     * Get paginated list of registered document types.
      *
      * 
      *
@@ -132,7 +132,7 @@ public class DocumentsApiTest {
     public void uploadDocumentForIndividualTest() throws ApiException {
         UUID issueRequestId = null;
         File formFile = null;
-                String response = api.uploadDocumentForIndividual(issueRequestId, formFile);
+                api.uploadDocumentForIndividual(issueRequestId, formFile);
         // TODO: test validations
     }
     
@@ -148,7 +148,7 @@ public class DocumentsApiTest {
     public void uploadDocumentForOrganizationTest() throws ApiException {
         UUID issueRequestId = null;
         File formFile = null;
-                String response = api.uploadDocumentForOrganization(issueRequestId, formFile);
+                api.uploadDocumentForOrganization(issueRequestId, formFile);
         // TODO: test validations
     }
     

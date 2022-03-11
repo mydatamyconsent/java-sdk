@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Issued Document Identifier.
  */
 @ApiModel(description = "Issued Document Identifier.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T10:35:10.300987462Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-11T10:35:08.869182296Z[Etc/UTC]")
 public class IssuedDocument {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,11 +62,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Document Identifier.
+   * Document Id.
    * @return id
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Document Identifier.")
+  @ApiModelProperty(required = true, value = "Document Id.")
 
   public UUID getId() {
     return id;
@@ -85,11 +85,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Document Identifier. eg: GJ05FG67866586.
+   * Document Identifier.
    * @return identifier
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Document Identifier. eg: GJ05FG67866586.")
+  @ApiModelProperty(example = "GJ05FG67866586.", required = true, value = "Document Identifier.")
 
   public String getIdentifier() {
     return identifier;
@@ -108,11 +108,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Document type name. eg: Driving License.
+   * Document type name.
    * @return documentType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Document type name. eg: Driving License.")
+  @ApiModelProperty(example = "Driving License.", required = true, value = "Document type name.")
 
   public String getDocumentType() {
     return documentType;
@@ -131,11 +131,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Get issuedTo
+   * User name.
    * @return issuedTo
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "User name.")
 
   public String getIssuedTo() {
     return issuedTo;
@@ -154,11 +154,11 @@ public class IssuedDocument {
   }
 
    /**
-   * Get issuedAtUtc
+   * Issued datetime in UTC timezone.
    * @return issuedAtUtc
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Issued datetime in UTC timezone.")
 
   public OffsetDateTime getIssuedAtUtc() {
     return issuedAtUtc;

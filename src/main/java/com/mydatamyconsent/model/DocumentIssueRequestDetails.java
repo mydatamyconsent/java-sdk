@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Document issue request details.
  */
 @ApiModel(description = "Document issue request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T10:35:10.300987462Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-11T10:35:08.869182296Z[Etc/UTC]")
 public class DocumentIssueRequestDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -92,11 +92,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Request Id.
+   * Document issue request Id.
    * @return id
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Request Id.")
+  @ApiModelProperty(required = true, value = "Document issue request Id.")
 
   public UUID getId() {
     return id;
@@ -115,11 +115,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get documentTypeId
+   * Document type Id.
    * @return documentTypeId
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Document type Id.")
 
   public UUID getDocumentTypeId() {
     return documentTypeId;
@@ -138,11 +138,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get typeName
+   * Document type name.
    * @return typeName
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "Driving License.", required = true, value = "Document type name.")
 
   public String getTypeName() {
     return typeName;
@@ -161,11 +161,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get identifier
+   * Document identifier.
    * @return identifier
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "GJ05FG67866586.", required = true, value = "Document identifier.")
 
   public String getIdentifier() {
     return identifier;
@@ -207,11 +207,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get description
+   * Document description.
    * @return description
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Document description.")
 
   public String getDescription() {
     return description;
@@ -230,11 +230,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get receiver
+   * Document receiver details.
    * @return receiver
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Document receiver details.")
 
   public Object getReceiver() {
     return receiver;
@@ -253,11 +253,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get issuedAtUtc
+   * Datetime of issue in UTC timezone.
    * @return issuedAtUtc
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Datetime of issue in UTC timezone.")
 
   public OffsetDateTime getIssuedAtUtc() {
     return issuedAtUtc;
@@ -276,11 +276,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get validFromUtc
+   * Valid from datetime in UTC timezone.
    * @return validFromUtc
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Valid from datetime in UTC timezone.")
 
   public OffsetDateTime getValidFromUtc() {
     return validFromUtc;
@@ -299,11 +299,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get expiresAtUtc
+   * Datetime of expiry in UTC timezone.
    * @return expiresAtUtc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Datetime of expiry in UTC timezone.")
 
   public OffsetDateTime getExpiresAtUtc() {
     return expiresAtUtc;
@@ -322,11 +322,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get metaData
+   * Metadata.
    * @return metaData
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Metadata.")
 
   public Object getMetaData() {
     return metaData;
@@ -345,11 +345,11 @@ public class DocumentIssueRequestDetails {
   }
 
    /**
-   * Get createdAtUtc
+   * Creation datetime of issue request in UTC timezone.
    * @return createdAtUtc
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(required = true, value = "Creation datetime of issue request in UTC timezone.")
 
   public OffsetDateTime getCreatedAtUtc() {
     return createdAtUtc;

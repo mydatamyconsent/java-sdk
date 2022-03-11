@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getIssuedDocumentById**](DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document.
 [**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued/{documentTypeId} | Get paginated list of issued documents of given document type.
-[**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get registered document types.
+[**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get paginated list of registered document types.
 [**issueDocumentToIndividual**](DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user.
 [**issueDocumentToOrganization**](DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization.
 [**uploadDocumentForIndividual**](DocumentsApi.md#uploadDocumentForIndividual) | **POST** /v1/documents/issue/individual/upload/{issueRequestId} | Upload a document for issuance request of individual.
@@ -98,8 +98,8 @@ public class Example {
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
     UUID documentTypeId = UUID.randomUUID(); // UUID | Document type id.
-    OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | From DateTime.
-    OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | To DateTime.
+    OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | From DateTime in UTC timezone.
+    OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | To DateTime in UTC timezone.
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
@@ -121,8 +121,8 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **documentTypeId** | **UUID**| Document type id. |
- **fromDateTime** | **OffsetDateTime**| From DateTime. | [optional]
- **toDateTime** | **OffsetDateTime**| To DateTime. | [optional]
+ **fromDateTime** | **OffsetDateTime**| From DateTime in UTC timezone. | [optional]
+ **toDateTime** | **OffsetDateTime**| To DateTime in UTC timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
  **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 
@@ -150,7 +150,7 @@ No authorization required
 # **getRegisteredDocumentTypes**
 > DocumentTypePaginatedList getRegisteredDocumentTypes(pageNo, pageSize)
 
-Get registered document types.
+Get paginated list of registered document types.
 
 ### Example
 ```java
@@ -339,7 +339,7 @@ No authorization required
 
 <a name="uploadDocumentForIndividual"></a>
 # **uploadDocumentForIndividual**
-> String uploadDocumentForIndividual(issueRequestId, formFile)
+> uploadDocumentForIndividual(issueRequestId, formFile)
 
 Upload a document for issuance request of individual.
 
@@ -358,11 +358,10 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    UUID issueRequestId = UUID.randomUUID(); // UUID | Issue Request Id System.Guid.
+    UUID issueRequestId = UUID.randomUUID(); // UUID | Document issue request id.
     File formFile = new File("/path/to/file"); // File | 
     try {
-      String result = apiInstance.uploadDocumentForIndividual(issueRequestId, formFile);
-      System.out.println(result);
+      apiInstance.uploadDocumentForIndividual(issueRequestId, formFile);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#uploadDocumentForIndividual");
       System.err.println("Status code: " + e.getCode());
@@ -378,12 +377,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **issueRequestId** | **UUID**| Issue Request Id System.Guid. |
+ **issueRequestId** | **UUID**| Document issue request id. |
  **formFile** | **File**|  |
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 
@@ -403,7 +402,7 @@ No authorization required
 
 <a name="uploadDocumentForOrganization"></a>
 # **uploadDocumentForOrganization**
-> String uploadDocumentForOrganization(issueRequestId, formFile)
+> uploadDocumentForOrganization(issueRequestId, formFile)
 
 Upload a document for issuance request of organization.
 
@@ -422,11 +421,10 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    UUID issueRequestId = UUID.randomUUID(); // UUID | Issue Request Id System.Guid.
+    UUID issueRequestId = UUID.randomUUID(); // UUID | Document issue request id System.Guid.
     File formFile = new File("/path/to/file"); // File | 
     try {
-      String result = apiInstance.uploadDocumentForOrganization(issueRequestId, formFile);
-      System.out.println(result);
+      apiInstance.uploadDocumentForOrganization(issueRequestId, formFile);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#uploadDocumentForOrganization");
       System.err.println("Status code: " + e.getCode());
@@ -442,12 +440,12 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **issueRequestId** | **UUID**| Issue Request Id System.Guid. |
+ **issueRequestId** | **UUID**| Document issue request id System.Guid. |
  **formFile** | **File**|  |
 
 ### Return type
 
-**String**
+null (empty response body)
 
 ### Authorization
 

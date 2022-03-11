@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-03-10T10:35:10.300987462Z[Etc/UTC]
+  - Build date: 2022-03-11T10:35:08.869182296Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -152,7 +152,7 @@ Class | Method | HTTP request | Description
 *DigiLockerCompatIssuerApi* | [**digilockerCompatIssueDocument**](docs/DigiLockerCompatIssuerApi.md#digilockerCompatIssueDocument) | **POST** /issuer/issuedoc/1/xml | Digilocker Compatible endpoint to issue document.
 *DocumentsApi* | [**getIssuedDocumentById**](docs/DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document.
 *DocumentsApi* | [**getIssuedDocuments**](docs/DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued/{documentTypeId} | Get paginated list of issued documents of given document type.
-*DocumentsApi* | [**getRegisteredDocumentTypes**](docs/DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get registered document types.
+*DocumentsApi* | [**getRegisteredDocumentTypes**](docs/DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get paginated list of registered document types.
 *DocumentsApi* | [**issueDocumentToIndividual**](docs/DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user.
 *DocumentsApi* | [**issueDocumentToOrganization**](docs/DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization.
 *DocumentsApi* | [**uploadDocumentForIndividual**](docs/DocumentsApi.md#uploadDocumentForIndividual) | **POST** /v1/documents/issue/individual/upload/{issueRequestId} | Upload a document for issuance request of individual.

@@ -76,7 +76,7 @@ public class DigiLockerCompatIssuerApi {
 
     /**
      * Build call for digilockerCompatIssueDocument
-     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -149,7 +149,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
      * @return PushUriResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -171,7 +171,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
      * @return ApiResponse&lt;PushUriResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -194,7 +194,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document. (asynchronously)
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

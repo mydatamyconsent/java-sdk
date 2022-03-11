@@ -223,8 +223,8 @@ public class DocumentsApi {
     /**
      * Build call for getIssuedDocuments
      * @param documentTypeId Document type id. (required)
-     * @param fromDateTime From DateTime. (optional)
-     * @param toDateTime To DateTime. (optional)
+     * @param fromDateTime From DateTime in UTC timezone. (optional)
+     * @param toDateTime To DateTime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
@@ -319,8 +319,8 @@ public class DocumentsApi {
      * Get paginated list of issued documents of given document type.
      * 
      * @param documentTypeId Document type id. (required)
-     * @param fromDateTime From DateTime. (optional)
-     * @param toDateTime To DateTime. (optional)
+     * @param fromDateTime From DateTime in UTC timezone. (optional)
+     * @param toDateTime To DateTime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @return IssuedDocumentPaginatedList
@@ -342,8 +342,8 @@ public class DocumentsApi {
      * Get paginated list of issued documents of given document type.
      * 
      * @param documentTypeId Document type id. (required)
-     * @param fromDateTime From DateTime. (optional)
-     * @param toDateTime To DateTime. (optional)
+     * @param fromDateTime From DateTime in UTC timezone. (optional)
+     * @param toDateTime To DateTime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @return ApiResponse&lt;IssuedDocumentPaginatedList&gt;
@@ -366,8 +366,8 @@ public class DocumentsApi {
      * Get paginated list of issued documents of given document type. (asynchronously)
      * 
      * @param documentTypeId Document type id. (required)
-     * @param fromDateTime From DateTime. (optional)
-     * @param toDateTime To DateTime. (optional)
+     * @param fromDateTime From DateTime in UTC timezone. (optional)
+     * @param toDateTime To DateTime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
@@ -467,7 +467,7 @@ public class DocumentsApi {
     }
 
     /**
-     * Get registered document types.
+     * Get paginated list of registered document types.
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
@@ -487,7 +487,7 @@ public class DocumentsApi {
     }
 
     /**
-     * Get registered document types.
+     * Get paginated list of registered document types.
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
@@ -508,7 +508,7 @@ public class DocumentsApi {
     }
 
     /**
-     * Get registered document types. (asynchronously)
+     * Get paginated list of registered document types. (asynchronously)
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
@@ -814,7 +814,7 @@ public class DocumentsApi {
     }
     /**
      * Build call for uploadDocumentForIndividual
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id. (required)
      * @param formFile  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -900,9 +900,8 @@ public class DocumentsApi {
     /**
      * Upload a document for issuance request of individual.
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id. (required)
      * @param formFile  (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -912,17 +911,16 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public String uploadDocumentForIndividual(UUID issueRequestId, File formFile) throws ApiException {
-        ApiResponse<String> localVarResp = uploadDocumentForIndividualWithHttpInfo(issueRequestId, formFile);
-        return localVarResp.getData();
+    public void uploadDocumentForIndividual(UUID issueRequestId, File formFile) throws ApiException {
+        uploadDocumentForIndividualWithHttpInfo(issueRequestId, formFile);
     }
 
     /**
      * Upload a document for issuance request of individual.
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id. (required)
      * @param formFile  (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -932,16 +930,15 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> uploadDocumentForIndividualWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
+    public ApiResponse<Void> uploadDocumentForIndividualWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
         okhttp3.Call localVarCall = uploadDocumentForIndividualValidateBeforeCall(issueRequestId, formFile, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Upload a document for issuance request of individual. (asynchronously)
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id. (required)
      * @param formFile  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -954,16 +951,15 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadDocumentForIndividualAsync(UUID issueRequestId, File formFile, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call uploadDocumentForIndividualAsync(UUID issueRequestId, File formFile, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = uploadDocumentForIndividualValidateBeforeCall(issueRequestId, formFile, _callback);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for uploadDocumentForOrganization
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id System.Guid. (required)
      * @param formFile  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1049,9 +1045,8 @@ public class DocumentsApi {
     /**
      * Upload a document for issuance request of organization.
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id System.Guid. (required)
      * @param formFile  (required)
-     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1061,17 +1056,16 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public String uploadDocumentForOrganization(UUID issueRequestId, File formFile) throws ApiException {
-        ApiResponse<String> localVarResp = uploadDocumentForOrganizationWithHttpInfo(issueRequestId, formFile);
-        return localVarResp.getData();
+    public void uploadDocumentForOrganization(UUID issueRequestId, File formFile) throws ApiException {
+        uploadDocumentForOrganizationWithHttpInfo(issueRequestId, formFile);
     }
 
     /**
      * Upload a document for issuance request of organization.
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id System.Guid. (required)
      * @param formFile  (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1081,16 +1075,15 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> uploadDocumentForOrganizationWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
+    public ApiResponse<Void> uploadDocumentForOrganizationWithHttpInfo(UUID issueRequestId, File formFile) throws ApiException {
         okhttp3.Call localVarCall = uploadDocumentForOrganizationValidateBeforeCall(issueRequestId, formFile, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
      * Upload a document for issuance request of organization. (asynchronously)
      * 
-     * @param issueRequestId Issue Request Id System.Guid. (required)
+     * @param issueRequestId Document issue request id System.Guid. (required)
      * @param formFile  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1103,11 +1096,10 @@ public class DocumentsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uploadDocumentForOrganizationAsync(UUID issueRequestId, File formFile, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call uploadDocumentForOrganizationAsync(UUID issueRequestId, File formFile, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = uploadDocumentForOrganizationValidateBeforeCall(issueRequestId, formFile, _callback);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
 }
