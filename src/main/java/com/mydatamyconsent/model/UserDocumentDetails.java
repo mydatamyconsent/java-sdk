@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * UserDocumentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-11T10:35:08.869182296Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-12T10:34:34.181008316Z[Etc/UTC]")
 public class UserDocumentDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
