@@ -34,7 +34,7 @@ public class DataProviderDiscoveryApiTest {
 
     
     /**
-     * Get a Data Provider details based on provider id.
+     * Get a Data Provider details by provider id.
      *
      * 
      *
@@ -63,8 +63,8 @@ public class DataProviderDiscoveryApiTest {
         String organizationCategory = null;
         Integer pageNo = null;
         Integer pageSize = null;
-        String country = null;
-                DataProviderPaginatedList response = api.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, country);
+        String countryIso2Code = null;
+                DataProviderPaginatedList response = api.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code);
         // TODO: test validations
     }
     

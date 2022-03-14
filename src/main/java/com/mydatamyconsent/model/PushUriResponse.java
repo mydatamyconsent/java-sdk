@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * PushUriResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-13T10:34:22.259223235Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-14T10:35:33.952895422Z[Etc/UTC]")
 public class PushUriResponse {
   public static final String SERIALIZED_NAME_RESPONSE_STATUS = "responseStatus";
   @SerializedName(SERIALIZED_NAME_RESPONSE_STATUS)

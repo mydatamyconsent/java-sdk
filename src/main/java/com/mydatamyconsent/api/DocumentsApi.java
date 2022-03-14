@@ -532,7 +532,7 @@ public class DocumentsApi {
     }
     /**
      * Build call for issueDocumentToIndividual
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -608,7 +608,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an individual user.
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @return DocumentIssueRequestDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -628,7 +628,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an individual user.
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @return ApiResponse&lt;DocumentIssueRequestDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -649,7 +649,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an individual user. (asynchronously)
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -671,7 +671,7 @@ public class DocumentsApi {
     }
     /**
      * Build call for issueDocumentToOrganization
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -748,7 +748,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an organization.
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @return DocumentIssueRequestDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -769,7 +769,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an organization.
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @return ApiResponse&lt;DocumentIssueRequestDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -791,7 +791,7 @@ public class DocumentsApi {
     /**
      * Issue a new document to an organization. (asynchronously)
      * 
-     * @param documentIssueRequest Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. (required)
+     * @param documentIssueRequest Document issue request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

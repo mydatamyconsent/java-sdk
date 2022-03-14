@@ -231,7 +231,7 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest.
+    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request payload
     try {
       DocumentIssueRequestDetails result = apiInstance.issueDocumentToIndividual(documentIssueRequest);
       System.out.println(result);
@@ -250,7 +250,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. |
+ **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload |
 
 ### Return type
 
@@ -294,7 +294,7 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
-    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest.
+    DocumentIssueRequest documentIssueRequest = new DocumentIssueRequest(); // DocumentIssueRequest | Document issue request payload
     try {
       DocumentIssueRequestDetails result = apiInstance.issueDocumentToOrganization(documentIssueRequest);
       System.out.println(result);
@@ -313,7 +313,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request MyDataMyConsent.DeveloperApi.Models.DocumentIssueRequest. |
+ **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload |
 
 ### Return type
 

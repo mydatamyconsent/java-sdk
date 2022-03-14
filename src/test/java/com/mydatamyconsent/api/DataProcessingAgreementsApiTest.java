@@ -14,11 +14,11 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.CreateDataProcessingAgreementRequestModel;
-import com.mydatamyconsent.model.DataProcessingAgreementDto;
-import com.mydatamyconsent.model.DataProcessingAgreementDtoPaginatedList;
+import com.mydatamyconsent.model.CreateDataProcessingAgreement;
+import com.mydatamyconsent.model.DataProcessingAgreement;
+import com.mydatamyconsent.model.DataProcessingAgreementPaginatedList;
 import java.util.UUID;
-import com.mydatamyconsent.model.UpdateDataProcessingAgreementRequestModel;
+import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -46,8 +46,8 @@ public class DataProcessingAgreementsApiTest {
      */
     @Test
     public void createDataProcessingAgreementTest() throws ApiException {
-        CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = null;
-                DataProcessingAgreementDto response = api.createDataProcessingAgreement(createDataProcessingAgreementRequestModel);
+        CreateDataProcessingAgreement createDataProcessingAgreement = null;
+                DataProcessingAgreement response = api.createDataProcessingAgreement(createDataProcessingAgreement);
         // TODO: test validations
     }
     
@@ -77,12 +77,12 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void getDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                DataProcessingAgreementDto response = api.getDataProcessingAgreementById(id);
+                DataProcessingAgreement response = api.getDataProcessingAgreementById(id);
         // TODO: test validations
     }
     
     /**
-     * Get all data processing agreements.
+     * Get paginated data processing agreements.
      *
      * 
      *
@@ -93,7 +93,7 @@ public class DataProcessingAgreementsApiTest {
     public void getDataProcessingAgreementsTest() throws ApiException {
         Integer pageNo = null;
         Integer pageSize = null;
-                DataProcessingAgreementDtoPaginatedList response = api.getDataProcessingAgreements(pageNo, pageSize);
+                DataProcessingAgreementPaginatedList response = api.getDataProcessingAgreements(pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -123,8 +123,8 @@ public class DataProcessingAgreementsApiTest {
     @Test
     public void updateDataProcessingAgreementTest() throws ApiException {
         UUID id = null;
-        UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = null;
-                DataProcessingAgreementDto response = api.updateDataProcessingAgreement(id, updateDataProcessingAgreementRequestModel);
+        UpdateDataProcessingAgreement updateDataProcessingAgreement = null;
+                DataProcessingAgreement response = api.updateDataProcessingAgreement(id, updateDataProcessingAgreement);
         // TODO: test validations
     }
     

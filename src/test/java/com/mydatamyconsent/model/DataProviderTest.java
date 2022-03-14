@@ -61,6 +61,14 @@ public class DataProviderTest {
     }
 
     /**
+     * Test the property 'category'
+     */
+    @Test
+    public void categoryTest() {
+        // TODO: test category
+    }
+
+    /**
      * Test the property 'logoUrl'
      */
     @Test
@@ -77,19 +85,19 @@ public class DataProviderTest {
     }
 
     /**
-     * Test the property 'email'
+     * Test the property 'supportEmail'
      */
     @Test
-    public void emailTest() {
-        // TODO: test email
+    public void supportEmailTest() {
+        // TODO: test supportEmail
     }
 
     /**
-     * Test the property 'supportPhoneNumber'
+     * Test the property 'helpLineNumber'
      */
     @Test
-    public void supportPhoneNumberTest() {
-        // TODO: test supportPhoneNumber
+    public void helpLineNumberTest() {
+        // TODO: test helpLineNumber
     }
 
     /**
@@ -109,14 +117,6 @@ public class DataProviderTest {
     }
 
     /**
-     * Test the property 'category'
-     */
-    @Test
-    public void categoryTest() {
-        // TODO: test category
-    }
-
-    /**
      * Test the property 'dataProtectionOfficer'
      */
     @Test
@@ -125,19 +125,19 @@ public class DataProviderTest {
     }
 
     /**
-     * Test the property 'supportedAccountTypes'
-     */
-    @Test
-    public void supportedAccountTypesTest() {
-        // TODO: test supportedAccountTypes
-    }
-
-    /**
      * Test the property 'supportedDocumentTypes'
      */
     @Test
     public void supportedDocumentTypesTest() {
         // TODO: test supportedDocumentTypes
+    }
+
+    /**
+     * Test the property 'supportedAccountTypes'
+     */
+    @Test
+    public void supportedAccountTypesTest() {
+        // TODO: test supportedAccountTypes
     }
 
 }

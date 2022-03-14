@@ -75,7 +75,7 @@ public class DataProviderDiscoveryApi {
 
     /**
      * Build call for getDataProviderById
-     * @param providerId Provider id. (required)
+     * @param providerId Data provider id. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -150,9 +150,9 @@ public class DataProviderDiscoveryApi {
     }
 
     /**
-     * Get a Data Provider details based on provider id.
+     * Get a Data Provider details by provider id.
      * 
-     * @param providerId Provider id. (required)
+     * @param providerId Data provider id. (required)
      * @return DataProvider
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -170,9 +170,9 @@ public class DataProviderDiscoveryApi {
     }
 
     /**
-     * Get a Data Provider details based on provider id.
+     * Get a Data Provider details by provider id.
      * 
-     * @param providerId Provider id. (required)
+     * @param providerId Data provider id. (required)
      * @return ApiResponse&lt;DataProvider&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -191,9 +191,9 @@ public class DataProviderDiscoveryApi {
     }
 
     /**
-     * Get a Data Provider details based on provider id. (asynchronously)
+     * Get a Data Provider details by provider id. (asynchronously)
      * 
-     * @param providerId Provider id. (required)
+     * @param providerId Data provider id. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -220,7 +220,7 @@ public class DataProviderDiscoveryApi {
      * @param organizationCategory Organization category. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @param country ISO2 Country code. (optional, default to IN)
+     * @param countryIso2Code ISO2 Country code. (optional, default to IN)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -232,7 +232,7 @@ public class DataProviderDiscoveryApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataProvidersCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getDataProvidersCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -278,8 +278,8 @@ public class DataProviderDiscoveryApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageSize", pageSize));
         }
 
-        if (country != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("country", country));
+        if (countryIso2Code != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("countryIso2Code", countryIso2Code));
         }
 
         final String[] localVarAccepts = {
@@ -303,10 +303,10 @@ public class DataProviderDiscoveryApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getDataProvidersValidateBeforeCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getDataProvidersValidateBeforeCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getDataProvidersCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
+        okhttp3.Call localVarCall = getDataProvidersCall(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code, _callback);
         return localVarCall;
 
     }
@@ -319,7 +319,7 @@ public class DataProviderDiscoveryApi {
      * @param organizationCategory Organization category. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @param country ISO2 Country code. (optional, default to IN)
+     * @param countryIso2Code ISO2 Country code. (optional, default to IN)
      * @return DataProviderPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -330,8 +330,8 @@ public class DataProviderDiscoveryApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public DataProviderPaginatedList getDataProviders(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
-        ApiResponse<DataProviderPaginatedList> localVarResp = getDataProvidersWithHttpInfo(accountType, documentType, organizationCategory, pageNo, pageSize, country);
+    public DataProviderPaginatedList getDataProviders(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code) throws ApiException {
+        ApiResponse<DataProviderPaginatedList> localVarResp = getDataProvidersWithHttpInfo(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code);
         return localVarResp.getData();
     }
 
@@ -343,7 +343,7 @@ public class DataProviderDiscoveryApi {
      * @param organizationCategory Organization category. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @param country ISO2 Country code. (optional, default to IN)
+     * @param countryIso2Code ISO2 Country code. (optional, default to IN)
      * @return ApiResponse&lt;DataProviderPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -354,8 +354,8 @@ public class DataProviderDiscoveryApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProviderPaginatedList> getDataProvidersWithHttpInfo(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country) throws ApiException {
-        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, null);
+    public ApiResponse<DataProviderPaginatedList> getDataProvidersWithHttpInfo(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code) throws ApiException {
+        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code, null);
         Type localVarReturnType = new TypeToken<DataProviderPaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -368,7 +368,7 @@ public class DataProviderDiscoveryApi {
      * @param organizationCategory Organization category. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @param country ISO2 Country code. (optional, default to IN)
+     * @param countryIso2Code ISO2 Country code. (optional, default to IN)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -380,9 +380,9 @@ public class DataProviderDiscoveryApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataProvidersAsync(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String country, final ApiCallback<DataProviderPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getDataProvidersAsync(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code, final ApiCallback<DataProviderPaginatedList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, country, _callback);
+        okhttp3.Call localVarCall = getDataProvidersValidateBeforeCall(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code, _callback);
         Type localVarReturnType = new TypeToken<DataProviderPaginatedList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

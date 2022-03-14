@@ -27,11 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.mydatamyconsent.model.CreateDataProcessingAgreementRequestModel;
-import com.mydatamyconsent.model.DataProcessingAgreementDto;
-import com.mydatamyconsent.model.DataProcessingAgreementDtoPaginatedList;
+import com.mydatamyconsent.model.CreateDataProcessingAgreement;
+import com.mydatamyconsent.model.DataProcessingAgreement;
+import com.mydatamyconsent.model.DataProcessingAgreementPaginatedList;
 import java.util.UUID;
-import com.mydatamyconsent.model.UpdateDataProcessingAgreementRequestModel;
+import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -78,7 +78,7 @@ public class DataProcessingAgreementsApi {
 
     /**
      * Build call for createDataProcessingAgreement
-     * @param createDataProcessingAgreementRequestModel Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel. (optional)
+     * @param createDataProcessingAgreement Create data processing agreement payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -86,10 +86,11 @@ public class DataProcessingAgreementsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createDataProcessingAgreementCall(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createDataProcessingAgreementCall(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -104,7 +105,7 @@ public class DataProcessingAgreementsApi {
             basePath = null;
         }
 
-        Object localVarPostBody = createDataProcessingAgreementRequestModel;
+        Object localVarPostBody = createDataProcessingAgreement;
 
         // create path and map variables
         String localVarPath = "/v1/data-agreements";
@@ -136,10 +137,15 @@ public class DataProcessingAgreementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createDataProcessingAgreementValidateBeforeCall(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createDataProcessingAgreementValidateBeforeCall(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'createDataProcessingAgreement' is set
+        if (createDataProcessingAgreement == null) {
+            throw new ApiException("Missing the required parameter 'createDataProcessingAgreement' when calling createDataProcessingAgreement(Async)");
+        }
         
 
-        okhttp3.Call localVarCall = createDataProcessingAgreementCall(createDataProcessingAgreementRequestModel, _callback);
+        okhttp3.Call localVarCall = createDataProcessingAgreementCall(createDataProcessingAgreement, _callback);
         return localVarCall;
 
     }
@@ -147,44 +153,46 @@ public class DataProcessingAgreementsApi {
     /**
      * Create a data processing agreement.
      * 
-     * @param createDataProcessingAgreementRequestModel Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel. (optional)
-     * @return DataProcessingAgreementDto
+     * @param createDataProcessingAgreement Create data processing agreement payload (required)
+     * @return DataProcessingAgreement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataProcessingAgreementDto createDataProcessingAgreement(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel) throws ApiException {
-        ApiResponse<DataProcessingAgreementDto> localVarResp = createDataProcessingAgreementWithHttpInfo(createDataProcessingAgreementRequestModel);
+    public DataProcessingAgreement createDataProcessingAgreement(CreateDataProcessingAgreement createDataProcessingAgreement) throws ApiException {
+        ApiResponse<DataProcessingAgreement> localVarResp = createDataProcessingAgreementWithHttpInfo(createDataProcessingAgreement);
         return localVarResp.getData();
     }
 
     /**
      * Create a data processing agreement.
      * 
-     * @param createDataProcessingAgreementRequestModel Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel. (optional)
-     * @return ApiResponse&lt;DataProcessingAgreementDto&gt;
+     * @param createDataProcessingAgreement Create data processing agreement payload (required)
+     * @return ApiResponse&lt;DataProcessingAgreement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProcessingAgreementDto> createDataProcessingAgreementWithHttpInfo(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel) throws ApiException {
-        okhttp3.Call localVarCall = createDataProcessingAgreementValidateBeforeCall(createDataProcessingAgreementRequestModel, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+    public ApiResponse<DataProcessingAgreement> createDataProcessingAgreementWithHttpInfo(CreateDataProcessingAgreement createDataProcessingAgreement) throws ApiException {
+        okhttp3.Call localVarCall = createDataProcessingAgreementValidateBeforeCall(createDataProcessingAgreement, null);
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Create a data processing agreement. (asynchronously)
      * 
-     * @param createDataProcessingAgreementRequestModel Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel. (optional)
+     * @param createDataProcessingAgreement Create data processing agreement payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -192,13 +200,14 @@ public class DataProcessingAgreementsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createDataProcessingAgreementAsync(CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {
+    public okhttp3.Call createDataProcessingAgreementAsync(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createDataProcessingAgreementValidateBeforeCall(createDataProcessingAgreementRequestModel, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+        okhttp3.Call localVarCall = createDataProcessingAgreementValidateBeforeCall(createDataProcessingAgreement, _callback);
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -418,7 +427,7 @@ public class DataProcessingAgreementsApi {
      * Get data processing agreement by id.
      * 
      * @param id Agreement id. (required)
-     * @return DataProcessingAgreementDto
+     * @return DataProcessingAgreement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -429,8 +438,8 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public DataProcessingAgreementDto getDataProcessingAgreementById(UUID id) throws ApiException {
-        ApiResponse<DataProcessingAgreementDto> localVarResp = getDataProcessingAgreementByIdWithHttpInfo(id);
+    public DataProcessingAgreement getDataProcessingAgreementById(UUID id) throws ApiException {
+        ApiResponse<DataProcessingAgreement> localVarResp = getDataProcessingAgreementByIdWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -438,7 +447,7 @@ public class DataProcessingAgreementsApi {
      * Get data processing agreement by id.
      * 
      * @param id Agreement id. (required)
-     * @return ApiResponse&lt;DataProcessingAgreementDto&gt;
+     * @return ApiResponse&lt;DataProcessingAgreement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -449,9 +458,9 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProcessingAgreementDto> getDataProcessingAgreementByIdWithHttpInfo(UUID id) throws ApiException {
+    public ApiResponse<DataProcessingAgreement> getDataProcessingAgreementByIdWithHttpInfo(UUID id) throws ApiException {
         okhttp3.Call localVarCall = getDataProcessingAgreementByIdValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -471,10 +480,10 @@ public class DataProcessingAgreementsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataProcessingAgreementByIdAsync(UUID id, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {
+    public okhttp3.Call getDataProcessingAgreementByIdAsync(UUID id, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataProcessingAgreementByIdValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -489,6 +498,7 @@ public class DataProcessingAgreementsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -556,46 +566,48 @@ public class DataProcessingAgreementsApi {
     }
 
     /**
-     * Get all data processing agreements.
+     * Get paginated data processing agreements.
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return DataProcessingAgreementDtoPaginatedList
+     * @return DataProcessingAgreementPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataProcessingAgreementDtoPaginatedList getDataProcessingAgreements(Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<DataProcessingAgreementDtoPaginatedList> localVarResp = getDataProcessingAgreementsWithHttpInfo(pageNo, pageSize);
+    public DataProcessingAgreementPaginatedList getDataProcessingAgreements(Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<DataProcessingAgreementPaginatedList> localVarResp = getDataProcessingAgreementsWithHttpInfo(pageNo, pageSize);
         return localVarResp.getData();
     }
 
     /**
-     * Get all data processing agreements.
+     * Get paginated data processing agreements.
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;DataProcessingAgreementDtoPaginatedList&gt;
+     * @return ApiResponse&lt;DataProcessingAgreementPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProcessingAgreementDtoPaginatedList> getDataProcessingAgreementsWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<DataProcessingAgreementPaginatedList> getDataProcessingAgreementsWithHttpInfo(Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getDataProcessingAgreementsValidateBeforeCall(pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataProcessingAgreementPaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get all data processing agreements. (asynchronously)
+     * Get paginated data processing agreements. (asynchronously)
      * 
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
@@ -606,13 +618,14 @@ public class DataProcessingAgreementsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getDataProcessingAgreementsAsync(Integer pageNo, Integer pageSize, final ApiCallback<DataProcessingAgreementDtoPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getDataProcessingAgreementsAsync(Integer pageNo, Integer pageSize, final ApiCallback<DataProcessingAgreementPaginatedList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getDataProcessingAgreementsValidateBeforeCall(pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataProcessingAgreementPaginatedList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -755,7 +768,7 @@ public class DataProcessingAgreementsApi {
     /**
      * Build call for updateDataProcessingAgreement
      * @param id Agreement id. (required)
-     * @param updateDataProcessingAgreementRequestModel Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel. (optional)
+     * @param updateDataProcessingAgreement Update data processing agreement payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -768,7 +781,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDataProcessingAgreementCall(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateDataProcessingAgreementCall(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -783,7 +796,7 @@ public class DataProcessingAgreementsApi {
             basePath = null;
         }
 
-        Object localVarPostBody = updateDataProcessingAgreementRequestModel;
+        Object localVarPostBody = updateDataProcessingAgreement;
 
         // create path and map variables
         String localVarPath = "/v1/data-agreements/{id}"
@@ -816,15 +829,20 @@ public class DataProcessingAgreementsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateDataProcessingAgreementValidateBeforeCall(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateDataProcessingAgreementValidateBeforeCall(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateDataProcessingAgreement(Async)");
         }
         
+        // verify the required parameter 'updateDataProcessingAgreement' is set
+        if (updateDataProcessingAgreement == null) {
+            throw new ApiException("Missing the required parameter 'updateDataProcessingAgreement' when calling updateDataProcessingAgreement(Async)");
+        }
+        
 
-        okhttp3.Call localVarCall = updateDataProcessingAgreementCall(id, updateDataProcessingAgreementRequestModel, _callback);
+        okhttp3.Call localVarCall = updateDataProcessingAgreementCall(id, updateDataProcessingAgreement, _callback);
         return localVarCall;
 
     }
@@ -833,8 +851,8 @@ public class DataProcessingAgreementsApi {
      * Update a data processing agreement.
      * 
      * @param id Agreement id. (required)
-     * @param updateDataProcessingAgreementRequestModel Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel. (optional)
-     * @return DataProcessingAgreementDto
+     * @param updateDataProcessingAgreement Update data processing agreement payload (required)
+     * @return DataProcessingAgreement
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -845,8 +863,8 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataProcessingAgreementDto updateDataProcessingAgreement(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel) throws ApiException {
-        ApiResponse<DataProcessingAgreementDto> localVarResp = updateDataProcessingAgreementWithHttpInfo(id, updateDataProcessingAgreementRequestModel);
+    public DataProcessingAgreement updateDataProcessingAgreement(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement) throws ApiException {
+        ApiResponse<DataProcessingAgreement> localVarResp = updateDataProcessingAgreementWithHttpInfo(id, updateDataProcessingAgreement);
         return localVarResp.getData();
     }
 
@@ -854,8 +872,8 @@ public class DataProcessingAgreementsApi {
      * Update a data processing agreement.
      * 
      * @param id Agreement id. (required)
-     * @param updateDataProcessingAgreementRequestModel Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel. (optional)
-     * @return ApiResponse&lt;DataProcessingAgreementDto&gt;
+     * @param updateDataProcessingAgreement Update data processing agreement payload (required)
+     * @return ApiResponse&lt;DataProcessingAgreement&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -866,9 +884,9 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataProcessingAgreementDto> updateDataProcessingAgreementWithHttpInfo(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel) throws ApiException {
-        okhttp3.Call localVarCall = updateDataProcessingAgreementValidateBeforeCall(id, updateDataProcessingAgreementRequestModel, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+    public ApiResponse<DataProcessingAgreement> updateDataProcessingAgreementWithHttpInfo(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement) throws ApiException {
+        okhttp3.Call localVarCall = updateDataProcessingAgreementValidateBeforeCall(id, updateDataProcessingAgreement, null);
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -876,7 +894,7 @@ public class DataProcessingAgreementsApi {
      * Update a data processing agreement. (asynchronously)
      * 
      * @param id Agreement id. (required)
-     * @param updateDataProcessingAgreementRequestModel Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel. (optional)
+     * @param updateDataProcessingAgreement Update data processing agreement payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -889,10 +907,10 @@ public class DataProcessingAgreementsApi {
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateDataProcessingAgreementAsync(UUID id, UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel, final ApiCallback<DataProcessingAgreementDto> _callback) throws ApiException {
+    public okhttp3.Call updateDataProcessingAgreementAsync(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateDataProcessingAgreementValidateBeforeCall(id, updateDataProcessingAgreementRequestModel, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreementDto>(){}.getType();
+        okhttp3.Call localVarCall = updateDataProcessingAgreementValidateBeforeCall(id, updateDataProcessingAgreement, _callback);
+        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -28,7 +28,7 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DigiLockerCompatIssuerApi apiInstance = new DigiLockerCompatIssuerApi(defaultClient);
-    PushUriRequest pushUriRequest = new PushUriRequest(); // PushUriRequest | Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest.
+    PushUriRequest pushUriRequest = new PushUriRequest(); // PushUriRequest | Push URI request payload
     try {
       PushUriResponse result = apiInstance.digilockerCompatIssueDocument(pushUriRequest);
       System.out.println(result);
@@ -47,7 +47,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)| Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. | [optional]
+ **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)| Push URI request payload |
 
 ### Return type
 

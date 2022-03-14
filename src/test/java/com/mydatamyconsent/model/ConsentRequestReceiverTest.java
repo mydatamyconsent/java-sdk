@@ -25,7 +25,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -43,6 +42,14 @@ public class ConsentRequestReceiverTest {
     @Test
     public void testConsentRequestReceiver() {
         // TODO: test ConsentRequestReceiver
+    }
+
+    /**
+     * Test the property 'countryIso2Code'
+     */
+    @Test
+    public void countryIso2CodeTest() {
+        // TODO: test countryIso2Code
     }
 
     /**

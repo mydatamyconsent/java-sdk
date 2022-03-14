@@ -27,17 +27,20 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * Consent request receiver details
  */
 @ApiModel(description = "Consent request receiver details")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-13T10:34:22.259223235Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-14T10:35:33.952895422Z[Etc/UTC]")
 public class ConsentRequestReceiver {
+  public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
+  @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
+  private String countryIso2Code;
+
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
-  private List<StringStringKeyValuePair> identifiers = null;
+  private List<StringStringKeyValuePair> identifiers = new ArrayList<StringStringKeyValuePair>();
 
   public static final String SERIALIZED_NAME_IDENTIFICATION_STRATEGY = "identificationStrategy";
   @SerializedName(SERIALIZED_NAME_IDENTIFICATION_STRATEGY)
@@ -46,6 +49,29 @@ public class ConsentRequestReceiver {
   public ConsentRequestReceiver() { 
   }
 
+  public ConsentRequestReceiver countryIso2Code(String countryIso2Code) {
+    
+    this.countryIso2Code = countryIso2Code;
+    return this;
+  }
+
+   /**
+   * Consent request receiver country ISO 2 code
+   * @return countryIso2Code
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Consent request receiver country ISO 2 code")
+
+  public String getCountryIso2Code() {
+    return countryIso2Code;
+  }
+
+
+  public void setCountryIso2Code(String countryIso2Code) {
+    this.countryIso2Code = countryIso2Code;
+  }
+
+
   public ConsentRequestReceiver identifiers(List<StringStringKeyValuePair> identifiers) {
     
     this.identifiers = identifiers;
@@ -53,9 +79,6 @@ public class ConsentRequestReceiver {
   }
 
   public ConsentRequestReceiver addIdentifiersItem(StringStringKeyValuePair identifiersItem) {
-    if (this.identifiers == null) {
-      this.identifiers = new ArrayList<StringStringKeyValuePair>();
-    }
     this.identifiers.add(identifiersItem);
     return this;
   }
@@ -64,8 +87,8 @@ public class ConsentRequestReceiver {
    * Consent request receiver identifiers
    * @return identifiers
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Consent request receiver identifiers")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Consent request receiver identifiers")
 
   public List<StringStringKeyValuePair> getIdentifiers() {
     return identifiers;
@@ -87,8 +110,8 @@ public class ConsentRequestReceiver {
    * Get identificationStrategy
    * @return identificationStrategy
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
 
   public IdentificationStrategy getIdentificationStrategy() {
     return identificationStrategy;
@@ -109,30 +132,21 @@ public class ConsentRequestReceiver {
       return false;
     }
     ConsentRequestReceiver consentRequestReceiver = (ConsentRequestReceiver) o;
-    return Objects.equals(this.identifiers, consentRequestReceiver.identifiers) &&
+    return Objects.equals(this.countryIso2Code, consentRequestReceiver.countryIso2Code) &&
+        Objects.equals(this.identifiers, consentRequestReceiver.identifiers) &&
         Objects.equals(this.identificationStrategy, consentRequestReceiver.identificationStrategy);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifiers, identificationStrategy);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(countryIso2Code, identifiers, identificationStrategy);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsentRequestReceiver {\n");
+    sb.append("    countryIso2Code: ").append(toIndentedString(countryIso2Code)).append("\n");
     sb.append("    identifiers: ").append(toIndentedString(identifiers)).append("\n");
     sb.append("    identificationStrategy: ").append(toIndentedString(identificationStrategy)).append("\n");
     sb.append("}");

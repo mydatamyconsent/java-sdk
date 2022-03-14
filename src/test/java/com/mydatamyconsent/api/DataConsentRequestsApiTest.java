@@ -14,16 +14,16 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.CreateIndividualDataConsentRequest;
-import com.mydatamyconsent.model.CreateOrganizationDataConsentRequest;
-import com.mydatamyconsent.model.DataConsentDetailsDto;
+import com.mydatamyconsent.model.CreateDataConsentRequest;
+import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.IndividualDataConsentRequestResponse;
+import com.mydatamyconsent.model.IndividualDataConsentRequestDetails;
+import com.mydatamyconsent.model.IndividualDataConsentRequestDetailsPaginatedList;
 import org.threeten.bp.OffsetDateTime;
-import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
-import com.mydatamyconsent.model.OrganizationDataConsentRequestResponse;
+import com.mydatamyconsent.model.OrganizationDataConsentRequestDetails;
+import com.mydatamyconsent.model.OrganizationDataConsentRequestDetailsPaginatedList;
+import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
-import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -42,7 +42,7 @@ public class DataConsentRequestsApiTest {
 
     
     /**
-     * Cancel the individual data consent request based on Id.
+     * Cancel the individual data consent request by Id.
      *
      * 
      *
@@ -52,12 +52,12 @@ public class DataConsentRequestsApiTest {
     @Test
     public void cancelIndividualDataConsentRequestTest() throws ApiException {
         UUID requestId = null;
-                IndividualDataConsentRequestResponse response = api.cancelIndividualDataConsentRequest(requestId);
+                api.cancelIndividualDataConsentRequest(requestId);
         // TODO: test validations
     }
     
     /**
-     * Cancel the Organization data consent request based on Id.
+     * Cancel the organization data consent request by Id.
      *
      * 
      *
@@ -67,42 +67,42 @@ public class DataConsentRequestsApiTest {
     @Test
     public void cancelOrganizationDataConsentRequestTest() throws ApiException {
         UUID requestId = null;
-                OrganizationDataConsentRequestResponse response = api.cancelOrganizationDataConsentRequest(requestId);
+                api.cancelOrganizationDataConsentRequest(requestId);
         // TODO: test validations
     }
     
     /**
-     * Create a individual data consent request.
+     * Create data consent request for an individual.
      *
-     * Create a individual data consent request.
+     * Create data consent request for an individual.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void createIndividualDataConsentRequestTest() throws ApiException {
-        CreateIndividualDataConsentRequest createIndividualDataConsentRequest = null;
-                IndividualDataConsentRequestResponse response = api.createIndividualDataConsentRequest(createIndividualDataConsentRequest);
+        CreateDataConsentRequest createDataConsentRequest = null;
+                IndividualDataConsentRequestDetails response = api.createIndividualDataConsentRequest(createDataConsentRequest);
         // TODO: test validations
     }
     
     /**
-     * Create a organization data consent request.
+     * Create data consent request for an organization.
      *
-     * Create a organization data consent request.
+     * Create data consent request for an organization.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void createOrganizationDataConsentRequestTest() throws ApiException {
-        CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest = null;
-                OrganizationDataConsentRequestResponse response = api.createOrganizationDataConsentRequest(createOrganizationDataConsentRequest);
+        CreateDataConsentRequest createDataConsentRequest = null;
+                OrganizationDataConsentRequestDetails response = api.createOrganizationDataConsentRequest(createDataConsentRequest);
         // TODO: test validations
     }
     
     /**
-     * Get all Consent Requests sent to Individuals.
+     * Get all Consent Requests sent to individuals.
      *
      * 
      *
@@ -116,12 +116,12 @@ public class DataConsentRequestsApiTest {
         OffsetDateTime endDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                UserDataConsentInfoDtoPaginatedList response = api.getAllConsentRequestsToIndividuals(status, startDateTime, endDateTime, pageNo, pageSize);
+                IndividualDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToIndividuals(status, startDateTime, endDateTime, pageNo, pageSize);
         // TODO: test validations
     }
     
     /**
-     * Get All Consent Requests sent to Organizations.
+     * Get all Consent Requests sent to organizations.
      *
      * 
      *
@@ -135,12 +135,12 @@ public class DataConsentRequestsApiTest {
         OffsetDateTime endDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                OrganizationDataConsentInfoDtoPaginatedList response = api.getAllConsentRequestsToOrganizations(status, startDateTime, endDateTime, pageNo, pageSize);
+                OrganizationDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToOrganizations(status, startDateTime, endDateTime, pageNo, pageSize);
         // TODO: test validations
     }
     
     /**
-     * Get a Consent Request by ID.
+     * Get individual data consent request by id.
      *
      * 
      *
@@ -150,7 +150,7 @@ public class DataConsentRequestsApiTest {
     @Test
     public void getIndividualConsentRequestByIdTest() throws ApiException {
         UUID requestId = null;
-                DataConsentDetailsDto response = api.getIndividualConsentRequestById(requestId);
+                DataConsentRequest response = api.getIndividualConsentRequestById(requestId);
         // TODO: test validations
     }
     
@@ -165,7 +165,7 @@ public class DataConsentRequestsApiTest {
     @Test
     public void getOrganizationConsentRequestByIdTest() throws ApiException {
         UUID requestId = null;
-                DataConsentDetailsDto response = api.getOrganizationConsentRequestById(requestId);
+                DataConsentRequest response = api.getOrganizationConsentRequestById(requestId);
         // TODO: test validations
     }
     

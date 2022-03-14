@@ -27,16 +27,16 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.mydatamyconsent.model.CreateIndividualDataConsentRequest;
-import com.mydatamyconsent.model.CreateOrganizationDataConsentRequest;
-import com.mydatamyconsent.model.DataConsentDetailsDto;
+import com.mydatamyconsent.model.CreateDataConsentRequest;
+import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentStatus;
-import com.mydatamyconsent.model.IndividualDataConsentRequestResponse;
+import com.mydatamyconsent.model.IndividualDataConsentRequestDetails;
+import com.mydatamyconsent.model.IndividualDataConsentRequestDetailsPaginatedList;
 import org.threeten.bp.OffsetDateTime;
-import com.mydatamyconsent.model.OrganizationDataConsentInfoDtoPaginatedList;
-import com.mydatamyconsent.model.OrganizationDataConsentRequestResponse;
+import com.mydatamyconsent.model.OrganizationDataConsentRequestDetails;
+import com.mydatamyconsent.model.OrganizationDataConsentRequestDetailsPaginatedList;
+import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
-import com.mydatamyconsent.model.UserDataConsentInfoDtoPaginatedList;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -93,6 +93,8 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelIndividualDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -157,10 +159,9 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Cancel the individual data consent request based on Id.
+     * Cancel the individual data consent request by Id.
      * 
      * @param requestId Individual consent request id. (required)
-     * @return IndividualDataConsentRequestResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -168,18 +169,19 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public IndividualDataConsentRequestResponse cancelIndividualDataConsentRequest(UUID requestId) throws ApiException {
-        ApiResponse<IndividualDataConsentRequestResponse> localVarResp = cancelIndividualDataConsentRequestWithHttpInfo(requestId);
-        return localVarResp.getData();
+    public void cancelIndividualDataConsentRequest(UUID requestId) throws ApiException {
+        cancelIndividualDataConsentRequestWithHttpInfo(requestId);
     }
 
     /**
-     * Cancel the individual data consent request based on Id.
+     * Cancel the individual data consent request by Id.
      * 
      * @param requestId Individual consent request id. (required)
-     * @return ApiResponse&lt;IndividualDataConsentRequestResponse&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -187,16 +189,17 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IndividualDataConsentRequestResponse> cancelIndividualDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
+    public ApiResponse<Void> cancelIndividualDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
         okhttp3.Call localVarCall = cancelIndividualDataConsentRequestValidateBeforeCall(requestId, null);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestResponse>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Cancel the individual data consent request based on Id. (asynchronously)
+     * Cancel the individual data consent request by Id. (asynchronously)
      * 
      * @param requestId Individual consent request id. (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -208,13 +211,14 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cancelIndividualDataConsentRequestAsync(UUID requestId, final ApiCallback<IndividualDataConsentRequestResponse> _callback) throws ApiException {
+    public okhttp3.Call cancelIndividualDataConsentRequestAsync(UUID requestId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = cancelIndividualDataConsentRequestValidateBeforeCall(requestId, _callback);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestResponse>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
@@ -229,6 +233,8 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call cancelOrganizationDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -293,10 +299,9 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Cancel the Organization data consent request based on Id.
+     * Cancel the organization data consent request by Id.
      * 
      * @param requestId Organization consent request id. (required)
-     * @return OrganizationDataConsentRequestResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -304,18 +309,19 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationDataConsentRequestResponse cancelOrganizationDataConsentRequest(UUID requestId) throws ApiException {
-        ApiResponse<OrganizationDataConsentRequestResponse> localVarResp = cancelOrganizationDataConsentRequestWithHttpInfo(requestId);
-        return localVarResp.getData();
+    public void cancelOrganizationDataConsentRequest(UUID requestId) throws ApiException {
+        cancelOrganizationDataConsentRequestWithHttpInfo(requestId);
     }
 
     /**
-     * Cancel the Organization data consent request based on Id.
+     * Cancel the organization data consent request by Id.
      * 
      * @param requestId Organization consent request id. (required)
-     * @return ApiResponse&lt;OrganizationDataConsentRequestResponse&gt;
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -323,16 +329,17 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationDataConsentRequestResponse> cancelOrganizationDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
+    public ApiResponse<Void> cancelOrganizationDataConsentRequestWithHttpInfo(UUID requestId) throws ApiException {
         okhttp3.Call localVarCall = cancelOrganizationDataConsentRequestValidateBeforeCall(requestId, null);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestResponse>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Cancel the Organization data consent request based on Id. (asynchronously)
+     * Cancel the organization data consent request by Id. (asynchronously)
      * 
      * @param requestId Organization consent request id. (required)
      * @param _callback The callback to be executed when the API call finishes
@@ -344,18 +351,19 @@ public class DataConsentRequestsApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call cancelOrganizationDataConsentRequestAsync(UUID requestId, final ApiCallback<OrganizationDataConsentRequestResponse> _callback) throws ApiException {
+    public okhttp3.Call cancelOrganizationDataConsentRequestAsync(UUID requestId, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = cancelOrganizationDataConsentRequestValidateBeforeCall(requestId, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestResponse>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for createIndividualDataConsentRequest
-     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
+     * @param createDataConsentRequest The Individual data consent request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -368,7 +376,7 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIndividualDataConsentRequestCall(CreateIndividualDataConsentRequest createIndividualDataConsentRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createIndividualDataConsentRequestCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -383,7 +391,7 @@ public class DataConsentRequestsApi {
             basePath = null;
         }
 
-        Object localVarPostBody = createIndividualDataConsentRequest;
+        Object localVarPostBody = createDataConsentRequest;
 
         // create path and map variables
         String localVarPath = "/v1/consent-requests/individual";
@@ -415,24 +423,24 @@ public class DataConsentRequestsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createIndividualDataConsentRequestValidateBeforeCall(CreateIndividualDataConsentRequest createIndividualDataConsentRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createIndividualDataConsentRequestValidateBeforeCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'createIndividualDataConsentRequest' is set
-        if (createIndividualDataConsentRequest == null) {
-            throw new ApiException("Missing the required parameter 'createIndividualDataConsentRequest' when calling createIndividualDataConsentRequest(Async)");
+        // verify the required parameter 'createDataConsentRequest' is set
+        if (createDataConsentRequest == null) {
+            throw new ApiException("Missing the required parameter 'createDataConsentRequest' when calling createIndividualDataConsentRequest(Async)");
         }
         
 
-        okhttp3.Call localVarCall = createIndividualDataConsentRequestCall(createIndividualDataConsentRequest, _callback);
+        okhttp3.Call localVarCall = createIndividualDataConsentRequestCall(createDataConsentRequest, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Create a individual data consent request.
-     * Create a individual data consent request.
-     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
-     * @return IndividualDataConsentRequestResponse
+     * Create data consent request for an individual.
+     * Create data consent request for an individual.
+     * @param createDataConsentRequest The Individual data consent request payload (required)
+     * @return IndividualDataConsentRequestDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -443,16 +451,16 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public IndividualDataConsentRequestResponse createIndividualDataConsentRequest(CreateIndividualDataConsentRequest createIndividualDataConsentRequest) throws ApiException {
-        ApiResponse<IndividualDataConsentRequestResponse> localVarResp = createIndividualDataConsentRequestWithHttpInfo(createIndividualDataConsentRequest);
+    public IndividualDataConsentRequestDetails createIndividualDataConsentRequest(CreateDataConsentRequest createDataConsentRequest) throws ApiException {
+        ApiResponse<IndividualDataConsentRequestDetails> localVarResp = createIndividualDataConsentRequestWithHttpInfo(createDataConsentRequest);
         return localVarResp.getData();
     }
 
     /**
-     * Create a individual data consent request.
-     * Create a individual data consent request.
-     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
-     * @return ApiResponse&lt;IndividualDataConsentRequestResponse&gt;
+     * Create data consent request for an individual.
+     * Create data consent request for an individual.
+     * @param createDataConsentRequest The Individual data consent request payload (required)
+     * @return ApiResponse&lt;IndividualDataConsentRequestDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -463,16 +471,16 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IndividualDataConsentRequestResponse> createIndividualDataConsentRequestWithHttpInfo(CreateIndividualDataConsentRequest createIndividualDataConsentRequest) throws ApiException {
-        okhttp3.Call localVarCall = createIndividualDataConsentRequestValidateBeforeCall(createIndividualDataConsentRequest, null);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestResponse>(){}.getType();
+    public ApiResponse<IndividualDataConsentRequestDetails> createIndividualDataConsentRequestWithHttpInfo(CreateDataConsentRequest createDataConsentRequest) throws ApiException {
+        okhttp3.Call localVarCall = createIndividualDataConsentRequestValidateBeforeCall(createDataConsentRequest, null);
+        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestDetails>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Create a individual data consent request. (asynchronously)
-     * Create a individual data consent request.
-     * @param createIndividualDataConsentRequest The Individual data consent request payload (required)
+     * Create data consent request for an individual. (asynchronously)
+     * Create data consent request for an individual.
+     * @param createDataConsentRequest The Individual data consent request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -485,16 +493,16 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createIndividualDataConsentRequestAsync(CreateIndividualDataConsentRequest createIndividualDataConsentRequest, final ApiCallback<IndividualDataConsentRequestResponse> _callback) throws ApiException {
+    public okhttp3.Call createIndividualDataConsentRequestAsync(CreateDataConsentRequest createDataConsentRequest, final ApiCallback<IndividualDataConsentRequestDetails> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createIndividualDataConsentRequestValidateBeforeCall(createIndividualDataConsentRequest, _callback);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestResponse>(){}.getType();
+        okhttp3.Call localVarCall = createIndividualDataConsentRequestValidateBeforeCall(createDataConsentRequest, _callback);
+        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestDetails>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for createOrganizationDataConsentRequest
-     * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
+     * @param createDataConsentRequest The Organization data consent request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -507,7 +515,7 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createOrganizationDataConsentRequestCall(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createOrganizationDataConsentRequestCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -522,7 +530,7 @@ public class DataConsentRequestsApi {
             basePath = null;
         }
 
-        Object localVarPostBody = createOrganizationDataConsentRequest;
+        Object localVarPostBody = createDataConsentRequest;
 
         // create path and map variables
         String localVarPath = "/v1/consent-requests/organization";
@@ -554,24 +562,24 @@ public class DataConsentRequestsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createOrganizationDataConsentRequestValidateBeforeCall(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call createOrganizationDataConsentRequestValidateBeforeCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'createOrganizationDataConsentRequest' is set
-        if (createOrganizationDataConsentRequest == null) {
-            throw new ApiException("Missing the required parameter 'createOrganizationDataConsentRequest' when calling createOrganizationDataConsentRequest(Async)");
+        // verify the required parameter 'createDataConsentRequest' is set
+        if (createDataConsentRequest == null) {
+            throw new ApiException("Missing the required parameter 'createDataConsentRequest' when calling createOrganizationDataConsentRequest(Async)");
         }
         
 
-        okhttp3.Call localVarCall = createOrganizationDataConsentRequestCall(createOrganizationDataConsentRequest, _callback);
+        okhttp3.Call localVarCall = createOrganizationDataConsentRequestCall(createDataConsentRequest, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Create a organization data consent request.
-     * Create a organization data consent request.
-     * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
-     * @return OrganizationDataConsentRequestResponse
+     * Create data consent request for an organization.
+     * Create data consent request for an organization.
+     * @param createDataConsentRequest The Organization data consent request payload (required)
+     * @return OrganizationDataConsentRequestDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -582,16 +590,16 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationDataConsentRequestResponse createOrganizationDataConsentRequest(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest) throws ApiException {
-        ApiResponse<OrganizationDataConsentRequestResponse> localVarResp = createOrganizationDataConsentRequestWithHttpInfo(createOrganizationDataConsentRequest);
+    public OrganizationDataConsentRequestDetails createOrganizationDataConsentRequest(CreateDataConsentRequest createDataConsentRequest) throws ApiException {
+        ApiResponse<OrganizationDataConsentRequestDetails> localVarResp = createOrganizationDataConsentRequestWithHttpInfo(createDataConsentRequest);
         return localVarResp.getData();
     }
 
     /**
-     * Create a organization data consent request.
-     * Create a organization data consent request.
-     * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
-     * @return ApiResponse&lt;OrganizationDataConsentRequestResponse&gt;
+     * Create data consent request for an organization.
+     * Create data consent request for an organization.
+     * @param createDataConsentRequest The Organization data consent request payload (required)
+     * @return ApiResponse&lt;OrganizationDataConsentRequestDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -602,16 +610,16 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationDataConsentRequestResponse> createOrganizationDataConsentRequestWithHttpInfo(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest) throws ApiException {
-        okhttp3.Call localVarCall = createOrganizationDataConsentRequestValidateBeforeCall(createOrganizationDataConsentRequest, null);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestResponse>(){}.getType();
+    public ApiResponse<OrganizationDataConsentRequestDetails> createOrganizationDataConsentRequestWithHttpInfo(CreateDataConsentRequest createDataConsentRequest) throws ApiException {
+        okhttp3.Call localVarCall = createOrganizationDataConsentRequestValidateBeforeCall(createDataConsentRequest, null);
+        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestDetails>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Create a organization data consent request. (asynchronously)
-     * Create a organization data consent request.
-     * @param createOrganizationDataConsentRequest M:MyDataMyConsent.DeveloperApi.Controllers.DataConsentRequestsController.CreateOrganizationDataConsentRequest(MyDataMyConsent.DeveloperApi.Models.CreateOrganizationDataConsentRequest). (required)
+     * Create data consent request for an organization. (asynchronously)
+     * Create data consent request for an organization.
+     * @param createDataConsentRequest The Organization data consent request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -624,18 +632,18 @@ public class DataConsentRequestsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createOrganizationDataConsentRequestAsync(CreateOrganizationDataConsentRequest createOrganizationDataConsentRequest, final ApiCallback<OrganizationDataConsentRequestResponse> _callback) throws ApiException {
+    public okhttp3.Call createOrganizationDataConsentRequestAsync(CreateDataConsentRequest createDataConsentRequest, final ApiCallback<OrganizationDataConsentRequestDetails> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = createOrganizationDataConsentRequestValidateBeforeCall(createOrganizationDataConsentRequest, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestResponse>(){}.getType();
+        okhttp3.Call localVarCall = createOrganizationDataConsentRequestValidateBeforeCall(createDataConsentRequest, _callback);
+        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestDetails>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getAllConsentRequestsToIndividuals
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
@@ -645,7 +653,9 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToIndividualsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -724,56 +734,60 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Get all Consent Requests sent to Individuals.
+     * Get all Consent Requests sent to individuals.
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return UserDataConsentInfoDtoPaginatedList
+     * @return IndividualDataConsentRequestDetailsPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public UserDataConsentInfoDtoPaginatedList getAllConsentRequestsToIndividuals(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<UserDataConsentInfoDtoPaginatedList> localVarResp = getAllConsentRequestsToIndividualsWithHttpInfo(status, startDateTime, endDateTime, pageNo, pageSize);
+    public IndividualDataConsentRequestDetailsPaginatedList getAllConsentRequestsToIndividuals(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<IndividualDataConsentRequestDetailsPaginatedList> localVarResp = getAllConsentRequestsToIndividualsWithHttpInfo(status, startDateTime, endDateTime, pageNo, pageSize);
         return localVarResp.getData();
     }
 
     /**
-     * Get all Consent Requests sent to Individuals.
+     * Get all Consent Requests sent to individuals.
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;UserDataConsentInfoDtoPaginatedList&gt;
+     * @return ApiResponse&lt;IndividualDataConsentRequestDetailsPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UserDataConsentInfoDtoPaginatedList> getAllConsentRequestsToIndividualsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<IndividualDataConsentRequestDetailsPaginatedList> getAllConsentRequestsToIndividualsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getAllConsentRequestsToIndividualsValidateBeforeCall(status, startDateTime, endDateTime, pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<UserDataConsentInfoDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestDetailsPaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get all Consent Requests sent to Individuals. (asynchronously)
+     * Get all Consent Requests sent to individuals. (asynchronously)
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
@@ -783,21 +797,23 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllConsentRequestsToIndividualsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<UserDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getAllConsentRequestsToIndividualsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<IndividualDataConsentRequestDetailsPaginatedList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAllConsentRequestsToIndividualsValidateBeforeCall(status, startDateTime, endDateTime, pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<UserDataConsentInfoDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<IndividualDataConsentRequestDetailsPaginatedList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getAllConsentRequestsToOrganizations
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback Callback for upload/download progress
@@ -807,7 +823,9 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getAllConsentRequestsToOrganizationsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
@@ -886,56 +904,60 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Get All Consent Requests sent to Organizations.
+     * Get all Consent Requests sent to organizations.
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return OrganizationDataConsentInfoDtoPaginatedList
+     * @return OrganizationDataConsentRequestDetailsPaginatedList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationDataConsentInfoDtoPaginatedList getAllConsentRequestsToOrganizations(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<OrganizationDataConsentInfoDtoPaginatedList> localVarResp = getAllConsentRequestsToOrganizationsWithHttpInfo(status, startDateTime, endDateTime, pageNo, pageSize);
+    public OrganizationDataConsentRequestDetailsPaginatedList getAllConsentRequestsToOrganizations(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<OrganizationDataConsentRequestDetailsPaginatedList> localVarResp = getAllConsentRequestsToOrganizationsWithHttpInfo(status, startDateTime, endDateTime, pageNo, pageSize);
         return localVarResp.getData();
     }
 
     /**
-     * Get All Consent Requests sent to Organizations.
+     * Get all Consent Requests sent to organizations.
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;OrganizationDataConsentInfoDtoPaginatedList&gt;
+     * @return ApiResponse&lt;OrganizationDataConsentRequestDetailsPaginatedList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationDataConsentInfoDtoPaginatedList> getAllConsentRequestsToOrganizationsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<OrganizationDataConsentRequestDetailsPaginatedList> getAllConsentRequestsToOrganizationsWithHttpInfo(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getAllConsentRequestsToOrganizationsValidateBeforeCall(status, startDateTime, endDateTime, pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentInfoDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestDetailsPaginatedList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get All Consent Requests sent to Organizations. (asynchronously)
+     * Get all Consent Requests sent to organizations. (asynchronously)
      * 
      * @param status Data consent status. (optional)
-     * @param startDateTime Start date time. (optional)
-     * @param endDateTime End date time. (optional)
+     * @param startDateTime Start datetime in UTC timezone. (optional)
+     * @param endDateTime End datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
      * @param _callback The callback to be executed when the API call finishes
@@ -945,19 +967,21 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllConsentRequestsToOrganizationsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationDataConsentInfoDtoPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getAllConsentRequestsToOrganizationsAsync(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationDataConsentRequestDetailsPaginatedList> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getAllConsentRequestsToOrganizationsValidateBeforeCall(status, startDateTime, endDateTime, pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentInfoDtoPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<OrganizationDataConsentRequestDetailsPaginatedList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getIndividualConsentRequestById
-     * @param requestId Individual consent request id. (required)
+     * @param requestId Individual data consent request id. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -965,7 +989,10 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getIndividualConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -1030,46 +1057,52 @@ public class DataConsentRequestsApi {
     }
 
     /**
-     * Get a Consent Request by ID.
+     * Get individual data consent request by id.
      * 
-     * @param requestId Individual consent request id. (required)
-     * @return DataConsentDetailsDto
+     * @param requestId Individual data consent request id. (required)
+     * @return DataConsentRequest
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataConsentDetailsDto getIndividualConsentRequestById(UUID requestId) throws ApiException {
-        ApiResponse<DataConsentDetailsDto> localVarResp = getIndividualConsentRequestByIdWithHttpInfo(requestId);
+    public DataConsentRequest getIndividualConsentRequestById(UUID requestId) throws ApiException {
+        ApiResponse<DataConsentRequest> localVarResp = getIndividualConsentRequestByIdWithHttpInfo(requestId);
         return localVarResp.getData();
     }
 
     /**
-     * Get a Consent Request by ID.
+     * Get individual data consent request by id.
      * 
-     * @param requestId Individual consent request id. (required)
-     * @return ApiResponse&lt;DataConsentDetailsDto&gt;
+     * @param requestId Individual data consent request id. (required)
+     * @return ApiResponse&lt;DataConsentRequest&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataConsentDetailsDto> getIndividualConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
+    public ApiResponse<DataConsentRequest> getIndividualConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
         okhttp3.Call localVarCall = getIndividualConsentRequestByIdValidateBeforeCall(requestId, null);
-        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Get a Consent Request by ID. (asynchronously)
+     * Get individual data consent request by id. (asynchronously)
      * 
-     * @param requestId Individual consent request id. (required)
+     * @param requestId Individual data consent request id. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1077,13 +1110,16 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIndividualConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
+    public okhttp3.Call getIndividualConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentRequest> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIndividualConsentRequestByIdValidateBeforeCall(requestId, _callback);
-        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1097,7 +1133,10 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
@@ -1165,17 +1204,20 @@ public class DataConsentRequestsApi {
      * Get a OrganizationConsent Request by Id.
      * 
      * @param requestId Organization consent request id. (required)
-     * @return DataConsentDetailsDto
+     * @return DataConsentRequest
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public DataConsentDetailsDto getOrganizationConsentRequestById(UUID requestId) throws ApiException {
-        ApiResponse<DataConsentDetailsDto> localVarResp = getOrganizationConsentRequestByIdWithHttpInfo(requestId);
+    public DataConsentRequest getOrganizationConsentRequestById(UUID requestId) throws ApiException {
+        ApiResponse<DataConsentRequest> localVarResp = getOrganizationConsentRequestByIdWithHttpInfo(requestId);
         return localVarResp.getData();
     }
 
@@ -1183,18 +1225,21 @@ public class DataConsentRequestsApi {
      * Get a OrganizationConsent Request by Id.
      * 
      * @param requestId Organization consent request id. (required)
-     * @return ApiResponse&lt;DataConsentDetailsDto&gt;
+     * @return ApiResponse&lt;DataConsentRequest&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DataConsentDetailsDto> getOrganizationConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
+    public ApiResponse<DataConsentRequest> getOrganizationConsentRequestByIdWithHttpInfo(UUID requestId) throws ApiException {
         okhttp3.Call localVarCall = getOrganizationConsentRequestByIdValidateBeforeCall(requestId, null);
-        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1209,13 +1254,16 @@ public class DataConsentRequestsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentDetailsDto> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationConsentRequestByIdAsync(UUID requestId, final ApiCallback<DataConsentRequest> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganizationConsentRequestByIdValidateBeforeCall(requestId, _callback);
-        Type localVarReturnType = new TypeToken<DataConsentDetailsDto>(){}.getType();
+        Type localVarReturnType = new TypeToken<DataConsentRequest>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

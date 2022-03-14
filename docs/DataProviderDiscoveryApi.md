@@ -4,7 +4,7 @@ All URIs are relative to *https://api.mydatamyconsent.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataProviderById**](DataProviderDiscoveryApi.md#getDataProviderById) | **GET** /v1/data-providers/{providerId} | Get a Data Provider details based on provider id.
+[**getDataProviderById**](DataProviderDiscoveryApi.md#getDataProviderById) | **GET** /v1/data-providers/{providerId} | Get a Data Provider details by provider id.
 [**getDataProviders**](DataProviderDiscoveryApi.md#getDataProviders) | **GET** /v1/data-providers | Discover all data providers in My Data My Consent by country and filters.
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 # **getDataProviderById**
 > DataProvider getDataProviderById(providerId)
 
-Get a Data Provider details based on provider id.
+Get a Data Provider details by provider id.
 
 ### Example
 ```java
@@ -29,7 +29,7 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProviderDiscoveryApi apiInstance = new DataProviderDiscoveryApi(defaultClient);
-    String providerId = "providerId_example"; // String | Provider id.
+    String providerId = "providerId_example"; // String | Data provider id.
     try {
       DataProvider result = apiInstance.getDataProviderById(providerId);
       System.out.println(result);
@@ -48,7 +48,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerId** | **String**| Provider id. |
+ **providerId** | **String**| Data provider id. |
 
 ### Return type
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="getDataProviders"></a>
 # **getDataProviders**
-> DataProviderPaginatedList getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, country)
+> DataProviderPaginatedList getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code)
 
 Discover all data providers in My Data My Consent by country and filters.
 
@@ -97,9 +97,9 @@ public class Example {
     String organizationCategory = "organizationCategory_example"; // String | Organization category.
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
-    String country = "IN"; // String | ISO2 Country code.
+    String countryIso2Code = "IN"; // String | ISO2 Country code.
     try {
-      DataProviderPaginatedList result = apiInstance.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, country);
+      DataProviderPaginatedList result = apiInstance.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProviderDiscoveryApi#getDataProviders");
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
  **organizationCategory** | **String**| Organization category. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
  **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
- **country** | **String**| ISO2 Country code. | [optional] [default to IN]
+ **countryIso2Code** | **String**| ISO2 Country code. | [optional] [default to IN]
 
 ### Return type
 

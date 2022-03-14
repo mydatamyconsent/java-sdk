@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**createDataProcessingAgreement**](DataProcessingAgreementsApi.md#createDataProcessingAgreement) | **POST** /v1/data-agreements | Create a data processing agreement.
 [**deleteDataProcessingAgreementById**](DataProcessingAgreementsApi.md#deleteDataProcessingAgreementById) | **DELETE** /v1/data-agreements/{id} | Delete a data processing agreement. This will not delete a published or a agreement in use with consents.
 [**getDataProcessingAgreementById**](DataProcessingAgreementsApi.md#getDataProcessingAgreementById) | **GET** /v1/data-agreements/{id} | Get data processing agreement by id.
-[**getDataProcessingAgreements**](DataProcessingAgreementsApi.md#getDataProcessingAgreements) | **GET** /v1/data-agreements | Get all data processing agreements.
+[**getDataProcessingAgreements**](DataProcessingAgreementsApi.md#getDataProcessingAgreements) | **GET** /v1/data-agreements | Get paginated data processing agreements.
 [**terminateDataProcessingAgreementById**](DataProcessingAgreementsApi.md#terminateDataProcessingAgreementById) | **PUT** /v1/data-agreements/{id}/terminate | Terminate a data processing agreement.
 [**updateDataProcessingAgreement**](DataProcessingAgreementsApi.md#updateDataProcessingAgreement) | **PUT** /v1/data-agreements/{id} | Update a data processing agreement.
 
 
 <a name="createDataProcessingAgreement"></a>
 # **createDataProcessingAgreement**
-> DataProcessingAgreementDto createDataProcessingAgreement(createDataProcessingAgreementRequestModel)
+> DataProcessingAgreement createDataProcessingAgreement(createDataProcessingAgreement)
 
 Create a data processing agreement.
 
@@ -33,9 +33,9 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    CreateDataProcessingAgreementRequestModel createDataProcessingAgreementRequestModel = new CreateDataProcessingAgreementRequestModel(); // CreateDataProcessingAgreementRequestModel | Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel.
+    CreateDataProcessingAgreement createDataProcessingAgreement = new CreateDataProcessingAgreement(); // CreateDataProcessingAgreement | Create data processing agreement payload
     try {
-      DataProcessingAgreementDto result = apiInstance.createDataProcessingAgreement(createDataProcessingAgreementRequestModel);
+      DataProcessingAgreement result = apiInstance.createDataProcessingAgreement(createDataProcessingAgreement);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#createDataProcessingAgreement");
@@ -52,11 +52,11 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDataProcessingAgreementRequestModel** | [**CreateDataProcessingAgreementRequestModel**](CreateDataProcessingAgreementRequestModel.md)| Create data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.CreateDataProcessingAgreementRequestModel. | [optional]
+ **createDataProcessingAgreement** | [**CreateDataProcessingAgreement**](CreateDataProcessingAgreement.md)| Create data processing agreement payload |
 
 ### Return type
 
-[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
+[**DataProcessingAgreement**](DataProcessingAgreement.md)
 
 ### Authorization
 
@@ -71,6 +71,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 
 <a name="deleteDataProcessingAgreementById"></a>
@@ -137,7 +138,7 @@ No authorization required
 
 <a name="getDataProcessingAgreementById"></a>
 # **getDataProcessingAgreementById**
-> DataProcessingAgreementDto getDataProcessingAgreementById(id)
+> DataProcessingAgreement getDataProcessingAgreementById(id)
 
 Get data processing agreement by id.
 
@@ -158,7 +159,7 @@ public class Example {
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.
     try {
-      DataProcessingAgreementDto result = apiInstance.getDataProcessingAgreementById(id);
+      DataProcessingAgreement result = apiInstance.getDataProcessingAgreementById(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#getDataProcessingAgreementById");
@@ -179,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
+[**DataProcessingAgreement**](DataProcessingAgreement.md)
 
 ### Authorization
 
@@ -200,9 +201,9 @@ No authorization required
 
 <a name="getDataProcessingAgreements"></a>
 # **getDataProcessingAgreements**
-> DataProcessingAgreementDtoPaginatedList getDataProcessingAgreements(pageNo, pageSize)
+> DataProcessingAgreementPaginatedList getDataProcessingAgreements(pageNo, pageSize)
 
-Get all data processing agreements.
+Get paginated data processing agreements.
 
 ### Example
 ```java
@@ -222,7 +223,7 @@ public class Example {
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      DataProcessingAgreementDtoPaginatedList result = apiInstance.getDataProcessingAgreements(pageNo, pageSize);
+      DataProcessingAgreementPaginatedList result = apiInstance.getDataProcessingAgreements(pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#getDataProcessingAgreements");
@@ -244,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataProcessingAgreementDtoPaginatedList**](DataProcessingAgreementDtoPaginatedList.md)
+[**DataProcessingAgreementPaginatedList**](DataProcessingAgreementPaginatedList.md)
 
 ### Authorization
 
@@ -259,6 +260,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**400** | Bad Request |  -  |
 **500** | Server Error |  -  |
 
 <a name="terminateDataProcessingAgreementById"></a>
@@ -325,7 +327,7 @@ No authorization required
 
 <a name="updateDataProcessingAgreement"></a>
 # **updateDataProcessingAgreement**
-> DataProcessingAgreementDto updateDataProcessingAgreement(id, updateDataProcessingAgreementRequestModel)
+> DataProcessingAgreement updateDataProcessingAgreement(id, updateDataProcessingAgreement)
 
 Update a data processing agreement.
 
@@ -345,9 +347,9 @@ public class Example {
 
     DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
     UUID id = UUID.randomUUID(); // UUID | Agreement id.
-    UpdateDataProcessingAgreementRequestModel updateDataProcessingAgreementRequestModel = new UpdateDataProcessingAgreementRequestModel(); // UpdateDataProcessingAgreementRequestModel | Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel.
+    UpdateDataProcessingAgreement updateDataProcessingAgreement = new UpdateDataProcessingAgreement(); // UpdateDataProcessingAgreement | Update data processing agreement payload
     try {
-      DataProcessingAgreementDto result = apiInstance.updateDataProcessingAgreement(id, updateDataProcessingAgreementRequestModel);
+      DataProcessingAgreement result = apiInstance.updateDataProcessingAgreement(id, updateDataProcessingAgreement);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataProcessingAgreementsApi#updateDataProcessingAgreement");
@@ -365,11 +367,11 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **UUID**| Agreement id. |
- **updateDataProcessingAgreementRequestModel** | [**UpdateDataProcessingAgreementRequestModel**](UpdateDataProcessingAgreementRequestModel.md)| Updated data processing agreement MyDataMyConsent.Models.DataProcessingAgreements.UpdateDataProcessingAgreementRequestModel. | [optional]
+ **updateDataProcessingAgreement** | [**UpdateDataProcessingAgreement**](UpdateDataProcessingAgreement.md)| Update data processing agreement payload |
 
 ### Return type
 
-[**DataProcessingAgreementDto**](DataProcessingAgreementDto.md)
+[**DataProcessingAgreement**](DataProcessingAgreement.md)
 
 ### Authorization
 

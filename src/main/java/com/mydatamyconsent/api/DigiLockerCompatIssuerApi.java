@@ -76,7 +76,7 @@ public class DigiLockerCompatIssuerApi {
 
     /**
      * Build call for digilockerCompatIssueDocument
-     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push URI request payload (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -140,6 +140,11 @@ public class DigiLockerCompatIssuerApi {
     @SuppressWarnings("rawtypes")
     private okhttp3.Call digilockerCompatIssueDocumentValidateBeforeCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
         
+        // verify the required parameter 'pushUriRequest' is set
+        if (pushUriRequest == null) {
+            throw new ApiException("Missing the required parameter 'pushUriRequest' when calling digilockerCompatIssueDocument(Async)");
+        }
+        
 
         okhttp3.Call localVarCall = digilockerCompatIssueDocumentCall(pushUriRequest, _callback);
         return localVarCall;
@@ -149,7 +154,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push URI request payload (required)
      * @return PushUriResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -171,7 +176,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document.
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push URI request payload (required)
      * @return ApiResponse&lt;PushUriResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -194,7 +199,7 @@ public class DigiLockerCompatIssuerApi {
     /**
      * Digilocker Compatible endpoint to issue document. (asynchronously)
      * 
-     * @param pushUriRequest Push uri request MyDataMyConsent.DeveloperApi.Models.DigiLocker.PushUriRequest. (optional)
+     * @param pushUriRequest Push URI request payload (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -8,8 +8,9 @@ Consent request receiver details
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) | Consent request receiver identifiers |  [optional]
-**identificationStrategy** | **IdentificationStrategy** |  |  [optional]
+**countryIso2Code** | **String** | Consent request receiver country ISO 2 code | 
+**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) | Consent request receiver identifiers | 
+**identificationStrategy** | **IdentificationStrategy** |  | 
 
 
 
