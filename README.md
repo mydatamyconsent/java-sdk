@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-03-14T10:35:33.952895422Z[Etc/UTC]
+  - Build date: 2022-03-15T10:35:28.832458170Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -168,9 +168,6 @@ Class | Method | HTTP request | Description
  - [ConsentRequestReceiver](docs/ConsentRequestReceiver.md)
  - [CreateDataConsentRequest](docs/CreateDataConsentRequest.md)
  - [CreateDataProcessingAgreement](docs/CreateDataProcessingAgreement.md)
- - [DataConsent](docs/DataConsent.md)
- - [DataConsentDetails](docs/DataConsentDetails.md)
- - [DataConsentDocument](docs/DataConsentDocument.md)
  - [DataConsentFinancialsDto](docs/DataConsentFinancialsDto.md)
  - [DataConsentRequest](docs/DataConsentRequest.md)
  - [DataConsentRequestDetails](docs/DataConsentRequestDetails.md)
@@ -198,19 +195,11 @@ Class | Method | HTTP request | Description
  - [FinancialAccounts](docs/FinancialAccounts.md)
  - [IdentificationStrategy](docs/IdentificationStrategy.md)
  - [Identifier](docs/Identifier.md)
- - [IndividualDataConsent](docs/IndividualDataConsent.md)
- - [IndividualDataConsentDetails](docs/IndividualDataConsentDetails.md)
- - [IndividualDataConsentDetailsPaginatedList](docs/IndividualDataConsentDetailsPaginatedList.md)
- - [IndividualDataConsentDocument](docs/IndividualDataConsentDocument.md)
  - [IndividualDataConsentRequestDetails](docs/IndividualDataConsentRequestDetails.md)
  - [IndividualDataConsentRequestDetailsPaginatedList](docs/IndividualDataConsentRequestDetailsPaginatedList.md)
  - [IssuedDocument](docs/IssuedDocument.md)
  - [IssuedDocumentPaginatedList](docs/IssuedDocumentPaginatedList.md)
  - [Life](docs/Life.md)
- - [OrganizationDataConsent](docs/OrganizationDataConsent.md)
- - [OrganizationDataConsentDetails](docs/OrganizationDataConsentDetails.md)
- - [OrganizationDataConsentDetailsPaginatedList](docs/OrganizationDataConsentDetailsPaginatedList.md)
- - [OrganizationDataConsentDocument](docs/OrganizationDataConsentDocument.md)
  - [OrganizationDataConsentRequestDetails](docs/OrganizationDataConsentRequestDetails.md)
  - [OrganizationDataConsentRequestDetailsPaginatedList](docs/OrganizationDataConsentRequestDetailsPaginatedList.md)
  - [OrganizationFinancialAccountDto](docs/OrganizationFinancialAccountDto.md)

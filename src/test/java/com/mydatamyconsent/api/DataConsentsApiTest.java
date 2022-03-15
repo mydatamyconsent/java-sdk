@@ -14,18 +14,10 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.DataConsent;
 import com.mydatamyconsent.model.DataConsentFinancialsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.FinancialAccount;
-import com.mydatamyconsent.model.IndividualDataConsent;
-import com.mydatamyconsent.model.IndividualDataConsentDetailsPaginatedList;
-import com.mydatamyconsent.model.IndividualDataConsentDocument;
 import org.threeten.bp.OffsetDateTime;
-import com.mydatamyconsent.model.OneOfDataConsentIndividualDataConsentOrganizationDataConsent;
-import com.mydatamyconsent.model.OrganizationDataConsent;
-import com.mydatamyconsent.model.OrganizationDataConsentDetailsPaginatedList;
-import com.mydatamyconsent.model.OrganizationDataConsentDocument;
 import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
 import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
 import java.util.UUID;
@@ -59,7 +51,7 @@ public class DataConsentsApiTest {
     public void downloadConsentedDocumentAnalysisTest() throws ApiException {
         String consentId = null;
         String documentId = null;
-                api.downloadConsentedDocumentAnalysis(consentId, documentId);
+                Object response = api.downloadConsentedDocumentAnalysis(consentId, documentId);
         // TODO: test validations
     }
     
@@ -74,8 +66,8 @@ public class DataConsentsApiTest {
     @Test
     public void downloadIndividualConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
-        UUID documentId = null;
-                api.downloadIndividualConsentedDocumentById(consentId, documentId);
+        String documentId = null;
+                Object response = api.downloadIndividualConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -90,8 +82,8 @@ public class DataConsentsApiTest {
     @Test
     public void downloadOrganizationConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
-        UUID documentId = null;
-                api.downloadOrganizationConsentedDocumentById(consentId, documentId);
+        String documentId = null;
+                Object response = api.downloadOrganizationConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -152,8 +144,8 @@ public class DataConsentsApiTest {
     @Test
     public void getConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
-        UUID documentId = null;
-                IndividualDataConsentDocument response = api.getConsentedDocumentById(consentId, documentId);
+        String documentId = null;
+                Object response = api.getConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -225,7 +217,7 @@ public class DataConsentsApiTest {
         OffsetDateTime toDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                IndividualDataConsentDetailsPaginatedList response = api.getConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
+                Object response = api.getConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
         // TODO: test validations
     }
     
@@ -240,7 +232,7 @@ public class DataConsentsApiTest {
     @Test
     public void getIndividualConsentedDocumentsTest() throws ApiException {
         UUID consentId = null;
-                List<IndividualDataConsentDocument> response = api.getIndividualConsentedDocuments(consentId);
+                Object response = api.getIndividualConsentedDocuments(consentId);
         // TODO: test validations
     }
     
@@ -255,7 +247,7 @@ public class DataConsentsApiTest {
     @Test
     public void getIndividualDataConsentByIdTest() throws ApiException {
         UUID consentId = null;
-                OneOfDataConsentIndividualDataConsentOrganizationDataConsent response = api.getIndividualDataConsentById(consentId);
+                Object response = api.getIndividualDataConsentById(consentId);
         // TODO: test validations
     }
     
@@ -291,8 +283,8 @@ public class DataConsentsApiTest {
     @Test
     public void getOrganizationConsentedDocumentByIdTest() throws ApiException {
         UUID consentId = null;
-        UUID documentId = null;
-                OrganizationDataConsentDocument response = api.getOrganizationConsentedDocumentById(consentId, documentId);
+        String documentId = null;
+                Object response = api.getOrganizationConsentedDocumentById(consentId, documentId);
         // TODO: test validations
     }
     
@@ -307,7 +299,7 @@ public class DataConsentsApiTest {
     @Test
     public void getOrganizationConsentedDocumentsTest() throws ApiException {
         UUID consentId = null;
-                List<OrganizationDataConsentDocument> response = api.getOrganizationConsentedDocuments(consentId);
+                Object response = api.getOrganizationConsentedDocuments(consentId);
         // TODO: test validations
     }
     
@@ -322,7 +314,7 @@ public class DataConsentsApiTest {
     @Test
     public void getOrganizationDataConsentByIdTest() throws ApiException {
         UUID consentId = null;
-                OneOfDataConsentIndividualDataConsentOrganizationDataConsent response = api.getOrganizationDataConsentById(consentId);
+                Object response = api.getOrganizationDataConsentById(consentId);
         // TODO: test validations
     }
     
@@ -341,7 +333,7 @@ public class DataConsentsApiTest {
         OffsetDateTime toDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                OrganizationDataConsentDetailsPaginatedList response = api.getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
+                Object response = api.getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
         // TODO: test validations
     }
     

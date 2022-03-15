@@ -27,18 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.mydatamyconsent.model.DataConsent;
 import com.mydatamyconsent.model.DataConsentFinancialsDto;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.FinancialAccount;
-import com.mydatamyconsent.model.IndividualDataConsent;
-import com.mydatamyconsent.model.IndividualDataConsentDetailsPaginatedList;
-import com.mydatamyconsent.model.IndividualDataConsentDocument;
 import org.threeten.bp.OffsetDateTime;
-import com.mydatamyconsent.model.OneOfDataConsentIndividualDataConsentOrganizationDataConsent;
-import com.mydatamyconsent.model.OrganizationDataConsent;
-import com.mydatamyconsent.model.OrganizationDataConsentDetailsPaginatedList;
-import com.mydatamyconsent.model.OrganizationDataConsentDocument;
 import com.mydatamyconsent.model.OrganizationFinancialAccountDto;
 import com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList;
 import java.util.UUID;
@@ -98,6 +90,8 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -173,16 +167,20 @@ public class DataConsentsApi {
      * 
      * @param consentId Data consent id. (required)
      * @param documentId Consented document Id. (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public void downloadConsentedDocumentAnalysis(String consentId, String documentId) throws ApiException {
-        downloadConsentedDocumentAnalysisWithHttpInfo(consentId, documentId);
+    public Object downloadConsentedDocumentAnalysis(String consentId, String documentId) throws ApiException {
+        ApiResponse<Object> localVarResp = downloadConsentedDocumentAnalysisWithHttpInfo(consentId, documentId);
+        return localVarResp.getData();
     }
 
     /**
@@ -190,18 +188,21 @@ public class DataConsentsApi {
      * 
      * @param consentId Data consent id. (required)
      * @param documentId Consented document Id. (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> downloadConsentedDocumentAnalysisWithHttpInfo(String consentId, String documentId) throws ApiException {
+    public ApiResponse<Object> downloadConsentedDocumentAnalysisWithHttpInfo(String consentId, String documentId) throws ApiException {
         okhttp3.Call localVarCall = downloadConsentedDocumentAnalysisValidateBeforeCall(consentId, documentId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -216,13 +217,16 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call downloadConsentedDocumentAnalysisAsync(String consentId, String documentId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call downloadConsentedDocumentAnalysisAsync(String consentId, String documentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = downloadConsentedDocumentAnalysisValidateBeforeCall(consentId, documentId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -236,10 +240,12 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call downloadIndividualConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call downloadIndividualConsentedDocumentByIdCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -288,7 +294,7 @@ public class DataConsentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call downloadIndividualConsentedDocumentByIdValidateBeforeCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call downloadIndividualConsentedDocumentByIdValidateBeforeCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consentId' is set
         if (consentId == null) {
@@ -311,16 +317,20 @@ public class DataConsentsApi {
      * 
      * @param consentId Individual data consent id. (required)
      * @param documentId Consented document id. (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public void downloadIndividualConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
-        downloadIndividualConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+    public Object downloadIndividualConsentedDocumentById(UUID consentId, String documentId) throws ApiException {
+        ApiResponse<Object> localVarResp = downloadIndividualConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+        return localVarResp.getData();
     }
 
     /**
@@ -328,18 +338,21 @@ public class DataConsentsApi {
      * 
      * @param consentId Individual data consent id. (required)
      * @param documentId Consented document id. (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> downloadIndividualConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
+    public ApiResponse<Object> downloadIndividualConsentedDocumentByIdWithHttpInfo(UUID consentId, String documentId) throws ApiException {
         okhttp3.Call localVarCall = downloadIndividualConsentedDocumentByIdValidateBeforeCall(consentId, documentId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -354,13 +367,16 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call downloadIndividualConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call downloadIndividualConsentedDocumentByIdAsync(UUID consentId, String documentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = downloadIndividualConsentedDocumentByIdValidateBeforeCall(consentId, documentId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -374,10 +390,12 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call downloadOrganizationConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call downloadOrganizationConsentedDocumentByIdCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -426,7 +444,7 @@ public class DataConsentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call downloadOrganizationConsentedDocumentByIdValidateBeforeCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call downloadOrganizationConsentedDocumentByIdValidateBeforeCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consentId' is set
         if (consentId == null) {
@@ -449,16 +467,20 @@ public class DataConsentsApi {
      * 
      * @param consentId Organization data consent id. (required)
      * @param documentId Organization consented document Id. (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public void downloadOrganizationConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
-        downloadOrganizationConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+    public Object downloadOrganizationConsentedDocumentById(UUID consentId, String documentId) throws ApiException {
+        ApiResponse<Object> localVarResp = downloadOrganizationConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+        return localVarResp.getData();
     }
 
     /**
@@ -466,18 +488,21 @@ public class DataConsentsApi {
      * 
      * @param consentId Organization data consent id. (required)
      * @param documentId Organization consented document Id. (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> downloadOrganizationConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
+    public ApiResponse<Object> downloadOrganizationConsentedDocumentByIdWithHttpInfo(UUID consentId, String documentId) throws ApiException {
         okhttp3.Call localVarCall = downloadOrganizationConsentedDocumentByIdValidateBeforeCall(consentId, documentId, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -492,13 +517,16 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call downloadOrganizationConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call downloadOrganizationConsentedDocumentByIdAsync(UUID consentId, String documentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = downloadOrganizationConsentedDocumentByIdValidateBeforeCall(consentId, documentId, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -918,10 +946,12 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getConsentedDocumentByIdCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -970,7 +1000,7 @@ public class DataConsentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getConsentedDocumentByIdValidateBeforeCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getConsentedDocumentByIdValidateBeforeCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consentId' is set
         if (consentId == null) {
@@ -993,17 +1023,19 @@ public class DataConsentsApi {
      * 
      * @param consentId Individual data consent id. (required)
      * @param documentId Consented document id. (required)
-     * @return IndividualDataConsentDocument
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public IndividualDataConsentDocument getConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
-        ApiResponse<IndividualDataConsentDocument> localVarResp = getConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+    public Object getConsentedDocumentById(UUID consentId, String documentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getConsentedDocumentByIdWithHttpInfo(consentId, documentId);
         return localVarResp.getData();
     }
 
@@ -1012,18 +1044,20 @@ public class DataConsentsApi {
      * 
      * @param consentId Individual data consent id. (required)
      * @param documentId Consented document id. (required)
-     * @return ApiResponse&lt;IndividualDataConsentDocument&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IndividualDataConsentDocument> getConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
+    public ApiResponse<Object> getConsentedDocumentByIdWithHttpInfo(UUID consentId, String documentId) throws ApiException {
         okhttp3.Call localVarCall = getConsentedDocumentByIdValidateBeforeCall(consentId, documentId, null);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1039,13 +1073,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<IndividualDataConsentDocument> _callback) throws ApiException {
+    public okhttp3.Call getConsentedDocumentByIdAsync(UUID consentId, String documentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConsentedDocumentByIdValidateBeforeCall(consentId, documentId, _callback);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1525,6 +1561,7 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -1611,17 +1648,18 @@ public class DataConsentsApi {
      * @param toDateTime To datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return IndividualDataConsentDetailsPaginatedList
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public IndividualDataConsentDetailsPaginatedList getConsents(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<IndividualDataConsentDetailsPaginatedList> localVarResp = getConsentsWithHttpInfo(status, fromDateTime, toDateTime, pageNo, pageSize);
+    public Object getConsents(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<Object> localVarResp = getConsentsWithHttpInfo(status, fromDateTime, toDateTime, pageNo, pageSize);
         return localVarResp.getData();
     }
 
@@ -1633,18 +1671,19 @@ public class DataConsentsApi {
      * @param toDateTime To datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;IndividualDataConsentDetailsPaginatedList&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IndividualDataConsentDetailsPaginatedList> getConsentsWithHttpInfo(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<Object> getConsentsWithHttpInfo(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getConsentsValidateBeforeCall(status, fromDateTime, toDateTime, pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentDetailsPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1663,13 +1702,14 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getConsentsAsync(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback<IndividualDataConsentDetailsPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getConsentsAsync(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getConsentsValidateBeforeCall(status, fromDateTime, toDateTime, pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<IndividualDataConsentDetailsPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1683,6 +1723,8 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -1751,17 +1793,19 @@ public class DataConsentsApi {
      * Get individual consented documents by consent id.
      * 
      * @param consentId Individual data consent id. (required)
-     * @return List&lt;IndividualDataConsentDocument&gt;
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public List<IndividualDataConsentDocument> getIndividualConsentedDocuments(UUID consentId) throws ApiException {
-        ApiResponse<List<IndividualDataConsentDocument>> localVarResp = getIndividualConsentedDocumentsWithHttpInfo(consentId);
+    public Object getIndividualConsentedDocuments(UUID consentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getIndividualConsentedDocumentsWithHttpInfo(consentId);
         return localVarResp.getData();
     }
 
@@ -1769,18 +1813,20 @@ public class DataConsentsApi {
      * Get individual consented documents by consent id.
      * 
      * @param consentId Individual data consent id. (required)
-     * @return ApiResponse&lt;List&lt;IndividualDataConsentDocument&gt;&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<IndividualDataConsentDocument>> getIndividualConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
+    public ApiResponse<Object> getIndividualConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
         okhttp3.Call localVarCall = getIndividualConsentedDocumentsValidateBeforeCall(consentId, null);
-        Type localVarReturnType = new TypeToken<List<IndividualDataConsentDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1795,13 +1841,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIndividualConsentedDocumentsAsync(UUID consentId, final ApiCallback<List<IndividualDataConsentDocument>> _callback) throws ApiException {
+    public okhttp3.Call getIndividualConsentedDocumentsAsync(UUID consentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIndividualConsentedDocumentsValidateBeforeCall(consentId, _callback);
-        Type localVarReturnType = new TypeToken<List<IndividualDataConsentDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1815,6 +1863,8 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -1883,17 +1933,19 @@ public class DataConsentsApi {
      * Get individuals data consent details by consent id.
      * 
      * @param consentId Individual data consent id. (required)
-     * @return OneOfDataConsentIndividualDataConsentOrganizationDataConsent
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public OneOfDataConsentIndividualDataConsentOrganizationDataConsent getIndividualDataConsentById(UUID consentId) throws ApiException {
-        ApiResponse<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> localVarResp = getIndividualDataConsentByIdWithHttpInfo(consentId);
+    public Object getIndividualDataConsentById(UUID consentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getIndividualDataConsentByIdWithHttpInfo(consentId);
         return localVarResp.getData();
     }
 
@@ -1901,18 +1953,20 @@ public class DataConsentsApi {
      * Get individuals data consent details by consent id.
      * 
      * @param consentId Individual data consent id. (required)
-     * @return ApiResponse&lt;OneOfDataConsentIndividualDataConsentOrganizationDataConsent&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> getIndividualDataConsentByIdWithHttpInfo(UUID consentId) throws ApiException {
+    public ApiResponse<Object> getIndividualDataConsentByIdWithHttpInfo(UUID consentId) throws ApiException {
         okhttp3.Call localVarCall = getIndividualDataConsentByIdValidateBeforeCall(consentId, null);
-        Type localVarReturnType = new TypeToken<OneOfDataConsentIndividualDataConsentOrganizationDataConsent>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1927,13 +1981,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIndividualDataConsentByIdAsync(UUID consentId, final ApiCallback<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> _callback) throws ApiException {
+    public okhttp3.Call getIndividualDataConsentByIdAsync(UUID consentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIndividualDataConsentByIdValidateBeforeCall(consentId, _callback);
-        Type localVarReturnType = new TypeToken<OneOfDataConsentIndividualDataConsentOrganizationDataConsent>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2130,10 +2186,12 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationConsentedDocumentByIdCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganizationConsentedDocumentByIdCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
 
         // Operation Servers
@@ -2182,7 +2240,7 @@ public class DataConsentsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganizationConsentedDocumentByIdValidateBeforeCall(UUID consentId, UUID documentId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrganizationConsentedDocumentByIdValidateBeforeCall(UUID consentId, String documentId, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'consentId' is set
         if (consentId == null) {
@@ -2205,17 +2263,19 @@ public class DataConsentsApi {
      * 
      * @param consentId Organization data consent id. (required)
      * @param documentId Organization consented document Id. (required)
-     * @return OrganizationDataConsentDocument
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationDataConsentDocument getOrganizationConsentedDocumentById(UUID consentId, UUID documentId) throws ApiException {
-        ApiResponse<OrganizationDataConsentDocument> localVarResp = getOrganizationConsentedDocumentByIdWithHttpInfo(consentId, documentId);
+    public Object getOrganizationConsentedDocumentById(UUID consentId, String documentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getOrganizationConsentedDocumentByIdWithHttpInfo(consentId, documentId);
         return localVarResp.getData();
     }
 
@@ -2224,18 +2284,20 @@ public class DataConsentsApi {
      * 
      * @param consentId Organization data consent id. (required)
      * @param documentId Organization consented document Id. (required)
-     * @return ApiResponse&lt;OrganizationDataConsentDocument&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationDataConsentDocument> getOrganizationConsentedDocumentByIdWithHttpInfo(UUID consentId, UUID documentId) throws ApiException {
+    public ApiResponse<Object> getOrganizationConsentedDocumentByIdWithHttpInfo(UUID consentId, String documentId) throws ApiException {
         okhttp3.Call localVarCall = getOrganizationConsentedDocumentByIdValidateBeforeCall(consentId, documentId, null);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2251,13 +2313,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationConsentedDocumentByIdAsync(UUID consentId, UUID documentId, final ApiCallback<OrganizationDataConsentDocument> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationConsentedDocumentByIdAsync(UUID consentId, String documentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganizationConsentedDocumentByIdValidateBeforeCall(consentId, documentId, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2271,6 +2335,8 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -2339,17 +2405,19 @@ public class DataConsentsApi {
      * Get organization consented documents by consent id.
      * 
      * @param consentId Organization data consent id. (required)
-     * @return List&lt;OrganizationDataConsentDocument&gt;
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public List<OrganizationDataConsentDocument> getOrganizationConsentedDocuments(UUID consentId) throws ApiException {
-        ApiResponse<List<OrganizationDataConsentDocument>> localVarResp = getOrganizationConsentedDocumentsWithHttpInfo(consentId);
+    public Object getOrganizationConsentedDocuments(UUID consentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getOrganizationConsentedDocumentsWithHttpInfo(consentId);
         return localVarResp.getData();
     }
 
@@ -2357,18 +2425,20 @@ public class DataConsentsApi {
      * Get organization consented documents by consent id.
      * 
      * @param consentId Organization data consent id. (required)
-     * @return ApiResponse&lt;List&lt;OrganizationDataConsentDocument&gt;&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<OrganizationDataConsentDocument>> getOrganizationConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
+    public ApiResponse<Object> getOrganizationConsentedDocumentsWithHttpInfo(UUID consentId) throws ApiException {
         okhttp3.Call localVarCall = getOrganizationConsentedDocumentsValidateBeforeCall(consentId, null);
-        Type localVarReturnType = new TypeToken<List<OrganizationDataConsentDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2383,13 +2453,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationConsentedDocumentsAsync(UUID consentId, final ApiCallback<List<OrganizationDataConsentDocument>> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationConsentedDocumentsAsync(UUID consentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganizationConsentedDocumentsValidateBeforeCall(consentId, _callback);
-        Type localVarReturnType = new TypeToken<List<OrganizationDataConsentDocument>>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2403,8 +2475,9 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call getOrganizationDataConsentByIdCall(UUID consentId, final ApiCallback _callback) throws ApiException {
@@ -2472,18 +2545,19 @@ public class DataConsentsApi {
      * Get organizations data consent details by consent id.
      * 
      * @param consentId Organization data consent id. (required)
-     * @return OneOfDataConsentIndividualDataConsentOrganizationDataConsent
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public OneOfDataConsentIndividualDataConsentOrganizationDataConsent getOrganizationDataConsentById(UUID consentId) throws ApiException {
-        ApiResponse<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> localVarResp = getOrganizationDataConsentByIdWithHttpInfo(consentId);
+    public Object getOrganizationDataConsentById(UUID consentId) throws ApiException {
+        ApiResponse<Object> localVarResp = getOrganizationDataConsentByIdWithHttpInfo(consentId);
         return localVarResp.getData();
     }
 
@@ -2491,19 +2565,20 @@ public class DataConsentsApi {
      * Get organizations data consent details by consent id.
      * 
      * @param consentId Organization data consent id. (required)
-     * @return ApiResponse&lt;OneOfDataConsentIndividualDataConsentOrganizationDataConsent&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> getOrganizationDataConsentByIdWithHttpInfo(UUID consentId) throws ApiException {
+    public ApiResponse<Object> getOrganizationDataConsentByIdWithHttpInfo(UUID consentId) throws ApiException {
         okhttp3.Call localVarCall = getOrganizationDataConsentByIdValidateBeforeCall(consentId, null);
-        Type localVarReturnType = new TypeToken<OneOfDataConsentIndividualDataConsentOrganizationDataConsent>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2518,14 +2593,15 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
+        <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationDataConsentByIdAsync(UUID consentId, final ApiCallback<OneOfDataConsentIndividualDataConsentOrganizationDataConsent> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationDataConsentByIdAsync(UUID consentId, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganizationDataConsentByIdValidateBeforeCall(consentId, _callback);
-        Type localVarReturnType = new TypeToken<OneOfDataConsentIndividualDataConsentOrganizationDataConsent>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2543,6 +2619,7 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
@@ -2629,17 +2706,18 @@ public class DataConsentsApi {
      * @param toDateTime To datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return OrganizationDataConsentDetailsPaginatedList
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public OrganizationDataConsentDetailsPaginatedList getOrganizationDataConsents(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
-        ApiResponse<OrganizationDataConsentDetailsPaginatedList> localVarResp = getOrganizationDataConsentsWithHttpInfo(status, fromDateTime, toDateTime, pageNo, pageSize);
+    public Object getOrganizationDataConsents(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+        ApiResponse<Object> localVarResp = getOrganizationDataConsentsWithHttpInfo(status, fromDateTime, toDateTime, pageNo, pageSize);
         return localVarResp.getData();
     }
 
@@ -2651,18 +2729,19 @@ public class DataConsentsApi {
      * @param toDateTime To datetime in UTC timezone. (optional)
      * @param pageNo Page number. (optional, default to 1)
      * @param pageSize Number of items to return. (optional, default to 25)
-     * @return ApiResponse&lt;OrganizationDataConsentDetailsPaginatedList&gt;
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<OrganizationDataConsentDetailsPaginatedList> getOrganizationDataConsentsWithHttpInfo(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
+    public ApiResponse<Object> getOrganizationDataConsentsWithHttpInfo(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize) throws ApiException {
         okhttp3.Call localVarCall = getOrganizationDataConsentsValidateBeforeCall(status, fromDateTime, toDateTime, pageNo, pageSize, null);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentDetailsPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2681,13 +2760,14 @@ public class DataConsentsApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 500 </td><td> Server Error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrganizationDataConsentsAsync(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback<OrganizationDataConsentDetailsPaginatedList> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationDataConsentsAsync(DataConsentStatus status, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrganizationDataConsentsValidateBeforeCall(status, fromDateTime, toDateTime, pageNo, pageSize, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationDataConsentDetailsPaginatedList>(){}.getType();
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
