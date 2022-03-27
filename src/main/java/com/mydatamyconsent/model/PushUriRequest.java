@@ -29,7 +29,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * PushUriRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-26T10:34:48.901757420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-27T10:34:35.500819370Z[Etc/UTC]")
 public class PushUriRequest {
   public static final String SERIALIZED_NAME_URI_DETAILS = "uriDetails";
   @SerializedName(SERIALIZED_NAME_URI_DETAILS)

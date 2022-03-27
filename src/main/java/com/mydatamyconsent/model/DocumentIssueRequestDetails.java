@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * Document issue request details.
  */
 @ApiModel(description = "Document issue request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-26T10:34:48.901757420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-27T10:34:35.500819370Z[Etc/UTC]")
 public class DocumentIssueRequestDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

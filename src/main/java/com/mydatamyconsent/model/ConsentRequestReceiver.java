@@ -32,7 +32,7 @@ import java.util.List;
  * Consent request receiver details
  */
 @ApiModel(description = "Consent request receiver details")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-26T10:34:48.901757420Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-27T10:34:35.500819370Z[Etc/UTC]")
 public class ConsentRequestReceiver {
   public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
   @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
