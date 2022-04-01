@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * DataConsentRequestResponse
  */
 @ApiModel(description = "DataConsentRequestResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-31T10:36:12.608809488Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-01T10:36:08.657162739Z[Etc/UTC]")
 public class IndividualDataConsentRequestDetails {
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
