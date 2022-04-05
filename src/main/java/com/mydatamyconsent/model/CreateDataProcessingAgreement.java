@@ -29,7 +29,7 @@ import java.io.IOException;
  * Create data processing agreement details.
  */
 @ApiModel(description = "Create data processing agreement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-04T10:36:23.661036986Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-05T10:34:32.943636265Z[Etc/UTC]")
 public class CreateDataProcessingAgreement {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
