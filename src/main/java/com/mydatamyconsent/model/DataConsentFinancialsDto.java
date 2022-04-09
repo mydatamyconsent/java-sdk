@@ -33,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DataConsentFinancialsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-08T10:37:00.625278065Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-09T10:35:20.650814800Z[Etc/UTC]")
 public class DataConsentFinancialsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
