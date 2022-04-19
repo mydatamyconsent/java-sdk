@@ -30,7 +30,7 @@ import java.util.UUID;
  * Data processing agreement details.
  */
 @ApiModel(description = "Data processing agreement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-18T10:36:38.178318972Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-19T10:36:11.532102822Z[Etc/UTC]")
 public class DataProcessingAgreement {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
