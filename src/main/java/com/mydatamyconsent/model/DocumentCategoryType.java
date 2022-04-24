@@ -37,7 +37,7 @@ public enum DocumentCategoryType {
   
   FINANCE("Finance"),
   
-  WORKANDAWARDS("WorkAndAwards"),
+  PROFESSIONAL("Professional"),
   
   LICENCESANDCERTIFICATES("LicencesAndCertificates"),
   
