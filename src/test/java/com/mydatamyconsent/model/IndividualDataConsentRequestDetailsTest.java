@@ -62,6 +62,14 @@ public class IndividualDataConsentRequestDetailsTest {
     }
 
     /**
+     * Test the property 'consentId'
+     */
+    @Test
+    public void consentIdTest() {
+        // TODO: test consentId
+    }
+
+    /**
      * Test the property 'title'
      */
     @Test
@@ -107,6 +115,14 @@ public class IndividualDataConsentRequestDetailsTest {
     @Test
     public void createdAtUtcTest() {
         // TODO: test createdAtUtc
+    }
+
+    /**
+     * Test the property 'expiresAtUtc'
+     */
+    @Test
+    public void expiresAtUtcTest() {
+        // TODO: test expiresAtUtc
     }
 
 }

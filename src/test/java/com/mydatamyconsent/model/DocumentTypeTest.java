@@ -160,12 +160,4 @@ public class DocumentTypeTest {
         // TODO: test approvedAtUtc
     }
 
-    /**
-     * Test the property 'approved'
-     */
-    @Test
-    public void approvedTest() {
-        // TODO: test approved
-    }
-
 }

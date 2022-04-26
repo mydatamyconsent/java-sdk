@@ -10,11 +10,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **UUID** | Data consent request id. | 
 **templateId** | **UUID** | Data consent template id. |  [optional]
+**consentId** | **UUID** | Data consent id. |  [optional]
 **title** | **String** | Data consent title. | 
 **description** | **String** | Data consent description. | 
 **purpose** | **String** | Data consent purpose. |  [optional]
 **dataLife** | [**Life**](Life.md) |  |  [optional]
 **collectables** | **List&lt;CollectibleTypes&gt;** | List of supported collectables. | 
+**receiver** | [**ConsentRequestReceiver**](ConsentRequestReceiver.md) |  | 
 **status** | **DataConsentStatus** |  | 
 **createdAtUtc** | **OffsetDateTime** | Request creation datetime in UTC timezone. | 
 **expiresAtUtc** | **OffsetDateTime** | Request expiration datetime in UTC timezone. | 

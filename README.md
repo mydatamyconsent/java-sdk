@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-04-25T10:36:43.768060164Z[Etc/UTC]
+  - Build date: 2022-04-26T10:37:12.975215508Z[Etc/UTC]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -168,6 +168,11 @@ Class | Method | HTTP request | Description
  - [ConsentRequestReceiver](docs/ConsentRequestReceiver.md)
  - [CreateDataConsentRequest](docs/CreateDataConsentRequest.md)
  - [CreateDataProcessingAgreement](docs/CreateDataProcessingAgreement.md)
+ - [DataConsent](docs/DataConsent.md)
+ - [DataConsentDetails](docs/DataConsentDetails.md)
+ - [DataConsentDetailsPaginatedList](docs/DataConsentDetailsPaginatedList.md)
+ - [DataConsentDocument](docs/DataConsentDocument.md)
+ - [DataConsentDocumentIssuer](docs/DataConsentDocumentIssuer.md)
  - [DataConsentFinancialsDto](docs/DataConsentFinancialsDto.md)
  - [DataConsentRequest](docs/DataConsentRequest.md)
  - [DataConsentRequestDetails](docs/DataConsentRequestDetails.md)
@@ -180,6 +185,7 @@ Class | Method | HTTP request | Description
  - [DataProvider](docs/DataProvider.md)
  - [DataProviderPaginatedList](docs/DataProviderPaginatedList.md)
  - [DocumentCategoryType](docs/DocumentCategoryType.md)
+ - [DocumentDigitalSignature](docs/DocumentDigitalSignature.md)
  - [DocumentIssueRequest](docs/DocumentIssueRequest.md)
  - [DocumentIssueRequestDetails](docs/DocumentIssueRequestDetails.md)
  - [DocumentIssueRequestStatus](docs/DocumentIssueRequestStatus.md)
@@ -198,6 +204,7 @@ Class | Method | HTTP request | Description
  - [IndividualDataConsentRequestDetails](docs/IndividualDataConsentRequestDetails.md)
  - [IndividualDataConsentRequestDetailsPaginatedList](docs/IndividualDataConsentRequestDetailsPaginatedList.md)
  - [IssuedDocument](docs/IssuedDocument.md)
+ - [IssuedDocumentDetails](docs/IssuedDocumentDetails.md)
  - [IssuedDocumentPaginatedList](docs/IssuedDocumentPaginatedList.md)
  - [Life](docs/Life.md)
  - [OrganizationDataConsentRequestDetails](docs/OrganizationDataConsentRequestDetails.md)

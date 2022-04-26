@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 <a name="downloadConsentedDocumentAnalysis"></a>
 # **downloadConsentedDocumentAnalysis**
-> Object downloadConsentedDocumentAnalysis(consentId, documentId)
+> downloadConsentedDocumentAnalysis(consentId, documentId)
 
 Get analysis of a consented document.
 
@@ -48,8 +48,7 @@ public class Example {
     String consentId = "consentId_example"; // String | Data consent id.
     String documentId = "documentId_example"; // String | Consented document Id.
     try {
-      Object result = apiInstance.downloadConsentedDocumentAnalysis(consentId, documentId);
-      System.out.println(result);
+      apiInstance.downloadConsentedDocumentAnalysis(consentId, documentId);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#downloadConsentedDocumentAnalysis");
       System.err.println("Status code: " + e.getCode());
@@ -70,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+null (empty response body)
 
 ### Authorization
 
@@ -91,7 +90,7 @@ No authorization required
 
 <a name="downloadIndividualConsentedDocumentById"></a>
 # **downloadIndividualConsentedDocumentById**
-> Object downloadIndividualConsentedDocumentById(consentId, documentId)
+> downloadIndividualConsentedDocumentById(consentId, documentId)
 
 Download individual consented document by document id.
 
@@ -113,8 +112,7 @@ public class Example {
     UUID consentId = UUID.randomUUID(); // UUID | Individual data consent id.
     String documentId = "documentId_example"; // String | Consented document id.
     try {
-      Object result = apiInstance.downloadIndividualConsentedDocumentById(consentId, documentId);
-      System.out.println(result);
+      apiInstance.downloadIndividualConsentedDocumentById(consentId, documentId);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#downloadIndividualConsentedDocumentById");
       System.err.println("Status code: " + e.getCode());
@@ -135,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+null (empty response body)
 
 ### Authorization
 
@@ -156,7 +154,7 @@ No authorization required
 
 <a name="downloadOrganizationConsentedDocumentById"></a>
 # **downloadOrganizationConsentedDocumentById**
-> Object downloadOrganizationConsentedDocumentById(consentId, documentId)
+> downloadOrganizationConsentedDocumentById(consentId, documentId)
 
 Download organization consent document based on document id.
 
@@ -178,8 +176,7 @@ public class Example {
     UUID consentId = UUID.randomUUID(); // UUID | Organization data consent id.
     String documentId = "documentId_example"; // String | Organization consented document Id.
     try {
-      Object result = apiInstance.downloadOrganizationConsentedDocumentById(consentId, documentId);
-      System.out.println(result);
+      apiInstance.downloadOrganizationConsentedDocumentById(consentId, documentId);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#downloadOrganizationConsentedDocumentById");
       System.err.println("Status code: " + e.getCode());
@@ -200,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+null (empty response body)
 
 ### Authorization
 
@@ -406,7 +403,7 @@ No authorization required
 
 <a name="getConsentedDocumentById"></a>
 # **getConsentedDocumentById**
-> Object getConsentedDocumentById(consentId, documentId)
+> DataConsentDocument getConsentedDocumentById(consentId, documentId)
 
 Get individual consented document by document id.
 
@@ -428,7 +425,7 @@ public class Example {
     UUID consentId = UUID.randomUUID(); // UUID | Individual data consent id.
     String documentId = "documentId_example"; // String | Consented document id.
     try {
-      Object result = apiInstance.getConsentedDocumentById(consentId, documentId);
+      DataConsentDocument result = apiInstance.getConsentedDocumentById(consentId, documentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getConsentedDocumentById");
@@ -450,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsentDocument**](DataConsentDocument.md)
 
 ### Authorization
 
@@ -669,7 +666,7 @@ No authorization required
 
 <a name="getConsents"></a>
 # **getConsents**
-> Object getConsents(status, fromDateTime, toDateTime, pageNo, pageSize)
+> DataConsentDetailsPaginatedList getConsents(status, fromDateTime, toDateTime, pageNo, pageSize)
 
 Get the paginated list of individual data consents.
 
@@ -690,13 +687,13 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus.
+    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
     OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | From datetime in UTC timezone.
     OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | To datetime in UTC timezone.
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      Object result = apiInstance.getConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
+      DataConsentDetailsPaginatedList result = apiInstance.getConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getConsents");
@@ -713,7 +710,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional]
  **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
@@ -721,7 +718,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsentDetailsPaginatedList**](DataConsentDetailsPaginatedList.md)
 
 ### Authorization
 
@@ -741,7 +738,7 @@ No authorization required
 
 <a name="getIndividualConsentedDocuments"></a>
 # **getIndividualConsentedDocuments**
-> Object getIndividualConsentedDocuments(consentId)
+> List&lt;DataConsentDocument&gt; getIndividualConsentedDocuments(consentId)
 
 Get individual consented documents by consent id.
 
@@ -762,7 +759,7 @@ public class Example {
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
     UUID consentId = UUID.randomUUID(); // UUID | Individual data consent id.
     try {
-      Object result = apiInstance.getIndividualConsentedDocuments(consentId);
+      List<DataConsentDocument> result = apiInstance.getIndividualConsentedDocuments(consentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getIndividualConsentedDocuments");
@@ -783,7 +780,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**List&lt;DataConsentDocument&gt;**](DataConsentDocument.md)
 
 ### Authorization
 
@@ -804,7 +801,7 @@ No authorization required
 
 <a name="getIndividualDataConsentById"></a>
 # **getIndividualDataConsentById**
-> Object getIndividualDataConsentById(consentId)
+> DataConsent getIndividualDataConsentById(consentId)
 
 Get individuals data consent details by consent id.
 
@@ -825,7 +822,7 @@ public class Example {
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
     UUID consentId = UUID.randomUUID(); // UUID | Individual data consent id.
     try {
-      Object result = apiInstance.getIndividualDataConsentById(consentId);
+      DataConsent result = apiInstance.getIndividualDataConsentById(consentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getIndividualDataConsentById");
@@ -846,7 +843,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsent**](DataConsent.md)
 
 ### Authorization
 
@@ -940,7 +937,7 @@ No authorization required
 
 <a name="getOrganizationConsentedDocumentById"></a>
 # **getOrganizationConsentedDocumentById**
-> Object getOrganizationConsentedDocumentById(consentId, documentId)
+> DataConsentDocument getOrganizationConsentedDocumentById(consentId, documentId)
 
 Get organization consent document based on document id.
 
@@ -962,7 +959,7 @@ public class Example {
     UUID consentId = UUID.randomUUID(); // UUID | Organization data consent id.
     String documentId = "documentId_example"; // String | Organization consented document Id.
     try {
-      Object result = apiInstance.getOrganizationConsentedDocumentById(consentId, documentId);
+      DataConsentDocument result = apiInstance.getOrganizationConsentedDocumentById(consentId, documentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getOrganizationConsentedDocumentById");
@@ -984,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsentDocument**](DataConsentDocument.md)
 
 ### Authorization
 
@@ -1005,7 +1002,7 @@ No authorization required
 
 <a name="getOrganizationConsentedDocuments"></a>
 # **getOrganizationConsentedDocuments**
-> Object getOrganizationConsentedDocuments(consentId)
+> List&lt;DataConsentDocument&gt; getOrganizationConsentedDocuments(consentId)
 
 Get organization consented documents by consent id.
 
@@ -1026,7 +1023,7 @@ public class Example {
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
     UUID consentId = UUID.randomUUID(); // UUID | Organization data consent id.
     try {
-      Object result = apiInstance.getOrganizationConsentedDocuments(consentId);
+      List<DataConsentDocument> result = apiInstance.getOrganizationConsentedDocuments(consentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getOrganizationConsentedDocuments");
@@ -1047,7 +1044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**List&lt;DataConsentDocument&gt;**](DataConsentDocument.md)
 
 ### Authorization
 
@@ -1068,7 +1065,7 @@ No authorization required
 
 <a name="getOrganizationDataConsentById"></a>
 # **getOrganizationDataConsentById**
-> Object getOrganizationDataConsentById(consentId)
+> DataConsent getOrganizationDataConsentById(consentId)
 
 Get organizations data consent details by consent id.
 
@@ -1089,7 +1086,7 @@ public class Example {
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
     UUID consentId = UUID.randomUUID(); // UUID | Organization data consent id.
     try {
-      Object result = apiInstance.getOrganizationDataConsentById(consentId);
+      DataConsent result = apiInstance.getOrganizationDataConsentById(consentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getOrganizationDataConsentById");
@@ -1110,7 +1107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsent**](DataConsent.md)
 
 ### Authorization
 
@@ -1131,7 +1128,7 @@ No authorization required
 
 <a name="getOrganizationDataConsents"></a>
 # **getOrganizationDataConsents**
-> Object getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize)
+> DataConsentDetailsPaginatedList getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize)
 
 Get the paginated list of organization data consents.
 
@@ -1150,13 +1147,13 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DataConsentsApi apiInstance = new DataConsentsApi(defaultClient);
-    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus.
+    DataConsentStatus status = DataConsentStatus.fromValue("Pending"); // DataConsentStatus | Data consent status.
     OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | From datetime in UTC timezone.
     OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | To datetime in UTC timezone.
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      Object result = apiInstance.getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
+      DataConsentDetailsPaginatedList result = apiInstance.getOrganizationDataConsents(status, fromDateTime, toDateTime, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataConsentsApi#getOrganizationDataConsents");
@@ -1173,7 +1170,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status MyDataMyConsent.Domain.Entities.ConsentAggregate.Enums.DataConsentStatus. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
+ **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
  **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional]
  **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
@@ -1181,7 +1178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DataConsentDetailsPaginatedList**](DataConsentDetailsPaginatedList.md)
 
 ### Authorization
 

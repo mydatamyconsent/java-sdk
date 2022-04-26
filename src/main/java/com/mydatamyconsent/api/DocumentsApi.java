@@ -32,8 +32,10 @@ import com.mydatamyconsent.model.DocumentIssueRequestDetails;
 import com.mydatamyconsent.model.DocumentTypePaginatedList;
 import java.io.File;
 import com.mydatamyconsent.model.IssuedDocument;
+import com.mydatamyconsent.model.IssuedDocumentDetails;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
+import com.mydatamyconsent.model.OneOfIssuedDocumentIssuedDocumentDetails;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 
@@ -160,7 +162,7 @@ public class DocumentsApi {
      * Get issued document.
      * 
      * @param documentId Document id. (required)
-     * @return IssuedDocument
+     * @return OneOfIssuedDocumentIssuedDocumentDetails
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -171,8 +173,8 @@ public class DocumentsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public IssuedDocument getIssuedDocumentById(UUID documentId) throws ApiException {
-        ApiResponse<IssuedDocument> localVarResp = getIssuedDocumentByIdWithHttpInfo(documentId);
+    public OneOfIssuedDocumentIssuedDocumentDetails getIssuedDocumentById(UUID documentId) throws ApiException {
+        ApiResponse<OneOfIssuedDocumentIssuedDocumentDetails> localVarResp = getIssuedDocumentByIdWithHttpInfo(documentId);
         return localVarResp.getData();
     }
 
@@ -180,7 +182,7 @@ public class DocumentsApi {
      * Get issued document.
      * 
      * @param documentId Document id. (required)
-     * @return ApiResponse&lt;IssuedDocument&gt;
+     * @return ApiResponse&lt;OneOfIssuedDocumentIssuedDocumentDetails&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -191,9 +193,9 @@ public class DocumentsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IssuedDocument> getIssuedDocumentByIdWithHttpInfo(UUID documentId) throws ApiException {
+    public ApiResponse<OneOfIssuedDocumentIssuedDocumentDetails> getIssuedDocumentByIdWithHttpInfo(UUID documentId) throws ApiException {
         okhttp3.Call localVarCall = getIssuedDocumentByIdValidateBeforeCall(documentId, null);
-        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<OneOfIssuedDocumentIssuedDocumentDetails>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -213,10 +215,10 @@ public class DocumentsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIssuedDocumentByIdAsync(UUID documentId, final ApiCallback<IssuedDocument> _callback) throws ApiException {
+    public okhttp3.Call getIssuedDocumentByIdAsync(UUID documentId, final ApiCallback<OneOfIssuedDocumentIssuedDocumentDetails> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIssuedDocumentByIdValidateBeforeCall(documentId, _callback);
-        Type localVarReturnType = new TypeToken<IssuedDocument>(){}.getType();
+        Type localVarReturnType = new TypeToken<OneOfIssuedDocumentIssuedDocumentDetails>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

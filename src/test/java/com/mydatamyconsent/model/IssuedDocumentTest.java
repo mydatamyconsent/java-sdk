@@ -22,6 +22,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -80,6 +81,22 @@ public class IssuedDocumentTest {
     @Test
     public void issuedAtUtcTest() {
         // TODO: test issuedAtUtc
+    }
+
+    /**
+     * Test the property 'expiresAtUtc'
+     */
+    @Test
+    public void expiresAtUtcTest() {
+        // TODO: test expiresAtUtc
+    }
+
+    /**
+     * Test the property 'acceptedAtUtc'
+     */
+    @Test
+    public void acceptedAtUtcTest() {
+        // TODO: test acceptedAtUtc
     }
 
 }

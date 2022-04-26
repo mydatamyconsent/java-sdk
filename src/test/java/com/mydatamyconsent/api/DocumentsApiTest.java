@@ -19,8 +19,10 @@ import com.mydatamyconsent.model.DocumentIssueRequestDetails;
 import com.mydatamyconsent.model.DocumentTypePaginatedList;
 import java.io.File;
 import com.mydatamyconsent.model.IssuedDocument;
+import com.mydatamyconsent.model.IssuedDocumentDetails;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
+import com.mydatamyconsent.model.OneOfIssuedDocumentIssuedDocumentDetails;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
 import org.junit.Test;
@@ -51,7 +53,7 @@ public class DocumentsApiTest {
     @Test
     public void getIssuedDocumentByIdTest() throws ApiException {
         UUID documentId = null;
-                IssuedDocument response = api.getIssuedDocumentById(documentId);
+                OneOfIssuedDocumentIssuedDocumentDetails response = api.getIssuedDocumentById(documentId);
         // TODO: test validations
     }
     

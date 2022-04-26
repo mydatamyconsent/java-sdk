@@ -24,13 +24,14 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
  * Issued Document Identifier.
  */
 @ApiModel(description = "Issued Document Identifier.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class IssuedDocument {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -51,6 +52,14 @@ public class IssuedDocument {
   public static final String SERIALIZED_NAME_ISSUED_AT_UTC = "issuedAtUtc";
   @SerializedName(SERIALIZED_NAME_ISSUED_AT_UTC)
   private OffsetDateTime issuedAtUtc;
+
+  public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
+  private OffsetDateTime expiresAtUtc;
+
+  public static final String SERIALIZED_NAME_ACCEPTED_AT_UTC = "acceptedAtUtc";
+  @SerializedName(SERIALIZED_NAME_ACCEPTED_AT_UTC)
+  private OffsetDateTime acceptedAtUtc;
 
   public IssuedDocument() { 
   }
@@ -170,6 +179,52 @@ public class IssuedDocument {
   }
 
 
+  public IssuedDocument expiresAtUtc(OffsetDateTime expiresAtUtc) {
+    
+    this.expiresAtUtc = expiresAtUtc;
+    return this;
+  }
+
+   /**
+   * Expires datetime in UTC timezone.
+   * @return expiresAtUtc
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Expires datetime in UTC timezone.")
+
+  public OffsetDateTime getExpiresAtUtc() {
+    return expiresAtUtc;
+  }
+
+
+  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
+    this.expiresAtUtc = expiresAtUtc;
+  }
+
+
+  public IssuedDocument acceptedAtUtc(OffsetDateTime acceptedAtUtc) {
+    
+    this.acceptedAtUtc = acceptedAtUtc;
+    return this;
+  }
+
+   /**
+   * Accepted datetime in UTC timezone.
+   * @return acceptedAtUtc
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Accepted datetime in UTC timezone.")
+
+  public OffsetDateTime getAcceptedAtUtc() {
+    return acceptedAtUtc;
+  }
+
+
+  public void setAcceptedAtUtc(OffsetDateTime acceptedAtUtc) {
+    this.acceptedAtUtc = acceptedAtUtc;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -183,12 +238,25 @@ public class IssuedDocument {
         Objects.equals(this.identifier, issuedDocument.identifier) &&
         Objects.equals(this.documentType, issuedDocument.documentType) &&
         Objects.equals(this.issuedTo, issuedDocument.issuedTo) &&
-        Objects.equals(this.issuedAtUtc, issuedDocument.issuedAtUtc);
+        Objects.equals(this.issuedAtUtc, issuedDocument.issuedAtUtc) &&
+        Objects.equals(this.expiresAtUtc, issuedDocument.expiresAtUtc) &&
+        Objects.equals(this.acceptedAtUtc, issuedDocument.acceptedAtUtc);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, identifier, documentType, issuedTo, issuedAtUtc);
+    return Objects.hash(id, identifier, documentType, issuedTo, issuedAtUtc, expiresAtUtc, acceptedAtUtc);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -200,6 +268,8 @@ public class IssuedDocument {
     sb.append("    documentType: ").append(toIndentedString(documentType)).append("\n");
     sb.append("    issuedTo: ").append(toIndentedString(issuedTo)).append("\n");
     sb.append("    issuedAtUtc: ").append(toIndentedString(issuedAtUtc)).append("\n");
+    sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
+    sb.append("    acceptedAtUtc: ").append(toIndentedString(acceptedAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }

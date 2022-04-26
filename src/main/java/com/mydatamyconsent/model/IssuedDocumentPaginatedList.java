@@ -21,6 +21,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.IssuedDocument;
+import com.mydatamyconsent.model.IssuedDocumentDetails;
+import com.mydatamyconsent.model.OneOfIssuedDocumentIssuedDocumentDetails;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -31,7 +33,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * IssuedDocumentPaginatedList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class IssuedDocumentPaginatedList {
   public static final String SERIALIZED_NAME_PAGE_INDEX = "pageIndex";
   @SerializedName(SERIALIZED_NAME_PAGE_INDEX)
@@ -51,7 +53,7 @@ public class IssuedDocumentPaginatedList {
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<IssuedDocument> items = null;
+  private List<OneOfIssuedDocumentIssuedDocumentDetails> items = null;
 
   public IssuedDocumentPaginatedList() { 
   }
@@ -147,15 +149,15 @@ public class IssuedDocumentPaginatedList {
   }
 
 
-  public IssuedDocumentPaginatedList items(List<IssuedDocument> items) {
+  public IssuedDocumentPaginatedList items(List<OneOfIssuedDocumentIssuedDocumentDetails> items) {
     
     this.items = items;
     return this;
   }
 
-  public IssuedDocumentPaginatedList addItemsItem(IssuedDocument itemsItem) {
+  public IssuedDocumentPaginatedList addItemsItem(OneOfIssuedDocumentIssuedDocumentDetails itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<IssuedDocument>();
+      this.items = new ArrayList<OneOfIssuedDocumentIssuedDocumentDetails>();
     }
     this.items.add(itemsItem);
     return this;
@@ -168,12 +170,12 @@ public class IssuedDocumentPaginatedList {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<IssuedDocument> getItems() {
+  public List<OneOfIssuedDocumentIssuedDocumentDetails> getItems() {
     return items;
   }
 
 
-  public void setItems(List<IssuedDocument> items) {
+  public void setItems(List<OneOfIssuedDocumentIssuedDocumentDetails> items) {
     this.items = items;
   }
 

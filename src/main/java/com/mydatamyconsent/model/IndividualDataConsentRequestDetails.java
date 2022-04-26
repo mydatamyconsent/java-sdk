@@ -33,7 +33,7 @@ import org.threeten.bp.OffsetDateTime;
  * DataConsentRequestResponse
  */
 @ApiModel(description = "DataConsentRequestResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class IndividualDataConsentRequestDetails {
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
@@ -46,6 +46,10 @@ public class IndividualDataConsentRequestDetails {
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "templateId";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
   private UUID templateId;
+
+  public static final String SERIALIZED_NAME_CONSENT_ID = "consentId";
+  @SerializedName(SERIALIZED_NAME_CONSENT_ID)
+  private UUID consentId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -70,6 +74,10 @@ public class IndividualDataConsentRequestDetails {
   public static final String SERIALIZED_NAME_CREATED_AT_UTC = "createdAtUtc";
   @SerializedName(SERIALIZED_NAME_CREATED_AT_UTC)
   private OffsetDateTime createdAtUtc;
+
+  public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
+  private OffsetDateTime expiresAtUtc;
 
   public IndividualDataConsentRequestDetails() { 
   }
@@ -140,6 +148,29 @@ public class IndividualDataConsentRequestDetails {
 
   public void setTemplateId(UUID templateId) {
     this.templateId = templateId;
+  }
+
+
+  public IndividualDataConsentRequestDetails consentId(UUID consentId) {
+    
+    this.consentId = consentId;
+    return this;
+  }
+
+   /**
+   * Data Consent id
+   * @return consentId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Data Consent id")
+
+  public UUID getConsentId() {
+    return consentId;
+  }
+
+
+  public void setConsentId(UUID consentId) {
+    this.consentId = consentId;
   }
 
 
@@ -281,6 +312,29 @@ public class IndividualDataConsentRequestDetails {
   }
 
 
+  public IndividualDataConsentRequestDetails expiresAtUtc(OffsetDateTime expiresAtUtc) {
+    
+    this.expiresAtUtc = expiresAtUtc;
+    return this;
+  }
+
+   /**
+   * Request expiration datetime in UTC timezone
+   * @return expiresAtUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Request expiration datetime in UTC timezone")
+
+  public OffsetDateTime getExpiresAtUtc() {
+    return expiresAtUtc;
+  }
+
+
+  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
+    this.expiresAtUtc = expiresAtUtc;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -293,12 +347,14 @@ public class IndividualDataConsentRequestDetails {
     return Objects.equals(this.receiver, individualDataConsentRequestDetails.receiver) &&
         Objects.equals(this.id, individualDataConsentRequestDetails.id) &&
         Objects.equals(this.templateId, individualDataConsentRequestDetails.templateId) &&
+        Objects.equals(this.consentId, individualDataConsentRequestDetails.consentId) &&
         Objects.equals(this.title, individualDataConsentRequestDetails.title) &&
         Objects.equals(this.description, individualDataConsentRequestDetails.description) &&
         Objects.equals(this.purpose, individualDataConsentRequestDetails.purpose) &&
         Objects.equals(this.status, individualDataConsentRequestDetails.status) &&
         Objects.equals(this.transactionId, individualDataConsentRequestDetails.transactionId) &&
-        Objects.equals(this.createdAtUtc, individualDataConsentRequestDetails.createdAtUtc);
+        Objects.equals(this.createdAtUtc, individualDataConsentRequestDetails.createdAtUtc) &&
+        Objects.equals(this.expiresAtUtc, individualDataConsentRequestDetails.expiresAtUtc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -307,7 +363,7 @@ public class IndividualDataConsentRequestDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(receiver, id, templateId, title, description, purpose, status, transactionId, createdAtUtc);
+    return Objects.hash(receiver, id, templateId, consentId, title, description, purpose, status, transactionId, createdAtUtc, expiresAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -324,12 +380,14 @@ public class IndividualDataConsentRequestDetails {
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    consentId: ").append(toIndentedString(consentId)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    purpose: ").append(toIndentedString(purpose)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("    createdAtUtc: ").append(toIndentedString(createdAtUtc)).append("\n");
+    sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }

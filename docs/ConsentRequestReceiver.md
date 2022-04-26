@@ -2,14 +2,13 @@
 
 # ConsentRequestReceiver
 
-Consent request receiver details
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countryIso2Code** | **String** | Consent request receiver country ISO 2 code | 
-**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) | Consent request receiver identifiers | 
+**countryIso2Code** | **String** |  | 
+**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) |  | 
 **identificationStrategy** | **IdentificationStrategy** |  | 
 
 

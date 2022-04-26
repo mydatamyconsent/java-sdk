@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.CollectibleTypes;
+import com.mydatamyconsent.model.ConsentRequestReceiver;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.Life;
 import io.swagger.annotations.ApiModel;
@@ -36,7 +37,7 @@ import org.threeten.bp.OffsetDateTime;
  * Data consent request details.
  */
 @ApiModel(description = "Data consent request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class DataConsentRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -45,6 +46,10 @@ public class DataConsentRequest {
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "templateId";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
   private UUID templateId;
+
+  public static final String SERIALIZED_NAME_CONSENT_ID = "consentId";
+  @SerializedName(SERIALIZED_NAME_CONSENT_ID)
+  private UUID consentId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -65,6 +70,10 @@ public class DataConsentRequest {
   public static final String SERIALIZED_NAME_COLLECTABLES = "collectables";
   @SerializedName(SERIALIZED_NAME_COLLECTABLES)
   private List<CollectibleTypes> collectables = new ArrayList<CollectibleTypes>();
+
+  public static final String SERIALIZED_NAME_RECEIVER = "receiver";
+  @SerializedName(SERIALIZED_NAME_RECEIVER)
+  private ConsentRequestReceiver receiver;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -140,6 +149,29 @@ public class DataConsentRequest {
 
   public void setTemplateId(UUID templateId) {
     this.templateId = templateId;
+  }
+
+
+  public DataConsentRequest consentId(UUID consentId) {
+    
+    this.consentId = consentId;
+    return this;
+  }
+
+   /**
+   * Data consent id.
+   * @return consentId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Data consent id.")
+
+  public UUID getConsentId() {
+    return consentId;
+  }
+
+
+  public void setConsentId(UUID consentId) {
+    this.consentId = consentId;
   }
 
 
@@ -260,6 +292,29 @@ public class DataConsentRequest {
 
   public void setCollectables(List<CollectibleTypes> collectables) {
     this.collectables = collectables;
+  }
+
+
+  public DataConsentRequest receiver(ConsentRequestReceiver receiver) {
+    
+    this.receiver = receiver;
+    return this;
+  }
+
+   /**
+   * Get receiver
+   * @return receiver
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public ConsentRequestReceiver getReceiver() {
+    return receiver;
+  }
+
+
+  public void setReceiver(ConsentRequestReceiver receiver) {
+    this.receiver = receiver;
   }
 
 
@@ -435,11 +490,13 @@ public class DataConsentRequest {
     DataConsentRequest dataConsentRequest = (DataConsentRequest) o;
     return Objects.equals(this.id, dataConsentRequest.id) &&
         Objects.equals(this.templateId, dataConsentRequest.templateId) &&
+        Objects.equals(this.consentId, dataConsentRequest.consentId) &&
         Objects.equals(this.title, dataConsentRequest.title) &&
         Objects.equals(this.description, dataConsentRequest.description) &&
         Objects.equals(this.purpose, dataConsentRequest.purpose) &&
         Objects.equals(this.dataLife, dataConsentRequest.dataLife) &&
         Objects.equals(this.collectables, dataConsentRequest.collectables) &&
+        Objects.equals(this.receiver, dataConsentRequest.receiver) &&
         Objects.equals(this.status, dataConsentRequest.status) &&
         Objects.equals(this.createdAtUtc, dataConsentRequest.createdAtUtc) &&
         Objects.equals(this.expiresAtUtc, dataConsentRequest.expiresAtUtc) &&
@@ -455,7 +512,7 @@ public class DataConsentRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, templateId, title, description, purpose, dataLife, collectables, status, createdAtUtc, expiresAtUtc, approvedAtUtc, dataAccessExpiresAtUtc, rejectedAtUtc, revokedAtUtc);
+    return Objects.hash(id, templateId, consentId, title, description, purpose, dataLife, collectables, receiver, status, createdAtUtc, expiresAtUtc, approvedAtUtc, dataAccessExpiresAtUtc, rejectedAtUtc, revokedAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -471,11 +528,13 @@ public class DataConsentRequest {
     sb.append("class DataConsentRequest {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    consentId: ").append(toIndentedString(consentId)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    purpose: ").append(toIndentedString(purpose)).append("\n");
     sb.append("    dataLife: ").append(toIndentedString(dataLife)).append("\n");
     sb.append("    collectables: ").append(toIndentedString(collectables)).append("\n");
+    sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    createdAtUtc: ").append(toIndentedString(createdAtUtc)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");

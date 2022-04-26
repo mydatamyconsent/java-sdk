@@ -29,10 +29,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Consent request receiver details
+ * ConsentRequestReceiver
  */
-@ApiModel(description = "Consent request receiver details")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class ConsentRequestReceiver {
   public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
   @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
@@ -56,11 +55,11 @@ public class ConsentRequestReceiver {
   }
 
    /**
-   * Consent request receiver country ISO 2 code
+   * Get countryIso2Code
    * @return countryIso2Code
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Consent request receiver country ISO 2 code")
+  @ApiModelProperty(required = true, value = "")
 
   public String getCountryIso2Code() {
     return countryIso2Code;
@@ -84,11 +83,11 @@ public class ConsentRequestReceiver {
   }
 
    /**
-   * Consent request receiver identifiers
+   * Get identifiers
    * @return identifiers
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Consent request receiver identifiers")
+  @ApiModelProperty(required = true, value = "")
 
   public List<StringStringKeyValuePair> getIdentifiers() {
     return identifiers;

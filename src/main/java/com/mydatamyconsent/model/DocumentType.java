@@ -36,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
  * Issuable Document Type details.
  */
 @ApiModel(description = "Issuable Document Type details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class DocumentType {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -93,10 +93,6 @@ public class DocumentType {
   public static final String SERIALIZED_NAME_APPROVED_AT_UTC = "approvedAtUtc";
   @SerializedName(SERIALIZED_NAME_APPROVED_AT_UTC)
   private OffsetDateTime approvedAtUtc;
-
-  public static final String SERIALIZED_NAME_APPROVED = "approved";
-  @SerializedName(SERIALIZED_NAME_APPROVED)
-  private Boolean approved;
 
   public DocumentType() { 
   }
@@ -428,29 +424,6 @@ public class DocumentType {
   }
 
 
-  public DocumentType approved(Boolean approved) {
-    
-    this.approved = approved;
-    return this;
-  }
-
-   /**
-   * Document type approval status.
-   * @return approved
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Document type approval status.")
-
-  public Boolean getApproved() {
-    return approved;
-  }
-
-
-  public void setApproved(Boolean approved) {
-    this.approved = approved;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -473,8 +446,7 @@ public class DocumentType {
         Objects.equals(this.addedBy, documentType.addedBy) &&
         Objects.equals(this.payableAmount, documentType.payableAmount) &&
         Objects.equals(this.payableAmountCurrency, documentType.payableAmountCurrency) &&
-        Objects.equals(this.approvedAtUtc, documentType.approvedAtUtc) &&
-        Objects.equals(this.approved, documentType.approved);
+        Objects.equals(this.approvedAtUtc, documentType.approvedAtUtc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -483,7 +455,7 @@ public class DocumentType {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, categoryType, subCategoryType, name, slug, description, logoUrl, searchServiceName, repositoryServiceName, supportedEntityTypes, addedBy, payableAmount, payableAmountCurrency, approvedAtUtc, approved);
+    return Objects.hash(id, categoryType, subCategoryType, name, slug, description, logoUrl, searchServiceName, repositoryServiceName, supportedEntityTypes, addedBy, payableAmount, payableAmountCurrency, approvedAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -511,7 +483,6 @@ public class DocumentType {
     sb.append("    payableAmount: ").append(toIndentedString(payableAmount)).append("\n");
     sb.append("    payableAmountCurrency: ").append(toIndentedString(payableAmountCurrency)).append("\n");
     sb.append("    approvedAtUtc: ").append(toIndentedString(approvedAtUtc)).append("\n");
-    sb.append("    approved: ").append(toIndentedString(approved)).append("\n");
     sb.append("}");
     return sb.toString();
   }

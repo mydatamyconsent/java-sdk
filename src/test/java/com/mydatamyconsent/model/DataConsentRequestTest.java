@@ -19,6 +19,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.CollectibleTypes;
+import com.mydatamyconsent.model.ConsentRequestReceiver;
 import com.mydatamyconsent.model.DataConsentStatus;
 import com.mydatamyconsent.model.Life;
 import io.swagger.annotations.ApiModel;
@@ -65,6 +66,14 @@ public class DataConsentRequestTest {
     }
 
     /**
+     * Test the property 'consentId'
+     */
+    @Test
+    public void consentIdTest() {
+        // TODO: test consentId
+    }
+
+    /**
      * Test the property 'title'
      */
     @Test
@@ -102,6 +111,14 @@ public class DataConsentRequestTest {
     @Test
     public void collectablesTest() {
         // TODO: test collectables
+    }
+
+    /**
+     * Test the property 'receiver'
+     */
+    @Test
+    public void receiverTest() {
+        // TODO: test receiver
     }
 
     /**

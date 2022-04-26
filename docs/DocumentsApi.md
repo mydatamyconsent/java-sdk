@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="getIssuedDocumentById"></a>
 # **getIssuedDocumentById**
-> IssuedDocument getIssuedDocumentById(documentId)
+> OneOfIssuedDocumentIssuedDocumentDetails getIssuedDocumentById(documentId)
 
 Get issued document.
 
@@ -36,7 +36,7 @@ public class Example {
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
     UUID documentId = UUID.randomUUID(); // UUID | Document id.
     try {
-      IssuedDocument result = apiInstance.getIssuedDocumentById(documentId);
+      OneOfIssuedDocumentIssuedDocumentDetails result = apiInstance.getIssuedDocumentById(documentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#getIssuedDocumentById");
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IssuedDocument**](IssuedDocument.md)
+[**OneOfIssuedDocumentIssuedDocumentDetails**](OneOfIssuedDocumentIssuedDocumentDetails.md)
 
 ### Authorization
 

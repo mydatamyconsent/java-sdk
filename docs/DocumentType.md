@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 **payableAmount** | **Double** | Payable amount if document is chargeable. eg: 10.25. |  [optional]
 **payableAmountCurrency** | **String** | Payable amount currency. eg: INR, USD etc.,. |  [optional]
 **approvedAtUtc** | **OffsetDateTime** | DateTime of approval in UTC timezone. |  [optional]
-**approved** | **Boolean** | Document type approval status. | 
 
 
 

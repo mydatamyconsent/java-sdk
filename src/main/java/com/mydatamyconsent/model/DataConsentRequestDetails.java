@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
  * DataConsentRequestResponse
  */
 @ApiModel(description = "DataConsentRequestResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-25T10:36:43.768060164Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
 public class DataConsentRequestDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -41,6 +41,10 @@ public class DataConsentRequestDetails {
   public static final String SERIALIZED_NAME_TEMPLATE_ID = "templateId";
   @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
   private UUID templateId;
+
+  public static final String SERIALIZED_NAME_CONSENT_ID = "consentId";
+  @SerializedName(SERIALIZED_NAME_CONSENT_ID)
+  private UUID consentId;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
@@ -65,6 +69,10 @@ public class DataConsentRequestDetails {
   public static final String SERIALIZED_NAME_CREATED_AT_UTC = "createdAtUtc";
   @SerializedName(SERIALIZED_NAME_CREATED_AT_UTC)
   private OffsetDateTime createdAtUtc;
+
+  public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
+  @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
+  private OffsetDateTime expiresAtUtc;
 
   public DataConsentRequestDetails() { 
   }
@@ -112,6 +120,29 @@ public class DataConsentRequestDetails {
 
   public void setTemplateId(UUID templateId) {
     this.templateId = templateId;
+  }
+
+
+  public DataConsentRequestDetails consentId(UUID consentId) {
+    
+    this.consentId = consentId;
+    return this;
+  }
+
+   /**
+   * Data Consent id
+   * @return consentId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Data Consent id")
+
+  public UUID getConsentId() {
+    return consentId;
+  }
+
+
+  public void setConsentId(UUID consentId) {
+    this.consentId = consentId;
   }
 
 
@@ -253,6 +284,29 @@ public class DataConsentRequestDetails {
   }
 
 
+  public DataConsentRequestDetails expiresAtUtc(OffsetDateTime expiresAtUtc) {
+    
+    this.expiresAtUtc = expiresAtUtc;
+    return this;
+  }
+
+   /**
+   * Request expiration datetime in UTC timezone
+   * @return expiresAtUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Request expiration datetime in UTC timezone")
+
+  public OffsetDateTime getExpiresAtUtc() {
+    return expiresAtUtc;
+  }
+
+
+  public void setExpiresAtUtc(OffsetDateTime expiresAtUtc) {
+    this.expiresAtUtc = expiresAtUtc;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -264,12 +318,14 @@ public class DataConsentRequestDetails {
     DataConsentRequestDetails dataConsentRequestDetails = (DataConsentRequestDetails) o;
     return Objects.equals(this.id, dataConsentRequestDetails.id) &&
         Objects.equals(this.templateId, dataConsentRequestDetails.templateId) &&
+        Objects.equals(this.consentId, dataConsentRequestDetails.consentId) &&
         Objects.equals(this.title, dataConsentRequestDetails.title) &&
         Objects.equals(this.description, dataConsentRequestDetails.description) &&
         Objects.equals(this.purpose, dataConsentRequestDetails.purpose) &&
         Objects.equals(this.status, dataConsentRequestDetails.status) &&
         Objects.equals(this.transactionId, dataConsentRequestDetails.transactionId) &&
-        Objects.equals(this.createdAtUtc, dataConsentRequestDetails.createdAtUtc);
+        Objects.equals(this.createdAtUtc, dataConsentRequestDetails.createdAtUtc) &&
+        Objects.equals(this.expiresAtUtc, dataConsentRequestDetails.expiresAtUtc);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -278,7 +334,7 @@ public class DataConsentRequestDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, templateId, title, description, purpose, status, transactionId, createdAtUtc);
+    return Objects.hash(id, templateId, consentId, title, description, purpose, status, transactionId, createdAtUtc, expiresAtUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -294,12 +350,14 @@ public class DataConsentRequestDetails {
     sb.append("class DataConsentRequestDetails {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+    sb.append("    consentId: ").append(toIndentedString(consentId)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    purpose: ").append(toIndentedString(purpose)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
     sb.append("    createdAtUtc: ").append(toIndentedString(createdAtUtc)).append("\n");
+    sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }
