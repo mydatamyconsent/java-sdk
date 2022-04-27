@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * ApprovedConsentRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-27T10:37:04.552457587Z[Etc/UTC]")
 public class ApprovedConsentRequest {
   public static final String SERIALIZED_NAME_LOGO_URL = "logoUrl";
   @SerializedName(SERIALIZED_NAME_LOGO_URL)

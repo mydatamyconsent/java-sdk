@@ -20,7 +20,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DocumentDigitalSignature;
 import com.mydatamyconsent.model.DocumentReceiver;
-import com.mydatamyconsent.model.IssuedDocument;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -104,6 +103,30 @@ public class IssuedDocumentDetailsTest {
     @Test
     public void acceptedAtUtcTest() {
         // TODO: test acceptedAtUtc
+    }
+
+    /**
+     * Test the property 'receiver'
+     */
+    @Test
+    public void receiverTest() {
+        // TODO: test receiver
+    }
+
+    /**
+     * Test the property 'metadata'
+     */
+    @Test
+    public void metadataTest() {
+        // TODO: test metadata
+    }
+
+    /**
+     * Test the property 'digitalSignatures'
+     */
+    @Test
+    public void digitalSignaturesTest() {
+        // TODO: test digitalSignatures
     }
 
 }

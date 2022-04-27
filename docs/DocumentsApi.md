@@ -5,7 +5,7 @@ All URIs are relative to *https://api.mydatamyconsent.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getIssuedDocumentById**](DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document.
-[**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued/{documentTypeId} | Get paginated list of issued documents of given document type.
+[**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued | Get paginated list of issued documents of given document type.
 [**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get paginated list of registered document types.
 [**issueDocumentToIndividual**](DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user.
 [**issueDocumentToOrganization**](DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization.
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="getIssuedDocumentById"></a>
 # **getIssuedDocumentById**
-> OneOfIssuedDocumentIssuedDocumentDetails getIssuedDocumentById(documentId)
+> IssuedDocumentDetails getIssuedDocumentById(documentId)
 
 Get issued document.
 
@@ -36,7 +36,7 @@ public class Example {
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
     UUID documentId = UUID.randomUUID(); // UUID | Document id.
     try {
-      OneOfIssuedDocumentIssuedDocumentDetails result = apiInstance.getIssuedDocumentById(documentId);
+      IssuedDocumentDetails result = apiInstance.getIssuedDocumentById(documentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#getIssuedDocumentById");
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OneOfIssuedDocumentIssuedDocumentDetails**](OneOfIssuedDocumentIssuedDocumentDetails.md)
+[**IssuedDocumentDetails**](IssuedDocumentDetails.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **documentTypeId** | **UUID**| Document type id. |
+ **documentTypeId** | **UUID**| Document type id. | [optional]
  **fromDateTime** | **OffsetDateTime**| From DateTime in UTC timezone. | [optional]
  **toDateTime** | **OffsetDateTime**| To DateTime in UTC timezone. | [optional]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
@@ -148,7 +148,7 @@ No authorization required
 
 <a name="getRegisteredDocumentTypes"></a>
 # **getRegisteredDocumentTypes**
-> DocumentTypePaginatedList getRegisteredDocumentTypes(pageNo, pageSize)
+> DocumentTypePaginatedList getRegisteredDocumentTypes(supportedEntityType, pageNo, pageSize)
 
 Get paginated list of registered document types.
 
@@ -167,10 +167,11 @@ public class Example {
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
 
     DocumentsApi apiInstance = new DocumentsApi(defaultClient);
+    SupportedEntityType supportedEntityType = SupportedEntityType.fromValue("Individual"); // SupportedEntityType | Supported entity type.
     Integer pageNo = 1; // Integer | Page number.
     Integer pageSize = 25; // Integer | Number of items to return.
     try {
-      DocumentTypePaginatedList result = apiInstance.getRegisteredDocumentTypes(pageNo, pageSize);
+      DocumentTypePaginatedList result = apiInstance.getRegisteredDocumentTypes(supportedEntityType, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DocumentsApi#getRegisteredDocumentTypes");
@@ -187,6 +188,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **supportedEntityType** | [**SupportedEntityType**](.md)| Supported entity type. | [optional] [enum: Individual, Organization, Both]
  **pageNo** | **Integer**| Page number. | [optional] [default to 1]
  **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
 

@@ -18,12 +18,11 @@ import com.mydatamyconsent.model.DocumentIssueRequest;
 import com.mydatamyconsent.model.DocumentIssueRequestDetails;
 import com.mydatamyconsent.model.DocumentTypePaginatedList;
 import java.io.File;
-import com.mydatamyconsent.model.IssuedDocument;
 import com.mydatamyconsent.model.IssuedDocumentDetails;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
 import org.threeten.bp.OffsetDateTime;
-import com.mydatamyconsent.model.OneOfIssuedDocumentIssuedDocumentDetails;
 import com.mydatamyconsent.model.ProblemDetails;
+import com.mydatamyconsent.model.SupportedEntityType;
 import java.util.UUID;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -53,7 +52,7 @@ public class DocumentsApiTest {
     @Test
     public void getIssuedDocumentByIdTest() throws ApiException {
         UUID documentId = null;
-                OneOfIssuedDocumentIssuedDocumentDetails response = api.getIssuedDocumentById(documentId);
+                IssuedDocumentDetails response = api.getIssuedDocumentById(documentId);
         // TODO: test validations
     }
     
@@ -86,9 +85,10 @@ public class DocumentsApiTest {
      */
     @Test
     public void getRegisteredDocumentTypesTest() throws ApiException {
+        SupportedEntityType supportedEntityType = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                DocumentTypePaginatedList response = api.getRegisteredDocumentTypes(pageNo, pageSize);
+                DocumentTypePaginatedList response = api.getRegisteredDocumentTypes(supportedEntityType, pageNo, pageSize);
         // TODO: test validations
     }
     

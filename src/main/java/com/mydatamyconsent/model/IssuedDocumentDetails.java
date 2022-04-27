@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DocumentDigitalSignature;
 import com.mydatamyconsent.model.DocumentReceiver;
-import com.mydatamyconsent.model.IssuedDocument;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -37,20 +36,8 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * IssuedDocumentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-26T10:37:12.975215508Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-04-27T10:37:04.552457587Z[Etc/UTC]")
 public class IssuedDocumentDetails {
-  public static final String SERIALIZED_NAME_RECEIVER = "receiver";
-  @SerializedName(SERIALIZED_NAME_RECEIVER)
-  private DocumentReceiver receiver;
-
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
-  private Map<String, String> metadata = null;
-
-  public static final String SERIALIZED_NAME_DIGITAL_SIGNATURES = "digitalSignatures";
-  @SerializedName(SERIALIZED_NAME_DIGITAL_SIGNATURES)
-  private List<DocumentDigitalSignature> digitalSignatures = new ArrayList<DocumentDigitalSignature>();
-
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private UUID id;
@@ -79,90 +66,20 @@ public class IssuedDocumentDetails {
   @SerializedName(SERIALIZED_NAME_ACCEPTED_AT_UTC)
   private OffsetDateTime acceptedAtUtc;
 
+  public static final String SERIALIZED_NAME_RECEIVER = "receiver";
+  @SerializedName(SERIALIZED_NAME_RECEIVER)
+  private DocumentReceiver receiver;
+
+  public static final String SERIALIZED_NAME_METADATA = "metadata";
+  @SerializedName(SERIALIZED_NAME_METADATA)
+  private Map<String, String> metadata = null;
+
+  public static final String SERIALIZED_NAME_DIGITAL_SIGNATURES = "digitalSignatures";
+  @SerializedName(SERIALIZED_NAME_DIGITAL_SIGNATURES)
+  private List<DocumentDigitalSignature> digitalSignatures = new ArrayList<DocumentDigitalSignature>();
+
   public IssuedDocumentDetails() { 
   }
-
-  public IssuedDocumentDetails receiver(DocumentReceiver receiver) {
-    
-    this.receiver = receiver;
-    return this;
-  }
-
-   /**
-   * Get receiver
-   * @return receiver
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public DocumentReceiver getReceiver() {
-    return receiver;
-  }
-
-
-  public void setReceiver(DocumentReceiver receiver) {
-    this.receiver = receiver;
-  }
-
-
-  public IssuedDocumentDetails metadata(Map<String, String> metadata) {
-    
-    this.metadata = metadata;
-    return this;
-  }
-
-  public IssuedDocumentDetails putMetadataItem(String key, String metadataItem) {
-    if (this.metadata == null) {
-      this.metadata = new HashMap<String, String>();
-    }
-    this.metadata.put(key, metadataItem);
-    return this;
-  }
-
-   /**
-   * Metadata.
-   * @return metadata
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Metadata.")
-
-  public Map<String, String> getMetadata() {
-    return metadata;
-  }
-
-
-  public void setMetadata(Map<String, String> metadata) {
-    this.metadata = metadata;
-  }
-
-
-  public IssuedDocumentDetails digitalSignatures(List<DocumentDigitalSignature> digitalSignatures) {
-    
-    this.digitalSignatures = digitalSignatures;
-    return this;
-  }
-
-  public IssuedDocumentDetails addDigitalSignaturesItem(DocumentDigitalSignature digitalSignaturesItem) {
-    this.digitalSignatures.add(digitalSignaturesItem);
-    return this;
-  }
-
-   /**
-   * Digital signatures.
-   * @return digitalSignatures
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Digital signatures.")
-
-  public List<DocumentDigitalSignature> getDigitalSignatures() {
-    return digitalSignatures;
-  }
-
-
-  public void setDigitalSignatures(List<DocumentDigitalSignature> digitalSignatures) {
-    this.digitalSignatures = digitalSignatures;
-  }
-
 
   public IssuedDocumentDetails id(UUID id) {
     
@@ -325,6 +242,88 @@ public class IssuedDocumentDetails {
   }
 
 
+  public IssuedDocumentDetails receiver(DocumentReceiver receiver) {
+    
+    this.receiver = receiver;
+    return this;
+  }
+
+   /**
+   * Get receiver
+   * @return receiver
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public DocumentReceiver getReceiver() {
+    return receiver;
+  }
+
+
+  public void setReceiver(DocumentReceiver receiver) {
+    this.receiver = receiver;
+  }
+
+
+  public IssuedDocumentDetails metadata(Map<String, String> metadata) {
+    
+    this.metadata = metadata;
+    return this;
+  }
+
+  public IssuedDocumentDetails putMetadataItem(String key, String metadataItem) {
+    if (this.metadata == null) {
+      this.metadata = new HashMap<String, String>();
+    }
+    this.metadata.put(key, metadataItem);
+    return this;
+  }
+
+   /**
+   * Metadata.
+   * @return metadata
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Metadata.")
+
+  public Map<String, String> getMetadata() {
+    return metadata;
+  }
+
+
+  public void setMetadata(Map<String, String> metadata) {
+    this.metadata = metadata;
+  }
+
+
+  public IssuedDocumentDetails digitalSignatures(List<DocumentDigitalSignature> digitalSignatures) {
+    
+    this.digitalSignatures = digitalSignatures;
+    return this;
+  }
+
+  public IssuedDocumentDetails addDigitalSignaturesItem(DocumentDigitalSignature digitalSignaturesItem) {
+    this.digitalSignatures.add(digitalSignaturesItem);
+    return this;
+  }
+
+   /**
+   * Digital signatures.
+   * @return digitalSignatures
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Digital signatures.")
+
+  public List<DocumentDigitalSignature> getDigitalSignatures() {
+    return digitalSignatures;
+  }
+
+
+  public void setDigitalSignatures(List<DocumentDigitalSignature> digitalSignatures) {
+    this.digitalSignatures = digitalSignatures;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -334,16 +333,16 @@ public class IssuedDocumentDetails {
       return false;
     }
     IssuedDocumentDetails issuedDocumentDetails = (IssuedDocumentDetails) o;
-    return Objects.equals(this.receiver, issuedDocumentDetails.receiver) &&
-        Objects.equals(this.metadata, issuedDocumentDetails.metadata) &&
-        Objects.equals(this.digitalSignatures, issuedDocumentDetails.digitalSignatures) &&
-        Objects.equals(this.id, issuedDocumentDetails.id) &&
+    return Objects.equals(this.id, issuedDocumentDetails.id) &&
         Objects.equals(this.identifier, issuedDocumentDetails.identifier) &&
         Objects.equals(this.documentType, issuedDocumentDetails.documentType) &&
         Objects.equals(this.issuedTo, issuedDocumentDetails.issuedTo) &&
         Objects.equals(this.issuedAtUtc, issuedDocumentDetails.issuedAtUtc) &&
         Objects.equals(this.expiresAtUtc, issuedDocumentDetails.expiresAtUtc) &&
-        Objects.equals(this.acceptedAtUtc, issuedDocumentDetails.acceptedAtUtc);
+        Objects.equals(this.acceptedAtUtc, issuedDocumentDetails.acceptedAtUtc) &&
+        Objects.equals(this.receiver, issuedDocumentDetails.receiver) &&
+        Objects.equals(this.metadata, issuedDocumentDetails.metadata) &&
+        Objects.equals(this.digitalSignatures, issuedDocumentDetails.digitalSignatures);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -352,7 +351,7 @@ public class IssuedDocumentDetails {
 
   @Override
   public int hashCode() {
-    return Objects.hash(receiver, metadata, digitalSignatures, id, identifier, documentType, issuedTo, issuedAtUtc, expiresAtUtc, acceptedAtUtc);
+    return Objects.hash(id, identifier, documentType, issuedTo, issuedAtUtc, expiresAtUtc, acceptedAtUtc, receiver, metadata, digitalSignatures);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -366,9 +365,6 @@ public class IssuedDocumentDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IssuedDocumentDetails {\n");
-    sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
-    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
-    sb.append("    digitalSignatures: ").append(toIndentedString(digitalSignatures)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("    documentType: ").append(toIndentedString(documentType)).append("\n");
@@ -376,6 +372,9 @@ public class IssuedDocumentDetails {
     sb.append("    issuedAtUtc: ").append(toIndentedString(issuedAtUtc)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
     sb.append("    acceptedAtUtc: ").append(toIndentedString(acceptedAtUtc)).append("\n");
+    sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    digitalSignatures: ").append(toIndentedString(digitalSignatures)).append("\n");
     sb.append("}");
     return sb.toString();
   }

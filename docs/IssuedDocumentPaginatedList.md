@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **pageSize** | **Integer** |  |  [optional]
 **totalPages** | **Integer** |  |  [optional] [readonly]
 **totalItems** | **Long** |  |  [optional]
-**items** | [**List&lt;OneOfIssuedDocumentIssuedDocumentDetails&gt;**](OneOfIssuedDocumentIssuedDocumentDetails.md) |  |  [optional]
+**items** | [**List&lt;IssuedDocument&gt;**](IssuedDocument.md) |  |  [optional]
 
 
 
