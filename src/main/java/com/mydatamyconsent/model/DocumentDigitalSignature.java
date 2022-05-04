@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
  * Document digital signature.
  */
 @ApiModel(description = "Document digital signature.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-03T10:38:02.393855662Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-04T10:36:45.492292077Z[Etc/UTC]")
 public class DocumentDigitalSignature {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
