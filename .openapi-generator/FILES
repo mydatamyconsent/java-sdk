@@ -56,6 +56,7 @@ docs/OrganizationDataConsentRequestDetailsPaginatedList.md
 docs/OrganizationFinancialAccountDto.md
 docs/OrganizationFinancialTransactionsDto.md
 docs/OrganizationFinancialTransactionsDtoPaginatedList.md
+docs/PaymentRequest.md
 docs/ProblemDetails.md
 docs/PushUriRequest.md
 docs/PushUriResponse.md
@@ -150,6 +151,7 @@ src/main/java/com/mydatamyconsent/model/OrganizationDataConsentRequestDetailsPag
 src/main/java/com/mydatamyconsent/model/OrganizationFinancialAccountDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDto.java
 src/main/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoPaginatedList.java
+src/main/java/com/mydatamyconsent/model/PaymentRequest.java
 src/main/java/com/mydatamyconsent/model/ProblemDetails.java
 src/main/java/com/mydatamyconsent/model/PushUriRequest.java
 src/main/java/com/mydatamyconsent/model/PushUriResponse.java
@@ -219,6 +221,7 @@ src/test/java/com/mydatamyconsent/model/OrganizationDataConsentRequestDetailsTes
 src/test/java/com/mydatamyconsent/model/OrganizationFinancialAccountDtoTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoPaginatedListTest.java
 src/test/java/com/mydatamyconsent/model/OrganizationFinancialTransactionsDtoTest.java
+src/test/java/com/mydatamyconsent/model/PaymentRequestTest.java
 src/test/java/com/mydatamyconsent/model/ProblemDetailsTest.java
 src/test/java/com/mydatamyconsent/model/PushUriRequestTest.java
 src/test/java/com/mydatamyconsent/model/PushUriResponseTest.java

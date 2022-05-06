@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.DocumentReceiver;
+import com.mydatamyconsent.model.PaymentRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -35,7 +36,7 @@ import org.threeten.bp.OffsetDateTime;
  * Document Issue Request.
  */
 @ApiModel(description = "Document Issue Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-05T10:36:40.038542126Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-06T10:36:36.683537332Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
@@ -64,6 +65,10 @@ public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_EXPIRES_AT_UTC = "expiresAtUtc";
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT_UTC)
   private OffsetDateTime expiresAtUtc;
+
+  public static final String SERIALIZED_NAME_PAYMENT_REQUEST = "paymentRequest";
+  @SerializedName(SERIALIZED_NAME_PAYMENT_REQUEST)
+  private PaymentRequest paymentRequest;
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
@@ -233,6 +238,29 @@ public class DocumentIssueRequest {
   }
 
 
+  public DocumentIssueRequest paymentRequest(PaymentRequest paymentRequest) {
+    
+    this.paymentRequest = paymentRequest;
+    return this;
+  }
+
+   /**
+   * Get paymentRequest
+   * @return paymentRequest
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PaymentRequest getPaymentRequest() {
+    return paymentRequest;
+  }
+
+
+  public void setPaymentRequest(PaymentRequest paymentRequest) {
+    this.paymentRequest = paymentRequest;
+  }
+
+
   public DocumentIssueRequest metadata(Map<String, String> metadata) {
     
     this.metadata = metadata;
@@ -280,6 +308,7 @@ public class DocumentIssueRequest {
         Objects.equals(this.issuedAtUtc, documentIssueRequest.issuedAtUtc) &&
         Objects.equals(this.validFromUtc, documentIssueRequest.validFromUtc) &&
         Objects.equals(this.expiresAtUtc, documentIssueRequest.expiresAtUtc) &&
+        Objects.equals(this.paymentRequest, documentIssueRequest.paymentRequest) &&
         Objects.equals(this.metadata, documentIssueRequest.metadata);
   }
 
@@ -289,7 +318,7 @@ public class DocumentIssueRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, identifier, description, receiver, issuedAtUtc, validFromUtc, expiresAtUtc, metadata);
+    return Objects.hash(documentTypeId, identifier, description, receiver, issuedAtUtc, validFromUtc, expiresAtUtc, paymentRequest, metadata);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -310,6 +339,7 @@ public class DocumentIssueRequest {
     sb.append("    issuedAtUtc: ").append(toIndentedString(issuedAtUtc)).append("\n");
     sb.append("    validFromUtc: ").append(toIndentedString(validFromUtc)).append("\n");
     sb.append("    expiresAtUtc: ").append(toIndentedString(expiresAtUtc)).append("\n");
+    sb.append("    paymentRequest: ").append(toIndentedString(paymentRequest)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("}");
     return sb.toString();

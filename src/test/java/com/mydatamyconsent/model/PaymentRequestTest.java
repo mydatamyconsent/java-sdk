@@ -18,15 +18,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.DocumentReceiver;
-import com.mydatamyconsent.model.PaymentRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
@@ -35,25 +29,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for DocumentIssueRequest
+ * Model tests for PaymentRequest
  */
-public class DocumentIssueRequestTest {
-    private final DocumentIssueRequest model = new DocumentIssueRequest();
+public class PaymentRequestTest {
+    private final PaymentRequest model = new PaymentRequest();
 
     /**
-     * Model tests for DocumentIssueRequest
+     * Model tests for PaymentRequest
      */
     @Test
-    public void testDocumentIssueRequest() {
-        // TODO: test DocumentIssueRequest
-    }
-
-    /**
-     * Test the property 'documentTypeId'
-     */
-    @Test
-    public void documentTypeIdTest() {
-        // TODO: test documentTypeId
+    public void testPaymentRequest() {
+        // TODO: test PaymentRequest
     }
 
     /**
@@ -65,6 +51,30 @@ public class DocumentIssueRequestTest {
     }
 
     /**
+     * Test the property 'amount'
+     */
+    @Test
+    public void amountTest() {
+        // TODO: test amount
+    }
+
+    /**
+     * Test the property 'currencyCode'
+     */
+    @Test
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
+    }
+
+    /**
+     * Test the property 'paymentUrl'
+     */
+    @Test
+    public void paymentUrlTest() {
+        // TODO: test paymentUrl
+    }
+
+    /**
      * Test the property 'description'
      */
     @Test
@@ -73,51 +83,11 @@ public class DocumentIssueRequestTest {
     }
 
     /**
-     * Test the property 'receiver'
+     * Test the property 'dueByUtc'
      */
     @Test
-    public void receiverTest() {
-        // TODO: test receiver
-    }
-
-    /**
-     * Test the property 'issuedAtUtc'
-     */
-    @Test
-    public void issuedAtUtcTest() {
-        // TODO: test issuedAtUtc
-    }
-
-    /**
-     * Test the property 'validFromUtc'
-     */
-    @Test
-    public void validFromUtcTest() {
-        // TODO: test validFromUtc
-    }
-
-    /**
-     * Test the property 'expiresAtUtc'
-     */
-    @Test
-    public void expiresAtUtcTest() {
-        // TODO: test expiresAtUtc
-    }
-
-    /**
-     * Test the property 'paymentRequest'
-     */
-    @Test
-    public void paymentRequestTest() {
-        // TODO: test paymentRequest
-    }
-
-    /**
-     * Test the property 'metadata'
-     */
-    @Test
-    public void metadataTest() {
-        // TODO: test metadata
+    public void dueByUtcTest() {
+        // TODO: test dueByUtc
     }
 
 }

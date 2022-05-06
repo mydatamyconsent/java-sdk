@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **issuedAtUtc** | **OffsetDateTime** | Datetime of issue in UTC timezone. | 
 **validFromUtc** | **OffsetDateTime** | Valid from datetime in UTC timezone. | 
 **expiresAtUtc** | **OffsetDateTime** | Datetime of expiry in UTC timezone. |  [optional]
+**paymentRequest** | [**PaymentRequest**](PaymentRequest.md) |  |  [optional]
 **metadata** | **Map&lt;String, String&gt;** | Metadata. |  [optional]
 
 
