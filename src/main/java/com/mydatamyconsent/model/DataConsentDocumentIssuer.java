@@ -29,7 +29,7 @@ import java.util.UUID;
  * Data Consent document issuer details.
  */
 @ApiModel(description = "Data Consent document issuer details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-06T10:36:36.683537332Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-07T10:36:15.677521460Z[Etc/UTC]")
 public class DataConsentDocumentIssuer {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

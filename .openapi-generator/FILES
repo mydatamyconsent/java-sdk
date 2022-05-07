@@ -2,6 +2,7 @@ README.md
 docs/Activity.md
 docs/ApprovedConsentRequest.md
 docs/BankAccountType.md
+docs/BillPaymentOrderItem.md
 docs/CollectibleTypes.md
 docs/ConsentRequestReceiver.md
 docs/CreateDataConsentRequest.md
@@ -103,6 +104,7 @@ src/main/java/com/mydatamyconsent/auth/RetryingOAuth.java
 src/main/java/com/mydatamyconsent/model/Activity.java
 src/main/java/com/mydatamyconsent/model/ApprovedConsentRequest.java
 src/main/java/com/mydatamyconsent/model/BankAccountType.java
+src/main/java/com/mydatamyconsent/model/BillPaymentOrderItem.java
 src/main/java/com/mydatamyconsent/model/CollectibleTypes.java
 src/main/java/com/mydatamyconsent/model/ConsentRequestReceiver.java
 src/main/java/com/mydatamyconsent/model/CreateDataConsentRequest.java
@@ -173,6 +175,7 @@ src/test/java/com/mydatamyconsent/api/SupportedIdentifiersApiTest.java
 src/test/java/com/mydatamyconsent/model/ActivityTest.java
 src/test/java/com/mydatamyconsent/model/ApprovedConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/BankAccountTypeTest.java
+src/test/java/com/mydatamyconsent/model/BillPaymentOrderItemTest.java
 src/test/java/com/mydatamyconsent/model/CollectibleTypesTest.java
 src/test/java/com/mydatamyconsent/model/ConsentRequestReceiverTest.java
 src/test/java/com/mydatamyconsent/model/CreateDataConsentRequestTest.java

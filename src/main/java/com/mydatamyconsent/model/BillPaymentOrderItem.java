@@ -26,64 +26,64 @@ import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
- * Life
+ * BillPaymentOrderItem
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-07T10:36:15.677521460Z[Etc/UTC]")
-public class Life {
-  public static final String SERIALIZED_NAME_UNIT = "unit";
-  @SerializedName(SERIALIZED_NAME_UNIT)
-  private String unit;
+public class BillPaymentOrderItem {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  public static final String SERIALIZED_NAME_AMOUNT = "amount";
+  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  private Double amount;
 
-  public Life() { 
+  public BillPaymentOrderItem() { 
   }
 
-  public Life unit(String unit) {
+  public BillPaymentOrderItem name(String name) {
     
-    this.unit = unit;
+    this.name = name;
     return this;
   }
 
    /**
-   * Get unit
-   * @return unit
+   * Get name
+   * @return name
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getUnit() {
-    return unit;
+  public String getName() {
+    return name;
   }
 
 
-  public void setUnit(String unit) {
-    this.unit = unit;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public Life value(String value) {
+  public BillPaymentOrderItem amount(Double amount) {
     
-    this.value = value;
+    this.amount = amount;
     return this;
   }
 
    /**
-   * Get value
-   * @return value
+   * Get amount
+   * @return amount
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getValue() {
-    return value;
+  public Double getAmount() {
+    return amount;
   }
 
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setAmount(Double amount) {
+    this.amount = amount;
   }
 
 
@@ -95,9 +95,9 @@ public class Life {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Life life = (Life) o;
-    return Objects.equals(this.unit, life.unit) &&
-        Objects.equals(this.value, life.value);
+    BillPaymentOrderItem billPaymentOrderItem = (BillPaymentOrderItem) o;
+    return Objects.equals(this.name, billPaymentOrderItem.name) &&
+        Objects.equals(this.amount, billPaymentOrderItem.amount);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -106,7 +106,7 @@ public class Life {
 
   @Override
   public int hashCode() {
-    return Objects.hash(unit, value);
+    return Objects.hash(name, amount);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -119,9 +119,9 @@ public class Life {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Life {\n");
-    sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("class BillPaymentOrderItem {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

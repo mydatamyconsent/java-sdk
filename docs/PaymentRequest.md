@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **String** |  |  [optional]
-**amount** | **String** |  |  [optional]
+**items** | [**List&lt;BillPaymentOrderItem&gt;**](BillPaymentOrderItem.md) |  |  [optional]
 **currencyCode** | **String** |  |  [optional]
 **paymentUrl** | **String** |  |  [optional]
 **description** | **String** |  |  [optional]

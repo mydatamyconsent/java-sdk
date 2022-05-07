@@ -20,24 +20,27 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.BillPaymentOrderItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.threeten.bp.OffsetDateTime;
 
 /**
  * PaymentRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-06T10:36:36.683537332Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-07T10:36:15.677521460Z[Etc/UTC]")
 public class PaymentRequest {
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
   private String identifier;
 
-  public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
-  private String amount;
+  public static final String SERIALIZED_NAME_ITEMS = "items";
+  @SerializedName(SERIALIZED_NAME_ITEMS)
+  private List<BillPaymentOrderItem> items = null;
 
   public static final String SERIALIZED_NAME_CURRENCY_CODE = "currencyCode";
   @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
@@ -81,26 +84,34 @@ public class PaymentRequest {
   }
 
 
-  public PaymentRequest amount(String amount) {
+  public PaymentRequest items(List<BillPaymentOrderItem> items) {
     
-    this.amount = amount;
+    this.items = items;
+    return this;
+  }
+
+  public PaymentRequest addItemsItem(BillPaymentOrderItem itemsItem) {
+    if (this.items == null) {
+      this.items = new ArrayList<BillPaymentOrderItem>();
+    }
+    this.items.add(itemsItem);
     return this;
   }
 
    /**
-   * Get amount
-   * @return amount
+   * Get items
+   * @return items
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getAmount() {
-    return amount;
+  public List<BillPaymentOrderItem> getItems() {
+    return items;
   }
 
 
-  public void setAmount(String amount) {
-    this.amount = amount;
+  public void setItems(List<BillPaymentOrderItem> items) {
+    this.items = items;
   }
 
 
@@ -206,7 +217,7 @@ public class PaymentRequest {
     }
     PaymentRequest paymentRequest = (PaymentRequest) o;
     return Objects.equals(this.identifier, paymentRequest.identifier) &&
-        Objects.equals(this.amount, paymentRequest.amount) &&
+        Objects.equals(this.items, paymentRequest.items) &&
         Objects.equals(this.currencyCode, paymentRequest.currencyCode) &&
         Objects.equals(this.paymentUrl, paymentRequest.paymentUrl) &&
         Objects.equals(this.description, paymentRequest.description) &&
@@ -219,7 +230,7 @@ public class PaymentRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifier, amount, currencyCode, paymentUrl, description, dueByUtc);
+    return Objects.hash(identifier, items, currencyCode, paymentUrl, description, dueByUtc);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -234,7 +245,7 @@ public class PaymentRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentRequest {\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    paymentUrl: ").append(toIndentedString(paymentUrl)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");

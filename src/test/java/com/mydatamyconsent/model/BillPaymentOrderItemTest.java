@@ -18,79 +18,43 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.BillPaymentOrderItem;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for PaymentRequest
+ * Model tests for BillPaymentOrderItem
  */
-public class PaymentRequestTest {
-    private final PaymentRequest model = new PaymentRequest();
+public class BillPaymentOrderItemTest {
+    private final BillPaymentOrderItem model = new BillPaymentOrderItem();
 
     /**
-     * Model tests for PaymentRequest
+     * Model tests for BillPaymentOrderItem
      */
     @Test
-    public void testPaymentRequest() {
-        // TODO: test PaymentRequest
+    public void testBillPaymentOrderItem() {
+        // TODO: test BillPaymentOrderItem
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'name'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
-     * Test the property 'items'
+     * Test the property 'amount'
      */
     @Test
-    public void itemsTest() {
-        // TODO: test items
-    }
-
-    /**
-     * Test the property 'currencyCode'
-     */
-    @Test
-    public void currencyCodeTest() {
-        // TODO: test currencyCode
-    }
-
-    /**
-     * Test the property 'paymentUrl'
-     */
-    @Test
-    public void paymentUrlTest() {
-        // TODO: test paymentUrl
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'dueByUtc'
-     */
-    @Test
-    public void dueByUtcTest() {
-        // TODO: test dueByUtc
+    public void amountTest() {
+        // TODO: test amount
     }
 
 }
