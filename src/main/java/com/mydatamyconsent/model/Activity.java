@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Activity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-11T10:37:17.190864059Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-12T10:37:42.739674215Z[Etc/UTC]")
 public class Activity {
   public static final String SERIALIZED_NAME_ACTOR_NAME = "actorName";
   @SerializedName(SERIALIZED_NAME_ACTOR_NAME)
