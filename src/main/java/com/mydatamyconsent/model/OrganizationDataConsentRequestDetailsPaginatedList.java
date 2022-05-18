@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * OrganizationDataConsentRequestDetailsPaginatedList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-15T10:36:54.688716823Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T10:36:39.770882913Z[Etc/UTC]")
 public class OrganizationDataConsentRequestDetailsPaginatedList {
   public static final String SERIALIZED_NAME_PAGE_INDEX = "pageIndex";
   @SerializedName(SERIALIZED_NAME_PAGE_INDEX)
