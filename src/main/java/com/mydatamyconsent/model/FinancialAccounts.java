@@ -32,7 +32,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * FinancialAccounts
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-22T10:36:26.319558588Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-23T10:37:32.419488495Z[Etc/UTC]")
 public class FinancialAccounts {
   public static final String SERIALIZED_NAME_DRN = "drn";
   @SerializedName(SERIALIZED_NAME_DRN)
