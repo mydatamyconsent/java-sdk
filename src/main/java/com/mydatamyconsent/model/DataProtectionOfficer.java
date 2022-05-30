@@ -28,7 +28,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DataProtectionOfficer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-29T10:36:28.433253498Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-30T10:37:03.249146905Z[Etc/UTC]")
 public class DataProtectionOfficer {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
