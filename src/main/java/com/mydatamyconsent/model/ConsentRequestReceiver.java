@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * ConsentRequestReceiver
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-02T10:37:49.068193984Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-03T10:36:10.844222939Z[Etc/UTC]")
 public class ConsentRequestReceiver {
   public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
   @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
