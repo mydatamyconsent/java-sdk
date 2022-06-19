@@ -1,4 +1,4 @@
-name: Build SDK
+name: Build & Analyze SDK
 on:
   push:
     branches:
