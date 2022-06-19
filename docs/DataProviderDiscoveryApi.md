@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getDataProviderById**](DataProviderDiscoveryApi.md#getDataProviderById) | **GET** /v1/data-providers/{providerId} | Get a Data Provider details by provider id.
-[**getDataProviders**](DataProviderDiscoveryApi.md#getDataProviders) | **GET** /v1/data-providers | Discover all data providers in My Data My Consent by country and filters.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getDataProviderById**](DataProviderDiscoveryApi.md#getDataProviderById) | **GET** /v1/data-providers/{providerId} | Get a Data Provider details by provider id. |
+| [**getDataProviders**](DataProviderDiscoveryApi.md#getDataProviders) | **GET** /v1/data-providers | Discover all data providers in My Data My Consent by country and filters. |
 
 
 <a name="getDataProviderById"></a>
@@ -46,9 +46,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **providerId** | **String**| Data provider id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **providerId** | **String**| Data provider id. | |
 
 ### Return type
 
@@ -66,10 +66,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
 
 <a name="getDataProviders"></a>
 # **getDataProviders**
@@ -114,14 +114,14 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **accountType** | **String**| Account type. | [optional]
- **documentType** | **String**| Document type. | [optional]
- **organizationCategory** | **String**| Organization category. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
- **countryIso2Code** | **String**| ISO2 Country code. | [optional] [default to IN]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **accountType** | **String**| Account type. | [optional] |
+| **documentType** | **String**| Document type. | [optional] |
+| **organizationCategory** | **String**| Organization category. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
+| **countryIso2Code** | **String**| ISO2 Country code. | [optional] [default to IN] |
 
 ### Return type
 
@@ -139,7 +139,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**400** | Bad Request |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **400** | Bad Request |  -  |
 

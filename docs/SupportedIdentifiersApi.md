@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAllSupportedIdentifiers**](SupportedIdentifiersApi.md#getAllSupportedIdentifiers) | **GET** /v1/supported-identifiers/{countryIso2Code} | Get all supported identifiers by country.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getAllSupportedIdentifiers**](SupportedIdentifiersApi.md#getAllSupportedIdentifiers) | **GET** /v1/supported-identifiers/{countryIso2Code} | Get all supported identifiers by country. |
 
 
 <a name="getAllSupportedIdentifiers"></a>
@@ -47,9 +47,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **countryIso2Code** | **String**| Country ISO 2 code. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **countryIso2Code** | **String**| Country ISO 2 code. | |
 
 ### Return type
 
@@ -67,7 +67,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 

@@ -28,10 +28,30 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
+
 /**
  * ConsentRequestReceiver
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class ConsentRequestReceiver {
   public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
   @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
@@ -39,7 +59,7 @@ public class ConsentRequestReceiver {
 
   public static final String SERIALIZED_NAME_IDENTIFIERS = "identifiers";
   @SerializedName(SERIALIZED_NAME_IDENTIFIERS)
-  private List<StringStringKeyValuePair> identifiers = new ArrayList<StringStringKeyValuePair>();
+  private List<StringStringKeyValuePair> identifiers = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_IDENTIFICATION_STRATEGY = "identificationStrategy";
   @SerializedName(SERIALIZED_NAME_IDENTIFICATION_STRATEGY)
@@ -122,6 +142,7 @@ public class ConsentRequestReceiver {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -163,5 +184,117 @@ public class ConsentRequestReceiver {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("countryIso2Code");
+    openapiFields.add("identifiers");
+    openapiFields.add("identificationStrategy");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("countryIso2Code");
+    openapiRequiredFields.add("identifiers");
+    openapiRequiredFields.add("identificationStrategy");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ConsentRequestReceiver
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ConsentRequestReceiver.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ConsentRequestReceiver is not found in the empty JSON string", ConsentRequestReceiver.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ConsentRequestReceiver.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ConsentRequestReceiver` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ConsentRequestReceiver.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("countryIso2Code") != null && !jsonObj.get("countryIso2Code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `countryIso2Code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("countryIso2Code").toString()));
+      }
+      JsonArray jsonArrayidentifiers = jsonObj.getAsJsonArray("identifiers");
+      if (jsonArrayidentifiers != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("identifiers").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `identifiers` to be an array in the JSON string but got `%s`", jsonObj.get("identifiers").toString()));
+        }
+
+        // validate the optional field `identifiers` (array)
+        for (int i = 0; i < jsonArrayidentifiers.size(); i++) {
+          StringStringKeyValuePair.validateJsonObject(jsonArrayidentifiers.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ConsentRequestReceiver.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ConsentRequestReceiver' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ConsentRequestReceiver> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ConsentRequestReceiver.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ConsentRequestReceiver>() {
+           @Override
+           public void write(JsonWriter out, ConsentRequestReceiver value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ConsentRequestReceiver read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of ConsentRequestReceiver given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ConsentRequestReceiver
+  * @throws IOException if the JSON string is invalid with respect to ConsentRequestReceiver
+  */
+  public static ConsentRequestReceiver fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ConsentRequestReceiver.class);
+  }
+
+ /**
+  * Convert an instance of ConsentRequestReceiver to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

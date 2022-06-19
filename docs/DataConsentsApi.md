@@ -2,26 +2,26 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**downloadConsentedDocumentAnalysis**](DataConsentsApi.md#downloadConsentedDocumentAnalysis) | **GET** /v1/consents/{consentId}/documents/{documentId}/analysis | Get analysis of a consented document.
-[**downloadIndividualConsentedDocumentById**](DataConsentsApi.md#downloadIndividualConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download individual consented document by document id.
-[**downloadOrganizationConsentedDocumentById**](DataConsentsApi.md#downloadOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download organization consent document based on document id.
-[**getAllConsentedFinancialAccounts**](DataConsentsApi.md#getAllConsentedFinancialAccounts) | **GET** /v1/consents/individuals/{consentId}/financial-accounts | Get all individual consented financial accounts.
-[**getConsentFinancialAccounts**](DataConsentsApi.md#getConsentFinancialAccounts) | **GET** /v1/consents/organizations/{consentId}/financial-accounts | Get all organizational consented financial accounts.
-[**getConsentedAccountById**](DataConsentsApi.md#getConsentedAccountById) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId} | Get individual consented financial account details based on account id.
-[**getConsentedDocumentById**](DataConsentsApi.md#getConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individual consented document by document id.
-[**getConsentedFinancialAccount**](DataConsentsApi.md#getConsentedFinancialAccount) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId} | Get organization consented financial account details based on account id.
-[**getConsentedFinancialAccountInsights**](DataConsentsApi.md#getConsentedFinancialAccountInsights) | **GET** /v1/consents/{consentId}/financial-accounts/{accountId}/insights | Get consented financial account insights.
-[**getConsentedFinancialAccountTransactions**](DataConsentsApi.md#getConsentedFinancialAccountTransactions) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId}/transactions | Get individual consented financial account transactions of an individual based on accountId.
-[**getConsents**](DataConsentsApi.md#getConsents) | **GET** /v1/consents/individuals | Get the paginated list of individual data consents.
-[**getIndividualConsentedDocuments**](DataConsentsApi.md#getIndividualConsentedDocuments) | **GET** /v1/consents/individuals/{consentId}/documents | Get individual consented documents by consent id.
-[**getIndividualDataConsentById**](DataConsentsApi.md#getIndividualDataConsentById) | **GET** /v1/consents/individuals/{consentId} | Get individuals data consent details by consent id.
-[**getOrgConsentedAccountTransactions**](DataConsentsApi.md#getOrgConsentedAccountTransactions) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId}/transactions | Get organization consented financial account transactions of an individual based on accountId.
-[**getOrganizationConsentedDocumentById**](DataConsentsApi.md#getOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId} | Get organization consent document based on document id.
-[**getOrganizationConsentedDocuments**](DataConsentsApi.md#getOrganizationConsentedDocuments) | **GET** /v1/consents/organizations/{consentId}/documents | Get organization consented documents by consent id.
-[**getOrganizationDataConsentById**](DataConsentsApi.md#getOrganizationDataConsentById) | **GET** /v1/consents/organizations/{consentId} | Get organizations data consent details by consent id.
-[**getOrganizationDataConsents**](DataConsentsApi.md#getOrganizationDataConsents) | **GET** /v1/consents/organizations | Get the paginated list of organization data consents.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**downloadConsentedDocumentAnalysis**](DataConsentsApi.md#downloadConsentedDocumentAnalysis) | **GET** /v1/consents/{consentId}/documents/{documentId}/analysis | Get analysis of a consented document. |
+| [**downloadIndividualConsentedDocumentById**](DataConsentsApi.md#downloadIndividualConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId}/download | Download individual consented document by document id. |
+| [**downloadOrganizationConsentedDocumentById**](DataConsentsApi.md#downloadOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId}/download | Download organization consent document based on document id. |
+| [**getAllConsentedFinancialAccounts**](DataConsentsApi.md#getAllConsentedFinancialAccounts) | **GET** /v1/consents/individuals/{consentId}/financial-accounts | Get all individual consented financial accounts. |
+| [**getConsentFinancialAccounts**](DataConsentsApi.md#getConsentFinancialAccounts) | **GET** /v1/consents/organizations/{consentId}/financial-accounts | Get all organizational consented financial accounts. |
+| [**getConsentedAccountById**](DataConsentsApi.md#getConsentedAccountById) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId} | Get individual consented financial account details based on account id. |
+| [**getConsentedDocumentById**](DataConsentsApi.md#getConsentedDocumentById) | **GET** /v1/consents/individuals/{consentId}/documents/{documentId} | Get individual consented document by document id. |
+| [**getConsentedFinancialAccount**](DataConsentsApi.md#getConsentedFinancialAccount) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId} | Get organization consented financial account details based on account id. |
+| [**getConsentedFinancialAccountInsights**](DataConsentsApi.md#getConsentedFinancialAccountInsights) | **GET** /v1/consents/{consentId}/financial-accounts/{accountId}/insights | Get consented financial account insights. |
+| [**getConsentedFinancialAccountTransactions**](DataConsentsApi.md#getConsentedFinancialAccountTransactions) | **GET** /v1/consents/individuals/{consentId}/financial-accounts/{accountId}/transactions | Get individual consented financial account transactions of an individual based on accountId. |
+| [**getConsents**](DataConsentsApi.md#getConsents) | **GET** /v1/consents/individuals | Get the paginated list of individual data consents. |
+| [**getIndividualConsentedDocuments**](DataConsentsApi.md#getIndividualConsentedDocuments) | **GET** /v1/consents/individuals/{consentId}/documents | Get individual consented documents by consent id. |
+| [**getIndividualDataConsentById**](DataConsentsApi.md#getIndividualDataConsentById) | **GET** /v1/consents/individuals/{consentId} | Get individuals data consent details by consent id. |
+| [**getOrgConsentedAccountTransactions**](DataConsentsApi.md#getOrgConsentedAccountTransactions) | **GET** /v1/consents/organizations/{consentId}/financial-accounts/{accountId}/transactions | Get organization consented financial account transactions of an individual based on accountId. |
+| [**getOrganizationConsentedDocumentById**](DataConsentsApi.md#getOrganizationConsentedDocumentById) | **GET** /v1/consents/organizations/{consentId}/documents/{documentId} | Get organization consent document based on document id. |
+| [**getOrganizationConsentedDocuments**](DataConsentsApi.md#getOrganizationConsentedDocuments) | **GET** /v1/consents/organizations/{consentId}/documents | Get organization consented documents by consent id. |
+| [**getOrganizationDataConsentById**](DataConsentsApi.md#getOrganizationDataConsentById) | **GET** /v1/consents/organizations/{consentId} | Get organizations data consent details by consent id. |
+| [**getOrganizationDataConsents**](DataConsentsApi.md#getOrganizationDataConsents) | **GET** /v1/consents/organizations | Get the paginated list of organization data consents. |
 
 
 <a name="downloadConsentedDocumentAnalysis"></a>
@@ -62,10 +62,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **String**| Data consent id. |
- **documentId** | **String**| Consented document Id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **String**| Data consent id. | |
+| **documentId** | **String**| Consented document Id. | |
 
 ### Return type
 
@@ -83,10 +83,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="downloadIndividualConsentedDocumentById"></a>
 # **downloadIndividualConsentedDocumentById**
@@ -126,10 +126,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Individual data consent id. |
- **documentId** | **String**| Consented document id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Individual data consent id. | |
+| **documentId** | **String**| Consented document id. | |
 
 ### Return type
 
@@ -147,10 +147,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="downloadOrganizationConsentedDocumentById"></a>
 # **downloadOrganizationConsentedDocumentById**
@@ -190,10 +190,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Organization data consent id. |
- **documentId** | **String**| Organization consented document Id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Organization data consent id. | |
+| **documentId** | **String**| Organization consented document Id. | |
 
 ### Return type
 
@@ -211,10 +211,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getAllConsentedFinancialAccounts"></a>
 # **getAllConsentedFinancialAccounts**
@@ -254,9 +254,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
 
 ### Return type
 
@@ -274,8 +274,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentFinancialAccounts"></a>
 # **getConsentFinancialAccounts**
@@ -315,9 +315,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
 
 ### Return type
 
@@ -335,8 +335,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentedAccountById"></a>
 # **getConsentedAccountById**
@@ -377,10 +377,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
- **accountId** | **UUID**| Account id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
+| **accountId** | **UUID**| Account id. | |
 
 ### Return type
 
@@ -398,8 +398,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentedDocumentById"></a>
 # **getConsentedDocumentById**
@@ -440,10 +440,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Individual data consent id. |
- **documentId** | **String**| Consented document id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Individual data consent id. | |
+| **documentId** | **String**| Consented document id. | |
 
 ### Return type
 
@@ -461,10 +461,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentedFinancialAccount"></a>
 # **getConsentedFinancialAccount**
@@ -505,10 +505,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
- **accountId** | **UUID**| Account id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
+| **accountId** | **UUID**| Account id. | |
 
 ### Return type
 
@@ -526,8 +526,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentedFinancialAccountInsights"></a>
 # **getConsentedFinancialAccountInsights**
@@ -567,10 +567,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **String**|  |
- **accountId** | **String**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **String**|  | |
+| **accountId** | **String**|  | |
 
 ### Return type
 
@@ -588,8 +588,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsentedFinancialAccountTransactions"></a>
 # **getConsentedFinancialAccountTransactions**
@@ -635,15 +635,15 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
- **accountId** | **UUID**| Account id. |
- **filters** | **String**| Filters. | [optional]
- **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
- **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 10]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
+| **accountId** | **UUID**| Account id. | |
+| **filters** | **String**| Filters. | [optional] |
+| **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional] |
+| **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 10] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -661,8 +661,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getConsents"></a>
 # **getConsents**
@@ -708,13 +708,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
- **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional]
- **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled] |
+| **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional] |
+| **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -732,9 +732,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getIndividualConsentedDocuments"></a>
 # **getIndividualConsentedDocuments**
@@ -774,9 +774,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Individual data consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Individual data consent id. | |
 
 ### Return type
 
@@ -794,10 +794,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getIndividualDataConsentById"></a>
 # **getIndividualDataConsentById**
@@ -837,9 +837,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Individual data consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Individual data consent id. | |
 
 ### Return type
 
@@ -857,10 +857,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getOrgConsentedAccountTransactions"></a>
 # **getOrgConsentedAccountTransactions**
@@ -906,15 +906,15 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Consent id. |
- **accountId** | **UUID**| Account id. |
- **filters** | **String**| Filters. | [optional]
- **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional]
- **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Consent id. | |
+| **accountId** | **UUID**| Account id. | |
+| **filters** | **String**| Filters. | [optional] |
+| **fromDateTimeUtc** | **OffsetDateTime**| From date time in utc timezone. | [optional] |
+| **toDateTimeUtc** | **OffsetDateTime**| Til date time in utc timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -932,8 +932,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getOrganizationConsentedDocumentById"></a>
 # **getOrganizationConsentedDocumentById**
@@ -974,10 +974,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Organization data consent id. |
- **documentId** | **String**| Organization consented document Id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Organization data consent id. | |
+| **documentId** | **String**| Organization consented document Id. | |
 
 ### Return type
 
@@ -995,10 +995,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getOrganizationConsentedDocuments"></a>
 # **getOrganizationConsentedDocuments**
@@ -1038,9 +1038,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Organization data consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Organization data consent id. | |
 
 ### Return type
 
@@ -1058,10 +1058,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getOrganizationDataConsentById"></a>
 # **getOrganizationDataConsentById**
@@ -1101,9 +1101,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **consentId** | **UUID**| Organization data consent id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **consentId** | **UUID**| Organization data consent id. | |
 
 ### Return type
 
@@ -1121,10 +1121,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="getOrganizationDataConsents"></a>
 # **getOrganizationDataConsents**
@@ -1168,13 +1168,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
- **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional]
- **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled] |
+| **fromDateTime** | **OffsetDateTime**| From datetime in UTC timezone. | [optional] |
+| **toDateTime** | **OffsetDateTime**| To datetime in UTC timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -1192,7 +1192,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
 

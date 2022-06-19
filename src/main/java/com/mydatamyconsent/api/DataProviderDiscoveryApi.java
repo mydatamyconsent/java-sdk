@@ -29,12 +29,14 @@ import java.io.IOException;
 
 import com.mydatamyconsent.model.DataProvider;
 import com.mydatamyconsent.model.DataProviderPaginatedList;
+import com.mydatamyconsent.model.Error;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class DataProviderDiscoveryApi {
     private ApiClient localVarApiClient;
@@ -90,7 +92,6 @@ public class DataProviderDiscoveryApi {
      */
     public okhttp3.Call getDataProviderByIdCall(String providerId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -234,7 +235,6 @@ public class DataProviderDiscoveryApi {
      */
     public okhttp3.Call getDataProvidersCall(String accountType, String documentType, String organizationCategory, Integer pageNo, Integer pageSize, String countryIso2Code, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

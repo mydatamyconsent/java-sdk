@@ -25,10 +25,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
+
 /**
  * UriDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class UriDetails {
   public static final String SERIALIZED_NAME_AADHAAR = "aadhaar";
   @SerializedName(SERIALIZED_NAME_AADHAAR)
@@ -303,6 +323,7 @@ public class UriDetails {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -369,5 +390,143 @@ public class UriDetails {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("aadhaar");
+    openapiFields.add("uri");
+    openapiFields.add("docType");
+    openapiFields.add("docName");
+    openapiFields.add("docId");
+    openapiFields.add("issuedOn");
+    openapiFields.add("validFrom");
+    openapiFields.add("validTo");
+    openapiFields.add("timestamp");
+    openapiFields.add("action");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("aadhaar");
+    openapiRequiredFields.add("uri");
+    openapiRequiredFields.add("docType");
+    openapiRequiredFields.add("docName");
+    openapiRequiredFields.add("docId");
+    openapiRequiredFields.add("issuedOn");
+    openapiRequiredFields.add("validFrom");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to UriDetails
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (UriDetails.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UriDetails is not found in the empty JSON string", UriDetails.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!UriDetails.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UriDetails` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UriDetails.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("aadhaar") != null && !jsonObj.get("aadhaar").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `aadhaar` to be a primitive type in the JSON string but got `%s`", jsonObj.get("aadhaar").toString()));
+      }
+      if (jsonObj.get("uri") != null && !jsonObj.get("uri").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `uri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("uri").toString()));
+      }
+      if (jsonObj.get("docType") != null && !jsonObj.get("docType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `docType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("docType").toString()));
+      }
+      if (jsonObj.get("docName") != null && !jsonObj.get("docName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `docName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("docName").toString()));
+      }
+      if (jsonObj.get("docId") != null && !jsonObj.get("docId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `docId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("docId").toString()));
+      }
+      if (jsonObj.get("issuedOn") != null && !jsonObj.get("issuedOn").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `issuedOn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuedOn").toString()));
+      }
+      if (jsonObj.get("validFrom") != null && !jsonObj.get("validFrom").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `validFrom` to be a primitive type in the JSON string but got `%s`", jsonObj.get("validFrom").toString()));
+      }
+      if (jsonObj.get("validTo") != null && !jsonObj.get("validTo").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `validTo` to be a primitive type in the JSON string but got `%s`", jsonObj.get("validTo").toString()));
+      }
+      if (jsonObj.get("timestamp") != null && !jsonObj.get("timestamp").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `timestamp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timestamp").toString()));
+      }
+      if (jsonObj.get("action") != null && !jsonObj.get("action").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `action` to be a primitive type in the JSON string but got `%s`", jsonObj.get("action").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UriDetails.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UriDetails' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UriDetails> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UriDetails.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UriDetails>() {
+           @Override
+           public void write(JsonWriter out, UriDetails value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UriDetails read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of UriDetails given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UriDetails
+  * @throws IOException if the JSON string is invalid with respect to UriDetails
+  */
+  public static UriDetails fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UriDetails.class);
+  }
+
+ /**
+  * Convert an instance of UriDetails to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

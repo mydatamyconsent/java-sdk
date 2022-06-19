@@ -23,11 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
-import org.threeten.bp.LocalDate;
-import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
 
-import com.mydatamyconsent.model.*;
 import okio.ByteString;
 
 import java.io.IOException;
@@ -36,19 +32,28 @@ import java.lang.reflect.Type;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 import java.util.HashMap;
 
+/*
+ * A JSON utility class
+ *
+ * NOTE: in the future, this class may be converted to static, which may break
+ *       backward-compatibility
+ */
 public class JSON {
-    private Gson gson;
-    private boolean isLenientOnJson = false;
-    private DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
-    private SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
-    private OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
-    private LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
-    private ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+    private static Gson gson;
+    private static boolean isLenientOnJson = false;
+    private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
+    private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
+    private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
+    private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
+    private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
     @SuppressWarnings("unchecked")
     public static GsonBuilder createGson() {
@@ -81,13 +86,67 @@ public class JSON {
         return clazz;
     }
 
-    public JSON() {
+    {
         gson = createGson()
             .registerTypeAdapter(Date.class, dateTypeAdapter)
             .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
             .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
             .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
             .registerTypeAdapter(byte[].class, byteArrayAdapter)
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.Activity.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.ApprovedConsentRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.BillPaymentOrderItem.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentRequestReceiver.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.CreateDataConsentRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.CreateDataProcessingAgreement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsent.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentDetailsPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentDocument.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentDocumentIssuer.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentFinancialsDto.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentRequestDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataConsentRequestedFinancialAccount.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProcessingAgreement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProcessingAgreementBase.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProcessingAgreementPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProtectionOfficer.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProvider.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DataProviderPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentDigitalSignature.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentIssueRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentIssueRequestDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentReceiver.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentType.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.DocumentTypePaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.Error.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.Financial.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccount.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccounts.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.Identifier.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.IndividualDataConsentRequestDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.IndividualDataConsentRequestDetailsPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.IssuedDocument.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.IssuedDocumentDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.IssuedDocumentPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.Life.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.OrganizationDataConsentRequestDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.OrganizationDataConsentRequestDetailsPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.OrganizationFinancialAccountDto.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.OrganizationFinancialTransactionsDto.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.OrganizationFinancialTransactionsDtoPaginatedList.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.PaymentRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.ProblemDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.PushUriRequest.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.PushUriResponse.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.SharedWith.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.StringStringKeyValuePair.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.SupportedIdentifier.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.UpdateDataProcessingAgreement.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.UriDetails.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.UserAccountFinancialTransactionsDto.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new com.mydatamyconsent.model.UserAccountFinancialTransactionsDtoPaginatedList.CustomTypeAdapterFactory())
             .create();
     }
 
@@ -96,7 +155,7 @@ public class JSON {
      *
      * @return Gson
      */
-    public Gson getGson() {
+    public static Gson getGson() {
         return gson;
     }
 
@@ -104,23 +163,13 @@ public class JSON {
      * Set Gson.
      *
      * @param gson Gson
-     * @return JSON
      */
-    public JSON setGson(Gson gson) {
-        this.gson = gson;
-        return this;
+    public static void setGson(Gson gson) {
+        JSON.gson = gson;
     }
 
-    /**
-     * Configure the parser to be liberal in what it accepts.
-     *
-     * @param lenientOnJson Set it to true to ignore some syntax errors
-     * @return JSON
-     * @see <a href="https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html">https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html</a>
-     */
-    public JSON setLenientOnJson(boolean lenientOnJson) {
+    public static void setLenientOnJson(boolean lenientOnJson) {
         isLenientOnJson = lenientOnJson;
-        return this;
     }
 
     /**
@@ -129,7 +178,7 @@ public class JSON {
      * @param obj Object
      * @return String representation of the JSON
      */
-    public String serialize(Object obj) {
+    public static String serialize(Object obj) {
         return gson.toJson(obj);
     }
 
@@ -142,11 +191,11 @@ public class JSON {
      * @return The deserialized Java object
      */
     @SuppressWarnings("unchecked")
-    public <T> T deserialize(String body, Type returnType) {
+    public static <T> T deserialize(String body, Type returnType) {
         try {
             if (isLenientOnJson) {
                 JsonReader jsonReader = new JsonReader(new StringReader(body));
-                // see https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.5/com/google/gson/stream/JsonReader.html
+                // see https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/stream/JsonReader.html#setLenient(boolean)
                 jsonReader.setLenient(true);
                 return gson.fromJson(jsonReader, returnType);
             } else {
@@ -166,7 +215,7 @@ public class JSON {
     /**
      * Gson TypeAdapter for Byte Array type
      */
-    public class ByteArrayAdapter extends TypeAdapter<byte[]> {
+    public static class ByteArrayAdapter extends TypeAdapter<byte[]> {
 
         @Override
         public void write(JsonWriter out, byte[] value) throws IOException {
@@ -238,7 +287,7 @@ public class JSON {
     /**
      * Gson TypeAdapter for JSR310 LocalDate type
      */
-    public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
+    public static class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
 
         private DateTimeFormatter formatter;
 
@@ -276,14 +325,12 @@ public class JSON {
         }
     }
 
-    public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+    public static void setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
         offsetDateTimeTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
-    public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
+    public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
         localDateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
     /**
@@ -397,14 +444,11 @@ public class JSON {
         }
     }
 
-    public JSON setDateFormat(DateFormat dateFormat) {
+    public static void setDateFormat(DateFormat dateFormat) {
         dateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
 
-    public JSON setSqlDateFormat(DateFormat dateFormat) {
+    public static void setSqlDateFormat(DateFormat dateFormat) {
         sqlDateTypeAdapter.setFormat(dateFormat);
-        return this;
     }
-
 }

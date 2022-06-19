@@ -11,15 +11,23 @@
  */
 
 
-package com.mydatamyconsent.auth;
+package com.mydatamyconsent.model;
+
+import com.google.gson.annotations.SerializedName;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
 
 /**
- * OAuth flows that are supported by this client
+ * Model tests for ErrorType
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
-public enum OAuthFlow {
-    ACCESS_CODE, //called authorizationCode  in OpenAPI 3.0
-    IMPLICIT,
-    PASSWORD,
-    APPLICATION //called clientCredentials in OpenAPI 3.0
+public class ErrorTypeTest {
+    /**
+     * Model tests for ErrorType
+     */
+    @Test
+    public void testErrorType() {
+        // TODO: test ErrorType
+    }
+
 }

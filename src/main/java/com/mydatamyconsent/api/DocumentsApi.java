@@ -30,10 +30,11 @@ import java.io.IOException;
 import com.mydatamyconsent.model.DocumentIssueRequest;
 import com.mydatamyconsent.model.DocumentIssueRequestDetails;
 import com.mydatamyconsent.model.DocumentTypePaginatedList;
+import com.mydatamyconsent.model.Error;
 import java.io.File;
 import com.mydatamyconsent.model.IssuedDocumentDetails;
 import com.mydatamyconsent.model.IssuedDocumentPaginatedList;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.mydatamyconsent.model.ProblemDetails;
 import com.mydatamyconsent.model.SupportedEntityType;
 import java.util.UUID;
@@ -43,6 +44,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class DocumentsApi {
     private ApiClient localVarApiClient;
@@ -98,7 +100,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call getIssuedDocumentByIdCall(UUID documentId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -241,7 +242,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call getIssuedDocumentsCall(UUID documentTypeId, OffsetDateTime fromDateTime, OffsetDateTime toDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -405,7 +405,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call getRegisteredDocumentTypesCall(SupportedEntityType supportedEntityType, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -554,7 +553,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call issueDocumentToIndividualCall(DocumentIssueRequest documentIssueRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -694,7 +692,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call issueDocumentToOrganizationCall(DocumentIssueRequest documentIssueRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -837,7 +834,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call uploadDocumentForIndividualCall(UUID issueRequestId, File formFile, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -987,7 +983,6 @@ public class DocumentsApi {
      */
     public okhttp3.Call uploadDocumentForOrganizationCall(UUID issueRequestId, File formFile, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

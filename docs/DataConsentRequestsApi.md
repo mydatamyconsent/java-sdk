@@ -2,16 +2,16 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**cancelIndividualDataConsentRequest**](DataConsentRequestsApi.md#cancelIndividualDataConsentRequest) | **PUT** /v1/consent-requests/individual/{requestId}/cancel | Cancel the individual data consent request by Id.
-[**cancelOrganizationDataConsentRequest**](DataConsentRequestsApi.md#cancelOrganizationDataConsentRequest) | **PUT** /v1/consent-requests/organization/{requestId}/cancel | Cancel the organization data consent request by Id.
-[**createIndividualDataConsentRequest**](DataConsentRequestsApi.md#createIndividualDataConsentRequest) | **POST** /v1/consent-requests/individual | Create data consent request for an individual.
-[**createOrganizationDataConsentRequest**](DataConsentRequestsApi.md#createOrganizationDataConsentRequest) | **POST** /v1/consent-requests/organization | Create data consent request for an organization.
-[**getAllConsentRequestsToIndividuals**](DataConsentRequestsApi.md#getAllConsentRequestsToIndividuals) | **GET** /v1/consent-requests/individuals | Get all Consent Requests sent to individuals.
-[**getAllConsentRequestsToOrganizations**](DataConsentRequestsApi.md#getAllConsentRequestsToOrganizations) | **GET** /v1/consent-requests/organizations | Get all Consent Requests sent to organizations.
-[**getIndividualConsentRequestById**](DataConsentRequestsApi.md#getIndividualConsentRequestById) | **GET** /v1/consent-requests/individuals/{requestId} | Get individual data consent request by id.
-[**getOrganizationConsentRequestById**](DataConsentRequestsApi.md#getOrganizationConsentRequestById) | **GET** /v1/consent-requests/organizations/{requestId} | Get a OrganizationConsent Request by Id.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**cancelIndividualDataConsentRequest**](DataConsentRequestsApi.md#cancelIndividualDataConsentRequest) | **PUT** /v1/consent-requests/individual/{requestId}/cancel | Cancel the individual data consent request by Id. |
+| [**cancelOrganizationDataConsentRequest**](DataConsentRequestsApi.md#cancelOrganizationDataConsentRequest) | **PUT** /v1/consent-requests/organization/{requestId}/cancel | Cancel the organization data consent request by Id. |
+| [**createIndividualDataConsentRequest**](DataConsentRequestsApi.md#createIndividualDataConsentRequest) | **POST** /v1/consent-requests/individual | Create data consent request for an individual. |
+| [**createOrganizationDataConsentRequest**](DataConsentRequestsApi.md#createOrganizationDataConsentRequest) | **POST** /v1/consent-requests/organization | Create data consent request for an organization. |
+| [**getAllConsentRequestsToIndividuals**](DataConsentRequestsApi.md#getAllConsentRequestsToIndividuals) | **GET** /v1/consent-requests/individuals | Get all Consent Requests sent to individuals. |
+| [**getAllConsentRequestsToOrganizations**](DataConsentRequestsApi.md#getAllConsentRequestsToOrganizations) | **GET** /v1/consent-requests/organizations | Get all Consent Requests sent to organizations. |
+| [**getIndividualConsentRequestById**](DataConsentRequestsApi.md#getIndividualConsentRequestById) | **GET** /v1/consent-requests/individuals/{requestId} | Get individual data consent request by id. |
+| [**getOrganizationConsentRequestById**](DataConsentRequestsApi.md#getOrganizationConsentRequestById) | **GET** /v1/consent-requests/organizations/{requestId} | Get a OrganizationConsent Request by Id. |
 
 
 <a name="cancelIndividualDataConsentRequest"></a>
@@ -51,9 +51,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestId** | **UUID**| Individual consent request id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestId** | **UUID**| Individual consent request id. | |
 
 ### Return type
 
@@ -71,11 +71,11 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **0** | Error |  -  |
 
 <a name="cancelOrganizationDataConsentRequest"></a>
 # **cancelOrganizationDataConsentRequest**
@@ -114,9 +114,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestId** | **UUID**| Organization consent request id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestId** | **UUID**| Organization consent request id. | |
 
 ### Return type
 
@@ -134,11 +134,11 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **0** | Error |  -  |
 
 <a name="createIndividualDataConsentRequest"></a>
 # **createIndividualDataConsentRequest**
@@ -180,9 +180,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createDataConsentRequest** | [**CreateDataConsentRequest**](CreateDataConsentRequest.md)| The Individual data consent request payload |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createDataConsentRequest** | [**CreateDataConsentRequest**](CreateDataConsentRequest.md)| The Individual data consent request payload | |
 
 ### Return type
 
@@ -200,10 +200,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
 
 <a name="createOrganizationDataConsentRequest"></a>
 # **createOrganizationDataConsentRequest**
@@ -245,9 +245,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createDataConsentRequest** | [**CreateDataConsentRequest**](CreateDataConsentRequest.md)| The Organization data consent request payload |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **createDataConsentRequest** | [**CreateDataConsentRequest**](CreateDataConsentRequest.md)| The Organization data consent request payload | |
 
 ### Return type
 
@@ -265,10 +265,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
 
 <a name="getAllConsentRequestsToIndividuals"></a>
 # **getAllConsentRequestsToIndividuals**
@@ -312,13 +312,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
- **startDateTime** | **OffsetDateTime**| Start datetime in UTC timezone. | [optional]
- **endDateTime** | **OffsetDateTime**| End datetime in UTC timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled] |
+| **startDateTime** | **OffsetDateTime**| Start datetime in UTC timezone. | [optional] |
+| **endDateTime** | **OffsetDateTime**| End datetime in UTC timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -336,10 +336,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 
 <a name="getAllConsentRequestsToOrganizations"></a>
 # **getAllConsentRequestsToOrganizations**
@@ -383,13 +383,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled]
- **startDateTime** | **OffsetDateTime**| Start datetime in UTC timezone. | [optional]
- **endDateTime** | **OffsetDateTime**| End datetime in UTC timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **status** | [**DataConsentStatus**](.md)| Data consent status. | [optional] [enum: Pending, Approved, Rejected, Revoked, Expired, Timeout, Canceled] |
+| **startDateTime** | **OffsetDateTime**| Start datetime in UTC timezone. | [optional] |
+| **endDateTime** | **OffsetDateTime**| End datetime in UTC timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -407,10 +407,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 
 <a name="getIndividualConsentRequestById"></a>
 # **getIndividualConsentRequestById**
@@ -450,9 +450,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestId** | **UUID**| Individual data consent request id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestId** | **UUID**| Individual data consent request id. | |
 
 ### Return type
 
@@ -470,11 +470,11 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 
 <a name="getOrganizationConsentRequestById"></a>
 # **getOrganizationConsentRequestById**
@@ -514,9 +514,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **requestId** | **UUID**| Organization consent request id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **requestId** | **UUID**| Organization consent request id. | |
 
 ### Return type
 
@@ -534,9 +534,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 

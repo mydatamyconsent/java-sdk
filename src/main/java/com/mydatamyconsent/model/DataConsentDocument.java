@@ -25,16 +25,36 @@ import com.mydatamyconsent.model.DocumentDigitalSignature;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
 
 /**
  * Data Consent document details.
  */
 @ApiModel(description = "Data Consent document details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class DataConsentDocument {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -74,7 +94,7 @@ public class DataConsentDocument {
 
   public static final String SERIALIZED_NAME_DIGITAL_SIGNATURES = "digitalSignatures";
   @SerializedName(SERIALIZED_NAME_DIGITAL_SIGNATURES)
-  private List<DocumentDigitalSignature> digitalSignatures = new ArrayList<DocumentDigitalSignature>();
+  private List<DocumentDigitalSignature> digitalSignatures = new ArrayList<>();
 
   public DataConsentDocument() { 
   }
@@ -314,6 +334,7 @@ public class DataConsentDocument {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -380,5 +401,149 @@ public class DataConsentDocument {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("name");
+    openapiFields.add("category");
+    openapiFields.add("identifier");
+    openapiFields.add("fieldTitle");
+    openapiFields.add("fieldSlug");
+    openapiFields.add("issuedAtUtc");
+    openapiFields.add("expiresAtUtc");
+    openapiFields.add("issuer");
+    openapiFields.add("digitalSignatures");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("id");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("category");
+    openapiRequiredFields.add("identifier");
+    openapiRequiredFields.add("fieldTitle");
+    openapiRequiredFields.add("fieldSlug");
+    openapiRequiredFields.add("issuedAtUtc");
+    openapiRequiredFields.add("issuer");
+    openapiRequiredFields.add("digitalSignatures");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to DataConsentDocument
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (DataConsentDocument.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in DataConsentDocument is not found in the empty JSON string", DataConsentDocument.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!DataConsentDocument.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DataConsentDocument` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DataConsentDocument.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if (jsonObj.get("category") != null && !jsonObj.get("category").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
+      }
+      if (jsonObj.get("identifier") != null && !jsonObj.get("identifier").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("identifier").toString()));
+      }
+      if (jsonObj.get("fieldTitle") != null && !jsonObj.get("fieldTitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `fieldTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fieldTitle").toString()));
+      }
+      if (jsonObj.get("fieldSlug") != null && !jsonObj.get("fieldSlug").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `fieldSlug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fieldSlug").toString()));
+      }
+      // validate the optional field `issuer`
+      if (jsonObj.getAsJsonObject("issuer") != null) {
+        DataConsentDocumentIssuer.validateJsonObject(jsonObj.getAsJsonObject("issuer"));
+      }
+      JsonArray jsonArraydigitalSignatures = jsonObj.getAsJsonArray("digitalSignatures");
+      if (jsonArraydigitalSignatures != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("digitalSignatures").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `digitalSignatures` to be an array in the JSON string but got `%s`", jsonObj.get("digitalSignatures").toString()));
+        }
+
+        // validate the optional field `digitalSignatures` (array)
+        for (int i = 0; i < jsonArraydigitalSignatures.size(); i++) {
+          DocumentDigitalSignature.validateJsonObject(jsonArraydigitalSignatures.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DataConsentDocument.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DataConsentDocument' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DataConsentDocument> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DataConsentDocument.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DataConsentDocument>() {
+           @Override
+           public void write(JsonWriter out, DataConsentDocument value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DataConsentDocument read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of DataConsentDocument given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of DataConsentDocument
+  * @throws IOException if the JSON string is invalid with respect to DataConsentDocument
+  */
+  public static DataConsentDocument fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DataConsentDocument.class);
+  }
+
+ /**
+  * Convert an instance of DataConsentDocument to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

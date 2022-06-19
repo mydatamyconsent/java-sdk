@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getIssuedDocumentById**](DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document.
-[**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued | Get paginated list of issued documents of given document type.
-[**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get paginated list of registered document types.
-[**issueDocumentToIndividual**](DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user.
-[**issueDocumentToOrganization**](DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization.
-[**uploadDocumentForIndividual**](DocumentsApi.md#uploadDocumentForIndividual) | **POST** /v1/documents/issue/individual/upload/{issueRequestId} | Upload a document for issuance request of individual.
-[**uploadDocumentForOrganization**](DocumentsApi.md#uploadDocumentForOrganization) | **POST** /v1/documents/issue/organization/upload/{issueRequestId} | Upload a document for issuance request of organization.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**getIssuedDocumentById**](DocumentsApi.md#getIssuedDocumentById) | **GET** /v1/documents/issued/{documentId} | Get issued document. |
+| [**getIssuedDocuments**](DocumentsApi.md#getIssuedDocuments) | **GET** /v1/documents/issued | Get paginated list of issued documents of given document type. |
+| [**getRegisteredDocumentTypes**](DocumentsApi.md#getRegisteredDocumentTypes) | **GET** /v1/documents/types | Get paginated list of registered document types. |
+| [**issueDocumentToIndividual**](DocumentsApi.md#issueDocumentToIndividual) | **POST** /v1/documents/issue/individual | Issue a new document to an individual user. |
+| [**issueDocumentToOrganization**](DocumentsApi.md#issueDocumentToOrganization) | **POST** /v1/documents/issue/organization | Issue a new document to an organization. |
+| [**uploadDocumentForIndividual**](DocumentsApi.md#uploadDocumentForIndividual) | **POST** /v1/documents/issue/individual/upload/{issueRequestId} | Upload a document for issuance request of individual. |
+| [**uploadDocumentForOrganization**](DocumentsApi.md#uploadDocumentForOrganization) | **POST** /v1/documents/issue/organization/upload/{issueRequestId} | Upload a document for issuance request of organization. |
 
 
 <a name="getIssuedDocumentById"></a>
@@ -51,9 +51,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **documentId** | **UUID**| Document id. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentId** | **UUID**| Document id. | |
 
 ### Return type
 
@@ -71,10 +71,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
 
 <a name="getIssuedDocuments"></a>
 # **getIssuedDocuments**
@@ -118,13 +118,13 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **documentTypeId** | **UUID**| Document type id. | [optional]
- **fromDateTime** | **OffsetDateTime**| From DateTime in UTC timezone. | [optional]
- **toDateTime** | **OffsetDateTime**| To DateTime in UTC timezone. | [optional]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentTypeId** | **UUID**| Document type id. | [optional] |
+| **fromDateTime** | **OffsetDateTime**| From DateTime in UTC timezone. | [optional] |
+| **toDateTime** | **OffsetDateTime**| To DateTime in UTC timezone. | [optional] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -142,9 +142,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**400** | Bad Request |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **400** | Bad Request |  -  |
 
 <a name="getRegisteredDocumentTypes"></a>
 # **getRegisteredDocumentTypes**
@@ -186,11 +186,11 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **supportedEntityType** | [**SupportedEntityType**](.md)| Supported entity type. | [optional] [enum: Individual, Organization, Both]
- **pageNo** | **Integer**| Page number. | [optional] [default to 1]
- **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **supportedEntityType** | [**SupportedEntityType**](.md)| Supported entity type. | [optional] [enum: Individual, Organization, Both] |
+| **pageNo** | **Integer**| Page number. | [optional] [default to 1] |
+| **pageSize** | **Integer**| Number of items to return. | [optional] [default to 25] |
 
 ### Return type
 
@@ -208,9 +208,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**500** | Server Error |  -  |
-**400** | Bad Request |  -  |
+| **200** | Success |  -  |
+| **500** | Server Error |  -  |
+| **400** | Bad Request |  -  |
 
 <a name="issueDocumentToIndividual"></a>
 # **issueDocumentToIndividual**
@@ -250,9 +250,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload | |
 
 ### Return type
 
@@ -270,10 +270,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
 
 <a name="issueDocumentToOrganization"></a>
 # **issueDocumentToOrganization**
@@ -313,9 +313,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **documentIssueRequest** | [**DocumentIssueRequest**](DocumentIssueRequest.md)| Document issue request payload | |
 
 ### Return type
 
@@ -333,11 +333,11 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**404** | Not Found |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **404** | Not Found |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 
 <a name="uploadDocumentForIndividual"></a>
 # **uploadDocumentForIndividual**
@@ -377,10 +377,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **issueRequestId** | **UUID**| Document issue request id. |
- **formFile** | **File**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **issueRequestId** | **UUID**| Document issue request id. | |
+| **formFile** | **File**|  | |
 
 ### Return type
 
@@ -398,10 +398,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
+| **204** | No Content |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
 
 <a name="uploadDocumentForOrganization"></a>
 # **uploadDocumentForOrganization**
@@ -441,10 +441,10 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **issueRequestId** | **UUID**| Document issue request id System.Guid. |
- **formFile** | **File**|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **issueRequestId** | **UUID**| Document issue request id System.Guid. | |
+| **formFile** | **File**|  | |
 
 ### Return type
 
@@ -462,9 +462,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**204** | No Content |  -  |
-**404** | Not Found |  -  |
-**400** | Bad Request |  -  |
-**500** | Server Error |  -  |
-**0** | Error |  -  |
+| **204** | No Content |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **500** | Server Error |  -  |
+| **0** | Error |  -  |
 

@@ -30,6 +30,7 @@ import java.io.IOException;
 import com.mydatamyconsent.model.CreateDataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreementPaginatedList;
+import com.mydatamyconsent.model.Error;
 import java.util.UUID;
 import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
 
@@ -38,6 +39,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class DataProcessingAgreementsApi {
     private ApiClient localVarApiClient;
@@ -92,7 +94,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call createDataProcessingAgreementCall(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -228,7 +229,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call deleteDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -364,7 +364,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call getDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -504,7 +503,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call getDataProcessingAgreementsCall(Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -646,7 +644,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call terminateDataProcessingAgreementByIdCall(UUID id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -783,7 +780,6 @@ public class DataProcessingAgreementsApi {
      */
     public okhttp3.Call updateDataProcessingAgreementCall(UUID id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

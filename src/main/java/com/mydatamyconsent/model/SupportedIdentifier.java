@@ -28,10 +28,30 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
+
 /**
  * SupportedIdentifier
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class SupportedIdentifier {
   public static final String SERIALIZED_NAME_ISO2 = "iso2";
   @SerializedName(SERIALIZED_NAME_ISO2)
@@ -106,7 +126,7 @@ public class SupportedIdentifier {
 
   public SupportedIdentifier addIndividualIdentifiersItem(Identifier individualIdentifiersItem) {
     if (this.individualIdentifiers == null) {
-      this.individualIdentifiers = new ArrayList<Identifier>();
+      this.individualIdentifiers = new ArrayList<>();
     }
     this.individualIdentifiers.add(individualIdentifiersItem);
     return this;
@@ -137,7 +157,7 @@ public class SupportedIdentifier {
 
   public SupportedIdentifier addOrganizationIdentifiersItem(Identifier organizationIdentifiersItem) {
     if (this.organizationIdentifiers == null) {
-      this.organizationIdentifiers = new ArrayList<Identifier>();
+      this.organizationIdentifiers = new ArrayList<>();
     }
     this.organizationIdentifiers.add(organizationIdentifiersItem);
     return this;
@@ -158,6 +178,7 @@ public class SupportedIdentifier {
   public void setOrganizationIdentifiers(List<Identifier> organizationIdentifiers) {
     this.organizationIdentifiers = organizationIdentifiers;
   }
+
 
 
   @Override
@@ -214,5 +235,123 @@ public class SupportedIdentifier {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("iso2");
+    openapiFields.add("name");
+    openapiFields.add("individualIdentifiers");
+    openapiFields.add("organizationIdentifiers");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to SupportedIdentifier
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (SupportedIdentifier.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in SupportedIdentifier is not found in the empty JSON string", SupportedIdentifier.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!SupportedIdentifier.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SupportedIdentifier` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("iso2") != null && !jsonObj.get("iso2").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `iso2` to be a primitive type in the JSON string but got `%s`", jsonObj.get("iso2").toString()));
+      }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      JsonArray jsonArrayindividualIdentifiers = jsonObj.getAsJsonArray("individualIdentifiers");
+      if (jsonArrayindividualIdentifiers != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("individualIdentifiers").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `individualIdentifiers` to be an array in the JSON string but got `%s`", jsonObj.get("individualIdentifiers").toString()));
+        }
+
+        // validate the optional field `individualIdentifiers` (array)
+        for (int i = 0; i < jsonArrayindividualIdentifiers.size(); i++) {
+          Identifier.validateJsonObject(jsonArrayindividualIdentifiers.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayorganizationIdentifiers = jsonObj.getAsJsonArray("organizationIdentifiers");
+      if (jsonArrayorganizationIdentifiers != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("organizationIdentifiers").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `organizationIdentifiers` to be an array in the JSON string but got `%s`", jsonObj.get("organizationIdentifiers").toString()));
+        }
+
+        // validate the optional field `organizationIdentifiers` (array)
+        for (int i = 0; i < jsonArrayorganizationIdentifiers.size(); i++) {
+          Identifier.validateJsonObject(jsonArrayorganizationIdentifiers.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!SupportedIdentifier.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'SupportedIdentifier' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<SupportedIdentifier> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(SupportedIdentifier.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<SupportedIdentifier>() {
+           @Override
+           public void write(JsonWriter out, SupportedIdentifier value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public SupportedIdentifier read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of SupportedIdentifier given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SupportedIdentifier
+  * @throws IOException if the JSON string is invalid with respect to SupportedIdentifier
+  */
+  public static SupportedIdentifier fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SupportedIdentifier.class);
+  }
+
+ /**
+  * Convert an instance of SupportedIdentifier to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

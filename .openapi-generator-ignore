@@ -11,3 +11,5 @@ build.sbt
 .travis.yml
 *.gradle
 .gitignore
+.github/workflows/maven.yml
+pom.xml

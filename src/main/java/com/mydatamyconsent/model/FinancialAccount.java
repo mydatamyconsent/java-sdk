@@ -26,16 +26,36 @@ import com.mydatamyconsent.model.SharedWith;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
 
 /**
  * FinancialAccount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class FinancialAccount {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -338,7 +358,7 @@ public class FinancialAccount {
 
   public FinancialAccount addSharedWithItem(SharedWith sharedWithItem) {
     if (this.sharedWith == null) {
-      this.sharedWith = new ArrayList<SharedWith>();
+      this.sharedWith = new ArrayList<>();
     }
     this.sharedWith.add(sharedWithItem);
     return this;
@@ -415,7 +435,7 @@ public class FinancialAccount {
 
   public FinancialAccount addActivitiesItem(Activity activitiesItem) {
     if (this.activities == null) {
-      this.activities = new ArrayList<Activity>();
+      this.activities = new ArrayList<>();
     }
     this.activities.add(activitiesItem);
     return this;
@@ -446,7 +466,7 @@ public class FinancialAccount {
 
   public FinancialAccount addApprovedConsentRequestsItem(ApprovedConsentRequest approvedConsentRequestsItem) {
     if (this.approvedConsentRequests == null) {
-      this.approvedConsentRequests = new ArrayList<ApprovedConsentRequest>();
+      this.approvedConsentRequests = new ArrayList<>();
     }
     this.approvedConsentRequests.add(approvedConsentRequestsItem);
     return this;
@@ -467,6 +487,7 @@ public class FinancialAccount {
   public void setApprovedConsentRequests(List<ApprovedConsentRequest> approvedConsentRequests) {
     this.approvedConsentRequests = approvedConsentRequests;
   }
+
 
 
   @Override
@@ -545,5 +566,167 @@ public class FinancialAccount {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("issuer");
+    openapiFields.add("logoUrl");
+    openapiFields.add("categoryId");
+    openapiFields.add("categoryName");
+    openapiFields.add("accountName");
+    openapiFields.add("accountLogoUrl");
+    openapiFields.add("balance");
+    openapiFields.add("balanceType");
+    openapiFields.add("isShared");
+    openapiFields.add("sharedWith");
+    openapiFields.add("isReceived");
+    openapiFields.add("expiresAtUtc");
+    openapiFields.add("activities");
+    openapiFields.add("approvedConsentRequests");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to FinancialAccount
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (FinancialAccount.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccount is not found in the empty JSON string", FinancialAccount.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!FinancialAccount.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccount` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("issuer") != null && !jsonObj.get("issuer").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `issuer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuer").toString()));
+      }
+      if (jsonObj.get("logoUrl") != null && !jsonObj.get("logoUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `logoUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logoUrl").toString()));
+      }
+      if (jsonObj.get("categoryId") != null && !jsonObj.get("categoryId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `categoryId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("categoryId").toString()));
+      }
+      if (jsonObj.get("categoryName") != null && !jsonObj.get("categoryName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `categoryName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("categoryName").toString()));
+      }
+      if (jsonObj.get("accountName") != null && !jsonObj.get("accountName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `accountName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountName").toString()));
+      }
+      if (jsonObj.get("accountLogoUrl") != null && !jsonObj.get("accountLogoUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `accountLogoUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountLogoUrl").toString()));
+      }
+      if (jsonObj.get("balance") != null && !jsonObj.get("balance").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `balance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("balance").toString()));
+      }
+      if (jsonObj.get("balanceType") != null && !jsonObj.get("balanceType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `balanceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("balanceType").toString()));
+      }
+      JsonArray jsonArraysharedWith = jsonObj.getAsJsonArray("sharedWith");
+      if (jsonArraysharedWith != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("sharedWith").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `sharedWith` to be an array in the JSON string but got `%s`", jsonObj.get("sharedWith").toString()));
+        }
+
+        // validate the optional field `sharedWith` (array)
+        for (int i = 0; i < jsonArraysharedWith.size(); i++) {
+          SharedWith.validateJsonObject(jsonArraysharedWith.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayactivities = jsonObj.getAsJsonArray("activities");
+      if (jsonArrayactivities != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("activities").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `activities` to be an array in the JSON string but got `%s`", jsonObj.get("activities").toString()));
+        }
+
+        // validate the optional field `activities` (array)
+        for (int i = 0; i < jsonArrayactivities.size(); i++) {
+          Activity.validateJsonObject(jsonArrayactivities.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayapprovedConsentRequests = jsonObj.getAsJsonArray("approvedConsentRequests");
+      if (jsonArrayapprovedConsentRequests != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("approvedConsentRequests").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `approvedConsentRequests` to be an array in the JSON string but got `%s`", jsonObj.get("approvedConsentRequests").toString()));
+        }
+
+        // validate the optional field `approvedConsentRequests` (array)
+        for (int i = 0; i < jsonArrayapprovedConsentRequests.size(); i++) {
+          ApprovedConsentRequest.validateJsonObject(jsonArrayapprovedConsentRequests.get(i).getAsJsonObject());
+        };
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!FinancialAccount.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FinancialAccount' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<FinancialAccount> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccount.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<FinancialAccount>() {
+           @Override
+           public void write(JsonWriter out, FinancialAccount value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public FinancialAccount read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of FinancialAccount given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FinancialAccount
+  * @throws IOException if the JSON string is invalid with respect to FinancialAccount
+  */
+  public static FinancialAccount fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FinancialAccount.class);
+  }
+
+ /**
+  * Convert an instance of FinancialAccount to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -26,17 +26,37 @@ import com.mydatamyconsent.model.SupportedEntityType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.threeten.bp.OffsetDateTime;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
 
 /**
  * Issuable Document Type details.
  */
 @ApiModel(description = "Issuable Document Type details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class DocumentType {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -76,7 +96,7 @@ public class DocumentType {
 
   public static final String SERIALIZED_NAME_SUPPORTED_ENTITY_TYPES = "supportedEntityTypes";
   @SerializedName(SERIALIZED_NAME_SUPPORTED_ENTITY_TYPES)
-  private List<SupportedEntityType> supportedEntityTypes = new ArrayList<SupportedEntityType>();
+  private List<SupportedEntityType> supportedEntityTypes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ADDED_BY = "addedBy";
   @SerializedName(SERIALIZED_NAME_ADDED_BY)
@@ -424,6 +444,7 @@ public class DocumentType {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -498,5 +519,150 @@ public class DocumentType {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("categoryType");
+    openapiFields.add("subCategoryType");
+    openapiFields.add("name");
+    openapiFields.add("slug");
+    openapiFields.add("description");
+    openapiFields.add("logoUrl");
+    openapiFields.add("searchServiceName");
+    openapiFields.add("repositoryServiceName");
+    openapiFields.add("supportedEntityTypes");
+    openapiFields.add("addedBy");
+    openapiFields.add("payableAmount");
+    openapiFields.add("payableAmountCurrency");
+    openapiFields.add("approvedAtUtc");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("id");
+    openapiRequiredFields.add("categoryType");
+    openapiRequiredFields.add("subCategoryType");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("slug");
+    openapiRequiredFields.add("logoUrl");
+    openapiRequiredFields.add("supportedEntityTypes");
+    openapiRequiredFields.add("addedBy");
+    openapiRequiredFields.add("payableAmount");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to DocumentType
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (DocumentType.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in DocumentType is not found in the empty JSON string", DocumentType.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!DocumentType.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DocumentType` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DocumentType.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if (jsonObj.get("slug") != null && !jsonObj.get("slug").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
+      }
+      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (jsonObj.get("logoUrl") != null && !jsonObj.get("logoUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `logoUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logoUrl").toString()));
+      }
+      if (jsonObj.get("searchServiceName") != null && !jsonObj.get("searchServiceName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `searchServiceName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("searchServiceName").toString()));
+      }
+      if (jsonObj.get("repositoryServiceName") != null && !jsonObj.get("repositoryServiceName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `repositoryServiceName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("repositoryServiceName").toString()));
+      }
+      // ensure the json data is an array
+      if (jsonObj.get("supportedEntityTypes") != null && !jsonObj.get("supportedEntityTypes").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `supportedEntityTypes` to be an array in the JSON string but got `%s`", jsonObj.get("supportedEntityTypes").toString()));
+      }
+      if (jsonObj.get("addedBy") != null && !jsonObj.get("addedBy").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `addedBy` to be a primitive type in the JSON string but got `%s`", jsonObj.get("addedBy").toString()));
+      }
+      if (jsonObj.get("payableAmountCurrency") != null && !jsonObj.get("payableAmountCurrency").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `payableAmountCurrency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("payableAmountCurrency").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DocumentType.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DocumentType' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DocumentType> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DocumentType.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DocumentType>() {
+           @Override
+           public void write(JsonWriter out, DocumentType value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DocumentType read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of DocumentType given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of DocumentType
+  * @throws IOException if the JSON string is invalid with respect to DocumentType
+  */
+  public static DocumentType fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DocumentType.class);
+  }
+
+ /**
+  * Convert an instance of DocumentType to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

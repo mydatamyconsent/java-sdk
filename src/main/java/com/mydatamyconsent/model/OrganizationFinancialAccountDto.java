@@ -21,17 +21,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.BankAccountType;
-import com.mydatamyconsent.model.FileType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
+
 /**
  * OrganizationFinancialAccountDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class OrganizationFinancialAccountDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -80,10 +99,6 @@ public class OrganizationFinancialAccountDto {
   public static final String SERIALIZED_NAME_BANK_ACCOUNT_PROOF_URL = "bankAccountProofUrl";
   @SerializedName(SERIALIZED_NAME_BANK_ACCOUNT_PROOF_URL)
   private String bankAccountProofUrl;
-
-  public static final String SERIALIZED_NAME_FILE_TYPE = "fileType";
-  @SerializedName(SERIALIZED_NAME_FILE_TYPE)
-  private FileType fileType;
 
   public OrganizationFinancialAccountDto() { 
   }
@@ -364,28 +379,6 @@ public class OrganizationFinancialAccountDto {
   }
 
 
-  public OrganizationFinancialAccountDto fileType(FileType fileType) {
-    
-    this.fileType = fileType;
-    return this;
-  }
-
-   /**
-   * Get fileType
-   * @return fileType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public FileType getFileType() {
-    return fileType;
-  }
-
-
-  public void setFileType(FileType fileType) {
-    this.fileType = fileType;
-  }
-
 
   @Override
   public boolean equals(Object o) {
@@ -407,8 +400,7 @@ public class OrganizationFinancialAccountDto {
         Objects.equals(this.logoUrl, organizationFinancialAccountDto.logoUrl) &&
         Objects.equals(this.bankName, organizationFinancialAccountDto.bankName) &&
         Objects.equals(this.bankAccountType, organizationFinancialAccountDto.bankAccountType) &&
-        Objects.equals(this.bankAccountProofUrl, organizationFinancialAccountDto.bankAccountProofUrl) &&
-        Objects.equals(this.fileType, organizationFinancialAccountDto.fileType);
+        Objects.equals(this.bankAccountProofUrl, organizationFinancialAccountDto.bankAccountProofUrl);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -417,7 +409,7 @@ public class OrganizationFinancialAccountDto {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, organizationId, organizationName, beneficiaryName, accountNumber, routingNumber, isPrimary, isVerified, logoUrl, bankName, bankAccountType, bankAccountProofUrl, fileType);
+    return Objects.hash(id, organizationId, organizationName, beneficiaryName, accountNumber, routingNumber, isPrimary, isVerified, logoUrl, bankName, bankAccountType, bankAccountProofUrl);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -443,7 +435,6 @@ public class OrganizationFinancialAccountDto {
     sb.append("    bankName: ").append(toIndentedString(bankName)).append("\n");
     sb.append("    bankAccountType: ").append(toIndentedString(bankAccountType)).append("\n");
     sb.append("    bankAccountProofUrl: ").append(toIndentedString(bankAccountProofUrl)).append("\n");
-    sb.append("    fileType: ").append(toIndentedString(fileType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -459,5 +450,128 @@ public class OrganizationFinancialAccountDto {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("organizationId");
+    openapiFields.add("organizationName");
+    openapiFields.add("beneficiaryName");
+    openapiFields.add("accountNumber");
+    openapiFields.add("routingNumber");
+    openapiFields.add("isPrimary");
+    openapiFields.add("isVerified");
+    openapiFields.add("logoUrl");
+    openapiFields.add("bankName");
+    openapiFields.add("bankAccountType");
+    openapiFields.add("bankAccountProofUrl");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to OrganizationFinancialAccountDto
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (OrganizationFinancialAccountDto.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in OrganizationFinancialAccountDto is not found in the empty JSON string", OrganizationFinancialAccountDto.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!OrganizationFinancialAccountDto.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `OrganizationFinancialAccountDto` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+      if (jsonObj.get("id") != null && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (jsonObj.get("organizationId") != null && !jsonObj.get("organizationId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `organizationId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("organizationId").toString()));
+      }
+      if (jsonObj.get("organizationName") != null && !jsonObj.get("organizationName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `organizationName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("organizationName").toString()));
+      }
+      if (jsonObj.get("beneficiaryName") != null && !jsonObj.get("beneficiaryName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `beneficiaryName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("beneficiaryName").toString()));
+      }
+      if (jsonObj.get("accountNumber") != null && !jsonObj.get("accountNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `accountNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("accountNumber").toString()));
+      }
+      if (jsonObj.get("routingNumber") != null && !jsonObj.get("routingNumber").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `routingNumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("routingNumber").toString()));
+      }
+      if (jsonObj.get("logoUrl") != null && !jsonObj.get("logoUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `logoUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logoUrl").toString()));
+      }
+      if (jsonObj.get("bankName") != null && !jsonObj.get("bankName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `bankName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bankName").toString()));
+      }
+      if (jsonObj.get("bankAccountProofUrl") != null && !jsonObj.get("bankAccountProofUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `bankAccountProofUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("bankAccountProofUrl").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!OrganizationFinancialAccountDto.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'OrganizationFinancialAccountDto' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<OrganizationFinancialAccountDto> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(OrganizationFinancialAccountDto.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<OrganizationFinancialAccountDto>() {
+           @Override
+           public void write(JsonWriter out, OrganizationFinancialAccountDto value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public OrganizationFinancialAccountDto read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of OrganizationFinancialAccountDto given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of OrganizationFinancialAccountDto
+  * @throws IOException if the JSON string is invalid with respect to OrganizationFinancialAccountDto
+  */
+  public static OrganizationFinancialAccountDto fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, OrganizationFinancialAccountDto.class);
+  }
+
+ /**
+  * Convert an instance of OrganizationFinancialAccountDto to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

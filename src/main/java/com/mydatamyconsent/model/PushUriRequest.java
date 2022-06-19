@@ -26,10 +26,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.mydatamyconsent.JSON;
+
 /**
  * PushUriRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-10T10:36:12.090067453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]")
 public class PushUriRequest {
   public static final String SERIALIZED_NAME_URI_DETAILS = "uriDetails";
   @SerializedName(SERIALIZED_NAME_URI_DETAILS)
@@ -223,6 +243,7 @@ public class PushUriRequest {
   }
 
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -283,5 +304,126 @@ public class PushUriRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("uriDetails");
+    openapiFields.add("ns2");
+    openapiFields.add("ver");
+    openapiFields.add("ts");
+    openapiFields.add("txn");
+    openapiFields.add("orgId");
+    openapiFields.add("keyhash");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("uriDetails");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to PushUriRequest
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (PushUriRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in PushUriRequest is not found in the empty JSON string", PushUriRequest.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!PushUriRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PushUriRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PushUriRequest.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // validate the optional field `uriDetails`
+      if (jsonObj.getAsJsonObject("uriDetails") != null) {
+        UriDetails.validateJsonObject(jsonObj.getAsJsonObject("uriDetails"));
+      }
+      if (jsonObj.get("ns2") != null && !jsonObj.get("ns2").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ns2` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ns2").toString()));
+      }
+      if (jsonObj.get("ver") != null && !jsonObj.get("ver").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ver` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ver").toString()));
+      }
+      if (jsonObj.get("ts") != null && !jsonObj.get("ts").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ts` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ts").toString()));
+      }
+      if (jsonObj.get("txn") != null && !jsonObj.get("txn").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `txn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("txn").toString()));
+      }
+      if (jsonObj.get("orgId") != null && !jsonObj.get("orgId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `orgId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("orgId").toString()));
+      }
+      if (jsonObj.get("keyhash") != null && !jsonObj.get("keyhash").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `keyhash` to be a primitive type in the JSON string but got `%s`", jsonObj.get("keyhash").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!PushUriRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PushUriRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<PushUriRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PushUriRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<PushUriRequest>() {
+           @Override
+           public void write(JsonWriter out, PushUriRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public PushUriRequest read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+ /**
+  * Create an instance of PushUriRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of PushUriRequest
+  * @throws IOException if the JSON string is invalid with respect to PushUriRequest
+  */
+  public static PushUriRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PushUriRequest.class);
+  }
+
+ /**
+  * Convert an instance of PushUriRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

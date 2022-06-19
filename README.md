@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: v1
-  - Build date: 2022-06-10T10:36:12.090067453Z[Etc/UTC]
+  - Build date: 2022-06-20T00:03:27.327039+05:30[Asia/Kolkata]
 
 Unleashing the power of data consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -14,7 +14,7 @@ Unleashing the power of data consent by establishing trust. The Platform Core De
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.7+
+1. Java 1.8+
 2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.mydatamyconsent</groupId>
   <artifactId>mydatamyconsent-java-sdk</artifactId>
-  <version>v1</version>
+  <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -57,7 +57,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.mydatamyconsent:mydatamyconsent-java-sdk:v1"
+     implementation "com.mydatamyconsent:mydatamyconsent-java-sdk:1.0.0"
   }
 ```
 
@@ -71,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/mydatamyconsent-java-sdk-v1.jar`
+* `target/mydatamyconsent-java-sdk-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -195,7 +195,8 @@ Class | Method | HTTP request | Description
  - [DocumentType](docs/DocumentType.md)
  - [DocumentTypePaginatedList](docs/DocumentTypePaginatedList.md)
  - [DocumentsRequired](docs/DocumentsRequired.md)
- - [FileType](docs/FileType.md)
+ - [Error](docs/Error.md)
+ - [ErrorType](docs/ErrorType.md)
  - [Financial](docs/Financial.md)
  - [FinancialAccount](docs/FinancialAccount.md)
  - [FinancialAccountDetailsRequired](docs/FinancialAccountDetailsRequired.md)

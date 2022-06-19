@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.mydatamyconsent.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**digilockerCompatIssueDocument**](DigiLockerCompatIssuerApi.md#digilockerCompatIssueDocument) | **POST** /issuer/issuedoc/1/xml | Digilocker Compatible endpoint to issue document.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**digilockerCompatIssueDocument**](DigiLockerCompatIssuerApi.md#digilockerCompatIssueDocument) | **POST** /issuer/issuedoc/1/xml | Digilocker Compatible endpoint to issue document. |
 
 
 <a name="digilockerCompatIssueDocument"></a>
@@ -45,9 +45,9 @@ public class Example {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)| Push URI request payload |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pushUriRequest** | [**PushUriRequest**](PushUriRequest.md)| Push URI request payload | |
 
 ### Return type
 
@@ -65,10 +65,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
-**400** | Bad Request |  -  |
-**401** | Unauthorized |  -  |
-**500** | Server Error |  -  |
-**404** | Not Found |  -  |
-**0** | Error |  -  |
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Server Error |  -  |
+| **404** | Not Found |  -  |
+| **0** | Error |  -  |
 

@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.ProblemDetails;
 import com.mydatamyconsent.model.PushUriRequest;
 import com.mydatamyconsent.model.PushUriResponse;
@@ -36,6 +37,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class DigiLockerCompatIssuerApi {
     private ApiClient localVarApiClient;
@@ -93,7 +95,6 @@ public class DigiLockerCompatIssuerApi {
      */
     public okhttp3.Call digilockerCompatIssueDocumentCall(PushUriRequest pushUriRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 

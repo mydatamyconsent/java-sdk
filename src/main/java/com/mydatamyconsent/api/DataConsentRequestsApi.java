@@ -30,9 +30,10 @@ import java.io.IOException;
 import com.mydatamyconsent.model.CreateDataConsentRequest;
 import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentStatus;
+import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.IndividualDataConsentRequestDetails;
 import com.mydatamyconsent.model.IndividualDataConsentRequestDetailsPaginatedList;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestDetails;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestDetailsPaginatedList;
 import com.mydatamyconsent.model.ProblemDetails;
@@ -43,6 +44,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class DataConsentRequestsApi {
     private ApiClient localVarApiClient;
@@ -99,7 +101,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call cancelIndividualDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -239,7 +240,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call cancelOrganizationDataConsentRequestCall(UUID requestId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -378,7 +378,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call createIndividualDataConsentRequestCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -517,7 +516,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call createOrganizationDataConsentRequestCall(CreateDataConsentRequest createDataConsentRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -660,7 +658,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call getAllConsentRequestsToIndividualsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -830,7 +827,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call getAllConsentRequestsToOrganizationsCall(DataConsentStatus status, OffsetDateTime startDateTime, OffsetDateTime endDateTime, Integer pageNo, Integer pageSize, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -997,7 +993,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call getIndividualConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
@@ -1141,7 +1136,6 @@ public class DataConsentRequestsApi {
      */
     public okhttp3.Call getOrganizationConsentRequestByIdCall(UUID requestId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
-
         // Operation Servers
         String[] localBasePaths = new String[] {  };
 
