@@ -14,11 +14,12 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
+import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.ProblemDetails;
 import com.mydatamyconsent.model.PushUriRequest;
 import com.mydatamyconsent.model.PushUriResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,25 +29,21 @@ import java.util.Map;
 /**
  * API tests for DigiLockerCompatIssuerApi
  */
-@Ignore
+@Disabled
 public class DigiLockerCompatIssuerApiTest {
 
     private final DigiLockerCompatIssuerApi api = new DigiLockerCompatIssuerApi();
 
-    
     /**
      * Digilocker Compatible endpoint to issue document.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void digilockerCompatIssueDocumentTest() throws ApiException {
         PushUriRequest pushUriRequest = null;
-                PushUriResponse response = api.digilockerCompatIssueDocument(pushUriRequest);
+        PushUriResponse response = api.digilockerCompatIssueDocument(pushUriRequest);
         // TODO: test validations
     }
-    
+
 }

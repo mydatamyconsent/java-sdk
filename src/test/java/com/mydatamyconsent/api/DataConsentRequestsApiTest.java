@@ -17,15 +17,16 @@ import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.CreateDataConsentRequest;
 import com.mydatamyconsent.model.DataConsentRequest;
 import com.mydatamyconsent.model.DataConsentStatus;
+import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.IndividualDataConsentRequestDetails;
 import com.mydatamyconsent.model.IndividualDataConsentRequestDetailsPaginatedList;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestDetails;
 import com.mydatamyconsent.model.OrganizationDataConsentRequestDetailsPaginatedList;
 import com.mydatamyconsent.model.ProblemDetails;
 import java.util.UUID;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,79 +36,67 @@ import java.util.Map;
 /**
  * API tests for DataConsentRequestsApi
  */
-@Ignore
+@Disabled
 public class DataConsentRequestsApiTest {
 
     private final DataConsentRequestsApi api = new DataConsentRequestsApi();
 
-    
     /**
      * Cancel the individual data consent request by Id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void cancelIndividualDataConsentRequestTest() throws ApiException {
         UUID requestId = null;
-                api.cancelIndividualDataConsentRequest(requestId);
+        api.cancelIndividualDataConsentRequest(requestId);
         // TODO: test validations
     }
-    
+
     /**
      * Cancel the organization data consent request by Id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void cancelOrganizationDataConsentRequestTest() throws ApiException {
         UUID requestId = null;
-                api.cancelOrganizationDataConsentRequest(requestId);
+        api.cancelOrganizationDataConsentRequest(requestId);
         // TODO: test validations
     }
-    
+
     /**
      * Create data consent request for an individual.
      *
      * Create data consent request for an individual.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void createIndividualDataConsentRequestTest() throws ApiException {
         CreateDataConsentRequest createDataConsentRequest = null;
-                IndividualDataConsentRequestDetails response = api.createIndividualDataConsentRequest(createDataConsentRequest);
+        IndividualDataConsentRequestDetails response = api.createIndividualDataConsentRequest(createDataConsentRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Create data consent request for an organization.
      *
      * Create data consent request for an organization.
      *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void createOrganizationDataConsentRequestTest() throws ApiException {
         CreateDataConsentRequest createDataConsentRequest = null;
-                OrganizationDataConsentRequestDetails response = api.createOrganizationDataConsentRequest(createDataConsentRequest);
+        OrganizationDataConsentRequestDetails response = api.createOrganizationDataConsentRequest(createDataConsentRequest);
         // TODO: test validations
     }
-    
+
     /**
      * Get all Consent Requests sent to individuals.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAllConsentRequestsToIndividualsTest() throws ApiException {
@@ -116,17 +105,14 @@ public class DataConsentRequestsApiTest {
         OffsetDateTime endDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                IndividualDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToIndividuals(status, startDateTime, endDateTime, pageNo, pageSize);
+        IndividualDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToIndividuals(status, startDateTime, endDateTime, pageNo, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get all Consent Requests sent to organizations.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getAllConsentRequestsToOrganizationsTest() throws ApiException {
@@ -135,38 +121,32 @@ public class DataConsentRequestsApiTest {
         OffsetDateTime endDateTime = null;
         Integer pageNo = null;
         Integer pageSize = null;
-                OrganizationDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToOrganizations(status, startDateTime, endDateTime, pageNo, pageSize);
+        OrganizationDataConsentRequestDetailsPaginatedList response = api.getAllConsentRequestsToOrganizations(status, startDateTime, endDateTime, pageNo, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Get individual data consent request by id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getIndividualConsentRequestByIdTest() throws ApiException {
         UUID requestId = null;
-                DataConsentRequest response = api.getIndividualConsentRequestById(requestId);
+        DataConsentRequest response = api.getIndividualConsentRequestById(requestId);
         // TODO: test validations
     }
-    
+
     /**
      * Get a OrganizationConsent Request by Id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getOrganizationConsentRequestByIdTest() throws ApiException {
         UUID requestId = null;
-                DataConsentRequest response = api.getOrganizationConsentRequestById(requestId);
+        DataConsentRequest response = api.getOrganizationConsentRequestById(requestId);
         // TODO: test validations
     }
-    
+
 }

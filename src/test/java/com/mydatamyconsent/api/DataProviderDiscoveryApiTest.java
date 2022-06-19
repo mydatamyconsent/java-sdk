@@ -16,8 +16,9 @@ package com.mydatamyconsent.api;
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.DataProvider;
 import com.mydatamyconsent.model.DataProviderPaginatedList;
-import org.junit.Test;
-import org.junit.Ignore;
+import com.mydatamyconsent.model.Error;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,34 +28,27 @@ import java.util.Map;
 /**
  * API tests for DataProviderDiscoveryApi
  */
-@Ignore
+@Disabled
 public class DataProviderDiscoveryApiTest {
 
     private final DataProviderDiscoveryApi api = new DataProviderDiscoveryApi();
 
-    
     /**
      * Get a Data Provider details by provider id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getDataProviderByIdTest() throws ApiException {
         String providerId = null;
-                DataProvider response = api.getDataProviderById(providerId);
+        DataProvider response = api.getDataProviderById(providerId);
         // TODO: test validations
     }
-    
+
     /**
      * Discover all data providers in My Data My Consent by country and filters.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getDataProvidersTest() throws ApiException {
@@ -64,8 +58,8 @@ public class DataProviderDiscoveryApiTest {
         Integer pageNo = null;
         Integer pageSize = null;
         String countryIso2Code = null;
-                DataProviderPaginatedList response = api.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code);
+        DataProviderPaginatedList response = api.getDataProviders(accountType, documentType, organizationCategory, pageNo, pageSize, countryIso2Code);
         // TODO: test validations
     }
-    
+
 }

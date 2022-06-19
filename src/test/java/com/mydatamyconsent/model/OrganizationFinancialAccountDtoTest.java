@@ -19,15 +19,13 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.BankAccountType;
-import com.mydatamyconsent.model.FileType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.UUID;
 import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -138,14 +136,6 @@ public class OrganizationFinancialAccountDtoTest {
     @Test
     public void bankAccountProofUrlTest() {
         // TODO: test bankAccountProofUrl
-    }
-
-    /**
-     * Test the property 'fileType'
-     */
-    @Test
-    public void fileTypeTest() {
-        // TODO: test fileType
     }
 
 }

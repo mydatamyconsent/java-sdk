@@ -17,10 +17,11 @@ import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.model.CreateDataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreementPaginatedList;
+import com.mydatamyconsent.model.Error;
 import java.util.UUID;
 import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,102 +31,83 @@ import java.util.Map;
 /**
  * API tests for DataProcessingAgreementsApi
  */
-@Ignore
+@Disabled
 public class DataProcessingAgreementsApiTest {
 
     private final DataProcessingAgreementsApi api = new DataProcessingAgreementsApi();
 
-    
     /**
      * Create a data processing agreement.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void createDataProcessingAgreementTest() throws ApiException {
         CreateDataProcessingAgreement createDataProcessingAgreement = null;
-                DataProcessingAgreement response = api.createDataProcessingAgreement(createDataProcessingAgreement);
+        DataProcessingAgreement response = api.createDataProcessingAgreement(createDataProcessingAgreement);
         // TODO: test validations
     }
-    
+
     /**
      * Delete a data processing agreement. This will not delete a published or a agreement in use with consents.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void deleteDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                api.deleteDataProcessingAgreementById(id);
+        api.deleteDataProcessingAgreementById(id);
         // TODO: test validations
     }
-    
+
     /**
      * Get data processing agreement by id.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                DataProcessingAgreement response = api.getDataProcessingAgreementById(id);
+        DataProcessingAgreement response = api.getDataProcessingAgreementById(id);
         // TODO: test validations
     }
-    
+
     /**
      * Get paginated data processing agreements.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void getDataProcessingAgreementsTest() throws ApiException {
         Integer pageNo = null;
         Integer pageSize = null;
-                DataProcessingAgreementPaginatedList response = api.getDataProcessingAgreements(pageNo, pageSize);
+        DataProcessingAgreementPaginatedList response = api.getDataProcessingAgreements(pageNo, pageSize);
         // TODO: test validations
     }
-    
+
     /**
      * Terminate a data processing agreement.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void terminateDataProcessingAgreementByIdTest() throws ApiException {
         UUID id = null;
-                api.terminateDataProcessingAgreementById(id);
+        api.terminateDataProcessingAgreementById(id);
         // TODO: test validations
     }
-    
+
     /**
      * Update a data processing agreement.
      *
-     * 
-     *
-     * @throws ApiException
-     *          if the Api call fails
+     * @throws ApiException if the Api call fails
      */
     @Test
     public void updateDataProcessingAgreementTest() throws ApiException {
         UUID id = null;
         UpdateDataProcessingAgreement updateDataProcessingAgreement = null;
-                DataProcessingAgreement response = api.updateDataProcessingAgreement(id, updateDataProcessingAgreement);
+        DataProcessingAgreement response = api.updateDataProcessingAgreement(id, updateDataProcessingAgreement);
         // TODO: test validations
     }
-    
+
 }
