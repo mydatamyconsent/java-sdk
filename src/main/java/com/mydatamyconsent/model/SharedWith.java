@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
 /**
  * SharedWith
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-23T10:36:50.524054954Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-24T10:37:01.208178569Z[Etc/UTC]")
 public class SharedWith {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
