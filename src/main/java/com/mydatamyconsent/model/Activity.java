@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Activity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-24T10:37:01.208178569Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-25T10:34:56.758417009Z[Etc/UTC]")
 public class Activity {
   public static final String SERIALIZED_NAME_ACTOR_NAME = "actorName";
   @SerializedName(SERIALIZED_NAME_ACTOR_NAME)
