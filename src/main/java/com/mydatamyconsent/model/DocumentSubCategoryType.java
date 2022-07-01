@@ -59,8 +59,6 @@ public enum DocumentSubCategoryType {
   
   TAXES("Taxes"),
   
-  LICENCESANDCERTIFICATES("LicencesAndCertificates"),
-  
   CORPORATES("Corporates"),
   
   COMPETITIONS("Competitions"),
@@ -73,7 +71,11 @@ public enum DocumentSubCategoryType {
   
   LICENSES("Licenses"),
   
-  ORGANIZATIONIDS("OrganizationIds");
+  ORGANIZATIONIDS("OrganizationIds"),
+  
+  PERMITS("Permits"),
+  
+  LEGAL("Legal");
 
   private String value;
 

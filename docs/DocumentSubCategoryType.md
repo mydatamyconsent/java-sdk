@@ -35,8 +35,6 @@
 
 * `TAXES` (value: `"Taxes"`)
 
-* `LICENCESANDCERTIFICATES` (value: `"LicencesAndCertificates"`)
-
 * `CORPORATES` (value: `"Corporates"`)
 
 * `COMPETITIONS` (value: `"Competitions"`)
@@ -50,6 +48,10 @@
 * `LICENSES` (value: `"Licenses"`)
 
 * `ORGANIZATIONIDS` (value: `"OrganizationIds"`)
+
+* `PERMITS` (value: `"Permits"`)
+
+* `LEGAL` (value: `"Legal"`)
 
 
 

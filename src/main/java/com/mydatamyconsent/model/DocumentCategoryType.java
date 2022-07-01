@@ -39,7 +39,13 @@ public enum DocumentCategoryType {
   
   PROFESSIONAL("Professional"),
   
-  LICENCESANDCERTIFICATES("LicencesAndCertificates"),
+  LICENSES("Licenses"),
+  
+  PERMITS("Permits"),
+  
+  CERTIFICATES("Certificates"),
+  
+  LEGAL("Legal"),
   
   OTHERS("Others");
 
