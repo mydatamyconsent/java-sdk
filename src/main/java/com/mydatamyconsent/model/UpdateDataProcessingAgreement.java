@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
  * Update data processing agreement details.
  */
 @ApiModel(description = "Update data processing agreement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-01T10:36:28.308895544Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-02T10:34:58.858866071Z[Etc/UTC]")
 public class UpdateDataProcessingAgreement {
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
