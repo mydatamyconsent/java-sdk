@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * UserAccountFinancialTransactionsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-02T10:34:58.858866071Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-03T10:35:07.369157409Z[Etc/UTC]")
 public class UserAccountFinancialTransactionsDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
