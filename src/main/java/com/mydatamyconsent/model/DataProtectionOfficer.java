@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * DataProtectionOfficer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:37:55.435693968Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T10:37:39.146214643Z[Etc/UTC]")
 public class DataProtectionOfficer {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

@@ -52,7 +52,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Financial
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-05T10:37:55.435693968Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T10:37:39.146214643Z[Etc/UTC]")
 public class Financial {
   public static final String SERIALIZED_NAME_FIELD_NAME = "field_name";
   @SerializedName(SERIALIZED_NAME_FIELD_NAME)
