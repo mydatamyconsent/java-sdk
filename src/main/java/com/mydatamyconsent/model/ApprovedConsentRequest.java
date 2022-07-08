@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * ApprovedConsentRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-07T10:46:21.198004074Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-08T10:36:25.853691915Z[Etc/UTC]")
 public class ApprovedConsentRequest {
   public static final String SERIALIZED_NAME_LOGO_URL = "logoUrl";
   @SerializedName(SERIALIZED_NAME_LOGO_URL)
