@@ -56,7 +56,7 @@ import com.mydatamyconsent.JSON;
  * Issuable Document Type details.
  */
 @ApiModel(description = "Issuable Document Type details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-15T10:37:02.666312079Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-16T10:35:14.052195017Z[Etc/UTC]")
 public class DocumentType {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
