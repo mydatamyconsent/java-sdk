@@ -56,7 +56,7 @@ import com.mydatamyconsent.JSON;
 /**
  * IssuedDocumentDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-18T10:38:11.227982270Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-19T10:37:25.596947424Z[Etc/UTC]")
 public class IssuedDocumentDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
