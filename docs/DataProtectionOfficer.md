@@ -11,7 +11,6 @@
 |**email** | **String** |  |  [optional] |
 |**phoneNumber** | **String** |  |  [optional] |
 |**website** | **String** |  |  [optional] |
-|**postalAddress** | **String** |  |  [optional] |
 
 
 

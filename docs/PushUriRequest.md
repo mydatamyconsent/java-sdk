@@ -13,7 +13,7 @@
 |**ts** | **String** |  |  [optional] |
 |**txn** | **String** |  |  [optional] |
 |**orgId** | **String** |  |  [optional] |
-|**keyhash** | **String** |  |  [optional] |
+|**keyHash** | **String** |  |  [optional] |
 
 
 

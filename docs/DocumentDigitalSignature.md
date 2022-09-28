@@ -2,7 +2,7 @@
 
 # DocumentDigitalSignature
 
-Document digital signature.
+DocumentDigitalSignature : Document digital signature.
 
 ## Properties
 
@@ -11,8 +11,8 @@ Document digital signature.
 |**name** | **String** | Name. |  |
 |**issuedBy** | **String** | Signature issued by. |  |
 |**issuerName** | **String** | Signature issuer name. |  |
-|**validFromUtc** | **OffsetDateTime** | Signature valid from datatime in UTC timezone. |  |
-|**validToUtc** | **OffsetDateTime** | Signature valid to datatime in UTC timezone. |  |
+|**validFromUtc** | **String** | Signature valid from datatime in UTC timezone. |  |
+|**validToUtc** | **String** | Signature valid to datatime in UTC timezone. |  |
 
 
 

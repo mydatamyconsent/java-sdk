@@ -16,9 +16,7 @@
 |**helpLineNumber** | **String** |  |  [optional] |
 |**privacyPolicy** | **String** |  |  [optional] |
 |**termOfService** | **String** |  |  [optional] |
-|**dataProtectionOfficer** | [**DataProtectionOfficer**](DataProtectionOfficer.md) |  |  [optional] |
-|**supportedDocumentTypes** | **List&lt;String&gt;** |  |  |
-|**supportedAccountTypes** | **List&lt;String&gt;** |  |  [optional] |
+|**dataProtectionOfficer** | [**DataProtectionOfficer**](DataProtectionOfficer.md) |  |  |
 
 
 

@@ -5,7 +5,7 @@
 ## Enum
 
 
-* `PERSONALDETAILS` (value: `"PersonalDetails"`)
+* `IDENTITY` (value: `"Identity"`)
 
 * `DOCUMENTS` (value: `"Documents"`)
 

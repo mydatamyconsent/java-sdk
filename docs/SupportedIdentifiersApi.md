@@ -4,14 +4,12 @@ All URIs are relative to *https://api.mydatamyconsent.com*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getAllSupportedIdentifiers**](SupportedIdentifiersApi.md#getAllSupportedIdentifiers) | **GET** /v1/supported-identifiers/{countryIso2Code} | Get all supported identifiers by country. |
+| [**v1SupportedIdentifiersCountryIso2CodeGet**](SupportedIdentifiersApi.md#v1SupportedIdentifiersCountryIso2CodeGet) | **GET** /v1/supported-identifiers/{country_iso2_code} | Get all supported identifiers by country. |
 
 
-<a name="getAllSupportedIdentifiers"></a>
-# **getAllSupportedIdentifiers**
-> SupportedIdentifier getAllSupportedIdentifiers(countryIso2Code)
-
-Get all supported identifiers by country.
+<a name="v1SupportedIdentifiersCountryIso2CodeGet"></a>
+# **v1SupportedIdentifiersCountryIso2CodeGet**
+> SupportedIdentifier v1SupportedIdentifiersCountryIso2CodeGet(countryIso2Code)
 
 Get all supported identifiers by country.
 
@@ -21,6 +19,7 @@ Get all supported identifiers by country.
 import com.mydatamyconsent.ApiClient;
 import com.mydatamyconsent.ApiException;
 import com.mydatamyconsent.Configuration;
+import com.mydatamyconsent.auth.*;
 import com.mydatamyconsent.models.*;
 import com.mydatamyconsent.api.SupportedIdentifiersApi;
 
@@ -28,14 +27,18 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.mydatamyconsent.com");
+    
+    // Configure OAuth2 access token for authorization: OAuth2ClientCredentials
+    OAuth OAuth2ClientCredentials = (OAuth) defaultClient.getAuthentication("OAuth2ClientCredentials");
+    OAuth2ClientCredentials.setAccessToken("YOUR ACCESS TOKEN");
 
     SupportedIdentifiersApi apiInstance = new SupportedIdentifiersApi(defaultClient);
-    String countryIso2Code = "countryIso2Code_example"; // String | Country ISO 2 code.
+    String countryIso2Code = "countryIso2Code_example"; // String | 
     try {
-      SupportedIdentifier result = apiInstance.getAllSupportedIdentifiers(countryIso2Code);
+      SupportedIdentifier result = apiInstance.v1SupportedIdentifiersCountryIso2CodeGet(countryIso2Code);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling SupportedIdentifiersApi#getAllSupportedIdentifiers");
+      System.err.println("Exception when calling SupportedIdentifiersApi#v1SupportedIdentifiersCountryIso2CodeGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -49,7 +52,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **countryIso2Code** | **String**| Country ISO 2 code. | |
+| **countryIso2Code** | **String**|  | |
 
 ### Return type
 
@@ -57,7 +60,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[OAuth2ClientCredentials](../README.md#OAuth2ClientCredentials)
 
 ### HTTP request headers
 
@@ -67,7 +70,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **404** | Not Found |  -  |
-| **500** | Server Error |  -  |
+| **200** |  |  -  |
+| **400** |  |  -  |
+| **403** |  |  -  |
+| **404** |  |  -  |
+| **500** |  |  -  |
 

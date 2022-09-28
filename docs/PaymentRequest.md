@@ -7,12 +7,12 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**identifier** | **String** |  |  [optional] |
-|**items** | [**List&lt;BillPaymentOrderItem&gt;**](BillPaymentOrderItem.md) |  |  [optional] |
-|**currencyCode** | **String** |  |  [optional] |
+|**identifier** | **String** |  |  |
+|**items** | [**List&lt;PaymentOrderItem&gt;**](PaymentOrderItem.md) |  |  |
+|**currencyCode** | **String** |  |  |
 |**paymentUrl** | **String** |  |  [optional] |
-|**description** | **String** |  |  [optional] |
-|**dueByUtc** | **OffsetDateTime** |  |  [optional] |
+|**description** | **String** |  |  |
+|**dueByUtc** | **OffsetDateTime** |  |  |
 
 
 

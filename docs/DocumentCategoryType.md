@@ -17,8 +17,6 @@
 
 * `LICENSES` (value: `"Licenses"`)
 
-* `PERMITS` (value: `"Permits"`)
-
 * `CERTIFICATES` (value: `"Certificates"`)
 
 * `LEGAL` (value: `"Legal"`)

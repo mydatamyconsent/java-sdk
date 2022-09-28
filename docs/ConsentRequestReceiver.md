@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**countryIso2Code** | **String** |  |  |
-|**identifiers** | [**List&lt;StringStringKeyValuePair&gt;**](StringStringKeyValuePair.md) |  |  |
+|**identifiers** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  |  |
 |**identificationStrategy** | **IdentificationStrategy** |  |  |
 
 
