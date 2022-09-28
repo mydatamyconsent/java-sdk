@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Bond
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-28T06:29:03.968868645Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-28T10:40:15.463445362Z[Etc/UTC]")
 public class Bond {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
