@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * PushUriResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-02T10:38:14.500806478Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T10:39:38.768661804Z[Etc/UTC]")
 public class PushUriResponse {
   public static final String SERIALIZED_NAME_RESPONSE_STATUS = "responseStatus";
   @SerializedName(SERIALIZED_NAME_RESPONSE_STATUS)
