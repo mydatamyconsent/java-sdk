@@ -16,7 +16,7 @@ package com.mydatamyconsent.auth;
 /**
  * OAuth flows that are supported by this client
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-08T10:38:54.719686986Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-09T10:38:33.868597316Z[Etc/UTC]")
 public enum OAuthFlow {
     ACCESS_CODE, //called authorizationCode  in OpenAPI 3.0
     IMPLICIT,
