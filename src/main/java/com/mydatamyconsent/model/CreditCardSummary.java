@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * CreditCardSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-09T10:38:33.868597316Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-10T10:39:37.143815088Z[Etc/UTC]")
 public class CreditCardSummary {
   public static final String SERIALIZED_NAME_CREDIT_CARD_ID = "creditCardId";
   @SerializedName(SERIALIZED_NAME_CREDIT_CARD_ID)
