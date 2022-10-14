@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * BillPayment
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-13T10:40:00.684236988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-14T10:39:35.219469338Z[Etc/UTC]")
 public class BillPayment {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
