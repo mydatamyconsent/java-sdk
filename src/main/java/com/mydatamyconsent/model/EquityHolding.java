@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * EquityHolding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-19T10:41:33.636358948Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-20T10:40:29.767954844Z[Etc/UTC]")
 public class EquityHolding {
   public static final String SERIALIZED_NAME_ISSUER_NAME = "issuerName";
   @SerializedName(SERIALIZED_NAME_ISSUER_NAME)
