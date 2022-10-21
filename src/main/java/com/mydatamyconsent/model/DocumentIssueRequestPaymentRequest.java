@@ -51,7 +51,7 @@ import com.mydatamyconsent.JSON;
 /**
  * DocumentIssueRequestPaymentRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-20T10:40:29.767954844Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-21T10:39:56.153360401Z[Etc/UTC]")
 public class DocumentIssueRequestPaymentRequest {
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
