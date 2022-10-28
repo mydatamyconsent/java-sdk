@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Holders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-27T10:37:56.753208054Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-28T10:37:22.081217108Z[Etc/UTC]")
 public class Holders {
   public static final String SERIALIZED_NAME_HOLDER = "holder";
   @SerializedName(SERIALIZED_NAME_HOLDER)
