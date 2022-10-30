@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * MutualFundSummary
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-29T10:37:13.323102792Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-30T10:36:52.713720562Z[Etc/UTC]")
 public class MutualFundSummary {
   public static final String SERIALIZED_NAME_INVESTMENT = "investment";
   @SerializedName(SERIALIZED_NAME_INVESTMENT)

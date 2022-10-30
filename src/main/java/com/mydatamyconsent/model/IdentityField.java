@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
  * IdentityField : Identity field of Consent request template.
  */
 @ApiModel(description = "IdentityField : Identity field of Consent request template.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-29T10:37:13.323102792Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-30T10:36:52.713720562Z[Etc/UTC]")
 public class IdentityField {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
