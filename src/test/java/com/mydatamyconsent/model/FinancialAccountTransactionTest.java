@@ -18,32 +18,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.CreditCardTransactionType;
-import com.mydatamyconsent.model.FinancialAccountAifTransaction;
-import com.mydatamyconsent.model.FinancialAccountBillPaymentTransaction;
-import com.mydatamyconsent.model.FinancialAccountBondTransaction;
-import com.mydatamyconsent.model.FinancialAccountCISTransaction;
-import com.mydatamyconsent.model.FinancialAccountCertificateOfDepositTransaction;
-import com.mydatamyconsent.model.FinancialAccountCommercialPaperTransaction;
-import com.mydatamyconsent.model.FinancialAccountCreditCardTransaction;
-import com.mydatamyconsent.model.FinancialAccountDebentureTransaction;
-import com.mydatamyconsent.model.FinancialAccountDepositTransaction;
-import com.mydatamyconsent.model.FinancialAccountEpfTransaction;
 import com.mydatamyconsent.model.FinancialAccountEquityTransaction;
-import com.mydatamyconsent.model.FinancialAccountEtfTransaction;
-import com.mydatamyconsent.model.FinancialAccountGovtSecurityTransaction;
-import com.mydatamyconsent.model.FinancialAccountIdrTransaction;
-import com.mydatamyconsent.model.FinancialAccountInsurancePolicyTransaction;
-import com.mydatamyconsent.model.FinancialAccountInvitTransaction;
-import com.mydatamyconsent.model.FinancialAccountLoanTransaction;
 import com.mydatamyconsent.model.FinancialAccountMutualFundTransaction;
-import com.mydatamyconsent.model.FinancialAccountNpsTransaction;
-import com.mydatamyconsent.model.FinancialAccountPpfTransaction;
-import com.mydatamyconsent.model.FinancialAccountRecurringDepositTransaction;
-import com.mydatamyconsent.model.FinancialAccountReitTransaction;
 import com.mydatamyconsent.model.FinancialAccountSipTransaction;
-import com.mydatamyconsent.model.FinancialAccountTermDepositTransaction;
-import com.mydatamyconsent.model.FinancialAccountUlipTransaction;
 import com.mydatamyconsent.model.MutualFundFundType;
 import com.mydatamyconsent.model.MutualFundHoldingMode;
 import com.mydatamyconsent.model.MutualFundSchemeCategory;
@@ -86,70 +63,6 @@ public class FinancialAccountTransactionTest {
     @Test
     public void idTest() {
         // TODO: test id
-    }
-
-    /**
-     * Test the property 'txnType'
-     */
-    @Test
-    public void txnTypeTest() {
-        // TODO: test txnType
-    }
-
-    /**
-     * Test the property 'txnDate'
-     */
-    @Test
-    public void txnDateTest() {
-        // TODO: test txnDate
-    }
-
-    /**
-     * Test the property 'amount'
-     */
-    @Test
-    public void amountTest() {
-        // TODO: test amount
-    }
-
-    /**
-     * Test the property 'valueDate'
-     */
-    @Test
-    public void valueDateTest() {
-        // TODO: test valueDate
-    }
-
-    /**
-     * Test the property 'narration'
-     */
-    @Test
-    public void narrationTest() {
-        // TODO: test narration
-    }
-
-    /**
-     * Test the property 'statementDate'
-     */
-    @Test
-    public void statementDateTest() {
-        // TODO: test statementDate
-    }
-
-    /**
-     * Test the property 'mcc'
-     */
-    @Test
-    public void mccTest() {
-        // TODO: test mcc
-    }
-
-    /**
-     * Test the property 'maskedCardNumber'
-     */
-    @Test
-    public void maskedCardNumberTest() {
-        // TODO: test maskedCardNumber
     }
 
     /**
@@ -241,6 +154,14 @@ public class FinancialAccountTransactionTest {
     }
 
     /**
+     * Test the property 'amount'
+     */
+    @Test
+    public void amountTest() {
+        // TODO: test amount
+    }
+
+    /**
      * Test the property 'closingUnits'
      */
     @Test
@@ -310,6 +231,14 @@ public class FinancialAccountTransactionTest {
     @Test
     public void modeTest() {
         // TODO: test mode
+    }
+
+    /**
+     * Test the property 'narration'
+     */
+    @Test
+    public void narrationTest() {
+        // TODO: test narration
     }
 
 }

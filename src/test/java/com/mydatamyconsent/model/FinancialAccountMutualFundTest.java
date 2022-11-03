@@ -18,11 +18,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.MutualFundSummary;
-import com.mydatamyconsent.model.Profile;
+import com.mydatamyconsent.model.Holder;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -66,59 +66,131 @@ public class FinancialAccountMutualFundTest {
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'investmentValue'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void investmentValueTest() {
+        // TODO: test investmentValue
     }
 
     /**
-     * Test the property 'balance'
+     * Test the property 'currentValue'
      */
     @Test
-    public void balanceTest() {
-        // TODO: test balance
+    public void currentValueTest() {
+        // TODO: test currentValue
     }
 
     /**
-     * Test the property 'profile'
+     * Test the property 'currencyCode'
      */
     @Test
-    public void profileTest() {
-        // TODO: test profile
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
     }
 
     /**
-     * Test the property 'summary'
+     * Test the property 'amc'
      */
     @Test
-    public void summaryTest() {
-        // TODO: test summary
+    public void amcTest() {
+        // TODO: test amc
     }
 
     /**
-     * Test the property 'maskedAccountNumber'
+     * Test the property 'registrar'
      */
     @Test
-    public void maskedAccountNumberTest() {
-        // TODO: test maskedAccountNumber
+    public void registrarTest() {
+        // TODO: test registrar
     }
 
     /**
-     * Test the property 'linkedAccountRef'
+     * Test the property 'fundName'
      */
     @Test
-    public void linkedAccountRefTest() {
-        // TODO: test linkedAccountRef
+    public void fundNameTest() {
+        // TODO: test fundName
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'isin'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void isinTest() {
+        // TODO: test isin
+    }
+
+    /**
+     * Test the property 'folioNumber'
+     */
+    @Test
+    public void folioNumberTest() {
+        // TODO: test folioNumber
+    }
+
+    /**
+     * Test the property 'schemeCode'
+     */
+    @Test
+    public void schemeCodeTest() {
+        // TODO: test schemeCode
+    }
+
+    /**
+     * Test the property 'fundType'
+     */
+    @Test
+    public void fundTypeTest() {
+        // TODO: test fundType
+    }
+
+    /**
+     * Test the property 'fundCategory'
+     */
+    @Test
+    public void fundCategoryTest() {
+        // TODO: test fundCategory
+    }
+
+    /**
+     * Test the property 'units'
+     */
+    @Test
+    public void unitsTest() {
+        // TODO: test units
+    }
+
+    /**
+     * Test the property 'lienUnits'
+     */
+    @Test
+    public void lienUnitsTest() {
+        // TODO: test lienUnits
+    }
+
+    /**
+     * Test the property 'creationDate'
+     */
+    @Test
+    public void creationDateTest() {
+        // TODO: test creationDate
+    }
+
+    /**
+     * Test the property 'holder'
+     */
+    @Test
+    public void holderTest() {
+        // TODO: test holder
+    }
+
+    /**
+     * Test the property 'transactions'
+     */
+    @Test
+    public void transactionsTest() {
+        // TODO: test transactions
     }
 
 }

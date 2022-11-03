@@ -18,6 +18,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.Holder;
+import com.mydatamyconsent.model.SipInvestmentInformation;
+import com.mydatamyconsent.model.SipPlanInformation;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -56,19 +59,59 @@ public class SipTest {
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'investmentValue'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void investmentValueTest() {
+        // TODO: test investmentValue
     }
 
     /**
-     * Test the property 'amount'
+     * Test the property 'currentValue'
      */
     @Test
-    public void amountTest() {
-        // TODO: test amount
+    public void currentValueTest() {
+        // TODO: test currentValue
+    }
+
+    /**
+     * Test the property 'currencyCode'
+     */
+    @Test
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
+    }
+
+    /**
+     * Test the property 'planInfo'
+     */
+    @Test
+    public void planInfoTest() {
+        // TODO: test planInfo
+    }
+
+    /**
+     * Test the property 'investmentInfo'
+     */
+    @Test
+    public void investmentInfoTest() {
+        // TODO: test investmentInfo
+    }
+
+    /**
+     * Test the property 'holder'
+     */
+    @Test
+    public void holderTest() {
+        // TODO: test holder
+    }
+
+    /**
+     * Test the property 'transactions'
+     */
+    @Test
+    public void transactionsTest() {
+        // TODO: test transactions
     }
 
 }

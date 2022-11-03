@@ -9,13 +9,15 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **String** |  |  |
 |**name** | **String** |  |  |
-|**identifier** | **String** |  |  |
-|**balance** | **Double** |  |  |
-|**profile** | [**Profile**](Profile.md) |  |  |
-|**summary** | [**EquitySummary**](EquitySummary.md) |  |  |
-|**maskedAccountNumber** | **String** |  |  |
-|**linkedAccountRef** | **String** |  |  |
-|**version** | **Float** |  |  |
+|**issuerName** | **String** |  |  |
+|**exchange** | **String** |  |  |
+|**isin** | **String** |  |  |
+|**units** | **Long** |  |  |
+|**investmentValue** | **Double** |  |  |
+|**currentValue** | **Double** |  |  |
+|**currencyCode** | **String** |  |  |
+|**holder** | [**Holder**](Holder.md) |  |  |
+|**transactions** | **Boolean** |  |  |
 
 
 

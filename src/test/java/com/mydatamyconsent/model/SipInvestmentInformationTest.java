@@ -18,52 +18,50 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.Holder;
-import com.mydatamyconsent.model.SipInvestmentInformation;
-import com.mydatamyconsent.model.SipPlanInformation;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for FinancialAccountSip
+ * Model tests for SipInvestmentInformation
  */
-public class FinancialAccountSipTest {
-    private final FinancialAccountSip model = new FinancialAccountSip();
+public class SipInvestmentInformationTest {
+    private final SipInvestmentInformation model = new SipInvestmentInformation();
 
     /**
-     * Model tests for FinancialAccountSip
+     * Model tests for SipInvestmentInformation
      */
     @Test
-    public void testFinancialAccountSip() {
-        // TODO: test FinancialAccountSip
+    public void testSipInvestmentInformation() {
+        // TODO: test SipInvestmentInformation
     }
 
     /**
-     * Test the property 'type'
+     * Test the property 'instalmentAmount'
      */
     @Test
-    public void typeTest() {
-        // TODO: test type
+    public void instalmentAmountTest() {
+        // TODO: test instalmentAmount
     }
 
     /**
-     * Test the property 'id'
+     * Test the property 'frequency'
      */
     @Test
-    public void idTest() {
-        // TODO: test id
+    public void frequencyTest() {
+        // TODO: test frequency
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'completedInstalments'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void completedInstalmentsTest() {
+        // TODO: test completedInstalments
     }
 
     /**
@@ -75,51 +73,19 @@ public class FinancialAccountSipTest {
     }
 
     /**
-     * Test the property 'currentValue'
+     * Test the property 'lastInstalmentDate'
      */
     @Test
-    public void currentValueTest() {
-        // TODO: test currentValue
+    public void lastInstalmentDateTest() {
+        // TODO: test lastInstalmentDate
     }
 
     /**
-     * Test the property 'currencyCode'
+     * Test the property 'nextInstalmentDate'
      */
     @Test
-    public void currencyCodeTest() {
-        // TODO: test currencyCode
-    }
-
-    /**
-     * Test the property 'planInfo'
-     */
-    @Test
-    public void planInfoTest() {
-        // TODO: test planInfo
-    }
-
-    /**
-     * Test the property 'investmentInfo'
-     */
-    @Test
-    public void investmentInfoTest() {
-        // TODO: test investmentInfo
-    }
-
-    /**
-     * Test the property 'holder'
-     */
-    @Test
-    public void holderTest() {
-        // TODO: test holder
-    }
-
-    /**
-     * Test the property 'transactions'
-     */
-    @Test
-    public void transactionsTest() {
-        // TODO: test transactions
+    public void nextInstalmentDateTest() {
+        // TODO: test nextInstalmentDate
     }
 
 }

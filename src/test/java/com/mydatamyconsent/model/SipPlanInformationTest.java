@@ -27,65 +27,81 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for Holder
+ * Model tests for SipPlanInformation
  */
-public class HolderTest {
-    private final Holder model = new Holder();
+public class SipPlanInformationTest {
+    private final SipPlanInformation model = new SipPlanInformation();
 
     /**
-     * Model tests for Holder
+     * Model tests for SipPlanInformation
      */
     @Test
-    public void testHolder() {
-        // TODO: test Holder
+    public void testSipPlanInformation() {
+        // TODO: test SipPlanInformation
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'amc'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void amcTest() {
+        // TODO: test amc
     }
 
     /**
-     * Test the property 'dateOfBirth'
+     * Test the property 'registrar'
      */
     @Test
-    public void dateOfBirthTest() {
-        // TODO: test dateOfBirth
+    public void registrarTest() {
+        // TODO: test registrar
     }
 
     /**
-     * Test the property 'mobile'
+     * Test the property 'scheme'
      */
     @Test
-    public void mobileTest() {
-        // TODO: test mobile
+    public void schemeTest() {
+        // TODO: test scheme
     }
 
     /**
-     * Test the property 'dematId'
+     * Test the property 'isin'
      */
     @Test
-    public void dematIdTest() {
-        // TODO: test dematId
+    public void isinTest() {
+        // TODO: test isin
     }
 
     /**
-     * Test the property 'email'
+     * Test the property 'folioNumber'
      */
     @Test
-    public void emailTest() {
-        // TODO: test email
+    public void folioNumberTest() {
+        // TODO: test folioNumber
     }
 
     /**
-     * Test the property 'pan'
+     * Test the property 'nav'
      */
     @Test
-    public void panTest() {
-        // TODO: test pan
+    public void navTest() {
+        // TODO: test nav
+    }
+
+    /**
+     * Test the property 'dividendType'
+     */
+    @Test
+    public void dividendTypeTest() {
+        // TODO: test dividendType
+    }
+
+    /**
+     * Test the property 'creationDate'
+     */
+    @Test
+    public void creationDateTest() {
+        // TODO: test creationDate
     }
 
 }

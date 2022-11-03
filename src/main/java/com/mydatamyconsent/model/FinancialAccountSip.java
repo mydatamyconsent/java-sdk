@@ -20,6 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.Holder;
+import com.mydatamyconsent.model.SipInvestmentInformation;
+import com.mydatamyconsent.model.SipPlanInformation;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -47,7 +50,7 @@ import com.mydatamyconsent.JSON;
 /**
  * FinancialAccountSip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-02T10:38:00.757579505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T10:38:41.724399282Z[Etc/UTC]")
 public class FinancialAccountSip {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -61,13 +64,33 @@ public class FinancialAccountSip {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
-  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
-  private String identifier;
+  public static final String SERIALIZED_NAME_INVESTMENT_VALUE = "investment_value";
+  @SerializedName(SERIALIZED_NAME_INVESTMENT_VALUE)
+  private Double investmentValue;
 
-  public static final String SERIALIZED_NAME_AMOUNT = "amount";
-  @SerializedName(SERIALIZED_NAME_AMOUNT)
-  private Double amount;
+  public static final String SERIALIZED_NAME_CURRENT_VALUE = "current_value";
+  @SerializedName(SERIALIZED_NAME_CURRENT_VALUE)
+  private Double currentValue;
+
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
+
+  public static final String SERIALIZED_NAME_PLAN_INFO = "plan_info";
+  @SerializedName(SERIALIZED_NAME_PLAN_INFO)
+  private SipPlanInformation planInfo;
+
+  public static final String SERIALIZED_NAME_INVESTMENT_INFO = "investment_info";
+  @SerializedName(SERIALIZED_NAME_INVESTMENT_INFO)
+  private SipInvestmentInformation investmentInfo;
+
+  public static final String SERIALIZED_NAME_HOLDER = "holder";
+  @SerializedName(SERIALIZED_NAME_HOLDER)
+  private Holder holder;
+
+  public static final String SERIALIZED_NAME_TRANSACTIONS = "transactions";
+  @SerializedName(SERIALIZED_NAME_TRANSACTIONS)
+  private Boolean transactions;
 
   public FinancialAccountSip() {
   }
@@ -141,49 +164,164 @@ public class FinancialAccountSip {
   }
 
 
-  public FinancialAccountSip identifier(String identifier) {
+  public FinancialAccountSip investmentValue(Double investmentValue) {
     
-    this.identifier = identifier;
+    this.investmentValue = investmentValue;
     return this;
   }
 
    /**
-   * Get identifier
-   * @return identifier
+   * Get investmentValue
+   * @return investmentValue
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getIdentifier() {
-    return identifier;
+  public Double getInvestmentValue() {
+    return investmentValue;
   }
 
 
-  public void setIdentifier(String identifier) {
-    this.identifier = identifier;
+  public void setInvestmentValue(Double investmentValue) {
+    this.investmentValue = investmentValue;
   }
 
 
-  public FinancialAccountSip amount(Double amount) {
+  public FinancialAccountSip currentValue(Double currentValue) {
     
-    this.amount = amount;
+    this.currentValue = currentValue;
     return this;
   }
 
    /**
-   * Get amount
-   * @return amount
+   * Get currentValue
+   * @return currentValue
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getAmount() {
-    return amount;
+  public Double getCurrentValue() {
+    return currentValue;
   }
 
 
-  public void setAmount(Double amount) {
-    this.amount = amount;
+  public void setCurrentValue(Double currentValue) {
+    this.currentValue = currentValue;
+  }
+
+
+  public FinancialAccountSip currencyCode(String currencyCode) {
+    
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * Get currencyCode
+   * @return currencyCode
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+
+  public FinancialAccountSip planInfo(SipPlanInformation planInfo) {
+    
+    this.planInfo = planInfo;
+    return this;
+  }
+
+   /**
+   * Get planInfo
+   * @return planInfo
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public SipPlanInformation getPlanInfo() {
+    return planInfo;
+  }
+
+
+  public void setPlanInfo(SipPlanInformation planInfo) {
+    this.planInfo = planInfo;
+  }
+
+
+  public FinancialAccountSip investmentInfo(SipInvestmentInformation investmentInfo) {
+    
+    this.investmentInfo = investmentInfo;
+    return this;
+  }
+
+   /**
+   * Get investmentInfo
+   * @return investmentInfo
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public SipInvestmentInformation getInvestmentInfo() {
+    return investmentInfo;
+  }
+
+
+  public void setInvestmentInfo(SipInvestmentInformation investmentInfo) {
+    this.investmentInfo = investmentInfo;
+  }
+
+
+  public FinancialAccountSip holder(Holder holder) {
+    
+    this.holder = holder;
+    return this;
+  }
+
+   /**
+   * Get holder
+   * @return holder
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Holder getHolder() {
+    return holder;
+  }
+
+
+  public void setHolder(Holder holder) {
+    this.holder = holder;
+  }
+
+
+  public FinancialAccountSip transactions(Boolean transactions) {
+    
+    this.transactions = transactions;
+    return this;
+  }
+
+   /**
+   * Get transactions
+   * @return transactions
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getTransactions() {
+    return transactions;
+  }
+
+
+  public void setTransactions(Boolean transactions) {
+    this.transactions = transactions;
   }
 
 
@@ -200,13 +338,18 @@ public class FinancialAccountSip {
     return Objects.equals(this.type, financialAccountSip.type) &&
         Objects.equals(this.id, financialAccountSip.id) &&
         Objects.equals(this.name, financialAccountSip.name) &&
-        Objects.equals(this.identifier, financialAccountSip.identifier) &&
-        Objects.equals(this.amount, financialAccountSip.amount);
+        Objects.equals(this.investmentValue, financialAccountSip.investmentValue) &&
+        Objects.equals(this.currentValue, financialAccountSip.currentValue) &&
+        Objects.equals(this.currencyCode, financialAccountSip.currencyCode) &&
+        Objects.equals(this.planInfo, financialAccountSip.planInfo) &&
+        Objects.equals(this.investmentInfo, financialAccountSip.investmentInfo) &&
+        Objects.equals(this.holder, financialAccountSip.holder) &&
+        Objects.equals(this.transactions, financialAccountSip.transactions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, id, name, identifier, amount);
+    return Objects.hash(type, id, name, investmentValue, currentValue, currencyCode, planInfo, investmentInfo, holder, transactions);
   }
 
   @Override
@@ -216,8 +359,13 @@ public class FinancialAccountSip {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    investmentValue: ").append(toIndentedString(investmentValue)).append("\n");
+    sb.append("    currentValue: ").append(toIndentedString(currentValue)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    planInfo: ").append(toIndentedString(planInfo)).append("\n");
+    sb.append("    investmentInfo: ").append(toIndentedString(investmentInfo)).append("\n");
+    sb.append("    holder: ").append(toIndentedString(holder)).append("\n");
+    sb.append("    transactions: ").append(toIndentedString(transactions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -243,16 +391,26 @@ public class FinancialAccountSip {
     openapiFields.add("type");
     openapiFields.add("id");
     openapiFields.add("name");
-    openapiFields.add("identifier");
-    openapiFields.add("amount");
+    openapiFields.add("investment_value");
+    openapiFields.add("current_value");
+    openapiFields.add("currency_code");
+    openapiFields.add("plan_info");
+    openapiFields.add("investment_info");
+    openapiFields.add("holder");
+    openapiFields.add("transactions");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("id");
     openapiRequiredFields.add("name");
-    openapiRequiredFields.add("identifier");
-    openapiRequiredFields.add("amount");
+    openapiRequiredFields.add("investment_value");
+    openapiRequiredFields.add("current_value");
+    openapiRequiredFields.add("currency_code");
+    openapiRequiredFields.add("plan_info");
+    openapiRequiredFields.add("investment_info");
+    openapiRequiredFields.add("holder");
+    openapiRequiredFields.add("transactions");
   }
 
  /**
@@ -293,8 +451,20 @@ public class FinancialAccountSip {
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if ((jsonObj.get("identifier") != null && !jsonObj.get("identifier").isJsonNull()) && !jsonObj.get("identifier").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("identifier").toString()));
+      if ((jsonObj.get("currency_code") != null && !jsonObj.get("currency_code").isJsonNull()) && !jsonObj.get("currency_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_code").toString()));
+      }
+      // validate the optional field `plan_info`
+      if (jsonObj.get("plan_info") != null && !jsonObj.get("plan_info").isJsonNull()) {
+        SipPlanInformation.validateJsonObject(jsonObj.getAsJsonObject("plan_info"));
+      }
+      // validate the optional field `investment_info`
+      if (jsonObj.get("investment_info") != null && !jsonObj.get("investment_info").isJsonNull()) {
+        SipInvestmentInformation.validateJsonObject(jsonObj.getAsJsonObject("investment_info"));
+      }
+      // validate the optional field `holder`
+      if (jsonObj.get("holder") != null && !jsonObj.get("holder").isJsonNull()) {
+        Holder.validateJsonObject(jsonObj.getAsJsonObject("holder"));
       }
   }
 

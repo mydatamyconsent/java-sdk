@@ -9,13 +9,22 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **String** |  |  |
 |**name** | **String** |  |  |
-|**identifier** | **String** |  |  |
-|**balance** | **Double** |  |  |
-|**profile** | [**Profile**](Profile.md) |  |  |
-|**summary** | [**MutualFundSummary**](MutualFundSummary.md) |  |  |
-|**maskedAccountNumber** | **String** |  |  |
-|**linkedAccountRef** | **String** |  |  |
-|**version** | **Float** |  |  |
+|**investmentValue** | **Double** |  |  |
+|**currentValue** | **Double** |  |  |
+|**currencyCode** | **String** |  |  |
+|**amc** | **String** |  |  [optional] |
+|**registrar** | **String** |  |  [optional] |
+|**fundName** | **String** |  |  |
+|**isin** | **String** |  |  |
+|**folioNumber** | **String** |  |  |
+|**schemeCode** | **String** |  |  [optional] |
+|**fundType** | **String** |  |  [optional] |
+|**fundCategory** | **String** |  |  [optional] |
+|**units** | **Double** |  |  |
+|**lienUnits** | **String** |  |  [optional] |
+|**creationDate** | **OffsetDateTime** |  |  [optional] |
+|**holder** | [**Holder**](Holder.md) |  |  |
+|**transactions** | **Boolean** |  |  |
 
 
 

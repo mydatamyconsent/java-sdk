@@ -18,8 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.EquitySummary;
-import com.mydatamyconsent.model.Profile;
+import com.mydatamyconsent.model.Holder;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -66,59 +65,75 @@ public class FinancialAccountEquityTest {
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'issuerName'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void issuerNameTest() {
+        // TODO: test issuerName
     }
 
     /**
-     * Test the property 'balance'
+     * Test the property 'exchange'
      */
     @Test
-    public void balanceTest() {
-        // TODO: test balance
+    public void exchangeTest() {
+        // TODO: test exchange
     }
 
     /**
-     * Test the property 'profile'
+     * Test the property 'isin'
      */
     @Test
-    public void profileTest() {
-        // TODO: test profile
+    public void isinTest() {
+        // TODO: test isin
     }
 
     /**
-     * Test the property 'summary'
+     * Test the property 'units'
      */
     @Test
-    public void summaryTest() {
-        // TODO: test summary
+    public void unitsTest() {
+        // TODO: test units
     }
 
     /**
-     * Test the property 'maskedAccountNumber'
+     * Test the property 'investmentValue'
      */
     @Test
-    public void maskedAccountNumberTest() {
-        // TODO: test maskedAccountNumber
+    public void investmentValueTest() {
+        // TODO: test investmentValue
     }
 
     /**
-     * Test the property 'linkedAccountRef'
+     * Test the property 'currentValue'
      */
     @Test
-    public void linkedAccountRefTest() {
-        // TODO: test linkedAccountRef
+    public void currentValueTest() {
+        // TODO: test currentValue
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'currencyCode'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
+    }
+
+    /**
+     * Test the property 'holder'
+     */
+    @Test
+    public void holderTest() {
+        // TODO: test holder
+    }
+
+    /**
+     * Test the property 'transactions'
+     */
+    @Test
+    public void transactionsTest() {
+        // TODO: test transactions
     }
 
 }

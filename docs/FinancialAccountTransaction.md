@@ -9,14 +9,6 @@
 |------------ | ------------- | ------------- | -------------|
 |**type** | **String** |  |  |
 |**id** | **String** |  |  |
-|**txnType** | **CreditCardTransactionType** |  |  |
-|**txnDate** | **OffsetDateTime** |  |  |
-|**amount** | **String** |  |  |
-|**valueDate** | **OffsetDateTime** |  |  |
-|**narration** | **String** |  |  |
-|**statementDate** | **OffsetDateTime** |  |  |
-|**mcc** | **String** |  |  |
-|**maskedCardNumber** | **String** |  |  |
 |**amc** | **String** |  |  |
 |**registrar** | **String** |  |  |
 |**schemeCode** | **String** |  |  |
@@ -28,6 +20,7 @@
 |**schemeTypes** | **MutualFundSchemeType** |  |  |
 |**schemeCategory** | **MutualFundSchemeCategory** |  |  |
 |**ucc** | **String** |  |  |
+|**amount** | **String** |  |  |
 |**closingUnits** | **String** |  |  |
 |**lienUnits** | **String** |  |  |
 |**nav** | **String** |  |  |
@@ -37,6 +30,7 @@
 |**lockinFlag** | **String** |  |  |
 |**lockinDays** | **String** |  |  |
 |**mode** | **MutualFundHoldingMode** |  |  |
+|**narration** | **String** |  |  |
 
 
 

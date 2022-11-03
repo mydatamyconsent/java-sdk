@@ -18,36 +18,16 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.EquitySummary;
-import com.mydatamyconsent.model.FinancialAccountAif;
-import com.mydatamyconsent.model.FinancialAccountBillPayment;
-import com.mydatamyconsent.model.FinancialAccountBond;
-import com.mydatamyconsent.model.FinancialAccountCIS;
-import com.mydatamyconsent.model.FinancialAccountCertificateOfDeposit;
-import com.mydatamyconsent.model.FinancialAccountCommercialPaper;
-import com.mydatamyconsent.model.FinancialAccountCreditCard;
-import com.mydatamyconsent.model.FinancialAccountDebenture;
-import com.mydatamyconsent.model.FinancialAccountDeposit;
-import com.mydatamyconsent.model.FinancialAccountEpf;
 import com.mydatamyconsent.model.FinancialAccountEquity;
-import com.mydatamyconsent.model.FinancialAccountEtf;
-import com.mydatamyconsent.model.FinancialAccountGovtSecurity;
-import com.mydatamyconsent.model.FinancialAccountIdr;
-import com.mydatamyconsent.model.FinancialAccountInsurancePolicy;
-import com.mydatamyconsent.model.FinancialAccountInvit;
-import com.mydatamyconsent.model.FinancialAccountLoan;
 import com.mydatamyconsent.model.FinancialAccountMutualFund;
-import com.mydatamyconsent.model.FinancialAccountNps;
-import com.mydatamyconsent.model.FinancialAccountPpf;
-import com.mydatamyconsent.model.FinancialAccountRecurringDeposit;
-import com.mydatamyconsent.model.FinancialAccountReit;
 import com.mydatamyconsent.model.FinancialAccountSip;
-import com.mydatamyconsent.model.FinancialAccountTermDeposit;
-import com.mydatamyconsent.model.FinancialAccountUlip;
-import com.mydatamyconsent.model.Profile;
+import com.mydatamyconsent.model.Holder;
+import com.mydatamyconsent.model.SipInvestmentInformation;
+import com.mydatamyconsent.model.SipPlanInformation;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -91,67 +71,163 @@ public class FinancialAccountTest {
     }
 
     /**
-     * Test the property 'identifier'
+     * Test the property 'issuerName'
      */
     @Test
-    public void identifierTest() {
-        // TODO: test identifier
+    public void issuerNameTest() {
+        // TODO: test issuerName
     }
 
     /**
-     * Test the property 'balance'
+     * Test the property 'exchange'
      */
     @Test
-    public void balanceTest() {
-        // TODO: test balance
+    public void exchangeTest() {
+        // TODO: test exchange
     }
 
     /**
-     * Test the property 'profile'
+     * Test the property 'isin'
      */
     @Test
-    public void profileTest() {
-        // TODO: test profile
+    public void isinTest() {
+        // TODO: test isin
     }
 
     /**
-     * Test the property 'summary'
+     * Test the property 'units'
      */
     @Test
-    public void summaryTest() {
-        // TODO: test summary
+    public void unitsTest() {
+        // TODO: test units
     }
 
     /**
-     * Test the property 'maskedAccountNumber'
+     * Test the property 'investmentValue'
      */
     @Test
-    public void maskedAccountNumberTest() {
-        // TODO: test maskedAccountNumber
+    public void investmentValueTest() {
+        // TODO: test investmentValue
     }
 
     /**
-     * Test the property 'linkedAccountRef'
+     * Test the property 'currentValue'
      */
     @Test
-    public void linkedAccountRefTest() {
-        // TODO: test linkedAccountRef
+    public void currentValueTest() {
+        // TODO: test currentValue
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'currencyCode'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
     }
 
     /**
-     * Test the property 'amount'
+     * Test the property 'holder'
      */
     @Test
-    public void amountTest() {
-        // TODO: test amount
+    public void holderTest() {
+        // TODO: test holder
+    }
+
+    /**
+     * Test the property 'transactions'
+     */
+    @Test
+    public void transactionsTest() {
+        // TODO: test transactions
+    }
+
+    /**
+     * Test the property 'amc'
+     */
+    @Test
+    public void amcTest() {
+        // TODO: test amc
+    }
+
+    /**
+     * Test the property 'registrar'
+     */
+    @Test
+    public void registrarTest() {
+        // TODO: test registrar
+    }
+
+    /**
+     * Test the property 'fundName'
+     */
+    @Test
+    public void fundNameTest() {
+        // TODO: test fundName
+    }
+
+    /**
+     * Test the property 'folioNumber'
+     */
+    @Test
+    public void folioNumberTest() {
+        // TODO: test folioNumber
+    }
+
+    /**
+     * Test the property 'schemeCode'
+     */
+    @Test
+    public void schemeCodeTest() {
+        // TODO: test schemeCode
+    }
+
+    /**
+     * Test the property 'fundType'
+     */
+    @Test
+    public void fundTypeTest() {
+        // TODO: test fundType
+    }
+
+    /**
+     * Test the property 'fundCategory'
+     */
+    @Test
+    public void fundCategoryTest() {
+        // TODO: test fundCategory
+    }
+
+    /**
+     * Test the property 'lienUnits'
+     */
+    @Test
+    public void lienUnitsTest() {
+        // TODO: test lienUnits
+    }
+
+    /**
+     * Test the property 'creationDate'
+     */
+    @Test
+    public void creationDateTest() {
+        // TODO: test creationDate
+    }
+
+    /**
+     * Test the property 'planInfo'
+     */
+    @Test
+    public void planInfoTest() {
+        // TODO: test planInfo
+    }
+
+    /**
+     * Test the property 'investmentInfo'
+     */
+    @Test
+    public void investmentInfoTest() {
+        // TODO: test investmentInfo
     }
 
 }

@@ -9,8 +9,13 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **String** |  |  |
 |**name** | **String** |  |  |
-|**identifier** | **String** |  |  |
-|**amount** | **Double** |  |  |
+|**investmentValue** | **Double** |  |  |
+|**currentValue** | **Double** |  |  |
+|**currencyCode** | **String** |  |  |
+|**planInfo** | [**SipPlanInformation**](SipPlanInformation.md) |  |  |
+|**investmentInfo** | [**SipInvestmentInformation**](SipInvestmentInformation.md) |  |  |
+|**holder** | [**Holder**](Holder.md) |  |  |
+|**transactions** | **Boolean** |  |  |
 
 
 

@@ -65,6 +65,22 @@ public class ConsentedMedicalRecordTest {
     }
 
     /**
+     * Test the property 'issuerId'
+     */
+    @Test
+    public void issuerIdTest() {
+        // TODO: test issuerId
+    }
+
+    /**
+     * Test the property 'issuerName'
+     */
+    @Test
+    public void issuerNameTest() {
+        // TODO: test issuerName
+    }
+
+    /**
      * Test the property 'category'
      */
     @Test

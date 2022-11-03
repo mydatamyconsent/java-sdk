@@ -20,8 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.EquitySummary;
-import com.mydatamyconsent.model.Profile;
+import com.mydatamyconsent.model.Holder;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -49,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Equity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-02T10:38:00.757579505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T10:38:41.724399282Z[Etc/UTC]")
 public class Equity {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -59,33 +58,41 @@ public class Equity {
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
-  @SerializedName(SERIALIZED_NAME_IDENTIFIER)
-  private String identifier;
+  public static final String SERIALIZED_NAME_ISSUER_NAME = "issuer_name";
+  @SerializedName(SERIALIZED_NAME_ISSUER_NAME)
+  private String issuerName;
 
-  public static final String SERIALIZED_NAME_BALANCE = "balance";
-  @SerializedName(SERIALIZED_NAME_BALANCE)
-  private Double balance;
+  public static final String SERIALIZED_NAME_EXCHANGE = "exchange";
+  @SerializedName(SERIALIZED_NAME_EXCHANGE)
+  private String exchange;
 
-  public static final String SERIALIZED_NAME_PROFILE = "profile";
-  @SerializedName(SERIALIZED_NAME_PROFILE)
-  private Profile profile;
+  public static final String SERIALIZED_NAME_ISIN = "isin";
+  @SerializedName(SERIALIZED_NAME_ISIN)
+  private String isin;
 
-  public static final String SERIALIZED_NAME_SUMMARY = "summary";
-  @SerializedName(SERIALIZED_NAME_SUMMARY)
-  private EquitySummary summary;
+  public static final String SERIALIZED_NAME_UNITS = "units";
+  @SerializedName(SERIALIZED_NAME_UNITS)
+  private Long units;
 
-  public static final String SERIALIZED_NAME_MASKED_ACCOUNT_NUMBER = "masked_account_number";
-  @SerializedName(SERIALIZED_NAME_MASKED_ACCOUNT_NUMBER)
-  private String maskedAccountNumber;
+  public static final String SERIALIZED_NAME_INVESTMENT_VALUE = "investment_value";
+  @SerializedName(SERIALIZED_NAME_INVESTMENT_VALUE)
+  private Double investmentValue;
 
-  public static final String SERIALIZED_NAME_LINKED_ACCOUNT_REF = "linked_account_ref";
-  @SerializedName(SERIALIZED_NAME_LINKED_ACCOUNT_REF)
-  private String linkedAccountRef;
+  public static final String SERIALIZED_NAME_CURRENT_VALUE = "current_value";
+  @SerializedName(SERIALIZED_NAME_CURRENT_VALUE)
+  private Double currentValue;
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private Float version;
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
+
+  public static final String SERIALIZED_NAME_HOLDER = "holder";
+  @SerializedName(SERIALIZED_NAME_HOLDER)
+  private Holder holder;
+
+  public static final String SERIALIZED_NAME_TRANSACTIONS = "transactions";
+  @SerializedName(SERIALIZED_NAME_TRANSACTIONS)
+  private Boolean transactions;
 
   public Equity() {
   }
@@ -136,164 +143,210 @@ public class Equity {
   }
 
 
-  public Equity identifier(String identifier) {
+  public Equity issuerName(String issuerName) {
     
-    this.identifier = identifier;
+    this.issuerName = issuerName;
     return this;
   }
 
    /**
-   * Get identifier
-   * @return identifier
+   * Get issuerName
+   * @return issuerName
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getIdentifier() {
-    return identifier;
+  public String getIssuerName() {
+    return issuerName;
   }
 
 
-  public void setIdentifier(String identifier) {
-    this.identifier = identifier;
+  public void setIssuerName(String issuerName) {
+    this.issuerName = issuerName;
   }
 
 
-  public Equity balance(Double balance) {
+  public Equity exchange(String exchange) {
     
-    this.balance = balance;
+    this.exchange = exchange;
     return this;
   }
 
    /**
-   * Get balance
-   * @return balance
+   * Get exchange
+   * @return exchange
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Double getBalance() {
-    return balance;
+  public String getExchange() {
+    return exchange;
   }
 
 
-  public void setBalance(Double balance) {
-    this.balance = balance;
+  public void setExchange(String exchange) {
+    this.exchange = exchange;
   }
 
 
-  public Equity profile(Profile profile) {
+  public Equity isin(String isin) {
     
-    this.profile = profile;
+    this.isin = isin;
     return this;
   }
 
    /**
-   * Get profile
-   * @return profile
+   * Get isin
+   * @return isin
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Profile getProfile() {
-    return profile;
+  public String getIsin() {
+    return isin;
   }
 
 
-  public void setProfile(Profile profile) {
-    this.profile = profile;
+  public void setIsin(String isin) {
+    this.isin = isin;
   }
 
 
-  public Equity summary(EquitySummary summary) {
+  public Equity units(Long units) {
     
-    this.summary = summary;
+    this.units = units;
     return this;
   }
 
    /**
-   * Get summary
-   * @return summary
+   * Get units
+   * @return units
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public EquitySummary getSummary() {
-    return summary;
+  public Long getUnits() {
+    return units;
   }
 
 
-  public void setSummary(EquitySummary summary) {
-    this.summary = summary;
+  public void setUnits(Long units) {
+    this.units = units;
   }
 
 
-  public Equity maskedAccountNumber(String maskedAccountNumber) {
+  public Equity investmentValue(Double investmentValue) {
     
-    this.maskedAccountNumber = maskedAccountNumber;
+    this.investmentValue = investmentValue;
     return this;
   }
 
    /**
-   * Get maskedAccountNumber
-   * @return maskedAccountNumber
+   * Get investmentValue
+   * @return investmentValue
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getMaskedAccountNumber() {
-    return maskedAccountNumber;
+  public Double getInvestmentValue() {
+    return investmentValue;
   }
 
 
-  public void setMaskedAccountNumber(String maskedAccountNumber) {
-    this.maskedAccountNumber = maskedAccountNumber;
+  public void setInvestmentValue(Double investmentValue) {
+    this.investmentValue = investmentValue;
   }
 
 
-  public Equity linkedAccountRef(String linkedAccountRef) {
+  public Equity currentValue(Double currentValue) {
     
-    this.linkedAccountRef = linkedAccountRef;
+    this.currentValue = currentValue;
     return this;
   }
 
    /**
-   * Get linkedAccountRef
-   * @return linkedAccountRef
+   * Get currentValue
+   * @return currentValue
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getLinkedAccountRef() {
-    return linkedAccountRef;
+  public Double getCurrentValue() {
+    return currentValue;
   }
 
 
-  public void setLinkedAccountRef(String linkedAccountRef) {
-    this.linkedAccountRef = linkedAccountRef;
+  public void setCurrentValue(Double currentValue) {
+    this.currentValue = currentValue;
   }
 
 
-  public Equity version(Float version) {
+  public Equity currencyCode(String currencyCode) {
     
-    this.version = version;
+    this.currencyCode = currencyCode;
     return this;
   }
 
    /**
-   * Get version
-   * @return version
+   * Get currencyCode
+   * @return currencyCode
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public Float getVersion() {
-    return version;
+  public String getCurrencyCode() {
+    return currencyCode;
   }
 
 
-  public void setVersion(Float version) {
-    this.version = version;
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+
+  public Equity holder(Holder holder) {
+    
+    this.holder = holder;
+    return this;
+  }
+
+   /**
+   * Get holder
+   * @return holder
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Holder getHolder() {
+    return holder;
+  }
+
+
+  public void setHolder(Holder holder) {
+    this.holder = holder;
+  }
+
+
+  public Equity transactions(Boolean transactions) {
+    
+    this.transactions = transactions;
+    return this;
+  }
+
+   /**
+   * Get transactions
+   * @return transactions
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Boolean getTransactions() {
+    return transactions;
+  }
+
+
+  public void setTransactions(Boolean transactions) {
+    this.transactions = transactions;
   }
 
 
@@ -309,18 +362,20 @@ public class Equity {
     Equity equity = (Equity) o;
     return Objects.equals(this.id, equity.id) &&
         Objects.equals(this.name, equity.name) &&
-        Objects.equals(this.identifier, equity.identifier) &&
-        Objects.equals(this.balance, equity.balance) &&
-        Objects.equals(this.profile, equity.profile) &&
-        Objects.equals(this.summary, equity.summary) &&
-        Objects.equals(this.maskedAccountNumber, equity.maskedAccountNumber) &&
-        Objects.equals(this.linkedAccountRef, equity.linkedAccountRef) &&
-        Objects.equals(this.version, equity.version);
+        Objects.equals(this.issuerName, equity.issuerName) &&
+        Objects.equals(this.exchange, equity.exchange) &&
+        Objects.equals(this.isin, equity.isin) &&
+        Objects.equals(this.units, equity.units) &&
+        Objects.equals(this.investmentValue, equity.investmentValue) &&
+        Objects.equals(this.currentValue, equity.currentValue) &&
+        Objects.equals(this.currencyCode, equity.currencyCode) &&
+        Objects.equals(this.holder, equity.holder) &&
+        Objects.equals(this.transactions, equity.transactions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, identifier, balance, profile, summary, maskedAccountNumber, linkedAccountRef, version);
+    return Objects.hash(id, name, issuerName, exchange, isin, units, investmentValue, currentValue, currencyCode, holder, transactions);
   }
 
   @Override
@@ -329,13 +384,15 @@ public class Equity {
     sb.append("class Equity {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
-    sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
-    sb.append("    profile: ").append(toIndentedString(profile)).append("\n");
-    sb.append("    summary: ").append(toIndentedString(summary)).append("\n");
-    sb.append("    maskedAccountNumber: ").append(toIndentedString(maskedAccountNumber)).append("\n");
-    sb.append("    linkedAccountRef: ").append(toIndentedString(linkedAccountRef)).append("\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    issuerName: ").append(toIndentedString(issuerName)).append("\n");
+    sb.append("    exchange: ").append(toIndentedString(exchange)).append("\n");
+    sb.append("    isin: ").append(toIndentedString(isin)).append("\n");
+    sb.append("    units: ").append(toIndentedString(units)).append("\n");
+    sb.append("    investmentValue: ").append(toIndentedString(investmentValue)).append("\n");
+    sb.append("    currentValue: ").append(toIndentedString(currentValue)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    holder: ").append(toIndentedString(holder)).append("\n");
+    sb.append("    transactions: ").append(toIndentedString(transactions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -360,25 +417,29 @@ public class Equity {
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
     openapiFields.add("name");
-    openapiFields.add("identifier");
-    openapiFields.add("balance");
-    openapiFields.add("profile");
-    openapiFields.add("summary");
-    openapiFields.add("masked_account_number");
-    openapiFields.add("linked_account_ref");
-    openapiFields.add("version");
+    openapiFields.add("issuer_name");
+    openapiFields.add("exchange");
+    openapiFields.add("isin");
+    openapiFields.add("units");
+    openapiFields.add("investment_value");
+    openapiFields.add("current_value");
+    openapiFields.add("currency_code");
+    openapiFields.add("holder");
+    openapiFields.add("transactions");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("id");
     openapiRequiredFields.add("name");
-    openapiRequiredFields.add("identifier");
-    openapiRequiredFields.add("balance");
-    openapiRequiredFields.add("profile");
-    openapiRequiredFields.add("summary");
-    openapiRequiredFields.add("masked_account_number");
-    openapiRequiredFields.add("linked_account_ref");
-    openapiRequiredFields.add("version");
+    openapiRequiredFields.add("issuer_name");
+    openapiRequiredFields.add("exchange");
+    openapiRequiredFields.add("isin");
+    openapiRequiredFields.add("units");
+    openapiRequiredFields.add("investment_value");
+    openapiRequiredFields.add("current_value");
+    openapiRequiredFields.add("currency_code");
+    openapiRequiredFields.add("holder");
+    openapiRequiredFields.add("transactions");
   }
 
  /**
@@ -416,22 +477,21 @@ public class Equity {
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if ((jsonObj.get("identifier") != null && !jsonObj.get("identifier").isJsonNull()) && !jsonObj.get("identifier").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("identifier").toString()));
+      if ((jsonObj.get("issuer_name") != null && !jsonObj.get("issuer_name").isJsonNull()) && !jsonObj.get("issuer_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `issuer_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuer_name").toString()));
       }
-      // validate the optional field `profile`
-      if (jsonObj.get("profile") != null && !jsonObj.get("profile").isJsonNull()) {
-        Profile.validateJsonObject(jsonObj.getAsJsonObject("profile"));
+      if ((jsonObj.get("exchange") != null && !jsonObj.get("exchange").isJsonNull()) && !jsonObj.get("exchange").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `exchange` to be a primitive type in the JSON string but got `%s`", jsonObj.get("exchange").toString()));
       }
-      // validate the optional field `summary`
-      if (jsonObj.get("summary") != null && !jsonObj.get("summary").isJsonNull()) {
-        EquitySummary.validateJsonObject(jsonObj.getAsJsonObject("summary"));
+      if ((jsonObj.get("isin") != null && !jsonObj.get("isin").isJsonNull()) && !jsonObj.get("isin").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `isin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isin").toString()));
       }
-      if ((jsonObj.get("masked_account_number") != null && !jsonObj.get("masked_account_number").isJsonNull()) && !jsonObj.get("masked_account_number").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `masked_account_number` to be a primitive type in the JSON string but got `%s`", jsonObj.get("masked_account_number").toString()));
+      if ((jsonObj.get("currency_code") != null && !jsonObj.get("currency_code").isJsonNull()) && !jsonObj.get("currency_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_code").toString()));
       }
-      if ((jsonObj.get("linked_account_ref") != null && !jsonObj.get("linked_account_ref").isJsonNull()) && !jsonObj.get("linked_account_ref").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `linked_account_ref` to be a primitive type in the JSON string but got `%s`", jsonObj.get("linked_account_ref").toString()));
+      // validate the optional field `holder`
+      if (jsonObj.get("holder") != null && !jsonObj.get("holder").isJsonNull()) {
+        Holder.validateJsonObject(jsonObj.getAsJsonObject("holder"));
       }
   }
 

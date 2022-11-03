@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
  * ConsentedMedicalRecord : Consented medical record details.
  */
 @ApiModel(description = "ConsentedMedicalRecord : Consented medical record details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-02T10:38:00.757579505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T10:38:41.724399282Z[Etc/UTC]")
 public class ConsentedMedicalRecord {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,6 +62,14 @@ public class ConsentedMedicalRecord {
   public static final String SERIALIZED_NAME_FIELD_SLUG = "fieldSlug";
   @SerializedName(SERIALIZED_NAME_FIELD_SLUG)
   private String fieldSlug;
+
+  public static final String SERIALIZED_NAME_ISSUER_ID = "issuerId";
+  @SerializedName(SERIALIZED_NAME_ISSUER_ID)
+  private String issuerId;
+
+  public static final String SERIALIZED_NAME_ISSUER_NAME = "issuerName";
+  @SerializedName(SERIALIZED_NAME_ISSUER_NAME)
+  private String issuerName;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
@@ -147,6 +155,52 @@ public class ConsentedMedicalRecord {
   }
 
 
+  public ConsentedMedicalRecord issuerId(String issuerId) {
+    
+    this.issuerId = issuerId;
+    return this;
+  }
+
+   /**
+   * Issuer id.
+   * @return issuerId
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Issuer id.")
+
+  public String getIssuerId() {
+    return issuerId;
+  }
+
+
+  public void setIssuerId(String issuerId) {
+    this.issuerId = issuerId;
+  }
+
+
+  public ConsentedMedicalRecord issuerName(String issuerName) {
+    
+    this.issuerName = issuerName;
+    return this;
+  }
+
+   /**
+   * Issuer name.
+   * @return issuerName
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "Issuer name.")
+
+  public String getIssuerName() {
+    return issuerName;
+  }
+
+
+  public void setIssuerName(String issuerName) {
+    this.issuerName = issuerName;
+  }
+
+
   public ConsentedMedicalRecord category(String category) {
     
     this.category = category;
@@ -229,6 +283,8 @@ public class ConsentedMedicalRecord {
     return Objects.equals(this.id, consentedMedicalRecord.id) &&
         Objects.equals(this.fieldTitle, consentedMedicalRecord.fieldTitle) &&
         Objects.equals(this.fieldSlug, consentedMedicalRecord.fieldSlug) &&
+        Objects.equals(this.issuerId, consentedMedicalRecord.issuerId) &&
+        Objects.equals(this.issuerName, consentedMedicalRecord.issuerName) &&
         Objects.equals(this.category, consentedMedicalRecord.category) &&
         Objects.equals(this.toDate, consentedMedicalRecord.toDate) &&
         Objects.equals(this.fromDate, consentedMedicalRecord.fromDate);
@@ -236,7 +292,7 @@ public class ConsentedMedicalRecord {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, fieldTitle, fieldSlug, category, toDate, fromDate);
+    return Objects.hash(id, fieldTitle, fieldSlug, issuerId, issuerName, category, toDate, fromDate);
   }
 
   @Override
@@ -246,6 +302,8 @@ public class ConsentedMedicalRecord {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    fieldTitle: ").append(toIndentedString(fieldTitle)).append("\n");
     sb.append("    fieldSlug: ").append(toIndentedString(fieldSlug)).append("\n");
+    sb.append("    issuerId: ").append(toIndentedString(issuerId)).append("\n");
+    sb.append("    issuerName: ").append(toIndentedString(issuerName)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    toDate: ").append(toIndentedString(toDate)).append("\n");
     sb.append("    fromDate: ").append(toIndentedString(fromDate)).append("\n");
@@ -274,6 +332,8 @@ public class ConsentedMedicalRecord {
     openapiFields.add("id");
     openapiFields.add("fieldTitle");
     openapiFields.add("fieldSlug");
+    openapiFields.add("issuerId");
+    openapiFields.add("issuerName");
     openapiFields.add("category");
     openapiFields.add("toDate");
     openapiFields.add("fromDate");
@@ -282,6 +342,8 @@ public class ConsentedMedicalRecord {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("fieldTitle");
     openapiRequiredFields.add("fieldSlug");
+    openapiRequiredFields.add("issuerId");
+    openapiRequiredFields.add("issuerName");
     openapiRequiredFields.add("category");
   }
 
@@ -322,6 +384,12 @@ public class ConsentedMedicalRecord {
       }
       if ((jsonObj.get("fieldSlug") != null && !jsonObj.get("fieldSlug").isJsonNull()) && !jsonObj.get("fieldSlug").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `fieldSlug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fieldSlug").toString()));
+      }
+      if ((jsonObj.get("issuerId") != null && !jsonObj.get("issuerId").isJsonNull()) && !jsonObj.get("issuerId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `issuerId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuerId").toString()));
+      }
+      if ((jsonObj.get("issuerName") != null && !jsonObj.get("issuerName").isJsonNull()) && !jsonObj.get("issuerName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `issuerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuerName").toString()));
       }
       if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));

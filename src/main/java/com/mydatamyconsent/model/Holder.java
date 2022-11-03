@@ -20,7 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.HoldingNominee;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -49,35 +48,23 @@ import com.mydatamyconsent.JSON;
 /**
  * Holder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-02T10:38:00.757579505Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-03T10:38:41.724399282Z[Etc/UTC]")
 public class Holder {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  public static final String SERIALIZED_NAME_DOB = "dob";
-  @SerializedName(SERIALIZED_NAME_DOB)
-  private OffsetDateTime dob;
+  public static final String SERIALIZED_NAME_DATE_OF_BIRTH = "date_of_birth";
+  @SerializedName(SERIALIZED_NAME_DATE_OF_BIRTH)
+  private OffsetDateTime dateOfBirth;
 
   public static final String SERIALIZED_NAME_MOBILE = "mobile";
   @SerializedName(SERIALIZED_NAME_MOBILE)
   private String mobile;
 
-  public static final String SERIALIZED_NAME_NOMINEE = "nominee";
-  @SerializedName(SERIALIZED_NAME_NOMINEE)
-  private HoldingNominee nominee;
-
-  public static final String SERIALIZED_NAME_DEMAT_ID = "dematId";
+  public static final String SERIALIZED_NAME_DEMAT_ID = "demat_id";
   @SerializedName(SERIALIZED_NAME_DEMAT_ID)
   private String dematId;
-
-  public static final String SERIALIZED_NAME_LANDLINE = "landline";
-  @SerializedName(SERIALIZED_NAME_LANDLINE)
-  private String landline;
-
-  public static final String SERIALIZED_NAME_ADDRESS = "address";
-  @SerializedName(SERIALIZED_NAME_ADDRESS)
-  private String address;
 
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -86,10 +73,6 @@ public class Holder {
   public static final String SERIALIZED_NAME_PAN = "pan";
   @SerializedName(SERIALIZED_NAME_PAN)
   private String pan;
-
-  public static final String SERIALIZED_NAME_CKYC_COMPLIANCE = "ckycCompliance";
-  @SerializedName(SERIALIZED_NAME_CKYC_COMPLIANCE)
-  private Boolean ckycCompliance;
 
   public Holder() {
   }
@@ -117,26 +100,26 @@ public class Holder {
   }
 
 
-  public Holder dob(OffsetDateTime dob) {
+  public Holder dateOfBirth(OffsetDateTime dateOfBirth) {
     
-    this.dob = dob;
+    this.dateOfBirth = dateOfBirth;
     return this;
   }
 
    /**
-   * Get dob
-   * @return dob
+   * Get dateOfBirth
+   * @return dateOfBirth
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public OffsetDateTime getDob() {
-    return dob;
+  public OffsetDateTime getDateOfBirth() {
+    return dateOfBirth;
   }
 
 
-  public void setDob(OffsetDateTime dob) {
-    this.dob = dob;
+  public void setDateOfBirth(OffsetDateTime dateOfBirth) {
+    this.dateOfBirth = dateOfBirth;
   }
 
 
@@ -163,29 +146,6 @@ public class Holder {
   }
 
 
-  public Holder nominee(HoldingNominee nominee) {
-    
-    this.nominee = nominee;
-    return this;
-  }
-
-   /**
-   * Get nominee
-   * @return nominee
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public HoldingNominee getNominee() {
-    return nominee;
-  }
-
-
-  public void setNominee(HoldingNominee nominee) {
-    this.nominee = nominee;
-  }
-
-
   public Holder dematId(String dematId) {
     
     this.dematId = dematId;
@@ -206,52 +166,6 @@ public class Holder {
 
   public void setDematId(String dematId) {
     this.dematId = dematId;
-  }
-
-
-  public Holder landline(String landline) {
-    
-    this.landline = landline;
-    return this;
-  }
-
-   /**
-   * Get landline
-   * @return landline
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getLandline() {
-    return landline;
-  }
-
-
-  public void setLandline(String landline) {
-    this.landline = landline;
-  }
-
-
-  public Holder address(String address) {
-    
-    this.address = address;
-    return this;
-  }
-
-   /**
-   * Get address
-   * @return address
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getAddress() {
-    return address;
-  }
-
-
-  public void setAddress(String address) {
-    this.address = address;
   }
 
 
@@ -301,29 +215,6 @@ public class Holder {
   }
 
 
-  public Holder ckycCompliance(Boolean ckycCompliance) {
-    
-    this.ckycCompliance = ckycCompliance;
-    return this;
-  }
-
-   /**
-   * Get ckycCompliance
-   * @return ckycCompliance
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public Boolean getCkycCompliance() {
-    return ckycCompliance;
-  }
-
-
-  public void setCkycCompliance(Boolean ckycCompliance) {
-    this.ckycCompliance = ckycCompliance;
-  }
-
-
 
   @Override
   public boolean equals(Object o) {
@@ -335,20 +226,16 @@ public class Holder {
     }
     Holder holder = (Holder) o;
     return Objects.equals(this.name, holder.name) &&
-        Objects.equals(this.dob, holder.dob) &&
+        Objects.equals(this.dateOfBirth, holder.dateOfBirth) &&
         Objects.equals(this.mobile, holder.mobile) &&
-        Objects.equals(this.nominee, holder.nominee) &&
         Objects.equals(this.dematId, holder.dematId) &&
-        Objects.equals(this.landline, holder.landline) &&
-        Objects.equals(this.address, holder.address) &&
         Objects.equals(this.email, holder.email) &&
-        Objects.equals(this.pan, holder.pan) &&
-        Objects.equals(this.ckycCompliance, holder.ckycCompliance);
+        Objects.equals(this.pan, holder.pan);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, dob, mobile, nominee, dematId, landline, address, email, pan, ckycCompliance);
+    return Objects.hash(name, dateOfBirth, mobile, dematId, email, pan);
   }
 
   @Override
@@ -356,15 +243,11 @@ public class Holder {
     StringBuilder sb = new StringBuilder();
     sb.append("class Holder {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    dob: ").append(toIndentedString(dob)).append("\n");
+    sb.append("    dateOfBirth: ").append(toIndentedString(dateOfBirth)).append("\n");
     sb.append("    mobile: ").append(toIndentedString(mobile)).append("\n");
-    sb.append("    nominee: ").append(toIndentedString(nominee)).append("\n");
     sb.append("    dematId: ").append(toIndentedString(dematId)).append("\n");
-    sb.append("    landline: ").append(toIndentedString(landline)).append("\n");
-    sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    pan: ").append(toIndentedString(pan)).append("\n");
-    sb.append("    ckycCompliance: ").append(toIndentedString(ckycCompliance)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -388,22 +271,17 @@ public class Holder {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("name");
-    openapiFields.add("dob");
+    openapiFields.add("date_of_birth");
     openapiFields.add("mobile");
-    openapiFields.add("nominee");
-    openapiFields.add("dematId");
-    openapiFields.add("landline");
-    openapiFields.add("address");
+    openapiFields.add("demat_id");
     openapiFields.add("email");
     openapiFields.add("pan");
-    openapiFields.add("ckycCompliance");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("name");
-    openapiRequiredFields.add("dematId");
+    openapiRequiredFields.add("demat_id");
     openapiRequiredFields.add("email");
-    openapiRequiredFields.add("ckycCompliance");
   }
 
  /**
@@ -441,14 +319,8 @@ public class Holder {
       if ((jsonObj.get("mobile") != null && !jsonObj.get("mobile").isJsonNull()) && !jsonObj.get("mobile").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `mobile` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mobile").toString()));
       }
-      if ((jsonObj.get("dematId") != null && !jsonObj.get("dematId").isJsonNull()) && !jsonObj.get("dematId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dematId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dematId").toString()));
-      }
-      if ((jsonObj.get("landline") != null && !jsonObj.get("landline").isJsonNull()) && !jsonObj.get("landline").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `landline` to be a primitive type in the JSON string but got `%s`", jsonObj.get("landline").toString()));
-      }
-      if ((jsonObj.get("address") != null && !jsonObj.get("address").isJsonNull()) && !jsonObj.get("address").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `address` to be a primitive type in the JSON string but got `%s`", jsonObj.get("address").toString()));
+      if ((jsonObj.get("demat_id") != null && !jsonObj.get("demat_id").isJsonNull()) && !jsonObj.get("demat_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `demat_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("demat_id").toString()));
       }
       if ((jsonObj.get("email") != null && !jsonObj.get("email").isJsonNull()) && !jsonObj.get("email").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
