@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
 /**
  * PaginatedListOfFinancialAccountTransactions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-09T10:37:03.509896236Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-10T10:37:00.558459667Z[Etc/UTC]")
 public class PaginatedListOfFinancialAccountTransactions {
   public static final String SERIALIZED_NAME_PAGE_NO = "pageNo";
   @SerializedName(SERIALIZED_NAME_PAGE_NO)
