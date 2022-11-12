@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * Equity
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-11T10:38:17.582271508Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-12T10:35:50.279394364Z[Etc/UTC]")
 public class Equity {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
