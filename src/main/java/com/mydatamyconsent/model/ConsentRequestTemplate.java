@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * ConsentRequestTemplate : Consent request template.
  */
 @ApiModel(description = "ConsentRequestTemplate : Consent request template.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-20T10:35:08.419530832Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-21T10:37:04.868211635Z[Etc/UTC]")
 public class ConsentRequestTemplate {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
