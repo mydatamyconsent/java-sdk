@@ -51,7 +51,7 @@ import com.mydatamyconsent.JSON;
 /**
  * PaymentRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-21T10:37:04.868211635Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-22T10:36:00.118561430Z[Etc/UTC]")
 public class PaymentRequest {
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
