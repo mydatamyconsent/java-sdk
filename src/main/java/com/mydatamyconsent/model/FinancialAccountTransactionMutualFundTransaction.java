@@ -53,10 +53,10 @@ import java.util.Set;
 import com.mydatamyconsent.JSON;
 
 /**
- * FinancialAccountMutualFundTransaction
+ * FinancialAccountTransactionMutualFundTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-30T10:35:25.825720195Z[Etc/UTC]")
-public class FinancialAccountMutualFundTransaction {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-01T10:35:37.203825455Z[Etc/UTC]")
+public class FinancialAccountTransactionMutualFundTransaction {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private MutualFundTransactionType type;
@@ -153,10 +153,10 @@ public class FinancialAccountMutualFundTransaction {
   @SerializedName(SERIALIZED_NAME_NARRATION)
   private String narration;
 
-  public FinancialAccountMutualFundTransaction() {
+  public FinancialAccountTransactionMutualFundTransaction() {
   }
 
-  public FinancialAccountMutualFundTransaction type(MutualFundTransactionType type) {
+  public FinancialAccountTransactionMutualFundTransaction type(MutualFundTransactionType type) {
     
     this.type = type;
     return this;
@@ -179,7 +179,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction id(String id) {
+  public FinancialAccountTransactionMutualFundTransaction id(String id) {
     
     this.id = id;
     return this;
@@ -202,7 +202,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction amc(String amc) {
+  public FinancialAccountTransactionMutualFundTransaction amc(String amc) {
     
     this.amc = amc;
     return this;
@@ -225,7 +225,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction registrar(String registrar) {
+  public FinancialAccountTransactionMutualFundTransaction registrar(String registrar) {
     
     this.registrar = registrar;
     return this;
@@ -248,7 +248,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction schemeCode(String schemeCode) {
+  public FinancialAccountTransactionMutualFundTransaction schemeCode(String schemeCode) {
     
     this.schemeCode = schemeCode;
     return this;
@@ -271,7 +271,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction schemePlan(MutualFundSchemePlan schemePlan) {
+  public FinancialAccountTransactionMutualFundTransaction schemePlan(MutualFundSchemePlan schemePlan) {
     
     this.schemePlan = schemePlan;
     return this;
@@ -294,7 +294,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction isin(String isin) {
+  public FinancialAccountTransactionMutualFundTransaction isin(String isin) {
     
     this.isin = isin;
     return this;
@@ -317,7 +317,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction amfiCode(String amfiCode) {
+  public FinancialAccountTransactionMutualFundTransaction amfiCode(String amfiCode) {
     
     this.amfiCode = amfiCode;
     return this;
@@ -340,7 +340,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction fundType(MutualFundFundType fundType) {
+  public FinancialAccountTransactionMutualFundTransaction fundType(MutualFundFundType fundType) {
     
     this.fundType = fundType;
     return this;
@@ -363,7 +363,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction schemeOption(MutualFundSchemeOption schemeOption) {
+  public FinancialAccountTransactionMutualFundTransaction schemeOption(MutualFundSchemeOption schemeOption) {
     
     this.schemeOption = schemeOption;
     return this;
@@ -386,7 +386,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction schemeTypes(MutualFundSchemeType schemeTypes) {
+  public FinancialAccountTransactionMutualFundTransaction schemeTypes(MutualFundSchemeType schemeTypes) {
     
     this.schemeTypes = schemeTypes;
     return this;
@@ -409,7 +409,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction schemeCategory(MutualFundSchemeCategory schemeCategory) {
+  public FinancialAccountTransactionMutualFundTransaction schemeCategory(MutualFundSchemeCategory schemeCategory) {
     
     this.schemeCategory = schemeCategory;
     return this;
@@ -432,7 +432,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction ucc(String ucc) {
+  public FinancialAccountTransactionMutualFundTransaction ucc(String ucc) {
     
     this.ucc = ucc;
     return this;
@@ -455,7 +455,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction amount(String amount) {
+  public FinancialAccountTransactionMutualFundTransaction amount(String amount) {
     
     this.amount = amount;
     return this;
@@ -478,7 +478,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction closingUnits(String closingUnits) {
+  public FinancialAccountTransactionMutualFundTransaction closingUnits(String closingUnits) {
     
     this.closingUnits = closingUnits;
     return this;
@@ -501,7 +501,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction lienUnits(String lienUnits) {
+  public FinancialAccountTransactionMutualFundTransaction lienUnits(String lienUnits) {
     
     this.lienUnits = lienUnits;
     return this;
@@ -524,7 +524,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction nav(String nav) {
+  public FinancialAccountTransactionMutualFundTransaction nav(String nav) {
     
     this.nav = nav;
     return this;
@@ -547,7 +547,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction navDate(OffsetDateTime navDate) {
+  public FinancialAccountTransactionMutualFundTransaction navDate(OffsetDateTime navDate) {
     
     this.navDate = navDate;
     return this;
@@ -570,7 +570,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction orderDate(OffsetDateTime orderDate) {
+  public FinancialAccountTransactionMutualFundTransaction orderDate(OffsetDateTime orderDate) {
     
     this.orderDate = orderDate;
     return this;
@@ -593,7 +593,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction executionDate(OffsetDateTime executionDate) {
+  public FinancialAccountTransactionMutualFundTransaction executionDate(OffsetDateTime executionDate) {
     
     this.executionDate = executionDate;
     return this;
@@ -616,7 +616,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction lockinFlag(String lockinFlag) {
+  public FinancialAccountTransactionMutualFundTransaction lockinFlag(String lockinFlag) {
     
     this.lockinFlag = lockinFlag;
     return this;
@@ -639,7 +639,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction lockinDays(String lockinDays) {
+  public FinancialAccountTransactionMutualFundTransaction lockinDays(String lockinDays) {
     
     this.lockinDays = lockinDays;
     return this;
@@ -662,7 +662,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction mode(MutualFundHoldingMode mode) {
+  public FinancialAccountTransactionMutualFundTransaction mode(MutualFundHoldingMode mode) {
     
     this.mode = mode;
     return this;
@@ -685,7 +685,7 @@ public class FinancialAccountMutualFundTransaction {
   }
 
 
-  public FinancialAccountMutualFundTransaction narration(String narration) {
+  public FinancialAccountTransactionMutualFundTransaction narration(String narration) {
     
     this.narration = narration;
     return this;
@@ -717,31 +717,31 @@ public class FinancialAccountMutualFundTransaction {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FinancialAccountMutualFundTransaction financialAccountMutualFundTransaction = (FinancialAccountMutualFundTransaction) o;
-    return Objects.equals(this.type, financialAccountMutualFundTransaction.type) &&
-        Objects.equals(this.id, financialAccountMutualFundTransaction.id) &&
-        Objects.equals(this.amc, financialAccountMutualFundTransaction.amc) &&
-        Objects.equals(this.registrar, financialAccountMutualFundTransaction.registrar) &&
-        Objects.equals(this.schemeCode, financialAccountMutualFundTransaction.schemeCode) &&
-        Objects.equals(this.schemePlan, financialAccountMutualFundTransaction.schemePlan) &&
-        Objects.equals(this.isin, financialAccountMutualFundTransaction.isin) &&
-        Objects.equals(this.amfiCode, financialAccountMutualFundTransaction.amfiCode) &&
-        Objects.equals(this.fundType, financialAccountMutualFundTransaction.fundType) &&
-        Objects.equals(this.schemeOption, financialAccountMutualFundTransaction.schemeOption) &&
-        Objects.equals(this.schemeTypes, financialAccountMutualFundTransaction.schemeTypes) &&
-        Objects.equals(this.schemeCategory, financialAccountMutualFundTransaction.schemeCategory) &&
-        Objects.equals(this.ucc, financialAccountMutualFundTransaction.ucc) &&
-        Objects.equals(this.amount, financialAccountMutualFundTransaction.amount) &&
-        Objects.equals(this.closingUnits, financialAccountMutualFundTransaction.closingUnits) &&
-        Objects.equals(this.lienUnits, financialAccountMutualFundTransaction.lienUnits) &&
-        Objects.equals(this.nav, financialAccountMutualFundTransaction.nav) &&
-        Objects.equals(this.navDate, financialAccountMutualFundTransaction.navDate) &&
-        Objects.equals(this.orderDate, financialAccountMutualFundTransaction.orderDate) &&
-        Objects.equals(this.executionDate, financialAccountMutualFundTransaction.executionDate) &&
-        Objects.equals(this.lockinFlag, financialAccountMutualFundTransaction.lockinFlag) &&
-        Objects.equals(this.lockinDays, financialAccountMutualFundTransaction.lockinDays) &&
-        Objects.equals(this.mode, financialAccountMutualFundTransaction.mode) &&
-        Objects.equals(this.narration, financialAccountMutualFundTransaction.narration);
+    FinancialAccountTransactionMutualFundTransaction financialAccountTransactionMutualFundTransaction = (FinancialAccountTransactionMutualFundTransaction) o;
+    return Objects.equals(this.type, financialAccountTransactionMutualFundTransaction.type) &&
+        Objects.equals(this.id, financialAccountTransactionMutualFundTransaction.id) &&
+        Objects.equals(this.amc, financialAccountTransactionMutualFundTransaction.amc) &&
+        Objects.equals(this.registrar, financialAccountTransactionMutualFundTransaction.registrar) &&
+        Objects.equals(this.schemeCode, financialAccountTransactionMutualFundTransaction.schemeCode) &&
+        Objects.equals(this.schemePlan, financialAccountTransactionMutualFundTransaction.schemePlan) &&
+        Objects.equals(this.isin, financialAccountTransactionMutualFundTransaction.isin) &&
+        Objects.equals(this.amfiCode, financialAccountTransactionMutualFundTransaction.amfiCode) &&
+        Objects.equals(this.fundType, financialAccountTransactionMutualFundTransaction.fundType) &&
+        Objects.equals(this.schemeOption, financialAccountTransactionMutualFundTransaction.schemeOption) &&
+        Objects.equals(this.schemeTypes, financialAccountTransactionMutualFundTransaction.schemeTypes) &&
+        Objects.equals(this.schemeCategory, financialAccountTransactionMutualFundTransaction.schemeCategory) &&
+        Objects.equals(this.ucc, financialAccountTransactionMutualFundTransaction.ucc) &&
+        Objects.equals(this.amount, financialAccountTransactionMutualFundTransaction.amount) &&
+        Objects.equals(this.closingUnits, financialAccountTransactionMutualFundTransaction.closingUnits) &&
+        Objects.equals(this.lienUnits, financialAccountTransactionMutualFundTransaction.lienUnits) &&
+        Objects.equals(this.nav, financialAccountTransactionMutualFundTransaction.nav) &&
+        Objects.equals(this.navDate, financialAccountTransactionMutualFundTransaction.navDate) &&
+        Objects.equals(this.orderDate, financialAccountTransactionMutualFundTransaction.orderDate) &&
+        Objects.equals(this.executionDate, financialAccountTransactionMutualFundTransaction.executionDate) &&
+        Objects.equals(this.lockinFlag, financialAccountTransactionMutualFundTransaction.lockinFlag) &&
+        Objects.equals(this.lockinDays, financialAccountTransactionMutualFundTransaction.lockinDays) &&
+        Objects.equals(this.mode, financialAccountTransactionMutualFundTransaction.mode) &&
+        Objects.equals(this.narration, financialAccountTransactionMutualFundTransaction.narration);
   }
 
   @Override
@@ -752,7 +752,7 @@ public class FinancialAccountMutualFundTransaction {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FinancialAccountMutualFundTransaction {\n");
+    sb.append("class FinancialAccountTransactionMutualFundTransaction {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    amc: ").append(toIndentedString(amc)).append("\n");
@@ -856,27 +856,27 @@ public class FinancialAccountMutualFundTransaction {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountMutualFundTransaction
+  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountTransactionMutualFundTransaction
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (FinancialAccountMutualFundTransaction.openapiRequiredFields.isEmpty()) {
+        if (FinancialAccountTransactionMutualFundTransaction.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountMutualFundTransaction is not found in the empty JSON string", FinancialAccountMutualFundTransaction.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountTransactionMutualFundTransaction is not found in the empty JSON string", FinancialAccountTransactionMutualFundTransaction.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!FinancialAccountMutualFundTransaction.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountMutualFundTransaction` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!FinancialAccountTransactionMutualFundTransaction.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountTransactionMutualFundTransaction` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FinancialAccountMutualFundTransaction.openapiRequiredFields) {
+      for (String requiredField : FinancialAccountTransactionMutualFundTransaction.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -929,22 +929,22 @@ public class FinancialAccountMutualFundTransaction {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FinancialAccountMutualFundTransaction.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FinancialAccountMutualFundTransaction' and its subtypes
+       if (!FinancialAccountTransactionMutualFundTransaction.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FinancialAccountTransactionMutualFundTransaction' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FinancialAccountMutualFundTransaction> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountMutualFundTransaction.class));
+       final TypeAdapter<FinancialAccountTransactionMutualFundTransaction> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionMutualFundTransaction.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountMutualFundTransaction>() {
+       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountTransactionMutualFundTransaction>() {
            @Override
-           public void write(JsonWriter out, FinancialAccountMutualFundTransaction value) throws IOException {
+           public void write(JsonWriter out, FinancialAccountTransactionMutualFundTransaction value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FinancialAccountMutualFundTransaction read(JsonReader in) throws IOException {
+           public FinancialAccountTransactionMutualFundTransaction read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -955,18 +955,18 @@ public class FinancialAccountMutualFundTransaction {
   }
 
  /**
-  * Create an instance of FinancialAccountMutualFundTransaction given an JSON string
+  * Create an instance of FinancialAccountTransactionMutualFundTransaction given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FinancialAccountMutualFundTransaction
-  * @throws IOException if the JSON string is invalid with respect to FinancialAccountMutualFundTransaction
+  * @return An instance of FinancialAccountTransactionMutualFundTransaction
+  * @throws IOException if the JSON string is invalid with respect to FinancialAccountTransactionMutualFundTransaction
   */
-  public static FinancialAccountMutualFundTransaction fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FinancialAccountMutualFundTransaction.class);
+  public static FinancialAccountTransactionMutualFundTransaction fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FinancialAccountTransactionMutualFundTransaction.class);
   }
 
  /**
-  * Convert an instance of FinancialAccountMutualFundTransaction to an JSON string
+  * Convert an instance of FinancialAccountTransactionMutualFundTransaction to an JSON string
   *
   * @return JSON string
   */

@@ -26,17 +26,17 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for FinancialAccountSipTransactionAllOf
+ * Model tests for FinancialAccountTransactionMutualFundTransactionAllOf
  */
-public class FinancialAccountSipTransactionAllOfTest {
-    private final FinancialAccountSipTransactionAllOf model = new FinancialAccountSipTransactionAllOf();
+public class FinancialAccountTransactionMutualFundTransactionAllOfTest {
+    private final FinancialAccountTransactionMutualFundTransactionAllOf model = new FinancialAccountTransactionMutualFundTransactionAllOf();
 
     /**
-     * Model tests for FinancialAccountSipTransactionAllOf
+     * Model tests for FinancialAccountTransactionMutualFundTransactionAllOf
      */
     @Test
-    public void testFinancialAccountSipTransactionAllOf() {
-        // TODO: test FinancialAccountSipTransactionAllOf
+    public void testFinancialAccountTransactionMutualFundTransactionAllOf() {
+        // TODO: test FinancialAccountTransactionMutualFundTransactionAllOf
     }
 
     /**

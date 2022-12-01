@@ -26,17 +26,17 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for FinancialAccountEquityTransaction
+ * Model tests for FinancialAccountTransactionEquityTransactionAllOf
  */
-public class FinancialAccountEquityTransactionTest {
-    private final FinancialAccountEquityTransaction model = new FinancialAccountEquityTransaction();
+public class FinancialAccountTransactionEquityTransactionAllOfTest {
+    private final FinancialAccountTransactionEquityTransactionAllOf model = new FinancialAccountTransactionEquityTransactionAllOf();
 
     /**
-     * Model tests for FinancialAccountEquityTransaction
+     * Model tests for FinancialAccountTransactionEquityTransactionAllOf
      */
     @Test
-    public void testFinancialAccountEquityTransaction() {
-        // TODO: test FinancialAccountEquityTransaction
+    public void testFinancialAccountTransactionEquityTransactionAllOf() {
+        // TODO: test FinancialAccountTransactionEquityTransactionAllOf
     }
 
     /**
@@ -45,14 +45,6 @@ public class FinancialAccountEquityTransactionTest {
     @Test
     public void typeTest() {
         // TODO: test type
-    }
-
-    /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
     }
 
 }

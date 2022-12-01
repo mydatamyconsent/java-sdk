@@ -72,7 +72,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -141,7 +141,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -210,7 +210,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -280,8 +280,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -350,7 +350,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -418,8 +418,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=utf-8
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -128,7 +128,7 @@ public class DataProcessingAgreementsApi {
         }
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -269,7 +269,7 @@ public class DataProcessingAgreementsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -412,7 +412,7 @@ public class DataProcessingAgreementsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -556,7 +556,7 @@ public class DataProcessingAgreementsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -564,7 +564,7 @@ public class DataProcessingAgreementsApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -707,7 +707,7 @@ public class DataProcessingAgreementsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -849,7 +849,7 @@ public class DataProcessingAgreementsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -857,7 +857,7 @@ public class DataProcessingAgreementsApi {
         }
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/json; charset=utf-8"
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {

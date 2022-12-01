@@ -1,6 +1,6 @@
 
 
-# FinancialAccountMutualFundTransaction
+# FinancialAccountTransactionMutualFundTransaction
 
 
 ## Properties

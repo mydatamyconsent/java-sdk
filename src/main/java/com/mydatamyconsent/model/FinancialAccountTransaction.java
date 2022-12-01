@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.FinancialAccountEquityTransaction;
-import com.mydatamyconsent.model.FinancialAccountMutualFundTransaction;
-import com.mydatamyconsent.model.FinancialAccountSipTransaction;
+import com.mydatamyconsent.model.FinancialAccountTransactionEquityTransaction;
+import com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction;
+import com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction;
 import com.mydatamyconsent.model.MutualFundFundType;
 import com.mydatamyconsent.model.MutualFundHoldingMode;
 import com.mydatamyconsent.model.MutualFundSchemeCategory;
@@ -67,7 +67,7 @@ import com.google.gson.JsonParseException;
 
 import com.mydatamyconsent.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-30T10:35:25.825720195Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-01T10:35:37.203825455Z[Etc/UTC]")
 public class FinancialAccountTransaction extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(FinancialAccountTransaction.class.getName());
 
@@ -79,9 +79,9 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
                 return null; // this class only serializes 'FinancialAccountTransaction' and its subtypes
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<FinancialAccountEquityTransaction> adapterFinancialAccountEquityTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountEquityTransaction.class));
-            final TypeAdapter<FinancialAccountMutualFundTransaction> adapterFinancialAccountMutualFundTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountMutualFundTransaction.class));
-            final TypeAdapter<FinancialAccountSipTransaction> adapterFinancialAccountSipTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountSipTransaction.class));
+            final TypeAdapter<FinancialAccountTransactionEquityTransaction> adapterFinancialAccountTransactionEquityTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionEquityTransaction.class));
+            final TypeAdapter<FinancialAccountTransactionMutualFundTransaction> adapterFinancialAccountTransactionMutualFundTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionMutualFundTransaction.class));
+            final TypeAdapter<FinancialAccountTransactionSipTransaction> adapterFinancialAccountTransactionSipTransaction = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionSipTransaction.class));
 
             return (TypeAdapter<T>) new TypeAdapter<FinancialAccountTransaction>() {
                 @Override
@@ -91,28 +91,28 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
                         return;
                     }
 
-                    // check if the actual instance is of the type `FinancialAccountEquityTransaction`
-                    if (value.getActualInstance() instanceof FinancialAccountEquityTransaction) {
-                        JsonObject obj = adapterFinancialAccountEquityTransaction.toJsonTree((FinancialAccountEquityTransaction)value.getActualInstance()).getAsJsonObject();
+                    // check if the actual instance is of the type `FinancialAccountTransactionEquityTransaction`
+                    if (value.getActualInstance() instanceof FinancialAccountTransactionEquityTransaction) {
+                        JsonObject obj = adapterFinancialAccountTransactionEquityTransaction.toJsonTree((FinancialAccountTransactionEquityTransaction)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
                         return;
                     }
 
-                    // check if the actual instance is of the type `FinancialAccountMutualFundTransaction`
-                    if (value.getActualInstance() instanceof FinancialAccountMutualFundTransaction) {
-                        JsonObject obj = adapterFinancialAccountMutualFundTransaction.toJsonTree((FinancialAccountMutualFundTransaction)value.getActualInstance()).getAsJsonObject();
+                    // check if the actual instance is of the type `FinancialAccountTransactionMutualFundTransaction`
+                    if (value.getActualInstance() instanceof FinancialAccountTransactionMutualFundTransaction) {
+                        JsonObject obj = adapterFinancialAccountTransactionMutualFundTransaction.toJsonTree((FinancialAccountTransactionMutualFundTransaction)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
                         return;
                     }
 
-                    // check if the actual instance is of the type `FinancialAccountSipTransaction`
-                    if (value.getActualInstance() instanceof FinancialAccountSipTransaction) {
-                        JsonObject obj = adapterFinancialAccountSipTransaction.toJsonTree((FinancialAccountSipTransaction)value.getActualInstance()).getAsJsonObject();
+                    // check if the actual instance is of the type `FinancialAccountTransactionSipTransaction`
+                    if (value.getActualInstance() instanceof FinancialAccountTransactionSipTransaction) {
+                        JsonObject obj = adapterFinancialAccountTransactionSipTransaction.toJsonTree((FinancialAccountTransactionSipTransaction)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
                         return;
                     }
 
-                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction");
+                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction");
                 }
 
                 @Override
@@ -120,43 +120,43 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
                     Object deserialized = null;
                     JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
-                    // deserialize FinancialAccountEquityTransaction
+                    // deserialize FinancialAccountTransactionEquityTransaction
                     try {
                         // validate the JSON object to see if any exception is thrown
-                        FinancialAccountEquityTransaction.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountEquityTransaction'");
+                        FinancialAccountTransactionEquityTransaction.validateJsonObject(jsonObject);
+                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountTransactionEquityTransaction'");
                         FinancialAccountTransaction ret = new FinancialAccountTransaction();
-                        ret.setActualInstance(adapterFinancialAccountEquityTransaction.fromJsonTree(jsonObject));
+                        ret.setActualInstance(adapterFinancialAccountTransactionEquityTransaction.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
                         // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountEquityTransaction'", e);
+                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountTransactionEquityTransaction'", e);
                     }
 
-                    // deserialize FinancialAccountMutualFundTransaction
+                    // deserialize FinancialAccountTransactionMutualFundTransaction
                     try {
                         // validate the JSON object to see if any exception is thrown
-                        FinancialAccountMutualFundTransaction.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountMutualFundTransaction'");
+                        FinancialAccountTransactionMutualFundTransaction.validateJsonObject(jsonObject);
+                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountTransactionMutualFundTransaction'");
                         FinancialAccountTransaction ret = new FinancialAccountTransaction();
-                        ret.setActualInstance(adapterFinancialAccountMutualFundTransaction.fromJsonTree(jsonObject));
+                        ret.setActualInstance(adapterFinancialAccountTransactionMutualFundTransaction.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
                         // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountMutualFundTransaction'", e);
+                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountTransactionMutualFundTransaction'", e);
                     }
 
-                    // deserialize FinancialAccountSipTransaction
+                    // deserialize FinancialAccountTransactionSipTransaction
                     try {
                         // validate the JSON object to see if any exception is thrown
-                        FinancialAccountSipTransaction.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountSipTransaction'");
+                        FinancialAccountTransactionSipTransaction.validateJsonObject(jsonObject);
+                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountTransactionSipTransaction'");
                         FinancialAccountTransaction ret = new FinancialAccountTransaction();
-                        ret.setActualInstance(adapterFinancialAccountSipTransaction.fromJsonTree(jsonObject));
+                        ret.setActualInstance(adapterFinancialAccountTransactionSipTransaction.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
                         // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountSipTransaction'", e);
+                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountTransactionSipTransaction'", e);
                     }
 
 
@@ -173,27 +173,27 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
         super("anyOf", Boolean.FALSE);
     }
 
-    public FinancialAccountTransaction(FinancialAccountEquityTransaction o) {
+    public FinancialAccountTransaction(FinancialAccountTransactionEquityTransaction o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public FinancialAccountTransaction(FinancialAccountMutualFundTransaction o) {
+    public FinancialAccountTransaction(FinancialAccountTransactionMutualFundTransaction o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public FinancialAccountTransaction(FinancialAccountSipTransaction o) {
+    public FinancialAccountTransaction(FinancialAccountTransactionSipTransaction o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
     static {
-        schemas.put("FinancialAccountEquityTransaction", new GenericType<FinancialAccountEquityTransaction>() {
+        schemas.put("FinancialAccountTransactionEquityTransaction", new GenericType<FinancialAccountTransactionEquityTransaction>() {
         });
-        schemas.put("FinancialAccountMutualFundTransaction", new GenericType<FinancialAccountMutualFundTransaction>() {
+        schemas.put("FinancialAccountTransactionMutualFundTransaction", new GenericType<FinancialAccountTransactionMutualFundTransaction>() {
         });
-        schemas.put("FinancialAccountSipTransaction", new GenericType<FinancialAccountSipTransaction>() {
+        schemas.put("FinancialAccountTransactionSipTransaction", new GenericType<FinancialAccountTransactionSipTransaction>() {
         });
     }
 
@@ -205,36 +205,36 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the anyOf child schema, check
      * the instance parameter is valid against the anyOf child schemas:
-     * FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction
+     * FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction
      *
      * It could be an instance of the 'anyOf' schemas.
      * The anyOf child schemas may themselves be a composed schema (allOf, anyOf, anyOf).
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (instance instanceof FinancialAccountEquityTransaction) {
+        if (instance instanceof FinancialAccountTransactionEquityTransaction) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof FinancialAccountMutualFundTransaction) {
+        if (instance instanceof FinancialAccountTransactionMutualFundTransaction) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof FinancialAccountSipTransaction) {
+        if (instance instanceof FinancialAccountTransactionSipTransaction) {
             super.setActualInstance(instance);
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction");
+        throw new RuntimeException("Invalid instance type. Must be FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction
+     * FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction
      *
-     * @return The actual instance (FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction)
+     * @return The actual instance (FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction)
      */
     @Override
     public Object getActualInstance() {
@@ -242,36 +242,36 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
     }
 
     /**
-     * Get the actual instance of `FinancialAccountEquityTransaction`. If the actual instance is not `FinancialAccountEquityTransaction`,
+     * Get the actual instance of `FinancialAccountTransactionEquityTransaction`. If the actual instance is not `FinancialAccountTransactionEquityTransaction`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `FinancialAccountEquityTransaction`
-     * @throws ClassCastException if the instance is not `FinancialAccountEquityTransaction`
+     * @return The actual instance of `FinancialAccountTransactionEquityTransaction`
+     * @throws ClassCastException if the instance is not `FinancialAccountTransactionEquityTransaction`
      */
-    public FinancialAccountEquityTransaction getFinancialAccountEquityTransaction() throws ClassCastException {
-        return (FinancialAccountEquityTransaction)super.getActualInstance();
+    public FinancialAccountTransactionEquityTransaction getFinancialAccountTransactionEquityTransaction() throws ClassCastException {
+        return (FinancialAccountTransactionEquityTransaction)super.getActualInstance();
     }
 
     /**
-     * Get the actual instance of `FinancialAccountMutualFundTransaction`. If the actual instance is not `FinancialAccountMutualFundTransaction`,
+     * Get the actual instance of `FinancialAccountTransactionMutualFundTransaction`. If the actual instance is not `FinancialAccountTransactionMutualFundTransaction`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `FinancialAccountMutualFundTransaction`
-     * @throws ClassCastException if the instance is not `FinancialAccountMutualFundTransaction`
+     * @return The actual instance of `FinancialAccountTransactionMutualFundTransaction`
+     * @throws ClassCastException if the instance is not `FinancialAccountTransactionMutualFundTransaction`
      */
-    public FinancialAccountMutualFundTransaction getFinancialAccountMutualFundTransaction() throws ClassCastException {
-        return (FinancialAccountMutualFundTransaction)super.getActualInstance();
+    public FinancialAccountTransactionMutualFundTransaction getFinancialAccountTransactionMutualFundTransaction() throws ClassCastException {
+        return (FinancialAccountTransactionMutualFundTransaction)super.getActualInstance();
     }
 
     /**
-     * Get the actual instance of `FinancialAccountSipTransaction`. If the actual instance is not `FinancialAccountSipTransaction`,
+     * Get the actual instance of `FinancialAccountTransactionSipTransaction`. If the actual instance is not `FinancialAccountTransactionSipTransaction`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `FinancialAccountSipTransaction`
-     * @throws ClassCastException if the instance is not `FinancialAccountSipTransaction`
+     * @return The actual instance of `FinancialAccountTransactionSipTransaction`
+     * @throws ClassCastException if the instance is not `FinancialAccountTransactionSipTransaction`
      */
-    public FinancialAccountSipTransaction getFinancialAccountSipTransaction() throws ClassCastException {
-        return (FinancialAccountSipTransaction)super.getActualInstance();
+    public FinancialAccountTransactionSipTransaction getFinancialAccountTransactionSipTransaction() throws ClassCastException {
+        return (FinancialAccountTransactionSipTransaction)super.getActualInstance();
     }
 
 
@@ -284,32 +284,32 @@ public class FinancialAccountTransaction extends AbstractOpenApiSchema {
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     // validate anyOf schemas one by one
     int validCount = 0;
-    // validate the json string with FinancialAccountEquityTransaction
+    // validate the json string with FinancialAccountTransactionEquityTransaction
     try {
-      FinancialAccountEquityTransaction.validateJsonObject(jsonObj);
+      FinancialAccountTransactionEquityTransaction.validateJsonObject(jsonObj);
       return; // return earlier as at least one schema is valid with respect to the Json object
       //validCount++;
     } catch (Exception e) {
       // continue to the next one
     }
-    // validate the json string with FinancialAccountMutualFundTransaction
+    // validate the json string with FinancialAccountTransactionMutualFundTransaction
     try {
-      FinancialAccountMutualFundTransaction.validateJsonObject(jsonObj);
+      FinancialAccountTransactionMutualFundTransaction.validateJsonObject(jsonObj);
       return; // return earlier as at least one schema is valid with respect to the Json object
       //validCount++;
     } catch (Exception e) {
       // continue to the next one
     }
-    // validate the json string with FinancialAccountSipTransaction
+    // validate the json string with FinancialAccountTransactionSipTransaction
     try {
-      FinancialAccountSipTransaction.validateJsonObject(jsonObj);
+      FinancialAccountTransactionSipTransaction.validateJsonObject(jsonObj);
       return; // return earlier as at least one schema is valid with respect to the Json object
       //validCount++;
     } catch (Exception e) {
       // continue to the next one
     }
     if (validCount == 0) {
-      throw new IOException(String.format("The JSON string is invalid for FinancialAccountTransaction with anyOf schemas: FinancialAccountEquityTransaction, FinancialAccountMutualFundTransaction, FinancialAccountSipTransaction. JSON: %s", jsonObj.toString()));
+      throw new IOException(String.format("The JSON string is invalid for FinancialAccountTransaction with anyOf schemas: FinancialAccountTransactionEquityTransaction, FinancialAccountTransactionMutualFundTransaction, FinancialAccountTransactionSipTransaction. JSON: %s", jsonObj.toString()));
     }
   }
 

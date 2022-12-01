@@ -45,18 +45,22 @@ import java.util.Set;
 import com.mydatamyconsent.JSON;
 
 /**
- * FinancialAccountSipTransactionAllOf
+ * FinancialAccountTransactionEquityTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-30T10:35:25.825720195Z[Etc/UTC]")
-public class FinancialAccountSipTransactionAllOf {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-01T10:35:37.203825455Z[Etc/UTC]")
+public class FinancialAccountTransactionEquityTransaction {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
 
-  public FinancialAccountSipTransactionAllOf() {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+  public FinancialAccountTransactionEquityTransaction() {
   }
 
-  public FinancialAccountSipTransactionAllOf type(String type) {
+  public FinancialAccountTransactionEquityTransaction type(String type) {
     
     this.type = type;
     return this;
@@ -67,7 +71,7 @@ public class FinancialAccountSipTransactionAllOf {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "SipTransaction", required = true, value = "")
+  @ApiModelProperty(example = "EquityTransaction", required = true, value = "")
 
   public String getType() {
     return type;
@@ -76,6 +80,29 @@ public class FinancialAccountSipTransactionAllOf {
 
   public void setType(String type) {
     this.type = type;
+  }
+
+
+  public FinancialAccountTransactionEquityTransaction id(String id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -88,20 +115,22 @@ public class FinancialAccountSipTransactionAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FinancialAccountSipTransactionAllOf financialAccountSipTransactionAllOf = (FinancialAccountSipTransactionAllOf) o;
-    return Objects.equals(this.type, financialAccountSipTransactionAllOf.type);
+    FinancialAccountTransactionEquityTransaction financialAccountTransactionEquityTransaction = (FinancialAccountTransactionEquityTransaction) o;
+    return Objects.equals(this.type, financialAccountTransactionEquityTransaction.type) &&
+        Objects.equals(this.id, financialAccountTransactionEquityTransaction.id);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type);
+    return Objects.hash(type, id);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FinancialAccountSipTransactionAllOf {\n");
+    sb.append("class FinancialAccountTransactionEquityTransaction {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,37 +154,39 @@ public class FinancialAccountSipTransactionAllOf {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
+    openapiFields.add("id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
+    openapiRequiredFields.add("id");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountSipTransactionAllOf
+  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountTransactionEquityTransaction
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (FinancialAccountSipTransactionAllOf.openapiRequiredFields.isEmpty()) {
+        if (FinancialAccountTransactionEquityTransaction.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountSipTransactionAllOf is not found in the empty JSON string", FinancialAccountSipTransactionAllOf.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountTransactionEquityTransaction is not found in the empty JSON string", FinancialAccountTransactionEquityTransaction.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!FinancialAccountSipTransactionAllOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountSipTransactionAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!FinancialAccountTransactionEquityTransaction.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountTransactionEquityTransaction` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FinancialAccountSipTransactionAllOf.openapiRequiredFields) {
+      for (String requiredField : FinancialAccountTransactionEquityTransaction.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -163,28 +194,31 @@ public class FinancialAccountSipTransactionAllOf {
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
+      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FinancialAccountSipTransactionAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FinancialAccountSipTransactionAllOf' and its subtypes
+       if (!FinancialAccountTransactionEquityTransaction.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FinancialAccountTransactionEquityTransaction' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FinancialAccountSipTransactionAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountSipTransactionAllOf.class));
+       final TypeAdapter<FinancialAccountTransactionEquityTransaction> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionEquityTransaction.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountSipTransactionAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountTransactionEquityTransaction>() {
            @Override
-           public void write(JsonWriter out, FinancialAccountSipTransactionAllOf value) throws IOException {
+           public void write(JsonWriter out, FinancialAccountTransactionEquityTransaction value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FinancialAccountSipTransactionAllOf read(JsonReader in) throws IOException {
+           public FinancialAccountTransactionEquityTransaction read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -195,18 +229,18 @@ public class FinancialAccountSipTransactionAllOf {
   }
 
  /**
-  * Create an instance of FinancialAccountSipTransactionAllOf given an JSON string
+  * Create an instance of FinancialAccountTransactionEquityTransaction given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FinancialAccountSipTransactionAllOf
-  * @throws IOException if the JSON string is invalid with respect to FinancialAccountSipTransactionAllOf
+  * @return An instance of FinancialAccountTransactionEquityTransaction
+  * @throws IOException if the JSON string is invalid with respect to FinancialAccountTransactionEquityTransaction
   */
-  public static FinancialAccountSipTransactionAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FinancialAccountSipTransactionAllOf.class);
+  public static FinancialAccountTransactionEquityTransaction fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FinancialAccountTransactionEquityTransaction.class);
   }
 
  /**
-  * Convert an instance of FinancialAccountSipTransactionAllOf to an JSON string
+  * Convert an instance of FinancialAccountTransactionEquityTransaction to an JSON string
   *
   * @return JSON string
   */

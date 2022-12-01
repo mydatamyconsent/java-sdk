@@ -1,6 +1,6 @@
 
 
-# FinancialAccountSipTransaction
+# FinancialAccountTransactionEquityTransaction
 
 
 ## Properties

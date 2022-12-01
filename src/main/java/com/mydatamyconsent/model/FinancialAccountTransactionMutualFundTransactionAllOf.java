@@ -45,18 +45,18 @@ import java.util.Set;
 import com.mydatamyconsent.JSON;
 
 /**
- * FinancialAccountEquityTransactionAllOf
+ * FinancialAccountTransactionMutualFundTransactionAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-30T10:35:25.825720195Z[Etc/UTC]")
-public class FinancialAccountEquityTransactionAllOf {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-01T10:35:37.203825455Z[Etc/UTC]")
+public class FinancialAccountTransactionMutualFundTransactionAllOf {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
 
-  public FinancialAccountEquityTransactionAllOf() {
+  public FinancialAccountTransactionMutualFundTransactionAllOf() {
   }
 
-  public FinancialAccountEquityTransactionAllOf type(String type) {
+  public FinancialAccountTransactionMutualFundTransactionAllOf type(String type) {
     
     this.type = type;
     return this;
@@ -67,7 +67,7 @@ public class FinancialAccountEquityTransactionAllOf {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "EquityTransaction", required = true, value = "")
+  @ApiModelProperty(example = "MutualFundTransaction", required = true, value = "")
 
   public String getType() {
     return type;
@@ -88,8 +88,8 @@ public class FinancialAccountEquityTransactionAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FinancialAccountEquityTransactionAllOf financialAccountEquityTransactionAllOf = (FinancialAccountEquityTransactionAllOf) o;
-    return Objects.equals(this.type, financialAccountEquityTransactionAllOf.type);
+    FinancialAccountTransactionMutualFundTransactionAllOf financialAccountTransactionMutualFundTransactionAllOf = (FinancialAccountTransactionMutualFundTransactionAllOf) o;
+    return Objects.equals(this.type, financialAccountTransactionMutualFundTransactionAllOf.type);
   }
 
   @Override
@@ -100,7 +100,7 @@ public class FinancialAccountEquityTransactionAllOf {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FinancialAccountEquityTransactionAllOf {\n");
+    sb.append("class FinancialAccountTransactionMutualFundTransactionAllOf {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -135,27 +135,27 @@ public class FinancialAccountEquityTransactionAllOf {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountEquityTransactionAllOf
+  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountTransactionMutualFundTransactionAllOf
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (FinancialAccountEquityTransactionAllOf.openapiRequiredFields.isEmpty()) {
+        if (FinancialAccountTransactionMutualFundTransactionAllOf.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountEquityTransactionAllOf is not found in the empty JSON string", FinancialAccountEquityTransactionAllOf.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountTransactionMutualFundTransactionAllOf is not found in the empty JSON string", FinancialAccountTransactionMutualFundTransactionAllOf.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!FinancialAccountEquityTransactionAllOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountEquityTransactionAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!FinancialAccountTransactionMutualFundTransactionAllOf.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountTransactionMutualFundTransactionAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FinancialAccountEquityTransactionAllOf.openapiRequiredFields) {
+      for (String requiredField : FinancialAccountTransactionMutualFundTransactionAllOf.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -169,22 +169,22 @@ public class FinancialAccountEquityTransactionAllOf {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FinancialAccountEquityTransactionAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FinancialAccountEquityTransactionAllOf' and its subtypes
+       if (!FinancialAccountTransactionMutualFundTransactionAllOf.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FinancialAccountTransactionMutualFundTransactionAllOf' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FinancialAccountEquityTransactionAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountEquityTransactionAllOf.class));
+       final TypeAdapter<FinancialAccountTransactionMutualFundTransactionAllOf> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTransactionMutualFundTransactionAllOf.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountEquityTransactionAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountTransactionMutualFundTransactionAllOf>() {
            @Override
-           public void write(JsonWriter out, FinancialAccountEquityTransactionAllOf value) throws IOException {
+           public void write(JsonWriter out, FinancialAccountTransactionMutualFundTransactionAllOf value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FinancialAccountEquityTransactionAllOf read(JsonReader in) throws IOException {
+           public FinancialAccountTransactionMutualFundTransactionAllOf read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -195,18 +195,18 @@ public class FinancialAccountEquityTransactionAllOf {
   }
 
  /**
-  * Create an instance of FinancialAccountEquityTransactionAllOf given an JSON string
+  * Create an instance of FinancialAccountTransactionMutualFundTransactionAllOf given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FinancialAccountEquityTransactionAllOf
-  * @throws IOException if the JSON string is invalid with respect to FinancialAccountEquityTransactionAllOf
+  * @return An instance of FinancialAccountTransactionMutualFundTransactionAllOf
+  * @throws IOException if the JSON string is invalid with respect to FinancialAccountTransactionMutualFundTransactionAllOf
   */
-  public static FinancialAccountEquityTransactionAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FinancialAccountEquityTransactionAllOf.class);
+  public static FinancialAccountTransactionMutualFundTransactionAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FinancialAccountTransactionMutualFundTransactionAllOf.class);
   }
 
  /**
-  * Convert an instance of FinancialAccountEquityTransactionAllOf to an JSON string
+  * Convert an instance of FinancialAccountTransactionMutualFundTransactionAllOf to an JSON string
   *
   * @return JSON string
   */

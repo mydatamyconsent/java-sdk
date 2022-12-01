@@ -65,7 +65,7 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf-8
 
 ### HTTP response details
 | Status code | Description | Response headers |

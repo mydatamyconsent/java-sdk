@@ -1,6 +1,6 @@
 
 
-# FinancialAccountSipTransactionAllOf
+# FinancialAccountTransactionSipTransactionAllOf
 
 
 ## Properties

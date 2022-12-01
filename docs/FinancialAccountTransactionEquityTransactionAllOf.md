@@ -1,6 +1,6 @@
 
 
-# FinancialAccountMutualFundTransactionAllOf
+# FinancialAccountTransactionEquityTransactionAllOf
 
 
 ## Properties

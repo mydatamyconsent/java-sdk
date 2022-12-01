@@ -63,9 +63,9 @@ public class JSON {
                     public Class<? extends com.mydatamyconsent.model.FinancialAccount> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
                         classByDiscriminatorValue.put("Equity", com.mydatamyconsent.model.FinancialAccountEquity.class);
-                        classByDiscriminatorValue.put("FinancialAccountEquity", com.mydatamyconsent.model.FinancialAccountEquity.class);
-                        classByDiscriminatorValue.put("FinancialAccountMutualFund", com.mydatamyconsent.model.FinancialAccountMutualFund.class);
-                        classByDiscriminatorValue.put("FinancialAccountSip", com.mydatamyconsent.model.FinancialAccountSip.class);
+                        classByDiscriminatorValue.put("FinancialAccount_Equity", com.mydatamyconsent.model.FinancialAccountEquity.class);
+                        classByDiscriminatorValue.put("FinancialAccount_MutualFund", com.mydatamyconsent.model.FinancialAccountMutualFund.class);
+                        classByDiscriminatorValue.put("FinancialAccount_Sip", com.mydatamyconsent.model.FinancialAccountSip.class);
                         classByDiscriminatorValue.put("MutualFund", com.mydatamyconsent.model.FinancialAccountMutualFund.class);
                         classByDiscriminatorValue.put("Sip", com.mydatamyconsent.model.FinancialAccountSip.class);
                         classByDiscriminatorValue.put("FinancialAccount", com.mydatamyconsent.model.FinancialAccount.class);
@@ -77,12 +77,12 @@ public class JSON {
                     @Override
                     public Class<? extends com.mydatamyconsent.model.FinancialAccountTransaction> getClassForElement(JsonElement readElement) {
                         Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("EquityTransaction", com.mydatamyconsent.model.FinancialAccountEquityTransaction.class);
-                        classByDiscriminatorValue.put("FinancialAccountEquityTransaction", com.mydatamyconsent.model.FinancialAccountEquityTransaction.class);
-                        classByDiscriminatorValue.put("FinancialAccountMutualFundTransaction", com.mydatamyconsent.model.FinancialAccountMutualFundTransaction.class);
-                        classByDiscriminatorValue.put("FinancialAccountSipTransaction", com.mydatamyconsent.model.FinancialAccountSipTransaction.class);
-                        classByDiscriminatorValue.put("MutualFundTransaction", com.mydatamyconsent.model.FinancialAccountMutualFundTransaction.class);
-                        classByDiscriminatorValue.put("SipTransaction", com.mydatamyconsent.model.FinancialAccountSipTransaction.class);
+                        classByDiscriminatorValue.put("EquityTransaction", com.mydatamyconsent.model.FinancialAccountTransactionEquityTransaction.class);
+                        classByDiscriminatorValue.put("FinancialAccountTransaction_EquityTransaction", com.mydatamyconsent.model.FinancialAccountTransactionEquityTransaction.class);
+                        classByDiscriminatorValue.put("FinancialAccountTransaction_MutualFundTransaction", com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction.class);
+                        classByDiscriminatorValue.put("FinancialAccountTransaction_SipTransaction", com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.class);
+                        classByDiscriminatorValue.put("MutualFundTransaction", com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction.class);
+                        classByDiscriminatorValue.put("SipTransaction", com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.class);
                         classByDiscriminatorValue.put("FinancialAccountTransaction", com.mydatamyconsent.model.FinancialAccountTransaction.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -155,19 +155,19 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccount.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquityAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquityTransaction.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquityTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountField.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountMutualFund.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountMutualFundAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountMutualFundTransaction.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountMutualFundTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountSip.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountSipAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountSipTransaction.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountSipTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransaction.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionEquityTransaction.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionEquityTransactionAllOf.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionPeriod.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Holder.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Identifier.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.IdentityField.CustomTypeAdapterFactory());

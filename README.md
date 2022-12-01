@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: 1.0
-  - Build date: 2022-11-30T10:35:25.825720195Z[Etc/UTC]
+  - Build date: 2022-12-01T10:35:37.203825455Z[Etc/UTC]
 
 Unleashing the power of consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -215,20 +215,20 @@ Class | Method | HTTP request | Description
  - [FinancialAccountDetailsRequired](docs/FinancialAccountDetailsRequired.md)
  - [FinancialAccountEquity](docs/FinancialAccountEquity.md)
  - [FinancialAccountEquityAllOf](docs/FinancialAccountEquityAllOf.md)
- - [FinancialAccountEquityTransaction](docs/FinancialAccountEquityTransaction.md)
- - [FinancialAccountEquityTransactionAllOf](docs/FinancialAccountEquityTransactionAllOf.md)
  - [FinancialAccountField](docs/FinancialAccountField.md)
  - [FinancialAccountMutualFund](docs/FinancialAccountMutualFund.md)
  - [FinancialAccountMutualFundAllOf](docs/FinancialAccountMutualFundAllOf.md)
- - [FinancialAccountMutualFundTransaction](docs/FinancialAccountMutualFundTransaction.md)
- - [FinancialAccountMutualFundTransactionAllOf](docs/FinancialAccountMutualFundTransactionAllOf.md)
  - [FinancialAccountSip](docs/FinancialAccountSip.md)
  - [FinancialAccountSipAllOf](docs/FinancialAccountSipAllOf.md)
- - [FinancialAccountSipTransaction](docs/FinancialAccountSipTransaction.md)
- - [FinancialAccountSipTransactionAllOf](docs/FinancialAccountSipTransactionAllOf.md)
  - [FinancialAccountSubCategoryType](docs/FinancialAccountSubCategoryType.md)
  - [FinancialAccountTransaction](docs/FinancialAccountTransaction.md)
+ - [FinancialAccountTransactionEquityTransaction](docs/FinancialAccountTransactionEquityTransaction.md)
+ - [FinancialAccountTransactionEquityTransactionAllOf](docs/FinancialAccountTransactionEquityTransactionAllOf.md)
+ - [FinancialAccountTransactionMutualFundTransaction](docs/FinancialAccountTransactionMutualFundTransaction.md)
+ - [FinancialAccountTransactionMutualFundTransactionAllOf](docs/FinancialAccountTransactionMutualFundTransactionAllOf.md)
  - [FinancialAccountTransactionPeriod](docs/FinancialAccountTransactionPeriod.md)
+ - [FinancialAccountTransactionSipTransaction](docs/FinancialAccountTransactionSipTransaction.md)
+ - [FinancialAccountTransactionSipTransactionAllOf](docs/FinancialAccountTransactionSipTransactionAllOf.md)
  - [Holder](docs/Holder.md)
  - [IdentificationStrategy](docs/IdentificationStrategy.md)
  - [Identifier](docs/Identifier.md)
