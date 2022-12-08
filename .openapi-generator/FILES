@@ -1,5 +1,9 @@
 README.md
+docs/AllergyDetails.md
+docs/AllergyIntoleranceReaction.md
 docs/ApiErrorType.md
+docs/CodeableConcept.md
+docs/Coding.md
 docs/CollectibleTypes.md
 docs/Consent.md
 docs/ConsentDetails.md
@@ -56,6 +60,9 @@ docs/FinancialAccountTransactionMutualFundTransactionAllOf.md
 docs/FinancialAccountTransactionPeriod.md
 docs/FinancialAccountTransactionSipTransaction.md
 docs/FinancialAccountTransactionSipTransactionAllOf.md
+docs/HealthRecord.md
+docs/HealthRecordAllergyDetails.md
+docs/HealthRecordAllergyDetailsAllOf.md
 docs/Holder.md
 docs/IdentificationStrategy.md
 docs/Identifier.md
@@ -136,7 +143,11 @@ src/main/java/com/mydatamyconsent/auth/OAuthFlow.java
 src/main/java/com/mydatamyconsent/auth/OAuthOkHttpClient.java
 src/main/java/com/mydatamyconsent/auth/RetryingOAuth.java
 src/main/java/com/mydatamyconsent/model/AbstractOpenApiSchema.java
+src/main/java/com/mydatamyconsent/model/AllergyDetails.java
+src/main/java/com/mydatamyconsent/model/AllergyIntoleranceReaction.java
 src/main/java/com/mydatamyconsent/model/ApiErrorType.java
+src/main/java/com/mydatamyconsent/model/CodeableConcept.java
+src/main/java/com/mydatamyconsent/model/Coding.java
 src/main/java/com/mydatamyconsent/model/CollectibleTypes.java
 src/main/java/com/mydatamyconsent/model/Consent.java
 src/main/java/com/mydatamyconsent/model/ConsentDetails.java
@@ -191,6 +202,9 @@ src/main/java/com/mydatamyconsent/model/FinancialAccountTransactionMutualFundTra
 src/main/java/com/mydatamyconsent/model/FinancialAccountTransactionPeriod.java
 src/main/java/com/mydatamyconsent/model/FinancialAccountTransactionSipTransaction.java
 src/main/java/com/mydatamyconsent/model/FinancialAccountTransactionSipTransactionAllOf.java
+src/main/java/com/mydatamyconsent/model/HealthRecord.java
+src/main/java/com/mydatamyconsent/model/HealthRecordAllergyDetails.java
+src/main/java/com/mydatamyconsent/model/HealthRecordAllergyDetailsAllOf.java
 src/main/java/com/mydatamyconsent/model/Holder.java
 src/main/java/com/mydatamyconsent/model/IdentificationStrategy.java
 src/main/java/com/mydatamyconsent/model/Identifier.java
@@ -244,7 +258,11 @@ src/test/java/com/mydatamyconsent/api/DataProvidersDiscoveryApiTest.java
 src/test/java/com/mydatamyconsent/api/IndividualsApiTest.java
 src/test/java/com/mydatamyconsent/api/OrganizationsApiTest.java
 src/test/java/com/mydatamyconsent/api/SupportedIdentifiersApiTest.java
+src/test/java/com/mydatamyconsent/model/AllergyDetailsTest.java
+src/test/java/com/mydatamyconsent/model/AllergyIntoleranceReactionTest.java
 src/test/java/com/mydatamyconsent/model/ApiErrorTypeTest.java
+src/test/java/com/mydatamyconsent/model/CodeableConceptTest.java
+src/test/java/com/mydatamyconsent/model/CodingTest.java
 src/test/java/com/mydatamyconsent/model/CollectibleTypesTest.java
 src/test/java/com/mydatamyconsent/model/ConsentDetailsTest.java
 src/test/java/com/mydatamyconsent/model/ConsentDocumentIssuerTest.java
@@ -299,6 +317,9 @@ src/test/java/com/mydatamyconsent/model/FinancialAccountTransactionPeriodTest.ja
 src/test/java/com/mydatamyconsent/model/FinancialAccountTransactionSipTransactionAllOfTest.java
 src/test/java/com/mydatamyconsent/model/FinancialAccountTransactionSipTransactionTest.java
 src/test/java/com/mydatamyconsent/model/FinancialAccountTransactionTest.java
+src/test/java/com/mydatamyconsent/model/HealthRecordAllergyDetailsAllOfTest.java
+src/test/java/com/mydatamyconsent/model/HealthRecordAllergyDetailsTest.java
+src/test/java/com/mydatamyconsent/model/HealthRecordTest.java
 src/test/java/com/mydatamyconsent/model/HolderTest.java
 src/test/java/com/mydatamyconsent/model/IdentificationStrategyTest.java
 src/test/java/com/mydatamyconsent/model/IdentifierTest.java
