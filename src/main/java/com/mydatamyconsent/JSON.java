@@ -88,17 +88,6 @@ public class JSON {
                                 getDiscriminatorValue(readElement, "type"));
                     }
           })
-                .registerTypeSelector(com.mydatamyconsent.model.HealthRecord.class, new TypeSelector<com.mydatamyconsent.model.HealthRecord>() {
-                    @Override
-                    public Class<? extends com.mydatamyconsent.model.HealthRecord> getClassForElement(JsonElement readElement) {
-                        Map<String, Class> classByDiscriminatorValue = new HashMap<String, Class>();
-                        classByDiscriminatorValue.put("Allergy", com.mydatamyconsent.model.HealthRecordAllergyDetails.class);
-                        classByDiscriminatorValue.put("HealthRecord_AllergyDetails", com.mydatamyconsent.model.HealthRecordAllergyDetails.class);
-                        classByDiscriminatorValue.put("HealthRecord", com.mydatamyconsent.model.HealthRecord.class);
-                        return getClassByDiscriminator(classByDiscriminatorValue,
-                                getDiscriminatorValue(readElement, "type"));
-                    }
-          })
         ;
         GsonBuilder builder = fireBuilder.createGsonBuilder();
         return builder;
@@ -134,10 +123,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.AllergyDetails.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.AllergyIntoleranceReaction.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.CodeableConcept.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Coding.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Consent.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentDocumentIssuer.CustomTypeAdapterFactory());
@@ -183,9 +168,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionPeriod.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransactionAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.HealthRecord.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.HealthRecordAllergyDetails.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.HealthRecordAllergyDetailsAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Holder.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Identifier.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.IdentityField.CustomTypeAdapterFactory());

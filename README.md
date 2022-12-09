@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: 1.0
-  - Build date: 2022-12-08T10:34:24.768905159Z[Etc/UTC]
+  - Build date: 2022-12-09T10:34:10.378817362Z[Etc/UTC]
 
 Unleashing the power of consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -174,11 +174,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [AllergyDetails](docs/AllergyDetails.md)
- - [AllergyIntoleranceReaction](docs/AllergyIntoleranceReaction.md)
  - [ApiErrorType](docs/ApiErrorType.md)
- - [CodeableConcept](docs/CodeableConcept.md)
- - [Coding](docs/Coding.md)
  - [CollectibleTypes](docs/CollectibleTypes.md)
  - [Consent](docs/Consent.md)
  - [ConsentDetails](docs/ConsentDetails.md)
@@ -233,9 +229,6 @@ Class | Method | HTTP request | Description
  - [FinancialAccountTransactionPeriod](docs/FinancialAccountTransactionPeriod.md)
  - [FinancialAccountTransactionSipTransaction](docs/FinancialAccountTransactionSipTransaction.md)
  - [FinancialAccountTransactionSipTransactionAllOf](docs/FinancialAccountTransactionSipTransactionAllOf.md)
- - [HealthRecord](docs/HealthRecord.md)
- - [HealthRecordAllergyDetails](docs/HealthRecordAllergyDetails.md)
- - [HealthRecordAllergyDetailsAllOf](docs/HealthRecordAllergyDetailsAllOf.md)
  - [Holder](docs/Holder.md)
  - [IdentificationStrategy](docs/IdentificationStrategy.md)
  - [Identifier](docs/Identifier.md)
