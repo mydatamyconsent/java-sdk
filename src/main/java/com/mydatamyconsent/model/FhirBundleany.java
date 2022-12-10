@@ -23,6 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -45,18 +47,49 @@ import java.util.Set;
 import com.mydatamyconsent.JSON;
 
 /**
- * FinancialAccountMutualFundAllOf
+ * FhirBundleany
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-10T10:33:03.698905036Z[Etc/UTC]")
-public class FinancialAccountMutualFundAllOf {
+public class FhirBundleany {
+  public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
+  private String resourceType;
+
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
 
-  public FinancialAccountMutualFundAllOf() {
+  public static final String SERIALIZED_NAME_ENTRY = "entry";
+  @SerializedName(SERIALIZED_NAME_ENTRY)
+  private List<Object> entry = new ArrayList<>();
+
+  public FhirBundleany() {
   }
 
-  public FinancialAccountMutualFundAllOf type(String type) {
+  public FhirBundleany resourceType(String resourceType) {
+    
+    this.resourceType = resourceType;
+    return this;
+  }
+
+   /**
+   * Get resourceType
+   * @return resourceType
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getResourceType() {
+    return resourceType;
+  }
+
+
+  public void setResourceType(String resourceType) {
+    this.resourceType = resourceType;
+  }
+
+
+  public FhirBundleany type(String type) {
     
     this.type = type;
     return this;
@@ -67,7 +100,7 @@ public class FinancialAccountMutualFundAllOf {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "MutualFund", required = true, value = "")
+  @ApiModelProperty(required = true, value = "")
 
   public String getType() {
     return type;
@@ -76,6 +109,34 @@ public class FinancialAccountMutualFundAllOf {
 
   public void setType(String type) {
     this.type = type;
+  }
+
+
+  public FhirBundleany entry(List<Object> entry) {
+    
+    this.entry = entry;
+    return this;
+  }
+
+  public FhirBundleany addEntryItem(Object entryItem) {
+    this.entry.add(entryItem);
+    return this;
+  }
+
+   /**
+   * Get entry
+   * @return entry
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public List<Object> getEntry() {
+    return entry;
+  }
+
+
+  public void setEntry(List<Object> entry) {
+    this.entry = entry;
   }
 
 
@@ -88,20 +149,24 @@ public class FinancialAccountMutualFundAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FinancialAccountMutualFundAllOf financialAccountMutualFundAllOf = (FinancialAccountMutualFundAllOf) o;
-    return Objects.equals(this.type, financialAccountMutualFundAllOf.type);
+    FhirBundleany fhirBundleLessThanAnyGreaterThan = (FhirBundleany) o;
+    return Objects.equals(this.resourceType, fhirBundleLessThanAnyGreaterThan.resourceType) &&
+        Objects.equals(this.type, fhirBundleLessThanAnyGreaterThan.type) &&
+        Objects.equals(this.entry, fhirBundleLessThanAnyGreaterThan.entry);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type);
+    return Objects.hash(resourceType, type, entry);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FinancialAccountMutualFundAllOf {\n");
+    sb.append("class FhirBundleany {\n");
+    sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    entry: ").append(toIndentedString(entry)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -124,44 +189,55 @@ public class FinancialAccountMutualFundAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("resourceType");
     openapiFields.add("type");
+    openapiFields.add("entry");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("resourceType");
     openapiRequiredFields.add("type");
+    openapiRequiredFields.add("entry");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to FinancialAccountMutualFundAllOf
+  * @throws IOException if the JSON Object is invalid with respect to FhirBundleany
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (FinancialAccountMutualFundAllOf.openapiRequiredFields.isEmpty()) {
+        if (FhirBundleany.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FinancialAccountMutualFundAllOf is not found in the empty JSON string", FinancialAccountMutualFundAllOf.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FhirBundleany is not found in the empty JSON string", FhirBundleany.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!FinancialAccountMutualFundAllOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FinancialAccountMutualFundAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!FhirBundleany.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FhirBundleany` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : FinancialAccountMutualFundAllOf.openapiRequiredFields) {
+      for (String requiredField : FhirBundleany.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if ((jsonObj.get("resourceType") != null && !jsonObj.get("resourceType").isJsonNull()) && !jsonObj.get("resourceType").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `resourceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceType").toString()));
+      }
       if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
+      // ensure the json data is an array
+      if ((jsonObj.get("entry") != null && !jsonObj.get("entry").isJsonNull()) && !jsonObj.get("entry").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `entry` to be an array in the JSON string but got `%s`", jsonObj.get("entry").toString()));
       }
   }
 
@@ -169,22 +245,22 @@ public class FinancialAccountMutualFundAllOf {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FinancialAccountMutualFundAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FinancialAccountMutualFundAllOf' and its subtypes
+       if (!FhirBundleany.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FhirBundleany' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FinancialAccountMutualFundAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountMutualFundAllOf.class));
+       final TypeAdapter<FhirBundleany> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FhirBundleany.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<FinancialAccountMutualFundAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<FhirBundleany>() {
            @Override
-           public void write(JsonWriter out, FinancialAccountMutualFundAllOf value) throws IOException {
+           public void write(JsonWriter out, FhirBundleany value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public FinancialAccountMutualFundAllOf read(JsonReader in) throws IOException {
+           public FhirBundleany read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -195,18 +271,18 @@ public class FinancialAccountMutualFundAllOf {
   }
 
  /**
-  * Create an instance of FinancialAccountMutualFundAllOf given an JSON string
+  * Create an instance of FhirBundleany given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of FinancialAccountMutualFundAllOf
-  * @throws IOException if the JSON string is invalid with respect to FinancialAccountMutualFundAllOf
+  * @return An instance of FhirBundleany
+  * @throws IOException if the JSON string is invalid with respect to FhirBundleany
   */
-  public static FinancialAccountMutualFundAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FinancialAccountMutualFundAllOf.class);
+  public static FhirBundleany fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FhirBundleany.class);
   }
 
  /**
-  * Convert an instance of FinancialAccountMutualFundAllOf to an JSON string
+  * Convert an instance of FhirBundleany to an JSON string
   *
   * @return JSON string
   */

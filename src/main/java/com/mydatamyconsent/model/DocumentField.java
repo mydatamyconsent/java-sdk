@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * DocumentField : Document field of consent request template.
  */
 @ApiModel(description = "DocumentField : Document field of consent request template.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-09T10:34:10.378817362Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-10T10:33:03.698905036Z[Etc/UTC]")
 public class DocumentField {
   public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)

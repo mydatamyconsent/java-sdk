@@ -1023,7 +1023,7 @@ public class Example {
 
 <a name="v1IndividualsConsentsConsentIdHealthFhirBundleGet"></a>
 # **v1IndividualsConsentsConsentIdHealthFhirBundleGet**
-> Object v1IndividualsConsentsConsentIdHealthFhirBundleGet(consentId)
+> FhirBundleany v1IndividualsConsentsConsentIdHealthFhirBundleGet(consentId)
 
 Get Individual consented Health Records by consent id.
 
@@ -1049,7 +1049,7 @@ public class Example {
     IndividualsApi apiInstance = new IndividualsApi(defaultClient);
     String consentId = "consentId_example"; // String | 
     try {
-      Object result = apiInstance.v1IndividualsConsentsConsentIdHealthFhirBundleGet(consentId);
+      FhirBundleany result = apiInstance.v1IndividualsConsentsConsentIdHealthFhirBundleGet(consentId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IndividualsApi#v1IndividualsConsentsConsentIdHealthFhirBundleGet");
@@ -1070,7 +1070,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**FhirBundleany**](FhirBundleany.md)
 
 ### Authorization
 

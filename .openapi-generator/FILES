@@ -37,6 +37,7 @@ docs/DocumentType.md
 docs/Equity.md
 docs/EquityTransaction.md
 docs/Error.md
+docs/FhirBundleany.md
 docs/FinancialAccount.md
 docs/FinancialAccountCategoryType.md
 docs/FinancialAccountDetailsRequired.md
@@ -172,6 +173,7 @@ src/main/java/com/mydatamyconsent/model/DocumentType.java
 src/main/java/com/mydatamyconsent/model/Equity.java
 src/main/java/com/mydatamyconsent/model/EquityTransaction.java
 src/main/java/com/mydatamyconsent/model/Error.java
+src/main/java/com/mydatamyconsent/model/FhirBundleany.java
 src/main/java/com/mydatamyconsent/model/FinancialAccount.java
 src/main/java/com/mydatamyconsent/model/FinancialAccountCategoryType.java
 src/main/java/com/mydatamyconsent/model/FinancialAccountDetailsRequired.java
@@ -280,6 +282,7 @@ src/test/java/com/mydatamyconsent/model/DocumentTypeTest.java
 src/test/java/com/mydatamyconsent/model/EquityTest.java
 src/test/java/com/mydatamyconsent/model/EquityTransactionTest.java
 src/test/java/com/mydatamyconsent/model/ErrorTest.java
+src/test/java/com/mydatamyconsent/model/FhirBundleanyTest.java
 src/test/java/com/mydatamyconsent/model/FinancialAccountCategoryTypeTest.java
 src/test/java/com/mydatamyconsent/model/FinancialAccountDetailsRequiredTest.java
 src/test/java/com/mydatamyconsent/model/FinancialAccountEquityAllOfTest.java

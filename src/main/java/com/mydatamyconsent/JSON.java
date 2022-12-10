@@ -152,6 +152,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Equity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.EquityTransaction.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Error.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FhirBundleany.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccount.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquity.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountEquityAllOf.CustomTypeAdapterFactory());
