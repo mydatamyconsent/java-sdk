@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
 /**
  * FinancialAccountSip
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-10T10:33:03.698905036Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-11T10:33:22.807673865Z[Etc/UTC]")
 public class FinancialAccountSip {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
