@@ -18,15 +18,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.ConsentedFinancialAccountTransactionPeriod;
 import com.mydatamyconsent.model.FinancialAccountCategoryType;
-import com.mydatamyconsent.model.FinancialAccountDetailsRequired;
 import com.mydatamyconsent.model.FinancialAccountSubCategoryType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -83,38 +79,6 @@ public class ConsentedFinancialAccountTest {
     @Test
     public void identifierTest() {
         // TODO: test identifier
-    }
-
-    /**
-     * Test the property 'fieldTitle'
-     */
-    @Test
-    public void fieldTitleTest() {
-        // TODO: test fieldTitle
-    }
-
-    /**
-     * Test the property 'fieldSlug'
-     */
-    @Test
-    public void fieldSlugTest() {
-        // TODO: test fieldSlug
-    }
-
-    /**
-     * Test the property 'requestedDetails'
-     */
-    @Test
-    public void requestedDetailsTest() {
-        // TODO: test requestedDetails
-    }
-
-    /**
-     * Test the property 'transactionPeriod'
-     */
-    @Test
-    public void transactionPeriodTest() {
-        // TODO: test transactionPeriod
     }
 
     /**

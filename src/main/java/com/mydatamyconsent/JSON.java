@@ -131,7 +131,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentRequestTemplate.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedDocument.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedFinancialAccount.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedFinancialAccountTransactionPeriod.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedFinancialAccountField.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedFinancialAccountFieldTransactionPeriod.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedIdentifier.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.ConsentedMedicalRecord.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.CreateConsentRequest.CustomTypeAdapterFactory());

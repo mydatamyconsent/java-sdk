@@ -1,6 +1,6 @@
 
 
-# ConsentedFinancialAccountTransactionPeriod
+# ConsentedFinancialAccountFieldTransactionPeriod
 
 
 ## Properties

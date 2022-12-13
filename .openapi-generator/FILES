@@ -10,7 +10,8 @@ docs/ConsentRequestTemplate.md
 docs/ConsentRequestTemplateStatus.md
 docs/ConsentedDocument.md
 docs/ConsentedFinancialAccount.md
-docs/ConsentedFinancialAccountTransactionPeriod.md
+docs/ConsentedFinancialAccountField.md
+docs/ConsentedFinancialAccountFieldTransactionPeriod.md
 docs/ConsentedIdentifier.md
 docs/ConsentedMedicalRecord.md
 docs/CreateConsentRequest.md
@@ -148,7 +149,8 @@ src/main/java/com/mydatamyconsent/model/ConsentRequestTemplate.java
 src/main/java/com/mydatamyconsent/model/ConsentRequestTemplateStatus.java
 src/main/java/com/mydatamyconsent/model/ConsentedDocument.java
 src/main/java/com/mydatamyconsent/model/ConsentedFinancialAccount.java
-src/main/java/com/mydatamyconsent/model/ConsentedFinancialAccountTransactionPeriod.java
+src/main/java/com/mydatamyconsent/model/ConsentedFinancialAccountField.java
+src/main/java/com/mydatamyconsent/model/ConsentedFinancialAccountFieldTransactionPeriod.java
 src/main/java/com/mydatamyconsent/model/ConsentedIdentifier.java
 src/main/java/com/mydatamyconsent/model/ConsentedMedicalRecord.java
 src/main/java/com/mydatamyconsent/model/CreateConsentRequest.java
@@ -256,8 +258,9 @@ src/test/java/com/mydatamyconsent/model/ConsentRequestTemplateTest.java
 src/test/java/com/mydatamyconsent/model/ConsentRequestTest.java
 src/test/java/com/mydatamyconsent/model/ConsentTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedDocumentTest.java
+src/test/java/com/mydatamyconsent/model/ConsentedFinancialAccountFieldTest.java
+src/test/java/com/mydatamyconsent/model/ConsentedFinancialAccountFieldTransactionPeriodTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedFinancialAccountTest.java
-src/test/java/com/mydatamyconsent/model/ConsentedFinancialAccountTransactionPeriodTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedIdentifierTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedMedicalRecordTest.java
 src/test/java/com/mydatamyconsent/model/CreateConsentRequestTest.java

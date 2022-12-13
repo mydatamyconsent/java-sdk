@@ -46,10 +46,10 @@ import java.util.Set;
 import com.mydatamyconsent.JSON;
 
 /**
- * ConsentedFinancialAccountTransactionPeriod
+ * ConsentedFinancialAccountFieldTransactionPeriod
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-12T10:34:21.189574803Z[Etc/UTC]")
-public class ConsentedFinancialAccountTransactionPeriod {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-13T10:34:32.154440563Z[Etc/UTC]")
+public class ConsentedFinancialAccountFieldTransactionPeriod {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
   private OffsetDateTime from;
@@ -58,10 +58,10 @@ public class ConsentedFinancialAccountTransactionPeriod {
   @SerializedName(SERIALIZED_NAME_TO)
   private OffsetDateTime to;
 
-  public ConsentedFinancialAccountTransactionPeriod() {
+  public ConsentedFinancialAccountFieldTransactionPeriod() {
   }
 
-  public ConsentedFinancialAccountTransactionPeriod from(OffsetDateTime from) {
+  public ConsentedFinancialAccountFieldTransactionPeriod from(OffsetDateTime from) {
     
     this.from = from;
     return this;
@@ -84,7 +84,7 @@ public class ConsentedFinancialAccountTransactionPeriod {
   }
 
 
-  public ConsentedFinancialAccountTransactionPeriod to(OffsetDateTime to) {
+  public ConsentedFinancialAccountFieldTransactionPeriod to(OffsetDateTime to) {
     
     this.to = to;
     return this;
@@ -116,9 +116,9 @@ public class ConsentedFinancialAccountTransactionPeriod {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ConsentedFinancialAccountTransactionPeriod consentedFinancialAccountTransactionPeriod = (ConsentedFinancialAccountTransactionPeriod) o;
-    return Objects.equals(this.from, consentedFinancialAccountTransactionPeriod.from) &&
-        Objects.equals(this.to, consentedFinancialAccountTransactionPeriod.to);
+    ConsentedFinancialAccountFieldTransactionPeriod consentedFinancialAccountFieldTransactionPeriod = (ConsentedFinancialAccountFieldTransactionPeriod) o;
+    return Objects.equals(this.from, consentedFinancialAccountFieldTransactionPeriod.from) &&
+        Objects.equals(this.to, consentedFinancialAccountFieldTransactionPeriod.to);
   }
 
   @Override
@@ -129,7 +129,7 @@ public class ConsentedFinancialAccountTransactionPeriod {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ConsentedFinancialAccountTransactionPeriod {\n");
+    sb.append("class ConsentedFinancialAccountFieldTransactionPeriod {\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("}");
@@ -167,27 +167,27 @@ public class ConsentedFinancialAccountTransactionPeriod {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ConsentedFinancialAccountTransactionPeriod
+  * @throws IOException if the JSON Object is invalid with respect to ConsentedFinancialAccountFieldTransactionPeriod
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ConsentedFinancialAccountTransactionPeriod.openapiRequiredFields.isEmpty()) {
+        if (ConsentedFinancialAccountFieldTransactionPeriod.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ConsentedFinancialAccountTransactionPeriod is not found in the empty JSON string", ConsentedFinancialAccountTransactionPeriod.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ConsentedFinancialAccountFieldTransactionPeriod is not found in the empty JSON string", ConsentedFinancialAccountFieldTransactionPeriod.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!ConsentedFinancialAccountTransactionPeriod.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ConsentedFinancialAccountTransactionPeriod` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!ConsentedFinancialAccountFieldTransactionPeriod.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ConsentedFinancialAccountFieldTransactionPeriod` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ConsentedFinancialAccountTransactionPeriod.openapiRequiredFields) {
+      for (String requiredField : ConsentedFinancialAccountFieldTransactionPeriod.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -198,22 +198,22 @@ public class ConsentedFinancialAccountTransactionPeriod {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ConsentedFinancialAccountTransactionPeriod.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ConsentedFinancialAccountTransactionPeriod' and its subtypes
+       if (!ConsentedFinancialAccountFieldTransactionPeriod.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ConsentedFinancialAccountFieldTransactionPeriod' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ConsentedFinancialAccountTransactionPeriod> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ConsentedFinancialAccountTransactionPeriod.class));
+       final TypeAdapter<ConsentedFinancialAccountFieldTransactionPeriod> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ConsentedFinancialAccountFieldTransactionPeriod.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ConsentedFinancialAccountTransactionPeriod>() {
+       return (TypeAdapter<T>) new TypeAdapter<ConsentedFinancialAccountFieldTransactionPeriod>() {
            @Override
-           public void write(JsonWriter out, ConsentedFinancialAccountTransactionPeriod value) throws IOException {
+           public void write(JsonWriter out, ConsentedFinancialAccountFieldTransactionPeriod value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ConsentedFinancialAccountTransactionPeriod read(JsonReader in) throws IOException {
+           public ConsentedFinancialAccountFieldTransactionPeriod read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -224,18 +224,18 @@ public class ConsentedFinancialAccountTransactionPeriod {
   }
 
  /**
-  * Create an instance of ConsentedFinancialAccountTransactionPeriod given an JSON string
+  * Create an instance of ConsentedFinancialAccountFieldTransactionPeriod given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ConsentedFinancialAccountTransactionPeriod
-  * @throws IOException if the JSON string is invalid with respect to ConsentedFinancialAccountTransactionPeriod
+  * @return An instance of ConsentedFinancialAccountFieldTransactionPeriod
+  * @throws IOException if the JSON string is invalid with respect to ConsentedFinancialAccountFieldTransactionPeriod
   */
-  public static ConsentedFinancialAccountTransactionPeriod fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ConsentedFinancialAccountTransactionPeriod.class);
+  public static ConsentedFinancialAccountFieldTransactionPeriod fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ConsentedFinancialAccountFieldTransactionPeriod.class);
   }
 
  /**
-  * Convert an instance of ConsentedFinancialAccountTransactionPeriod to an JSON string
+  * Convert an instance of ConsentedFinancialAccountFieldTransactionPeriod to an JSON string
   *
   * @return JSON string
   */

@@ -8,7 +8,7 @@ SelectedFinancialAccountType : Selected financial account type of financial acco
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**subCategory** | [**FinancialAccountSubCategoryType**](FinancialAccountSubCategoryType.md) |  |  |
+|**subCategory** | [**FinancialAccountSubCategoryType**](FinancialAccountSubCategoryType.md) |  |  [optional] |
 |**drns** | **List&lt;String&gt;** | DRNs. |  |
 
 

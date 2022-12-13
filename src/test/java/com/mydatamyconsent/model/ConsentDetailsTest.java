@@ -20,7 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.CollectibleTypes;
 import com.mydatamyconsent.model.ConsentedDocument;
-import com.mydatamyconsent.model.ConsentedFinancialAccount;
+import com.mydatamyconsent.model.ConsentedFinancialAccountField;
 import com.mydatamyconsent.model.ConsentedIdentifier;
 import com.mydatamyconsent.model.ConsentedMedicalRecord;
 import com.mydatamyconsent.model.DataConsentStatus;

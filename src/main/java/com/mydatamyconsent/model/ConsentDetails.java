@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.CollectibleTypes;
 import com.mydatamyconsent.model.ConsentedDocument;
-import com.mydatamyconsent.model.ConsentedFinancialAccount;
+import com.mydatamyconsent.model.ConsentedFinancialAccountField;
 import com.mydatamyconsent.model.ConsentedIdentifier;
 import com.mydatamyconsent.model.ConsentedMedicalRecord;
 import com.mydatamyconsent.model.DataConsentStatus;
@@ -57,7 +57,7 @@ import com.mydatamyconsent.JSON;
  * ConsentDetails : Consent details.
  */
 @ApiModel(description = "ConsentDetails : Consent details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-12T10:34:21.189574803Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-13T10:34:32.154440563Z[Etc/UTC]")
 public class ConsentDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -121,7 +121,7 @@ public class ConsentDetails {
 
   public static final String SERIALIZED_NAME_FINANCIAL_ACCOUNTS = "financialAccounts";
   @SerializedName(SERIALIZED_NAME_FINANCIAL_ACCOUNTS)
-  private List<ConsentedFinancialAccount> financialAccounts = null;
+  private List<ConsentedFinancialAccountField> financialAccounts = null;
 
   public ConsentDetails() {
   }
@@ -500,13 +500,13 @@ public class ConsentDetails {
   }
 
 
-  public ConsentDetails financialAccounts(List<ConsentedFinancialAccount> financialAccounts) {
+  public ConsentDetails financialAccounts(List<ConsentedFinancialAccountField> financialAccounts) {
     
     this.financialAccounts = financialAccounts;
     return this;
   }
 
-  public ConsentDetails addFinancialAccountsItem(ConsentedFinancialAccount financialAccountsItem) {
+  public ConsentDetails addFinancialAccountsItem(ConsentedFinancialAccountField financialAccountsItem) {
     if (this.financialAccounts == null) {
       this.financialAccounts = new ArrayList<>();
     }
@@ -521,12 +521,12 @@ public class ConsentDetails {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "List of consented financial accounts.")
 
-  public List<ConsentedFinancialAccount> getFinancialAccounts() {
+  public List<ConsentedFinancialAccountField> getFinancialAccounts() {
     return financialAccounts;
   }
 
 
-  public void setFinancialAccounts(List<ConsentedFinancialAccount> financialAccounts) {
+  public void setFinancialAccounts(List<ConsentedFinancialAccountField> financialAccounts) {
     this.financialAccounts = financialAccounts;
   }
 
@@ -741,7 +741,7 @@ public class ConsentDetails {
 
           // validate the optional field `financialAccounts` (array)
           for (int i = 0; i < jsonArrayfinancialAccounts.size(); i++) {
-            ConsentedFinancialAccount.validateJsonObject(jsonArrayfinancialAccounts.get(i).getAsJsonObject());
+            ConsentedFinancialAccountField.validateJsonObject(jsonArrayfinancialAccounts.get(i).getAsJsonObject());
           };
         }
       }

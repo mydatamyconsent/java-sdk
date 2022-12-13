@@ -20,15 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.ConsentedFinancialAccountTransactionPeriod;
 import com.mydatamyconsent.model.FinancialAccountCategoryType;
-import com.mydatamyconsent.model.FinancialAccountDetailsRequired;
 import com.mydatamyconsent.model.FinancialAccountSubCategoryType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * ConsentedFinancialAccount : Consented financial account details.
  */
 @ApiModel(description = "ConsentedFinancialAccount : Consented financial account details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-12T10:34:21.189574803Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-13T10:34:32.154440563Z[Etc/UTC]")
 public class ConsentedFinancialAccount {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -75,22 +71,6 @@ public class ConsentedFinancialAccount {
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
   private String identifier;
-
-  public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
-  @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
-  private String fieldTitle;
-
-  public static final String SERIALIZED_NAME_FIELD_SLUG = "fieldSlug";
-  @SerializedName(SERIALIZED_NAME_FIELD_SLUG)
-  private String fieldSlug;
-
-  public static final String SERIALIZED_NAME_REQUESTED_DETAILS = "requestedDetails";
-  @SerializedName(SERIALIZED_NAME_REQUESTED_DETAILS)
-  private List<FinancialAccountDetailsRequired> requestedDetails = new ArrayList<>();
-
-  public static final String SERIALIZED_NAME_TRANSACTION_PERIOD = "transactionPeriod";
-  @SerializedName(SERIALIZED_NAME_TRANSACTION_PERIOD)
-  private ConsentedFinancialAccountTransactionPeriod transactionPeriod;
 
   public static final String SERIALIZED_NAME_ISSUER_ID = "issuerId";
   @SerializedName(SERIALIZED_NAME_ISSUER_ID)
@@ -218,103 +198,6 @@ public class ConsentedFinancialAccount {
   }
 
 
-  public ConsentedFinancialAccount fieldTitle(String fieldTitle) {
-    
-    this.fieldTitle = fieldTitle;
-    return this;
-  }
-
-   /**
-   * Financial account field title.
-   * @return fieldTitle
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Financial account field title.")
-
-  public String getFieldTitle() {
-    return fieldTitle;
-  }
-
-
-  public void setFieldTitle(String fieldTitle) {
-    this.fieldTitle = fieldTitle;
-  }
-
-
-  public ConsentedFinancialAccount fieldSlug(String fieldSlug) {
-    
-    this.fieldSlug = fieldSlug;
-    return this;
-  }
-
-   /**
-   * Financial account field slug.
-   * @return fieldSlug
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Financial account field slug.")
-
-  public String getFieldSlug() {
-    return fieldSlug;
-  }
-
-
-  public void setFieldSlug(String fieldSlug) {
-    this.fieldSlug = fieldSlug;
-  }
-
-
-  public ConsentedFinancialAccount requestedDetails(List<FinancialAccountDetailsRequired> requestedDetails) {
-    
-    this.requestedDetails = requestedDetails;
-    return this;
-  }
-
-  public ConsentedFinancialAccount addRequestedDetailsItem(FinancialAccountDetailsRequired requestedDetailsItem) {
-    this.requestedDetails.add(requestedDetailsItem);
-    return this;
-  }
-
-   /**
-   * Requested financial account details.
-   * @return requestedDetails
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Requested financial account details.")
-
-  public List<FinancialAccountDetailsRequired> getRequestedDetails() {
-    return requestedDetails;
-  }
-
-
-  public void setRequestedDetails(List<FinancialAccountDetailsRequired> requestedDetails) {
-    this.requestedDetails = requestedDetails;
-  }
-
-
-  public ConsentedFinancialAccount transactionPeriod(ConsentedFinancialAccountTransactionPeriod transactionPeriod) {
-    
-    this.transactionPeriod = transactionPeriod;
-    return this;
-  }
-
-   /**
-   * Get transactionPeriod
-   * @return transactionPeriod
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ConsentedFinancialAccountTransactionPeriod getTransactionPeriod() {
-    return transactionPeriod;
-  }
-
-
-  public void setTransactionPeriod(ConsentedFinancialAccountTransactionPeriod transactionPeriod) {
-    this.transactionPeriod = transactionPeriod;
-  }
-
-
   public ConsentedFinancialAccount issuerId(String issuerId) {
     
     this.issuerId = issuerId;
@@ -376,17 +259,13 @@ public class ConsentedFinancialAccount {
         Objects.equals(this.category, consentedFinancialAccount.category) &&
         Objects.equals(this.subCategory, consentedFinancialAccount.subCategory) &&
         Objects.equals(this.identifier, consentedFinancialAccount.identifier) &&
-        Objects.equals(this.fieldTitle, consentedFinancialAccount.fieldTitle) &&
-        Objects.equals(this.fieldSlug, consentedFinancialAccount.fieldSlug) &&
-        Objects.equals(this.requestedDetails, consentedFinancialAccount.requestedDetails) &&
-        Objects.equals(this.transactionPeriod, consentedFinancialAccount.transactionPeriod) &&
         Objects.equals(this.issuerId, consentedFinancialAccount.issuerId) &&
         Objects.equals(this.issuerName, consentedFinancialAccount.issuerName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, category, subCategory, identifier, fieldTitle, fieldSlug, requestedDetails, transactionPeriod, issuerId, issuerName);
+    return Objects.hash(id, name, category, subCategory, identifier, issuerId, issuerName);
   }
 
   @Override
@@ -398,10 +277,6 @@ public class ConsentedFinancialAccount {
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    subCategory: ").append(toIndentedString(subCategory)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
-    sb.append("    fieldTitle: ").append(toIndentedString(fieldTitle)).append("\n");
-    sb.append("    fieldSlug: ").append(toIndentedString(fieldSlug)).append("\n");
-    sb.append("    requestedDetails: ").append(toIndentedString(requestedDetails)).append("\n");
-    sb.append("    transactionPeriod: ").append(toIndentedString(transactionPeriod)).append("\n");
     sb.append("    issuerId: ").append(toIndentedString(issuerId)).append("\n");
     sb.append("    issuerName: ").append(toIndentedString(issuerName)).append("\n");
     sb.append("}");
@@ -431,10 +306,6 @@ public class ConsentedFinancialAccount {
     openapiFields.add("category");
     openapiFields.add("subCategory");
     openapiFields.add("identifier");
-    openapiFields.add("fieldTitle");
-    openapiFields.add("fieldSlug");
-    openapiFields.add("requestedDetails");
-    openapiFields.add("transactionPeriod");
     openapiFields.add("issuerId");
     openapiFields.add("issuerName");
 
@@ -445,9 +316,6 @@ public class ConsentedFinancialAccount {
     openapiRequiredFields.add("category");
     openapiRequiredFields.add("subCategory");
     openapiRequiredFields.add("identifier");
-    openapiRequiredFields.add("fieldTitle");
-    openapiRequiredFields.add("fieldSlug");
-    openapiRequiredFields.add("requestedDetails");
     openapiRequiredFields.add("issuerId");
     openapiRequiredFields.add("issuerName");
   }
@@ -497,20 +365,6 @@ public class ConsentedFinancialAccount {
       }
       if ((jsonObj.get("identifier") != null && !jsonObj.get("identifier").isJsonNull()) && !jsonObj.get("identifier").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("identifier").toString()));
-      }
-      if ((jsonObj.get("fieldTitle") != null && !jsonObj.get("fieldTitle").isJsonNull()) && !jsonObj.get("fieldTitle").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fieldTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fieldTitle").toString()));
-      }
-      if ((jsonObj.get("fieldSlug") != null && !jsonObj.get("fieldSlug").isJsonNull()) && !jsonObj.get("fieldSlug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fieldSlug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fieldSlug").toString()));
-      }
-      // ensure the json data is an array
-      if ((jsonObj.get("requestedDetails") != null && !jsonObj.get("requestedDetails").isJsonNull()) && !jsonObj.get("requestedDetails").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `requestedDetails` to be an array in the JSON string but got `%s`", jsonObj.get("requestedDetails").toString()));
-      }
-      // validate the optional field `transactionPeriod`
-      if (jsonObj.get("transactionPeriod") != null && !jsonObj.get("transactionPeriod").isJsonNull()) {
-        ConsentedFinancialAccountTransactionPeriod.validateJsonObject(jsonObj.getAsJsonObject("transactionPeriod"));
       }
       if ((jsonObj.get("issuerId") != null && !jsonObj.get("issuerId").isJsonNull()) && !jsonObj.get("issuerId").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `issuerId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issuerId").toString()));

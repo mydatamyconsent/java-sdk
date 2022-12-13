@@ -23,7 +23,7 @@ ConsentDetails : Consent details.
 |**identifiers** | [**List&lt;ConsentedIdentifier&gt;**](ConsentedIdentifier.md) | Consented identity details. |  [optional] |
 |**documents** | [**List&lt;ConsentedDocument&gt;**](ConsentedDocument.md) | List of consented documents. |  [optional] |
 |**medicalRecords** | [**List&lt;ConsentedMedicalRecord&gt;**](ConsentedMedicalRecord.md) | List of consented medical records. |  [optional] |
-|**financialAccounts** | [**List&lt;ConsentedFinancialAccount&gt;**](ConsentedFinancialAccount.md) | List of consented financial accounts. |  [optional] |
+|**financialAccounts** | [**List&lt;ConsentedFinancialAccountField&gt;**](ConsentedFinancialAccountField.md) | List of consented financial accounts. |  [optional] |
 
 
 

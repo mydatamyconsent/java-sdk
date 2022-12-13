@@ -18,42 +18,70 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.ConsentedFinancialAccount;
+import com.mydatamyconsent.model.ConsentedFinancialAccountFieldTransactionPeriod;
+import com.mydatamyconsent.model.FinancialAccountDetailsRequired;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ConsentedFinancialAccountTransactionPeriod
+ * Model tests for ConsentedFinancialAccountField
  */
-public class ConsentedFinancialAccountTransactionPeriodTest {
-    private final ConsentedFinancialAccountTransactionPeriod model = new ConsentedFinancialAccountTransactionPeriod();
+public class ConsentedFinancialAccountFieldTest {
+    private final ConsentedFinancialAccountField model = new ConsentedFinancialAccountField();
 
     /**
-     * Model tests for ConsentedFinancialAccountTransactionPeriod
+     * Model tests for ConsentedFinancialAccountField
      */
     @Test
-    public void testConsentedFinancialAccountTransactionPeriod() {
-        // TODO: test ConsentedFinancialAccountTransactionPeriod
+    public void testConsentedFinancialAccountField() {
+        // TODO: test ConsentedFinancialAccountField
     }
 
     /**
-     * Test the property 'from'
+     * Test the property 'fieldTitle'
      */
     @Test
-    public void fromTest() {
-        // TODO: test from
+    public void fieldTitleTest() {
+        // TODO: test fieldTitle
     }
 
     /**
-     * Test the property 'to'
+     * Test the property 'fieldSlug'
      */
     @Test
-    public void toTest() {
-        // TODO: test to
+    public void fieldSlugTest() {
+        // TODO: test fieldSlug
+    }
+
+    /**
+     * Test the property 'requestedDetails'
+     */
+    @Test
+    public void requestedDetailsTest() {
+        // TODO: test requestedDetails
+    }
+
+    /**
+     * Test the property 'transactionPeriod'
+     */
+    @Test
+    public void transactionPeriodTest() {
+        // TODO: test transactionPeriod
+    }
+
+    /**
+     * Test the property 'consentedAccounts'
+     */
+    @Test
+    public void consentedAccountsTest() {
+        // TODO: test consentedAccounts
     }
 
 }
