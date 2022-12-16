@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * FinancialAccountTransactionEquityTransactionAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-15T10:34:28.642202867Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-16T10:33:00.181873541Z[Etc/UTC]")
 public class FinancialAccountTransactionEquityTransactionAllOf {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
