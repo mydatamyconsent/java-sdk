@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * OrganizationConsentRequestDetails : Organization consent request details.
  */
 @ApiModel(description = "OrganizationConsentRequestDetails : Organization consent request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-16T10:33:00.181873541Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-17T10:32:12.859979480Z[Etc/UTC]")
 public class OrganizationConsentRequestDetails {
   public static final String SERIALIZED_NAME_RECEIVER = "receiver";
   @SerializedName(SERIALIZED_NAME_RECEIVER)
