@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * KeyValuePair
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T10:33:51.205599453Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-23T10:33:16.366816168Z[Etc/UTC]")
 public class KeyValuePair {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
