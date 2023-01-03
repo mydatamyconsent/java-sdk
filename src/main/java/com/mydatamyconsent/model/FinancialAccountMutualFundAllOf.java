@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * FinancialAccountMutualFundAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-02T10:35:04.848219626Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T10:35:25.331080667Z[Etc/UTC]")
 public class FinancialAccountMutualFundAllOf {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
