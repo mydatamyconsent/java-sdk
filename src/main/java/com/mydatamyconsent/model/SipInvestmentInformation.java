@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * SipInvestmentInformation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-03T10:35:25.331080667Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T10:34:40.726799487Z[Etc/UTC]")
 public class SipInvestmentInformation {
   public static final String SERIALIZED_NAME_INSTALMENT_AMOUNT = "instalment_amount";
   @SerializedName(SERIALIZED_NAME_INSTALMENT_AMOUNT)
