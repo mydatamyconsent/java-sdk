@@ -13,7 +13,7 @@
 
 package com.mydatamyconsent;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-08T10:34:10.234151375Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T10:37:31.000977502Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";

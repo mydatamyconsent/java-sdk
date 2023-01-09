@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * MedicalRecordField : Medical record field of consent request template.
  */
 @ApiModel(description = "MedicalRecordField : Medical record field of consent request template.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-08T10:34:10.234151375Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-09T10:37:31.000977502Z[Etc/UTC]")
 public class MedicalRecordField {
   public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
