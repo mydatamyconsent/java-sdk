@@ -52,7 +52,7 @@ import com.mydatamyconsent.JSON;
  * DataProviderDetails: Data provider details.
  */
 @ApiModel(description = "DataProviderDetails: Data provider details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-11T10:40:09.470253337Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T10:39:20.350358144Z[Etc/UTC]")
 public class DataProviderDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
