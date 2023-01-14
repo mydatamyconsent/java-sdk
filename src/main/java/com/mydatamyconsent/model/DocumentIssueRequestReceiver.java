@@ -51,7 +51,7 @@ import com.mydatamyconsent.JSON;
 /**
  * DocumentIssueRequestReceiver
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-13T10:37:06.093425426Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-14T10:34:04.045316888Z[Etc/UTC]")
 public class DocumentIssueRequestReceiver {
   public static final String SERIALIZED_NAME_COUNTRY_ISO2_CODE = "countryIso2Code";
   @SerializedName(SERIALIZED_NAME_COUNTRY_ISO2_CODE)
