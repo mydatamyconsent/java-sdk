@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
  * DocumentDigitalSignature : Document digital signature.
  */
 @ApiModel(description = "DocumentDigitalSignature : Document digital signature.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-15T10:33:43.687511143Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T10:37:10.988564583Z[Etc/UTC]")
 public class DocumentDigitalSignature {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
