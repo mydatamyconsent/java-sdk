@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
 /**
  * PaginatedListOfConsentRequestTemplates
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-25T10:35:18.636604589Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T10:35:46.908205274Z[Etc/UTC]")
 public class PaginatedListOfConsentRequestTemplates {
   public static final String SERIALIZED_NAME_PAGE_NO = "pageNo";
   @SerializedName(SERIALIZED_NAME_PAGE_NO)

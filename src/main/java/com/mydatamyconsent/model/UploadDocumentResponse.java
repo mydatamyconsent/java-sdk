@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
  * UploadDocumentResponse : Response of document upload.
  */
 @ApiModel(description = "UploadDocumentResponse : Response of document upload.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-25T10:35:18.636604589Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-26T10:35:46.908205274Z[Etc/UTC]")
 public class UploadDocumentResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
