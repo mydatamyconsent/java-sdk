@@ -59,7 +59,7 @@ import com.mydatamyconsent.JSON;
  * IndividualConsentRequestTemplateDetails :  Individual consent request template details.
  */
 @ApiModel(description = "IndividualConsentRequestTemplateDetails :  Individual consent request template details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-31T10:35:45.522966690Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T10:36:34.493691274Z[Etc/UTC]")
 public class IndividualConsentRequestTemplateDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
