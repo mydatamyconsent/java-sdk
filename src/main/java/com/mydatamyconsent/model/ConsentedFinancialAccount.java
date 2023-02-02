@@ -50,7 +50,7 @@ import com.mydatamyconsent.JSON;
  * ConsentedFinancialAccount : Consented financial account details.
  */
 @ApiModel(description = "ConsentedFinancialAccount : Consented financial account details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T10:36:34.493691274Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-02T10:36:24.535112434Z[Etc/UTC]")
 public class ConsentedFinancialAccount {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
