@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
  * Life : Life with unit and value.
  */
 @ApiModel(description = "Life : Life with unit and value.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-03T10:34:49.315593835Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-04T10:33:51.561506929Z[Etc/UTC]")
 public class Life {
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
