@@ -67,7 +67,7 @@ import com.google.gson.JsonParseException;
 
 import com.mydatamyconsent.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-06T10:36:42.293143452Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-07T10:36:20.049528899Z[Etc/UTC]")
 public class FinancialAccountTransaction extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(FinancialAccountTransaction.class.getName());
 
