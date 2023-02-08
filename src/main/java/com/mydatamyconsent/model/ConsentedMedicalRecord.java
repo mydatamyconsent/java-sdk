@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
  * ConsentedMedicalRecord : Consented medical record details.
  */
 @ApiModel(description = "ConsentedMedicalRecord : Consented medical record details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-07T10:36:20.049528899Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T10:39:00.681587347Z[Etc/UTC]")
 public class ConsentedMedicalRecord {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
