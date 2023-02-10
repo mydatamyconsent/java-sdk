@@ -9,9 +9,9 @@ DataProcessingAgreement : Data processing agreement details.
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **String** | Agreement id. |  |
-|**version** | **String** | Agreement version. |  |
-|**body** | **String** | Agreement body content. |  |
-|**attachmentUrl** | **String** | Agreement attachment file URL. |  |
+|**name** | **String** | Agreement name. |  |
+|**issuerType** | **IssuerType** |  |  |
+|**agreementUrl** | **String** | Agreement attachment file URL. |  |
 
 
 

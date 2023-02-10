@@ -69,6 +69,7 @@ docs/IndividualConsentRequestTemplateDetailsDataLife.md
 docs/IndividualConsentRequestTemplateDetailsRequestLife.md
 docs/IndividualsApi.md
 docs/IssuedDocument.md
+docs/IssuerType.md
 docs/KeyValuePair.md
 docs/Life.md
 docs/MedicalRecordField.md
@@ -205,6 +206,7 @@ src/main/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsD
 src/main/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsDataLife.java
 src/main/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsRequestLife.java
 src/main/java/com/mydatamyconsent/model/IssuedDocument.java
+src/main/java/com/mydatamyconsent/model/IssuerType.java
 src/main/java/com/mydatamyconsent/model/KeyValuePair.java
 src/main/java/com/mydatamyconsent/model/Life.java
 src/main/java/com/mydatamyconsent/model/MedicalRecordField.java
@@ -315,6 +317,7 @@ src/test/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsD
 src/test/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsRequestLifeTest.java
 src/test/java/com/mydatamyconsent/model/IndividualConsentRequestTemplateDetailsTest.java
 src/test/java/com/mydatamyconsent/model/IssuedDocumentTest.java
+src/test/java/com/mydatamyconsent/model/IssuerTypeTest.java
 src/test/java/com/mydatamyconsent/model/KeyValuePairTest.java
 src/test/java/com/mydatamyconsent/model/LifeTest.java
 src/test/java/com/mydatamyconsent/model/MedicalRecordFieldTest.java

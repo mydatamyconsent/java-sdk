@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.IssuerType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -48,27 +49,27 @@ public class DataProcessingAgreementTest {
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'name'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
-     * Test the property 'body'
+     * Test the property 'issuerType'
      */
     @Test
-    public void bodyTest() {
-        // TODO: test body
+    public void issuerTypeTest() {
+        // TODO: test issuerType
     }
 
     /**
-     * Test the property 'attachmentUrl'
+     * Test the property 'agreementUrl'
      */
     @Test
-    public void attachmentUrlTest() {
-        // TODO: test attachmentUrl
+    public void agreementUrlTest() {
+        // TODO: test agreementUrl
     }
 
 }

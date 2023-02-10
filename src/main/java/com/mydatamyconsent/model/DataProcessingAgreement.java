@@ -20,6 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.IssuerType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -48,23 +49,23 @@ import com.mydatamyconsent.JSON;
  * DataProcessingAgreement : Data processing agreement details.
  */
 @ApiModel(description = "DataProcessingAgreement : Data processing agreement details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-09T10:36:37.913862376Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-10T10:38:11.282448237Z[Etc/UTC]")
 public class DataProcessingAgreement {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private String version;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_BODY = "body";
-  @SerializedName(SERIALIZED_NAME_BODY)
-  private String body;
+  public static final String SERIALIZED_NAME_ISSUER_TYPE = "issuerType";
+  @SerializedName(SERIALIZED_NAME_ISSUER_TYPE)
+  private IssuerType issuerType;
 
-  public static final String SERIALIZED_NAME_ATTACHMENT_URL = "attachmentUrl";
-  @SerializedName(SERIALIZED_NAME_ATTACHMENT_URL)
-  private String attachmentUrl;
+  public static final String SERIALIZED_NAME_AGREEMENT_URL = "agreementUrl";
+  @SerializedName(SERIALIZED_NAME_AGREEMENT_URL)
+  private String agreementUrl;
 
   public DataProcessingAgreement() {
   }
@@ -92,72 +93,72 @@ public class DataProcessingAgreement {
   }
 
 
-  public DataProcessingAgreement version(String version) {
+  public DataProcessingAgreement name(String name) {
     
-    this.version = version;
+    this.name = name;
     return this;
   }
 
    /**
-   * Agreement version.
-   * @return version
+   * Agreement name.
+   * @return name
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Agreement version.")
+  @ApiModelProperty(required = true, value = "Agreement name.")
 
-  public String getVersion() {
-    return version;
+  public String getName() {
+    return name;
   }
 
 
-  public void setVersion(String version) {
-    this.version = version;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public DataProcessingAgreement body(String body) {
+  public DataProcessingAgreement issuerType(IssuerType issuerType) {
     
-    this.body = body;
+    this.issuerType = issuerType;
     return this;
   }
 
    /**
-   * Agreement body content.
-   * @return body
+   * Get issuerType
+   * @return issuerType
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Agreement body content.")
+  @ApiModelProperty(required = true, value = "")
 
-  public String getBody() {
-    return body;
+  public IssuerType getIssuerType() {
+    return issuerType;
   }
 
 
-  public void setBody(String body) {
-    this.body = body;
+  public void setIssuerType(IssuerType issuerType) {
+    this.issuerType = issuerType;
   }
 
 
-  public DataProcessingAgreement attachmentUrl(String attachmentUrl) {
+  public DataProcessingAgreement agreementUrl(String agreementUrl) {
     
-    this.attachmentUrl = attachmentUrl;
+    this.agreementUrl = agreementUrl;
     return this;
   }
 
    /**
    * Agreement attachment file URL.
-   * @return attachmentUrl
+   * @return agreementUrl
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "Agreement attachment file URL.")
 
-  public String getAttachmentUrl() {
-    return attachmentUrl;
+  public String getAgreementUrl() {
+    return agreementUrl;
   }
 
 
-  public void setAttachmentUrl(String attachmentUrl) {
-    this.attachmentUrl = attachmentUrl;
+  public void setAgreementUrl(String agreementUrl) {
+    this.agreementUrl = agreementUrl;
   }
 
 
@@ -172,14 +173,14 @@ public class DataProcessingAgreement {
     }
     DataProcessingAgreement dataProcessingAgreement = (DataProcessingAgreement) o;
     return Objects.equals(this.id, dataProcessingAgreement.id) &&
-        Objects.equals(this.version, dataProcessingAgreement.version) &&
-        Objects.equals(this.body, dataProcessingAgreement.body) &&
-        Objects.equals(this.attachmentUrl, dataProcessingAgreement.attachmentUrl);
+        Objects.equals(this.name, dataProcessingAgreement.name) &&
+        Objects.equals(this.issuerType, dataProcessingAgreement.issuerType) &&
+        Objects.equals(this.agreementUrl, dataProcessingAgreement.agreementUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, version, body, attachmentUrl);
+    return Objects.hash(id, name, issuerType, agreementUrl);
   }
 
   @Override
@@ -187,9 +188,9 @@ public class DataProcessingAgreement {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataProcessingAgreement {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
-    sb.append("    body: ").append(toIndentedString(body)).append("\n");
-    sb.append("    attachmentUrl: ").append(toIndentedString(attachmentUrl)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    issuerType: ").append(toIndentedString(issuerType)).append("\n");
+    sb.append("    agreementUrl: ").append(toIndentedString(agreementUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -213,16 +214,16 @@ public class DataProcessingAgreement {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
-    openapiFields.add("version");
-    openapiFields.add("body");
-    openapiFields.add("attachmentUrl");
+    openapiFields.add("name");
+    openapiFields.add("issuerType");
+    openapiFields.add("agreementUrl");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("id");
-    openapiRequiredFields.add("version");
-    openapiRequiredFields.add("body");
-    openapiRequiredFields.add("attachmentUrl");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("issuerType");
+    openapiRequiredFields.add("agreementUrl");
   }
 
  /**
@@ -257,14 +258,11 @@ public class DataProcessingAgreement {
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }
-      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if ((jsonObj.get("body") != null && !jsonObj.get("body").isJsonNull()) && !jsonObj.get("body").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `body` to be a primitive type in the JSON string but got `%s`", jsonObj.get("body").toString()));
-      }
-      if ((jsonObj.get("attachmentUrl") != null && !jsonObj.get("attachmentUrl").isJsonNull()) && !jsonObj.get("attachmentUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `attachmentUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attachmentUrl").toString()));
+      if ((jsonObj.get("agreementUrl") != null && !jsonObj.get("agreementUrl").isJsonNull()) && !jsonObj.get("agreementUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `agreementUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("agreementUrl").toString()));
       }
   }
 
