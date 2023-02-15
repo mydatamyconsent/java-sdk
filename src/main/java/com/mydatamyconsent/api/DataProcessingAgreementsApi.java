@@ -27,11 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.mydatamyconsent.model.CreateDataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreement;
 import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.PaginatedListOfDataProcessingAgreements;
-import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -89,7 +87,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -168,7 +166,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -190,7 +188,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -214,7 +212,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -237,7 +235,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -313,7 +311,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -334,7 +332,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -357,7 +355,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -380,7 +378,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -456,7 +454,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -477,7 +475,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -500,7 +498,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -508,158 +506,6 @@ public class DataProcessingAgreementsApi {
     public okhttp3.Call v1DataAgreementsIdGetAsync(String id, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = v1DataAgreementsIdGetValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for v1DataAgreementsIdPut
-     * @param id  (required)
-     * @param updateDataProcessingAgreement  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataAgreementsIdPutCall(String id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = updateDataProcessingAgreement;
-
-        // create path and map variables
-        String localVarPath = "/v1/data-agreements/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json; charset=utf-8"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json; charset=utf-8"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "OAuth2ClientCredentials" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call v1DataAgreementsIdPutValidateBeforeCall(String id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'id' is set
-        if (id == null) {
-            throw new ApiException("Missing the required parameter 'id' when calling v1DataAgreementsIdPut(Async)");
-        }
-        
-        // verify the required parameter 'updateDataProcessingAgreement' is set
-        if (updateDataProcessingAgreement == null) {
-            throw new ApiException("Missing the required parameter 'updateDataProcessingAgreement' when calling v1DataAgreementsIdPut(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = v1DataAgreementsIdPutCall(id, updateDataProcessingAgreement, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Update data processing agreement.
-     * 
-     * @param id  (required)
-     * @param updateDataProcessingAgreement  (required)
-     * @return DataProcessingAgreement
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public DataProcessingAgreement v1DataAgreementsIdPut(String id, UpdateDataProcessingAgreement updateDataProcessingAgreement) throws ApiException {
-        ApiResponse<DataProcessingAgreement> localVarResp = v1DataAgreementsIdPutWithHttpInfo(id, updateDataProcessingAgreement);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Update data processing agreement.
-     * 
-     * @param id  (required)
-     * @param updateDataProcessingAgreement  (required)
-     * @return ApiResponse&lt;DataProcessingAgreement&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<DataProcessingAgreement> v1DataAgreementsIdPutWithHttpInfo(String id, UpdateDataProcessingAgreement updateDataProcessingAgreement) throws ApiException {
-        okhttp3.Call localVarCall = v1DataAgreementsIdPutValidateBeforeCall(id, updateDataProcessingAgreement, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Update data processing agreement. (asynchronously)
-     * 
-     * @param id  (required)
-     * @param updateDataProcessingAgreement  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataAgreementsIdPutAsync(String id, UpdateDataProcessingAgreement updateDataProcessingAgreement, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = v1DataAgreementsIdPutValidateBeforeCall(id, updateDataProcessingAgreement, _callback);
         Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -675,7 +521,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -751,7 +597,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -772,7 +618,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -795,7 +641,7 @@ public class DataProcessingAgreementsApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -804,148 +650,6 @@ public class DataProcessingAgreementsApi {
 
         okhttp3.Call localVarCall = v1DataAgreementsIdTerminatePutValidateBeforeCall(id, _callback);
         Type localVarReturnType = new TypeToken<Boolean>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for v1DataAgreementsPost
-     * @param createDataProcessingAgreement  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataAgreementsPostCall(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = createDataProcessingAgreement;
-
-        // create path and map variables
-        String localVarPath = "/v1/data-agreements";
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json; charset=utf-8"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json; charset=utf-8"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "OAuth2ClientCredentials" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call v1DataAgreementsPostValidateBeforeCall(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback _callback) throws ApiException {
-        
-        // verify the required parameter 'createDataProcessingAgreement' is set
-        if (createDataProcessingAgreement == null) {
-            throw new ApiException("Missing the required parameter 'createDataProcessingAgreement' when calling v1DataAgreementsPost(Async)");
-        }
-        
-
-        okhttp3.Call localVarCall = v1DataAgreementsPostCall(createDataProcessingAgreement, _callback);
-        return localVarCall;
-
-    }
-
-    /**
-     * Create a data processing agreement.
-     * 
-     * @param createDataProcessingAgreement  (required)
-     * @return DataProcessingAgreement
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public DataProcessingAgreement v1DataAgreementsPost(CreateDataProcessingAgreement createDataProcessingAgreement) throws ApiException {
-        ApiResponse<DataProcessingAgreement> localVarResp = v1DataAgreementsPostWithHttpInfo(createDataProcessingAgreement);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Create a data processing agreement.
-     * 
-     * @param createDataProcessingAgreement  (required)
-     * @return ApiResponse&lt;DataProcessingAgreement&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<DataProcessingAgreement> v1DataAgreementsPostWithHttpInfo(CreateDataProcessingAgreement createDataProcessingAgreement) throws ApiException {
-        okhttp3.Call localVarCall = v1DataAgreementsPostValidateBeforeCall(createDataProcessingAgreement, null);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Create a data processing agreement. (asynchronously)
-     * 
-     * @param createDataProcessingAgreement  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td>  </td><td>  -  </td></tr>
-        <tr><td> 500 </td><td>  </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call v1DataAgreementsPostAsync(CreateDataProcessingAgreement createDataProcessingAgreement, final ApiCallback<DataProcessingAgreement> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = v1DataAgreementsPostValidateBeforeCall(createDataProcessingAgreement, _callback);
-        Type localVarReturnType = new TypeToken<DataProcessingAgreement>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -7,9 +7,7 @@ All URIs are relative to *https://api.mydatamyconsent.com*
 | [**v1DataAgreementsGet**](DataProcessingAgreementsApi.md#v1DataAgreementsGet) | **GET** /v1/data-agreements | Get paginated data processing agreements. |
 | [**v1DataAgreementsIdDelete**](DataProcessingAgreementsApi.md#v1DataAgreementsIdDelete) | **DELETE** /v1/data-agreements/{id} | Delete a data processing agreement this will not delete a published or a agreement in use with consents. |
 | [**v1DataAgreementsIdGet**](DataProcessingAgreementsApi.md#v1DataAgreementsIdGet) | **GET** /v1/data-agreements/{id} | Get data processing agreement by id. |
-| [**v1DataAgreementsIdPut**](DataProcessingAgreementsApi.md#v1DataAgreementsIdPut) | **PUT** /v1/data-agreements/{id} | Update data processing agreement. |
 | [**v1DataAgreementsIdTerminatePut**](DataProcessingAgreementsApi.md#v1DataAgreementsIdTerminatePut) | **PUT** /v1/data-agreements/{id}/terminate | Terminate a data processing agreement by id. |
-| [**v1DataAgreementsPost**](DataProcessingAgreementsApi.md#v1DataAgreementsPost) | **POST** /v1/data-agreements | Create a data processing agreement. |
 
 
 <a name="v1DataAgreementsGet"></a>
@@ -79,7 +77,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** |  |  -  |
 | **400** |  |  -  |
-| **403** |  |  -  |
+| **401** |  |  -  |
 | **404** |  |  -  |
 | **500** |  |  -  |
 
@@ -148,7 +146,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** |  |  -  |
 | **400** |  |  -  |
-| **403** |  |  -  |
+| **401** |  |  -  |
 | **404** |  |  -  |
 | **500** |  |  -  |
 
@@ -217,78 +215,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** |  |  -  |
 | **400** |  |  -  |
-| **403** |  |  -  |
-| **404** |  |  -  |
-| **500** |  |  -  |
-
-<a name="v1DataAgreementsIdPut"></a>
-# **v1DataAgreementsIdPut**
-> DataProcessingAgreement v1DataAgreementsIdPut(id, updateDataProcessingAgreement)
-
-Update data processing agreement.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.auth.*;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataProcessingAgreementsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.mydatamyconsent.com");
-    
-    // Configure OAuth2 access token for authorization: OAuth2ClientCredentials
-    OAuth OAuth2ClientCredentials = (OAuth) defaultClient.getAuthentication("OAuth2ClientCredentials");
-    OAuth2ClientCredentials.setAccessToken("YOUR ACCESS TOKEN");
-
-    DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    String id = "id_example"; // String | 
-    UpdateDataProcessingAgreement updateDataProcessingAgreement = new UpdateDataProcessingAgreement(); // UpdateDataProcessingAgreement | 
-    try {
-      DataProcessingAgreement result = apiInstance.v1DataAgreementsIdPut(id, updateDataProcessingAgreement);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsIdPut");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
-| **updateDataProcessingAgreement** | [**UpdateDataProcessingAgreement**](UpdateDataProcessingAgreement.md)|  | |
-
-### Return type
-
-[**DataProcessingAgreement**](DataProcessingAgreement.md)
-
-### Authorization
-
-[OAuth2ClientCredentials](../README.md#OAuth2ClientCredentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** |  |  -  |
-| **400** |  |  -  |
-| **403** |  |  -  |
+| **401** |  |  -  |
 | **404** |  |  -  |
 | **500** |  |  -  |
 
@@ -357,76 +284,7 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** |  |  -  |
 | **400** |  |  -  |
-| **403** |  |  -  |
-| **404** |  |  -  |
-| **500** |  |  -  |
-
-<a name="v1DataAgreementsPost"></a>
-# **v1DataAgreementsPost**
-> DataProcessingAgreement v1DataAgreementsPost(createDataProcessingAgreement)
-
-Create a data processing agreement.
-
-### Example
-```java
-// Import classes:
-import com.mydatamyconsent.ApiClient;
-import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.Configuration;
-import com.mydatamyconsent.auth.*;
-import com.mydatamyconsent.models.*;
-import com.mydatamyconsent.api.DataProcessingAgreementsApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.mydatamyconsent.com");
-    
-    // Configure OAuth2 access token for authorization: OAuth2ClientCredentials
-    OAuth OAuth2ClientCredentials = (OAuth) defaultClient.getAuthentication("OAuth2ClientCredentials");
-    OAuth2ClientCredentials.setAccessToken("YOUR ACCESS TOKEN");
-
-    DataProcessingAgreementsApi apiInstance = new DataProcessingAgreementsApi(defaultClient);
-    CreateDataProcessingAgreement createDataProcessingAgreement = new CreateDataProcessingAgreement(); // CreateDataProcessingAgreement | 
-    try {
-      DataProcessingAgreement result = apiInstance.v1DataAgreementsPost(createDataProcessingAgreement);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataProcessingAgreementsApi#v1DataAgreementsPost");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **createDataProcessingAgreement** | [**CreateDataProcessingAgreement**](CreateDataProcessingAgreement.md)|  | |
-
-### Return type
-
-[**DataProcessingAgreement**](DataProcessingAgreement.md)
-
-### Authorization
-
-[OAuth2ClientCredentials](../README.md#OAuth2ClientCredentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json; charset=utf-8
- - **Accept**: application/json; charset=utf-8
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** |  |  -  |
-| **400** |  |  -  |
-| **403** |  |  -  |
+| **401** |  |  -  |
 | **404** |  |  -  |
 | **500** |  |  -  |
 

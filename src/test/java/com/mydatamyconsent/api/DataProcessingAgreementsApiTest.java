@@ -14,11 +14,9 @@
 package com.mydatamyconsent.api;
 
 import com.mydatamyconsent.ApiException;
-import com.mydatamyconsent.model.CreateDataProcessingAgreement;
 import com.mydatamyconsent.model.DataProcessingAgreement;
 import com.mydatamyconsent.model.Error;
 import com.mydatamyconsent.model.PaginatedListOfDataProcessingAgreements;
-import com.mydatamyconsent.model.UpdateDataProcessingAgreement;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -73,19 +71,6 @@ public class DataProcessingAgreementsApiTest {
     }
 
     /**
-     * Update data processing agreement.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void v1DataAgreementsIdPutTest() throws ApiException {
-        String id = null;
-        UpdateDataProcessingAgreement updateDataProcessingAgreement = null;
-        DataProcessingAgreement response = api.v1DataAgreementsIdPut(id, updateDataProcessingAgreement);
-        // TODO: test validations
-    }
-
-    /**
      * Terminate a data processing agreement by id.
      *
      * @throws ApiException if the Api call fails
@@ -94,18 +79,6 @@ public class DataProcessingAgreementsApiTest {
     public void v1DataAgreementsIdTerminatePutTest() throws ApiException {
         String id = null;
         Boolean response = api.v1DataAgreementsIdTerminatePut(id);
-        // TODO: test validations
-    }
-
-    /**
-     * Create a data processing agreement.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void v1DataAgreementsPostTest() throws ApiException {
-        CreateDataProcessingAgreement createDataProcessingAgreement = null;
-        DataProcessingAgreement response = api.v1DataAgreementsPost(createDataProcessingAgreement);
         // TODO: test validations
     }
 

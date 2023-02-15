@@ -15,7 +15,6 @@ docs/ConsentedFinancialAccountFieldTransactionPeriod.md
 docs/ConsentedIdentifier.md
 docs/ConsentedMedicalRecord.md
 docs/CreateConsentRequest.md
-docs/CreateDataProcessingAgreement.md
 docs/DataConsentStatus.md
 docs/DataProcessingAgreement.md
 docs/DataProcessingAgreementsApi.md
@@ -107,7 +106,6 @@ docs/SupportedDocumentType.md
 docs/SupportedEntityType.md
 docs/SupportedIdentifier.md
 docs/SupportedIdentifiersApi.md
-docs/UpdateDataProcessingAgreement.md
 docs/UploadDocumentResponse.md
 docs/UriDetails.md
 gradle.properties
@@ -155,7 +153,6 @@ src/main/java/com/mydatamyconsent/model/ConsentedFinancialAccountFieldTransactio
 src/main/java/com/mydatamyconsent/model/ConsentedIdentifier.java
 src/main/java/com/mydatamyconsent/model/ConsentedMedicalRecord.java
 src/main/java/com/mydatamyconsent/model/CreateConsentRequest.java
-src/main/java/com/mydatamyconsent/model/CreateDataProcessingAgreement.java
 src/main/java/com/mydatamyconsent/model/DataConsentStatus.java
 src/main/java/com/mydatamyconsent/model/DataProcessingAgreement.java
 src/main/java/com/mydatamyconsent/model/DataProtectionOfficer.java
@@ -242,7 +239,6 @@ src/main/java/com/mydatamyconsent/model/SipTransaction.java
 src/main/java/com/mydatamyconsent/model/SupportedDocumentType.java
 src/main/java/com/mydatamyconsent/model/SupportedEntityType.java
 src/main/java/com/mydatamyconsent/model/SupportedIdentifier.java
-src/main/java/com/mydatamyconsent/model/UpdateDataProcessingAgreement.java
 src/main/java/com/mydatamyconsent/model/UploadDocumentResponse.java
 src/main/java/com/mydatamyconsent/model/UriDetails.java
 src/test/java/com/mydatamyconsent/api/DataProcessingAgreementsApiTest.java
@@ -266,7 +262,6 @@ src/test/java/com/mydatamyconsent/model/ConsentedFinancialAccountTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedIdentifierTest.java
 src/test/java/com/mydatamyconsent/model/ConsentedMedicalRecordTest.java
 src/test/java/com/mydatamyconsent/model/CreateConsentRequestTest.java
-src/test/java/com/mydatamyconsent/model/CreateDataProcessingAgreementTest.java
 src/test/java/com/mydatamyconsent/model/DataConsentStatusTest.java
 src/test/java/com/mydatamyconsent/model/DataProcessingAgreementTest.java
 src/test/java/com/mydatamyconsent/model/DataProtectionOfficerTest.java
@@ -353,6 +348,5 @@ src/test/java/com/mydatamyconsent/model/SipTransactionTest.java
 src/test/java/com/mydatamyconsent/model/SupportedDocumentTypeTest.java
 src/test/java/com/mydatamyconsent/model/SupportedEntityTypeTest.java
 src/test/java/com/mydatamyconsent/model/SupportedIdentifierTest.java
-src/test/java/com/mydatamyconsent/model/UpdateDataProcessingAgreementTest.java
 src/test/java/com/mydatamyconsent/model/UploadDocumentResponseTest.java
 src/test/java/com/mydatamyconsent/model/UriDetailsTest.java

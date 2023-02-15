@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: 1.0
-  - Build date: 2023-02-14T10:38:00.830677073Z[Etc/UTC]
+  - Build date: 2023-02-15T10:37:39.065059086Z[Etc/UTC]
 
 Unleashing the power of consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -124,9 +124,7 @@ Class | Method | HTTP request | Description
 *DataProcessingAgreementsApi* | [**v1DataAgreementsGet**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsGet) | **GET** /v1/data-agreements | Get paginated data processing agreements.
 *DataProcessingAgreementsApi* | [**v1DataAgreementsIdDelete**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsIdDelete) | **DELETE** /v1/data-agreements/{id} | Delete a data processing agreement this will not delete a published or a agreement in use with consents.
 *DataProcessingAgreementsApi* | [**v1DataAgreementsIdGet**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsIdGet) | **GET** /v1/data-agreements/{id} | Get data processing agreement by id.
-*DataProcessingAgreementsApi* | [**v1DataAgreementsIdPut**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsIdPut) | **PUT** /v1/data-agreements/{id} | Update data processing agreement.
 *DataProcessingAgreementsApi* | [**v1DataAgreementsIdTerminatePut**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsIdTerminatePut) | **PUT** /v1/data-agreements/{id}/terminate | Terminate a data processing agreement by id.
-*DataProcessingAgreementsApi* | [**v1DataAgreementsPost**](docs/DataProcessingAgreementsApi.md#v1DataAgreementsPost) | **POST** /v1/data-agreements | Create a data processing agreement.
 *DataProvidersDiscoveryApi* | [**v1DataProvidersGet**](docs/DataProvidersDiscoveryApi.md#v1DataProvidersGet) | **GET** /v1/data-providers | Discover all data providers in my data my consent by country and filters.
 *DataProvidersDiscoveryApi* | [**v1DataProvidersIdGet**](docs/DataProvidersDiscoveryApi.md#v1DataProvidersIdGet) | **GET** /v1/data-providers/{id} | Get a data provider details by provider id.
 *IndividualsApi* | [**issuerIssuedoc1XmlPost**](docs/IndividualsApi.md#issuerIssuedoc1XmlPost) | **POST** /issuer/issuedoc/1/xml | Digilocker compatible endpoint to issue document.
@@ -190,7 +188,6 @@ Class | Method | HTTP request | Description
  - [ConsentedIdentifier](docs/ConsentedIdentifier.md)
  - [ConsentedMedicalRecord](docs/ConsentedMedicalRecord.md)
  - [CreateConsentRequest](docs/CreateConsentRequest.md)
- - [CreateDataProcessingAgreement](docs/CreateDataProcessingAgreement.md)
  - [DataConsentStatus](docs/DataConsentStatus.md)
  - [DataProcessingAgreement](docs/DataProcessingAgreement.md)
  - [DataProtectionOfficer](docs/DataProtectionOfficer.md)
@@ -277,7 +274,6 @@ Class | Method | HTTP request | Description
  - [SupportedDocumentType](docs/SupportedDocumentType.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)
  - [SupportedIdentifier](docs/SupportedIdentifier.md)
- - [UpdateDataProcessingAgreement](docs/UpdateDataProcessingAgreement.md)
  - [UploadDocumentResponse](docs/UploadDocumentResponse.md)
  - [UriDetails](docs/UriDetails.md)
 
