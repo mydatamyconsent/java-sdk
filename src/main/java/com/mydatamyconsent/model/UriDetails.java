@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * UriDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-17T10:37:08.346332913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-18T10:34:49.767084677Z[Etc/UTC]")
 public class UriDetails {
   public static final String SERIALIZED_NAME_AADHAAR = "aadhaar";
   @SerializedName(SERIALIZED_NAME_AADHAAR)
