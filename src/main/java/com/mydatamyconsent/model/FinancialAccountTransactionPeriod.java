@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
  * FinancialAccountTransactionPeriod : Financial account transaction period.
  */
 @ApiModel(description = "FinancialAccountTransactionPeriod : Financial account transaction period.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-20T10:38:17.939372608Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-21T10:37:23.539168289Z[Etc/UTC]")
 public class FinancialAccountTransactionPeriod {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
