@@ -18,12 +18,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.MutualFundFundType;
-import com.mydatamyconsent.model.MutualFundHoldingMode;
-import com.mydatamyconsent.model.MutualFundSchemeCategory;
-import com.mydatamyconsent.model.MutualFundSchemeOption;
-import com.mydatamyconsent.model.MutualFundSchemePlan;
-import com.mydatamyconsent.model.MutualFundSchemeType;
 import com.mydatamyconsent.model.MutualFundTransactionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -56,94 +50,6 @@ public class MutualFundTransactionTest {
     }
 
     /**
-     * Test the property 'amc'
-     */
-    @Test
-    public void amcTest() {
-        // TODO: test amc
-    }
-
-    /**
-     * Test the property 'registrar'
-     */
-    @Test
-    public void registrarTest() {
-        // TODO: test registrar
-    }
-
-    /**
-     * Test the property 'schemeCode'
-     */
-    @Test
-    public void schemeCodeTest() {
-        // TODO: test schemeCode
-    }
-
-    /**
-     * Test the property 'schemePlan'
-     */
-    @Test
-    public void schemePlanTest() {
-        // TODO: test schemePlan
-    }
-
-    /**
-     * Test the property 'isin'
-     */
-    @Test
-    public void isinTest() {
-        // TODO: test isin
-    }
-
-    /**
-     * Test the property 'amfiCode'
-     */
-    @Test
-    public void amfiCodeTest() {
-        // TODO: test amfiCode
-    }
-
-    /**
-     * Test the property 'fundType'
-     */
-    @Test
-    public void fundTypeTest() {
-        // TODO: test fundType
-    }
-
-    /**
-     * Test the property 'schemeOption'
-     */
-    @Test
-    public void schemeOptionTest() {
-        // TODO: test schemeOption
-    }
-
-    /**
-     * Test the property 'schemeTypes'
-     */
-    @Test
-    public void schemeTypesTest() {
-        // TODO: test schemeTypes
-    }
-
-    /**
-     * Test the property 'schemeCategory'
-     */
-    @Test
-    public void schemeCategoryTest() {
-        // TODO: test schemeCategory
-    }
-
-    /**
-     * Test the property 'ucc'
-     */
-    @Test
-    public void uccTest() {
-        // TODO: test ucc
-    }
-
-    /**
      * Test the property 'amount'
      */
     @Test
@@ -152,91 +58,35 @@ public class MutualFundTransactionTest {
     }
 
     /**
-     * Test the property 'closingUnits'
+     * Test the property 'currencyCode'
      */
     @Test
-    public void closingUnitsTest() {
-        // TODO: test closingUnits
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
     }
 
     /**
-     * Test the property 'lienUnits'
+     * Test the property 'txnType'
      */
     @Test
-    public void lienUnitsTest() {
-        // TODO: test lienUnits
+    public void txnTypeTest() {
+        // TODO: test txnType
     }
 
     /**
-     * Test the property 'nav'
+     * Test the property 'units'
      */
     @Test
-    public void navTest() {
-        // TODO: test nav
+    public void unitsTest() {
+        // TODO: test units
     }
 
     /**
-     * Test the property 'navDate'
+     * Test the property 'transactedAtUtc'
      */
     @Test
-    public void navDateTest() {
-        // TODO: test navDate
-    }
-
-    /**
-     * Test the property 'type'
-     */
-    @Test
-    public void typeTest() {
-        // TODO: test type
-    }
-
-    /**
-     * Test the property 'orderDate'
-     */
-    @Test
-    public void orderDateTest() {
-        // TODO: test orderDate
-    }
-
-    /**
-     * Test the property 'executionDate'
-     */
-    @Test
-    public void executionDateTest() {
-        // TODO: test executionDate
-    }
-
-    /**
-     * Test the property 'lockinFlag'
-     */
-    @Test
-    public void lockinFlagTest() {
-        // TODO: test lockinFlag
-    }
-
-    /**
-     * Test the property 'lockinDays'
-     */
-    @Test
-    public void lockinDaysTest() {
-        // TODO: test lockinDays
-    }
-
-    /**
-     * Test the property 'mode'
-     */
-    @Test
-    public void modeTest() {
-        // TODO: test mode
-    }
-
-    /**
-     * Test the property 'narration'
-     */
-    @Test
-    public void narrationTest() {
-        // TODO: test narration
+    public void transactedAtUtcTest() {
+        // TODO: test transactedAtUtc
     }
 
 }

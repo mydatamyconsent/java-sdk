@@ -13,21 +13,38 @@
 
 package com.mydatamyconsent.model;
 
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for MutualFundSchemeType
+ * Model tests for FinancialAccountTransactionTermDepositTransactionAllOf
  */
-public class MutualFundSchemeTypeTest {
+public class FinancialAccountTransactionTermDepositTransactionAllOfTest {
+    private final FinancialAccountTransactionTermDepositTransactionAllOf model = new FinancialAccountTransactionTermDepositTransactionAllOf();
+
     /**
-     * Model tests for MutualFundSchemeType
+     * Model tests for FinancialAccountTransactionTermDepositTransactionAllOf
      */
     @Test
-    public void testMutualFundSchemeType() {
-        // TODO: test MutualFundSchemeType
+    public void testFinancialAccountTransactionTermDepositTransactionAllOf() {
+        // TODO: test FinancialAccountTransactionTermDepositTransactionAllOf
+    }
+
+    /**
+     * Test the property 'type'
+     */
+    @Test
+    public void typeTest() {
+        // TODO: test type
     }
 
 }

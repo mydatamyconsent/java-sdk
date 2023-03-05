@@ -19,15 +19,15 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for MutualFundSchemeOption
+ * Model tests for EquityTransactionsType
  */
-public class MutualFundSchemeOptionTest {
+public class EquityTransactionsTypeTest {
     /**
-     * Model tests for MutualFundSchemeOption
+     * Model tests for EquityTransactionsType
      */
     @Test
-    public void testMutualFundSchemeOption() {
-        // TODO: test MutualFundSchemeOption
+    public void testEquityTransactionsType() {
+        // TODO: test EquityTransactionsType
     }
 
 }

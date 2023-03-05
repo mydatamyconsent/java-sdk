@@ -20,12 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.mydatamyconsent.model.MutualFundFundType;
-import com.mydatamyconsent.model.MutualFundHoldingMode;
-import com.mydatamyconsent.model.MutualFundSchemeCategory;
-import com.mydatamyconsent.model.MutualFundSchemeOption;
-import com.mydatamyconsent.model.MutualFundSchemePlan;
-import com.mydatamyconsent.model.MutualFundSchemeType;
 import com.mydatamyconsent.model.MutualFundTransactionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -55,108 +49,40 @@ import com.mydatamyconsent.JSON;
 /**
  * FinancialAccountTransactionMutualFundTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-04T10:35:40.838559974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-05T10:35:38.711121805Z[Etc/UTC]")
 public class FinancialAccountTransactionMutualFundTransaction {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
-  private MutualFundTransactionType type;
+  private String type;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
-  public static final String SERIALIZED_NAME_AMC = "amc";
-  @SerializedName(SERIALIZED_NAME_AMC)
-  private String amc;
-
-  public static final String SERIALIZED_NAME_REGISTRAR = "registrar";
-  @SerializedName(SERIALIZED_NAME_REGISTRAR)
-  private String registrar;
-
-  public static final String SERIALIZED_NAME_SCHEME_CODE = "scheme_code";
-  @SerializedName(SERIALIZED_NAME_SCHEME_CODE)
-  private String schemeCode;
-
-  public static final String SERIALIZED_NAME_SCHEME_PLAN = "scheme_plan";
-  @SerializedName(SERIALIZED_NAME_SCHEME_PLAN)
-  private MutualFundSchemePlan schemePlan;
-
-  public static final String SERIALIZED_NAME_ISIN = "isin";
-  @SerializedName(SERIALIZED_NAME_ISIN)
-  private String isin;
-
-  public static final String SERIALIZED_NAME_AMFI_CODE = "amfi_code";
-  @SerializedName(SERIALIZED_NAME_AMFI_CODE)
-  private String amfiCode;
-
-  public static final String SERIALIZED_NAME_FUND_TYPE = "fund_type";
-  @SerializedName(SERIALIZED_NAME_FUND_TYPE)
-  private MutualFundFundType fundType;
-
-  public static final String SERIALIZED_NAME_SCHEME_OPTION = "scheme_option";
-  @SerializedName(SERIALIZED_NAME_SCHEME_OPTION)
-  private MutualFundSchemeOption schemeOption;
-
-  public static final String SERIALIZED_NAME_SCHEME_TYPES = "scheme_types";
-  @SerializedName(SERIALIZED_NAME_SCHEME_TYPES)
-  private MutualFundSchemeType schemeTypes;
-
-  public static final String SERIALIZED_NAME_SCHEME_CATEGORY = "scheme_category";
-  @SerializedName(SERIALIZED_NAME_SCHEME_CATEGORY)
-  private MutualFundSchemeCategory schemeCategory;
-
-  public static final String SERIALIZED_NAME_UCC = "ucc";
-  @SerializedName(SERIALIZED_NAME_UCC)
-  private String ucc;
-
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
   @SerializedName(SERIALIZED_NAME_AMOUNT)
   private String amount;
 
-  public static final String SERIALIZED_NAME_CLOSING_UNITS = "closing_units";
-  @SerializedName(SERIALIZED_NAME_CLOSING_UNITS)
-  private String closingUnits;
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
 
-  public static final String SERIALIZED_NAME_LIEN_UNITS = "lien_units";
-  @SerializedName(SERIALIZED_NAME_LIEN_UNITS)
-  private String lienUnits;
+  public static final String SERIALIZED_NAME_TXN_TYPE = "txn_type";
+  @SerializedName(SERIALIZED_NAME_TXN_TYPE)
+  private MutualFundTransactionType txnType;
 
-  public static final String SERIALIZED_NAME_NAV = "nav";
-  @SerializedName(SERIALIZED_NAME_NAV)
-  private String nav;
+  public static final String SERIALIZED_NAME_UNITS = "units";
+  @SerializedName(SERIALIZED_NAME_UNITS)
+  private String units;
 
-  public static final String SERIALIZED_NAME_NAV_DATE = "nav_date";
-  @SerializedName(SERIALIZED_NAME_NAV_DATE)
-  private OffsetDateTime navDate;
-
-  public static final String SERIALIZED_NAME_ORDER_DATE = "order_date";
-  @SerializedName(SERIALIZED_NAME_ORDER_DATE)
-  private OffsetDateTime orderDate;
-
-  public static final String SERIALIZED_NAME_EXECUTION_DATE = "execution_date";
-  @SerializedName(SERIALIZED_NAME_EXECUTION_DATE)
-  private OffsetDateTime executionDate;
-
-  public static final String SERIALIZED_NAME_LOCKIN_FLAG = "lockin_flag";
-  @SerializedName(SERIALIZED_NAME_LOCKIN_FLAG)
-  private String lockinFlag;
-
-  public static final String SERIALIZED_NAME_LOCKIN_DAYS = "lockin_days";
-  @SerializedName(SERIALIZED_NAME_LOCKIN_DAYS)
-  private String lockinDays;
-
-  public static final String SERIALIZED_NAME_MODE = "mode";
-  @SerializedName(SERIALIZED_NAME_MODE)
-  private MutualFundHoldingMode mode;
-
-  public static final String SERIALIZED_NAME_NARRATION = "narration";
-  @SerializedName(SERIALIZED_NAME_NARRATION)
-  private String narration;
+  public static final String SERIALIZED_NAME_TRANSACTED_AT_UTC = "transacted_at_utc";
+  @SerializedName(SERIALIZED_NAME_TRANSACTED_AT_UTC)
+  private OffsetDateTime transactedAtUtc;
 
   public FinancialAccountTransactionMutualFundTransaction() {
   }
 
-  public FinancialAccountTransactionMutualFundTransaction type(MutualFundTransactionType type) {
+  public FinancialAccountTransactionMutualFundTransaction type(String type) {
     
     this.type = type;
     return this;
@@ -167,14 +93,14 @@ public class FinancialAccountTransactionMutualFundTransaction {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "MutualFundTransaction", required = true, value = "")
 
-  public MutualFundTransactionType getType() {
+  public String getType() {
     return type;
   }
 
 
-  public void setType(MutualFundTransactionType type) {
+  public void setType(String type) {
     this.type = type;
   }
 
@@ -202,259 +128,6 @@ public class FinancialAccountTransactionMutualFundTransaction {
   }
 
 
-  public FinancialAccountTransactionMutualFundTransaction amc(String amc) {
-    
-    this.amc = amc;
-    return this;
-  }
-
-   /**
-   * Get amc
-   * @return amc
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getAmc() {
-    return amc;
-  }
-
-
-  public void setAmc(String amc) {
-    this.amc = amc;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction registrar(String registrar) {
-    
-    this.registrar = registrar;
-    return this;
-  }
-
-   /**
-   * Get registrar
-   * @return registrar
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getRegistrar() {
-    return registrar;
-  }
-
-
-  public void setRegistrar(String registrar) {
-    this.registrar = registrar;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction schemeCode(String schemeCode) {
-    
-    this.schemeCode = schemeCode;
-    return this;
-  }
-
-   /**
-   * Get schemeCode
-   * @return schemeCode
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getSchemeCode() {
-    return schemeCode;
-  }
-
-
-  public void setSchemeCode(String schemeCode) {
-    this.schemeCode = schemeCode;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction schemePlan(MutualFundSchemePlan schemePlan) {
-    
-    this.schemePlan = schemePlan;
-    return this;
-  }
-
-   /**
-   * Get schemePlan
-   * @return schemePlan
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundSchemePlan getSchemePlan() {
-    return schemePlan;
-  }
-
-
-  public void setSchemePlan(MutualFundSchemePlan schemePlan) {
-    this.schemePlan = schemePlan;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction isin(String isin) {
-    
-    this.isin = isin;
-    return this;
-  }
-
-   /**
-   * Get isin
-   * @return isin
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getIsin() {
-    return isin;
-  }
-
-
-  public void setIsin(String isin) {
-    this.isin = isin;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction amfiCode(String amfiCode) {
-    
-    this.amfiCode = amfiCode;
-    return this;
-  }
-
-   /**
-   * Get amfiCode
-   * @return amfiCode
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getAmfiCode() {
-    return amfiCode;
-  }
-
-
-  public void setAmfiCode(String amfiCode) {
-    this.amfiCode = amfiCode;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction fundType(MutualFundFundType fundType) {
-    
-    this.fundType = fundType;
-    return this;
-  }
-
-   /**
-   * Get fundType
-   * @return fundType
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundFundType getFundType() {
-    return fundType;
-  }
-
-
-  public void setFundType(MutualFundFundType fundType) {
-    this.fundType = fundType;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction schemeOption(MutualFundSchemeOption schemeOption) {
-    
-    this.schemeOption = schemeOption;
-    return this;
-  }
-
-   /**
-   * Get schemeOption
-   * @return schemeOption
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundSchemeOption getSchemeOption() {
-    return schemeOption;
-  }
-
-
-  public void setSchemeOption(MutualFundSchemeOption schemeOption) {
-    this.schemeOption = schemeOption;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction schemeTypes(MutualFundSchemeType schemeTypes) {
-    
-    this.schemeTypes = schemeTypes;
-    return this;
-  }
-
-   /**
-   * Get schemeTypes
-   * @return schemeTypes
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundSchemeType getSchemeTypes() {
-    return schemeTypes;
-  }
-
-
-  public void setSchemeTypes(MutualFundSchemeType schemeTypes) {
-    this.schemeTypes = schemeTypes;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction schemeCategory(MutualFundSchemeCategory schemeCategory) {
-    
-    this.schemeCategory = schemeCategory;
-    return this;
-  }
-
-   /**
-   * Get schemeCategory
-   * @return schemeCategory
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundSchemeCategory getSchemeCategory() {
-    return schemeCategory;
-  }
-
-
-  public void setSchemeCategory(MutualFundSchemeCategory schemeCategory) {
-    this.schemeCategory = schemeCategory;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction ucc(String ucc) {
-    
-    this.ucc = ucc;
-    return this;
-  }
-
-   /**
-   * Get ucc
-   * @return ucc
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getUcc() {
-    return ucc;
-  }
-
-
-  public void setUcc(String ucc) {
-    this.ucc = ucc;
-  }
-
-
   public FinancialAccountTransactionMutualFundTransaction amount(String amount) {
     
     this.amount = amount;
@@ -478,233 +151,95 @@ public class FinancialAccountTransactionMutualFundTransaction {
   }
 
 
-  public FinancialAccountTransactionMutualFundTransaction closingUnits(String closingUnits) {
+  public FinancialAccountTransactionMutualFundTransaction currencyCode(String currencyCode) {
     
-    this.closingUnits = closingUnits;
+    this.currencyCode = currencyCode;
     return this;
   }
 
    /**
-   * Get closingUnits
-   * @return closingUnits
+   * Get currencyCode
+   * @return currencyCode
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getClosingUnits() {
-    return closingUnits;
+  public String getCurrencyCode() {
+    return currencyCode;
   }
 
 
-  public void setClosingUnits(String closingUnits) {
-    this.closingUnits = closingUnits;
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
   }
 
 
-  public FinancialAccountTransactionMutualFundTransaction lienUnits(String lienUnits) {
+  public FinancialAccountTransactionMutualFundTransaction txnType(MutualFundTransactionType txnType) {
     
-    this.lienUnits = lienUnits;
+    this.txnType = txnType;
     return this;
   }
 
    /**
-   * Get lienUnits
-   * @return lienUnits
+   * Get txnType
+   * @return txnType
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getLienUnits() {
-    return lienUnits;
+  public MutualFundTransactionType getTxnType() {
+    return txnType;
   }
 
 
-  public void setLienUnits(String lienUnits) {
-    this.lienUnits = lienUnits;
+  public void setTxnType(MutualFundTransactionType txnType) {
+    this.txnType = txnType;
   }
 
 
-  public FinancialAccountTransactionMutualFundTransaction nav(String nav) {
+  public FinancialAccountTransactionMutualFundTransaction units(String units) {
     
-    this.nav = nav;
+    this.units = units;
     return this;
   }
 
    /**
-   * Get nav
-   * @return nav
+   * Get units
+   * @return units
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public String getNav() {
-    return nav;
+  public String getUnits() {
+    return units;
   }
 
 
-  public void setNav(String nav) {
-    this.nav = nav;
+  public void setUnits(String units) {
+    this.units = units;
   }
 
 
-  public FinancialAccountTransactionMutualFundTransaction navDate(OffsetDateTime navDate) {
+  public FinancialAccountTransactionMutualFundTransaction transactedAtUtc(OffsetDateTime transactedAtUtc) {
     
-    this.navDate = navDate;
+    this.transactedAtUtc = transactedAtUtc;
     return this;
   }
 
    /**
-   * Get navDate
-   * @return navDate
+   * Get transactedAtUtc
+   * @return transactedAtUtc
   **/
   @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
 
-  public OffsetDateTime getNavDate() {
-    return navDate;
+  public OffsetDateTime getTransactedAtUtc() {
+    return transactedAtUtc;
   }
 
 
-  public void setNavDate(OffsetDateTime navDate) {
-    this.navDate = navDate;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction orderDate(OffsetDateTime orderDate) {
-    
-    this.orderDate = orderDate;
-    return this;
-  }
-
-   /**
-   * Get orderDate
-   * @return orderDate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public OffsetDateTime getOrderDate() {
-    return orderDate;
-  }
-
-
-  public void setOrderDate(OffsetDateTime orderDate) {
-    this.orderDate = orderDate;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction executionDate(OffsetDateTime executionDate) {
-    
-    this.executionDate = executionDate;
-    return this;
-  }
-
-   /**
-   * Get executionDate
-   * @return executionDate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public OffsetDateTime getExecutionDate() {
-    return executionDate;
-  }
-
-
-  public void setExecutionDate(OffsetDateTime executionDate) {
-    this.executionDate = executionDate;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction lockinFlag(String lockinFlag) {
-    
-    this.lockinFlag = lockinFlag;
-    return this;
-  }
-
-   /**
-   * Get lockinFlag
-   * @return lockinFlag
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getLockinFlag() {
-    return lockinFlag;
-  }
-
-
-  public void setLockinFlag(String lockinFlag) {
-    this.lockinFlag = lockinFlag;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction lockinDays(String lockinDays) {
-    
-    this.lockinDays = lockinDays;
-    return this;
-  }
-
-   /**
-   * Get lockinDays
-   * @return lockinDays
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getLockinDays() {
-    return lockinDays;
-  }
-
-
-  public void setLockinDays(String lockinDays) {
-    this.lockinDays = lockinDays;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction mode(MutualFundHoldingMode mode) {
-    
-    this.mode = mode;
-    return this;
-  }
-
-   /**
-   * Get mode
-   * @return mode
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public MutualFundHoldingMode getMode() {
-    return mode;
-  }
-
-
-  public void setMode(MutualFundHoldingMode mode) {
-    this.mode = mode;
-  }
-
-
-  public FinancialAccountTransactionMutualFundTransaction narration(String narration) {
-    
-    this.narration = narration;
-    return this;
-  }
-
-   /**
-   * Get narration
-   * @return narration
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getNarration() {
-    return narration;
-  }
-
-
-  public void setNarration(String narration) {
-    this.narration = narration;
+  public void setTransactedAtUtc(OffsetDateTime transactedAtUtc) {
+    this.transactedAtUtc = transactedAtUtc;
   }
 
 
@@ -720,33 +255,16 @@ public class FinancialAccountTransactionMutualFundTransaction {
     FinancialAccountTransactionMutualFundTransaction financialAccountTransactionMutualFundTransaction = (FinancialAccountTransactionMutualFundTransaction) o;
     return Objects.equals(this.type, financialAccountTransactionMutualFundTransaction.type) &&
         Objects.equals(this.id, financialAccountTransactionMutualFundTransaction.id) &&
-        Objects.equals(this.amc, financialAccountTransactionMutualFundTransaction.amc) &&
-        Objects.equals(this.registrar, financialAccountTransactionMutualFundTransaction.registrar) &&
-        Objects.equals(this.schemeCode, financialAccountTransactionMutualFundTransaction.schemeCode) &&
-        Objects.equals(this.schemePlan, financialAccountTransactionMutualFundTransaction.schemePlan) &&
-        Objects.equals(this.isin, financialAccountTransactionMutualFundTransaction.isin) &&
-        Objects.equals(this.amfiCode, financialAccountTransactionMutualFundTransaction.amfiCode) &&
-        Objects.equals(this.fundType, financialAccountTransactionMutualFundTransaction.fundType) &&
-        Objects.equals(this.schemeOption, financialAccountTransactionMutualFundTransaction.schemeOption) &&
-        Objects.equals(this.schemeTypes, financialAccountTransactionMutualFundTransaction.schemeTypes) &&
-        Objects.equals(this.schemeCategory, financialAccountTransactionMutualFundTransaction.schemeCategory) &&
-        Objects.equals(this.ucc, financialAccountTransactionMutualFundTransaction.ucc) &&
         Objects.equals(this.amount, financialAccountTransactionMutualFundTransaction.amount) &&
-        Objects.equals(this.closingUnits, financialAccountTransactionMutualFundTransaction.closingUnits) &&
-        Objects.equals(this.lienUnits, financialAccountTransactionMutualFundTransaction.lienUnits) &&
-        Objects.equals(this.nav, financialAccountTransactionMutualFundTransaction.nav) &&
-        Objects.equals(this.navDate, financialAccountTransactionMutualFundTransaction.navDate) &&
-        Objects.equals(this.orderDate, financialAccountTransactionMutualFundTransaction.orderDate) &&
-        Objects.equals(this.executionDate, financialAccountTransactionMutualFundTransaction.executionDate) &&
-        Objects.equals(this.lockinFlag, financialAccountTransactionMutualFundTransaction.lockinFlag) &&
-        Objects.equals(this.lockinDays, financialAccountTransactionMutualFundTransaction.lockinDays) &&
-        Objects.equals(this.mode, financialAccountTransactionMutualFundTransaction.mode) &&
-        Objects.equals(this.narration, financialAccountTransactionMutualFundTransaction.narration);
+        Objects.equals(this.currencyCode, financialAccountTransactionMutualFundTransaction.currencyCode) &&
+        Objects.equals(this.txnType, financialAccountTransactionMutualFundTransaction.txnType) &&
+        Objects.equals(this.units, financialAccountTransactionMutualFundTransaction.units) &&
+        Objects.equals(this.transactedAtUtc, financialAccountTransactionMutualFundTransaction.transactedAtUtc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, id, amc, registrar, schemeCode, schemePlan, isin, amfiCode, fundType, schemeOption, schemeTypes, schemeCategory, ucc, amount, closingUnits, lienUnits, nav, navDate, orderDate, executionDate, lockinFlag, lockinDays, mode, narration);
+    return Objects.hash(type, id, amount, currencyCode, txnType, units, transactedAtUtc);
   }
 
   @Override
@@ -755,28 +273,11 @@ public class FinancialAccountTransactionMutualFundTransaction {
     sb.append("class FinancialAccountTransactionMutualFundTransaction {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    amc: ").append(toIndentedString(amc)).append("\n");
-    sb.append("    registrar: ").append(toIndentedString(registrar)).append("\n");
-    sb.append("    schemeCode: ").append(toIndentedString(schemeCode)).append("\n");
-    sb.append("    schemePlan: ").append(toIndentedString(schemePlan)).append("\n");
-    sb.append("    isin: ").append(toIndentedString(isin)).append("\n");
-    sb.append("    amfiCode: ").append(toIndentedString(amfiCode)).append("\n");
-    sb.append("    fundType: ").append(toIndentedString(fundType)).append("\n");
-    sb.append("    schemeOption: ").append(toIndentedString(schemeOption)).append("\n");
-    sb.append("    schemeTypes: ").append(toIndentedString(schemeTypes)).append("\n");
-    sb.append("    schemeCategory: ").append(toIndentedString(schemeCategory)).append("\n");
-    sb.append("    ucc: ").append(toIndentedString(ucc)).append("\n");
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
-    sb.append("    closingUnits: ").append(toIndentedString(closingUnits)).append("\n");
-    sb.append("    lienUnits: ").append(toIndentedString(lienUnits)).append("\n");
-    sb.append("    nav: ").append(toIndentedString(nav)).append("\n");
-    sb.append("    navDate: ").append(toIndentedString(navDate)).append("\n");
-    sb.append("    orderDate: ").append(toIndentedString(orderDate)).append("\n");
-    sb.append("    executionDate: ").append(toIndentedString(executionDate)).append("\n");
-    sb.append("    lockinFlag: ").append(toIndentedString(lockinFlag)).append("\n");
-    sb.append("    lockinDays: ").append(toIndentedString(lockinDays)).append("\n");
-    sb.append("    mode: ").append(toIndentedString(mode)).append("\n");
-    sb.append("    narration: ").append(toIndentedString(narration)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    txnType: ").append(toIndentedString(txnType)).append("\n");
+    sb.append("    units: ").append(toIndentedString(units)).append("\n");
+    sb.append("    transactedAtUtc: ").append(toIndentedString(transactedAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -801,55 +302,21 @@ public class FinancialAccountTransactionMutualFundTransaction {
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
     openapiFields.add("id");
-    openapiFields.add("amc");
-    openapiFields.add("registrar");
-    openapiFields.add("scheme_code");
-    openapiFields.add("scheme_plan");
-    openapiFields.add("isin");
-    openapiFields.add("amfi_code");
-    openapiFields.add("fund_type");
-    openapiFields.add("scheme_option");
-    openapiFields.add("scheme_types");
-    openapiFields.add("scheme_category");
-    openapiFields.add("ucc");
     openapiFields.add("amount");
-    openapiFields.add("closing_units");
-    openapiFields.add("lien_units");
-    openapiFields.add("nav");
-    openapiFields.add("nav_date");
-    openapiFields.add("order_date");
-    openapiFields.add("execution_date");
-    openapiFields.add("lockin_flag");
-    openapiFields.add("lockin_days");
-    openapiFields.add("mode");
-    openapiFields.add("narration");
+    openapiFields.add("currency_code");
+    openapiFields.add("txn_type");
+    openapiFields.add("units");
+    openapiFields.add("transacted_at_utc");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("id");
-    openapiRequiredFields.add("amc");
-    openapiRequiredFields.add("registrar");
-    openapiRequiredFields.add("scheme_code");
-    openapiRequiredFields.add("scheme_plan");
-    openapiRequiredFields.add("isin");
-    openapiRequiredFields.add("amfi_code");
-    openapiRequiredFields.add("fund_type");
-    openapiRequiredFields.add("scheme_option");
-    openapiRequiredFields.add("scheme_types");
-    openapiRequiredFields.add("scheme_category");
-    openapiRequiredFields.add("ucc");
     openapiRequiredFields.add("amount");
-    openapiRequiredFields.add("closing_units");
-    openapiRequiredFields.add("lien_units");
-    openapiRequiredFields.add("nav");
-    openapiRequiredFields.add("nav_date");
-    openapiRequiredFields.add("order_date");
-    openapiRequiredFields.add("execution_date");
-    openapiRequiredFields.add("lockin_flag");
-    openapiRequiredFields.add("lockin_days");
-    openapiRequiredFields.add("mode");
-    openapiRequiredFields.add("narration");
+    openapiRequiredFields.add("currency_code");
+    openapiRequiredFields.add("txn_type");
+    openapiRequiredFields.add("units");
+    openapiRequiredFields.add("transacted_at_utc");
   }
 
  /**
@@ -881,47 +348,20 @@ public class FinancialAccountTransactionMutualFundTransaction {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if ((jsonObj.get("amc") != null && !jsonObj.get("amc").isJsonNull()) && !jsonObj.get("amc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `amc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("amc").toString()));
-      }
-      if ((jsonObj.get("registrar") != null && !jsonObj.get("registrar").isJsonNull()) && !jsonObj.get("registrar").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `registrar` to be a primitive type in the JSON string but got `%s`", jsonObj.get("registrar").toString()));
-      }
-      if ((jsonObj.get("scheme_code") != null && !jsonObj.get("scheme_code").isJsonNull()) && !jsonObj.get("scheme_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `scheme_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scheme_code").toString()));
-      }
-      if ((jsonObj.get("isin") != null && !jsonObj.get("isin").isJsonNull()) && !jsonObj.get("isin").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `isin` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isin").toString()));
-      }
-      if ((jsonObj.get("amfi_code") != null && !jsonObj.get("amfi_code").isJsonNull()) && !jsonObj.get("amfi_code").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `amfi_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("amfi_code").toString()));
-      }
-      if ((jsonObj.get("ucc") != null && !jsonObj.get("ucc").isJsonNull()) && !jsonObj.get("ucc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ucc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ucc").toString()));
       }
       if ((jsonObj.get("amount") != null && !jsonObj.get("amount").isJsonNull()) && !jsonObj.get("amount").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("amount").toString()));
       }
-      if ((jsonObj.get("closing_units") != null && !jsonObj.get("closing_units").isJsonNull()) && !jsonObj.get("closing_units").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `closing_units` to be a primitive type in the JSON string but got `%s`", jsonObj.get("closing_units").toString()));
+      if ((jsonObj.get("currency_code") != null && !jsonObj.get("currency_code").isJsonNull()) && !jsonObj.get("currency_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_code").toString()));
       }
-      if ((jsonObj.get("lien_units") != null && !jsonObj.get("lien_units").isJsonNull()) && !jsonObj.get("lien_units").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lien_units` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lien_units").toString()));
-      }
-      if ((jsonObj.get("nav") != null && !jsonObj.get("nav").isJsonNull()) && !jsonObj.get("nav").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nav` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nav").toString()));
-      }
-      if ((jsonObj.get("lockin_flag") != null && !jsonObj.get("lockin_flag").isJsonNull()) && !jsonObj.get("lockin_flag").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lockin_flag` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lockin_flag").toString()));
-      }
-      if ((jsonObj.get("lockin_days") != null && !jsonObj.get("lockin_days").isJsonNull()) && !jsonObj.get("lockin_days").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lockin_days` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lockin_days").toString()));
-      }
-      if ((jsonObj.get("narration") != null && !jsonObj.get("narration").isJsonNull()) && !jsonObj.get("narration").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `narration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("narration").toString()));
+      if ((jsonObj.get("units") != null && !jsonObj.get("units").isJsonNull()) && !jsonObj.get("units").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `units` to be a primitive type in the JSON string but got `%s`", jsonObj.get("units").toString()));
       }
   }
 

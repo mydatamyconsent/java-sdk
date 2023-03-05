@@ -24,18 +24,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets MutualFundSchemePlan
+ * Gets or Sets EquityTransactionsType
  */
-@JsonAdapter(MutualFundSchemePlan.Adapter.class)
-public enum MutualFundSchemePlan {
+@JsonAdapter(EquityTransactionsType.Adapter.class)
+public enum EquityTransactionsType {
   
-  DIRECT("Direct"),
+  BUY("Buy"),
   
-  REGULAR("Regular");
+  SELL("Sell"),
+  
+  BONUS("Bonus"),
+  
+  SPLIT("Split"),
+  
+  DIVIDEND("Dividend"),
+  
+  RIGHTS("Rights"),
+  
+  OTHERS("Others");
 
   private String value;
 
-  MutualFundSchemePlan(String value) {
+  EquityTransactionsType(String value) {
     this.value = value;
   }
 
@@ -48,8 +58,8 @@ public enum MutualFundSchemePlan {
     return String.valueOf(value);
   }
 
-  public static MutualFundSchemePlan fromValue(String value) {
-    for (MutualFundSchemePlan b : MutualFundSchemePlan.values()) {
+  public static EquityTransactionsType fromValue(String value) {
+    for (EquityTransactionsType b : EquityTransactionsType.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -57,16 +67,16 @@ public enum MutualFundSchemePlan {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<MutualFundSchemePlan> {
+  public static class Adapter extends TypeAdapter<EquityTransactionsType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MutualFundSchemePlan enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final EquityTransactionsType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MutualFundSchemePlan read(final JsonReader jsonReader) throws IOException {
+    public EquityTransactionsType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MutualFundSchemePlan.fromValue(value);
+      return EquityTransactionsType.fromValue(value);
     }
   }
 }

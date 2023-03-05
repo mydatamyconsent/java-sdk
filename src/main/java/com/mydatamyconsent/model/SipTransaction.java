@@ -20,9 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.SipTransactionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,11 +49,27 @@ import com.mydatamyconsent.JSON;
 /**
  * SipTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-04T10:35:40.838559974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-05T10:35:38.711121805Z[Etc/UTC]")
 public class SipTransaction {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_AMOUNT = "amount";
+  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  private Double amount;
+
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
+
+  public static final String SERIALIZED_NAME_TXN_TYPE = "txn_type";
+  @SerializedName(SERIALIZED_NAME_TXN_TYPE)
+  private SipTransactionType txnType;
+
+  public static final String SERIALIZED_NAME_TRANSACTED_AT_UTC = "transacted_at_utc";
+  @SerializedName(SERIALIZED_NAME_TRANSACTED_AT_UTC)
+  private OffsetDateTime transactedAtUtc;
 
   public SipTransaction() {
   }
@@ -79,6 +97,98 @@ public class SipTransaction {
   }
 
 
+  public SipTransaction amount(Double amount) {
+    
+    this.amount = amount;
+    return this;
+  }
+
+   /**
+   * Get amount
+   * @return amount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public Double getAmount() {
+    return amount;
+  }
+
+
+  public void setAmount(Double amount) {
+    this.amount = amount;
+  }
+
+
+  public SipTransaction currencyCode(String currencyCode) {
+    
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * Get currencyCode
+   * @return currencyCode
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+
+  public SipTransaction txnType(SipTransactionType txnType) {
+    
+    this.txnType = txnType;
+    return this;
+  }
+
+   /**
+   * Get txnType
+   * @return txnType
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public SipTransactionType getTxnType() {
+    return txnType;
+  }
+
+
+  public void setTxnType(SipTransactionType txnType) {
+    this.txnType = txnType;
+  }
+
+
+  public SipTransaction transactedAtUtc(OffsetDateTime transactedAtUtc) {
+    
+    this.transactedAtUtc = transactedAtUtc;
+    return this;
+  }
+
+   /**
+   * Get transactedAtUtc
+   * @return transactedAtUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public OffsetDateTime getTransactedAtUtc() {
+    return transactedAtUtc;
+  }
+
+
+  public void setTransactedAtUtc(OffsetDateTime transactedAtUtc) {
+    this.transactedAtUtc = transactedAtUtc;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -89,12 +199,16 @@ public class SipTransaction {
       return false;
     }
     SipTransaction sipTransaction = (SipTransaction) o;
-    return Objects.equals(this.id, sipTransaction.id);
+    return Objects.equals(this.id, sipTransaction.id) &&
+        Objects.equals(this.amount, sipTransaction.amount) &&
+        Objects.equals(this.currencyCode, sipTransaction.currencyCode) &&
+        Objects.equals(this.txnType, sipTransaction.txnType) &&
+        Objects.equals(this.transactedAtUtc, sipTransaction.transactedAtUtc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id);
+    return Objects.hash(id, amount, currencyCode, txnType, transactedAtUtc);
   }
 
   @Override
@@ -102,6 +216,10 @@ public class SipTransaction {
     StringBuilder sb = new StringBuilder();
     sb.append("class SipTransaction {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    txnType: ").append(toIndentedString(txnType)).append("\n");
+    sb.append("    transactedAtUtc: ").append(toIndentedString(transactedAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,10 +243,18 @@ public class SipTransaction {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
+    openapiFields.add("amount");
+    openapiFields.add("currency_code");
+    openapiFields.add("txn_type");
+    openapiFields.add("transacted_at_utc");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("id");
+    openapiRequiredFields.add("amount");
+    openapiRequiredFields.add("currency_code");
+    openapiRequiredFields.add("txn_type");
+    openapiRequiredFields.add("transacted_at_utc");
   }
 
  /**
@@ -162,6 +288,9 @@ public class SipTransaction {
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if ((jsonObj.get("currency_code") != null && !jsonObj.get("currency_code").isJsonNull()) && !jsonObj.get("currency_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_code").toString()));
       }
   }
 

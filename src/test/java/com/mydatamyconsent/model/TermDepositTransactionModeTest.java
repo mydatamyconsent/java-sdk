@@ -19,15 +19,15 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for MutualFundSchemeCategory
+ * Model tests for TermDepositTransactionMode
  */
-public class MutualFundSchemeCategoryTest {
+public class TermDepositTransactionModeTest {
     /**
-     * Model tests for MutualFundSchemeCategory
+     * Model tests for TermDepositTransactionMode
      */
     @Test
-    public void testMutualFundSchemeCategory() {
-        // TODO: test MutualFundSchemeCategory
+    public void testTermDepositTransactionMode() {
+        // TODO: test TermDepositTransactionMode
     }
 
 }

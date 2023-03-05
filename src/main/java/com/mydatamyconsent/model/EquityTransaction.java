@@ -20,9 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.EquityTransactionsType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,11 +49,31 @@ import com.mydatamyconsent.JSON;
 /**
  * EquityTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-04T10:35:40.838559974Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-05T10:35:38.711121805Z[Etc/UTC]")
 public class EquityTransaction {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+  public static final String SERIALIZED_NAME_AMOUNT = "amount";
+  @SerializedName(SERIALIZED_NAME_AMOUNT)
+  private String amount;
+
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currency_code";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
+
+  public static final String SERIALIZED_NAME_TXN_TYPE = "txn_type";
+  @SerializedName(SERIALIZED_NAME_TXN_TYPE)
+  private EquityTransactionsType txnType;
+
+  public static final String SERIALIZED_NAME_UNITS = "units";
+  @SerializedName(SERIALIZED_NAME_UNITS)
+  private String units;
+
+  public static final String SERIALIZED_NAME_TRANSACTED_AT_UTC = "transacted_at_utc";
+  @SerializedName(SERIALIZED_NAME_TRANSACTED_AT_UTC)
+  private OffsetDateTime transactedAtUtc;
 
   public EquityTransaction() {
   }
@@ -79,6 +101,121 @@ public class EquityTransaction {
   }
 
 
+  public EquityTransaction amount(String amount) {
+    
+    this.amount = amount;
+    return this;
+  }
+
+   /**
+   * Get amount
+   * @return amount
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getAmount() {
+    return amount;
+  }
+
+
+  public void setAmount(String amount) {
+    this.amount = amount;
+  }
+
+
+  public EquityTransaction currencyCode(String currencyCode) {
+    
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * Get currencyCode
+   * @return currencyCode
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+
+  public EquityTransaction txnType(EquityTransactionsType txnType) {
+    
+    this.txnType = txnType;
+    return this;
+  }
+
+   /**
+   * Get txnType
+   * @return txnType
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public EquityTransactionsType getTxnType() {
+    return txnType;
+  }
+
+
+  public void setTxnType(EquityTransactionsType txnType) {
+    this.txnType = txnType;
+  }
+
+
+  public EquityTransaction units(String units) {
+    
+    this.units = units;
+    return this;
+  }
+
+   /**
+   * Get units
+   * @return units
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public String getUnits() {
+    return units;
+  }
+
+
+  public void setUnits(String units) {
+    this.units = units;
+  }
+
+
+  public EquityTransaction transactedAtUtc(OffsetDateTime transactedAtUtc) {
+    
+    this.transactedAtUtc = transactedAtUtc;
+    return this;
+  }
+
+   /**
+   * Get transactedAtUtc
+   * @return transactedAtUtc
+  **/
+  @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
+  public OffsetDateTime getTransactedAtUtc() {
+    return transactedAtUtc;
+  }
+
+
+  public void setTransactedAtUtc(OffsetDateTime transactedAtUtc) {
+    this.transactedAtUtc = transactedAtUtc;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -89,12 +226,17 @@ public class EquityTransaction {
       return false;
     }
     EquityTransaction equityTransaction = (EquityTransaction) o;
-    return Objects.equals(this.id, equityTransaction.id);
+    return Objects.equals(this.id, equityTransaction.id) &&
+        Objects.equals(this.amount, equityTransaction.amount) &&
+        Objects.equals(this.currencyCode, equityTransaction.currencyCode) &&
+        Objects.equals(this.txnType, equityTransaction.txnType) &&
+        Objects.equals(this.units, equityTransaction.units) &&
+        Objects.equals(this.transactedAtUtc, equityTransaction.transactedAtUtc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id);
+    return Objects.hash(id, amount, currencyCode, txnType, units, transactedAtUtc);
   }
 
   @Override
@@ -102,6 +244,11 @@ public class EquityTransaction {
     StringBuilder sb = new StringBuilder();
     sb.append("class EquityTransaction {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    txnType: ").append(toIndentedString(txnType)).append("\n");
+    sb.append("    units: ").append(toIndentedString(units)).append("\n");
+    sb.append("    transactedAtUtc: ").append(toIndentedString(transactedAtUtc)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,10 +272,20 @@ public class EquityTransaction {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
+    openapiFields.add("amount");
+    openapiFields.add("currency_code");
+    openapiFields.add("txn_type");
+    openapiFields.add("units");
+    openapiFields.add("transacted_at_utc");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("id");
+    openapiRequiredFields.add("amount");
+    openapiRequiredFields.add("currency_code");
+    openapiRequiredFields.add("txn_type");
+    openapiRequiredFields.add("units");
+    openapiRequiredFields.add("transacted_at_utc");
   }
 
  /**
@@ -162,6 +319,15 @@ public class EquityTransaction {
       }
       if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if ((jsonObj.get("amount") != null && !jsonObj.get("amount").isJsonNull()) && !jsonObj.get("amount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `amount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("amount").toString()));
+      }
+      if ((jsonObj.get("currency_code") != null && !jsonObj.get("currency_code").isJsonNull()) && !jsonObj.get("currency_code").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currency_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currency_code").toString()));
+      }
+      if ((jsonObj.get("units") != null && !jsonObj.get("units").isJsonNull()) && !jsonObj.get("units").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `units` to be a primitive type in the JSON string but got `%s`", jsonObj.get("units").toString()));
       }
   }
 

@@ -24,18 +24,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets MutualFundHoldingMode
+ * Gets or Sets SipTransactionType
  */
-@JsonAdapter(MutualFundHoldingMode.Adapter.class)
-public enum MutualFundHoldingMode {
+@JsonAdapter(SipTransactionType.Adapter.class)
+public enum SipTransactionType {
   
-  DEMAT("Demat"),
+  BUY("Buy"),
   
-  PHYSICAL("Physical");
+  SELL("Sell"),
+  
+  OTHERS("Others");
 
   private String value;
 
-  MutualFundHoldingMode(String value) {
+  SipTransactionType(String value) {
     this.value = value;
   }
 
@@ -48,8 +50,8 @@ public enum MutualFundHoldingMode {
     return String.valueOf(value);
   }
 
-  public static MutualFundHoldingMode fromValue(String value) {
-    for (MutualFundHoldingMode b : MutualFundHoldingMode.values()) {
+  public static SipTransactionType fromValue(String value) {
+    for (SipTransactionType b : SipTransactionType.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -57,16 +59,16 @@ public enum MutualFundHoldingMode {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<MutualFundHoldingMode> {
+  public static class Adapter extends TypeAdapter<SipTransactionType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MutualFundHoldingMode enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SipTransactionType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MutualFundHoldingMode read(final JsonReader jsonReader) throws IOException {
+    public SipTransactionType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MutualFundHoldingMode.fromValue(value);
+      return SipTransactionType.fromValue(value);
     }
   }
 }

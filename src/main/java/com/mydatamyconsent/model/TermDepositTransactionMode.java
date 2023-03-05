@@ -24,20 +24,26 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets MutualFundSchemeOption
+ * Gets or Sets TermDepositTransactionMode
  */
-@JsonAdapter(MutualFundSchemeOption.Adapter.class)
-public enum MutualFundSchemeOption {
+@JsonAdapter(TermDepositTransactionMode.Adapter.class)
+public enum TermDepositTransactionMode {
   
-  REINVEST("Reinvest"),
+  CASH("Cash"),
   
-  PAYOUT("Payout"),
+  ATM("Atm"),
   
-  GROWTHTYPE("GrowthType");
+  CARDPAYMENT("CardPayment"),
+  
+  UPI("Upi"),
+  
+  FT("Ft"),
+  
+  OTHERS("Others");
 
   private String value;
 
-  MutualFundSchemeOption(String value) {
+  TermDepositTransactionMode(String value) {
     this.value = value;
   }
 
@@ -50,8 +56,8 @@ public enum MutualFundSchemeOption {
     return String.valueOf(value);
   }
 
-  public static MutualFundSchemeOption fromValue(String value) {
-    for (MutualFundSchemeOption b : MutualFundSchemeOption.values()) {
+  public static TermDepositTransactionMode fromValue(String value) {
+    for (TermDepositTransactionMode b : TermDepositTransactionMode.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -59,16 +65,16 @@ public enum MutualFundSchemeOption {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<MutualFundSchemeOption> {
+  public static class Adapter extends TypeAdapter<TermDepositTransactionMode> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MutualFundSchemeOption enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final TermDepositTransactionMode enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MutualFundSchemeOption read(final JsonReader jsonReader) throws IOException {
+    public TermDepositTransactionMode read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MutualFundSchemeOption.fromValue(value);
+      return TermDepositTransactionMode.fromValue(value);
     }
   }
 }

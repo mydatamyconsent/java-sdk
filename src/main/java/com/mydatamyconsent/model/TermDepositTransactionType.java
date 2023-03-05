@@ -24,24 +24,26 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets MutualFundSchemeType
+ * Gets or Sets TermDepositTransactionType
  */
-@JsonAdapter(MutualFundSchemeType.Adapter.class)
-public enum MutualFundSchemeType {
+@JsonAdapter(TermDepositTransactionType.Adapter.class)
+public enum TermDepositTransactionType {
   
-  EQUITYSCHEMES("EquitySchemes"),
+  OPENING("Opening"),
   
-  DEBTSCHEMES("DebtSchemes"),
+  INTEREST("Interest"),
   
-  HYBRIDSCHEMES("HybridSchemes"),
+  TDS("Tds"),
   
-  SOLUTIONORIENTEDSCHEMES("SolutionOrientedSchemes"),
+  INSTALLMENT("Installment"),
   
-  OTHERSCHEMES("OtherSchemes");
+  CLOSING("Closing"),
+  
+  OTHERS("Others");
 
   private String value;
 
-  MutualFundSchemeType(String value) {
+  TermDepositTransactionType(String value) {
     this.value = value;
   }
 
@@ -54,8 +56,8 @@ public enum MutualFundSchemeType {
     return String.valueOf(value);
   }
 
-  public static MutualFundSchemeType fromValue(String value) {
-    for (MutualFundSchemeType b : MutualFundSchemeType.values()) {
+  public static TermDepositTransactionType fromValue(String value) {
+    for (TermDepositTransactionType b : TermDepositTransactionType.values()) {
       if (b.value.equals(value)) {
         return b;
       }
@@ -63,16 +65,16 @@ public enum MutualFundSchemeType {
     throw new IllegalArgumentException("Unexpected value '" + value + "'");
   }
 
-  public static class Adapter extends TypeAdapter<MutualFundSchemeType> {
+  public static class Adapter extends TypeAdapter<TermDepositTransactionType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MutualFundSchemeType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final TermDepositTransactionType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MutualFundSchemeType read(final JsonReader jsonReader) throws IOException {
+    public TermDepositTransactionType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MutualFundSchemeType.fromValue(value);
+      return TermDepositTransactionType.fromValue(value);
     }
   }
 }

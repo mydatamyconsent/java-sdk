@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: 1.0
-  - Build date: 2023-03-04T10:35:40.838559974Z[Etc/UTC]
+  - Build date: 2023-03-05T10:35:38.711121805Z[Etc/UTC]
 
 Unleashing the power of consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -207,6 +207,7 @@ Class | Method | HTTP request | Description
  - [DocumentType](docs/DocumentType.md)
  - [Equity](docs/Equity.md)
  - [EquityTransaction](docs/EquityTransaction.md)
+ - [EquityTransactionsType](docs/EquityTransactionsType.md)
  - [Error](docs/Error.md)
  - [FhirBundleany](docs/FhirBundleany.md)
  - [FinancialAccount](docs/FinancialAccount.md)
@@ -228,6 +229,8 @@ Class | Method | HTTP request | Description
  - [FinancialAccountTransactionPeriod](docs/FinancialAccountTransactionPeriod.md)
  - [FinancialAccountTransactionSipTransaction](docs/FinancialAccountTransactionSipTransaction.md)
  - [FinancialAccountTransactionSipTransactionAllOf](docs/FinancialAccountTransactionSipTransactionAllOf.md)
+ - [FinancialAccountTransactionTermDepositTransaction](docs/FinancialAccountTransactionTermDepositTransaction.md)
+ - [FinancialAccountTransactionTermDepositTransactionAllOf](docs/FinancialAccountTransactionTermDepositTransactionAllOf.md)
  - [Holder](docs/Holder.md)
  - [IdentificationStrategy](docs/IdentificationStrategy.md)
  - [Identifier](docs/Identifier.md)
@@ -243,12 +246,6 @@ Class | Method | HTTP request | Description
  - [Life](docs/Life.md)
  - [MedicalRecordField](docs/MedicalRecordField.md)
  - [MutualFund](docs/MutualFund.md)
- - [MutualFundFundType](docs/MutualFundFundType.md)
- - [MutualFundHoldingMode](docs/MutualFundHoldingMode.md)
- - [MutualFundSchemeCategory](docs/MutualFundSchemeCategory.md)
- - [MutualFundSchemeOption](docs/MutualFundSchemeOption.md)
- - [MutualFundSchemePlan](docs/MutualFundSchemePlan.md)
- - [MutualFundSchemeType](docs/MutualFundSchemeType.md)
  - [MutualFundTransaction](docs/MutualFundTransaction.md)
  - [MutualFundTransactionType](docs/MutualFundTransactionType.md)
  - [OrganizationConsentRequestDetails](docs/OrganizationConsentRequestDetails.md)
@@ -271,9 +268,13 @@ Class | Method | HTTP request | Description
  - [SipInvestmentInformation](docs/SipInvestmentInformation.md)
  - [SipPlanInformation](docs/SipPlanInformation.md)
  - [SipTransaction](docs/SipTransaction.md)
+ - [SipTransactionType](docs/SipTransactionType.md)
  - [SupportedDocumentType](docs/SupportedDocumentType.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)
  - [SupportedIdentifier](docs/SupportedIdentifier.md)
+ - [TermDepositTransaction](docs/TermDepositTransaction.md)
+ - [TermDepositTransactionMode](docs/TermDepositTransactionMode.md)
+ - [TermDepositTransactionType](docs/TermDepositTransactionType.md)
  - [UploadDocumentResponse](docs/UploadDocumentResponse.md)
  - [UriDetails](docs/UriDetails.md)
 

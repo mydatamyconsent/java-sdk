@@ -733,7 +733,7 @@ public class Example {
 
 <a name="v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet"></a>
 # **v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet**
-> PaginatedListOfFinancialAccountTransactions v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet(consentId, accountId, filters, fromDateTime, toDateTime, pageNo, pageSize)
+> PaginatedListOfFinancialAccountTransactions v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet(consentId, accountId, fromDateTime, toDateTime, pageNo, pageSize)
 
 Get organization consented financial account transactions.
 
@@ -759,13 +759,12 @@ public class Example {
     OrganizationsApi apiInstance = new OrganizationsApi(defaultClient);
     String consentId = "consentId_example"; // String | 
     String accountId = "accountId_example"; // String | 
-    String filters = "filters_example"; // String | 
-    String fromDateTime = "fromDateTime_example"; // String | 
-    String toDateTime = "toDateTime_example"; // String | 
+    OffsetDateTime fromDateTime = OffsetDateTime.now(); // OffsetDateTime | 
+    OffsetDateTime toDateTime = OffsetDateTime.now(); // OffsetDateTime | 
     Integer pageNo = 56; // Integer | 
     Integer pageSize = 56; // Integer | 
     try {
-      PaginatedListOfFinancialAccountTransactions result = apiInstance.v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet(consentId, accountId, filters, fromDateTime, toDateTime, pageNo, pageSize);
+      PaginatedListOfFinancialAccountTransactions result = apiInstance.v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet(consentId, accountId, fromDateTime, toDateTime, pageNo, pageSize);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling OrganizationsApi#v1OrganizationsConsentsConsentIdFinancialAccountsAccountIdTransactionsGet");
@@ -784,9 +783,8 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **consentId** | **String**|  | |
 | **accountId** | **String**|  | |
-| **filters** | **String**|  | [optional] |
-| **fromDateTime** | **String**|  | [optional] |
-| **toDateTime** | **String**|  | [optional] |
+| **fromDateTime** | **OffsetDateTime**|  | [optional] |
+| **toDateTime** | **OffsetDateTime**|  | [optional] |
 | **pageNo** | **Integer**|  | [optional] |
 | **pageSize** | **Integer**|  | [optional] |
 

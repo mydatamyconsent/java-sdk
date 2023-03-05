@@ -18,9 +18,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.mydatamyconsent.model.SipTransactionType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -45,6 +47,38 @@ public class SipTransactionTest {
     @Test
     public void idTest() {
         // TODO: test id
+    }
+
+    /**
+     * Test the property 'amount'
+     */
+    @Test
+    public void amountTest() {
+        // TODO: test amount
+    }
+
+    /**
+     * Test the property 'currencyCode'
+     */
+    @Test
+    public void currencyCodeTest() {
+        // TODO: test currencyCode
+    }
+
+    /**
+     * Test the property 'txnType'
+     */
+    @Test
+    public void txnTypeTest() {
+        // TODO: test txnType
+    }
+
+    /**
+     * Test the property 'transactedAtUtc'
+     */
+    @Test
+    public void transactedAtUtcTest() {
+        // TODO: test transactedAtUtc
     }
 
 }

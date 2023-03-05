@@ -81,8 +81,10 @@ public class JSON {
                         classByDiscriminatorValue.put("FinancialAccountTransaction_EquityTransaction", com.mydatamyconsent.model.FinancialAccountTransactionEquityTransaction.class);
                         classByDiscriminatorValue.put("FinancialAccountTransaction_MutualFundTransaction", com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction.class);
                         classByDiscriminatorValue.put("FinancialAccountTransaction_SipTransaction", com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.class);
+                        classByDiscriminatorValue.put("FinancialAccountTransaction_TermDepositTransaction", com.mydatamyconsent.model.FinancialAccountTransactionTermDepositTransaction.class);
                         classByDiscriminatorValue.put("MutualFundTransaction", com.mydatamyconsent.model.FinancialAccountTransactionMutualFundTransaction.class);
                         classByDiscriminatorValue.put("SipTransaction", com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.class);
+                        classByDiscriminatorValue.put("TermDepositTransaction", com.mydatamyconsent.model.FinancialAccountTransactionTermDepositTransaction.class);
                         classByDiscriminatorValue.put("FinancialAccountTransaction", com.mydatamyconsent.model.FinancialAccountTransaction.class);
                         return getClassByDiscriminator(classByDiscriminatorValue,
                                 getDiscriminatorValue(readElement, "type"));
@@ -169,6 +171,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionPeriod.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransaction.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionSipTransactionAllOf.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionTermDepositTransaction.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.FinancialAccountTransactionTermDepositTransactionAllOf.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Holder.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.Identifier.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.IdentityField.CustomTypeAdapterFactory());
@@ -205,6 +209,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.SipTransaction.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.SupportedDocumentType.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.SupportedIdentifier.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.TermDepositTransaction.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.UploadDocumentResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.mydatamyconsent.model.UriDetails.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();

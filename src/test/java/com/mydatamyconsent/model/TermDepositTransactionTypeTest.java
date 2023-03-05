@@ -19,15 +19,15 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for MutualFundHoldingMode
+ * Model tests for TermDepositTransactionType
  */
-public class MutualFundHoldingModeTest {
+public class TermDepositTransactionTypeTest {
     /**
-     * Model tests for MutualFundHoldingMode
+     * Model tests for TermDepositTransactionType
      */
     @Test
-    public void testMutualFundHoldingMode() {
-        // TODO: test MutualFundHoldingMode
+    public void testTermDepositTransactionType() {
+        // TODO: test TermDepositTransactionType
     }
 
 }
