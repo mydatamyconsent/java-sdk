@@ -51,7 +51,7 @@ import com.mydatamyconsent.JSON;
  * SelectedFinancialAccountType : Selected financial account type of financial account field of consent request template.
  */
 @ApiModel(description = "SelectedFinancialAccountType : Selected financial account type of financial account field of consent request template.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-05T10:35:38.711121805Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T10:38:21.792611957Z[Etc/UTC]")
 public class SelectedFinancialAccountType {
   public static final String SERIALIZED_NAME_SUB_CATEGORY = "subCategory";
   @SerializedName(SERIALIZED_NAME_SUB_CATEGORY)

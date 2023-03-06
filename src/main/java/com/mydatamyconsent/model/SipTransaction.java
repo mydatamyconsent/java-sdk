@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * SipTransaction
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-05T10:35:38.711121805Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T10:38:21.792611957Z[Etc/UTC]")
 public class SipTransaction {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
