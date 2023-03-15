@@ -2,7 +2,7 @@
 
 My Data My Consent - Developer API
 - API version: 1.0
-  - Build date: 2023-03-14T10:40:37.175035489Z[Etc/UTC]
+  - Build date: 2023-03-15T10:36:38.209073488Z[Etc/UTC]
 
 Unleashing the power of consent by establishing trust. The Platform Core Developer API defines a set of capabilities that can be used to request, issue, manage and update data, documents and credentials by organizations. The API can be used to request, manage and update Decentralised Identifiers, Financial Data, Health Data issue Documents, Credentials directly or using OpenID Connect flows, and verify Messages signed with DIDs and much more.
 
@@ -221,6 +221,8 @@ Class | Method | HTTP request | Description
  - [FinancialAccountSip](docs/FinancialAccountSip.md)
  - [FinancialAccountSipAllOf](docs/FinancialAccountSipAllOf.md)
  - [FinancialAccountSubCategoryType](docs/FinancialAccountSubCategoryType.md)
+ - [FinancialAccountTermDeposit](docs/FinancialAccountTermDeposit.md)
+ - [FinancialAccountTermDepositAllOf](docs/FinancialAccountTermDepositAllOf.md)
  - [FinancialAccountTransaction](docs/FinancialAccountTransaction.md)
  - [FinancialAccountTransactionEquityTransaction](docs/FinancialAccountTransactionEquityTransaction.md)
  - [FinancialAccountTransactionEquityTransactionAllOf](docs/FinancialAccountTransactionEquityTransactionAllOf.md)
@@ -272,6 +274,14 @@ Class | Method | HTTP request | Description
  - [SupportedDocumentType](docs/SupportedDocumentType.md)
  - [SupportedEntityType](docs/SupportedEntityType.md)
  - [SupportedIdentifier](docs/SupportedIdentifier.md)
+ - [TermDeposit](docs/TermDeposit.md)
+ - [TermDepositAccountDetails](docs/TermDepositAccountDetails.md)
+ - [TermDepositAccountType](docs/TermDepositAccountType.md)
+ - [TermDepositBankInformation](docs/TermDepositBankInformation.md)
+ - [TermDepositCompoundingFrequency](docs/TermDepositCompoundingFrequency.md)
+ - [TermDepositInformation](docs/TermDepositInformation.md)
+ - [TermDepositInterestComputation](docs/TermDepositInterestComputation.md)
+ - [TermDepositInterestPayoutType](docs/TermDepositInterestPayoutType.md)
  - [TermDepositTransaction](docs/TermDepositTransaction.md)
  - [TermDepositTransactionMode](docs/TermDepositTransactionMode.md)
  - [TermDepositTransactionType](docs/TermDepositTransactionType.md)

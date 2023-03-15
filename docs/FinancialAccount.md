@@ -30,6 +30,10 @@
 |**creationDate** | **OffsetDateTime** |  |  [optional] |
 |**planInfo** | [**SipPlanInformation**](SipPlanInformation.md) |  |  |
 |**investmentInfo** | [**SipInvestmentInformation**](SipInvestmentInformation.md) |  |  |
+|**accountNumber** | **String** |  |  |
+|**accountType** | **TermDepositAccountType** |  |  |
+|**issuerLogoUrl** | **String** |  |  |
+|**accountDetails** | [**TermDepositAccountDetails**](TermDepositAccountDetails.md) |  |  |
 
 
 

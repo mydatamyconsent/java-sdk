@@ -21,9 +21,12 @@ import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.FinancialAccountEquity;
 import com.mydatamyconsent.model.FinancialAccountMutualFund;
 import com.mydatamyconsent.model.FinancialAccountSip;
+import com.mydatamyconsent.model.FinancialAccountTermDeposit;
 import com.mydatamyconsent.model.Holder;
 import com.mydatamyconsent.model.SipInvestmentInformation;
 import com.mydatamyconsent.model.SipPlanInformation;
+import com.mydatamyconsent.model.TermDepositAccountDetails;
+import com.mydatamyconsent.model.TermDepositAccountType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -228,6 +231,38 @@ public class FinancialAccountTest {
     @Test
     public void investmentInfoTest() {
         // TODO: test investmentInfo
+    }
+
+    /**
+     * Test the property 'accountNumber'
+     */
+    @Test
+    public void accountNumberTest() {
+        // TODO: test accountNumber
+    }
+
+    /**
+     * Test the property 'accountType'
+     */
+    @Test
+    public void accountTypeTest() {
+        // TODO: test accountType
+    }
+
+    /**
+     * Test the property 'issuerLogoUrl'
+     */
+    @Test
+    public void issuerLogoUrlTest() {
+        // TODO: test issuerLogoUrl
+    }
+
+    /**
+     * Test the property 'accountDetails'
+     */
+    @Test
+    public void accountDetailsTest() {
+        // TODO: test accountDetails
     }
 
 }

@@ -23,9 +23,12 @@ import com.google.gson.stream.JsonWriter;
 import com.mydatamyconsent.model.FinancialAccountEquity;
 import com.mydatamyconsent.model.FinancialAccountMutualFund;
 import com.mydatamyconsent.model.FinancialAccountSip;
+import com.mydatamyconsent.model.FinancialAccountTermDeposit;
 import com.mydatamyconsent.model.Holder;
 import com.mydatamyconsent.model.SipInvestmentInformation;
 import com.mydatamyconsent.model.SipPlanInformation;
+import com.mydatamyconsent.model.TermDepositAccountDetails;
+import com.mydatamyconsent.model.TermDepositAccountType;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -64,7 +67,7 @@ import com.google.gson.JsonParseException;
 
 import com.mydatamyconsent.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-14T10:40:37.175035489Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-15T10:36:38.209073488Z[Etc/UTC]")
 public class FinancialAccount extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(FinancialAccount.class.getName());
 
@@ -79,6 +82,7 @@ public class FinancialAccount extends AbstractOpenApiSchema {
             final TypeAdapter<FinancialAccountEquity> adapterFinancialAccountEquity = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountEquity.class));
             final TypeAdapter<FinancialAccountMutualFund> adapterFinancialAccountMutualFund = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountMutualFund.class));
             final TypeAdapter<FinancialAccountSip> adapterFinancialAccountSip = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountSip.class));
+            final TypeAdapter<FinancialAccountTermDeposit> adapterFinancialAccountTermDeposit = gson.getDelegateAdapter(this, TypeToken.get(FinancialAccountTermDeposit.class));
 
             return (TypeAdapter<T>) new TypeAdapter<FinancialAccount>() {
                 @Override
@@ -109,7 +113,14 @@ public class FinancialAccount extends AbstractOpenApiSchema {
                         return;
                     }
 
-                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip");
+                    // check if the actual instance is of the type `FinancialAccountTermDeposit`
+                    if (value.getActualInstance() instanceof FinancialAccountTermDeposit) {
+                        JsonObject obj = adapterFinancialAccountTermDeposit.toJsonTree((FinancialAccountTermDeposit)value.getActualInstance()).getAsJsonObject();
+                        elementAdapter.write(out, obj);
+                        return;
+                    }
+
+                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit");
                 }
 
                 @Override
@@ -156,6 +167,19 @@ public class FinancialAccount extends AbstractOpenApiSchema {
                         log.log(Level.FINER, "Input data does not match schema 'FinancialAccountSip'", e);
                     }
 
+                    // deserialize FinancialAccountTermDeposit
+                    try {
+                        // validate the JSON object to see if any exception is thrown
+                        FinancialAccountTermDeposit.validateJsonObject(jsonObject);
+                        log.log(Level.FINER, "Input data matches schema 'FinancialAccountTermDeposit'");
+                        FinancialAccount ret = new FinancialAccount();
+                        ret.setActualInstance(adapterFinancialAccountTermDeposit.fromJsonTree(jsonObject));
+                        return ret;
+                    } catch (Exception e) {
+                        // deserialization failed, continue
+                        log.log(Level.FINER, "Input data does not match schema 'FinancialAccountTermDeposit'", e);
+                    }
+
 
                     throw new IOException(String.format("Failed deserialization for FinancialAccount: no class matched. JSON: %s", jsonObject.toString()));
                 }
@@ -185,12 +209,19 @@ public class FinancialAccount extends AbstractOpenApiSchema {
         setActualInstance(o);
     }
 
+    public FinancialAccount(FinancialAccountTermDeposit o) {
+        super("anyOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
     static {
         schemas.put("FinancialAccountEquity", new GenericType<FinancialAccountEquity>() {
         });
         schemas.put("FinancialAccountMutualFund", new GenericType<FinancialAccountMutualFund>() {
         });
         schemas.put("FinancialAccountSip", new GenericType<FinancialAccountSip>() {
+        });
+        schemas.put("FinancialAccountTermDeposit", new GenericType<FinancialAccountTermDeposit>() {
         });
     }
 
@@ -202,7 +233,7 @@ public class FinancialAccount extends AbstractOpenApiSchema {
     /**
      * Set the instance that matches the anyOf child schema, check
      * the instance parameter is valid against the anyOf child schemas:
-     * FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip
+     * FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit
      *
      * It could be an instance of the 'anyOf' schemas.
      * The anyOf child schemas may themselves be a composed schema (allOf, anyOf, anyOf).
@@ -224,14 +255,19 @@ public class FinancialAccount extends AbstractOpenApiSchema {
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip");
+        if (instance instanceof FinancialAccountTermDeposit) {
+            super.setActualInstance(instance);
+            return;
+        }
+
+        throw new RuntimeException("Invalid instance type. Must be FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip
+     * FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit
      *
-     * @return The actual instance (FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip)
+     * @return The actual instance (FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit)
      */
     @Override
     public Object getActualInstance() {
@@ -271,6 +307,17 @@ public class FinancialAccount extends AbstractOpenApiSchema {
         return (FinancialAccountSip)super.getActualInstance();
     }
 
+    /**
+     * Get the actual instance of `FinancialAccountTermDeposit`. If the actual instance is not `FinancialAccountTermDeposit`,
+     * the ClassCastException will be thrown.
+     *
+     * @return The actual instance of `FinancialAccountTermDeposit`
+     * @throws ClassCastException if the instance is not `FinancialAccountTermDeposit`
+     */
+    public FinancialAccountTermDeposit getFinancialAccountTermDeposit() throws ClassCastException {
+        return (FinancialAccountTermDeposit)super.getActualInstance();
+    }
+
 
  /**
   * Validates the JSON Object and throws an exception if issues found
@@ -305,8 +352,16 @@ public class FinancialAccount extends AbstractOpenApiSchema {
     } catch (Exception e) {
       // continue to the next one
     }
+    // validate the json string with FinancialAccountTermDeposit
+    try {
+      FinancialAccountTermDeposit.validateJsonObject(jsonObj);
+      return; // return earlier as at least one schema is valid with respect to the Json object
+      //validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
     if (validCount == 0) {
-      throw new IOException(String.format("The JSON string is invalid for FinancialAccount with anyOf schemas: FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip. JSON: %s", jsonObj.toString()));
+      throw new IOException(String.format("The JSON string is invalid for FinancialAccount with anyOf schemas: FinancialAccountEquity, FinancialAccountMutualFund, FinancialAccountSip, FinancialAccountTermDeposit. JSON: %s", jsonObj.toString()));
     }
   }
 
