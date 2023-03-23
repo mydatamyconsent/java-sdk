@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
  * Identifier details.
  */
 @ApiModel(description = "Identifier details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-22T10:34:53.232734306Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-23T10:35:39.285261144Z[Etc/UTC]")
 public class Identifier {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)

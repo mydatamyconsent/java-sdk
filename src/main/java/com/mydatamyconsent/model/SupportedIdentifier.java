@@ -51,7 +51,7 @@ import com.mydatamyconsent.JSON;
  * Supported identifier details for a particular country.
  */
 @ApiModel(description = "Supported identifier details for a particular country.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-22T10:34:53.232734306Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-23T10:35:39.285261144Z[Etc/UTC]")
 public class SupportedIdentifier {
   public static final String SERIALIZED_NAME_ISO2 = "iso2";
   @SerializedName(SERIALIZED_NAME_ISO2)
