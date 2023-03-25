@@ -47,7 +47,7 @@ import com.mydatamyconsent.JSON;
 /**
  * IndividualConsentRequestTemplateDetailsDataLife
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-24T10:34:50.607549009Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-25T10:33:36.003716622Z[Etc/UTC]")
 public class IndividualConsentRequestTemplateDetailsDataLife {
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
