@@ -52,7 +52,7 @@ import com.mydatamyconsent.JSON;
 /**
  * TermDepositInformation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-26T10:33:42.263191989Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-27T10:35:54.257911928Z[Etc/UTC]")
 public class TermDepositInformation {
   public static final String SERIALIZED_NAME_DEPOSIT_TYPE = "deposit_type";
   @SerializedName(SERIALIZED_NAME_DEPOSIT_TYPE)
