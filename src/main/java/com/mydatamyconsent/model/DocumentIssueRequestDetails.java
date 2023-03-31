@@ -53,7 +53,7 @@ import com.mydatamyconsent.JSON;
  * DocumentIssueRequestDetails : Document issue request details.
  */
 @ApiModel(description = "DocumentIssueRequestDetails : Document issue request details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-30T10:35:21.560287645Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-31T10:34:49.651051453Z[Etc/UTC]")
 public class DocumentIssueRequestDetails {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

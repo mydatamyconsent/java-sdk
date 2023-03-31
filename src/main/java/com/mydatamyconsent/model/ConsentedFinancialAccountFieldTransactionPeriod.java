@@ -48,7 +48,7 @@ import com.mydatamyconsent.JSON;
 /**
  * ConsentedFinancialAccountFieldTransactionPeriod
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-30T10:35:21.560287645Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-31T10:34:49.651051453Z[Etc/UTC]")
 public class ConsentedFinancialAccountFieldTransactionPeriod {
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
