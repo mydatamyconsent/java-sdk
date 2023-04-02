@@ -53,7 +53,7 @@ import com.mydatamyconsent.JSON;
  * ConsentedFinancialAccountField : Consented financial account field details.
  */
 @ApiModel(description = "ConsentedFinancialAccountField : Consented financial account field details.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-01T10:33:33.557341219Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-02T10:33:30.923731799Z[Etc/UTC]")
 public class ConsentedFinancialAccountField {
   public static final String SERIALIZED_NAME_FIELD_TITLE = "fieldTitle";
   @SerializedName(SERIALIZED_NAME_FIELD_TITLE)
