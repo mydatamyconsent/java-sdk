@@ -53,7 +53,7 @@ import com.mydatamyconsent.JSON;
  * DocumentIssueRequest : Document Issue Request.
  */
 @ApiModel(description = "DocumentIssueRequest : Document Issue Request.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-07T10:33:39.021127752Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-21T10:34:43.269734732Z[Etc/UTC]")
 public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_DOCUMENT_TYPE_ID = "documentTypeId";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_TYPE_ID)
@@ -62,6 +62,10 @@ public class DocumentIssueRequest {
   public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
   @SerializedName(SERIALIZED_NAME_IDENTIFIER)
   private String identifier;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -137,6 +141,29 @@ public class DocumentIssueRequest {
 
   public void setIdentifier(String identifier) {
     this.identifier = identifier;
+  }
+
+
+  public DocumentIssueRequest name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Document name (Optional).
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Document name (Optional).")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -321,6 +348,7 @@ public class DocumentIssueRequest {
     DocumentIssueRequest documentIssueRequest = (DocumentIssueRequest) o;
     return Objects.equals(this.documentTypeId, documentIssueRequest.documentTypeId) &&
         Objects.equals(this.identifier, documentIssueRequest.identifier) &&
+        Objects.equals(this.name, documentIssueRequest.name) &&
         Objects.equals(this.description, documentIssueRequest.description) &&
         Objects.equals(this.receiver, documentIssueRequest.receiver) &&
         Objects.equals(this.paymentRequest, documentIssueRequest.paymentRequest) &&
@@ -332,7 +360,7 @@ public class DocumentIssueRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentTypeId, identifier, description, receiver, paymentRequest, issuedAtUtc, validFromUtc, expiresAtUtc, metadata);
+    return Objects.hash(documentTypeId, identifier, name, description, receiver, paymentRequest, issuedAtUtc, validFromUtc, expiresAtUtc, metadata);
   }
 
   @Override
@@ -341,6 +369,7 @@ public class DocumentIssueRequest {
     sb.append("class DocumentIssueRequest {\n");
     sb.append("    documentTypeId: ").append(toIndentedString(documentTypeId)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    receiver: ").append(toIndentedString(receiver)).append("\n");
     sb.append("    paymentRequest: ").append(toIndentedString(paymentRequest)).append("\n");
@@ -372,6 +401,7 @@ public class DocumentIssueRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("documentTypeId");
     openapiFields.add("identifier");
+    openapiFields.add("name");
     openapiFields.add("description");
     openapiFields.add("receiver");
     openapiFields.add("paymentRequest");
@@ -424,6 +454,9 @@ public class DocumentIssueRequest {
       }
       if ((jsonObj.get("identifier") != null && !jsonObj.get("identifier").isJsonNull()) && !jsonObj.get("identifier").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `identifier` to be a primitive type in the JSON string but got `%s`", jsonObj.get("identifier").toString()));
+      }
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
