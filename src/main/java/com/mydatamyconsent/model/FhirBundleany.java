@@ -49,7 +49,7 @@ import com.mydatamyconsent.JSON;
 /**
  * FhirBundleany
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-21T10:34:43.269734732Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-22T10:34:27.063905527Z[Etc/UTC]")
 public class FhirBundleany {
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
